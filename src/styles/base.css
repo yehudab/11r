@@ -65,6 +65,7 @@ p {
 
 pre {
   @apply my-2 text-sm tracking-wider break-words;
+  direction: ltr;
   border-radius: 25px;
 }
 
@@ -122,12 +123,12 @@ hr {
   @apply font-bold whitespace-no-wrap text-center;
 }
 
-.next-page::after {
-  content: " ►";
+.next-page::before {
+  content: "► ";
 }
 
-.previous-page::before {
-  content: "◄ ";
+.previous-page::after {
+  content: " ◄";
 }
 
 .first-page::before {

@@ -4,12 +4,13 @@ module.exports = (config) => {
   config.addPlugin(require('@11ty/eleventy-plugin-syntaxhighlight'));
 
   config.addFilter('dateDisplay', require('./filters/date-display.js'));
+  config.addFilter('yeatMonthFile', require('./filters/yeat-month-file.js'));
 
   config.addPassthroughCopy({ public: './' });
 
   config.setBrowserSyncConfig({
     files: ['dist/**/*'],
-    open: true,
+    open: false,
   });
 
   config.setDataDeepMerge(true);

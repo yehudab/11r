@@ -1,6 +1,8 @@
+const IntlPolyfill = require('intl');
+Intl.NumberFormat = IntlPolyfill.NumberFormat;
+Intl.DateTimeFormat = IntlPolyfill.DateTimeFormat;
+
+const Hebrew = new Intl.DateTimeFormat('he', { year: 'numeric', month: 'long', day: 'numeric' });
+
 module.exports = (date) =>
-  new Date(date).toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  });
+  Hebrew.format(new Date(date));

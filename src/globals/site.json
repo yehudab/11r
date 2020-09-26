@@ -1,11 +1,11 @@
 {
-  "name": "11r",
-  "description": "america's favorite eleventy blog template",
+  "name": "בלוג פשוט",
+  "description": "צר עולמי כ  U+200A",
   "url": "https://reeseschultz.github.io",
-  "baseUrl": "/11r/",
+  "baseUrl": "/",
   "author": {
-    "handle": "@TheReeseSchultz",
-    "name": "Reese Schultz"
+    "handle": "@yehudab",
+    "name": "יהודה בר ניר"
   },
   "images": {
     "twitter": "twitter.jpg",

@@ -7,7 +7,7 @@
 }
 
 .tag {
-  @apply inline-block px-4 py-2 mr-2 mb-2 text-xs font-bold rounded lowercase text-white;
+  @apply inline-block px-4 py-2 ml-2 mb-2 text-xs font-bold rounded lowercase text-white;
   border: 1px solid transparent;
 }
 
@@ -17,6 +17,11 @@
 
 .tag:before {
   content: "#";
+}
+
+
+.tag {
+  @apply bg-gray-700;
 }
 
 .tag.cats {

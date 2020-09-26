@@ -8,15 +8,16 @@
 
                 <p class="excerpt">{{ post.data.excerpt }}</p>
 
+                <span class="block md:inline md:float-left md:pt-4 pt-2 created-date" datetime="{{ post.data.date }}">
+                    {{ post.data.date | dateDisplay }}
+                </span>
+
                 {% for tag in post.data.tags %}
                     {%- if tag !== "post" -%}
                         <a class="tag {{ tag | replace('.', '') }}" href="{{ site.baseUrl }}tag/{{ tag }}">{{ tag }}</a>
                     {%- endif -%}
                 {% endfor %}
-
-                <span class="block md:inline md:float-right md:pt-4 pt-2 created-date" datetime="{{ post.data.date }}">
-                    {{ post.data.date | dateDisplay }}
-                </span>
+                <div class="clear-both"></div>
             </div>
         {% endif %}
     {% endfor %}
