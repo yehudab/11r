@@ -14,10 +14,10 @@
 .tag:hover {
   animation: tag-hover 500ms both;
 }
-
+/* 
 .tag:before {
   content: "#";
-}
+} */
 
 
 .tag {

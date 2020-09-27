@@ -8,6 +8,7 @@ module.exports = (config) => {
   config.addFilter('dateAndTime', require('./filters/date-and-time.js'));
   config.addFilter('yeatMonthFile', require('./filters/yeat-month-file.js'));
   config.addFilter('commentsTree', require('./filters/comments-tree.js'));
+  config.addFilter('getTags', require('./filters/get-tags.js'));
 
   config.addPassthroughCopy({ public: './' });
 
