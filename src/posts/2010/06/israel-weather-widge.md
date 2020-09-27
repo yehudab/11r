@@ -6,8 +6,6 @@ author: יהודה
 excerpt: ''
 type: post
 id: 460
-category:
-    - 'ווידג''טים'
 tags:
     - 'ווידג''טים'
     - 'מזג אויר'

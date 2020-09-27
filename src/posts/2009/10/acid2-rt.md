@@ -6,9 +6,8 @@ author: יהודה
 excerpt: ''
 type: post
 id: 354
-category:
-    - דפדפנים
 tags:
+    - דפדפנים
     - acid2
     - אופרה
     - 'אינטרנט אקספלורר'

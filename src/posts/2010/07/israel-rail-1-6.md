@@ -6,8 +6,6 @@ author: יהודה
 excerpt: ''
 type: post
 id: 472
-category:
-    - 'ווידג''טים'
 tags:
     - 'ווידג''טים'
     - 'רכבת ישראל'

@@ -23,8 +23,7 @@ post_format: []
 
 התוצאה הסופית של כל ההגדרות האלה, כפי שנשמרה בקובץ ‎/etc/nginx/sites-available/default היא זו:
 
-```
-
+```nginx
 server {
 
         listen 443 ssl http2 default_server;
@@ -58,7 +57,6 @@ server {
         }
         include snippets/expires.conf;
 }
-
 
 server {
        listen         80;

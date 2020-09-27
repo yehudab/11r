@@ -1,9 +1,20 @@
 ---
-layout: post
-title: About
+title: אודות
+date: '2008-07-21T18:55:30+03:00'
+status: publish
 path: about
+author: יהודה
+excerpt: ''
+type: page
+id: 2
+layout: post
 ---
+שמי יהודה בר-ניר.
 
-This website is a live example of an Eleventy template — it's not a real blog.
+את הבלוג הזה פתחתי בעיקר כדי לכתוב על אתרים ברשת. כמובן שזה מה שעושים 99% משאר הבלוגים בעולם, אבל מה שאמור להיות יחודי זה שאצלי תוכלו לקרוא בעיקר על מה שנמצא מתחת לפני השטח בכל אתר. זה יכלול ביקורת עניינית על מבנה ה HTML, CSS ו- JavaScript; קצת אנקדוטות על שטויות שמוצאים בקוד של כל אתר; תאימות לסטנדרטים ודפדפנים שונים; נגישות; שימושיות וכו’. חוץ מזה, אני מקווה לפרסם גם תרגומים לקורס של אופרה בנושא סטנדרטים ברשת.
 
-People using this template may want to add some information to this page about them or their business.
+הבלוג רץ על וורדפרס בעברית בעיצוב Twenty Twenty . האתר מאוחסן ב OVHcloud, ורישום הדומיין דרך Hover.
+
+רוצים לקבל עדכונים בדואר בכל פעם שאני מפרסם פוסט חדש? לחצו על [הקישור הזה](http://feedburner.google.com/fb/a/mailverify?uri=yehudab/blog&loc=en_US), או חפשו את טופס ההרשמה מתחת לרשימת הנושאים המופיעה בצד שמאל של העמוד הזה.
+
+אפשר ליצור איתי קשר בכתובת [כתובת מייל](to-be-replaced-by-email)

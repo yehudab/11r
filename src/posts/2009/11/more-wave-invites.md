@@ -6,9 +6,8 @@ author: יהודה
 excerpt: ''
 type: post
 id: 364
-category:
-    - 'גוגל וויב'
-tags: []
+tags:
+    - 'Google wave'
 post_format: []
 ---
 קיבלתי עוד [הזמנות לגוגל וויב](http://yehudab.com/blog/2009/10/invitations-to-google-wave/) לחלוקה. הפעם גוגל נדיבים במיוחד, כך שסה"כ 20 מקוראי בלוג יוכלו לקבל הזמנות.

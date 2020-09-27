@@ -38,14 +38,14 @@ permalink: "blog/{{ page.inputPath | yeatMonthFile }}/index.html"
         
         {%- set nextPost = collections['postsWithoutDrafts'] | getNextCollectionItem(page) %}
         {%- if nextPost %}
-            <p class="uppercase text-xs mt-6">Next</p>
+            <p class="uppercase text-xs mt-6">הבא</p>
             <p class="font-bold mb-2">
                 <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a>
             </p>
         {% endif %}
         {%- set previousPost = collections['postsWithoutDrafts'] | getPreviousCollectionItem(page) %}
         {%- if previousPost %}
-            <p class="uppercase text-xs mt-6">Previous</p>
+            <p class="uppercase text-xs mt-6">הקודם</p>
 
             <p class="font-bold">
                 <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a>

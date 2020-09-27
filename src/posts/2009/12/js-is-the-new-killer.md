@@ -6,9 +6,8 @@ author: יהודה
 excerpt: ''
 type: post
 id: 380
-category:
+tags:
     - וורדפרס
-tags: []
 post_format: []
 ---
 בעקבות הדיון אצל [אילן שביט](http://ilsh.info/archives/1967) ואחרי שגיליתי שבחודש האחרון Akismet חסם לי תגובה אמיתית אחת, החלטתי לאמץ את מסנן הספאם שהומלץ ע"י [ארתיום](http://art-blog.no-ip.info/newpress/blog/post/79). הרעיון הכללי הוא לתקוף את הספאמרים בנשק יום הדין: Javascript. אם נתקלתם בבעיה עם המסנן החדשה, נא כתבו לי מייל לפי הכתובת בדף [האודות](http://yehudab.com/blog/about/) (שגם הוא מוגן שם באותו הנשק).

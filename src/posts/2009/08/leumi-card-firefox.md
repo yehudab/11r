@@ -6,9 +6,8 @@ author: יהודה
 excerpt: ''
 type: post
 id: 334
-category:
-    - 'אתרים תומכי פיירפוקס'
 tags:
+    - 'אתרים תומכי פיירפוקס'
     - לאומי-קארד
     - פיירפוקס
 post_format: []

@@ -6,14 +6,11 @@ type: post
 title: מוורדפרס ל-11ty
 path: 11ty-howto-migrate
 excerpt: ''
-categories:
-- wordpress
-- 11ty
 tags:
 - Nunjucks
 - Comments
 - 11ty
-
+- וורדפרס
 ---
 אז אחרי שמחליטים על מעבר ל-11ty, צריך לדאוג לשמר את תוכן הפוסטים והתגובות.
 

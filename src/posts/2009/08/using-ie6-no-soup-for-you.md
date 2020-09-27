@@ -6,9 +6,8 @@ author: יהודה
 excerpt: ''
 type: post
 id: 323
-category:
-    - דפדפנים
 tags:
+    - דפדפנים
     - ie6
     - פיירפוקס
 post_format: []

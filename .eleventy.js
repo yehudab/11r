@@ -24,8 +24,8 @@ module.exports = (config) => {
   config.setDataDeepMerge(true);
 
   config.addCollection('postsWithoutDrafts', (collection) =>
-    [...collection.getFilteredByGlob('src/posts/*.md')].filter(
-      (post) => !post.data.draft
+    [...collection.getFilteredByGlob('src/posts/**/*.md')].filter(
+      (post) => !post.data.draft && post.data.status === 'publish'
     )
   );
 

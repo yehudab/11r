@@ -6,9 +6,8 @@ author: יהודה
 excerpt: ''
 type: post
 id: 1
-category:
+tags:
     - כללי
-tags: []
 post_format: []
 ---
 פוסט ראשון בבלוג חדש. איזו התרגשות.

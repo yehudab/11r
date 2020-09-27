@@ -6,9 +6,8 @@ author: יהודה
 excerpt: ''
 type: post
 id: 486
-category:
+tags:
     - 'ווידג''טים'
-tags: []
 post_format: []
 ---
 בעקבות הוספת נתוני עומס החום החזויים באתר [IsraelWeather](http://www.israelweather.co.il/) נשבר ווידג'ט מזג האויר. משתמשי מק מוזמנים לשדרג לגרסה 1.7 שמתקנת את התקלה, וכן מציגה את עומס החום החזוי באמצעות tooltip. [שדרגו מכאן](http://yehudab.com/widgets/WeatherIL-1d7.zip).  

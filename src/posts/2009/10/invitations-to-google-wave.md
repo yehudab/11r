@@ -6,8 +6,6 @@ author: יהודה
 excerpt: ''
 type: post
 id: 342
-category:
-    - 'גוגל וויב'
 tags:
     - 'Google wave'
 post_format: []

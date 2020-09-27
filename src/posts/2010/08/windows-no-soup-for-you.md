@@ -6,10 +6,9 @@ author: יהודה
 excerpt: ''
 type: post
 id: 498
-category:
+tags:
     - דפדפנים
     - 'קוד פתוח ותוכנה חופשית'
-tags:
     - חלונות
     - מק
     - פיירפוקס

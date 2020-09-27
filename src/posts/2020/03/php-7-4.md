@@ -6,15 +6,13 @@ author: יהודה
 excerpt: ''
 type: post
 id: 859
-categories:
-    - וורדפרס
-    - לינוקס
-    - 'קוד פתוח ותוכנה חופשית'
 tags:
     - nano
     - php
     - vi
-    - wordpress
+    - וורדפרס
+    - 'קוד פתוח ותוכנה חופשית'
+    - לינוקס
 post_format: []
 ---
 חלפה למעלה משנה מאז ש[התמיכה ב-7.0 php הופסקה](https://www.php.net/eol.php), וזה הזמן לשדרג את הבלוג לגרסה 7.4. כרגיל, צריך לקרוא את כל ה breaking changes, אבל אם הבלוג והתוספים מתוחזקים לגרסה העדכנית ביותר, אפשר לסמוך בדרך כלל שהכל יעובד. גיבוי של הקוד והדאטה רצוי גם כן.
@@ -23,7 +21,7 @@ post_format: []
 
 אחרי שמכניסים את הגדרות ל restic למשתני סביבה, סקריפט הגיבוי פשוט למדי:
 
-```
+```bash
 #!/bin/bash
 d=$(date +%Y-%m-%d)
 mysqldump -u *** -p *** > ~/backup/sql/yehudab-${d}.sql
@@ -38,7 +36,7 @@ restic backup ~/backup
 
 אחרי השדרוג, אני מנסה לשמור את הפוסט הזה ובום error 500. בדיקה מהירה בלוג של nginx על השרת מגלה ששכחתי להתקין את php7.4-memcache שהמדריך הנ"ל לא מחשיב כ common extension. הרצת:
 
-```
+```bash
 sudo apt install php7.4-memcache
 ```
 

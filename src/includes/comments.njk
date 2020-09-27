@@ -2,7 +2,7 @@
   <ul>
   {% for comment in comments %}
     <li>
-      <p>מאת: {{ comment.name }}</p>
+      <p>מאת: {% if comment.url %}<a href="{{ comment.url }}">{{ comment.name }}</a>{% else %}<span>{{ comment.name }}</span>{% endif %}</p>
       <p>תאריך: {{ comment.date | dateAndTime }}</p>
       <p>{{ comment.message }}</p>
       {% if comment.replies %}

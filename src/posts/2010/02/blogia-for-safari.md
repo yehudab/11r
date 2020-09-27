@@ -6,8 +6,6 @@ author: יהודה
 excerpt: ''
 type: post
 id: 391
-category:
-    - ספארי
 tags:
     - CSS
     - בלוגיה

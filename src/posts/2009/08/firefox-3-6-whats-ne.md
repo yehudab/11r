@@ -6,10 +6,9 @@ author: יהודה
 excerpt: ''
 type: post
 id: 327
-category:
+tags:
     - דפדפנים
     - שמישות
-tags:
     - פיירפוקס
 post_format: []
 ---
