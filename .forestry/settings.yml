@@ -9,11 +9,11 @@ sections:
   label: Directory
   create: all
   match: "**/*"
-upload_dir: uploads
-public_path: "/uploads"
+upload_dir: public/img
+public_path: "/img"
 front_matter_path: ''
 use_front_matter_path: false
-file_template: ":filename:"
+file_template: ":year:/:month:/:filename:"
 build:
   install_dependencies_command: npm install
   preview_docker_image: forestryio/node:12
