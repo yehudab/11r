@@ -1,3 +1,4 @@
+const yaml = require("js-yaml");
 const siteSettings = require('./src/globals/site.json');
 
 module.exports = (config) => {
@@ -5,8 +6,14 @@ module.exports = (config) => {
 
   config.addFilter('dateDisplay', require('./filters/date-display.js'));
   config.addFilter('yeatMonthFile', require('./filters/yeat-month-file.js'));
+  config.addFilter('commentsTree', require('./filters/comments-tree.js'));
 
   config.addPassthroughCopy({ public: './' });
+
+  // Yaml
+  config.addDataExtension("yaml", (contents) =>
+    yaml.safeLoad(contents)
+  );
 
   config.setBrowserSyncConfig({
     files: ['dist/**/*'],

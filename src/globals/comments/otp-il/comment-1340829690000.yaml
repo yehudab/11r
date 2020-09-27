@@ -1,0 +1,7 @@
+name: Nachman
+date: '2012-06-27 23:41:30'
+url: 'http://www.miu.org.il'
+message: "for all developers that are interested:\r\n\r\n•\tI have split the gigantic file for all of Israel into 4 big files for 4 areas: Tel-Aviv Metro, Jerusalem, North and South. Each file includes not only the information relating to  stops in the specific area but all the information relating to any trip that includes stops within the area (e.g. the North file includes trips from Tel-Aviv to Haifa. Etc….)\r\n•\tI have also created a small GTFS file for the area of Ramat Aviv Gimel – this file is useful for testing applications because you do not need to wait forever for the data to load…\r\n•\tThese GTFS files are available for download from the Merhav website at – http://miu.org.il/MIU_v4/docs_activities/transportation.html"
+email: 398a054223b252269ccaea9f87c13056
+id: '1980'
+parentId: '0'

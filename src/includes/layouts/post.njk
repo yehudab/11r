@@ -32,6 +32,11 @@ permalink: "blog/{{ page.inputPath | yeatMonthFile }}/index.html"
             {{ content | safe }}
         </div>
 
+        {%- if comments[page.fileSlug] %}
+            {%- set postComments = comments[page.fileSlug] | commentsTree %}
+            {%- include 'comments.njk' %}
+        {%- endif %}
+        
         {%- set nextPost = collections['postsWithoutDrafts'] | getNextCollectionItem(page) %}
         {%- if nextPost %}
             <p class="uppercase text-xs mt-6">Next</p>

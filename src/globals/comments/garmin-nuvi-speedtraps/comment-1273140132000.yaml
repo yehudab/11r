@@ -1,0 +1,7 @@
+name: אליעזר
+date: '2010-05-06 13:02:12'
+url: ''
+message: "בעיה בעת ה- Import. יש לך רעיון למה?\r\nכאשר אני מבצע אימפורט לקובץ ה- SPUD, נפתח חלון שגיאה שאומר\r\nrun timr error 52, bad file name or number\r\n\r\nה- debug מראה את השורות הבאות, עם חץ מצביע על השורה השלישית בתור הבעיה\r\n:\r\nPrivate Sub Cmd_Import_Click()\r\n    RecCount.Visible = False\r\n    ThisWorkbook.import_camfile\r\n    RefreshInProgress = False\r\n    'Range(\"A3\").Select\r\n    RecCount.Caption = \"Cams:\" + Str$(totalcams) + Chr$(13) + \"Valid Cams:\" + Str$(totalvalidcams)\r\n    RecCount.Visible = True\r\nEnd Sub"
+email: 7544312fc5cdf1bbc42bba952a33f21f
+id: '1366'
+parentId: '0'
