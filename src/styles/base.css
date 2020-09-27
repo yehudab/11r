@@ -1,13 +1,10 @@
-/* Font (see https://fonts.google.com) */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap');
-
 /* Prism Code Highlighting Theme (see https://prismjs.com) */
 @import url('https://cdn.jsdelivr.net/npm/prism-themes@1.4.0/themes/prism-dracula.css');
 
 html,
 body {
   @apply antialiased text-gray-600 bg-gray-900;
-  font-family: 'Open Sans', sans-serif;
+  font-family: sans-serif;
 }
 
 h1,
@@ -95,21 +92,33 @@ hr {
   min-width: 100px;
 }
 
-.content > ul {
+.content > ul,
+.comments ul {
   list-style-type: disc;
 }
 
-.content > ol {
+.content > ol,
+.comments ol  {
   list-style-type: decimal;
 }
 
 .content > ol > li,
-.content > ul > li {
-  @apply text-lg mr-12 ml-12 pr-2 pl-2;
+.content > ul > li,
+.comments ol > li,
+.comments ul > li  {
+  @apply text-lg mr-8 pr-2;
 }
 
 .content > p {
   @apply pt-3;
+}
+
+.comments {
+  @apply mt-6;
+}
+
+.comments p {
+  @apply pt-1;
 }
 
 .excerpt {

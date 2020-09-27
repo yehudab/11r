@@ -3,7 +3,7 @@
   {% for comment in comments %}
     <li>
       <p>מאת: {{ comment.name }}</p>
-      <p>תאריך: {{ comment.date }}</p>
+      <p>תאריך: {{ comment.date | dateAndTime }}</p>
       <p>{{ comment.message }}</p>
       {% if comment.replies %}
         {{ commentsList(comment.replies) }}
