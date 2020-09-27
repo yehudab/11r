@@ -11,13 +11,16 @@ tags:
 - Comments
 - 11ty
 - וורדפרס
+
 ---
 אז אחרי שמחליטים על מעבר ל-11ty, צריך לדאוג לשמר את תוכן הפוסטים והתגובות.
 
 בשלב הראשון של המעבר יש צורך ליצא את כל התוכן מוורדפרס ל-Markdown. לטובת זה השתמשתי בפלאגאין לוורדפרס שפותח דווקא עבור Gatsby ונקרא: [WP Gatsby Markdown Exporter](https://wordpress.org/plugins/wp-gatsby-markdown-exporter/). בקישור ניתן לקרוא כיצד להפעיל אותו. אני השתמשתי באופציית ה [WP-CLI](https://wp-cli.org/ "WordPress Command Line"). משום מה הייתה לו בעיה ליצא את התמונות, ולכן הפעלתי את האופציות שמנטרלות את החלק הזה. הפקודה הסופית הייתה:
+
 ```bash
 wp gatsby-markdown-export --skip_copy_uploads --skip_original_images --directory=/var/www/html/md-export
 ```
+
 זה מייצר אוסף של קבצי Markdown, שנראה בערך ככה:
 
 ![היררכיית קבצים לאחר היצוא מוורפרס](/img/2020/08/export.png)
@@ -33,6 +36,7 @@ wp gatsby-markdown-export --skip_copy_uploads --skip_original_images --directory
 בנוסף לזה, יש צורך לייבא ולשמר את התגובות מהבלוג הישן. כאן השתמשתי [בכלי](https://github.com/arthurlacoste/wordpress-comments-jekyll-staticman) שבמקור נכתב לטובת העברת תגובות לאתרים סטטים מבוססי [Jekyll](https://jekyllrb.com/). נדרשו שינויים קלים, אבל בסופו של דבר גם כאן זה מסתכם בהרצה לפי ה README, והוספה של כל קבצי התגובות תחת התיקיה [`eleventy-base-blog/_data/comments`](https://github.com/yehudab/eleventy-base-blog/tree/master/_data/comments) כך שכל התגובות לפוסט מסויים מרוכזות תחת תיקיה לפי ה slag של הפוסט. מי שמעוניין יכול לקרוא עוד על [מודל הנתונים של Eleventy](https://www.11ty.dev/docs/data-global/).
 
 התוספת האחרונה היא מעט קוד שידע לשלוף את התגובות המתאימות לכל פוסט ולהציג אותן לפי ההיררכיה המקורית. הקוד הזה מחולק בין קוד JS, שאותו ניתן למצוא ב `eleventy-base-blog/.eleventy.js` ונראה כך:
+
 ```js
 eleventyConfig.addFilter('commentsTree', (obj) => {
   const allComments = obj ? Object.values(obj) : [];
@@ -58,8 +62,9 @@ eleventyConfig.addFilter('commentsTree', (obj) => {
   return rootComments;
 });
 ```
+
 והחלק המשלים שנמצא בתבנית התגובות [`eleventy-base-blog/_includes/comments.njk`](https://github.com/yehudab/eleventy-base-blog/tree/master/_includes/comments.njk). על ריקורסיה ב nunjucks למדתי [מהissue הזה](https://github.com/mozilla/nunjucks/issues/416#issuecomment-206335032). עכשיו ניתן לראות גם את התגובות בהתאם לדו-שיח שנוהל בזמנו:
 
-![תגובות משורשרות](/img/2020/08/comments.png)
+![תגובות משורשרות](/img/2020/09/comments-dark.png)
 
 בפוסט הבא ארחיב על הכנת הטופס לתגובות והאינטגרציה עם הבוט של Staticman.
