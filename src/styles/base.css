@@ -121,6 +121,14 @@ hr {
   @apply pt-1;
 }
 
+.comment-details {
+  @apply text-sm
+}
+
+.comment-author {
+  @apply text-lg
+}
+
 .excerpt {
   @apply mb-2;
 }
@@ -217,8 +225,8 @@ hr {
   @apply outline-none border-blue-200;
 }
 
-.comments-form button {
-  @apply shadow bg-gray-700 text-white font-bold mt-6 py-2 px-4 rounded;
+.comments button {
+  @apply shadow text-lg bg-gray-700 text-white font-bold mt-6 py-2 px-4 rounded;
 }
 
 .comments-form button:hover {
@@ -229,3 +237,32 @@ hr {
   @apply shadow-outline outline-none;
 }
 
+.comments button.comment-reply {
+  @apply text-sm mt-3 mb-6 px-3 py-1;
+}
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+.icon {
+  display: inline-block;
+  fill: currentColor;
+  height: 1em;
+  line-height: 1;
+  position: relative;
+  top: -0.125em; 
+  vertical-align: middle;
+  width: 1em;
+
+  &.spin {
+    animation: spin 2s infinite linear;
+  }
+}

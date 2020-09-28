@@ -2,13 +2,18 @@
   <ul>
     {% for comment in comments %}
       <li>
-        <p>מאת: {% if comment.url %}
-            <a href="{{ comment.url }}">{{ comment.name }}</a>
+        <p class="comment-details" >
+          {% if comment.url %}
+            <a class="comment-author" href="{{ comment.url }}">{{ comment.name }}</a>
           {% else %}
-            <span>{{ comment.name }}</span>{% endif %}
+            <span class="comment-author">{{ comment.name }}</span>
+          {% endif %}
+          ({{ comment.date | dateAndTime }}): 
         </p>
-        <p>תאריך: {{ comment.date | dateAndTime }}</p>
         <p>{{ comment.message }}</p>
+        <button class="comment-reply">
+          להגיב
+        </button>
         {% if comment.replies %}
           {{ commentsList(comment.replies) }}
         {% endif %}
@@ -18,8 +23,10 @@
 {% endmacro %}
 
 <div class="comments">
-  <h3>תגובות:</h5>
-  {{ commentsList(postComments) }}
+  {%if (postComments.length) %}
+    <h3>תגובות:</h5>
+    {{ commentsList(postComments) }}
+  {% endif %}
   <div id="respond" class="comment-new">
     {% include 'comment-form.njk' %}
   </div>

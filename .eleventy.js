@@ -10,10 +10,17 @@ module.exports = (config) => {
   config.addFilter('commentsTree', require('./filters/comments-tree.js'));
   config.addFilter('getTags', require('./filters/get-tags.js'));
 
-  config.addPassthroughCopy({ public: './' });
+  config.addPassthroughCopy({
+    "public": './',
+    "node_modules/cash-dom/dist/cash.min.js": "./assets/lib/cash.js"
+  });
 
   // Yaml
   config.addDataExtension("yaml", (contents) =>
+    yaml.safeLoad(contents)
+  );
+  // Yaml
+  config.addDataExtension("yml", (contents) =>
     yaml.safeLoad(contents)
   );
 

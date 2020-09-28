@@ -18,6 +18,7 @@
     "@rollup/plugin-replace": "^2.3.3",
     "@tailwindcss/custom-forms": "^0.2.1",
     "autoprefixer": "^9.8.6",
+    "cash-dom": "^8.1.0",
     "cross-env": "^7.0.2",
     "intl": "^1.2.5",
     "js-yaml": "^3.14.0",
