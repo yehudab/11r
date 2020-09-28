@@ -3,7 +3,7 @@
 <form class="comments-form" method="post" action="{{ site.staticman.url }}">
   <span>האימייל לא יוצג באתר. שדות החובה מסומנים *</span>
   <input type="hidden" id="comment-replying-to-id" name="fields[parentId]" value="">
-  <input type="hidden" name="options[slug]" value="{{ page.slug }}">
+  <input type="hidden" name="options[slug]" value="{{ page.fileSlug }}">
   <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.staticman.reCaptcha.siteKey }}">
   <input type="hidden" name="options[reCaptcha][secret]"  value="{{ site.staticman.reCaptcha.secret }}">
 
