@@ -177,3 +177,55 @@ hr {
   @apply text-center text-sm text-gray-500 w-3/4 pb-4 mx-auto w-full;
   margin: 0 auto;
 }
+
+.comments-form {
+  @apply w-full max-w-lg;
+}
+
+.comments-form span {
+  @apply block mb-3 text-sm;
+}
+
+.form-line {
+  @apply flex flex-wrap -mx-3 mb-6;
+}
+
+.field-half-line {
+  @apply w-full px-3;
+}
+
+.field-full-line {
+  @apply w-full px-3;
+}
+
+.comments-form label {
+  @apply block tracking-wide text-xs font-bold mb-2 text-lg;
+}
+
+.comments-form input {
+  @apply appearance-none block w-full bg-gray-900 text-gray-200 border border-gray-500 rounded py-3 px-4 mb-3 leading-tight;
+}
+.comments-form input:focus {
+  @apply outline-none border-blue-200;
+}
+
+.comments-form textarea {
+  @apply appearance-none block w-full bg-gray-900 text-gray-200 border border-gray-500 rounded py-3 px-4 mb-3 leading-tight;
+}
+
+.comments-form textarea:focus {
+  @apply outline-none border-blue-200;
+}
+
+.comments-form button {
+  @apply shadow bg-gray-700 text-white font-bold mt-6 py-2 px-4 rounded;
+}
+
+.comments-form button:hover {
+  @apply bg-gray-600;
+}
+
+.comments-form button:focus {
+  @apply shadow-outline outline-none;
+}
+

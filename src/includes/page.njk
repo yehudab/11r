@@ -26,9 +26,13 @@
     <meta name="og:locale" content="en_GB">
     <meta name="og:type" content="website">
 
-    <link rel="icon" type="image/x-icon" href="{{ site.baseUrl }}favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="{{ site.baseUrl }}favicon.ico"/>
 
-    <title>{% if metaTitle %}{{ metaTitle }}{% else %}{{ title }}{% endif %}{% if metaTitle or title %} | {% endif %}{{ site.name }}</title>
+    <title>
+      {% if metaTitle %}{{ metaTitle }}
+      {% else %}{{ title }}
+      {% endif %}
+      {% if metaTitle or title %} | {% endif %}{{ site.name }}</title>
 
     <link rel="stylesheet" href="{{ site.baseUrl }}assets/main.bundle.css">
 
@@ -41,7 +45,7 @@
     </main>
     {% include 'footer.njk' %}
     {#% include 'privacy-notice.njk' %#}
-    <script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js"></script>
     <script src="{{ site.baseUrl }}assets/main.bundle.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </body>
 </html>
