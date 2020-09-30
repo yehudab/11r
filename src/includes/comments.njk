@@ -1,7 +1,7 @@
 {% macro commentsList(comments) %}
   <ul>
     {% for comment in comments %}
-      <li>
+      <li data-comment-id="{{ comment._id }}">
         <p class="comment-details" >
           {% if comment.url %}
             <a class="comment-author" href="{{ comment.url }}">{{ comment.name }}</a>

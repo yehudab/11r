@@ -1,6 +1,8 @@
-<h2>כתיבת תגובה</h2>
-
 <form class="comments-form js-form" method="post" action="{{ site.staticman.url }}">
+  <div class="clearfix">
+    <h2>כתיבת תגובה</h2>
+    <a class="cancel-comment" href="#">ביטול</a>
+  </div>
   <span>האימייל לא יוצג באתר. שדות החובה מסומנים *</span>
   <input type="hidden" id="comment-replying-to-id" name="fields[parentId]" value="">
   <input type="hidden" name="options[slug]" value="{{ page.fileSlug }}">

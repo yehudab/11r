@@ -2,8 +2,8 @@ module.exports = (obj) => {
     const allComments = obj ? Object.values(obj) : [];
     const commentsById = {};
     allComments.forEach(c => {
-        const id = c.id || c._id;
-        commentsById[id] = c;
+        c.id = c.id || c._id;
+        commentsById[c.id] = c;
     });
     const rootComments = [];
     allComments.forEach(c => {
@@ -13,7 +13,7 @@ module.exports = (obj) => {
                 parent.replies = parent.replies || [];
                 parent.replies.push(c);
             } else {
-                console.error(`can't find parentID: ${c.parentId} for ID: ${c.id || c._id}`);
+                console.error(`can't find parentID: ${c.parentId} for ID: ${c.id}`);
             }
         } else {
             rootComments.push(c);
