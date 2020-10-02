@@ -1,6 +1,6 @@
 ---
 date: 2020-08-01T15:00:54.000+00:00
-status: draft
+status: publish
 author: יהודה
 type: post
 title: מוורדפרס ל-11ty

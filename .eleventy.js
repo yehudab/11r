@@ -6,9 +6,10 @@ module.exports = (config) => {
 
   config.addFilter('dateDisplay', require('./filters/date-display.js'));
   config.addFilter('dateAndTime', require('./filters/date-and-time.js'));
-  config.addFilter('yeatMonthFile', require('./filters/yeat-month-file.js'));
+  config.addFilter('yearMonthFile', require('./filters/year-month-file.js'));
   config.addFilter('commentsTree', require('./filters/comments-tree.js'));
   config.addFilter('getTags', require('./filters/get-tags.js'));
+  config.addFilter('isCommentable', require('./filters/is-commentable.js'));
 
   config.addPassthroughCopy({
     "public": './',
@@ -19,7 +20,7 @@ module.exports = (config) => {
   config.addDataExtension("yaml", (contents) =>
     yaml.safeLoad(contents)
   );
-  // Yaml
+  // Yml
   config.addDataExtension("yml", (contents) =>
     yaml.safeLoad(contents)
   );

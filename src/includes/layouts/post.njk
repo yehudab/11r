@@ -1,5 +1,5 @@
 ---
-permalink: "blog/{{ page.inputPath | yeatMonthFile }}/index.html"
+permalink: "blog/{{ page.inputPath | yearMonthFile }}/index.html"
 ---
 
 {% extends 'page.njk' %}
@@ -31,10 +31,9 @@ permalink: "blog/{{ page.inputPath | yeatMonthFile }}/index.html"
             {{ content | safe }}
         </div>
 
-        {# {%- if comments[page.fileSlug] %} #}
         {%- set postComments = comments[page.fileSlug] | commentsTree %}
+        {%- set allowNewComments = date | isCommentable %}
         {%- include 'comments.njk' %}
-        {# {%- endif %} #}
 
         {%- set nextPost = collections['postsWithoutDrafts'] | getNextCollectionItem(page) %}
         {%- if nextPost %}

@@ -1,33 +1,36 @@
 {% macro commentsList(comments) %}
-  <ul>
-    {% for comment in comments %}
-      <li data-comment-id="{{ comment._id }}">
-        <p class="comment-details" >
-          {% if comment.url %}
-            <a class="comment-author" href="{{ comment.url }}">{{ comment.name }}</a>
-          {% else %}
-            <span class="comment-author">{{ comment.name }}</span>
-          {% endif %}
+    <ul>
+        {% for comment in comments %}
+            <li data-comment-id="{{ comment._id }}">
+                <p class="comment-details" >
+                    {% if comment.url %}
+                        <a class="comment-author" href="{{ comment.url }}">{{ comment.name }}</a>
+                    {% else %}
+                        <span class="comment-author">{{ comment.name }}</span>
+                    {% endif %}
           ({{ comment.date | dateAndTime }}): 
         </p>
-        <p>{{ comment.message }}</p>
-        <button class="comment-reply">
+                <p>{{ comment.message }}</p>
+                <button class="comment-reply">
           להגיב
         </button>
-        {% if comment.replies %}
-          {{ commentsList(comment.replies) }}
-        {% endif %}
-      </li>
-    {% endfor %}
-  </ul>
+                {% if comment.replies %}
+                    {{ commentsList(comment.replies) }}
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
 {% endmacro %}
 
 <div class="comments">
-  {%if (postComments.length) %}
-    <h3>תגובות:</h5>
-    {{ commentsList(postComments) }}
-  {% endif %}
-  <div id="respond" class="comment-new">
-    {% include 'comment-form.njk' %}
-  </div>
+    {%if (postComments.length) %}
+        <h3>תגובות:</h5>
+        {{ commentsList(postComments) }}
+    {% endif %}
+
+    {% if (allowNewComments) %}
+        <div id="respond" class="comment-new">
+            {% include 'comment-form.njk' %}
+        </div>
+    {% endif %}
 </div>

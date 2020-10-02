@@ -18,6 +18,10 @@
                     {%- endif -%}
                 {% endfor %}
                 <div class="clear-both"></div>
+
+                <div class="content post">
+                    {{ post.templateContent | safe }}
+                </div>
             </div>
         {% endif %}
     {% endfor %}
