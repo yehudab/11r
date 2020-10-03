@@ -4,7 +4,6 @@ status: draft
 author: יהודה
 type: post
 title: ניהול תגובות באמצעות staticman
-permalink: ''
 excerpt: ''
 tags:
 - staticman
