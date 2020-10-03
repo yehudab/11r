@@ -5,11 +5,11 @@ fields:
 - type: text
   name: title
   label: title
-- name: permalink
+- name: path
   type: text
   config:
     required: false
-  label: permalink
+  label: path
 - type: datetime
   name: date
   label: date
