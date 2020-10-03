@@ -5,11 +5,11 @@ fields:
 - type: text
   name: title
   label: title
-- name: permalink
+- name: path
   type: text
   config:
     required: false
-  label: permalink
+  label: path
 - type: datetime
   name: date
   label: date
@@ -35,3 +35,5 @@ fields:
 - type: list
   name: tags
   label: tags
+pages:
+- src/posts/2020/10/staticman-for-11ty-comments.md
