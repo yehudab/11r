@@ -1,0 +1,73 @@
+.comments ul {
+  list-style-type: disc;
+}
+
+.comments ol  {
+  list-style-type: decimal;
+}
+
+.comments ol > li,
+.comments ul > li  {
+  @apply text-lg mr-8 pr-2;
+}
+
+.comments {
+  @apply mt-6;
+}
+
+.comments p {
+  @apply pt-1;
+}
+
+.comment-details {
+  @apply text-sm
+}
+
+.comment-author {
+  @apply text-lg
+}
+
+.comments-form label {
+  @apply block tracking-wide text-xs font-bold mb-2 text-lg;
+}
+  
+.comments-form input {
+  @apply appearance-none block w-full bg-gray-900 text-gray-200 border border-gray-500 rounded py-3 px-4 mb-3 leading-tight;
+}
+.comments-form input:focus {
+  @apply outline-none border-blue-200;
+}
+
+.comments-form textarea {
+  @apply appearance-none block w-full bg-gray-900 text-gray-200 border border-gray-500 rounded py-3 px-4 mb-3 leading-tight;
+}
+
+.comments-form textarea:focus {
+  @apply outline-none border-blue-200;
+}
+
+.comments button {
+  @apply shadow text-lg bg-gray-700 text-white font-bold mt-6 mb-6 py-2 px-4 rounded;
+}
+
+.comments-form button:hover {
+  @apply bg-gray-600;
+}
+
+.comments-form button:focus {
+  @apply shadow-outline outline-none;
+}
+
+.comments button.comment-reply {
+  @apply text-sm mt-3 mb-6 px-3 py-1;
+}
+
+.comments-form h2 {
+  @apply float-right;
+}
+.comments-form a.cancel-comment {
+  @apply float-left block font-normal pt-3 mt-3;
+}
+.comment-new .comments-form a.cancel-comment {
+  @apply invisible;
+}

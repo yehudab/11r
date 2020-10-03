@@ -3,6 +3,7 @@
 @import './base.css';
 @import './copy.css';
 @import './tags.css';
+@import './comments.css';
 /* purgecss end ignore */
 
 @import 'tailwindcss/components';
