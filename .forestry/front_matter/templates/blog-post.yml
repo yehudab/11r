@@ -1,0 +1,37 @@
+---
+label: Blog post
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- name: permalink
+  type: text
+  config:
+    required: false
+  label: permalink
+- type: datetime
+  name: date
+  label: date
+  default: now
+- type: text
+  name: status
+  label: status
+  hidden: false
+  default: draft
+  config:
+    required: true
+- type: text
+  name: author
+  label: author
+  default: יהודה
+- type: text
+  name: excerpt
+  label: excerpt
+- type: text
+  name: type
+  label: type
+  default: post
+- type: list
+  name: tags
+  label: tags
