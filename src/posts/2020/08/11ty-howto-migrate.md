@@ -6,6 +6,7 @@ type: post
 title: מוורדפרס ל-11ty
 path: 11ty-howto-migrate
 excerpt: ''
+ogImage: 'img/2020/08/export.png'
 tags:
 - Nunjucks
 - Comments

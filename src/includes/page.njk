@@ -15,12 +15,12 @@
     <meta name="twitter:description" content="{% if excerpt %}{{ excerpt }}{% else %}{{ site.description }}{% endif %}">
     <meta name="twitter:site" content="{{ site.author.handle }}">
     <meta name="twitter:creator" content="{{ site.author.handle }}">
-    <meta name="twitter:image:src" content="{{ site.url }}{{ site.baseUrl }}{{ site.images.twitter }}">
+    <meta name="twitter:image:src" content="{% if ogImage %}{{ site.url }}{{ site.baseUrl }}{{ ogImage }}{% endif %}">
 
     {# Open Graph #}
     <meta name="og:title" content="{% if metaTitle %}{{ metaTitle }}{{ ' | '}}{% endif %}{% if title %}{{ title }}{{ ' | '}}{% endif %}{% if site.name %}{{ site.name }}{% endif %}">
     <meta name="og:description" content="{% if excerpt %}{{ excerpt }}{% else %}{{ site.description }}{% endif %}">
-    <meta name="og:image" content="{{ site.url }}{{ site.baseUrl }}{{ site.images.og }}">
+    <meta name="og:image" content="{% if ogImage %}{{ site.url }}{{ site.baseUrl }}{{ ogImage }}{% endif %}">
     <meta name="og:url" content="{{ site.url }}{{ site.baseUrl }}">
     <meta name="og:site_name" content="{{ site.name }}">
     <meta name="og:locale" content="en_GB">

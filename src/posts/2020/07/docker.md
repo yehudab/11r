@@ -6,6 +6,7 @@ author: יהודה
 excerpt: ''
 type: post
 id: "890"
+ogImage: 'img/2020/Docker.PNG'
 tags:
 - Docker
 - Hosting
