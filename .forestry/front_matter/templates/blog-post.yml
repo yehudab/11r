@@ -35,3 +35,5 @@ fields:
 - type: list
   name: tags
   label: tags
+pages:
+- src/posts/2020/10/staticman-for-11ty-comments.md
