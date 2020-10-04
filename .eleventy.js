@@ -13,7 +13,8 @@ module.exports = (config) => {
 
   config.addPassthroughCopy({
     "public": './',
-    "node_modules/cash-dom/dist/cash.min.js": "./assets/lib/cash.js"
+    "node_modules/cash-dom/dist/cash.min.js": "./assets/lib/cash.js",
+    "CNAME": "./CNAME"
   });
 
   // Yaml
