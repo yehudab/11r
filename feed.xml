@@ -498,7 +498,7 @@
     </entry>
     
     <entry>
-      <title>&amp;quot;ארכיון הבלוג&amp;quot; זה לחלשים</title>
+      <title>&quot;ארכיון הבלוג&quot; זה לחלשים</title>
       <link href="https://yehudab.com/blog/2010/12/no-more-blog-archive/"/>
       <updated>2010-12-21T05:11:14+00:00</updated>
       <id>https://yehudab.com/blog/2010/12/no-more-blog-archive/</id>
@@ -512,9 +512,9 @@
       <updated>2011-01-07T08:30:09+00:00</updated>
       <id>https://yehudab.com/blog/2011/01/ff4-beta-shirt/</id>
       <content type="html">&lt;p&gt;הנה מה שהגיע אלי במתנה היום בדואר:&lt;br&gt;
-&lt;img src=&quot;https://img.skitch.com/20110107-mgi1q77x1bwhy978st7tkgtr6f.jpg&quot; alt=&quot;FF4 beta tester shirt&quot;&gt;&lt;/p&gt;
+&lt;img src=&quot;https://yehudab.com/img/2011/01/ff4shirt-front.jpg&quot; alt=&quot;FF4 beta tester shirt&quot;&gt;&lt;/p&gt;
 &lt;p&gt;וזו הכתובת על הצד האחורי:&lt;br&gt;
-&lt;img src=&quot;https://img.skitch.com/20110107-echh8529fb1gebqukq73w5wqji.jpg&quot; alt=&quot;FF4 beta tester shirt back&quot;&gt;&lt;/p&gt;
+&lt;img src=&quot;https://yehudab.com/img/2011/01/ff4shirt-back.jpg&quot; alt=&quot;FF4 beta tester shirt back&quot;&gt;&lt;/p&gt;
 &lt;p&gt;בהחלט עוד לא מאוחר להוריד את הבטא האחרונה (נכון לעכשיו היא השמינית במספר), ומי שמוריד &lt;a href=&quot;http://firefoxlive.mozilla.org/&quot;&gt;מהקישור הזה&lt;/a&gt; גם עוזר לתרום משחקים לשני גורי פיירפוקס חמודים שגדלים בגן החיות ב Knoxville, Tennessee.&lt;/p&gt;
 </content>
     </entry>
@@ -669,7 +669,7 @@ $ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
     </entry>
     
     <entry>
-      <title>השרות הנסיוני לתכנון נסיעה בתח&amp;quot;צ עלה לאויר</title>
+      <title>השרות הנסיוני לתכנון נסיעה בתח&quot;צ עלה לאויר</title>
       <link href="https://yehudab.com/blog/2012/05/otp-il-temp-server/"/>
       <updated>2012-05-20T03:28:50+00:00</updated>
       <id>https://yehudab.com/blog/2012/05/otp-il-temp-server/</id>
