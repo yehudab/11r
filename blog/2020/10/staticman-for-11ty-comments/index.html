@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    
+    <meta itemprop="name" content="ניהול תגובות באמצעות staticman | בלוג פשוט">
+    <meta itemprop="description" content="צר עולמי כ  U+200A">
+
+    
+    <meta name="twitter:title" content="ניהול תגובות באמצעות staticman | בלוג פשוט">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="צר עולמי כ  U+200A">
+    <meta name="twitter:site" content="@yehudab">
+    <meta name="twitter:creator" content="@yehudab">
+    <meta name="twitter:image:src" content="https://yehudab.com/img/2020/10/staticman-logo.png">
+
+    
+    <meta name="og:title" content="ניהול תגובות באמצעות staticman | בלוג פשוט">
+    <meta name="og:description" content="צר עולמי כ  U+200A">
+    <meta name="og:image" content="https://yehudab.com/img/2020/10/staticman-logo.png">
+    <meta name="og:url" content="https://yehudab.com/">
+    <meta name="og:site_name" content="בלוג פשוט">
+    <meta name="og:locale" content="en_GB">
+    <meta name="og:type" content="website">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+
+    <title>
+      ניהול תגובות באמצעות staticman
+      
+       | בלוג פשוט</title>
+
+    <link rel="stylesheet" href="/assets/main.bundle.css">
+
+    
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <header>
+  <nav class="container mx-auto max-w-3xl px-8 pt-2 flex flex-wrap justify-between">
+    <div>
+      <h1>
+        <a href="/">בלוג פשוט</a>
+      </h1>
+      <p>צר עולמי כ  U+200A</p>
+    </div>
+
+    <ul class="flex flex-wrap sm:w-32 w-full mt-6 md:justify-between justify-evenly">
+      <li>
+        <a href="/blog/about">אודות</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+    <main class="container mx-auto max-w-3xl p-8 flex-grow">
+      
+    <p></p>
+    <div>
+        <h2>ניהול תגובות באמצעות staticman</h2>
+
+        
+
+        
+            <div class="mb-2">
+                <a class="tag staticman" href="/tag/staticman">staticman</a><a class="tag 11ty" href="/tag/11ty">11ty</a>
+            </div>
+        
+
+        
+            <p class="text-sm italic">נכתב ב<span datetime="Sat Oct 03 2020 10:18:58 GMT+0000 (Coordinated Universal Time)">3 באוקטובר 2020</span>.</p>
+        
+
+        <div class="content post">
+            <p>ב<a href="/blog/2020/08/11ty-howto-migrate/" title="מוורדפרס ל-11ty">פוסט הקודם</a> הסברתי איך לייבא את התגובות הישנות מ Wordpress ל-<a href="https://www.11ty.dev/">11ty</a>. בפוסט הזה, אראה איך להתקין שרת <a href="https://staticman.net/">Staticman</a>, ואיך לחבר אליו את טופס התגובות באתר.</p>
+<p><img src="/img/2020/10/staticman-logo.png" alt="Staticman logo">
+Staticman logo by <a href="http://erlen.co.uk">Erlen Masson</a></p>
+<p>גם הפעם הסתמכתי על <a href="https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html" title="Adding Staticman Comments by Travis Downs">מדריך קיים</a> שחיבר Travis Downs עבור שילוב Staticman בבלוג מבוסס Jekyll. בסופו של דבר, ביצעתי את השלבים הבאים:</p>
+<ol>
+<li><a href="https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html#set-up-github-bot-account">יצירת חשבון בוט ב GitHub</a> (לגמרי לפי המדריך הנ&quot;ל)</li>
+<li><a href="https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html#configuring-staticmanyml">הגדרות staticman.yml</a> (גם כן לפי המדריך)</li>
+<li>הגדרות staticman בתוך <code>src/globals/site.json</code>. כאן יש הבדל לעומת המדריך, מכוון שקובץ זה יחודי ל 11ty, ובמדריך ההתיחסות היא לסביבת Jekyll. בכל מקרה, העקרונות דומים, ו<a href="https://github.com/yehudab/11r/blob/master/src/includes/comments.njk" title="site.json">כאן</a> תוכלו לראות את ההגדרות שלי.</li>
+<li><a href="https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html#set-up-the-api-bridge">הקמת שרת staticman</a>. אחרי יצירת המפתחות, בחרתי בדרך שונה מהמומלץ (הקמה דרך Heroku), ובמקום זה העלתי שרת עצמאי שרץ דרך docker. בניגוד למוסבר בדקומנטציה, כאן יש חוסר <a href="https://github.com/eduardoboucas/staticman/blob/master/docs/docker.md">בתיעוד המקורי</a>, ויש לזכור להגדיר את מפתחות ההצפנה בקובץ <a href="https://github.com/eduardoboucas/staticman/blob/master/docker-compose.yml">docker-compose.yml</a></li>
+<li><a href="https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html#invite-and-accept-bot-to-blog-repo" title="Invite and Accept Bot to Blog Repo">הזמנת הבוט להשתתף ב repo</a> (ע&quot;פ המדריך)</li>
+<li><a href="https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html#enable-recaptcha" title="Enable reCAPTCHA">הפעלת reCAPCHA</a> - בעיקר על פי המדריך. יש לשים לב שבחלק המתייחס ל <code>‎_config.yml</code> יש לבצע את השינויים במקום זאת ב <code>src/globals/site.json</code></li>
+<li><a href="https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html#integrate-comments-into-site" title="Integrate Comments Into Site">שילוב התגובות באתר</a>. כאן ההבדלים מעט יותר משמעותיים, הן בגלל ההבדלים בין Jekyll ל-11ty, והן בגלל הרצון שלי לתמוך בקינון מעבר לרמה אחת. בנוסף, לא אהבתי את ה JS של הפוסט המקורי שמשתש במעורב ב jQuery ו-Vanilla JS. במקום זה השתמשתי בספריה רזה יותר בשם <a href="https://github.com/fabiospampinato/cash">cash</a>, שמאפשרת סינטקס דמוי jQuery במחיר של תמיכה בפחות פיצ'רים ופחות דפדפנים ישנים (אבל עדיין תומכת ב IE11). על הצגת התגובות כתבתי בפוסט הקודם. העבודה על טופס התגובות החדשות מסתכמת בסופו של דבר בקבצי ה <a href="https://github.com/yehudab/11r/blob/master/src/includes/comment-form.njk" title="comment-form.njk">HTML</a>, <a href="https://github.com/yehudab/11r/blob/master/src/styles/comments.css" title="comments.css">CSS</a>, ו-<a href="https://github.com/yehudab/11r/blob/master/src/scripts/comment-form.js" title="comment-form.js">JS </a>אותם תוכלו לראות ב repo הסופי.</li>
+</ol>
+<p>מוזמנים להגיב למטה ולראות איך כל ה flow עובד. עד לאישור, תוכלו לצפות בתגובות שלכם באזור ה <a href="https://github.com/yehudab/11r/pulls">Pull Requests</a> של הבלוג.</p>
+
+        </div>
+
+<div class="comments">
+    
+
+    
+        <div id="respond" class="comment-new">
+            <form class="comments-form js-form" method="post" action="https://staticman.yehudab.com/v2/entry/yehudab/11r/master/comments">
+  <div class="clearfix">
+    <h2>כתיבת תגובה</h2>
+    <a class="cancel-comment" href="#">ביטול</a>
+  </div>
+  <span>האימייל לא יוצג באתר. שדות החובה מסומנים *</span>
+  <input type="hidden" id="comment-replying-to-id" name="fields[parentId]" value="">
+  <input type="hidden" name="options[slug]" value="staticman-for-11ty-comments">
+  <input type="hidden" name="options[reCaptcha][siteKey]" value="6LfnPtEZAAAAAOjThTjcNoPS37UePCEC7AGYLhOM">
+  <input type="hidden" name="options[reCaptcha][secret]"  value="CwzOWWGyNqgtCUE5MQs9kHdkNXc2wAsLZiuAXB04ibhAjxE84pI6su8YfEfhln0qCXQ/DJHnKq57Wozmd9X2Xhx0NGRwrqnh9oAqqH+9Y0Av94sPRNYQQh/Y/vr+jQGaM82maK5eWXPNfQ6Xylk3Z/6d/URvGRmbB3cmPnFMJebsjAyQLH2PJPiwV6HjwPRVNsJBJedOg8fZ4Bs5GQa53qrQw3qX7De/nGfmiwbLa+VcY0rTTkTkpsa/QsnamYJoCgiyJG+2MXnlhMVOyQEQyU1L9ZRMb14SAi5ZvFP0MbT2EOJbt/CSKwKNWQrqkfwWSc0xP3jgecG2Tt6BrewRe7IDYYdYadWAzy3hkbqIz9VmYF0stnSo6gsZg3JH1+YUGnWtdLb4//5hl4ETD0Yw88C4w4ddXmoznmkzSyU+yj4UMXGAaRr+VpFwynqJwEwWK19SDIOUXgwScM3HIDiIaLh4PTduY+mSaNx8NyHes9/7yMMPAYYNlot7RzHNaNyTbCLaXjZlSy3QxKIwHrFEI0CRYwO/DMVD+KpKVE/ma3ANuFSP11HERyOgTFuj3xtlJQw5UQnniawvRvVAIlXqBdVRjdX/mHgmJajFbimC4VFqg590rO1YGJo0ej1R43XSe6l0QXqW7AVDkAPl5HZd3cvpSsEVBW01TJcDbYq5yGM=">
+  
+
+  <div class="form-line">
+    <div class="field-full-line">
+      <label for="comment-form-message">
+      התגובה שלך *
+        <textarea name="fields[message]" type="text" id="comment-form-message" required rows="6"></textarea>
+      </label>
+    </div>
+  </div>
+
+  <div class="form-line">
+    <div class="field-half-line md:w-1/2 mb-6 md:mb-0">
+      <label for="comment-form-name">
+      שם *
+        <input name="fields[name]" type="text" id="comment-form-name" placeholder="" required/>
+      </label>
+    </div>
+
+    <div class="field-half-line md:w-1/2">
+      <label for="comment-form-email">
+      E-mail *
+        <input name="fields[email]" type="email" id="comment-form-email" placeholder="" required/>
+      </label>
+    </div>
+  </div>
+
+  <div class="form-line">
+    <div class="field-full-line">
+      <label for="hp">
+      אתר
+        <input name="fields[url]" id="url" type="text">
+      </label>
+    </div>
+  </div>
+
+  <div id="reCaptcha" class="g-recaptcha" data-sitekey="6LfnPtEZAAAAAOjThTjcNoPS37UePCEC7AGYLhOM"></div>
+
+  <button id="comment-form-submit">
+      שליחה
+  </button>
+
+</form>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none" >
+  <symbol id="icon-loading" viewBox="149.8 37.8 499.818 525"><path d="M557.8 187.8c13.8 0 24.601-10.8 24.601-24.6S571.6 138.6 557.8 138.6s-24.6 10.8-24.6 24.6c0 13.2 10.8 24.6 24.6 24.6zm61.2 90.6c-16.8 0-30.6 13.8-30.6 30.6s13.8 30.6 30.6 30.6 30.6-13.8 30.6-30.6c.6-16.8-13.2-30.6-30.6-30.6zm-61.2 145.2c-20.399 0-36.6 16.2-36.6 36.601 0 20.399 16.2 36.6 36.6 36.6 20.4 0 36.601-16.2 36.601-36.6C595 439.8 578.2 423.6 557.8 423.6zM409 476.4c-24 0-43.2 19.199-43.2 43.199s19.2 43.2 43.2 43.2 43.2-19.2 43.2-43.2S433 476.4 409 476.4zM260.8 411c-27 0-49.2 22.2-49.2 49.2s22.2 49.2 49.2 49.2 49.2-22.2 49.2-49.2-22.2-49.2-49.2-49.2zm-10.2-102c0-27.6-22.8-50.4-50.4-50.4-27.6 0-50.4 22.8-50.4 50.4 0 27.6 22.8 50.4 50.4 50.4 27.6 0 50.4-22.2 50.4-50.4zm10.2-199.8c-30 0-54 24-54 54s24 54 54 54 54-24 54-54-24.6-54-54-54zM409 37.8c-35.4 0-63.6 28.8-63.6 63.6S374.2 165 409 165s63.6-28.8 63.6-63.6-28.2-63.6-63.6-63.6z"/>
+  </symbol>
+</svg>
+        </div>
+    
+</div>
+            <p class="uppercase text-xs mt-6">הקודם</p>
+
+            <p class="font-bold">
+                <a href="/blog/2020/08/11ty-howto-migrate/">מוורדפרס ל-11ty</a>
+            </p>
+        
+    </div>
+
+    </main>
+    <footer class="bg-gray-900 pb-10">
+  <p class="block text-center text-sm mb-6">
+    CC-BY-SA
+    <a href="/">
+      Yehuda Bar Nir
+    </a>
+    &bull; Built with <a href="https://www.11ty.dev/">11ty</a> 
+    &bull; Based on <a target="_blank" href="https://github.com/reeseschultz/11r">11r</a> by
+    <a target="_blank" href="https://reeseschultz.com">
+      Reese Schultz
+    </a> 
+  </p>
+
+</footer>
+    
+    <script src="/assets/lib/cash.js"></script>
+    <script src="/assets/main.bundle.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </body>
+</html>

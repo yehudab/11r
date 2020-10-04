@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    
+    <meta itemprop="name" content="HTTP/2 | בלוג פשוט">
+    <meta itemprop="description" content="צר עולמי כ  U+200A">
+
+    
+    <meta name="twitter:title" content="HTTP/2 | בלוג פשוט">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="צר עולמי כ  U+200A">
+    <meta name="twitter:site" content="@yehudab">
+    <meta name="twitter:creator" content="@yehudab">
+    <meta name="twitter:image:src" content="">
+
+    
+    <meta name="og:title" content="HTTP/2 | בלוג פשוט">
+    <meta name="og:description" content="צר עולמי כ  U+200A">
+    <meta name="og:image" content="">
+    <meta name="og:url" content="https://yehudab.com/">
+    <meta name="og:site_name" content="בלוג פשוט">
+    <meta name="og:locale" content="en_GB">
+    <meta name="og:type" content="website">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+
+    <title>
+      HTTP/2
+      
+       | בלוג פשוט</title>
+
+    <link rel="stylesheet" href="/assets/main.bundle.css">
+
+    
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <header>
+  <nav class="container mx-auto max-w-3xl px-8 pt-2 flex flex-wrap justify-between">
+    <div>
+      <h1>
+        <a href="/">בלוג פשוט</a>
+      </h1>
+      <p>צר עולמי כ  U+200A</p>
+    </div>
+
+    <ul class="flex flex-wrap sm:w-32 w-full mt-6 md:justify-between justify-evenly">
+      <li>
+        <a href="/blog/about">אודות</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+    <main class="container mx-auto max-w-3xl p-8 flex-grow">
+      
+    <p></p>
+    <div>
+        <h2>HTTP/2</h2>
+
+        
+
+        
+            <div class="mb-2">
+                
+            </div>
+        
+
+        
+            <p class="text-sm italic">נכתב ב<span datetime="2017-07-07T17:18:52+03:00">7 ביולי 2017</span>.</p>
+        
+
+        <div class="content post">
+            <p>עוד שדרוג קטן לבלוג.<br>
+הפעם העברתי את השרת מ apache ל nginx, ועל הדרך הפעלתי HTTP/2.<br>
+זה אמור לשפר את הביצועים, למרות שאני לא ממש מרגיש בזה בנתיים.</p>
+<p><img src="/img/2017/nginx-logs-sm.jpg" alt="Hex dump of nginx logs"></p>
+<p>למעוניינים, <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-with-http-2-support-on-ubuntu-16-04">המדריך הזה</a> מסביר על התקנת nginx, והגדרות HTTP/2. <a href="http://nginxlibrary.com/wordpress-permalinks/">כאן</a> תמצאו הסבר על ההגדרות הדרושות ב nginx לטובת הפעלת WordPress במקום mod_rewrite של apache.</p>
+<p>התוצאה הסופית של כל ההגדרות האלה, כפי שנשמרה בקובץ ‎/etc/nginx/sites-available/default היא זו:</p>
+<pre class="language-nginx"><code class="language-nginx"><span class="token keyword">server</span> <span class="token punctuation">{</span><br><br>        <span class="token keyword">listen</span> <span class="token number">443</span> <span class="token keyword">ssl</span> http2 default_server<span class="token punctuation">;</span><br>        <span class="token keyword">listen</span> <span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">:</span><span class="token number">443</span> <span class="token keyword">ssl</span> http2 default_server<span class="token punctuation">;</span><br>        <span class="token keyword">include</span> snippets<span class="token operator">/</span><span class="token keyword">gzip</span><span class="token punctuation">.</span>conf<span class="token punctuation">;</span><br><br>        <span class="token keyword">ssl_certificate</span> <span class="token operator">/</span>etc<span class="token operator">/</span>nginx<span class="token operator">/</span><span class="token keyword">ssl</span><span class="token operator">/</span>live<span class="token operator">/</span>yehudab<span class="token punctuation">.</span>com<span class="token operator">/</span>fullchain<span class="token punctuation">.</span>pem<span class="token punctuation">;</span><br>        <span class="token keyword">ssl_certificate_key</span> <span class="token operator">/</span>etc<span class="token operator">/</span>nginx<span class="token operator">/</span><span class="token keyword">ssl</span><span class="token operator">/</span>live<span class="token operator">/</span>yehudab<span class="token punctuation">.</span>com<span class="token operator">/</span>privkey<span class="token punctuation">.</span>pem<span class="token punctuation">;</span><br>        <span class="token keyword">ssl_dhparam</span> <span class="token operator">/</span>etc<span class="token operator">/</span>nginx<span class="token operator">/</span><span class="token keyword">ssl</span><span class="token operator">/</span>live<span class="token operator">/</span>yehudab<span class="token punctuation">.</span>com<span class="token operator">/</span>dhparam<span class="token punctuation">.</span>pem<span class="token punctuation">;</span><br><br>        <span class="token keyword">root</span> <span class="token operator">/</span>var<span class="token operator">/</span>www<span class="token operator">/</span>yehudab<span class="token punctuation">.</span>com<span class="token punctuation">;</span><br><br>        <span class="token keyword">index</span> <span class="token keyword">index</span><span class="token punctuation">.</span>html <span class="token keyword">index</span><span class="token punctuation">.</span>htm <span class="token keyword">index</span><span class="token punctuation">.</span>php <span class="token keyword">index</span><span class="token punctuation">.</span>nginx<span class="token operator">-</span>debian<span class="token punctuation">.</span>html<span class="token punctuation">;</span><br><br>        <span class="token keyword">server_name</span> yehudab<span class="token punctuation">.</span>com<span class="token punctuation">;</span><br><br>        <span class="token keyword">location</span> <span class="token operator">/</span> <span class="token punctuation">{</span><br>                <span class="token keyword">try_files</span> <span class="token variable">$uri</span> <span class="token variable">$uri</span><span class="token operator">/</span> <span class="token operator">=</span><span class="token number">404</span><span class="token punctuation">;</span><br>        <span class="token punctuation">}</span><br><br>        <span class="token keyword">location</span> <span class="token operator">/</span>blog<span class="token operator">/</span> <span class="token punctuation">{</span><br>                <span class="token keyword">try_files</span> <span class="token variable">$uri</span> <span class="token variable">$uri</span><span class="token operator">/</span> <span class="token operator">/</span>blog<span class="token operator">/</span><span class="token keyword">index</span><span class="token punctuation">.</span>php<span class="token operator">?</span><span class="token variable">$args</span><span class="token punctuation">;</span><br>        <span class="token punctuation">}</span><br>        <span class="token keyword">location</span> <span class="token operator">~</span> \<span class="token punctuation">.</span>php$ <span class="token punctuation">{</span><br>                <span class="token keyword">include</span> snippets<span class="token operator">/</span>fastcgi<span class="token operator">-</span>php<span class="token punctuation">.</span>conf<span class="token punctuation">;</span><br>                <span class="token keyword">fastcgi_pass</span> unix<span class="token punctuation">:</span><span class="token operator">/</span>run<span class="token operator">/</span>php<span class="token operator">/</span>php7<span class="token punctuation">.</span><span class="token number">0</span><span class="token operator">-</span>fpm<span class="token punctuation">.</span>sock<span class="token punctuation">;</span><br>        <span class="token punctuation">}</span><br><br>        <span class="token keyword">location</span> <span class="token operator">~</span> <span class="token operator">/</span>\<span class="token punctuation">.</span>ht <span class="token punctuation">{</span><br>                <span class="token keyword">deny</span> all<span class="token punctuation">;</span><br>        <span class="token punctuation">}</span><br>        <span class="token keyword">include</span> snippets<span class="token operator">/</span><span class="token keyword">expires</span><span class="token punctuation">.</span>conf<span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><br><span class="token keyword">server</span> <span class="token punctuation">{</span><br>       <span class="token keyword">listen</span>         <span class="token number">80</span><span class="token punctuation">;</span><br>       <span class="token keyword">listen</span>    <span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">:</span><span class="token number">80</span><span class="token punctuation">;</span><br>       <span class="token keyword">server_name</span>    yehudab<span class="token punctuation">.</span>com<span class="token punctuation">;</span><br>       <span class="token keyword">return</span>         <span class="token number">301</span> <span class="token keyword">https</span><span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span><span class="token variable">$server_name</span><span class="token variable">$request_uri</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+<p>לאחר סיום ההגדרות, ניתן לוודא את תמיכת האתר ל HTTP/2 באמצעות <a href="https://tools.keycdn.com/http2-test">דף הבדיקה של KeyCDN</a>.</p>
+
+        </div>
+
+<div class="comments">
+    
+        <h3>תגובות:</h5>
+        
+    <ul>
+        
+            <li data-comment-id="">
+                <p class="comment-details" >
+                    
+                        <a class="comment-author" href="https://hatul.info">חתול</a>
+                    
+          (11 ביולי 2017 בשעה 13:32): 
+        </p>
+                <p>לא ידעתי ש־nginx כבר תומך ב־http2. בפעם האחרונה שבדקתי זה דרש הידור של מוד.
+בזכותך ראיתי כמה פשוט להפעיל את התמיכה (מילה אחת בהגדרות) ומעכשיו גם השרת שלי תומך.</p>
+                <button class="comment-reply">
+          להגיב
+        </button>
+                
+            </li>
+        
+    </ul>
+
+    
+
+    
+</div>
+            <p class="uppercase text-xs mt-6">הבא</p>
+            <p class="font-bold mb-2">
+                <a href="/blog/2017/07/hotter-than-july/">חם יותר מיולי</a>
+            </p>
+        
+            <p class="uppercase text-xs mt-6">הקודם</p>
+
+            <p class="font-bold">
+                <a href="/blog/2017/07/just-a-second/">רק שניה</a>
+            </p>
+        
+    </div>
+
+    </main>
+    <footer class="bg-gray-900 pb-10">
+  <p class="block text-center text-sm mb-6">
+    CC-BY-SA
+    <a href="/">
+      Yehuda Bar Nir
+    </a>
+    &bull; Built with <a href="https://www.11ty.dev/">11ty</a> 
+    &bull; Based on <a target="_blank" href="https://github.com/reeseschultz/11r">11r</a> by
+    <a target="_blank" href="https://reeseschultz.com">
+      Reese Schultz
+    </a> 
+  </p>
+
+</footer>
+    
+    <script src="/assets/lib/cash.js"></script>
+    <script src="/assets/main.bundle.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </body>
+</html>

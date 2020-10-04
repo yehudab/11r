@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    
+    <meta itemprop="name" content="php 7.4 | בלוג פשוט">
+    <meta itemprop="description" content="צר עולמי כ  U+200A">
+
+    
+    <meta name="twitter:title" content="php 7.4 | בלוג פשוט">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="צר עולמי כ  U+200A">
+    <meta name="twitter:site" content="@yehudab">
+    <meta name="twitter:creator" content="@yehudab">
+    <meta name="twitter:image:src" content="">
+
+    
+    <meta name="og:title" content="php 7.4 | בלוג פשוט">
+    <meta name="og:description" content="צר עולמי כ  U+200A">
+    <meta name="og:image" content="">
+    <meta name="og:url" content="https://yehudab.com/">
+    <meta name="og:site_name" content="בלוג פשוט">
+    <meta name="og:locale" content="en_GB">
+    <meta name="og:type" content="website">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+
+    <title>
+      php 7.4
+      
+       | בלוג פשוט</title>
+
+    <link rel="stylesheet" href="/assets/main.bundle.css">
+
+    
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <header>
+  <nav class="container mx-auto max-w-3xl px-8 pt-2 flex flex-wrap justify-between">
+    <div>
+      <h1>
+        <a href="/">בלוג פשוט</a>
+      </h1>
+      <p>צר עולמי כ  U+200A</p>
+    </div>
+
+    <ul class="flex flex-wrap sm:w-32 w-full mt-6 md:justify-between justify-evenly">
+      <li>
+        <a href="/blog/about">אודות</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+    <main class="container mx-auto max-w-3xl p-8 flex-grow">
+      
+    <p></p>
+    <div>
+        <h2>php 7.4</h2>
+
+        
+
+        
+            <div class="mb-2">
+                <a class="tag nano" href="/tag/nano">nano</a><a class="tag php" href="/tag/php">php</a><a class="tag vi" href="/tag/vi">vi</a><a class="tag וורדפרס" href="/tag/וורדפרס">וורדפרס</a><a class="tag קוד פתוח ותוכנה חופשית" href="/tag/קוד פתוח ותוכנה חופשית">קוד פתוח ותוכנה חופשית</a><a class="tag לינוקס" href="/tag/לינוקס">לינוקס</a>
+            </div>
+        
+
+        
+            <p class="text-sm italic">נכתב ב<span datetime="2020-03-01T22:07:57+02:00">1 במרץ 2020</span>.</p>
+        
+
+        <div class="content post">
+            <p>חלפה למעלה משנה מאז ש<a href="https://www.php.net/eol.php">התמיכה ב-7.0 php הופסקה</a>, וזה הזמן לשדרג את הבלוג לגרסה 7.4. כרגיל, צריך לקרוא את כל ה breaking changes, אבל אם הבלוג והתוספים מתוחזקים לגרסה העדכנית ביותר, אפשר לסמוך בדרך כלל שהכל יעובד. גיבוי של הקוד והדאטה רצוי גם כן.</p>
+<p>את הגיבויים אני מבצע לאחרונה בעזרת <a href="https://restic.net/">restic</a>, כאשר הקבצים מועלים לאכסון (הזול יחסית) של <a href="https://www.backblaze.com/b2/cloud-storage.html">Backblaze B2</a>.</p>
+<p>אחרי שמכניסים את הגדרות ל restic למשתני סביבה, סקריפט הגיבוי פשוט למדי:</p>
+<pre class="language-bash"><code class="language-bash"><span class="token shebang important">#!/bin/bash</span><br><span class="token assign-left variable">d</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">date</span> +%Y-%m-%d<span class="token variable">)</span></span><br>mysqldump -u *** -p *** <span class="token operator">></span> ~/backup/sql/yehudab-<span class="token variable">${d}</span>.sql<br><span class="token function">gzip</span> ~/backup/sql/*.sql<br><span class="token function">tar</span> -czf ~/backup/site/yehudab.com-<span class="token variable">${d}</span>.tar.gz yehudab.com<br>restic backup ~/backup</code></pre>
+<p>לצורך השדרוג, עקבתי אחרי <a href="https://www.cloudbooklet.com/upgrade-php-version-to-php-7-4-on-ubuntu/">המדריך ב CloudBooklet</a>. מכוון שאני מריץ php דרך ngnix, ביצעתי את הסעיפים הרלוונטים לגרסת fpm.</p>
+<p>אה, וכמובן, להשתמש ב vi, כי nano זה לחלשים.</p>
+<p>אחרי השדרוג, אני מנסה לשמור את הפוסט הזה ובום error 500. בדיקה מהירה בלוג של nginx על השרת מגלה ששכחתי להתקין את php7.4-memcache שהמדריך הנ&quot;ל לא מחשיב כ common extension. הרצת:</p>
+<pre class="language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> php7.4-memcache</code></pre>
+<p>וריסטרט לשרת פתרו את הבעיה.<br>
+<img src="/img/2020/upgrade.png" alt="שדרוג"></p>
+
+        </div>
+
+<div class="comments">
+    
+
+    
+</div>
+            <p class="uppercase text-xs mt-6">הבא</p>
+            <p class="font-bold mb-2">
+                <a href="/blog/2020/07/docker/">עוברים דירה</a>
+            </p>
+        
+            <p class="uppercase text-xs mt-6">הקודם</p>
+
+            <p class="font-bold">
+                <a href="/blog/2019/12/2020/">2020</a>
+            </p>
+        
+    </div>
+
+    </main>
+    <footer class="bg-gray-900 pb-10">
+  <p class="block text-center text-sm mb-6">
+    CC-BY-SA
+    <a href="/">
+      Yehuda Bar Nir
+    </a>
+    &bull; Built with <a href="https://www.11ty.dev/">11ty</a> 
+    &bull; Based on <a target="_blank" href="https://github.com/reeseschultz/11r">11r</a> by
+    <a target="_blank" href="https://reeseschultz.com">
+      Reese Schultz
+    </a> 
+  </p>
+
+</footer>
+    
+    <script src="/assets/lib/cash.js"></script>
+    <script src="/assets/main.bundle.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </body>
+</html>

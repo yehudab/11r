@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    
+    <meta itemprop="name" content="תכונת text-shadow בפרייפוקס 3.1 | בלוג פשוט">
+    <meta itemprop="description" content="צר עולמי כ  U+200A">
+
+    
+    <meta name="twitter:title" content="תכונת text-shadow בפרייפוקס 3.1 | בלוג פשוט">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="צר עולמי כ  U+200A">
+    <meta name="twitter:site" content="@yehudab">
+    <meta name="twitter:creator" content="@yehudab">
+    <meta name="twitter:image:src" content="">
+
+    
+    <meta name="og:title" content="תכונת text-shadow בפרייפוקס 3.1 | בלוג פשוט">
+    <meta name="og:description" content="צר עולמי כ  U+200A">
+    <meta name="og:image" content="">
+    <meta name="og:url" content="https://yehudab.com/">
+    <meta name="og:site_name" content="בלוג פשוט">
+    <meta name="og:locale" content="en_GB">
+    <meta name="og:type" content="website">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+
+    <title>
+      תכונת text-shadow בפרייפוקס 3.1
+      
+       | בלוג פשוט</title>
+
+    <link rel="stylesheet" href="/assets/main.bundle.css">
+
+    
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <header>
+  <nav class="container mx-auto max-w-3xl px-8 pt-2 flex flex-wrap justify-between">
+    <div>
+      <h1>
+        <a href="/">בלוג פשוט</a>
+      </h1>
+      <p>צר עולמי כ  U+200A</p>
+    </div>
+
+    <ul class="flex flex-wrap sm:w-32 w-full mt-6 md:justify-between justify-evenly">
+      <li>
+        <a href="/blog/about">אודות</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+    <main class="container mx-auto max-w-3xl p-8 flex-grow">
+      
+    <p></p>
+    <div>
+        <h2>תכונת text-shadow בפרייפוקס 3.1</h2>
+
+        
+
+        
+            <div class="mb-2">
+                <a class="tag CSS" href="/tag/CSS">CSS</a><a class="tag דפדפנים" href="/tag/דפדפנים">דפדפנים</a><a class="tag אופרה" href="/tag/אופרה">אופרה</a><a class="tag ספארי" href="/tag/ספארי">ספארי</a><a class="tag פיירפוקס" href="/tag/פיירפוקס">פיירפוקס</a>
+            </div>
+        
+
+        
+            <p class="text-sm italic">נכתב ב<span datetime="2008-08-03T07:08:42+03:00">3 באוגוסט 2008</span>.</p>
+        
+
+        <div class="content post">
+            <p>לפני מספר ימים שוחררה גרסת אלפא של פיירפוקס 3.1 (המכונה Shiretoko). אחת התכונות החדשות שנוספה לגרסה זו היא האפשרות להוספת צל מתחת לטקסט. תכונה זו היתה קיימת בספארי מאז גרסה 1 שלו, ב ie ע&quot;י שימוש בהרחבה פרטית מגרסה 5.5 ולפי התקן בגרסה 8, ובאופרה מגרסה 9.5.<br>
+הורדתי את הגרסה ובדקתי את התצוגה בבלוג שלי. לשם כך הוספתי את הפרמטרים הבאים בקובץ ה styles.css:</p>
+<pre class="language-css"><code class="language-css"><span class="token selector">#header h1</span> <span class="token punctuation">{</span><br>	<span class="token property">text-shadow</span><span class="token punctuation">:</span> #999 3px 3px 3px<span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><span class="token selector">.post h2</span> <span class="token punctuation">{</span><br>	<span class="token property">text-shadow</span><span class="token punctuation">:</span> #999 2px 2px 2px<span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+<p>התוצאה הייתה מאכזבת: כל הטקטסים בעברית לא קיבלו הצללה, אלא רק מספרים וטקסט באנגלית. הנה תוצאה השוואתית (מלמעלה למטה: פיירפוקס Gecko/2008072510 Shiretoko/3.1a1 , אופרה 9.51, ספארי נייטלי 35417 – כולם בגסרת מק)<br>
+<img src="http://img.skitch.com/20080803-e2g4scij82sf14djt45fcg3xtp.png" alt="text-shadow פיירפוקס, אופרה, ספארי"><br>
+אני אדווח על הבאג בבאגזילה ואעדכן כאן כאשר יהיו התפתחויות.</p>
+<p>עדכון (7/8/2008): מסתבר שהבאג תלוי ברדיוס הטשטוש של הצל. אם הוא 0, כלומר ללא טשטוש, הצל מוצג היטב. תמיד טוב לייצר דוגמה מינימלית (במקרה הזה זה היה כדי לדווח בבאגזילה). למי שרוצה לעקוב, מספר הבאג בבאגזילה הוא: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=449519">449519</a></p>
+
+        </div>
+
+<div class="comments">
+    
+
+    
+</div>
+            <p class="uppercase text-xs mt-6">הבא</p>
+            <p class="font-bold mb-2">
+                <a href="/blog/2008/08/d792d7a8d7a1d7aa-d791d798d790-d797d793d7a9d794-d79cd7a0d792d79f-d794d79ed793d799d794-flip4mac/">גרסת בטא חדשה לנגן המדיה Flip4Mac</a>
+            </p>
+        
+            <p class="uppercase text-xs mt-6">הקודם</p>
+
+            <p class="font-bold">
+                <a href="/blog/2008/08/d794d79ed795d7a2d793d795d79f-d794d790d7a7d7a1d7a7d79cd795d7a1d799d791d799-d7a9d79c-d791d795d793d7a7d799-ie8/">המועדון האקסקלוסיבי של בודקי IE8</a>
+            </p>
+        
+    </div>
+
+    </main>
+    <footer class="bg-gray-900 pb-10">
+  <p class="block text-center text-sm mb-6">
+    CC-BY-SA
+    <a href="/">
+      Yehuda Bar Nir
+    </a>
+    &bull; Built with <a href="https://www.11ty.dev/">11ty</a> 
+    &bull; Based on <a target="_blank" href="https://github.com/reeseschultz/11r">11r</a> by
+    <a target="_blank" href="https://reeseschultz.com">
+      Reese Schultz
+    </a> 
+  </p>
+
+</footer>
+    
+    <script src="/assets/lib/cash.js"></script>
+    <script src="/assets/main.bundle.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </body>
+</html>

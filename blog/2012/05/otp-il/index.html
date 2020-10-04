@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    
+    <meta itemprop="name" content="חישוב מסלול נסיעה בתחבורה ציבורית | בלוג פשוט">
+    <meta itemprop="description" content="צר עולמי כ  U+200A">
+
+    
+    <meta name="twitter:title" content="חישוב מסלול נסיעה בתחבורה ציבורית | בלוג פשוט">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="צר עולמי כ  U+200A">
+    <meta name="twitter:site" content="@yehudab">
+    <meta name="twitter:creator" content="@yehudab">
+    <meta name="twitter:image:src" content="">
+
+    
+    <meta name="og:title" content="חישוב מסלול נסיעה בתחבורה ציבורית | בלוג פשוט">
+    <meta name="og:description" content="צר עולמי כ  U+200A">
+    <meta name="og:image" content="">
+    <meta name="og:url" content="https://yehudab.com/">
+    <meta name="og:site_name" content="בלוג פשוט">
+    <meta name="og:locale" content="en_GB">
+    <meta name="og:type" content="website">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+
+    <title>
+      חישוב מסלול נסיעה בתחבורה ציבורית
+      
+       | בלוג פשוט</title>
+
+    <link rel="stylesheet" href="/assets/main.bundle.css">
+
+    
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <header>
+  <nav class="container mx-auto max-w-3xl px-8 pt-2 flex flex-wrap justify-between">
+    <div>
+      <h1>
+        <a href="/">בלוג פשוט</a>
+      </h1>
+      <p>צר עולמי כ  U+200A</p>
+    </div>
+
+    <ul class="flex flex-wrap sm:w-32 w-full mt-6 md:justify-between justify-evenly">
+      <li>
+        <a href="/blog/about">אודות</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+    <main class="container mx-auto max-w-3xl p-8 flex-grow">
+      
+    <p></p>
+    <div>
+        <h2>חישוב מסלול נסיעה בתחבורה ציבורית</h2>
+
+        
+
+        
+            <div class="mb-2">
+                
+            </div>
+        
+
+        
+            <p class="text-sm italic">נכתב ב<span datetime="Fri May 18 2012 08:21:13 GMT+0000 (Coordinated Universal Time)">18 במאי 2012</span>.</p>
+        
+
+        <div class="content post">
+            <p>משרד התחבורה החל לפרסם לפני כשבוע מאגר מידע חדש הכולל לוחות זמנים ונתיבים של התחבורה הציבורית בארץ. <a href="http://data.gov.il/dataset/383">המאגר</a> מפורסם לפי תקן פתוח של גוגל שנקרא GTFS. במסגרת שיתוף פעולה של מספר חברים ברשימת התפוצה של <a href="http://www.hamakor.org.il/">המקור</a>, הקמנו פיילוט שמדגים את יכולות המאגר. הקוד בפיילוט מבוסס על פרויקט OpenTripPlanner. תודה לירון על עבודת התרגום, ולשאר החברים על העידוד והתמיכה.</p>
+<p>עד להקמת שרת ציבורי, ניתן להתרשם מצילומי המסך:</p>
+<p>מסלול שלם:<br>
+<img src="/img/2012/05/9b691287-b202-4e4c-89ba-7f025f6a11ba.png" alt="מסלול שלם"></p>
+<p>התמקדות על מקטעים:<br>
+<img src="https://img.skitch.com/20120517-rpfeyxpb4nx3t8rpdw9qycshut.png" alt="התמקדות על מקטעים"></p>
+<p>גרסה להדפסה:<br>
+<img src="https://img.skitch.com/20120517-fnrapyjp427xmw9e86ha791d3g.png" alt="גרסה להדפסה"></p>
+<h3>ההסבר בהמשך מיועד למי שרוצה להקים שרת. לא למי שרוצה לחשב מסלול !! (מה שנקרא: Don't try this at home).</h3>
+<p>להקמת השרת, יש לבצע את הפעולות הבאות: (זה הרקע. הקוד בפסקה הבאה מבצע את הפעולות)</p>
+<p>לוודא שאזור הזמן של השרת הוא Asia/Jerusalem.<br>
+להוריד ולפתוח את הקוד של OpenTripPlanner (גודל הקובץ כ 90MB) וליצור קישור סימבולי ל / .<br>
+להוריד ולפתוח קובץ Open Street Map של ישראל מהאתר <a href="http://downloads.cloudmade.com/asia/western_asia/israel">cloudmade.com</a> (גודל הקובץ 22MB).<br>
+למצוא את כתובת קובץ ה GTFS <a href="http://data.gov.il/dataset/383">מאתר מאגרי המידע </a>של הממשלה, ולהוריד אותו. מכוון שהקובץ מוגש (זמנית?) משרת ftp ולא http, צריך לארח אותו מחדש על שרת אחר. בדוגמאות הקוד בהמשך האירוח הוא בשרת מקומי</p>
+<pre><code>$ date
+# Make sure timezone is correct. If not, run the command:
+# $ sudo ln -sf /usr/share/zoneinfo/Asia/Jerusalem /etc/localtime
+# make sure ntp is installed and running. if not, follow these instructions: &lt;a href=&quot;http://www.ehow.com/how_8251011_sync-time-centos.html&quot;&gt;http://www.ehow.com/how_8251011_sync-time-centos.html&lt;/a&gt;
+$ mkdir ~/GTFS
+$ cd ~/GTFS
+$ curl -L -O &quot;http://maps5.trimet.org/otp-dev/otp.zip&quot;
+$ curl -L -O &quot;http://downloads.cloudmade.com/asia/western_asia/israel/israel.osm.bz2&quot;
+$ curl -L -O &quot;ftp://199.203.58.18/israel-public-transportation.zip&quot;
+# !! replace IP above with correct IP
+$ unzip otp.zip
+$ bunzip2 israel.osm.bz2
+$ sudo ln -s ~/GTFS/otp /
+$ ln -s ~/GTFS/israel.osm /otp/cache/osm/
+</code></pre>
+<p>יש לערוך מספר קבצי הגדרות:</p>
+<pre><code>$ vi /otp/graph-builder.xml
+# Line 13, change properties to 'name=&quot;path&quot; value=&quot;/home/yehuda/GTFS/israel-public-transportation.zip&quot;'
+#              (or whatever path you placed the file in)
+# Line 40, change file name of OSM from or-wa.osm to israel.osm (just file part)
+$ vi /otp/bin/build-graph.sh
+# Line 1, change -Xmx2048m to -Xmx6114m. If you have more memory, put as much as possible
+$ vi /otp/bin/start-server.sh
+# Line 1, change -Xmx2048m to -Xmx4096m. If you have more memory, put as much as possible
+</code></pre>
+<p>בניית הגרף (משלב נתוני OSM עם נתוני תח&quot;ץ)</p>
+<pre><code>$ cd /otp
+$ bin/build-graph.sh &gt;&amp; ~/GTFS/build-graph.err
+# might take 15-30 minutes depending on processor power and memory
+$ ls -l /otp/Graph.obj
+# should be around 1GB
+</code></pre>
+<p>אחרי הריצה חשוב לוודא בלוג שאין תעופה בגלל חוסר זכרון !!</p>
+<p>עכשיו אפשר להריץ את השרת האפליקטיבי:</p>
+<pre><code>$ cd /otp
+$ bin/start-server.sh
+# Wait for line: &quot;Winstone Servlet Engine v0.9.10 running...&quot;
+</code></pre>
+<p>עכשיו אפשר לפתוח דפדן לכתובת : http://localhost:8080/opentripplanner-webapp/index.html (אם השרת אינו מקומי, להחליף localhost בכתובת השרת). ולנסות לחשב מסלול.</p>
+<p>תרגום לעברית:<br>
+לבדוק האם הקובץ ‎/otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js‏ קיים. אם לא, להוריד אותו <a href="https://github.com/openplans/OpenTripPlanner/blob/master/opentripplanner-webapp/src/main/webapp/js/otp/locale/Hebrew.js">מכאן</a> ולשמור בנתיב הנ&quot;ל. אחר-כך, יש לבצע מספר תיקונים בקוד:</p>
+<pre><code>$ vi /otp/webapps/opentripplanner-webapp/index.html
+# line 2, add 'dir=&quot;rtl&quot;' to html tag
+# line 53, duplicate this line and change file name to &quot;js/otp/locale/Hebrew.js&quot;
+$ vi /otp/webapps/opentripplanner-webapp/js/otp/config.js
+# line 12, change otp.locale.English to otp.locale.Hebrew (at end of line)
+# line 175, change value of 'enabled' to 'true'
+# line 177, add this to end of string:
+# + '&lt;div style=&quot;margin:10px auto;width:205px&quot;&gt;&lt;a href=&quot;http://www.opentripplanner.org/&quot;&gt;&lt;img src=&quot;images/logo-otp.png&quot; title=&quot;OpenTripPlanner&quot; /&gt;&lt;/a&gt;' +  '&lt;a style=&quot;margin:0 10px&quot; href=&quot;http://www.hamakor.org.il/&quot;&gt;&lt;img src=&quot;images/logo-hamakor.png&quot; title=&quot;עמותת המקור&quot; /&gt;&lt;/a&gt;' + '&lt;a href=&quot;http://www.hetz.biz/&quot;&gt;&lt;img src=&quot;images/logo-hetz.png&quot; title=&quot;חץ ביז&quot; /&gt;&lt;/a&gt;&lt;/div&gt;'
+$ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
+# line 28, change title to: &quot;אודות האתר&quot;
+# line 29, change content to:
+# 'אתר זה הוקם ע&quot;י יהודה ב. על בסיס נתוני &quot;לו&quot;ז ומידע גאוגראפי בתחבורה הציבורית&quot; הזמינים מאתר &lt;a href=&quot;http://data.gov.il/&quot;&gt;data.gov.il&lt;/a&gt; ועל בסיס תוכנת הקוד הפתוח &lt;a href=&quot;http://www.opentripplanner.org/&quot;&gt;OpenTripPlanner&lt;/a&gt;.' + '&lt;br&gt;' + 'תרגום התוכנה לעברית בוצע ע&quot;י ירון שהרבני. אירוח אתר זה בחסות &lt;a href=&quot;http://www.hamakor.org.il/&quot;&gt;עמותת המקור&lt;/a&gt; ובאדיבות &lt;a href=&quot;http://www.hetz.biz/&quot;&gt;חץ ביז&lt;/a&gt;.' + '&lt;br&gt;' +  'תנאי שימוש: עמותת המקור עושה כמיטב יכולתה בכדי לספק שירות זה על בסיס נתונים מדוייקים ועדכניים אולם ייתכנו טעויות. המידע ניתן כפי שהוא ללא אחריות. ראו גם &lt;a href=&quot;http://data.gov.il/dataset/383&quot;&gt;תנאי שימוש של משרד התחבורה&lt;/a&gt;.'
+</code></pre>
+<p>עכשיו לרפרש את הדפדפן ולהנות מההמשק העברי. יתכן שתתקבל הודעה על כשלון בחישוב המסלול. במקרה זה, יש לבחור תאריך חדש לחישוב בתחום המכוסה על-ידי הקובץ (יום הורדת הקובץ ועד שבועיים קדימה)</p>
+
+        </div>
+
+<div class="comments">
+    
+        <h3>תגובות:</h5>
+        
+    <ul>
+        
+            <li data-comment-id="">
+                <p class="comment-details" >
+                    
+                        <span class="comment-author">יוסי</span>
+                    
+          (25 במאי 2012 בשעה 11:44): 
+        </p>
+                <p>כמה זכרון פנימי יש לכם על המחשב שבו בניתם את הגרף של ישראל?
+לי יש fedora 64 bit עם 4 ג&#39;יגה זכרון פנימי וזה אף פעם לא הצליח לסיים לבנות את הגרף ..
+על כמה מינימום זכרון הייתם ממליצים?
+תודה,יוסי</p>
+                <button class="comment-reply">
+          להגיב
+        </button>
+                
+                    
+    <ul>
+        
+            <li data-comment-id="">
+                <p class="comment-details" >
+                    
+                        <a class="comment-author" href="http://yehudab.com/blog">יהודה</a>
+                    
+          (25 במאי 2012 בשעה 12:11): 
+        </p>
+                <p>הי יוסי,
+כרגע יש לנו 8GB זכרון פיזי, ולבניית בגרף מוקצים 6 מתוכם. זה גם מה שמוקצה אחר-כך לריצה. שים לב, שכדי שjava תדע לנצל את הזכרון הנוסף יש לשנות את פרמטר ה xmx, כפי שמוסבר בפוסט.</p>
+                <button class="comment-reply">
+          להגיב
+        </button>
+                
+            </li>
+        
+    </ul>
+
+                
+            </li>
+        
+            <li data-comment-id="">
+                <p class="comment-details" >
+                    
+                        <span class="comment-author">יוסי</span>
+                    
+          (25 במאי 2012 בשעה 12:28): 
+        </p>
+                <p>קודם כל תודה על התשובה המהירה !
+שיניתי את הפרמט xmx כפי שציינתם,אבל זה לא עזר. אני פשוט צריך לשדרג ל8 ג&#39;יגה .
+
+חשבתי שאולי כדאי שתפרסמו את הקובץ Graph.obj שנוצר כדי שאנשים יוכלו להשתמש בו בלי הצורך לקמפל אותו בעצמם על מחשב חזק ..
+מה אתה אומר?</p>
+                <button class="comment-reply">
+          להגיב
+        </button>
+                
+                    
+    <ul>
+        
+            <li data-comment-id="">
+                <p class="comment-details" >
+                    
+                        <a class="comment-author" href="http://yehudab.com/blog">יהודה</a>
+                    
+          (25 במאי 2012 בשעה 12:42): 
+        </p>
+                <p>יש עם זה שתי בעיות:
+הקובץ שנוצר הוא בגודל 1gb, כך שזמן ההורדה עלול להיות גדול. 
+גם השימוש בקובץ אחר-כך דורש כמות גדולה של זכרון (קצת פחות, אבל עדיין).
+לדעתי פתרון יותר טוב הוא להכין קובץ GTFS חדש שיכיל רק חלק מהמסלולים (נניח רק של דן) לטובת פיתוח ובדיקות.</p>
+                <button class="comment-reply">
+          להגיב
+        </button>
+                
+            </li>
+        
+    </ul>
+
+                
+            </li>
+        
+            <li data-comment-id="">
+                <p class="comment-details" >
+                    
+                        <span class="comment-author">יוסי</span>
+                    
+          (25 במאי 2012 בשעה 12:44): 
+        </p>
+                <p>1. ג&#39;יגה אחד היום זה בקטנה. 10 דקות הורדה ..
+2. להשתמש זה באמת דורש פחות זכרון אז זה בעצם מספיק .
+3. לחלק את הקובץ GTFS ולהשאיר בו רק חברה (או חברות) מסוימת זה מסובך ולא מומלץ ..</p>
+                <button class="comment-reply">
+          להגיב
+        </button>
+                
+            </li>
+        
+            <li data-comment-id="">
+                <p class="comment-details" >
+                    
+                        <span class="comment-author">ליאור</span>
+                    
+          (12 ביוני 2012 בשעה 16:50): 
+        </p>
+                <p>עשית לי את החודש. אני שובר את הראש כבר יומיים על זה. 
+הבעיה שהייתה לי היא קובץ ה-OSM שהשתמשתי בו. הלינק שלך פתר לי את הבעיה.
+תודה, תודה, תודה !!!!!!!!!!!</p>
+                <button class="comment-reply">
+          להגיב
+        </button>
+                
+            </li>
+        
+            <li data-comment-id="">
+                <p class="comment-details" >
+                    
+                        <a class="comment-author" href="http://www.miu.org.il">Nachman</a>
+                    
+          (27 ביוני 2012 בשעה 23:41): 
+        </p>
+                <p>for all developers that are interested:
+
+•	I have split the gigantic file for all of Israel into 4 big files for 4 areas: Tel-Aviv Metro, Jerusalem, North and South. Each file includes not only the information relating to  stops in the specific area but all the information relating to any trip that includes stops within the area (e.g. the North file includes trips from Tel-Aviv to Haifa. Etc….)
+•	I have also created a small GTFS file for the area of Ramat Aviv Gimel – this file is useful for testing applications because you do not need to wait forever for the data to load…
+•	These GTFS files are available for download from the Merhav website at – http://miu.org.il/MIU_v4/docs_activities/transportation.html</p>
+                <button class="comment-reply">
+          להגיב
+        </button>
+                
+                    
+    <ul>
+        
+            <li data-comment-id="">
+                <p class="comment-details" >
+                    
+                        <a class="comment-author" href="http://yehudab.com/blog">יהודה</a>
+                    
+          (28 ביוני 2012 בשעה 0:09): 
+        </p>
+                <p>תודה על שיתוף המידע. שים לב שתצטרך לעדכן אותם מדי פעם, כי טווח הזמנים של הקבצים הוא שבועיים קדימה. 
+יהודה</p>
+                <button class="comment-reply">
+          להגיב
+        </button>
+                
+            </li>
+        
+    </ul>
+
+                
+            </li>
+        
+    </ul>
+
+    
+
+    
+</div>
+            <p class="uppercase text-xs mt-6">הבא</p>
+            <p class="font-bold mb-2">
+                <a href="/blog/2012/05/otp-il-temp-server/">השרות הנסיוני לתכנון נסיעה בתח&amp;quot;צ עלה לאויר</a>
+            </p>
+        
+            <p class="uppercase text-xs mt-6">הקודם</p>
+
+            <p class="font-bold">
+                <a href="/blog/2011/12/mako-vod-same-same-but-different/">מאקו VOD – קצת אחרת</a>
+            </p>
+        
+    </div>
+
+    </main>
+    <footer class="bg-gray-900 pb-10">
+  <p class="block text-center text-sm mb-6">
+    CC-BY-SA
+    <a href="/">
+      Yehuda Bar Nir
+    </a>
+    &bull; Built with <a href="https://www.11ty.dev/">11ty</a> 
+    &bull; Based on <a target="_blank" href="https://github.com/reeseschultz/11r">11r</a> by
+    <a target="_blank" href="https://reeseschultz.com">
+      Reese Schultz
+    </a> 
+  </p>
+
+</footer>
+    
+    <script src="/assets/lib/cash.js"></script>
+    <script src="/assets/main.bundle.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </body>
+</html>

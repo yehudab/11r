@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    
+    <meta itemprop="name" content="SSG | בלוג פשוט">
+    <meta itemprop="description" content="צר עולמי כ  U+200A">
+
+    
+    <meta name="twitter:title" content="SSG | בלוג פשוט">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="צר עולמי כ  U+200A">
+    <meta name="twitter:site" content="@yehudab">
+    <meta name="twitter:creator" content="@yehudab">
+    <meta name="twitter:image:src" content="">
+
+    
+    <meta name="og:title" content="SSG | בלוג פשוט">
+    <meta name="og:description" content="צר עולמי כ  U+200A">
+    <meta name="og:image" content="">
+    <meta name="og:url" content="https://yehudab.com/">
+    <meta name="og:site_name" content="בלוג פשוט">
+    <meta name="og:locale" content="en_GB">
+    <meta name="og:type" content="website">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+
+    <title>
+      SSG
+      
+       | בלוג פשוט</title>
+
+    <link rel="stylesheet" href="/assets/main.bundle.css">
+
+    
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <header>
+  <nav class="container mx-auto max-w-3xl px-8 pt-2 flex flex-wrap justify-between">
+    <div>
+      <h1>
+        <a href="/">בלוג פשוט</a>
+      </h1>
+      <p>צר עולמי כ  U+200A</p>
+    </div>
+
+    <ul class="flex flex-wrap sm:w-32 w-full mt-6 md:justify-between justify-evenly">
+      <li>
+        <a href="/blog/about">אודות</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+    <main class="container mx-auto max-w-3xl p-8 flex-grow">
+      
+  <p class="text-center text-sm italic mb-6">(פוסטים בתיוג <strong>SSG</strong>.)</p>
+
+  
+
+  <div>
+    
+        
+            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
+                <h2>
+                    <a class="block" href="/blog/2020/07/11ty/">11ty</a>
+                </h2>
+
+                <p class="excerpt"></p>
+
+                <span class="block md:inline md:float-left md:pt-4 pt-2 created-date" datetime="Fri Jul 31 2020 18:01:27 GMT+0000 (Coordinated Universal Time)">
+                    31 ביולי 2020
+                </span>
+
+                <a class="tag" href="/tag/SSG">SSG</a><a class="tag" href="/tag/11ty">11ty</a><a class="tag" href="/tag/בלוג">בלוג</a>
+                <div class="clear-both"></div>
+
+                <div class="content post">
+                    <p>המעבר לשרת חדש גרם לי לחשוב שוב על WordPress והאם הוא עדיין מתאים לבלוגים ב-2020. כאשר התחלתי את האתר, PHP הייתה אחת משתי שפות התכנות המובילות לווב (יחד עם העולה החדש דאז Ruby on Rails). מאוחר יותר זו גם הייתה שפת התכנות בה עבדתי, וזה נראה לי טבעי להמשיך איתה. מאז עברתי לסביבה חדשה מבוססת NodeJS, ו-PHP נראית לי כמו עוף מוזר (שלא לאמר דינוזאור).</p>
+<p>אחרי בחינה של מספר אפשרויות, הגעתי למסקנה שהנתיב הטבעי להמשך הוא Static Site Generators (SSG). הרעיון כאן הוא ליצר את קבצי ה HTML של האתר מתוך התכנים הדינמיים, ומכאן והלאה ההגשה לדפדפן נעשית של קבצים סטטיים בלבד. מתוך <a href="https://gohugo.io/" title="HUGO">המגוון</a> <a href="https://jekyllrb.com/" title="Jekyll">הגדול</a> של <a href="https://vuepress.vuejs.org/" title="VuePress">האפשרויות</a>, בחרתי את <a href="https://www.11ty.dev/">Eleventy</a> (או בקיצור 11ty). הוא מבוסס NodeJS, ויחסית לאחיו הוותיק יותר (<a href="https://www.gatsbyjs.org/">Gatsby</a>), הוא פחות אפליקציה ויותר SSG טהור.</p>
+<p>ייצור האתר נעשה ע&quot;י הגדרת תבניות והפעלה שלהן על תוכן האתר שהוא קבצי Markdown. את קבצי התוכן שומרים ב git יחד עם הקוד של האתר, כך שנוצר סוג של בלבול בינהם. כדי לבצע את ההפרדה בצורה טובה יותר וגם בגלל <a href="https://talk.commonmark.org/t/explicit-rtl-indication-in-pure-markdown/286/4" title="דיון ארוך שבסופו הוחלט שלא עושים כלום ותסדרו לבד">התמיכה הבעייתית של Markdown בעברית</a>, בחרתי להשתמש ב Headless CMS: מערכת ניהול תוכן, שבה כתיבה התכנים מנותקת מההצגה שלהן (בניגוד ל WordPress שבה העריכה והתצוגה נעשים באותה מערכת). הרעיון כאן הוא לאפשר לכותבי תוכן שאינם מכירים קוד או אפילו Markdown לערוך את התוכן דרך עורך יעודי (סטייל WordPress), כאשר הקבצים נשלחים מהעורך אל ה git-repo. יתרון משמעותי ליושבים בציון (ובשאר המזרח התיכון) הוא האפשרות לתמיכה הרבה יותר טובה בעריכה ב-RTL.</p>
+<p>ל Headless CMS בחרתי את <a href="https://forestry.io/">Forestry</a> (ישנן אלטרנטיבות נוספות כמו: <a href="https://www.contentful.com/">Contentful</a>, <a href="https://www.netlifycms.org/">Netlify CMS</a>), שנראית לי הנקייה ביותר לשימוש. בניגוד ל Contentful, אין לה תמיכה מובנית ב-RTL, אבל באמצעות תפריט &quot;הפוך כוון כתיבה&quot; של Firefox, אפשר לערוך את התוכן בקלות. ל Forestry יש גם תמיכה נוחה בעריכת ה meta-data של הפוסטים (כותרת, קטגוריות וכד'), כך שמקבלים כמעט חוויה מלאה של עורך תוכן משולב, כמו שניתן לראות כאן:</p>
+<p><img src="/img/2020/07/forestry-edit-post.png" alt=""></p>
+<p>לצורך השוואה, כך נראה ה Markdown של אותו הפוסט ב GitHub:</p>
+<p><img src="/img/2020/07/github-edit-post.png" alt=""></p>
+<p>אז איך עושים את המעבר? על כך בפוסט הבא.</p>
+
+                </div>
+            </div>
+        
+    
+</div>
+
+  <div class="grid grid-flow-row grid-cols-3 gap-4 mb-2">
+    
+    
+        <a class="tag mx-auto" href="/tag/TwentyTwenty">TwentyTwenty&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/וורדפרס">וורדפרס&rlm; (8)</a>
+    
+        <a class="tag mx-auto" href="/tag/SSG">SSG&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/11ty">11ty&rlm; (3)</a>
+    
+        <a class="tag mx-auto" href="/tag/בלוג">בלוג&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/Docker">Docker&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/Hosting">Hosting&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/לינוקס">לינוקס&rlm; (2)</a>
+    
+        <a class="tag mx-auto" href="/tag/קוד פתוח ותוכנה חופשית">קוד פתוח ותוכנה חופשית&rlm; (5)</a>
+    
+        <a class="tag mx-auto" href="/tag/Nunjucks">Nunjucks&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/Comments">Comments&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/staticman">staticman&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/אורנג&#39;">אורנג&#39;&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/אתרים בארץ">אתרים בארץ&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/שמישות">שמישות&rlm; (3)</a>
+    
+        <a class="tag mx-auto" href="/tag/ie8">ie8&rlm; (2)</a>
+    
+        <a class="tag mx-auto" href="/tag/מיקרוסופט">מיקרוסופט&rlm; (2)</a>
+    
+        <a class="tag mx-auto" href="/tag/דפדפנים">דפדפנים&rlm; (10)</a>
+    
+        <a class="tag mx-auto" href="/tag/כללי">כללי&rlm; (3)</a>
+    
+        <a class="tag mx-auto" href="/tag/Uncategorized">Uncategorized&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/BlogDay2008">BlogDay2008&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/habari">habari&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/הבארי">הבארי&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/נגנים">נגנים&rlm; (3)</a>
+    
+        <a class="tag mx-auto" href="/tag/Flip4Mac">Flip4Mac&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/מק">מק&rlm; (3)</a>
+    
+        <a class="tag mx-auto" href="/tag/פיירפוקס">פיירפוקס&rlm; (10)</a>
+    
+        <a class="tag mx-auto" href="/tag/CSS">CSS&rlm; (3)</a>
+    
+        <a class="tag mx-auto" href="/tag/גראצ&#39;ו מרקס">גראצ&#39;ו מרקס&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/ogg">ogg&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/video">video&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/אופרה">אופרה&rlm; (2)</a>
+    
+        <a class="tag mx-auto" href="/tag/ספארי">ספארי&rlm; (3)</a>
+    
+        <a class="tag mx-auto" href="/tag/שטויות שמוצאים באתרים">שטויות שמוצאים באתרים&rlm; (3)</a>
+    
+        <a class="tag mx-auto" href="/tag/אתרים תומכי פיירפוקס">אתרים תומכי פיירפוקס&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/לאומי-קארד">לאומי-קארד&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/ie6">ie6&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/acid2">acid2&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/אינטרנט אקספלורר">אינטרנט אקספלורר&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/Google wave">Google wave&rlm; (2)</a>
+    
+        <a class="tag mx-auto" href="/tag/בלוגיה">בלוגיה&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/תפוז">תפוז&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/gps">gps&rlm; (2)</a>
+    
+        <a class="tag mx-auto" href="/tag/ביקורת מוצרים">ביקורת מוצרים&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/garmin">garmin&rlm; (2)</a>
+    
+        <a class="tag mx-auto" href="/tag/speedtraps">speedtraps&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/ווידג&#39;טים">ווידג&#39;טים&rlm; (4)</a>
+    
+        <a class="tag mx-auto" href="/tag/רכבת ישראל">רכבת ישראל&rlm; (2)</a>
+    
+        <a class="tag mx-auto" href="/tag/מזג אויר">מזג אויר&rlm; (2)</a>
+    
+        <a class="tag mx-auto" href="/tag/חלונות">חלונות&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/wordpress">wordpress&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/שעון קיץ">שעון קיץ&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/חולצה">חולצה&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/nano">nano&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/php">php&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/vi">vi&rlm; (1)</a>
+    
+</div>
+
+    </main>
+    <footer class="bg-gray-900 pb-10">
+  <p class="block text-center text-sm mb-6">
+    CC-BY-SA
+    <a href="/">
+      Yehuda Bar Nir
+    </a>
+    &bull; Built with <a href="https://www.11ty.dev/">11ty</a> 
+    &bull; Based on <a target="_blank" href="https://github.com/reeseschultz/11r">11r</a> by
+    <a target="_blank" href="https://reeseschultz.com">
+      Reese Schultz
+    </a> 
+  </p>
+
+</footer>
+    
+    <script src="/assets/lib/cash.js"></script>
+    <script src="/assets/main.bundle.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </body>
+</html>

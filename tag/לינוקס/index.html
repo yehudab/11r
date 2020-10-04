@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    
+    <meta itemprop="name" content="לינוקס | בלוג פשוט">
+    <meta itemprop="description" content="צר עולמי כ  U+200A">
+
+    
+    <meta name="twitter:title" content="לינוקס | בלוג פשוט">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="צר עולמי כ  U+200A">
+    <meta name="twitter:site" content="@yehudab">
+    <meta name="twitter:creator" content="@yehudab">
+    <meta name="twitter:image:src" content="">
+
+    
+    <meta name="og:title" content="לינוקס | בלוג פשוט">
+    <meta name="og:description" content="צר עולמי כ  U+200A">
+    <meta name="og:image" content="">
+    <meta name="og:url" content="https://yehudab.com/">
+    <meta name="og:site_name" content="בלוג פשוט">
+    <meta name="og:locale" content="en_GB">
+    <meta name="og:type" content="website">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+
+    <title>
+      לינוקס
+      
+       | בלוג פשוט</title>
+
+    <link rel="stylesheet" href="/assets/main.bundle.css">
+
+    
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <header>
+  <nav class="container mx-auto max-w-3xl px-8 pt-2 flex flex-wrap justify-between">
+    <div>
+      <h1>
+        <a href="/">בלוג פשוט</a>
+      </h1>
+      <p>צר עולמי כ  U+200A</p>
+    </div>
+
+    <ul class="flex flex-wrap sm:w-32 w-full mt-6 md:justify-between justify-evenly">
+      <li>
+        <a href="/blog/about">אודות</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+    <main class="container mx-auto max-w-3xl p-8 flex-grow">
+      
+  <p class="text-center text-sm italic mb-6">(פוסטים בתיוג <strong>לינוקס</strong>.)</p>
+
+  
+
+  <div>
+    
+        
+            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
+                <h2>
+                    <a class="block" href="/blog/2020/07/docker/">עוברים דירה</a>
+                </h2>
+
+                <p class="excerpt"></p>
+
+                <span class="block md:inline md:float-left md:pt-4 pt-2 created-date" datetime="Sat Jul 18 2020 12:06:54 GMT+0000 (Coordinated Universal Time)">
+                    18 ביולי 2020
+                </span>
+
+                <a class="tag" href="/tag/Docker">Docker</a><a class="tag" href="/tag/Hosting">Hosting</a><a class="tag" href="/tag/וורדפרס">וורדפרס</a><a class="tag" href="/tag/לינוקס">לינוקס</a><a class="tag" href="/tag/קוד פתוח ותוכנה חופשית">קוד פתוח ותוכנה חופשית</a>
+                <div class="clear-both"></div>
+
+                <div class="content post">
+                    <p><img src="/img/2020/Docker.PNG" alt="Docker">
+אחרי שלוש שנים שבהן <a href="https://yehudab.com/blog/2017/06/yet-another-blog-upgrade/">האתר הזה רץ מעל שרות האחסון של Scaleway</a>, קיבלתי מהם הודעה שהחומרה שעליה אני רץ (dual core ARM CPU, 2GB RAM, 50GB SSD) תפסיק לעבוד בעוד מספר חודשים. הם הציעו לי לעבור באותו מחיר לשרת VPS מבוסס אינטל, אלא שעוד לפני שהספקתי להגיב, קיבלתי את המכתב שזו כותרתו: We’re evolving our Instances prices, או בתרגום חופשי: נמאס לנו להיות הכי זולים בשוק, אז נעלה את המחיר ב 66%.</p>
+<p>החלטתי שזה הזמן לחפש שרות אכסון חדש, והגעתי דרך חבר לעבודה ל <a href="https://www.ovh.ie/">OVHcloud</a>. השרת הבסיסי נראה על הנייר חלש יותר (מעבד אחד בלבד ודיסק קטן יותר), אבל בבדיקות ביצועים בשטח הוא משמעותית יותר מהיר. זה מורגש גם בעבודת ההתקנה (פרטים בהמשך) וגם בזמן ריצה, כפי שנמדד ע״י StatusCake. המחיר זהה למחיר (הישן) של Scaleway: שלושה אירו לחודש, בלי התחייבות.</p>
+<p>השרת שלי מריץ בנוסף גם שני שרתי node קטנים, כך שהעברת כל הטוב הזה היא לא פשוטה, ולכן החלטתי הפעם ללכת על Docker. למי שלא מכיר את Docker, מומלץ לקרוא את סדרת המאמרים באתר של רן בר-זיק. שם הוא גם <a href="https://internet-israel.com/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%D7%9D/docker/%D7%95%D7%95%D7%A8%D7%93%D7%A4%D7%A8%D7%A1-%D7%A2%D7%9C-docker/">מדגים התקנת WordPress</a>. אני בחרתי לעקוב אחרי <a href="https://github.com/mjstealey/wordpress-nginx-docker">המדריך של Michael J. Stealey</a> ב GitHub, שממנו גם עשיתי פורק לריפו משלי. המדריך הזה קצת יותר מתאים לסביבה הנוכחית שלי שכוללת MariaDB במקום MySQL, וגם סקריפטים מוכנים לתמיכה ב https, דרך השרות של <a href="https://letsencrypt.org/">Let’s Encrypt</a>.</p>
+<p>רוב התהליך עוקב אחרי ה README, אבל מכוון שלא התחלתי מאתר חדש כפי שהמדריך מתאר, ביצעתי מספר שינויים, כמו שיחזור של ה DB ומבנה הקבצים מהשרת הנוכחי. זו הייתה טבילת האש הראשונה ל restic שהזכרתי <a href="https://yehudab.com/blog/2020/03/php-7-4/">באחד הפוסטים הקודמים</a> והוא הוכיח את עצמו מצויין. שחזור של MySQL שרץ בתוך קונייטנר הוא קצת מורכב, וגם כאן <a href="https://internet-israel.com/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%D7%9D/docker/%D7%93%D7%95%D7%A7%D7%A8-%D7%9B%D7%A0%D7%99%D7%A1%D7%94-%D7%9C%D7%AA%D7%95%D7%9A-%D7%A7%D7%95%D7%A0%D7%98%D7%99%D7%99%D7%A0%D7%A8-%D7%95%D7%A4%D7%A2%D7%95%D7%9C%D7%95%D7%AA-%D7%91%D7%AA%D7%95%D7%9B/">יש לבר-זיק מדריך טוב</a>.</p>
+<p>אז נשארו לי כמה קצוות לסגור, כמו חידוש אוטומטי של הסרטיפיקטים ב Let’s Encrypt, והפעלה של גיבויים, אבל בסך הכל נראה שדוקר עושה עבודה טובה, והמעבר הבא יצריך ״רק״:</p>
+<pre class="language-bash"><code class="language-bash"><span class="token function">sudo</span> docker-compose up -d</code></pre>
+
+                </div>
+            </div>
+        
+    
+        
+            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
+                <h2>
+                    <a class="block" href="/blog/2020/03/php-7-4/">php 7.4</a>
+                </h2>
+
+                <p class="excerpt"></p>
+
+                <span class="block md:inline md:float-left md:pt-4 pt-2 created-date" datetime="2020-03-01T22:07:57+02:00">
+                    1 במרץ 2020
+                </span>
+
+                <a class="tag" href="/tag/nano">nano</a><a class="tag" href="/tag/php">php</a><a class="tag" href="/tag/vi">vi</a><a class="tag" href="/tag/וורדפרס">וורדפרס</a><a class="tag" href="/tag/קוד פתוח ותוכנה חופשית">קוד פתוח ותוכנה חופשית</a><a class="tag" href="/tag/לינוקס">לינוקס</a>
+                <div class="clear-both"></div>
+
+                <div class="content post">
+                    <p>חלפה למעלה משנה מאז ש<a href="https://www.php.net/eol.php">התמיכה ב-7.0 php הופסקה</a>, וזה הזמן לשדרג את הבלוג לגרסה 7.4. כרגיל, צריך לקרוא את כל ה breaking changes, אבל אם הבלוג והתוספים מתוחזקים לגרסה העדכנית ביותר, אפשר לסמוך בדרך כלל שהכל יעובד. גיבוי של הקוד והדאטה רצוי גם כן.</p>
+<p>את הגיבויים אני מבצע לאחרונה בעזרת <a href="https://restic.net/">restic</a>, כאשר הקבצים מועלים לאכסון (הזול יחסית) של <a href="https://www.backblaze.com/b2/cloud-storage.html">Backblaze B2</a>.</p>
+<p>אחרי שמכניסים את הגדרות ל restic למשתני סביבה, סקריפט הגיבוי פשוט למדי:</p>
+<pre class="language-bash"><code class="language-bash"><span class="token shebang important">#!/bin/bash</span><br><span class="token assign-left variable">d</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">date</span> +%Y-%m-%d<span class="token variable">)</span></span><br>mysqldump -u *** -p *** <span class="token operator">></span> ~/backup/sql/yehudab-<span class="token variable">${d}</span>.sql<br><span class="token function">gzip</span> ~/backup/sql/*.sql<br><span class="token function">tar</span> -czf ~/backup/site/yehudab.com-<span class="token variable">${d}</span>.tar.gz yehudab.com<br>restic backup ~/backup</code></pre>
+<p>לצורך השדרוג, עקבתי אחרי <a href="https://www.cloudbooklet.com/upgrade-php-version-to-php-7-4-on-ubuntu/">המדריך ב CloudBooklet</a>. מכוון שאני מריץ php דרך ngnix, ביצעתי את הסעיפים הרלוונטים לגרסת fpm.</p>
+<p>אה, וכמובן, להשתמש ב vi, כי nano זה לחלשים.</p>
+<p>אחרי השדרוג, אני מנסה לשמור את הפוסט הזה ובום error 500. בדיקה מהירה בלוג של nginx על השרת מגלה ששכחתי להתקין את php7.4-memcache שהמדריך הנ&quot;ל לא מחשיב כ common extension. הרצת:</p>
+<pre class="language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> php7.4-memcache</code></pre>
+<p>וריסטרט לשרת פתרו את הבעיה.<br>
+<img src="/img/2020/upgrade.png" alt="שדרוג"></p>
+
+                </div>
+            </div>
+        
+    
+</div>
+
+  <div class="grid grid-flow-row grid-cols-3 gap-4 mb-2">
+    
+    
+        <a class="tag mx-auto" href="/tag/TwentyTwenty">TwentyTwenty&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/וורדפרס">וורדפרס&rlm; (8)</a>
+    
+        <a class="tag mx-auto" href="/tag/SSG">SSG&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/11ty">11ty&rlm; (3)</a>
+    
+        <a class="tag mx-auto" href="/tag/בלוג">בלוג&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/Docker">Docker&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/Hosting">Hosting&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/לינוקס">לינוקס&rlm; (2)</a>
+    
+        <a class="tag mx-auto" href="/tag/קוד פתוח ותוכנה חופשית">קוד פתוח ותוכנה חופשית&rlm; (5)</a>
+    
+        <a class="tag mx-auto" href="/tag/Nunjucks">Nunjucks&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/Comments">Comments&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/staticman">staticman&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/אורנג&#39;">אורנג&#39;&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/אתרים בארץ">אתרים בארץ&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/שמישות">שמישות&rlm; (3)</a>
+    
+        <a class="tag mx-auto" href="/tag/ie8">ie8&rlm; (2)</a>
+    
+        <a class="tag mx-auto" href="/tag/מיקרוסופט">מיקרוסופט&rlm; (2)</a>
+    
+        <a class="tag mx-auto" href="/tag/דפדפנים">דפדפנים&rlm; (10)</a>
+    
+        <a class="tag mx-auto" href="/tag/כללי">כללי&rlm; (3)</a>
+    
+        <a class="tag mx-auto" href="/tag/Uncategorized">Uncategorized&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/BlogDay2008">BlogDay2008&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/habari">habari&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/הבארי">הבארי&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/נגנים">נגנים&rlm; (3)</a>
+    
+        <a class="tag mx-auto" href="/tag/Flip4Mac">Flip4Mac&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/מק">מק&rlm; (3)</a>
+    
+        <a class="tag mx-auto" href="/tag/פיירפוקס">פיירפוקס&rlm; (10)</a>
+    
+        <a class="tag mx-auto" href="/tag/CSS">CSS&rlm; (3)</a>
+    
+        <a class="tag mx-auto" href="/tag/גראצ&#39;ו מרקס">גראצ&#39;ו מרקס&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/ogg">ogg&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/video">video&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/אופרה">אופרה&rlm; (2)</a>
+    
+        <a class="tag mx-auto" href="/tag/ספארי">ספארי&rlm; (3)</a>
+    
+        <a class="tag mx-auto" href="/tag/שטויות שמוצאים באתרים">שטויות שמוצאים באתרים&rlm; (3)</a>
+    
+        <a class="tag mx-auto" href="/tag/אתרים תומכי פיירפוקס">אתרים תומכי פיירפוקס&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/לאומי-קארד">לאומי-קארד&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/ie6">ie6&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/acid2">acid2&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/אינטרנט אקספלורר">אינטרנט אקספלורר&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/Google wave">Google wave&rlm; (2)</a>
+    
+        <a class="tag mx-auto" href="/tag/בלוגיה">בלוגיה&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/תפוז">תפוז&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/gps">gps&rlm; (2)</a>
+    
+        <a class="tag mx-auto" href="/tag/ביקורת מוצרים">ביקורת מוצרים&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/garmin">garmin&rlm; (2)</a>
+    
+        <a class="tag mx-auto" href="/tag/speedtraps">speedtraps&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/ווידג&#39;טים">ווידג&#39;טים&rlm; (4)</a>
+    
+        <a class="tag mx-auto" href="/tag/רכבת ישראל">רכבת ישראל&rlm; (2)</a>
+    
+        <a class="tag mx-auto" href="/tag/מזג אויר">מזג אויר&rlm; (2)</a>
+    
+        <a class="tag mx-auto" href="/tag/חלונות">חלונות&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/wordpress">wordpress&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/שעון קיץ">שעון קיץ&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/חולצה">חולצה&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/nano">nano&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/php">php&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/vi">vi&rlm; (1)</a>
+    
+</div>
+
+    </main>
+    <footer class="bg-gray-900 pb-10">
+  <p class="block text-center text-sm mb-6">
+    CC-BY-SA
+    <a href="/">
+      Yehuda Bar Nir
+    </a>
+    &bull; Built with <a href="https://www.11ty.dev/">11ty</a> 
+    &bull; Based on <a target="_blank" href="https://github.com/reeseschultz/11r">11r</a> by
+    <a target="_blank" href="https://reeseschultz.com">
+      Reese Schultz
+    </a> 
+  </p>
+
+</footer>
+    
+    <script src="/assets/lib/cash.js"></script>
+    <script src="/assets/main.bundle.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </body>
+</html>

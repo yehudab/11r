@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    
+    <meta itemprop="name" content="11ty | בלוג פשוט">
+    <meta itemprop="description" content="צר עולמי כ  U+200A">
+
+    
+    <meta name="twitter:title" content="11ty | בלוג פשוט">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="צר עולמי כ  U+200A">
+    <meta name="twitter:site" content="@yehudab">
+    <meta name="twitter:creator" content="@yehudab">
+    <meta name="twitter:image:src" content="https://yehudab.com/img/2020/07/forestry-edit-post.png">
+
+    
+    <meta name="og:title" content="11ty | בלוג פשוט">
+    <meta name="og:description" content="צר עולמי כ  U+200A">
+    <meta name="og:image" content="https://yehudab.com/img/2020/07/forestry-edit-post.png">
+    <meta name="og:url" content="https://yehudab.com/">
+    <meta name="og:site_name" content="בלוג פשוט">
+    <meta name="og:locale" content="en_GB">
+    <meta name="og:type" content="website">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+
+    <title>
+      11ty
+      
+       | בלוג פשוט</title>
+
+    <link rel="stylesheet" href="/assets/main.bundle.css">
+
+    
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <header>
+  <nav class="container mx-auto max-w-3xl px-8 pt-2 flex flex-wrap justify-between">
+    <div>
+      <h1>
+        <a href="/">בלוג פשוט</a>
+      </h1>
+      <p>צר עולמי כ  U+200A</p>
+    </div>
+
+    <ul class="flex flex-wrap sm:w-32 w-full mt-6 md:justify-between justify-evenly">
+      <li>
+        <a href="/blog/about">אודות</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+    <main class="container mx-auto max-w-3xl p-8 flex-grow">
+      
+    <p></p>
+    <div>
+        <h2>11ty</h2>
+
+        
+
+        
+            <div class="mb-2">
+                <a class="tag SSG" href="/tag/SSG">SSG</a><a class="tag 11ty" href="/tag/11ty">11ty</a><a class="tag בלוג" href="/tag/בלוג">בלוג</a>
+            </div>
+        
+
+        
+            <p class="text-sm italic">נכתב ב<span datetime="Fri Jul 31 2020 18:01:27 GMT+0000 (Coordinated Universal Time)">31 ביולי 2020</span>.</p>
+        
+
+        <div class="content post">
+            <p>המעבר לשרת חדש גרם לי לחשוב שוב על WordPress והאם הוא עדיין מתאים לבלוגים ב-2020. כאשר התחלתי את האתר, PHP הייתה אחת משתי שפות התכנות המובילות לווב (יחד עם העולה החדש דאז Ruby on Rails). מאוחר יותר זו גם הייתה שפת התכנות בה עבדתי, וזה נראה לי טבעי להמשיך איתה. מאז עברתי לסביבה חדשה מבוססת NodeJS, ו-PHP נראית לי כמו עוף מוזר (שלא לאמר דינוזאור).</p>
+<p>אחרי בחינה של מספר אפשרויות, הגעתי למסקנה שהנתיב הטבעי להמשך הוא Static Site Generators (SSG). הרעיון כאן הוא ליצר את קבצי ה HTML של האתר מתוך התכנים הדינמיים, ומכאן והלאה ההגשה לדפדפן נעשית של קבצים סטטיים בלבד. מתוך <a href="https://gohugo.io/" title="HUGO">המגוון</a> <a href="https://jekyllrb.com/" title="Jekyll">הגדול</a> של <a href="https://vuepress.vuejs.org/" title="VuePress">האפשרויות</a>, בחרתי את <a href="https://www.11ty.dev/">Eleventy</a> (או בקיצור 11ty). הוא מבוסס NodeJS, ויחסית לאחיו הוותיק יותר (<a href="https://www.gatsbyjs.org/">Gatsby</a>), הוא פחות אפליקציה ויותר SSG טהור.</p>
+<p>ייצור האתר נעשה ע&quot;י הגדרת תבניות והפעלה שלהן על תוכן האתר שהוא קבצי Markdown. את קבצי התוכן שומרים ב git יחד עם הקוד של האתר, כך שנוצר סוג של בלבול בינהם. כדי לבצע את ההפרדה בצורה טובה יותר וגם בגלל <a href="https://talk.commonmark.org/t/explicit-rtl-indication-in-pure-markdown/286/4" title="דיון ארוך שבסופו הוחלט שלא עושים כלום ותסדרו לבד">התמיכה הבעייתית של Markdown בעברית</a>, בחרתי להשתמש ב Headless CMS: מערכת ניהול תוכן, שבה כתיבה התכנים מנותקת מההצגה שלהן (בניגוד ל WordPress שבה העריכה והתצוגה נעשים באותה מערכת). הרעיון כאן הוא לאפשר לכותבי תוכן שאינם מכירים קוד או אפילו Markdown לערוך את התוכן דרך עורך יעודי (סטייל WordPress), כאשר הקבצים נשלחים מהעורך אל ה git-repo. יתרון משמעותי ליושבים בציון (ובשאר המזרח התיכון) הוא האפשרות לתמיכה הרבה יותר טובה בעריכה ב-RTL.</p>
+<p>ל Headless CMS בחרתי את <a href="https://forestry.io/">Forestry</a> (ישנן אלטרנטיבות נוספות כמו: <a href="https://www.contentful.com/">Contentful</a>, <a href="https://www.netlifycms.org/">Netlify CMS</a>), שנראית לי הנקייה ביותר לשימוש. בניגוד ל Contentful, אין לה תמיכה מובנית ב-RTL, אבל באמצעות תפריט &quot;הפוך כוון כתיבה&quot; של Firefox, אפשר לערוך את התוכן בקלות. ל Forestry יש גם תמיכה נוחה בעריכת ה meta-data של הפוסטים (כותרת, קטגוריות וכד'), כך שמקבלים כמעט חוויה מלאה של עורך תוכן משולב, כמו שניתן לראות כאן:</p>
+<p><img src="/img/2020/07/forestry-edit-post.png" alt=""></p>
+<p>לצורך השוואה, כך נראה ה Markdown של אותו הפוסט ב GitHub:</p>
+<p><img src="/img/2020/07/github-edit-post.png" alt=""></p>
+<p>אז איך עושים את המעבר? על כך בפוסט הבא.</p>
+
+        </div>
+
+<div class="comments">
+    
+
+    
+        <div id="respond" class="comment-new">
+            <form class="comments-form js-form" method="post" action="https://staticman.yehudab.com/v2/entry/yehudab/11r/master/comments">
+  <div class="clearfix">
+    <h2>כתיבת תגובה</h2>
+    <a class="cancel-comment" href="#">ביטול</a>
+  </div>
+  <span>האימייל לא יוצג באתר. שדות החובה מסומנים *</span>
+  <input type="hidden" id="comment-replying-to-id" name="fields[parentId]" value="">
+  <input type="hidden" name="options[slug]" value="11ty">
+  <input type="hidden" name="options[reCaptcha][siteKey]" value="6LfnPtEZAAAAAOjThTjcNoPS37UePCEC7AGYLhOM">
+  <input type="hidden" name="options[reCaptcha][secret]"  value="CwzOWWGyNqgtCUE5MQs9kHdkNXc2wAsLZiuAXB04ibhAjxE84pI6su8YfEfhln0qCXQ/DJHnKq57Wozmd9X2Xhx0NGRwrqnh9oAqqH+9Y0Av94sPRNYQQh/Y/vr+jQGaM82maK5eWXPNfQ6Xylk3Z/6d/URvGRmbB3cmPnFMJebsjAyQLH2PJPiwV6HjwPRVNsJBJedOg8fZ4Bs5GQa53qrQw3qX7De/nGfmiwbLa+VcY0rTTkTkpsa/QsnamYJoCgiyJG+2MXnlhMVOyQEQyU1L9ZRMb14SAi5ZvFP0MbT2EOJbt/CSKwKNWQrqkfwWSc0xP3jgecG2Tt6BrewRe7IDYYdYadWAzy3hkbqIz9VmYF0stnSo6gsZg3JH1+YUGnWtdLb4//5hl4ETD0Yw88C4w4ddXmoznmkzSyU+yj4UMXGAaRr+VpFwynqJwEwWK19SDIOUXgwScM3HIDiIaLh4PTduY+mSaNx8NyHes9/7yMMPAYYNlot7RzHNaNyTbCLaXjZlSy3QxKIwHrFEI0CRYwO/DMVD+KpKVE/ma3ANuFSP11HERyOgTFuj3xtlJQw5UQnniawvRvVAIlXqBdVRjdX/mHgmJajFbimC4VFqg590rO1YGJo0ej1R43XSe6l0QXqW7AVDkAPl5HZd3cvpSsEVBW01TJcDbYq5yGM=">
+  
+
+  <div class="form-line">
+    <div class="field-full-line">
+      <label for="comment-form-message">
+      התגובה שלך *
+        <textarea name="fields[message]" type="text" id="comment-form-message" required rows="6"></textarea>
+      </label>
+    </div>
+  </div>
+
+  <div class="form-line">
+    <div class="field-half-line md:w-1/2 mb-6 md:mb-0">
+      <label for="comment-form-name">
+      שם *
+        <input name="fields[name]" type="text" id="comment-form-name" placeholder="" required/>
+      </label>
+    </div>
+
+    <div class="field-half-line md:w-1/2">
+      <label for="comment-form-email">
+      E-mail *
+        <input name="fields[email]" type="email" id="comment-form-email" placeholder="" required/>
+      </label>
+    </div>
+  </div>
+
+  <div class="form-line">
+    <div class="field-full-line">
+      <label for="hp">
+      אתר
+        <input name="fields[url]" id="url" type="text">
+      </label>
+    </div>
+  </div>
+
+  <div id="reCaptcha" class="g-recaptcha" data-sitekey="6LfnPtEZAAAAAOjThTjcNoPS37UePCEC7AGYLhOM"></div>
+
+  <button id="comment-form-submit">
+      שליחה
+  </button>
+
+</form>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none" >
+  <symbol id="icon-loading" viewBox="149.8 37.8 499.818 525"><path d="M557.8 187.8c13.8 0 24.601-10.8 24.601-24.6S571.6 138.6 557.8 138.6s-24.6 10.8-24.6 24.6c0 13.2 10.8 24.6 24.6 24.6zm61.2 90.6c-16.8 0-30.6 13.8-30.6 30.6s13.8 30.6 30.6 30.6 30.6-13.8 30.6-30.6c.6-16.8-13.2-30.6-30.6-30.6zm-61.2 145.2c-20.399 0-36.6 16.2-36.6 36.601 0 20.399 16.2 36.6 36.6 36.6 20.4 0 36.601-16.2 36.601-36.6C595 439.8 578.2 423.6 557.8 423.6zM409 476.4c-24 0-43.2 19.199-43.2 43.199s19.2 43.2 43.2 43.2 43.2-19.2 43.2-43.2S433 476.4 409 476.4zM260.8 411c-27 0-49.2 22.2-49.2 49.2s22.2 49.2 49.2 49.2 49.2-22.2 49.2-49.2-22.2-49.2-49.2-49.2zm-10.2-102c0-27.6-22.8-50.4-50.4-50.4-27.6 0-50.4 22.8-50.4 50.4 0 27.6 22.8 50.4 50.4 50.4 27.6 0 50.4-22.2 50.4-50.4zm10.2-199.8c-30 0-54 24-54 54s24 54 54 54 54-24 54-54-24.6-54-54-54zM409 37.8c-35.4 0-63.6 28.8-63.6 63.6S374.2 165 409 165s63.6-28.8 63.6-63.6-28.2-63.6-63.6-63.6z"/>
+  </symbol>
+</svg>
+        </div>
+    
+</div>
+            <p class="uppercase text-xs mt-6">הבא</p>
+            <p class="font-bold mb-2">
+                <a href="/blog/2020/08/11ty-howto-migrate/">מוורדפרס ל-11ty</a>
+            </p>
+        
+            <p class="uppercase text-xs mt-6">הקודם</p>
+
+            <p class="font-bold">
+                <a href="/blog/2020/07/docker/">עוברים דירה</a>
+            </p>
+        
+    </div>
+
+    </main>
+    <footer class="bg-gray-900 pb-10">
+  <p class="block text-center text-sm mb-6">
+    CC-BY-SA
+    <a href="/">
+      Yehuda Bar Nir
+    </a>
+    &bull; Built with <a href="https://www.11ty.dev/">11ty</a> 
+    &bull; Based on <a target="_blank" href="https://github.com/reeseschultz/11r">11r</a> by
+    <a target="_blank" href="https://reeseschultz.com">
+      Reese Schultz
+    </a> 
+  </p>
+
+</footer>
+    
+    <script src="/assets/lib/cash.js"></script>
+    <script src="/assets/main.bundle.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </body>
+</html>
