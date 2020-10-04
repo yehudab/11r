@@ -1,5 +1,5 @@
 ---
-title: 'מי זה &quot;PRIMO&quot; ?'
+title: 'מי זה "PRIMO" ?'
 date: '2009-11-06T07:19:43+02:00'
 status: publish
 author: יהודה
