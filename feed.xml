@@ -1,0 +1,1141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>בלוג פשוט</title>
+  <subtitle>צר עולמי כ U+200A</subtitle>
+  <link href="https://yehudab.com/feed.xml" rel="self"/>
+  <link href="https://yehudab.com/"/>
+  <updated>2020-10-03T10:18:58+00:00</updated>
+  <id>https://yehudab.com/</id>
+  <author>
+    <name>יהודה בר ניר</name>
+  </author>
+    
+    <entry>
+      <title>פוסט ראשון</title>
+      <link href="https://yehudab.com/blog/2008/07/hello-world/"/>
+      <updated>2008-07-21T15:55:30+00:00</updated>
+      <id>https://yehudab.com/blog/2008/07/hello-world/</id>
+      <content type="html">&lt;p&gt;פוסט ראשון בבלוג חדש. איזו התרגשות.&lt;/p&gt;
+&lt;p&gt;את הבלוג הזה פתחתי בעיקר כדי לכתוב על אתרים ברשת. כמובן שזה מה שעושים 99% משאר הבלוגים בעולם, אבל מה שאמור להיות יחודי זה שאצלי תוכלו לקרוא בעיקר על מה שנמצא מתחת לפני השטח בכל אתר. זה יכלול ביקורת עניינית על מבנה ה HTML, CSS ו- JavaScript; קצת אנקדוטות על שטויות שמוצאים בקוד של כל אתר; תאימות לסטנדרטים ודפדפנים שונים; נגישות; שימושיות וכו&#39;. חוץ מזה, אני מקווה לפרסם גם תרגומים &lt;a href=&quot;http://dev.opera.com/articles/view/1-introduction-to-the-web-standards-cur/&quot;&gt;לקורס של אופרה בנושא סטנדרטים ברשת&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;נתחיל כמובן ב&amp;quot;מתחת לפני שטח&amp;quot; של הבלוג הזה. מכוון שהמקצוע שלי הוא לתכנת, וספציפית ב 10 השנים האחרונות תיכנות לרשת, מן הראוי היה שהבלוג ירוץ על תשתית יחודית שאבנה בעצמי. הבעיה היא שהמחשבה על יצירת תשתית כזאת הרחיקה את פתיחת הבלוג ממני בכמעט שנה וחצי, ובסוף לא הניבה דבר פרט לכמה רעיונות שנשארו במגירה. אז כדי לא לדחות עוד יותר, בחרתי תשתית מוכנה (&lt;a href=&quot;http://wordpress.org/&quot;&gt;וורדפרס באנגלית, גרסה 2.6&lt;/a&gt;), ועיצוב מוכן (&lt;a href=&quot;http://themes.dakars.info/classicbeauty/&quot;&gt;classicbeauty&lt;/a&gt; בתרגומה של &lt;a href=&quot;http://www.dakars.info/&quot;&gt;אח&amp;quot;י דקר&lt;/a&gt; עם שיפורים קלים שלי). האתר מאוחסן ב &lt;a href=&quot;https://www.nearlyfreespeech.net/&quot;&gt;NearlyFreeSpeech&lt;/a&gt;, כי בחשבון פשוט 10$ יספיקו לי שם לשנתיים, ורישום הדומיין דרך &lt;a href=&quot;https://www.pairnic.com/index.html&quot;&gt;pairnic&lt;/a&gt; כי פעם הייתי ב mydomain ונמאס לי מהאתר העמוס שלהם והספאם הבלתי פוסק. אגב, יש עכשיו &lt;a href=&quot;https://www.pairnic.com/help.m?file=anniversary&quot;&gt;מבצע ב pairnic&lt;/a&gt; לכבוד 60 שנה למדינה (סתם, זה לכבוד 6 שנים ל pairnic) לרישום דומיין בעלות של 60$ ל 6 שנים, כך שבממוצע זה לא הרבה יותר משאר הרשמים.&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>direction:rtl באינטרנט אקספלורר 8 בטא 1</title>
+      <link href="https://yehudab.com/blog/2008/07/directionrtl-d791d790d799d7a0d798d7a8d7a0d798-d790d7a7d7a1d7a4d79cd795d7a8d7a8-8-d791d798d790-1/"/>
+      <updated>2008-07-24T08:00:22+00:00</updated>
+      <id>https://yehudab.com/blog/2008/07/directionrtl-d791d790d799d7a0d798d7a8d7a0d798-d790d7a7d7a1d7a4d79cd795d7a8d7a8-8-d791d798d790-1/</id>
+      <content type="html">&lt;p&gt;אתמול ניסיתי לבדוק איך נראה הבלוג שלי באינטרנט אקספלורר 8 בטא1. במילים עדינות, המראות היו קשים.&lt;br&gt;
+&lt;img src=&quot;http://img.skitch.com/20080725-pixkfh5qminumykpattpik6acj.png&quot; alt=&quot;הבלוג באינטרנט אקספלורר 8 בטא 1&quot;&gt;&lt;br&gt;
+משום מה, אין ממש תמיכה בסטייל direction:rtl. לא מצאתי אזכור לזה בשום מקום רשמי של מיקרוסופט, פרט לשאלה ותשובה לקונית &lt;a href=&quot;http://www.microsoft.com/windowsxp/expertzone/chats/transcripts/08_0320_ez_ie8.mspx&quot;&gt;בצ&#39;ט החודשי של חודש מרץ 2008&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Jane[MSFT] (Expert):&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;Q:&lt;/strong&gt; Will Beta 2 support CSS RTL direction: rtl; ?&lt;br&gt;
+&lt;strong&gt;A:&lt;/strong&gt; We can&#39;t comment on feature set of future releases. The best way to find out about upcoming features is from IEBlob: &lt;a href=&quot;http://blogs.msdn.com/ie/&quot;&gt;http://blogs.msdn.com/ie/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;בבלוג עצמו לא מצאתי שום רמז לכך. מה שנותר הוא לחכות לבטא 2 (צפויה לצאת באוגוסט) ולראות.&lt;/p&gt;
+&lt;p&gt;עדכון (3/8/2008):&lt;br&gt;
+אחרי &lt;a href=&quot;http://yehudab.com/blog/2008/08/%d7%94%d7%9e%d7%95%d7%a2%d7%93%d7%95%d7%9f-%d7%94%d7%90%d7%a7%d7%a1%d7%a7%d7%9c%d7%95%d7%a1%d7%99%d7%91%d7%99-%d7%a9%d7%9c-%d7%91%d7%95%d7%93%d7%a7%d7%99-ie8/&quot;&gt;שהתקבלתי לתוכנית הבטא&lt;/a&gt; של ie8, מצאתי שיש באג מדווח על הבעיה הזאת, ושהנושא בטיפול. מספר הבאג הוא: 331906, ואני מקווה שעצם חשיפת המספר לא מהווה עבירה על חוקי המועדון (האקסקלוסיבי כבר אמרנו?) של מיקרוסופט.&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>ילדים, עזרו לאורנג&#39; למצוא את ההבדלים</title>
+      <link href="https://yehudab.com/blog/2008/07/d799d79cd793d799d79d-d7a2d796d7a8d795-d79cd790d795d7a8d7a0d792-d79cd79ed7a6d795d790-d790d7aa-d794d794d791d793d79cd799d79d/"/>
+      <updated>2008-07-24T13:44:40+00:00</updated>
+      <id>https://yehudab.com/blog/2008/07/d799d79cd793d799d79d-d7a2d796d7a8d795-d79cd790d795d7a8d7a0d792-d79cd79ed7a6d795d790-d790d7aa-d794d794d791d793d79cd799d79d/</id>
+      <content type="html">&lt;p&gt;אורנג&#39; מנסה להסביר באתר שלה&lt;a href=&quot;http://www.orange.co.il/PlansAndRates/1517.html&quot;&gt; מה ההבדל בין תוכנית לחבילה&lt;/a&gt;. מי שיצליח לתמצת את ההבדלים במשפט אחד יזכה בחבילה (או שאולי זאת תוכנית) של 20 sms-ים חינם ליום מהאתר של אורנג&#39; (אורנג&#39; לאורנג&#39; בלבד).&lt;br&gt;
+&lt;img src=&quot;http://img.skitch.com/20080725-ei6kwcujhm5ugmmwc3b9666mw2.png&quot; alt=&quot;מה ההבדל בין תוכנית וחבילה?&quot;&gt;&lt;br&gt;
+לשם שינוי פוסט על תוכן ולא על מאחורי הקלעים, אם כי קשור לנושא חשוב שעוד ידון רבות בבלוג הזה: שמישות.&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>המועדון האקסקלוסיבי של בודקי IE8</title>
+      <link href="https://yehudab.com/blog/2008/08/d794d79ed795d7a2d793d795d79f-d794d790d7a7d7a1d7a7d79cd795d7a1d799d791d799-d7a9d79c-d791d795d793d7a7d799-ie8/"/>
+      <updated>2008-08-01T04:16:14+00:00</updated>
+      <id>https://yehudab.com/blog/2008/08/d794d79ed795d7a2d793d795d79f-d794d790d7a7d7a1d7a7d79cd795d7a1d799d791d799-d7a9d79c-d791d795d793d7a7d799-ie8/</id>
+      <content type="html">&lt;h4&gt;כוחו של הבלוג&lt;/h4&gt;
+&lt;p&gt;לפני שמונה ימים &lt;a href=&quot;http://yehudab.com/blog/2008/07/directionrtl-%d7%91%d7%90%d7%99%d7%a0%d7%98%d7%a8%d7%a0%d7%98-%d7%90%d7%a7%d7%a1%d7%a4%d7%9c%d7%95%d7%a8%d7%a8-8-%d7%91%d7%98%d7%90-1/&quot;&gt;כתבתי כאן&lt;/a&gt; על באג באינטרנט אקספלורר 8, שלא תומך בהצגת תכנים בעברית כאשר הדף מוגדר לעבוד במוד תואם סטנדרטים. תוך שבוע בדיוק התקבלה בתיבת הדואר שלי הזמנה להשתתף בתוכנית הבטא של אינטרנט אקספלורר 8. ציטוט מההזמנה (ההדגשות שלי):&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We have identified you as a qualified beta tester and we would like to offer an opportunity to join our limited technical beta program for Windows Internet Explorer 8.&lt;/p&gt;
+&lt;p&gt;Participation in the Technical Beta will enable you to evaluate a common release of Windows Internet Explorer 8, the ability to submit feedback, &lt;strong&gt;post bug reports&lt;/strong&gt;, download software answer surveys on product quality as well as &lt;strong&gt;vote on top bugs&lt;/strong&gt; filed by others from the technical beta program. &lt;strong&gt;This is a very exclusive program&lt;/strong&gt;, by invitation only. The only way to submit feedback is to enroll in the Windows Internet Explorer 8 Technical Beta program.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;כמובן שבפיירפוקס &lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=423954&quot;&gt;יכולתי לעשות&lt;/a&gt; את &lt;a href=&quot;https://bugzilla.mozilla.org/votes.cgi?action=show_bug&amp;amp;bug_id=364536&quot;&gt;כל אלה&lt;/a&gt; ויותר (כמו &lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=434360&quot;&gt;להציע פאצ&#39;ים&lt;/a&gt;) בלי שום צורך בהזמנה מיוחדת, אז כל מה שנשאר לי הוא להחליט &lt;a href=&quot;http://www.whatquote.com/quotes/Groucho-Marx/888-I-refuse-to-join-any.htm&quot;&gt;האם אני מוכן להיות חבר במועדון שמוכן לקבל אותי&lt;/a&gt;.&lt;/p&gt;
+&lt;h4&gt;מאחורי הקלעים&lt;/h4&gt;
+&lt;p&gt;כל מה שנכתב למעלה הוא אמת לאמיתה, רק מה: לא כל האמת. מה שקרה בין לבין הוא ש &lt;a href=&quot;http://blogs.msdn.com/ie/archive/2008/07/30/wanted-ie8-beta-testers.aspx&quot;&gt;IEBlog פרסמו בקשה&lt;/a&gt; מכל מי שרוצה להתקבל למועדון לשלוח מכתב. מייד ציחצחתי את האנגלית האמרקאית שלי, וניסחתי מכתב מתחנן להפליא.&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>תכונת text-shadow בפרייפוקס 3.1</title>
+      <link href="https://yehudab.com/blog/2008/08/d7aad79bd795d7a0d7aa-text-shadow-d791d7a4d7a8d799d799d7a4d795d7a7d7a1-31/"/>
+      <updated>2008-08-03T04:08:42+00:00</updated>
+      <id>https://yehudab.com/blog/2008/08/d7aad79bd795d7a0d7aa-text-shadow-d791d7a4d7a8d799d799d7a4d795d7a7d7a1-31/</id>
+      <content type="html">&lt;p&gt;לפני מספר ימים שוחררה גרסת אלפא של פיירפוקס 3.1 (המכונה Shiretoko). אחת התכונות החדשות שנוספה לגרסה זו היא האפשרות להוספת צל מתחת לטקסט. תכונה זו היתה קיימת בספארי מאז גרסה 1 שלו, ב ie ע&amp;quot;י שימוש בהרחבה פרטית מגרסה 5.5 ולפי התקן בגרסה 8, ובאופרה מגרסה 9.5.&lt;br&gt;
+הורדתי את הגרסה ובדקתי את התצוגה בבלוג שלי. לשם כך הוספתי את הפרמטרים הבאים בקובץ ה styles.css:&lt;/p&gt;
+&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;#header h1&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br&gt;	&lt;span class=&quot;token property&quot;&gt;text-shadow&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; #999 3px 3px 3px&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token selector&quot;&gt;.post h2&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br&gt;	&lt;span class=&quot;token property&quot;&gt;text-shadow&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; #999 2px 2px 2px&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;התוצאה הייתה מאכזבת: כל הטקטסים בעברית לא קיבלו הצללה, אלא רק מספרים וטקסט באנגלית. הנה תוצאה השוואתית (מלמעלה למטה: פיירפוקס Gecko/2008072510 Shiretoko/3.1a1 , אופרה 9.51, ספארי נייטלי 35417 – כולם בגסרת מק)&lt;br&gt;
+&lt;img src=&quot;http://img.skitch.com/20080803-e2g4scij82sf14djt45fcg3xtp.png&quot; alt=&quot;text-shadow פיירפוקס, אופרה, ספארי&quot;&gt;&lt;br&gt;
+אני אדווח על הבאג בבאגזילה ואעדכן כאן כאשר יהיו התפתחויות.&lt;/p&gt;
+&lt;p&gt;עדכון (7/8/2008): מסתבר שהבאג תלוי ברדיוס הטשטוש של הצל. אם הוא 0, כלומר ללא טשטוש, הצל מוצג היטב. תמיד טוב לייצר דוגמה מינימלית (במקרה הזה זה היה כדי לדווח בבאגזילה). למי שרוצה לעקוב, מספר הבאג בבאגזילה הוא: &lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=449519&quot;&gt;449519&lt;/a&gt;&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>גרסת בטא חדשה לנגן המדיה Flip4Mac</title>
+      <link href="https://yehudab.com/blog/2008/08/d792d7a8d7a1d7aa-d791d798d790-d797d793d7a9d794-d79cd7a0d792d79f-d794d79ed793d799d794-flip4mac/"/>
+      <updated>2008-08-27T04:41:20+00:00</updated>
+      <id>https://yehudab.com/blog/2008/08/d792d7a8d7a1d7aa-d791d798d790-d797d793d7a9d794-d79cd7a0d792d79f-d794d79ed793d799d794-flip4mac/</id>
+      <content type="html">&lt;p&gt;&lt;a href=&quot;http://www.flip4mac.com/wmv.htm&quot;&gt;Flip4Mac&lt;/a&gt; הוא פלאג-אין לקוויקטיים המאפשר לנגן קבצי מדיה של Microsoft על מחשבי מקינטוש. לגרסה האחרונה של הנגן (2.2.0.49) היו מספר בעיות שגרמו בין השאר לקריסת הנגן ביחד עם הדפדפן, ולתצוגה קטועה של אזור השליטה שלו (כפתור ה play/pause, ציר הזמן וכו&#39;) בפיירפוקס 3. עיקר הבעיה הייתה עם קבצי asx המשמשים בדרך כלל לשילוב פרסומות וקדימונים לפני ואחרי הסרט. אלה גרמו בחלק מהמקרים לקריסות ובפעמים אחרות לניגון הפרסומת בלבד ללא הסרט. זו הייתה אחת הסיבות לכך שברוב הסקריפטים שלי שילבתי מסנן פרסומת (כן, גם הסיבה האחרת לא פחות חשובה…)&lt;br&gt;
+&lt;img src=&quot;http://img.skitch.com/20080827-n26f1j3bab3kh9tmt7ha7bukyi.png&quot; alt=&quot;Flip4Mac 2.2.0.49&quot;&gt;&lt;br&gt;
+גרסה חדשה של הנגן (2.2.1.7) שוחררה לא מזמן כגרסת בטא, והיא זמינה להורדה דרך אתרי התוכנות למק: &lt;a href=&quot;http://www.macupdate.com/info.php/id/17787/flip4mac-wmv-player&quot;&gt;Macupdate&lt;/a&gt;, &lt;a href=&quot;http://www.versiontracker.com/dyn/moreinfo/macosx/28842&quot;&gt;VersionTracker&lt;/a&gt;, ואחרים. הערות השחרור של הגרסה הבטיחו שיפור בניגון בתוך ספארי, שיפור תאימות בספארי וקמינו, ותיקון קריסות. התקנתי את הגרסה, והנה ההתרשמות שלי:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;אין הבדל ממשי מבחינת כפתור השליטה בפיירפוקס – הם עדיין נעלמים ומופיעים כרצונם.&lt;/li&gt;
+&lt;li&gt;ניגון קבצי asx שופר (נבדק באתר ynet וספורט5 כאשר הסקריפטים מנוטרלים), והוא לא גורם יותר לקריסות ולדילוג על התוכן.&lt;/li&gt;
+&lt;li&gt;קריסות אחרות בנתיים לא משתחזרות (נבדק בנענע10 ו TheMarker).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ההמלצה שלי: &lt;strong&gt;להתקין&lt;/strong&gt;.&lt;br&gt;
+&lt;img src=&quot;http://img.skitch.com/20080827-fx2yx855cai8f7hewyhw8p9ntx.png&quot; alt=&quot;Flip4Mac Beta&quot;&gt;&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>הבאג תוקן: text-shadow בפרייפוקס 3.1</title>
+      <link href="https://yehudab.com/blog/2008/08/d794d791d790d792-d7aad795d7a7d79f-text-shadow-d791d7a4d7a8d799d799d7a4d795d7a7d7a1-31/"/>
+      <updated>2008-08-28T03:15:04+00:00</updated>
+      <id>https://yehudab.com/blog/2008/08/d794d791d790d792-d7aad795d7a7d79f-text-shadow-d791d7a4d7a8d799d799d7a4d795d7a7d7a1-31/</id>
+      <content type="html">&lt;p&gt;לפני פחות מחודש &lt;a href=&quot;https://yehudab.com/blog/2008/08/%D7%AA%D7%9B%D7%95%D7%A0%D7%AA-text-shadow-%D7%91%D7%A4%D7%A8%D7%99%D7%99%D7%A4%D7%95%D7%A7%D7%A1-31/&quot;&gt;דיווחתי כאן&lt;/a&gt; &lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=449519&quot;&gt;ובבאגזילה&lt;/a&gt; על באג בתכונת text-shadow. תודות לעבודה מהירה של אנשי מוזילה &lt;a href=&quot;http://weblogs.mozillazine.org/roc/&quot;&gt;רוברט או&#39;קלהן&lt;/a&gt; ו&lt;a href=&quot;http://www.smontagu.org/blog/&quot;&gt;סיימון מונטגו&lt;/a&gt; הבאג תוקן, וכעת ניתן לראות התנהגות תקינה של הצל גם מתחת לטקסט עברי וערבי. גרסת אלפא2 (או בטא) ל3.1 עדיין לא יצאה, אבל ניתן &lt;a href=&quot;http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-trunk/&quot;&gt;להוריד גרסת פרה-אלפא2&lt;/a&gt; ששם כבר מוצג הצל נכון.&lt;br&gt;
+&lt;img src=&quot;http://img.skitch.com/20080828-bywhnma95fsf71um33xx7jkd5n.png&quot; alt=&quot;הצל תוקן בגרסת פרה-אלפא2&quot;&gt;&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>עוג מלך הבשן</title>
+      <link href="https://yehudab.com/blog/2008/08/d7a2d795d792-d79ed79cd79a-d794d791d7a9d79f/"/>
+      <updated>2008-08-31T04:28:25+00:00</updated>
+      <id>https://yehudab.com/blog/2008/08/d7a2d795d792-d79ed79cd79a-d794d791d7a9d79f/</id>
+      <content type="html">&lt;p&gt;עוד אחד מחידושי פיירפוקס 3.1 הוא האפשרות להציג ווידאו ואודיו בתוך הדפדפן, ללא צורך בפלאגין ותוספות אחרות. הכנתי דוגמה קטנה בפורמט &lt;a href=&quot;http://www.theora.org/&quot;&gt;ogg&lt;/a&gt; בפוסט הזה (מצטער על כישורי האנימציה והסאונד החובבניים). כדי לראות את הסרטון תזדקקו לפיירפוקס 3.1 &lt;a href=&quot;http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-trunk/&quot;&gt;בגרסה הלילית האחרונה&lt;/a&gt; ו…זהו.&lt;br&gt;
+&lt;video controls=&quot;true&quot; src=&quot;https://yehudab.com/img/saltandpepper.ogg&quot;&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;div style=&quot;border:2px solid #F72020;padding:5px&quot;&gt;אופס, כנראה שאין לך אפשרות לראות את הסרטון. [ככה](http://img.skitch.com/20080831-8mgecc652cudt6ubk5q7xsy19g.png) זה אמור להיראות.&lt;/div&gt;עדכון:  
+מסתבר שהמצב עדיין לא כל-כך ורוד: בחלונות הסרט מנגן אבל אין סאונד; וורדפרס שבר לי את ה html, כך שתגי הפתיחה והסגירה של ה video נעטפו בתגי p; ואחרון חביב: בלי קשר (או עם), גם google reader לא מזהה את תגי הווידאו ולכן החליט לזרוק אותם החוצה.  
+אז עוג אולי עדיין לא מלך, אבל בהחלט יורש העצר.
+</content>
+    </entry>
+    
+    <entry>
+      <title>בלוגדיי 2008</title>
+      <link href="https://yehudab.com/blog/2008/08/d791d79cd795d792d793d799d799-2008/"/>
+      <updated>2008-08-31T20:03:16+00:00</updated>
+      <id>https://yehudab.com/blog/2008/08/d791d79cd795d792d793d799d799-2008/</id>
+      <content type="html">&lt;p&gt;כיאה למוטו של הבלוג (מה שקורה מתחת לשטיח), ולרגל &lt;a href=&quot;http://blogday.org/&quot;&gt;בלוגדיי 2008&lt;/a&gt; המלצה על חמישה בלוגים שאינם משתמשים בוורדפרס, אלא ב &lt;a href=&quot;http://www.habariproject.org/en/&quot;&gt;habari&lt;/a&gt; (&amp;quot;חדשות&amp;quot; בסוואהילית) – תשתית בלוגינג חדשה ומתפתחת. הבלוגים מוצגים לאו דווקא בשל תוכנם, אלא כדי להראות את אפשרויות העיצוב השונות. כמובן שאפשר ליצור גם בלוג וורדפרסי שיראה כמו כל אחד מאלה, אבל נראה לי שהתשתית החדשה גורמת לבעלי הבלוגים (כרגע יש מעט מעצבי תבניות פתוחות להבארי) לחשוב קצת אחרת. לצערי, לא מצאתי אתרים ישראלים כאלה (ואולי זה יהפוך בקרוב לראשון), אז הנה החמישיה שלי:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://binarybonsai.com/&quot;&gt;Binary Bonsai&lt;/a&gt; – בלוג ותיק של Michael Heilemann שעבר לאחרונה להבארי. מומלץ &lt;a href=&quot;http://binarybonsai.com/interfacing-habari&quot;&gt;לצפות בפוסט&lt;/a&gt; שלו המדגים את יכולות ועיצוב מערכת הניהול. למתעניינים בתוכן ולא בפלטפורמה, מומץ לעיין &lt;a href=&quot;http://binarybonsai.com/tag/photography&quot;&gt;בקטגוריית הצילום&lt;/a&gt; של הבלוג.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://chrisjdavis.org/&quot;&gt;Sillyness, werd&lt;/a&gt; – בלוג מעוצב למשעי של Chris J Davis.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://wilcosworld.co.uk/&quot;&gt;Wilcos World&lt;/a&gt; – בלוג של מעצב נוסף: Adam Wilcox – הפעם בריטי, כך שהבלוג שלו הרבה יותר שקט אבל לא פחות יפה.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://wooga.drbacchus.com/&quot;&gt;DrBacchus&#39; Journal&lt;/a&gt; – בלוג של תוכניתן וסופר (Rich Bowen) שלא ממש השקיע בעיצוב. בהחלט אפשר ליצור גם כאלה.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://h0bbel.p0ggel.org/&quot;&gt;h0bbel p0ggel&lt;/a&gt; – גם כן עם &lt;a href=&quot;http://h0bbel.p0ggel.org/&quot;&gt;פוסט הסבר&lt;/a&gt; למה כדאי לנסות את הבארי. ואם לא בשביל הפוסט, לפחות כותרת המשנה של הבלוג מאוד משעשעת.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>חורים שחורים ברשת</title>
+      <link href="https://yehudab.com/blog/2008/09/d797d795d7a8d799d79d-d7a9d797d795d7a8d799d79d-d791d7a8d7a9d7aa/"/>
+      <updated>2008-09-15T19:23:10+00:00</updated>
+      <id>https://yehudab.com/blog/2008/09/d797d795d7a8d799d79d-d7a9d797d795d7a8d799d79d-d791d7a8d7a9d7aa/</id>
+      <content type="html">&lt;p&gt;בעקבות &lt;a href=&quot;http://the.taoofmac.com/space/links/2008/09/10/0926#has-the-large-hadron-collider-destroyed-the-world-yet-&quot;&gt;The Tao of Mac&lt;/a&gt; הגעתי &lt;a href=&quot;http://hasthelargehadroncolliderdestroyedtheworldyet.com/&quot;&gt;לאתר&lt;/a&gt; המודיע האם מאיץ החלקיקים החדש הצליח להשמיד את העולם. (למי שמתקמצן על לינקים: התשובה היא &amp;quot;לא&amp;quot;).&lt;br&gt;
+מה שנחמד באתר הזה הוא שיש לו ממש קטע קוד שתומך גם בתשובה &amp;quot;כן&amp;quot;:&lt;/p&gt;
+&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;typeof&lt;/span&gt; worldHasEnded &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;undefined&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br&gt;    document&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;YUP.&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br&gt;    document&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;NOPE.&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;ויש גם הערה משעשעת בסוף:&lt;/p&gt;
+&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;&amp;lt;!-- if the lhc actually destroys the earth &amp;amp; this page isn&#39;t yet updated&lt;br&gt;please email mike@frantic.org to receive a full refund --&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>תודה לכל המצביעים בתחרות הבלוג העצמאי</title>
+      <link href="https://yehudab.com/blog/2008/11/blogerim-voter-thank-you/"/>
+      <updated>2008-11-03T05:19:02+00:00</updated>
+      <id>https://yehudab.com/blog/2008/11/blogerim-voter-thank-you/</id>
+      <content type="html">&lt;p&gt;לא יאומן, אבל 53 מקוראי הבלוג (טוב, 52 כי פעם אחת גם אני הצבעתי לעצמי – כמו מלצרים ששמים קצת כסף קטן בכוס הטיפים) ממש טרחו להצביע עבורי &lt;a href=&quot;http://www.blogerim.net/node/39803&quot;&gt;בתחרות הבלוגרים העצמאיים&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.skitch.com/20081103-fc4dx1n142hscb3pxw46wdc4ny.png&quot; alt=&quot;53 הצבעות&quot;&gt;&lt;/p&gt;
+&lt;p&gt;כשפתחתי את הבלוג לפני 4 חודשים, לא האמנתי שאגיע ל 52 קוראים, אז זה בהחלט הישג נחמד. לא שהגעתי למקמות הראשונים או משהו, אבל בהחלט כיף להיות בדף הפותח (מבין 3) &lt;a href=&quot;http://www.blogerim.net/blog-votes?page=2&amp;amp;op0=AND&amp;amp;filter0%5B0%5D=2504&quot;&gt;ברשימה הממויינת בקטגוריה &amp;quot;טכנולוגיה ואינטרנט&amp;quot;&lt;/a&gt;. אני מבין גם שלא רמת הכתיבה המשובחת שלי כאן זכתה לקרדיט, אלא יותר רמת הכתיבה בסקריפטים, אבל לזה עדיין אין תחרות.&lt;/p&gt;
+&lt;p&gt;לשנה הבאה בעשירייה הראשונה.&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>הבלוג שודרג לוורדפרס 2.7</title>
+      <link href="https://yehudab.com/blog/2008/12/wordpress-2-7/"/>
+      <updated>2008-12-15T21:10:10+00:00</updated>
+      <id>https://yehudab.com/blog/2008/12/wordpress-2-7/</id>
+      <content type="html">&lt;p&gt;אמנם &lt;a href=&quot;http://www.holesinthenet.co.il/?p=1390&quot;&gt;עשו&lt;/a&gt; את זה &lt;a href=&quot;http://www.onlinemarketing.co.il/%D7%9C%D7%9E%D7%94-%D7%90%D7%A0%D7%99-%D7%9C%D7%90-%D7%90%D7%95%D7%94%D7%91-%D7%90%D7%AA-%D7%95%D7%95%D7%A8%D7%93%D7%A4%D7%A8%D7%A1-27/&quot;&gt;קודם&lt;/a&gt; &lt;a href=&quot;http://firefang.net/blog/1116&quot;&gt;לפני&lt;/a&gt;, אבל עוד לא ראיתי מישהו שהפעיל את התגובות המשורשרות, אז שרשרו ותיהנו.&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>גולש ב IE6? אין לנו מרק בשבילך</title>
+      <link href="https://yehudab.com/blog/2009/08/using-ie6-no-soup-for-you/"/>
+      <updated>2009-08-02T19:07:17+00:00</updated>
+      <id>https://yehudab.com/blog/2009/08/using-ie6-no-soup-for-you/</id>
+      <content type="html">&lt;p&gt;&lt;a href=&quot;http://www.talgalili.com/?p=1004&quot;&gt;טל התחיל בפרויקט הקבוצתי&lt;/a&gt; ואני מצטרף ולא רק ליום אחד, אלא מהיום ועד להודעה חדשה. גולשים ב IE6 שיגיעו לבלוג הזה, יופנו אחר כבוד לשדרג אותו לגרסה מתקדמת יותר, או לעבור לדפדפן אחר.&lt;/p&gt;
+&lt;p&gt;למעשה, די קל לי להצטרף &lt;a href=&quot;http://www.we-cms.info/blog/die-ie6/&quot;&gt;למחאה העולמית הגואה&lt;/a&gt; בעניין. הבלוג הזה מקבל בין 4% ל-8% של קליקים מאינטרנט אקספלורר 6, ורובם (לפחות לפי בדיקה של מילות החיפוש), כנראה בטעות. גם מעולם לא טרחתי לדאוג להתאמה של תבנית הבלוג ל IE6 כפי שניתן לראות בצילומי המסך למטה:&lt;/p&gt;
+&lt;p&gt;IE6:&lt;br&gt;
+&lt;img src=&quot;http://img.skitch.com/20090802-gpni1jak62wkcj8kshhbqhh3ih.jpg&quot; alt=&quot;בלוג פשוט ב ie6&quot;&gt;&lt;/p&gt;
+&lt;p&gt;IE7:&lt;br&gt;
+&lt;img src=&quot;http://img.skitch.com/20090802-cqr5bn56apaknhwnw5hm7adas8.jpg&quot; alt=&quot;בלוג פשוט ב ie7&quot;&gt;&lt;/p&gt;
+&lt;p&gt;יש כמובן &lt;a href=&quot;http://tomercohen.com/2009/07/31/%D7%97%D7%A1%D7%99%D7%9E%D7%AA-%D7%90%D7%99%D7%A0%D7%98%D7%A8%D7%A0%D7%98-%D7%90%D7%A7%D7%A1%D7%A4%D7%9C%D7%95%D7%A8%D7%A8/#comment-4339&quot;&gt;הרבה&lt;/a&gt; מתנגדים &lt;a href=&quot;http://www.talgalili.com/?p=1004&amp;amp;cpage=1#comment-79492&quot;&gt;בתגובות&lt;/a&gt; וגם &lt;a href=&quot;http://marksw.com/wordpress/?p=1317&quot;&gt;במאמרים נפרדים&lt;/a&gt;, ולא יעלה על הדעת, אבל אחרי כל-כך הרבה אתרים שחסמו עבורי את השימוש בפיירפוקס (בין במפורש ובין פשוט בגלל חוסר תפקוד), אני מרגיש צורך בנקמה קטנה.&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>חידושים והמצאות בפיירפוקס 3.6</title>
+      <link href="https://yehudab.com/blog/2009/08/firefox-3-6-whats-ne/"/>
+      <updated>2009-08-11T19:56:27+00:00</updated>
+      <id>https://yehudab.com/blog/2009/08/firefox-3-6-whats-ne/</id>
+      <content type="html">&lt;p&gt;עוד לא יבש הדיו על העיתונים המשבחים (מי &lt;a href=&quot;http://www.ynet.co.il/articles/0,7340,L-3742285,00.html&quot;&gt;יותר&lt;/a&gt; מי &lt;a href=&quot;http://www.holesinthenet.co.il/archives/3509&quot;&gt;פחות&lt;/a&gt;) את פיירפוקס 3.5 וכבר מתבשלת לה הגרסה הבאה (שם זמני: 3.6). בדומה לתמיכה בווידאו בהתאם לתקן html5 שנוספה בגרסה 3.5, הפעם מתכננים במוזילה לשפר בצורה משמעותית את התמיכה בהעלאת קבצים.&lt;/p&gt;
+&lt;p&gt;כתבתי דף קצר שמדגים חלק מהיכולות הללו: בחירה של מספר קבצים, גרירתם לתוך דף, והעלאה שלהם לאתר האחסון. בזמן ההעלאה ניתן לראות את אחוזי ההתקדמות וקצב ההעלאה של כל קובץ, וכן לגרור קבצים נוספים. הדף בנוי תוך שימוש ב html, javascript, ו- css, ללא פלאש, java או כל תוסף אחר.&lt;/p&gt;
+&lt;p&gt;הנועזים שבניכם יכולים להוריד את &lt;a href=&quot;http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-trunk/&quot;&gt;גרסת 3.6 אלפא האחרונה&lt;/a&gt; ולנסות את הדף &lt;a href=&quot;http://yehudab.com/apps/drag-n-drop/demo.html&quot;&gt;בקישור הבא&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;אחרים מוזמנים לצפות בסרטון ההדגמה:&lt;br&gt;
+&lt;video controls=&quot;true&quot; src=&quot;https://yehudab.com/img/drag-n-drop.ogg&quot;&gt;&lt;object height=&quot;300&quot; width=&quot;400&quot;&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot;&gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://vimeo.com/moogaloop.swf?clip_id=6055152&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1&quot;&gt;&lt;embed allowfullscreen=&quot;true&quot; allowscriptaccess=&quot;always&quot; height=&quot;300&quot; src=&quot;http://vimeo.com/moogaloop.swf?clip_id=6055152&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1&quot; type=&quot;application/x-shockwave-flash&quot; width=&quot;400&quot;&gt;&lt;/object&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://vimeo.com/6055152&quot;&gt;Firefox 3.6 file upload via drag and drop&lt;/a&gt; from &lt;a href=&quot;http://vimeo.com/user2155199&quot;&gt;Yehuda B.&lt;/a&gt; on &lt;a href=&quot;http://vimeo.com/&quot;&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;הקוד מבוסס על עבודתם של אנשי מוזילה Olli Pettay ו-Matin Movassate. הרעיון לכתיבת הדף הועלה ע&amp;quot;י סיימון מונטגו.&lt;/p&gt;
+&lt;p&gt;עדכון: לבקשת הקהל, מי שיקרא את הפוסט בדפדפן מתקדם (פיירפוקס 3.5 ומעלה, ספארי 3.1 ומעלה, ואולי גם כרום 3 בטא) יוכל לצפות בסרטון בפורמט הפתוח ogg. לאחרים יוצג בפלאש.&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>לפנק, לפנק, לפנק – אתר לאומי קארד עובד בפיירפוקס</title>
+      <link href="https://yehudab.com/blog/2009/08/leumi-card-firefox/"/>
+      <updated>2009-08-14T04:41:07+00:00</updated>
+      <id>https://yehudab.com/blog/2009/08/leumi-card-firefox/</id>
+      <content type="html">&lt;p&gt;אחד ממעוזי ההתנגדות האחרונים לפיירפוקס נשבר השבוע. אתר &lt;a href=&quot;http://www.leumi-card.co.il/&quot;&gt;לאומי קארד&lt;/a&gt; עבר התאמה לפיירפוקס ועכשיו ניתן לגשת ולבצע את כל הפעולות ללא צורך בתוכנות וירטואליציה למינהן. אז אמנם לקח קצת יותר מדי זמן, אבל כשמגיע קרדיט (הבנתם…) אז נותנים.&lt;br&gt;
+&lt;img src=&quot;http://img.skitch.com/20090814-n6cfbkdga9dnwnid7rin2y5gs3.png&quot; alt=&quot;הלו, זה פיירפוקס?&quot;&gt;&lt;/p&gt;
+&lt;p&gt;תודה למדווח האלמוני &lt;a href=&quot;http://mozilla.org.il/board/viewtopic.php?f=13&amp;amp;t=6060#p38057&quot;&gt;מפורום מוזילה ישראל&lt;/a&gt;&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>הזמנות ל Google wave</title>
+      <link href="https://yehudab.com/blog/2009/10/invitations-to-google-wave/"/>
+      <updated>2009-10-01T05:22:03+00:00</updated>
+      <id>https://yehudab.com/blog/2009/10/invitations-to-google-wave/</id>
+      <content type="html">&lt;p&gt;&lt;img src=&quot;http://img.skitch.com/20091001-eur1qys66xiyntdsmc14w51cuw.png&quot; alt=&quot;כל הקודם זוכה&quot;&gt;&lt;/p&gt;
+&lt;p&gt;רוצים הזמנה? 4 הראשונים שתגובתם תופיע ללא צורך באישור (כלומר כאלו שהגיבו כאן לפחות פעם אחת) יקבלו אחת.&lt;/p&gt;
+&lt;p&gt;עדכון (5/10/2009):&lt;br&gt;
+למיטב ידיעתי, אף אחד מ-4 הזוכים עוד לא קיבל הזמנה מגוגל. אם אתם יודעים אחרת, נא לעדכן.&lt;br&gt;
+למי שלא יודע מה זה גוגל וויב, הנה סרטון נחמד:&lt;br&gt;
+&lt;object height=&quot;340&quot; width=&quot;560&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://www.youtube.com/v/rDu2A3WzQpo&amp;hl=en&amp;fs=1&amp;&quot;&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;&gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot;&gt;&lt;embed allowfullscreen=&quot;true&quot; allowscriptaccess=&quot;always&quot; height=&quot;340&quot; src=&quot;http://www.youtube.com/v/rDu2A3WzQpo&amp;hl=en&amp;fs=1&amp;&quot; type=&quot;application/x-shockwave-flash&quot; width=&quot;560&quot;&gt;&lt;/object&gt;&lt;/p&gt;
+&lt;p&gt;עדכון2 (6/10/2009):&lt;br&gt;
+חלק מההזמנות התקבלו הבוקר.&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>אחת, שתיים, (לא) מספיק ודי</title>
+      <link href="https://yehudab.com/blog/2009/10/dominos-fail/"/>
+      <updated>2009-10-10T10:45:20+00:00</updated>
+      <id>https://yehudab.com/blog/2009/10/dominos-fail/</id>
+      <content type="html">&lt;p&gt;גם אני ניסיתי אתמול להזמין פיצה ב 50% הנחה מדומינוס. בניגוד &lt;a href=&quot;http://www.ynet.co.il/articles/0,7340,L-3787194,00.html&quot;&gt;לדווחים על עומס&lt;/a&gt;, האתר דווקא עבד יפה, ואפילו תואם פיירפוקס. הבעייה התחילה כשנדרשתי להזין סיסמה. ניסיתי מספר סיסמאות, עד שהתייאשתי ולחצתי על כפתור ה&amp;quot;שכחתי סיסמה&amp;quot;. אז הגעתי למסך הבא:&lt;br&gt;
+&lt;img src=&quot;http://img.skitch.com/20091010-pc1qwwnutr15nrr4b268mfrwjd.png&quot; alt=&quot;אז שכחנו לחדש, אז מה כבר קרה?&quot;&gt;&lt;/p&gt;
+&lt;p&gt;בפעם הבאה, רק בטלפון.&lt;/p&gt;
+&lt;p&gt;עדכון: 12/10/2009&lt;br&gt;
+למרות ההבטחה, לא התייאשתי. נרשמתי מחדש עם email אחר (הפעם דאגתי שפיירפוקס ישמור את הסיסמה). ההזמנה כנראה הצליחה (נדע עוד 30 דקות), אבל הסרבר של דומינוס נתקע ב timeout:&lt;br&gt;
+&lt;img src=&quot;http://img.skitch.com/20091012-m7bumu79g965h29rgj3ny2tefy.png&quot; alt=&quot;בפעם הבאה, נא להגדיל את ה timeout&quot;&gt;&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>מבחן חומצה 2 – האם הדפדפן החביב עליכם באמת תומך בעברית?</title>
+      <link href="https://yehudab.com/blog/2009/10/acid2-rt/"/>
+      <updated>2009-10-14T21:45:09+00:00</updated>
+      <id>https://yehudab.com/blog/2009/10/acid2-rt/</id>
+      <content type="html">&lt;p&gt;הדפדפנים המודרנים (פיירפוקס, ספארי, אופרה, ו IE8) מתגאים בכך שעברו את המבחן &lt;a href=&quot;http://www.webstandards.org/files/acid2/test.html&quot;&gt;acid2&lt;/a&gt; לבדיקת תאימות לתקנים. ככל הידוע לי, לא קיים מבחן מקביל לבדיקת התאימות במצב RTL. מכוון שכך, החלטתי לגייר את המבחן ולבדוק. התוצאות קצת מפתיעות, כאשר 2 מתוך הרביעה נכשלו במידה זו או אחרת. תוכלו לנסות את המבחן בעצמכם &lt;a href=&quot;http://yehudab.com/files/acid2/test-rtl.html&quot;&gt;בקישור הזה&lt;/a&gt;.&lt;br&gt;
+אלה צילומי מסך מהבדיקה שאני עשיתי:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.skitch.com/20091014-ttcd7n39w68e7bduij9564y9k4.png&quot; alt=&quot;Firefox 3 acid2-rtl&quot;&gt;&lt;br&gt;
+פיירפוקס 3/3.5&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.skitch.com/20091014-c2bf8edcydcyi8tx8br4xxgbmk.png&quot; alt=&quot;Safar 3.1.2 acid2-rtl&quot;&gt;&lt;br&gt;
+ספארי 3.1.2/כרום 3&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.skitch.com/20091014-h4896crhij2ch6kgptxw32byp.png&quot; alt=&quot;IE8 acid2-rtl&quot;&gt;&lt;br&gt;
+אקספלורר 8&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.skitch.com/20091014-1itwmbss9sw3yssfes6id8ixw2.png&quot; alt=&quot;Opera 10 acid2-rtl&quot;&gt;&lt;br&gt;
+אופרה 10&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>מי זה &amp;quot;PRIMO&amp;quot; ?</title>
+      <link href="https://yehudab.com/blog/2009/11/primo-tami-4/"/>
+      <updated>2009-11-06T05:19:43+00:00</updated>
+      <id>https://yehudab.com/blog/2009/11/primo-tami-4/</id>
+      <content type="html">&lt;p&gt;בזמן האחרון מופיעה פרסומת teaser שמכבב בה רובוט דמוי wall-e שנקרא primo. אם רציתם לדעת למה הפרסומת, התשובה בכותרת הסרטון.&lt;br&gt;
+&lt;img src=&quot;http://img.skitch.com/20091106-ci4itq12grm99j75qwjetin3if.jpg&quot; alt=&quot;PRIMO?  סתם תמי4&quot;&gt;&lt;/p&gt;
+&lt;p&gt;עריכה (10/11/2009):&lt;br&gt;
+עכשיו זה כבר רשמי, פרימו הוא באמת &lt;a href=&quot;http://www.tami4.co.il/product/195&quot;&gt;מתקן מים&lt;/a&gt; של תמי4. ואותי מעניין מה זה בדיוק &amp;quot;ממשק משתמש חכם וחדשני – ייחודי לתמי 4&amp;quot;?&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>עוד הזמנות לגוגל וויב</title>
+      <link href="https://yehudab.com/blog/2009/11/more-wave-invites/"/>
+      <updated>2009-11-10T19:13:28+00:00</updated>
+      <id>https://yehudab.com/blog/2009/11/more-wave-invites/</id>
+      <content type="html">&lt;p&gt;קיבלתי עוד &lt;a href=&quot;http://yehudab.com/blog/2009/10/invitations-to-google-wave/&quot;&gt;הזמנות לגוגל וויב&lt;/a&gt; לחלוקה. הפעם גוגל נדיבים במיוחד, כך שסה&amp;quot;כ 20 מקוראי בלוג יוכלו לקבל הזמנות.&lt;/p&gt;
+&lt;p&gt;הכללים הפעם הם אלה: 10 הראשונים שיגיבו לפוסט הזה יקבלו הזמנה + 10 הראשונים שהגיבו לפוסט הקודם וטרם קיבלו הזמנה ממקור אחר. המגיבים לפוסט הקודם (אריאל, יריב צור, גורו יאיא, Calvin, דן, זוהר, עודד, RusTy, גלעד, חיים) מתבקשים להגיב כאן מחדש עד סוף השבוע, כדי שאני אדע שהם עדיין מעוניינים (וגם כדי לראות שהם עדיין נאמנים לבלוג) ולא קיבלו הזמנה ממקור אחר.&lt;br&gt;
+הפעם יתקבלו מגיבים חדשים וותיקים באותה עדיפות. להבטחת אמינות בשליחה, רצוי לציין דואר ב gmail.&lt;/p&gt;
+&lt;p&gt;שימו לב, בסבב הקודם הזמן בין שליחת ההזמנה שלי לקבלתה בצד השני היה כשבוע. נקווה שהפעם זה יהיה קצר יותר, אבל אם לא נא להצטייד בסבלנות.&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>הקץ לספאם?</title>
+      <link href="https://yehudab.com/blog/2009/12/js-is-the-new-killer/"/>
+      <updated>2009-12-02T21:29:17+00:00</updated>
+      <id>https://yehudab.com/blog/2009/12/js-is-the-new-killer/</id>
+      <content type="html">&lt;p&gt;בעקבות הדיון אצל &lt;a href=&quot;http://ilsh.info/archives/1967&quot;&gt;אילן שביט&lt;/a&gt; ואחרי שגיליתי שבחודש האחרון Akismet חסם לי תגובה אמיתית אחת, החלטתי לאמץ את מסנן הספאם שהומלץ ע&amp;quot;י &lt;a href=&quot;http://art-blog.no-ip.info/newpress/blog/post/79&quot;&gt;ארתיום&lt;/a&gt;. הרעיון הכללי הוא לתקוף את הספאמרים בנשק יום הדין: Javascript. אם נתקלתם בבעיה עם המסנן החדשה, נא כתבו לי מייל לפי הכתובת בדף &lt;a href=&quot;http://yehudab.com/blog/about/&quot;&gt;האודות&lt;/a&gt; (שגם הוא מוגן שם באותו הנשק).&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>הבלוגיה של תפוז – לחובבי ספארי</title>
+      <link href="https://yehudab.com/blog/2010/02/blogia-for-safari/"/>
+      <updated>2010-02-13T20:51:20+00:00</updated>
+      <id>https://yehudab.com/blog/2010/02/blogia-for-safari/</id>
+      <content type="html">&lt;p&gt;הפעם משהו למשתמשי ספארי המושבעים.&lt;br&gt;
+אם ניסיתם לצפות בחלק מהבלוגים של תפוז (&lt;a href=&quot;http://blog.tapuz.co.il/CooknBake&quot;&gt;למשל CooknBake&lt;/a&gt;), ולא ראיתם שום תוכן זה לא אשמתכם. ככה זה נראה לפני:&lt;br&gt;
+&lt;img src=&quot;http://img.skitch.com/20100213-gk9b6gyh134cx8sut4f3j2waeq.png&quot; alt=&quot;הבלוגיה בספארי&quot;&gt;&lt;/p&gt;
+&lt;p&gt;כל התוכן נמצא בדף, רק שהוא מוסתר. אני מניח שמתכנני הבלוגיה רצו להציג את התוכן רק לאחר שכולו נטען, אבל משום מה זה לא מצליח להם, והתוכן נשאר מוסתר. כדי להתגבר על הבעיה, נשתמש ביכולת הבנויה לתוך לספארי והיא מאפשרת לשנות את האופן שבו מוצג הדף. בדרך כלל זה משמש לחסימת פרסומות או סתם לשינויי צבע/גודל וכו&#39;. הפעם נשתמש ביכולת זו כדי לפתור את בעית הבלוג הנעלם.&lt;/p&gt;
+&lt;p&gt;אז איך זה עובד:&lt;br&gt;
+נתחיל בהורדת &lt;a href=&quot;http://userstyles.org/styles/25152.css&quot;&gt;הקובץ הזה&lt;/a&gt; (לחיצה עם עכבר ימין ובחירת Download Linked File As…). את הקובץ אפשר לשמור בכל פולדר שתירצו, רק כדאי לזכור היכן שמרתם אותם בשביל השלב הבא. רצוי גם לשנות לו את השם מ 25152 לשם קצת יותר ברור (כמו blogia.css).&lt;/p&gt;
+&lt;p&gt;השלב הבא הוא לפתוח את מסך ההעדפות של ספארי. משם נבחר את הטאב Advanced (האחרון מימין). בשדה Style sheet, נבחר &amp;quot;Other&amp;quot; ונדפדף למקום שבו שמרנו את הקובץ קודם.&lt;br&gt;
+&lt;img src=&quot;http://img.skitch.com/20100213-k9wki6tbknmwrw7wh4h56u99ee.png&quot; alt=&quot;שינוי הגדרות&quot;&gt;&lt;/p&gt;
+&lt;p&gt;זהו, הבלוג מוצג, ואם לא, נסו לסגור ולפתוח את הדפדפן.&lt;br&gt;
+&lt;img src=&quot;http://img.skitch.com/20100213-b88pabtxidmpcma99mm1yf5tc2.png&quot; alt=&quot;הבלוג אחרי&quot;&gt;&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>סקירה: Garmin nüvi 1310 – חלק ראשון</title>
+      <link href="https://yehudab.com/blog/2010/04/garmin-nuvi-review-1/"/>
+      <updated>2010-04-02T10:57:22+00:00</updated>
+      <id>https://yehudab.com/blog/2010/04/garmin-nuvi-review-1/</id>
+      <content type="html">&lt;p&gt;הפעם, שינוי קל מהמתכונת השגרתית של הבלוג: לא עוד סקריפט, או עוד אתר שלא פועל, אלא סקירת מוצר. מדובר במכשיר GPS יעודי (PND) של חברת גרמין, מדגם nüvi 1310 (מבטאים בעברית &amp;quot;ניבי&amp;quot; – כמו שם ילד). רכשתי אותו לפני כשבוע, והוא צבר מאז קילומטרז&#39; של כ 500 ק&amp;quot;מ, הכוללים נסיעות עירוניות, בן-עירוניות, נסיעה לאתרי טיולים, והליכה בעיר. גילוי נאות: זהן מכשיר ה GPS הראשון שלי, כך שהביקורת אינה מבוססת על השוואה למוצרים מתחרים. מפאת אורכה, הסקירה מחולקת לשני פוסטים. בחלק השני יסקרו שינויי נתיב תוך כדי נסיעה, עצירות ביניים, נקודות עניין, דיבורית ועוד.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.skitch.com/20100402-1rtsjtfcfth7nswg3995ibrjxa.jpg&quot; alt=&quot;גרמין נובי 1310&quot;&gt;&lt;/p&gt;
+&lt;h3&gt;מראה חיצוני והתרשמות כללית&lt;/h3&gt;
+&lt;p&gt;ביד המכשיר מרגיש קצת כבד (162 גר&#39;) ועבה (1.6 ס&amp;quot;מ) – גם המסגרת מסביב לשטח התצוגה נראית טיפה עבה מדי. במכונית, לעומת זאת, הוא יושב &amp;quot;טוב&amp;quot; על המעמד המסופק, ובדרך כלל משתלב יפה ברכב. להשלמת המראה ברכב רצוי לטעון את המכשיר בבית מראש, ואז אין צורך להתחבר למצת כל עוד הנסיעה אינה ארוכה מדי.&lt;/p&gt;
+&lt;p&gt;עוד מבחוץ: בחלק העליון כפתור כבוי והדלקה, בצד שמאל מקום לכרטיס הרחבה לזכרון ומיקרופון לדיבורית, ומאחור רמקול וחיבור mini USB המשמש גם לחיבור ספק הכח. החלק האחורי התחתון מחוספס מעט למניעת החלקה.&lt;/p&gt;
+&lt;p&gt;הצג הוא בגודל 4.3&amp;quot; וברזולציה של 480×272. מסך המגע בדרך כלל מגיב טוב, למרות שצריך אימון קצר כדי להתרגל לעוצמת הלחיצה האופטימלית. התצוגה בהירה למדי, אם כי כאשר השמש מאירה מאחורי המכשיר על בגד בהיר של הנהג רואים את ההשתקפות בצג. גם ריבוי טביעות אצבע עלול להפריע בצפיה ביום.&lt;/p&gt;
+&lt;h3&gt;הפעלה ראשונית ועדכון תוכנה ומפות&lt;/h3&gt;
+&lt;p&gt;בהפעלה ראשונה, וכן כל עוד לא בוצעה קליטת לווינים מוצלחת, נדרשים לבחור מדינה ושפה ולאשר את תנאי השימוש. משום מה, ברירת המחדל למדינה היא ארה&amp;quot;ב, למרות שהמכשיר נקנה בארץ.&lt;/p&gt;
+&lt;p&gt;בניגוד למכשירים אחרים הנמכרים כאן, אפשר לעדכן את המפות רק ב 60 יום הראשונים שלאחר ההפעלה הראשונה. העדכון עצמו נעשה דרך האתר של גרמין. בנתיים, אין עדכון למפות, אבל יש עדכון לתוכנה. מכוון שבצעתי את העדכון מייד אחרי הקניה, מצאתי רק שני באגים שתוקנו: האחד הוא שהשם &amp;quot;ישראל&amp;quot; הופיע בגרסה המקורית מנוקד, אבל בגלל באג ביישום, הניקוד הופיע אחרי כל אות במקום בתוכה/מתחתיה (באג מוכר למשתמשי מק). בגרסה החדשה, השם מופיע ללא ניקוד כלל, כך שלא בטוח שהבעיה המקורית תוקנה. באג חמור הרבה יותר שתוקן הוא השמעת צליל על כל לחיצה על המסך. שוב, מכוון שלא ביצעתי נווט עם המכשיר המקורי, אני לא בטוח אם הבעיה היתה בעיית אודיו כללית או רק בעיית ב- feedback על הלחיצות.&lt;/p&gt;
+&lt;p&gt;כדי לבצע את עדכון הגרסה, צריך לגשת לאתר גרמין לבעלי מכשירים: &lt;a href=&quot;https://my.garmin.com/&quot;&gt;https://my.garmin.com&lt;/a&gt; ושם להזין את המספר הסידורי של המכשיר ואז להוריד את תוכנת הסנכרון למחשב. התוכנה היא plug-in (די גדול: כ 10 מגה), ונתקלתי במספר בעיות בהפעלה הראשונה שלו. בסופו של דבר נעזרתי &lt;a href=&quot;https://forums.garmin.com/showthread.php?t=115&quot;&gt;בפוסט&lt;/a&gt; בפורום התמיכה הרשמי של גרמין למק (כן! יש תמיכה במק!), כאשר הפתרון הוא להתקין את הפלאגין דרך ספארי ואז למחוק את הפלאגין לפליפ4מק שנקרא Flip4Mac WMV Plugin.webplugin (לא לדאוג, זה לא מונע מהסרטים מלנגן בדפדפן). אחר-כך ניתן לגשת שוב לאתר, לחבר את המכשיר (כבל החיבור בין המחשב ל GPS לא מסופק) ולחפש גרסה חדשה לתוכנה או למפות. הורדת הגרסה וההתקנה במכשיר נעשים דרך הדפדפן. בשורה התחתונה, נשמע די מסובך, אבל עדיין עדיף על נסיעה לתחנת שירות.&lt;/p&gt;
+&lt;p&gt;אפשרות אחרת (למשתמשי חלונות בלבד) היא לחבר את המכשיר למחשב לפני הורדת הפלאג-אין. ישנה תוכנה שמוגדרת לרוץ אוטומטית לאחר שהחיבור מזוהה. לא ברור לי מה בדיוק התוכנה הזאת אמורה להריץ, כי האנטי-וירוס שלי על חלונות חסם אותה.&lt;/p&gt;
+&lt;p&gt;מומלץ להשאיר את המכשיר מחובר למחשב למשך מספר שעות לאחר עדכון הגרסה כדי לטעון את הסוללה, ורק אז לצאת לנווט. חסרון משמעותי בשלב זה הוא שאין חווי על התקדמות הטעינה כל עוד המכשיר מחובר. לאחר טעינה מלאה, הסוללה אמורה להספיק ל-4 שעות שימוש. בפועל, זה קרוב יותר ל-3 שעות. לפני הניתוק, מומלץ לבצע eject לכונן הוירטואלי שמתווסף למחשב.&lt;/p&gt;
+&lt;h3&gt;חיפוש כתובת&lt;/h3&gt;
+&lt;p&gt;המסך הראשי של המכשיר פשוט ביותר, וזה בהחלט יתרון. הוא כולל שני כפתורים עיקרים: &amp;quot;לאן?&amp;quot; ו&amp;quot;הצג מפה&amp;quot;. לחיצה על &amp;quot;לאן?&amp;quot; מביאה למסך נוסף שבו יש לבחור את סוג החיפוש: כתובת, נקודות עניין, מועדפים וכו&#39;. אחרי בחירת &amp;quot;כתובת&amp;quot; יש מסך ביינים (1) לבחירה בין הזנה של עיר ואחר-כך רחוב, או ישירות רחוב ואז המכשיר יחפש אותו בכל הארץ. ההקשה די מהירה בסך הכל, כאשר לאחר הקשת שניים או שלושה תוים מופיע מיד מסך ובו מספר אפשרויות המתחילות באותן אותיות. בדוגמה למטה, אחרי הקשת &amp;quot;תל &amp;quot; (2) מופיעים הערים/ישובים: תל אביב, תל יוסף, תל מונד ותל עדשים (3). אחר-כך, יש להזין ולבחור רחוב (6-5-4), מספר בית (7) לבסוף, יש ללחוץ על &amp;quot;לדרך&amp;quot; (8) והנווט מתחיל (9). את כל הרצף ניתן לראות במסכים למטה.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.skitch.com/20100401-rb12pb1jd1528tecs7d7t45s7p.jpg&quot; alt=&quot;חיפוש כתובת&quot;&gt;&lt;/p&gt;
+&lt;p&gt;מספר בעיות שנראות בתצוגה וקשורות כולן בגיור המכשיר מעט מפריעות. זה נכון שניתן להתרגל אליהן די מהר, אבל רצוי שיתוקנו בגרסאות הבאות:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;אחרי הקשת רווח (מסך 2) האות &amp;quot;ת&amp;quot; בורחת קצת ימינה. הקשת תו נוסף מחזירה אותו למקום. זו בעיית RTL קלאסית, שמוכרת בלא מעט תוכנות אחרות.&lt;/li&gt;
+&lt;li&gt;ברשימת הערים (מסך 3), מופיעה הסיומת ISR אחרי כל עיר. עוד יותר בולטת היא הופעת המילה &amp;quot;ישראל&amp;quot; פעמיים במסך 8 (כנראה פעם אחת כסיומת לשם העיר, ובפעם השניה בשם הארץ). קצת מיותר כאשר הנווט הוא בישראל בלבד.&lt;/li&gt;
+&lt;li&gt;המילה &amp;quot;עיר&amp;quot; מתחייסת בעצם גם לישובים קטנים בהרבה. עדיף היה לקרוא לזה &amp;quot;ישוב&amp;quot; (מסך 1)&lt;/li&gt;
+&lt;li&gt;החיפוש עצמו לא מספיק סלחני. אומנם הוא יודע להחליף אות סופית ורגילה, אבל חיפוש רחוב שבו מופיעים ראשי תיבות ללא ראשי התיבות נכשל. גם הוספת יו&amp;quot;ד או ו&amp;quot;ו מיותרים מכשילה את החיפוש (לא מודגם בצילומי המסך).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;נווט&lt;/h3&gt;
+&lt;p&gt;אחרי הגדרת היעד מתבצע חיפוש לווינים (אם אלה לא אותרו עד כה) ואחר-כך חישוב של הנתיב. בדרך-כלל שתי הפעולות מהירות למדי, ואם לא נמצאים בחניון תת-קרקעי ניתן לצאת לדרך תוך שניות ספורות.&lt;/p&gt;
+&lt;p&gt;הנתיב הנבחר בדרך-כלל יעיל ומדוייק, כאשר ישנה העדפה לרחובות וכבישים ראשיים. המפות יחסית מעודכנות ומדויקות, וכוללות בין השאר את כל כביש 431, את החלק הצפוני של כביש 6 ואת אזור התעשיה החדש שבו נמצא סניף איקאה בראשון. מצד שני, על כביש 431 הגשר של מחלף ענבה עדיין &amp;quot;בבניה&amp;quot;, ואילו סניף איקאה עצמו עדיין לא נמצא ברשימת נקודות העניין. עוד אי-דיוקים או חוסר עדכניות שמצאתי הם פניה שמאלה מרחוב ברקוביץ&#39; לשד&#39; שאול המלך בתל-אביב שכבר לא אפשרית, כיכר במפגש כבישים 4 ו-6531 שהפכה לרמזור בעקבות הרחבת הכביש, ומיקום לא מדויק של הנתיבים בצומת התשבי – מה שגרם להודעת &amp;quot;מחשב נתיב מחדש&amp;quot;, למרות שהייתי על הנתיב. שגיאה אחרת במפה לא אפשרה פניה שמאלה מרחוב דובנוב (בנסיעה דרומה) לרח&#39; קפלן. במקום זאת הופנתי למעקף דרך הרחובות לסקוב, הפטמן וליאונרדו. גרסת המפות המותקנת היא 2010.11&lt;/p&gt;
+&lt;p&gt;בזמן הנסיעה מוצגת מפת תלת מימד (אך ללא מבנים ב 3D). על המפה מסומן הנתיב הנוכחי בצבע סגול (1) ועליו חץ לבן לסימון הפניות (2). עוד מוצגים: זמן הגעה משוער (3 – בצילום הוחלף במרחק ליעד), מהירות נוכחית (4), מהירות מקסימלית (בחלק מהכבישים), מרחק עד הפניה הבאה (5), שם הרחוב שאליו פונים (6) ובחלק מהצמתים גם נתיב מומלץ לפניה (7). אם חלוקת הנתיבים לא ידועה, יופיע חץ כללי לכוון. ניתן &lt;a href=&quot;http://yehudab.com/blog/2010/04/garmin-nuvi-speedtraps/&quot;&gt;לטעון נתוני מכמונות מהירות&lt;/a&gt;, אבל אין דווחים על עומסי תנועה.&lt;br&gt;
+&lt;img src=&quot;http://img.skitch.com/20100401-gnjcpdh3khhs65uj4pdtkrxanx.png&quot; alt=&quot;נווט&quot;&gt;&lt;/p&gt;
+&lt;p&gt;לחיצה על אזורים 3, 4, 5 תביא לשינוי התצוגה או תאפשר הגדרות נוספות, כפי שנראה בצילומי המסך למטה.&lt;br&gt;
+&lt;img src=&quot;http://img.skitch.com/20100402-fhemp5i8a8mb9juw2kc3tr3d12.jpg&quot; alt=&quot;מסכי הרחבה ואפשרויות בזמן נווט&quot;&gt;&lt;/p&gt;
+&lt;h3&gt;הנחיה קולית&lt;/h3&gt;
+&lt;p&gt;למרות התצוגה הנאה ומגוון האפשרויות להרחבת מידע, בזמן הנהיגה מה שבאמת קובע את הצלחת הנווט הוא ההנחיות הקוליות. אלה מושמעות פעם ראשונה כמה מאות מטרים לפני הפניה, בנוסח: &amp;quot;עוד 400 מטר פנה שמאלה&amp;quot;, וכן שוב כמה עשרות מטרים לפני הפניה: &amp;quot;פנה שמאלה&amp;quot;. אם יש רצף של שתי פניות בזו אחר זו, יופיעו שתיהן גם בהנחיה המוקדמת וגם לפני הפניות עצמן. בדוגמה דומה, ישמע הרצף הבא: &amp;quot;עוד 400 מטר פנה ימינה ואז פנה שמאלה&amp;quot; … &amp;quot;פנה ימינה ואז פנה שמאלה&amp;quot; … &amp;quot;פנה שמאלה&amp;quot;. לפני כניסה למחלפים, ההנחיה היא בדרך כלל לפי נתיב: &amp;quot;השאר בנתיב הימני&amp;quot;, &amp;quot;המשך בנתיב הנסיעה&amp;quot;, או &amp;quot;השאר בנתיב השמאלי&amp;quot;. לפני כיכר, ההנחיה היא לפי מספר היציאה מהכיכר, כך שכדי לחצות את הכיכר ולהמשיך ישר נשמע: &amp;quot;בכיכר צא ביציאה השניה&amp;quot;. ההנחיות הן בלשון זכר בלבד, ולא ניתן לבחור מגוון קולות. מה שכן, גרמין מספקת תוכנה למחשב האישי שאיתה ניתן להקליט הנחיות בקולות שלכם או של בני המשפחה. ניתן לנצל זאת כמובן להקלטה בלשון נקבה (פני ימינה).&lt;/p&gt;
+&lt;p&gt;חסרון משמעותי של הלוקליזציה בסעיף זה הוא חוסר התמיכה בהקראת שמות רחובות שאליהן תתבצע הפניה. זה בעיקר רלוונטי בעיר במקומות בהן יש שתי פניות לאותו כוון (&amp;quot;חצי ימינה&amp;quot; ו&amp;quot;ימינה&amp;quot;), או במחלפים בהם יש מספר יציאות, וההנחיה &amp;quot;השאר בנתיב הימני&amp;quot; לא מספיקה. מעבר להקראה באנגלית ממש פותח עיניים (או יותר נכון אוזניים) בעניין הזה, אם כי לא מעשי לנסיעה יום-יומית – נסו לחפש את &amp;quot;דרק קנקין&amp;quot; בחיפה.&lt;/p&gt;
+&lt;p&gt;ההנחיות נשמעות בדרך-כלל בצורה ברורה, גם כאשר עוצמת הרמקול היא על 50%. תקלה קצת מרגיזה היא מין &amp;quot;גמגום&amp;quot; אלקטרוני שמופיע מדי פעם – כאילו עשירית שניה של סאונד חוזרת פעמיים. לא הצלחתי להבין אם זו בעיה בהקלטה או בשידור. אם משנים את השפה לאנגלית הגמגום לא מופיע. מצד שני, גם בעברית לא תמיד מופיע אותו גמגום באותו משפט.&lt;/p&gt;
+&lt;h3&gt;סיכום ביינים&lt;/h3&gt;
+&lt;p&gt;כאמור, זהו חלק ראשון של הסקירה. אני מקווה להמשיך את הסקירה ולפרסם את החלק השני בשבוע הקרוב. אם יש דרישות לבדיקות של פונקציות נוספות במכשיר אשמח להוסיף אותן לחלק השני.&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>Garmin nüvi – מכמונות מהירות</title>
+      <link href="https://yehudab.com/blog/2010/04/garmin-nuvi-speedtraps/"/>
+      <updated>2010-04-05T16:09:35+00:00</updated>
+      <id>https://yehudab.com/blog/2010/04/garmin-nuvi-speedtraps/</id>
+      <content type="html">&lt;p&gt;הניבי מגיע ללא מידע על מכמונות מהירות בישראל. עם זאת, יש תמיכה בקבלת התרעה קולית וויזואלית כאשר המכונית עוברת במהירות מסויימת ומעלה ליד נקודת עניין (POI) מסוג מסויים. רשמית זה מיועד לקבלת התרעה לפני שמגיעים לאזור שבו כדאי להוריד מהירות כמו ליד בית-ספר או בור בכביש, אבל בפועל כולם יודעים מה המטרה.&lt;br&gt;
+כדי לנצל את היכולת הזאת, צריך להכין או להוריד קובץ מכמונות מהירות מעודכן בפורמט GPX או CSV, ולהעלות אותו למכשיר באמצעות תוכנת &lt;a href=&quot;http://www8.garmin.com/products/poiloader/&quot;&gt;POI Loader&lt;/a&gt; המסופקת חינם ע&amp;quot;י גרמין. שוב, יש לציין לחיוב, ישנה גרסה למק או לחלונות.&lt;/p&gt;
+&lt;p&gt;קובץ המכמונות שהורדתי התקבל דרך קבוצת הדיון &lt;a href=&quot;http://groups.google.co.il/group/1go_speedcamupdates&quot;&gt;1go – התראה על מכמונות מהירות בישראל באמצעות GPS&lt;/a&gt; בגוגל. הקבוצה סגורה, וכדי להוריד את הקבצים צריך להגיש בקשה, כפי שמפורט &lt;a href=&quot;http://topspeed.co.il/forum/forum_posts.asp?TID=32967&amp;amp;PN=1&amp;amp;TPN=1&quot;&gt;בפורום TopSpeed&lt;/a&gt;.&lt;br&gt;
+הקובץ עצמו מפורסם בפורמט תואם iGo (נכון לפרסום הפוסט, הקובץ האחרון הוא: 1go_iGO_091206.zip), ולפני ההעלאה לגרמין צריך לבצע המרה. ההמרה נעשית ע&amp;quot;י קובץ Excel שגם אותו ניתן להוריד דרך הקבוצה.&lt;br&gt;
+&lt;img src=&quot;http://img.skitch.com/20100405-eph2hc5eudu4m4erbcqupt3676.png&quot; alt=&quot;קבצים להורדה&quot;&gt;&lt;br&gt;
+אחרי שנפתח את ה-zip-ים, נזדקק לשני קבצים מתוכם: האחד נקרא SpeedcamUpdates.spud והשני SpeedcamUpdates 0.99-symbian.xls . צריך לפתוח את קובץ ה Excel וללחוץ על כפתור ה-Import. אחר-כך, יש לבחור בדיאלוג את קובץ ה spud , ללחוץ Open ולוודא שהטבלה מתמלאת. השלב הבא הוא מעבר ללשונית שנקראת symbian (מסומנת בצהוב). בלשונית הזאת נבחר מלבן המכיל את 3 העמודות הראשונות של כל השורות בהן מופיע מידע (כ 400 שורות), כולל שורת הכותרת.&lt;br&gt;
+&lt;img src=&quot;http://img.skitch.com/20100405-8eddbrxd8t3xdhj7cq1u4byg7g.png&quot; alt=&quot;בחירת המלבן&quot;&gt;&lt;br&gt;
+את המלבן הזה נעתיק ונדביק בלשונית חדשה. את תוכן הלשונית החדשה שומרים בפורמט csv. חשוב מאוד: בשם הקובץ הנשמר יש לדאוג לסיומת speed_NN.csv (לדוגמה garmin_speed_60.csv) כדי שהמכשיר ידע שאלה נקודות של מכמונות מהירות. המספר 60 הוא ברירת המחדל להתראת מהירות (בקמ&amp;quot;ש), למרות שבדרך-כלל אין צורך בו משום שהמידע עבור כל מכמונת מופיע בקובץ עצמו. &lt;strong&gt;חשוב מאוד: אין לפרסם את הקובץ המומר בכל צורה שהיא&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;ישנן מספר בעיות ידועות בהפעלת ה Excel:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;הרצת ההמרה נעשית ע&amp;quot;י הפעלת מקרו. יש לאפשר ל Excel להריץ אותם (נקרא לפעמים Active Content)&lt;/li&gt;
+&lt;li&gt;למשתמשי מק: לא ניתן להשתמש ב OpenOffice או NeoOffice, מכוון שהקובץ מכיל קוד ב VB שאינו נתמך ע&amp;quot;י אופן אופיס. לא בדקתי על Office של מיקרוסופט למק.&lt;/li&gt;
+&lt;li&gt;בפתיחת הקובץ על חלונות, תתכן הודעת שגיאה על ספריה חסרה. בחלון שנפתח צריך לבטל את&lt;br&gt;
+הסימון ליד השורה שמתחילה ב MISSING, ואז ללחוץ OK.&lt;br&gt;
+&lt;img src=&quot;http://img.skitch.com/20100405-1rp6891hd9p6pdrbwm8ey6g5jh.png&quot; alt=&quot;תקלת מקרו&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;השלב האחרון הוא העלאה של הקובץ למכשיר. לשם כך, נחבר את הניבי בכבל usb למחשב. אחר-כך, יש להריץ את תוכנת ה POI loader, ולוודא שהיא זיהתה את המכשיר. בהמשך יש לבחור את ברירות המחדל, פרט למסך המוצג למטה בו יש לבחור את הפולדר בו שמור ה csv והמידות אותן יש לשנות לקמ&amp;quot;ש/מטרים.&lt;br&gt;
+&lt;img src=&quot;http://img.skitch.com/20100405-ee6mkfgrpqbxtkhrbywqup2ra3.jpg&quot; alt=&quot;POI loader&quot;&gt;&lt;/p&gt;
+&lt;p&gt;אחרי העלאת הנקודות למכשיר, אפשר להתחיל בנווט כרגיל. בכל פעם שמתקרבים למכמונת, ישמעו שני צפצופים רצופים (בלי קשר למהירות), תוצג הודעה עם מהירות הסף של המכמונת, ותראה נקודה ירוקה על הכביש לסימון המיקום. אם עוברים על מהירות הסף (שהיא בדרך-כלל 10 קמ&amp;quot;ש מעל המהירות המותרת), צבע ההודעה הופך לאדום, ונשמעים צפצופים רצופים כל עוד המהירות גבוהה מהמוגדר.&lt;br&gt;
+&lt;img src=&quot;http://img.skitch.com/20100405-wfxdr21jef4i3jxcefr66i855.png&quot; alt=&quot;מכמונת קרובה&quot;&gt;&lt;/p&gt;
+&lt;p&gt;חסרון מסויים של התהליך המתואר כאן, הוא שהמידע על כוון המכמונת הולך לאיבוד. זה גורם לכך שמקבלים התראה גם בדרך הלוך וגם בדרך חזור, ולעיתים רק כשחוצים את כביש שבו יש מכמונת קרובה.&lt;/p&gt;
+&lt;p&gt;סעו בזהירות.&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>ווידג&#39;ט מזג האויר בישראל</title>
+      <link href="https://yehudab.com/blog/2010/06/israel-weather-widge/"/>
+      <updated>2010-06-29T17:43:47+00:00</updated>
+      <id>https://yehudab.com/blog/2010/06/israel-weather-widge/</id>
+      <content type="html">&lt;p&gt;אחד הפרויקטים הראשונים שעשיתי למק (כן, עוד לפני הסקריפטים) היה ווידג&#39;טים לדשבורד. אחד מהם היה ווידג&#39;ט מזג האויר בישראל והשני ווידג&#39;ט רכבת ישראל (שלא פועל כרגע, ואולי עוד אחדש אותו בהזדמנות). הווידג&#39;טים שכנו באתר &lt;a href=&quot;http://dashboardwidgets.com/&quot;&gt;dashboardwidgets&lt;/a&gt; שלאחרונה הפסיק לפעול. לטובת מי שמחפש את ווידג&#39;ט מזג האויר העברתי את דף ההורדה לבלוג הזה, וניתן למצוא אותו כעת &lt;a href=&quot;http://yehudab.com/widgets/WeatherIL-1d7.zip&quot;&gt;כאן&lt;/a&gt;. בהזדמנות זו בצעתי גם עדכון קל לרשימת האזורים המוצגים (תודה לרונן על דווח השגיאה).&lt;/p&gt;
+&lt;p&gt;למי שלא מכיר את הווידג&#39;ט ורוצה לדעת למה להשתמש בו ולא בווידג&#39;ט של אפל, הנה מספר סיבות:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;הוא דובר עברית&lt;/li&gt;
+&lt;li&gt;יש רשימה קבועה של אזורי מזג אויר, ואין צורך לחפש בטקסט חופשי&lt;/li&gt;
+&lt;li&gt;התחזית לקוחה מאחד מאתרי מזג האוויר המובילים בישראלים: &lt;a href=&quot;http://www.israelweather.co.il/&quot;&gt;IsraelWeather.co.il&lt;/a&gt; ובדרך כלל התחזית שלו מדויקת בהרבה מהתחזית בווידג&#39;ט הסטנדרטי&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;http://yehudab.com/widgets/WeatherIL1d6.zip&quot;&gt;&lt;img src=&quot;http://img.skitch.com/20100629-br3mghdmwwpwxu2rjbxuik5pfq.png&quot; alt=&quot;ווידג&#39;ט מזג האויר בישראל&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>ווידג&#39;ט רכבת ישראל</title>
+      <link href="https://yehudab.com/blog/2010/06/israel-rail-widget/"/>
+      <updated>2010-06-30T20:46:17+00:00</updated>
+      <id>https://yehudab.com/blog/2010/06/israel-rail-widget/</id>
+      <content type="html">&lt;p&gt;אחרי חידוש ושיכון מחדש של ווידג&#39;ט מזג האויר, הגיע תורו של ווידג&#39;ט רכבת ישראל. הגרסה הראשונה של הווידג&#39;ט נכתבה כך שתמשוך נתונים מאתר הרכבת הישן, שהיה בלתי שמיש מחוץ לאקספלורר. לאחר שדרוג האתר, לא היה צורך בווידג&#39;ט לטובת תאימות, ולכן דחיתי את העדכון שלו. הסתבר שההתאמה &lt;a href=&quot;http://www.rail.co.il/&quot;&gt;לאתר הרכבת החדש&lt;/a&gt; לא הייתה מסובכת במיוחד, והווידג&#39;ט כבר מוכן &lt;a href=&quot;http://yehudab.com/widgets/IsraelRailways-1d7.zip&quot;&gt;להורדה מכאן&lt;/a&gt;. גם כאן, הווידג&#39;ט מותאם למשתמשי מק בלבד (טיגר ומעלה). יתכן שבעתיד אכין גם חלופות לחלונות וללינוקס.&lt;/p&gt;
+&lt;p&gt;התפעול של הווידג&#39;ט קצת מסובך יותר מזה של מזג האויר, לכן צרפתי צילומי מסך עם הסברים קצרים.&lt;/p&gt;
+&lt;p&gt;במצב רגיל מוצגות תחנת המוצא, תחנת היעד, וזמני שלוש הרכבות הקרובות. הזמנים מתעדכנים אוטומטית, כך שבמצב המצולם למטה הרכבת של 7:53 תזוז ימינה בשעה 7:32 ותופיע בתור הרכבת הבאה.&lt;br&gt;
+&lt;img src=&quot;http://img.skitch.com/20100630-xcij8gkpgbtcucnsqbp53d64s9.png&quot; alt=&quot;מצב רגיל&quot;&gt;&lt;/p&gt;
+&lt;p&gt;כדי לשנות את מצבי התצוגה או לבחור תחנות אחרות, יש להעביר את הסמן מעל הווידג&#39;ט ואז מופיע כפתור בצורת מפתח שבדי בפינת הימנית התחתונה. לחיצה עליו תפתח את סרגל הכלים, כפי שנראה למטה:&lt;br&gt;
+&lt;img src=&quot;http://img.skitch.com/20100630-mn59w61k3f8auad66x3m8guxxb.png&quot; alt=&quot;כפתור פתיחת סרגל הכלים&quot;&gt;&lt;/p&gt;
+&lt;p&gt;אלו הכפתורים הזמינים במצב סרגל כלים פתוח:&lt;br&gt;
+&lt;img src=&quot;http://img.skitch.com/20100630-phc113at991ke4agsx4wtjsfug.png&quot; alt=&quot;סרגל כלים פתוח&quot;&gt;&lt;/p&gt;
+&lt;p&gt;לבסוף, לאחר לחיצה על כפתור בחירת התחנות, יופיע הצד האחורי של הווידג&#39;ט:&lt;br&gt;
+&lt;img src=&quot;http://img.skitch.com/20100630-xichmaw5m7kmgp33yawmgu6biw.png&quot; alt=&quot;הצד האחורי והחלפת תחנות&quot;&gt;&lt;/p&gt;
+&lt;p&gt;לאחר החלפת תחנה או בחירת יום חדש, מתבצעת התקשרות לאתר הרכבת שלוקחת מספר שניות. יש להתאזר בסבלות עד לקבלת זמני הרכבות המבוקשות.&lt;/p&gt;
+&lt;p&gt;הערה למי כבר מותקן אצלו הווידג&#39;ט הישן: לצערי הגדרות התחנות הישנות לא תואמות לאתר החדש, ולכן תצטרכו לבחור את התחנות מחדש בצד האחורי של הווידג&#39;ט לאחר ההתקנה.&lt;/p&gt;
+&lt;p&gt;בהזדמנות זו, תודה &lt;a href=&quot;http://hafontia.com/&quot;&gt;לבן נתן&lt;/a&gt; מעצב הפונט, ול Gilles Landry מעצב האיקונים.&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>עדכון לווידג&#39;ט רכבת ישראל</title>
+      <link href="https://yehudab.com/blog/2010/07/israel-rail-1-6/"/>
+      <updated>2010-07-06T02:33:44+00:00</updated>
+      <id>https://yehudab.com/blog/2010/07/israel-rail-1-6/</id>
+      <content type="html">&lt;p&gt;עדכון קל &lt;a href=&quot;http://yehudab.com/widgets/IsraelRailways-1d7.zip&quot;&gt;לווידג&#39;ט רכבת ישראל&lt;/a&gt;, שהפסיק להציג את זמני הרכבות בגלל תקלה בהעברת הפרמטרים לאתר הרכבת.&lt;br&gt;
+בהזדמנות זו, הוספתי הצגה של מצב הבקשה לשרת הרכבת, כך שניתן יהיה להבדיל בין מצב שבו הבקשה נשלחה ולא התקבלה תשובה (connecting), מצב שגיאה (bad response) ומצב שבו אין יותר רכבות לאותו היום (–:–).&lt;br&gt;
+&lt;img src=&quot;http://img.skitch.com/20100706-di196macmjuh768f6ca1k2u374.png&quot; alt=&quot;מתחבר&quot;&gt;&lt;br&gt;
+תודה ליובל שדווח על התקלה.&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>עדכון לווידג&#39;ט מזג האויר</title>
+      <link href="https://yehudab.com/blog/2010/07/weather-widget-1/"/>
+      <updated>2010-07-29T18:56:39+00:00</updated>
+      <id>https://yehudab.com/blog/2010/07/weather-widget-1/</id>
+      <content type="html">&lt;p&gt;בעקבות הוספת נתוני עומס החום החזויים באתר &lt;a href=&quot;http://www.israelweather.co.il/&quot;&gt;IsraelWeather&lt;/a&gt; נשבר ווידג&#39;ט מזג האויר. משתמשי מק מוזמנים לשדרג לגרסה 1.7 שמתקנת את התקלה, וכן מציגה את עומס החום החזוי באמצעות tooltip. &lt;a href=&quot;http://yehudab.com/widgets/WeatherIL-1d7.zip&quot;&gt;שדרגו מכאן&lt;/a&gt;.&lt;br&gt;
+&lt;img src=&quot;http://img.skitch.com/20100729-q22ngwrgswp53bcgnscrc8hmsd.png&quot; alt=&quot;יהיה חם ומגניב&quot;&gt;&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>הו-הו-הו-הו, איך שגלגל מתהפך לו&amp;#8230;</title>
+      <link href="https://yehudab.com/blog/2010/08/windows-no-soup-for-you/"/>
+      <updated>2010-08-24T18:59:11+00:00</updated>
+      <id>https://yehudab.com/blog/2010/08/windows-no-soup-for-you/</id>
+      <content type="html">&lt;p&gt;למי שלא זוכר, לפני כשנתיים יצאה גרסה 3.0 של פיירפוקס. הגרסה כללה שינוי משמעותי במסגרת הדפדפן (מה שקרוי כרום – בלי קשר לדפדן של גוגל), ודרשה התאמות רבות לטובת תמיכה בממשק העברי. ההתאמות האלה צריכות להעשות בנפרד לגרסאות מערכת ההפעלה השונות (חלונות, מק ולינקוס), ולכן בזמנו כאשר יצאה גרסת הבטא העברית הראשונה של פיירפוקס 3, &lt;a href=&quot;http://mozilla.org.il/news/2008/03/13/bug-hunting-season/&quot;&gt;לא יצאה גרסה למק&lt;/a&gt;.&lt;br&gt;
+כך נראה אז סרגל הניווט בגרסה העברית למק:&lt;br&gt;
+&lt;img src=&quot;http://img.skitch.com/20100824-k4pk7tu6cw528t1ghrd8pk3cr2.png&quot; alt=&quot;סרגל נווט פיירפוקס 3.0 בעברית למק&quot;&gt;&lt;/p&gt;
+&lt;p&gt;מאז, זרמו הרבה מים בירקון, גרסה 3.0 &lt;a href=&quot;http://mozilla.org.il/news/2008/04/24/firefox3-osx-theme/&quot;&gt;תוקנה לתמיכה בעברית&lt;/a&gt; (בין השאר בזכות פצ&#39;ים ששלחתי) והיום יצאה גרסת &lt;a href=&quot;http://www.mozilla.com/en-US/firefox/all-beta.html&quot;&gt;בטא 4 של פיירפוקס 4&lt;/a&gt; (הראשונה עם תמיכה בממשק עברי). וראו זה פלא, מי לא מופיע בגרסאות להורדה בעברית? נכון, חלונות. אז לא שיש לי משהו נגד משתמשי חלונות (some of my best friends…), ואני בטוח שהבטא הבאה תעבוד כמו שצריך על חלונות ובעברית, אבל תרשו לי בכל זאת להגניב חיוך קטן.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.skitch.com/20100824-8abd6xm3ptrs5mgcd6q438g5ex.png&quot; alt=&quot;למי אין גרסה?&quot;&gt;&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>כרום ואופרה זהירות: פיירפוקס 4 מאחוריכם! (ולפעמים גם משיג)</title>
+      <link href="https://yehudab.com/blog/2010/08/firefox4-vs-chrome-opera/"/>
+      <updated>2010-08-30T05:09:30+00:00</updated>
+      <id>https://yehudab.com/blog/2010/08/firefox4-vs-chrome-opera/</id>
+      <content type="html">&lt;p&gt;&lt;a href=&quot;http://www.holesinthenet.co.il/archives/3509&quot;&gt;רבים&lt;/a&gt; ו&lt;a href=&quot;http://blog.k1789.org/?p=1272&quot;&gt;טובים&lt;/a&gt; &lt;a href=&quot;http://idanm.wordpress.com/2010/08/26/%D7%9E%D7%95%D7%96%D7%99%D7%9C%D7%94-%D7%9E%D7%90%D7%91%D7%93%D7%AA-%D7%90%D7%AA-%D7%9B%D7%95%D7%97%D7%94-%D7%91%D7%A9%D7%95%D7%A7-%D7%94%D7%93%D7%A4%D7%93%D7%A4%D7%A0%D7%99%D7%9D/&quot;&gt;נוטשים&lt;/a&gt; לאחרונה את פיירפוקס לטובת כרום או אופרה. כמעט כולם מציגים את עניין המהירות (במיוחד על לינוקס) כסיבה הראשית לנטישה. מוזילה שמה את שיפור המהירות של פיירפוקס כאחד היעדים העיקריים של גרסה 4, &lt;a href=&quot;http://mozilla.org.il/news/2010/08/24/firefox4b4/&quot;&gt;והשחרור של הבטא הרביעית&lt;/a&gt; של פיירפוקס 4 הוא סיבה טובה לבדוק האם ההבטחה מתממשת.&lt;/p&gt;
+&lt;p&gt;בתור התחלה, חזרתי על מבחן ה SunSpider &lt;a href=&quot;http://www.whatsup.org.il/modules.php?op=modload&amp;amp;name=News&amp;amp;file=article&amp;amp;sid=6707&quot;&gt;שביצע CHAOS6&lt;/a&gt;, כאשר המטרה היא לבחון את פיירפוקס מול המתחרים העיקריים (כרום ואופרה), אבל גם להשוות את גרסת החלונות מול גירסת לינוקס. הגרסאות שנבדקו הן: פיירפוקס 3.6.8, פיירפוקס 4.0b4, כרום 5 (כרומיום בלינוקס), ואופרה 10.61. מערכות ההפעלה הן XP SP3 ו – Xubuntu 10.04. התוצאות הן די טובות מבחינת פיירפוקס, כאשר שיפור הביצועים הוא קצת פחות מפי 2 על חלונות ופי 2.3 על לינוקס. ולא פחות חשוב: הפערים בין גרסאות הלינוקס וחלונות של פיירפוקס 4 מבחינת ביצועים צומצמו בהרבה, והם אפילו טובים יותר מהפערים בין גרסאות כרום על פלטפורמות אלה. במבחן זה פיירפוקס עדיין לא שובר את השוק, אבל בהחלט חזר להתחרות בליגה של הגדולים. התוצאות המלאות בגרף המצורף (ערכים קטנים יותר טובים יותר)&lt;br&gt;
+&lt;img src=&quot;http://img.skitch.com/20100830-rmk9gfqyhqaua3fr6bwi621r4y.png&quot; alt=&quot;SunSpider firefox4 firfox3.6 chrome opera&quot;&gt;&lt;/p&gt;
+&lt;p&gt;בשלב השני הרצתי השוואה שונה לגמרי. כאן לא מדובר על מבחן סינטטי, אלא &lt;a href=&quot;http://yehudab.com/apps/mandelbrot2&quot;&gt;דף שלם&lt;/a&gt;, שכל מטרתו להציג אזורים יפים של &lt;a href=&quot;http://he.wikipedia.org/wiki/%D7%A7%D7%91%D7%95%D7%A6%D7%AA_%D7%9E%D7%A0%D7%93%D7%9C%D7%91%D7%A8%D7%95%D7%98&quot;&gt;קבוצת מנדלברוט&lt;/a&gt;. את הדף המקורי כתב &lt;a href=&quot;http://www.atopon.org/&quot;&gt;Kostas Symeonidis&lt;/a&gt; ואני שכללתי אותו כך שיכלול אופטימזציות נוספות מצד אחד, אבל גם הגדלה של רוחב אזור הציור, ו&amp;quot;העמקה&amp;quot; של החישוב (הגדלה של מספר האיטרציות המקסימלי לפני הכרזה על צבע שחור). בנוסף, הכנסתי אפשרות לשימוש ב &lt;a href=&quot;https://developer.mozilla.org/en/Using_web_workers&quot;&gt;Web workers&lt;/a&gt;, שמאפשרת ניצול טוב יותר של מחשבים עם מספר מעבדים (או ליבות) לטובת החישוב הכבד, וגם מונעת הודעות מעצבנות על סקריפטים תקועים. לטובת המבחן נבחר האזור המוצג למטה (&lt;a href=&quot;http://yehudab.com/apps/mandelbrot2/#640,360,0.3178943432911429,0.31789886999774175,-0.03259077318982726,-0.03258818319755894&quot;&gt;וגם להרצה אצלכם&lt;/a&gt;), המתאפיין בכך שיש לו אזורים שחורים רבים (יותר חישובים), וגם האזורים הצבעוניים שלו &amp;quot;עמוקים&amp;quot; למדי. תודה &lt;a href=&quot;http://www.smontagu.org/blog/&quot;&gt;לסיימון&lt;/a&gt; על הקורדינטות.&lt;br&gt;
+&lt;img src=&quot;http://img.skitch.com/20100830-j25y42gcwp16k366nmni19eudx.png&quot; alt=&quot;Mandelbrot speed test&quot;&gt;&lt;/p&gt;
+&lt;p&gt;את המבחן הרצתי רק על סביבת חלונות (אין לי מחשב לינוקס מרובה ליבות), והתוצאות מפתיעות ביותר, כאשר כרום נמצא הרחק מאחור (פער של פי 8 על מעבד אחד ופי 5 על שניים) ואופרה אולי נותן פייט יפה על מעבד אחד מול פיירפוקס 3.6, אבל נכשל לחלוטין במבחן ריבוי המעבדים ובוודאי מול פיירפוקס 4.0.&lt;br&gt;
+&lt;img src=&quot;http://img.skitch.com/20100830-gaerwckwp6p36u1j6cik7h2gu3.png&quot; alt=&quot;Floating point speed test firefox4 firefox 3.6 chrome opera&quot;&gt;&lt;/p&gt;
+&lt;p&gt;אז נכון, זה רק מבחן אחד, אבל איזה יופי של מבחן…&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>הבלוג שודרג לגרסה 3.0.1</title>
+      <link href="https://yehudab.com/blog/2010/09/blog-upgraded-to-3-0-1/"/>
+      <updated>2010-09-03T13:34:41+00:00</updated>
+      <id>https://yehudab.com/blog/2010/09/blog-upgraded-to-3-0-1/</id>
+      <content type="html">&lt;p&gt;מי שנתקל בבעיות מוזמן להגיב (מצד שני, אם הבעיה היא במנגנון התגובות, אז אכלתי אותה…)&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>עדכון אוטומטי לשעון קיץ/חורף בוורדפרס</title>
+      <link href="https://yehudab.com/blog/2010/09/wordpress-auto-dst/"/>
+      <updated>2010-09-12T04:20:01+00:00</updated>
+      <id>https://yehudab.com/blog/2010/09/wordpress-auto-dst/</id>
+      <content type="html">&lt;p&gt;גם אני הלכתי לישון לפי שעון חורף מתוך הנחה שיש לי שעה נוספת וקמתי לפי שעון קיץ כי התחיל אור בחוץ והגוף עדיין רגיל. כדי להעביר את הזמן עברתי בין שעוני הבית (14+ למי שמתעניין) כדי לראות שלא שכחתי אף אחד, וכדי לראות שכל מי שאמור להתעדכן אוטומטית אכן עשה את זה. כחלק מסבב השעונים ניגשתי גם לעדכן את אזור הזמן של הבלוג הזה. בהתחלתי החלפתי את UTC+3 ב UTC+2, אבל אז שמתי לב שההודעה המצחיקה (Unfortunately, you have to manually update this for Daylight Savings Time. Lame, we know, but will be fixed in the future) שהופיעה בעבר מתחת לשדה אזור הזמן נעלמה. חיפוש חוזר במעלה הרשימה גילה שניתן לבחור את ירושלים או תל-אביב ולקבל (אחרי שמירה) את ההודעה הזאת במקומה:&lt;br&gt;
+&lt;img src=&quot;http://img.skitch.com/20100912-ds5mxuxte2dtru41dm83irp9qx.png&quot; alt=&quot;המאה ה21 הגיעה לוורפקס&quot;&gt;&lt;br&gt;
+חיפוש קצר העלה את &lt;a href=&quot;http://wordpress.org/support/topic/wp-28-no-daylight-saving-time-setting&quot;&gt;הדיון הזה&lt;/a&gt; שלפיו גם גרסה 2.8 (שבה הייתי קודם) אמורה לתמוך בעדכון אוטומטי ולא ברור לי כ&amp;quot;כ למה הפיצ&#39;ר הזה לא עבד אצלי קודם, אבל העיקר שמעכשיו יש לי פחות שעון לעדכן.&lt;br&gt;
+אה… ואף מילה על חרדים, יום כיפור ואם צריך או לא לאחר את המעבר לשעון חורף.&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>&amp;quot;ארכיון הבלוג&amp;quot; זה לחלשים</title>
+      <link href="https://yehudab.com/blog/2010/12/no-more-blog-archive/"/>
+      <updated>2010-12-21T05:11:14+00:00</updated>
+      <id>https://yehudab.com/blog/2010/12/no-more-blog-archive/</id>
+      <content type="html">&lt;p&gt;בעקבות &lt;a href=&quot;http://daringfireball.net/2010/12/title_junk&quot;&gt;גרובר&lt;/a&gt; החלטתי להיפטר מהתוספת &amp;quot;ארכיון הבלוג&amp;quot; (שאצלי עוד הופיעה באנגלית) מכל דפי הבלוג, כולל: פוסטים, קטגוריות, ארכיון לפי חודשים ודף ה&amp;quot;אודות&amp;quot;. הרי כל מה שקוראים כאן הוא ממילא מארכיון (כן, אפילו הפוסט הזה שהוא חם מהתנור עכשיו), אז מה הטעם?&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>משתלם להיות בטא טסטר של פיירפוקס 4</title>
+      <link href="https://yehudab.com/blog/2011/01/ff4-beta-shirt/"/>
+      <updated>2011-01-07T08:30:09+00:00</updated>
+      <id>https://yehudab.com/blog/2011/01/ff4-beta-shirt/</id>
+      <content type="html">&lt;p&gt;הנה מה שהגיע אלי במתנה היום בדואר:&lt;br&gt;
+&lt;img src=&quot;https://img.skitch.com/20110107-mgi1q77x1bwhy978st7tkgtr6f.jpg&quot; alt=&quot;FF4 beta tester shirt&quot;&gt;&lt;/p&gt;
+&lt;p&gt;וזו הכתובת על הצד האחורי:&lt;br&gt;
+&lt;img src=&quot;https://img.skitch.com/20110107-echh8529fb1gebqukq73w5wqji.jpg&quot; alt=&quot;FF4 beta tester shirt back&quot;&gt;&lt;/p&gt;
+&lt;p&gt;בהחלט עוד לא מאוחר להוריד את הבטא האחרונה (נכון לעכשיו היא השמינית במספר), ומי שמוריד &lt;a href=&quot;http://firefoxlive.mozilla.org/&quot;&gt;מהקישור הזה&lt;/a&gt; גם עוזר לתרום משחקים לשני גורי פיירפוקס חמודים שגדלים בגן החיות ב Knoxville, Tennessee.&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>עדכון לווידג&#39;ט מזג האויר</title>
+      <link href="https://yehudab.com/blog/2011/01/weather-1-8/"/>
+      <updated>2011-01-07T17:04:19+00:00</updated>
+      <id>https://yehudab.com/blog/2011/01/weather-1-8/</id>
+      <content type="html">&lt;p&gt;בעקבות הוספת נתוני הלחות היחסית באתר &lt;a href=&quot;http://www.israelweather.co.il/&quot;&gt;IsraelWeather&lt;/a&gt; נשבר ווידג&#39;ט מזג האויר. משתמשי מק מוזמנים לשדרג לגרסה 1.8 שמתקנת את התקלה, וכן מציגה את הלחות היחסית באמצעות tooltip. &lt;a href=&quot;http://yehudab.com/widgets/WeatherIL-1d8.zip&quot;&gt;שדרגו מכאן&lt;/a&gt;.&lt;br&gt;
+&lt;img src=&quot;https://img.skitch.com/20110107-k7w2wjgcbfssda6i2ffifjdfcr.png&quot; alt=&quot;יהיה קר ורטוב&quot;&gt;&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>עדכון לווידג&#39;ט מזג האוויר</title>
+      <link href="https://yehudab.com/blog/2011/01/7dweathear/"/>
+      <updated>2011-01-27T21:19:57+00:00</updated>
+      <id>https://yehudab.com/blog/2011/01/7dweathear/</id>
+      <content type="html">&lt;p&gt;עוד עדכון לווידג&#39;ט מזג האויר. הפעם, בנוסף להתאמת הווידג&#39;ט בגלל השינויים באתר &lt;a href=&quot;http://www.israelweather.co.il/&quot;&gt;Israel Weather&lt;/a&gt;, גם תוספת של יומיים לתחזית. &lt;a href=&quot;http://yehudab.com/widgets/WeatherIL-2d0.zip&quot;&gt;ההורדה מכאן&lt;/a&gt;.&lt;br&gt;
+&lt;img src=&quot;https://img.skitch.com/20110127-kem3nbpb3xbe57miewf2kk9s7k.png&quot; alt=&quot;עוד שבוע שלג בירושלים&quot;&gt;&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>סתם יום חול, 6 באוקטובר 2011</title>
+      <link href="https://yehudab.com/blog/2011/10/thank-you-steve/"/>
+      <updated>2011-10-07T08:42:07+00:00</updated>
+      <id>https://yehudab.com/blog/2011/10/thank-you-steve/</id>
+      <content type="html">&lt;p&gt;6:30 – מתעורר. השעון מכוון ל 7:00, אבל אני אוהב לקום קצת קודם, לשתות קפה בנחת ולקרוא קצת מיילים באייפד שמונח לידו. בלילה קיבלתי שני מיילים מהעבודה עם קבצי וורד מחוברים, והאייפד פותח אותם בלי בעיה.&lt;/p&gt;
+&lt;p&gt;7:00 – השעון המעורר של האייפון מצלצל. זמן להעיר את הילדה.&lt;/p&gt;
+&lt;p&gt;7:45 – אורז את האייפד בתיק, האייפון בכיס, ומקפיץ את הילדה לבית הספר. בדרך אני מתלבט אם היא כבר מספיק גדולה לקבל את &lt;a href=&quot;http://www.apple.com/ipodnano/&quot;&gt;הנאנו החדש&lt;/a&gt; למתנה. אני בטוח שהיא תאהב את שעון המיקי מאוס החדש.&lt;/p&gt;
+&lt;p&gt;8:00 – בדרך לעבודה. מחבר את האייפון למערכת של &lt;a href=&quot;http://en.wikipedia.org/wiki/Citro%C3%ABn_C3#C3_Picasso&quot;&gt;האוטו&lt;/a&gt;, ושומע את &lt;a href=&quot;http://5by5.tv/specials/1&quot;&gt;הפודקאסט של 5by5 &lt;/a&gt;לסיכום ההכרזה של האייפון 4S. את האוטו קיבלתי בליסינג לפני חצי שנה בערך. היו לי שני דגמים שהתלבטתי ביניהם, אבל &lt;a href=&quot;http://en.wikipedia.org/wiki/Fiat_Bravo_(2007)&quot;&gt;לדגם השני&lt;/a&gt; היה רק חיבור לווינדוס מוביל, אז בחרתי את זה.&lt;/p&gt;
+&lt;p&gt;8:10 – עוצר בפז לתדלק ולשטוף את האוטו. בזמן שהאוטו בשטיפה נכנס לקנות קפה. לפני התשלום, מוציא את האייפון ומראה לקופאי את הקוד שלי &lt;a href=&quot;http://itunes.apple.com/app/id427036518&quot;&gt;באפליקציה של Yellow&lt;/a&gt; באייפון. יש להם מבצע של כוס ששית חינם. יושב ליד אחד השולחנות שצופים על השטיפה. בנתיים, מוציא את האייפד כדי לענות על המיילים מהלילה. האייפד מוצא את ה Wi-Fi של המקום, אבל אי אפשר לגלוש דרכו. מוציא את האייפון מהכיס ומפעיל Personal Hot Spot. אחרי כמה דקות, ניגש אלי מישהו ושואל אם אני מצליח לגלוש. כן, אני עונה, דרך האייפון. הוא אומר &amp;quot;אהה&amp;quot; וחוזר לשולחן שלו.&lt;/p&gt;
+&lt;p&gt;9:20 – מגיע לעבודה. לא מזמן החלפנו את סביבת הפיתוח שלנו מווינדוס למק. על השולחן של כל אחד מהמפתחים מונח &lt;a href=&quot;http://www.apple.com/macbookpro/&quot;&gt;מק בוק פרו 2011&lt;/a&gt; חדש. מגיע לשולחן שלי. מוציא את המק והאייפד מהתיק, האייפון מהכיס ומתחיל לעבוד. עכשיו אנחנו מפתחים אפלקצית מובייל חדשה. חלק ממנה נייטב, וחלק הוא Web App. זה החלק שלי. את הדיבאג אני עושה בספארי על המק, ואחר-כך בודק על האייפון והאייפד. האינדרואיד של ה QA מונח במגירה. משום מה, נראה לי שהוא לא ייצא משם היום.&lt;/p&gt;
+&lt;p&gt;18:00 – יוצא הביתה. בדרך חזרה שומע את סוף הפודקאסט.&lt;/p&gt;
+&lt;p&gt;21:00 – הילדה במיטה. מתיישב מול הטלוויזיה, ומוציא את האייפד לבדוק מה יש היום. האתר של הוט לא מתפקד באייפד כבר כמה ימים. היום לוח המשדרים מציג טבלה ריקה. חושב אם כדאי לכתוב להם סקריפט תיקון ובנתיים מזפזפ.&lt;/p&gt;
+&lt;p&gt;23:00 – במיטה. בודק עדכונים אחרונים באפליקציית טוויטר לאייפון, וחושב על זה שכבר המון זמן לא כתבתי בבלוג.&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>עדכון לווידג&#39;ט מזג האויר</title>
+      <link href="https://yehudab.com/blog/2011/10/weather-il-2-1/"/>
+      <updated>2011-10-22T19:21:04+00:00</updated>
+      <id>https://yehudab.com/blog/2011/10/weather-il-2-1/</id>
+      <content type="html">&lt;p&gt;שוב שינוי קל בווידג&#39;ט מזג האויר בעקבות שינויים באתר &lt;a href=&quot;http://www.israelweather.co.il/&quot;&gt;IsraelWeather&lt;/a&gt;. מוזמנים להוריד את העדכון &lt;a href=&quot;http://yehudab.com/widgets/WeatherIL-2d1.zip&quot;&gt;מכאן&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.skitch.com/20111022-8d8s83dafu7d79js3qyi3fqbs.png&quot; alt=&quot;ווידג&#39;ט מזג האויר, גרסה 2.1&quot;&gt;&lt;/p&gt;
+&lt;p&gt;תודה לנרי על הדווח.&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>מאקו VOD – קצת אחרת</title>
+      <link href="https://yehudab.com/blog/2011/12/mako-vod-same-same-but-different/"/>
+      <updated>2011-12-30T09:34:03+00:00</updated>
+      <id>https://yehudab.com/blog/2011/12/mako-vod-same-same-but-different/</id>
+      <content type="html">&lt;p&gt;אחרי פניות רבות בעניין מאקו VOD, חזרתי לבדוק את המצב שם ולראות איך ניתן לצפות בשידורים על מק ולינוקס ללא שימוש בסקריפטים. מסתבר שמאקו עברו בחלק מן הסדרות לנגן פלאש, שבסך הכל פועל לא רע. לסדרות אחרות (כמו רמזור), נדרשים עדיין מעקפים לצפיה במק. הפתעה לטובה היתה לי דווקא בלינוקס (נבדק על אובונטו 11.10), אבל נתחיל קודם במק:&lt;br&gt;
+נכון לעכשיו, ניסיון של custup (ספקית הווידאו ברשת של מאקו) לתמוך במק יחד עם ישום לא מוצלח של flip4mac גורמים לבעיה. כדי להתגבר עליה, יש להתקין את הנגן &lt;a href=&quot;http://www.videolan.org/vlc/download-macosx.html&quot;&gt;VLC&lt;/a&gt;, ולגרום לאתר לחשוב שאנחנו רצים דווקא על חלונות. אני אדגים את השיטה על סאפרי, אבל ניתן ליישם באופן דומה על פיירפוקס עם התוסף User Agent Switcher.&lt;/p&gt;
+&lt;p&gt;בספארי, צריך לבחור בתפריט הראשי Prefrences ושם בטאב ה Advanced, לבחור את האפשרות: Show Develop menu in menu bar. נסגור את החלון ונאתחל את ספארי.&lt;br&gt;
+&lt;img src=&quot;https://img.skitch.com/20111228-kjbwn1ya1us757kd3yhtcrkirx.png&quot; alt=&quot;הגדרות ספארי&quot;&gt;&lt;/p&gt;
+&lt;p&gt;יופיע תפריט חדש: Develop ושם נבחר בתת-התפריט User Agent את האפשרות Safari 5.1 – Windows. בעקרון אפשר לבחור כל כניסה אחרת המכילה את המילה Windows, אבל זו נראית לי הכי בטוחה (וגם תעזור לשמור על הסטטיסטיקות של ספארי, במקרה שמישהו במאקו בודק אותן).&lt;br&gt;
+&lt;img src=&quot;https://img.skitch.com/20111228-fhcppetmmx6shtj77pdsqxbx67.png&quot; alt=&quot;שינוי שם הדפדפן&quot;&gt;&lt;/p&gt;
+&lt;p&gt;שימו לב שהבחירה משפיעה רק על הטאב הנוכחי. עכשיו ניגש לדף התוכנית במאקו. נקבל את החלון הבא, ובו יש ללחוץ על הכתפור Click to Play:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.skitch.com/20111228-bwerwtcq2qipxnqm9y6ywnj85f.png&quot; alt=&quot;Click to Play&quot;&gt;&lt;/p&gt;
+&lt;p&gt;יפתח טאב חדש ובו הווידאו ינסה לנגן. רוב הסיכויים שהוא יכשל, וכאן יש להעתיק את ה URL מראש הדף ולהדביק ב VLC.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.skitch.com/20111228-f57921p9yiuxhs6igtjdeci7p9.png&quot; alt=&quot;להעתיק את ה URL&quot;&gt;&lt;/p&gt;
+&lt;p&gt;ב VLC, נבחר את האפשרות File-&amp;gt;Open Network ונדביק את ה URL.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.skitch.com/20111228-graukaq7utnuj15eafxwf7k643.png&quot; alt=&quot;Open Network&quot;&gt;&lt;br&gt;
+&lt;img src=&quot;https://img.skitch.com/20111228-88dcgisktijmai6ff14f49a4jj.png&quot; alt=&quot;להדביק&quot;&gt;&lt;/p&gt;
+&lt;p&gt;צפיה מהנה:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.skitch.com/20111228-1xyiamn37huhunpwkpy8yjpe36.jpg&quot; alt=&quot;סרט&quot;&gt;&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>חישוב מסלול נסיעה בתחבורה ציבורית</title>
+      <link href="https://yehudab.com/blog/2012/05/otp-il/"/>
+      <updated>2012-05-18T08:21:13+00:00</updated>
+      <id>https://yehudab.com/blog/2012/05/otp-il/</id>
+      <content type="html">&lt;p&gt;משרד התחבורה החל לפרסם לפני כשבוע מאגר מידע חדש הכולל לוחות זמנים ונתיבים של התחבורה הציבורית בארץ. &lt;a href=&quot;http://data.gov.il/dataset/383&quot;&gt;המאגר&lt;/a&gt; מפורסם לפי תקן פתוח של גוגל שנקרא GTFS. במסגרת שיתוף פעולה של מספר חברים ברשימת התפוצה של &lt;a href=&quot;http://www.hamakor.org.il/&quot;&gt;המקור&lt;/a&gt;, הקמנו פיילוט שמדגים את יכולות המאגר. הקוד בפיילוט מבוסס על פרויקט OpenTripPlanner. תודה לירון על עבודת התרגום, ולשאר החברים על העידוד והתמיכה.&lt;/p&gt;
+&lt;p&gt;עד להקמת שרת ציבורי, ניתן להתרשם מצילומי המסך:&lt;/p&gt;
+&lt;p&gt;מסלול שלם:&lt;br&gt;
+&lt;img src=&quot;https://yehudab.com/img/2012/05/9b691287-b202-4e4c-89ba-7f025f6a11ba.png&quot; alt=&quot;מסלול שלם&quot;&gt;&lt;/p&gt;
+&lt;p&gt;התמקדות על מקטעים:&lt;br&gt;
+&lt;img src=&quot;https://img.skitch.com/20120517-rpfeyxpb4nx3t8rpdw9qycshut.png&quot; alt=&quot;התמקדות על מקטעים&quot;&gt;&lt;/p&gt;
+&lt;p&gt;גרסה להדפסה:&lt;br&gt;
+&lt;img src=&quot;https://img.skitch.com/20120517-fnrapyjp427xmw9e86ha791d3g.png&quot; alt=&quot;גרסה להדפסה&quot;&gt;&lt;/p&gt;
+&lt;h3&gt;ההסבר בהמשך מיועד למי שרוצה להקים שרת. לא למי שרוצה לחשב מסלול !! (מה שנקרא: Don&#39;t try this at home).&lt;/h3&gt;
+&lt;p&gt;להקמת השרת, יש לבצע את הפעולות הבאות: (זה הרקע. הקוד בפסקה הבאה מבצע את הפעולות)&lt;/p&gt;
+&lt;p&gt;לוודא שאזור הזמן של השרת הוא Asia/Jerusalem.&lt;br&gt;
+להוריד ולפתוח את הקוד של OpenTripPlanner (גודל הקובץ כ 90MB) וליצור קישור סימבולי ל / .&lt;br&gt;
+להוריד ולפתוח קובץ Open Street Map של ישראל מהאתר &lt;a href=&quot;http://downloads.cloudmade.com/asia/western_asia/israel&quot;&gt;cloudmade.com&lt;/a&gt; (גודל הקובץ 22MB).&lt;br&gt;
+למצוא את כתובת קובץ ה GTFS &lt;a href=&quot;http://data.gov.il/dataset/383&quot;&gt;מאתר מאגרי המידע &lt;/a&gt;של הממשלה, ולהוריד אותו. מכוון שהקובץ מוגש (זמנית?) משרת ftp ולא http, צריך לארח אותו מחדש על שרת אחר. בדוגמאות הקוד בהמשך האירוח הוא בשרת מקומי&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ date
+# Make sure timezone is correct. If not, run the command:
+# $ sudo ln -sf /usr/share/zoneinfo/Asia/Jerusalem /etc/localtime
+# make sure ntp is installed and running. if not, follow these instructions: &amp;lt;a href=&amp;quot;http://www.ehow.com/how_8251011_sync-time-centos.html&amp;quot;&amp;gt;http://www.ehow.com/how_8251011_sync-time-centos.html&amp;lt;/a&amp;gt;
+$ mkdir ~/GTFS
+$ cd ~/GTFS
+$ curl -L -O &amp;quot;http://maps5.trimet.org/otp-dev/otp.zip&amp;quot;
+$ curl -L -O &amp;quot;http://downloads.cloudmade.com/asia/western_asia/israel/israel.osm.bz2&amp;quot;
+$ curl -L -O &amp;quot;ftp://199.203.58.18/israel-public-transportation.zip&amp;quot;
+# !! replace IP above with correct IP
+$ unzip otp.zip
+$ bunzip2 israel.osm.bz2
+$ sudo ln -s ~/GTFS/otp /
+$ ln -s ~/GTFS/israel.osm /otp/cache/osm/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;יש לערוך מספר קבצי הגדרות:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ vi /otp/graph-builder.xml
+# Line 13, change properties to &#39;name=&amp;quot;path&amp;quot; value=&amp;quot;/home/yehuda/GTFS/israel-public-transportation.zip&amp;quot;&#39;
+#              (or whatever path you placed the file in)
+# Line 40, change file name of OSM from or-wa.osm to israel.osm (just file part)
+$ vi /otp/bin/build-graph.sh
+# Line 1, change -Xmx2048m to -Xmx6114m. If you have more memory, put as much as possible
+$ vi /otp/bin/start-server.sh
+# Line 1, change -Xmx2048m to -Xmx4096m. If you have more memory, put as much as possible
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;בניית הגרף (משלב נתוני OSM עם נתוני תח&amp;quot;ץ)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ cd /otp
+$ bin/build-graph.sh &amp;gt;&amp;amp; ~/GTFS/build-graph.err
+# might take 15-30 minutes depending on processor power and memory
+$ ls -l /otp/Graph.obj
+# should be around 1GB
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;אחרי הריצה חשוב לוודא בלוג שאין תעופה בגלל חוסר זכרון !!&lt;/p&gt;
+&lt;p&gt;עכשיו אפשר להריץ את השרת האפליקטיבי:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ cd /otp
+$ bin/start-server.sh
+# Wait for line: &amp;quot;Winstone Servlet Engine v0.9.10 running...&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;עכשיו אפשר לפתוח דפדן לכתובת : http://localhost:8080/opentripplanner-webapp/index.html (אם השרת אינו מקומי, להחליף localhost בכתובת השרת). ולנסות לחשב מסלול.&lt;/p&gt;
+&lt;p&gt;תרגום לעברית:&lt;br&gt;
+לבדוק האם הקובץ ‎/otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js‏ קיים. אם לא, להוריד אותו &lt;a href=&quot;https://github.com/openplans/OpenTripPlanner/blob/master/opentripplanner-webapp/src/main/webapp/js/otp/locale/Hebrew.js&quot;&gt;מכאן&lt;/a&gt; ולשמור בנתיב הנ&amp;quot;ל. אחר-כך, יש לבצע מספר תיקונים בקוד:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ vi /otp/webapps/opentripplanner-webapp/index.html
+# line 2, add &#39;dir=&amp;quot;rtl&amp;quot;&#39; to html tag
+# line 53, duplicate this line and change file name to &amp;quot;js/otp/locale/Hebrew.js&amp;quot;
+$ vi /otp/webapps/opentripplanner-webapp/js/otp/config.js
+# line 12, change otp.locale.English to otp.locale.Hebrew (at end of line)
+# line 175, change value of &#39;enabled&#39; to &#39;true&#39;
+# line 177, add this to end of string:
+# + &#39;&amp;lt;div style=&amp;quot;margin:10px auto;width:205px&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;http://www.opentripplanner.org/&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;images/logo-otp.png&amp;quot; title=&amp;quot;OpenTripPlanner&amp;quot; /&amp;gt;&amp;lt;/a&amp;gt;&#39; +  &#39;&amp;lt;a style=&amp;quot;margin:0 10px&amp;quot; href=&amp;quot;http://www.hamakor.org.il/&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;images/logo-hamakor.png&amp;quot; title=&amp;quot;עמותת המקור&amp;quot; /&amp;gt;&amp;lt;/a&amp;gt;&#39; + &#39;&amp;lt;a href=&amp;quot;http://www.hetz.biz/&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;images/logo-hetz.png&amp;quot; title=&amp;quot;חץ ביז&amp;quot; /&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;&#39;
+$ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
+# line 28, change title to: &amp;quot;אודות האתר&amp;quot;
+# line 29, change content to:
+# &#39;אתר זה הוקם ע&amp;quot;י יהודה ב. על בסיס נתוני &amp;quot;לו&amp;quot;ז ומידע גאוגראפי בתחבורה הציבורית&amp;quot; הזמינים מאתר &amp;lt;a href=&amp;quot;http://data.gov.il/&amp;quot;&amp;gt;data.gov.il&amp;lt;/a&amp;gt; ועל בסיס תוכנת הקוד הפתוח &amp;lt;a href=&amp;quot;http://www.opentripplanner.org/&amp;quot;&amp;gt;OpenTripPlanner&amp;lt;/a&amp;gt;.&#39; + &#39;&amp;lt;br&amp;gt;&#39; + &#39;תרגום התוכנה לעברית בוצע ע&amp;quot;י ירון שהרבני. אירוח אתר זה בחסות &amp;lt;a href=&amp;quot;http://www.hamakor.org.il/&amp;quot;&amp;gt;עמותת המקור&amp;lt;/a&amp;gt; ובאדיבות &amp;lt;a href=&amp;quot;http://www.hetz.biz/&amp;quot;&amp;gt;חץ ביז&amp;lt;/a&amp;gt;.&#39; + &#39;&amp;lt;br&amp;gt;&#39; +  &#39;תנאי שימוש: עמותת המקור עושה כמיטב יכולתה בכדי לספק שירות זה על בסיס נתונים מדוייקים ועדכניים אולם ייתכנו טעויות. המידע ניתן כפי שהוא ללא אחריות. ראו גם &amp;lt;a href=&amp;quot;http://data.gov.il/dataset/383&amp;quot;&amp;gt;תנאי שימוש של משרד התחבורה&amp;lt;/a&amp;gt;.&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;עכשיו לרפרש את הדפדפן ולהנות מההמשק העברי. יתכן שתתקבל הודעה על כשלון בחישוב המסלול. במקרה זה, יש לבחור תאריך חדש לחישוב בתחום המכוסה על-ידי הקובץ (יום הורדת הקובץ ועד שבועיים קדימה)&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>השרות הנסיוני לתכנון נסיעה בתח&amp;quot;צ עלה לאויר</title>
+      <link href="https://yehudab.com/blog/2012/05/otp-il-temp-server/"/>
+      <updated>2012-05-20T03:28:50+00:00</updated>
+      <id>https://yehudab.com/blog/2012/05/otp-il-temp-server/</id>
+      <content type="html">&lt;p&gt;פחות משבוע אחרי &lt;a href=&quot;http://www.tlv1.co.il/?p=5930&quot;&gt;הפרסום הראשון&lt;/a&gt; של נתוני התחבורה הציבורית בפורמט תיקני, עלה לאויר &lt;a href=&quot;http://otp.hamakor.org.il/&quot;&gt;שרות חופשי לתכנון מסלולי נסיעה&lt;/a&gt; המבוסס על הנתונים אלה. ניתן לתכנן נסיעה בתחבורה ציבורית מכל מקום לכל מקום בארץ, אם כי לא כל חברות התח&amp;quot;צ מכוסות. בולטת בהעדרה רכבת-ישראל. השרות הוא נסיוני, והכתובת והשרת יוחלפו בקרוב. בנתיים מוזמנים לנסות ולשלוח תגובות למטה.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.skitch.com/20120520-d4dysf5u9ruawex2jm83yihied.png&quot; alt=&quot;תכנון מסלול לדוגמה&quot;&gt;&lt;/p&gt;
+&lt;p&gt;שימו לב! השרות מוגש as-is. אין שום הבטחה לתקינות הנתונים מבחינת האפשרות לנסוע במסלול, יעילות המסלול, זמנים, מספרי הקוים, או מחיר הנסיעה (אם וכאשר יפורסם).&lt;br&gt;
+שוב תודה לחברי ומנהלי &lt;a href=&quot;http://www.hamakor.org.il/&quot;&gt;עמותת המקור&lt;/a&gt; על התמיכה בפרויקט.&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>עדכון לווידג׳ט מזג האויר</title>
+      <link href="https://yehudab.com/blog/2014/06/weather-il-2-3/"/>
+      <updated>2014-06-28T21:06:06+00:00</updated>
+      <id>https://yehudab.com/blog/2014/06/weather-il-2-3/</id>
+      <content type="html">&lt;p&gt;אחרי כמעט 3 שנים שבהן לא הפצתי גרסה חדשה לווידג׳ט מזג האויר, העלתי היום את גרסה 2.3. הגרסה הזו כוללת שינוי בארכיטקטורת שליפת הנתונים של הווידג׳ט, כך שבמקום לגשת ישירות לאתר &lt;a href=&quot;http://www.israelweather.co.il/&quot;&gt;IsraelWeather&lt;/a&gt;, השליפה נעשית מול שרת יעודי שהקמתי לטובת הווידג׳ט. השרת הזה שולף מראש את הנתונים הגולמיים ומעבד אותם, כך שהתוצאה הסופית אמורה להיות מהירה יותר. זה גם יאפשר לי לתמוך טוב יותר בשינויים עתידיים באתר IsraelWeather, וכן שילוב ב Notification Center, אחרי יציאת גרסה 10.10 .&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2014/06/Screen-Shot-2014-06-28-at-11.49.03-PM.png&quot; alt=&quot;ווידג׳ט מזג האויר&quot;&gt;&lt;/p&gt;
+&lt;p&gt;מוזמנים להוריד את גרסה האחרונה &lt;a href=&quot;http://yehudab.com/widgets/WeatherIL-2d3.zip&quot;&gt;מכאן&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;בעלי OS X 10.7.5 ומעלה: אחרי הורדת הזיפ ופתיחתו, יש ללחוץ על הקובץ שנפתח עם כפתור ימין של העכבר ולבחור Open מהתפריט. אחרת תיתקלו בהודעת שגיאה של ה Gatekeepr.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2014/06/contextMenu.png&quot; alt=&quot;איך לפתוח את הקובץ&quot;&gt;&lt;/p&gt;
+&lt;p&gt;הווידג׳ט זמין למחשבי מק בלבד.&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>עדכונים קצרים</title>
+      <link href="https://yehudab.com/blog/2014/08/short-updates/"/>
+      <updated>2014-08-09T15:22:14+00:00</updated>
+      <id>https://yehudab.com/blog/2014/08/short-updates/</id>
+      <content type="html">&lt;ol&gt;
+&lt;li&gt;לראשונה מאז הקמת הבלוג החלפתי את ערכת העיצוב לערכת העיצוב האחרונה של WordPress: &lt;a href=&quot;http://wordpress.org/themes/twentyfourteen&quot;&gt;Twenty Fourteen&lt;/a&gt;. השינוי המהותי (פרט לצבעים) הוא תמיכה ב Responsive Design, כך שהבלוג יוצג מעתה בצורה טובה גם על מכשירים ניידים. קצת מאוחר, אבל better late then never.&lt;/li&gt;
+&lt;li&gt;בעקבות שינויים באתר &lt;a href=&quot;http://www.israelweather.co.il/&quot;&gt;IsraelWeather&lt;/a&gt; התגלתה תקלה בווידג׳ט מזג האויר. בזכות הארכיטקטורה החדשה התקלה תוקנה בשרת הביינים, כך שאין צורך להתקין גרסה חדשה של הווידג׳ט. אם התחזית לא מוצגת, לחצו על הווידג׳ט עם העכבר, ואחר-כך ⌘+R במקלדת. מי שעדיין לא התקין מוזמן לעשות זאת ע״פ ההוראות ב&lt;a href=&quot;http://yehudab.com/blog/2014/06/weather-il-2-3/&quot;&gt;פוסט הקודם&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>מדריך למתחילים בסקראץ׳</title>
+      <link href="https://yehudab.com/blog/2014/08/scratch-getting-started-guide/"/>
+      <updated>2014-08-16T15:02:22+00:00</updated>
+      <id>https://yehudab.com/blog/2014/08/scratch-getting-started-guide/</id>
+      <content type="html">&lt;p&gt;[פוסט זה הוא תרגום של מדריך המשתמש הרשמי של Scratch. תוכלו להוריד את המדריך באנגלית מ&lt;a href=&quot;http://scratch.mit.edu/help/&quot;&gt;דף העזרה באתר&lt;/a&gt;. הזכויות למקור שמורות ל Lifelong Kindergarten Group, MIT Media Lab. מופץ ברשיון CC-BY-SA 2.0]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2014/08/Scratch_cat_med.png&quot; alt=&quot;Scartch Cat&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;סקראץ׳&lt;/strong&gt; (Scratch) היא שפת תיכנות שמאפשרת ליצור סיפורים אינטראקטיביים, אנימציות, משחקים, מוזיקה ואומנות.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2014/08/getting-started-0-a.png&quot; alt=&quot;מסך לדוגמה מסקראץ׳&quot;&gt;&lt;/p&gt;
+&lt;p&gt;המדריך הזה יאפשר לכם ליצור פרויקט ב&lt;strong&gt;סקראץ׳&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;ליצירת פרויקט חדש, גשו לאתר: &lt;a href=&quot;http://scratch.mit.edu/&quot;&gt;http://scratch.mit.edu&lt;/a&gt;. אם האתר נפתח באנגלית, ניתן לשנות את שפת הממשק מהתפריט בתחתית הדף. לאחר מכן, לחצו על הכפתור צור.&lt;br&gt;
+&lt;img src=&quot;https://yehudab.com/img/2014/08/getting-started-0-b.png&quot; alt=&quot;צור&quot;&gt;&lt;/p&gt;
+&lt;p&gt;אם יש לכם כבר חשבון ב&lt;strong&gt;סקראץ׳&lt;/strong&gt;, הכנסו למערכת כדי שהפריוקט שלכם ישמר.&lt;br&gt;
+&lt;img src=&quot;https://yehudab.com/img/2014/08/getting-started-0-c.png&quot; alt=&quot;כניסה&quot;&gt;&lt;/p&gt;
+&lt;h2&gt;1 – התחילו לזוז&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2014/08/getting-started-1.png&quot; alt=&quot;לבנת זוז&quot;&gt;&lt;/p&gt;
+&lt;p&gt;גררו לבנת &lt;strong&gt;זוז&lt;/strong&gt; לאזור התסריטים.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2014/08/getting-started-2.png&quot; alt=&quot;לחצו על הלבנה&quot;&gt;&lt;/p&gt;
+&lt;p&gt;לחצו על הלבנה כדי לגרום לחתול לזוז.&lt;/p&gt;
+&lt;h2&gt;2 – הוסיפו צלילים&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2014/08/getting-started-3.png&quot; alt=&quot;לבנת נגן בתוף&quot;&gt;&lt;/p&gt;
+&lt;p&gt;גררו לבנת &lt;strong&gt;נגן בתוף&lt;/strong&gt; וחברו אותה ללבנת ה&lt;strong&gt;זוז&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2014/08/getting-started-4.png&quot; alt=&quot;לחצו והקשיבו&quot;&gt;&lt;/p&gt;
+&lt;p&gt;לחצו והקשיבו.&lt;br&gt;
+&lt;em&gt;אם לא הצלחתם לשמוע, בדקו שהרמקול במחשב שלכם מופעל.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2014/08/getting-started-5.png&quot; alt=&quot;החלפת צלילים&quot;&gt;&lt;/p&gt;
+&lt;p&gt;תוכלו לבחור סוג אחר של תופים מהתפריט.&lt;/p&gt;
+&lt;h2&gt;3 – התחילו ריקוד&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2014/08/getting-started-6.png&quot; alt=&quot;הוספת לבנת זוז חדשה&quot;&gt;&lt;/p&gt;
+&lt;p&gt;הוסיפו לבנת &lt;strong&gt;זוז&lt;/strong&gt; חדשה. לחצו בתוך הלבנה והוסיפו סימן מינוס.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2014/08/getting-started-7.png&quot; alt=&quot;לחצו להפעלה&quot;&gt;&lt;/p&gt;
+&lt;p&gt;לחצו על כל אחת מהלבנים כדי להריץ את כל הערמה.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2014/08/getting-started-8.png&quot; alt=&quot;לבנת נגן בתוף נוספת&quot;&gt;&lt;/p&gt;
+&lt;p&gt;הוסיפו לבנת &lt;strong&gt;נגן בתוף&lt;/strong&gt; חדשה, והחליפו את סוג התוף מהתפריט. לחצו להרצה.&lt;/p&gt;
+&lt;h2&gt;4 – שוב ושוב&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2014/08/getting-started-9.png&quot; alt=&quot;לבנת חזור&quot;&gt;&lt;/p&gt;
+&lt;p&gt;גררו לבנת &lt;strong&gt;חזור&lt;/strong&gt; והצמידו אותה לראש הערמה. הפה של לבנת ה&lt;strong&gt;חזור&lt;/strong&gt; צריך לעטוף את שאר הלבנים.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;כדי לגרור את הערמה, יש לתפוס אותה מהלבנה העליונה.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2014/08/getting-started-10.png&quot; alt=&quot;שינוי מספר החזרות&quot;&gt;&lt;/p&gt;
+&lt;p&gt;תוכלו לשנות את מספר החזרות שיבוצעו.&lt;/p&gt;
+&lt;p&gt;לחצו כדי להריץ.&lt;br&gt;
+&lt;em&gt;אפשר ללחוץ על כל אחת מהלבנים להרצת הערמה כולה.&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;5 – אמרו משהו&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2014/08/getting-started-11.png&quot; alt=&quot;לבנת אמור&quot;&gt;&lt;/p&gt;
+&lt;p&gt;לחצו על קטגוריית ה&lt;strong&gt;מראה&lt;/strong&gt; וגגרו החוצה לבנת &lt;strong&gt;אמור&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2014/08/getting-started-12.png&quot; alt=&quot;שינוי טקסט&quot;&gt;&lt;/p&gt;
+&lt;p&gt;לחצו בתוך לבנת ה&lt;strong&gt;אמור&lt;/strong&gt; והקלידו כדי לשנות את המילים. לחצו כדי לנסות.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2014/08/getting-started-13.png&quot; alt=&quot;חברו לראש הערמה&quot;&gt;&lt;/p&gt;
+&lt;p&gt;אחר-כך, חברו את לבנת ה&lt;strong&gt;אמור&lt;/strong&gt; להתחלה.&lt;/p&gt;
+&lt;h2&gt;6 – דגל ירוק&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2014/08/getting-started-14.png&quot; alt=&quot;כאשר לוחצים על הדגל הירוק&quot;&gt;&lt;/p&gt;
+&lt;p&gt;גררו לבנת &lt;img src=&quot;https://yehudab.com/img/2014/08/15.png&quot; alt=&quot;כאשר לוחצים על הדגל הירוק&quot;&gt; וחברו אותה להתחלה.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2014/08/16.png&quot; alt=&quot;הפעלת הדגל הירוק&quot;&gt;&lt;/p&gt;
+&lt;p&gt;בכל פעם שלוחצים על הדגל הירוק, התסריט מתחיל לפעול.&lt;br&gt;
+להפסקה, לחצו על כפתור העצור.&lt;/p&gt;
+&lt;h2&gt;7 – שנו צבע&lt;/h2&gt;
+&lt;p&gt;עכשיו, נסו משהו שונה…&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2014/08/17.png&quot; alt=&quot;לבנת שנה אפקט&quot;&gt;&lt;/p&gt;
+&lt;p&gt;גררו לבנת &lt;strong&gt;שנה אפקט&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2014/08/18.png&quot; alt=&quot;לחצו על לבנת שנה אפקט&quot;&gt;&lt;br&gt;
+לחצו כדי לראות מה קורה.&lt;/p&gt;
+&lt;h2&gt;8 – לחיצה על מקשים&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2014/08/19.png&quot; alt=&quot;לבנת כאשר נלחץ מקש&quot;&gt;&lt;/p&gt;
+&lt;p&gt;חברו לבנת &lt;img src=&quot;https://yehudab.com/img/2014/08/20.png&quot; alt=&quot;כאשר נלחץ מקש&quot;&gt;&lt;/p&gt;
+&lt;p&gt;עכשיו, לחצו על מקש הרווח במקלדת שלכם.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2014/08/21.png&quot; alt=&quot;בחירת מקש&quot;&gt;&lt;/p&gt;
+&lt;p&gt;תוכלו לבחור מקש שונה מהתפריט&lt;/p&gt;
+&lt;h2&gt;9 – הוסיפו רקע&lt;/h2&gt;
+&lt;p&gt;תוכלו להוסיף רקע לבמה.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2014/08/22b.png&quot; alt=&quot;בחירת רקע&quot;&gt;&lt;/p&gt;
+&lt;p&gt;לחצו &lt;img src=&quot;https://yehudab.com/img/2014/08/22a.png&quot; alt=&quot;כפתור רקע&quot;&gt; כדי לבחור רקע חדש.&lt;/p&gt;
+&lt;p&gt;בחרו רקע מהספריה (למשל &amp;quot;spotlight-stage&amp;quot;).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2014/08/23.png&quot; alt=&quot;ספרית הרקעים&quot;&gt;&lt;/p&gt;
+&lt;p&gt;לחצו &lt;strong&gt;אישור&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;הרקע החדש מופיע כעת על הבמה.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2014/08/24.png&quot; alt=&quot;הרקע החדש&quot;&gt;&lt;/p&gt;
+&lt;h2&gt;10 – הוסיפו דמות&lt;/h2&gt;
+&lt;p&gt;כל אוביקט (משתתף) ב&lt;strong&gt;סקראץ׳&lt;/strong&gt; נקרא &lt;strong&gt;דמות&lt;/strong&gt;.&lt;br&gt;
+להוספת דמות חדשה, לחצו על אחד הכפתורים האלה:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2014/08/25.png&quot; alt=&quot;כפתורי הוספת דמות&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;כפתורי הוספת דמות:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2014/08/26.png&quot; alt=&quot;דמות מהספריה&quot;&gt; בחרו דמות מהספריה&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2014/08/27.png&quot; alt=&quot;צייר דמות&quot;&gt; ציירו דמות משלכם&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2014/08/28.png&quot; alt=&quot;דמות מקובץ&quot;&gt; העלו דמות/תמונה מקובץ&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2014/08/29.png&quot; alt=&quot;דמות ממצלמת רשת&quot;&gt; צלמו תמונה (ממצלמת רשת)&lt;/p&gt;
+&lt;p&gt;כדי להוסיף את הדמות הזאת:&lt;br&gt;
+&lt;img src=&quot;https://yehudab.com/img/2014/08/30.png&quot; alt=&quot;קייסי רוקדת&quot;&gt;&lt;br&gt;
+לחצו על &lt;img src=&quot;https://yehudab.com/img/2014/08/26.png&quot; alt=&quot;דמות מהספריה&quot;&gt; ואז לחצו על קטגורית &lt;strong&gt;אנשים&lt;/strong&gt; ובחרו את הדמות &amp;quot;cassy dance&amp;quot; (קייסי רוקדת).&lt;/p&gt;
+&lt;p&gt;תוכלו לגרור את הדמויות ולמקם אותן על הבמה.&lt;br&gt;
+&lt;img src=&quot;https://yehudab.com/img/2014/08/31.png&quot; alt=&quot;גררו את הדמות&quot;&gt;&lt;/p&gt;
+&lt;h2&gt;11 – חקרו!&lt;/h2&gt;
+&lt;p&gt;עכשיו תוכלו להגיד לדמות מה לעשות. נסו את האפשרויות הבאות או חקרו בעצמכם.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;הוסיפו צליל:&lt;/strong&gt;&lt;br&gt;
+&lt;img src=&quot;https://yehudab.com/img/2014/08/34.png&quot; alt=&quot;צלילים&quot;&gt;&lt;/p&gt;
+&lt;p&gt;לחצו על לשונית הצלילים. תוכלו לבחור צליל &lt;img src=&quot;https://yehudab.com/img/2014/08/28.png&quot; alt=&quot;בחר צליל&quot;&gt;. (בפורמט AIF, MP3 או WAV)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2014/08/35.png&quot; alt=&quot;הוספת צליל לתסריט&quot;&gt;&lt;br&gt;
+עכשיו לחצו על לשונית התסריטים וגררו לבנת &lt;strong&gt;נגן צליל&lt;/strong&gt; לתסריט. בחרו את הצליל מהתפריט.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;שנו תלבושות:&lt;/strong&gt;&lt;br&gt;
+&lt;img src=&quot;https://yehudab.com/img/2014/08/36.png&quot; alt=&quot;תלבושות&quot;&gt;&lt;/p&gt;
+&lt;p&gt;לכל דמות יכולות להיות מספר תלבושות.&lt;br&gt;
+לשינוי התלבושת הנוכחית, לחצו על לשונית ה&lt;strong&gt;תלבושת&lt;/strong&gt;.&lt;br&gt;
+אחר-כך לחצו על תלבושת שונה לדמות.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;צרו אנימציה:&lt;/strong&gt;&lt;br&gt;
+&lt;img src=&quot;https://yehudab.com/img/2014/08/37.png&quot; alt=&quot;אנימציה&quot;&gt;&lt;/p&gt;
+&lt;p&gt;תוכלו ליצור אנימציה ע&amp;quot;י החלפת תלבושות.&lt;br&gt;
+לחצו על לשונית התסריטים.&lt;br&gt;
+צרו תסריט שמחליף בין התלבושות.&lt;/p&gt;
+&lt;h2&gt;12 – טיפים!&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2014/08/38.png&quot; alt=&quot;שם לפרויקט&quot;&gt;&lt;br&gt;
+תנו שם לפרויקט שלכם.&lt;/p&gt;
+&lt;p&gt;לרעיונות נוספים, לחצו על טיפים:&lt;br&gt;
+&lt;img src=&quot;https://yehudab.com/img/2014/08/39.png&quot; alt=&quot;טיפים&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2014/08/tips.png&quot; alt=&quot;חלון טיפים&quot;&gt;&lt;/p&gt;
+&lt;p&gt;חלון הטיפים מראה דוגמאות תסריטים שבהם תוכלו להשתמש בפרויקט.&lt;/p&gt;
+&lt;p&gt;הוא גם מסביר מה כל אחת מהלבנים של &lt;strong&gt;סקראץ׳&lt;/strong&gt; עושה.&lt;/p&gt;
+&lt;h2&gt;שמור ושתף&lt;/h2&gt;
+&lt;p&gt;כדי לשמור את הפרויקט ברשת, הקפידו להתחבר לאתר. &lt;img src=&quot;https://yehudab.com/img/2014/08/43.png&quot; alt=&quot;התחבר&quot;&gt;&lt;/p&gt;
+&lt;p&gt;(אם תרצו לשמור את הפרויקט במחשב שלכם, לחצו על תפריט &lt;strong&gt;קובץ&lt;/strong&gt; ובחרו באפשרות: ״הורד למחשב שלך״.)&lt;/p&gt;
+&lt;p&gt;כאשר אתם מוכנים, לחצו על &lt;img src=&quot;https://yehudab.com/img/2014/08/42.png&quot; alt=&quot;ראה דף פרויקט&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;דף פרויקט&lt;/strong&gt;&lt;br&gt;
+&lt;img src=&quot;https://yehudab.com/img/2014/08/40.png&quot; alt=&quot;דף פרויקט&quot;&gt;&lt;/p&gt;
+&lt;p&gt;לחצו &lt;img src=&quot;https://yehudab.com/img/2014/08/44.png&quot; alt=&quot;מסך מלא&quot;&gt; לקבלת מסך מלא.&lt;/p&gt;
+&lt;p&gt;לחצו &lt;img src=&quot;https://yehudab.com/img/2014/08/41.png&quot; alt=&quot;שיתוף&quot;&gt; כדי שאחרים יוכלו לצפות ולשחק בפרויקט שלכם. כאשר אתם משתפים, אחרים יכולים לבקר ולשחק בפרויקט שלכם.&lt;/p&gt;
+&lt;p&gt;הוסיפו הערות לפרויקט.&lt;/p&gt;
+&lt;p&gt;מה עכשיו? תוכלו ל&lt;img src=&quot;https://yehudab.com/img/2014/08/46.png&quot; alt=&quot;צור&quot;&gt; לקבלת רעיונות.&lt;/p&gt;
+&lt;p&gt;כדי ללמוד עוד, לחצו &lt;img src=&quot;https://yehudab.com/img/2014/08/47.png&quot; alt=&quot;עזרה&quot;&gt; או גלשו אל &lt;a href=&quot;http://scratch.mit.edu/help&quot;&gt;http://scratch.mit.edu/help&lt;/a&gt; (אנגלית).&lt;/p&gt;
+&lt;p&gt;למי שרוצה להעמיק עוד יותר, מומלץ לקרוא את הספר בעברית: &lt;strong&gt;עקרונות ומושגים במדעי המחשב דרך Scratch&lt;/strong&gt;, מאת מיכל ארמוני ומוטי בן-ארי. ניתן &lt;a href=&quot;http://stwww.weizmann.ac.il/g-cs/scratch/learning_book.html&quot;&gt;להוריד את הספר בחינם&lt;/a&gt;. שימו לב: הספר נכתב לגרסה 1.4 של &lt;strong&gt;סקראץ׳&lt;/strong&gt;. ניתן להוריד מאותו קישור דף הסבר על השינויים בגרסה 2.&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>לכבוד גל הקור – עדכון לווידג׳ט מזג האויר</title>
+      <link href="https://yehudab.com/blog/2015/02/weather-il-2-4/"/>
+      <updated>2015-02-20T10:01:19+00:00</updated>
+      <id>https://yehudab.com/blog/2015/02/weather-il-2-4/</id>
+      <content type="html">&lt;p&gt;לפני מספר חודשים התווספה באתר &lt;a href=&quot;http://www.israelweather.co.il/&quot;&gt;IsraelWeather&lt;/a&gt; תצוגה של מדד עומס הקור. רק היום התפניתי לתקן גם את הווידג׳ט והעלתי את גרסה 2.4.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2015/02/Screen-Shot-2015-02-20-at-11.44.35.png&quot; alt=&quot;ווידג׳ט מזג האויר&quot;&gt;&lt;/p&gt;
+&lt;p&gt;מוזמנים להוריד את הגרסה האחרונה &lt;a href=&quot;http://yehudab.com/widgets/WeatherIL-2d4.zip&quot;&gt;מכאן&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;בעלי OS X 10.7.5 ומעלה: אחרי הורדת הזיפ ופתיחתו, יש ללחוץ על הקובץ שנפתח עם כפתור ימין של העכבר ולבחור Open מהתפריט. אחרת תיתקלו בהודעת שגיאה של ה Gatekeepr.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2015/02/contextMenu.png&quot; alt=&quot;איך לפתוח את הקובץ&quot;&gt;&lt;/p&gt;
+&lt;p&gt;לאחר מכן, יש ללחוץ על הווידג׳ט המוצג, ולרענן אותו ע״י שילוב המקשים ⌘+R.&lt;/p&gt;
+&lt;p&gt;הווידג׳ט זמין למחשבי מק בלבד.&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>עדיין פה</title>
+      <link href="https://yehudab.com/blog/2016/08/d7a2d793d799d799d79f-d7a4d794/"/>
+      <updated>2016-08-05T16:58:34+00:00</updated>
+      <id>https://yehudab.com/blog/2016/08/d7a2d793d799d799d79f-d7a4d794/</id>
+      <content type="html">&lt;p&gt;עדכון קליל של גרסת הבלוג ל 4.5 ותבנית ל 2016.&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>שוב שדרוג לבלוג</title>
+      <link href="https://yehudab.com/blog/2017/06/yet-another-blog-upgrade/"/>
+      <updated>2017-06-24T17:43:45+00:00</updated>
+      <id>https://yehudab.com/blog/2017/06/yet-another-blog-upgrade/</id>
+      <content type="html">&lt;p&gt;&lt;em&gt;בעידן שבו הבלוגים הולכים ונעלמים, קצת מוזר לכתוב פוסט חדש כאן ולא בפייסבוק, או טוויטר. בכל זאת, אם מישהו עדיין מקבל עדכונים על פוסטים חדשים, או שסתם הגיע לכאן מגוגל, נסו לקרוא את הפוסט כאילו עכשיו 2006 ובלוגים זה הדבר הכי מגניב שיש.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/blog512.jpg&quot; alt=&quot;בלוג&quot;&gt;&lt;/p&gt;
+&lt;p&gt;דבר ראשון, בקטנה, שדרוג מתחייב לגרסה האחרונה (4.8).&lt;/p&gt;
+&lt;p&gt;חוץ מזה, תוסף חדש: &lt;a href=&quot;https://wordpress.org/plugins/wordpress-seo/&quot;&gt;Yoast SEO&lt;/a&gt;, כי פייסבוק דורש מטה תגיות, וזה הכי קל.&lt;/p&gt;
+&lt;p&gt;אבל הכי חשוב, החלפתי את שרות האירוח מאכסון משותף על &lt;a href=&quot;https://www.nearlyfreespeech.net/&quot;&gt;NearlyFreeSpeach&lt;/a&gt; לשרת וירטואלי פרטי של &lt;a href=&quot;https://www.scaleway.com/armv8-cloud-servers/&quot;&gt;Scaleway&lt;/a&gt;. בחרתי בשרת מבוסס ARMv8 כך שהמחיר יוצא כמעט אותו דבר (3$ בראשון, 3€ באחרון), כשכאן אני מקבל שרת פרטי, יכול להריץ עליו מה שאני רוצה, וגם הביצועים טובים הרבה יותר. כמובן, אני צריך לדאוג לבד לשדרוגי תוכנה, אבטחה, גיבויים וכד׳, אבל זה חלק מהעניין. המדריך ב &lt;a href=&quot;https://www.linuxbabe.com/ubuntu/install-wordpress-ubuntu-16-04-apache&quot;&gt;LinuxBabe&lt;/a&gt; יכול לעזור כאן.&lt;/p&gt;
+&lt;p&gt;Scaleway לא כ״כ אוהבים ששולחים מייל מהשרת שלהם (כדי שלא ישמשו לספאם), אז נרשמתי לשירות &lt;a href=&quot;https://www.mailgun.com/&quot;&gt;mailgun&lt;/a&gt; שמאפשר לשלוח עד 10,000 מיילים בחודש בחינם. הוא עובד יחד עם התוסף המקביל ב WordPress. באתר wpbeginner יש &lt;a href=&quot;http://www.wpbeginner.com/wp-tutorials/how-to-fix-wordpress-not-sending-email-issue/&quot;&gt;הסבר מפורט&lt;/a&gt; איך להשתמש בשניהם.&lt;/p&gt;
+&lt;p&gt;דבר אחרון, העברתי את האתר לעבוד דרך https, כי בכל זאת 2017. המדריך הנ״ל מ LinuxBabe מסביר איך לעשות את זה בחינם דרך &lt;a href=&quot;https://letsencrypt.org/&quot;&gt;Let&#39;s Encrypt&lt;/a&gt;.&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>יומולדת 10 שמח</title>
+      <link href="https://yehudab.com/blog/2017/06/iphone-10-years/"/>
+      <updated>2017-06-29T20:58:06+00:00</updated>
+      <id>https://yehudab.com/blog/2017/06/iphone-10-years/</id>
+      <content type="html">&lt;p&gt;7:00 שעון מעורר (מפעיל סנוז)&lt;br&gt;
+7:09 שעון מעורר (מכבה סנוז)&lt;br&gt;
+7:10 מייל (פרטי)&lt;br&gt;
+7:11 ג׳ימייל (עבודה)&lt;br&gt;
+7:12 פייסבוק&lt;br&gt;
+7:13 טוויטר&lt;br&gt;
+7:30 מוביט קרפול (מאשר בקשת קרפול)&lt;br&gt;
+7:31 פייסבוק מסנג׳ר (תיאום סופי של מקום ושעה)&lt;br&gt;
+7:55 וייז&lt;br&gt;
+7:56 אוברקאסט (שומע Rocket)&lt;br&gt;
+8:00 מוביט קרפול (מאשר איסוף נוסע)&lt;br&gt;
+8:15 גז טרקר פלוס (רושם מילוי דלק)&lt;br&gt;
+8:35 פייסבוק (מחכה למכונת קפה בעבודה)&lt;br&gt;
+8:42 גוגל אות׳נטיקטור (לוגין ל AWS)&lt;br&gt;
+9:35 גוגל הנגאאוט (עבודה)&lt;br&gt;
+10:00 טלפון (מהבנק – מבקש שיתקשרו ב 17:00)&lt;br&gt;
+11:05 ספארי (וואינט)&lt;br&gt;
+11:25 גוגל אנליטיקס (עבודה – מתגאה בתוצאות – לוקח צילום מסך)&lt;br&gt;
+11:26 פינפוינט (מסמן על הצילום)&lt;br&gt;
+11:27 ג׳ימייל (שולח צילום)&lt;br&gt;
+12:01 ג׳ימייל (בודק אם תן ביס הגיע)&lt;br&gt;
+12:30 וואטסאפ (תזכורת לשלם לועד הכיתה למסיבת סיום)&lt;br&gt;
+12:31 ביט (מעביר תשלום למסיבה)&lt;br&gt;
+13:30 ספארי (בודק באג באתר)&lt;br&gt;
+13:31 מוביט (משווה מול האתר – אין באג)&lt;br&gt;
+14:10 פינגדום (בודק אפטיים של הבלוג על השרת החדש – 99.97%)&lt;br&gt;
+16:55 טלפון (מהבנק – הקדימו)&lt;br&gt;
+17:30 אצה (מזמין פיק אפ)&lt;br&gt;
+17:31 וייז&lt;br&gt;
+17:32 אוברקאסט (שומע ATP)&lt;br&gt;
+18:15 אצה (תשלום באפליקציה)&lt;br&gt;
+19:15 לוח שנה (בודק מתי לאסוף את הילדה מהחוג)&lt;br&gt;
+20:20 נטפליקס (עונה 5 בית הקלפים)&lt;br&gt;
+22:34 פרומט (SSH לשרת החדש לתקן באג ב&lt;a href=&quot;https://yehudab.com/blog/2015/02/weather-il-2-4/&quot;&gt;ווידג׳ט מזג האוויר&lt;/a&gt;)&lt;br&gt;
+23:12 שעון מעורר (מכוון למחר ישר לקום ב 7:09)&lt;br&gt;
+23:15 ספארי (כותב את הפוסט הזה)&lt;br&gt;
+23:42 תמונות (מעלה את צילום המסך שלמטה לדרופבוקס)&lt;br&gt;
+23:45 דרופבוקס (משנה שם)&lt;br&gt;
+23:46 פרומפט (מוריד את הצילום מדרופבוקס לשרת)&lt;br&gt;
+23:58 ספארי (מפרסם את הפוסט)&lt;br&gt;
+23:59 מטען, מצב מטוס&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/iphone-apps.png&quot; alt=&quot;Apps on iPhone &quot;&gt;&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>רק שניה</title>
+      <link href="https://yehudab.com/blog/2017/07/just-a-second/"/>
+      <updated>2017-07-01T08:28:09+00:00</updated>
+      <id>https://yehudab.com/blog/2017/07/just-a-second/</id>
+      <content type="html">&lt;p&gt;רק שניה מפרידה בין השעה 03:14:07 ל 03:14:08 בתאריך: 19 בינואר 2038. לכאורה, זה לא צריך לעניין אף אחד. אבל אם אתה יוניקס/טיים גיק כמוני, התאריך הזה מייד אמור להדליק לך נורה אדומה.&lt;br&gt;
+למה? כי בשניה הזאת יעברו בדיוק 2,147,483,648 (או 2 בחזקת 31) שניות מתאריך 1.1.1970 בשעה 00:00:00. מחשב לינוקס בארכיטקטורת 32 ביט לא יכול להציג את הזמן הזה.&lt;br&gt;
+נסו להריץ את הפקודה הבאה על מחשב הלינוקס הקרוב:&lt;/p&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;date&lt;/span&gt; --date&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;@2147483647&#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;או במערכות מבוססות BSD (כמו macOS), את הפקודה הזאת:&lt;/p&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;date&lt;/span&gt; -r &lt;span class=&quot;token number&quot;&gt;2147483647&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;זה אמור לעבוד בלי בעיה. אבל אם תוסיפו שניה נוספת (כלומר להחליף את ה-7 ב-8), אתם עלולים לראות משהו כזה:&lt;br&gt;
+&lt;img src=&quot;https://yehudab.com/img/2017/Unix-date-32-bit.jpg&quot; alt=&quot;2038 on 32 bit Linux &quot;&gt;&lt;/p&gt;
+&lt;p&gt;לעומת זאת, על מחשב 64 ביט, התוצאה תקינה:&lt;br&gt;
+&lt;img src=&quot;https://yehudab.com/img/2017/Unix-date-64-bit.jpg&quot; alt=&quot;2038 on 64 bit Linux &quot;&gt;&lt;/p&gt;
+&lt;p&gt;אז למה זה מעניין עכשיו, ומה איכפת לי ממשהו שיקרה בעוד קצת יותר מ-20 שנה?&lt;/p&gt;
+&lt;p&gt;קודם כל, כי הזמן עובר. 20 שנה נשמע כמו המון זמן, אבל אם תסתכלו סביבכם בחדר, תראו לא מעט מכשירי חשמל שעובדים 20 שנה ויותר. תוסיפו לזה את העובדה שהיום כמעט כל מכשיר (ממנורה ועד טלוויזיה) מחובר לאינטרנט, ותבינו שיתכן שזו פצצת זמן שנדרכת עם כל קניה של מכשיר חדש שנעשית היום. וזה עוד בלי להזכיר מטוסים, בתי חולים, מערכות רכב (מישהו מוכן להיכנס למכונית אוטונומית ב 2038?) רמזורים, מעליות.&lt;/p&gt;
+&lt;p&gt;צילום המסך העליון, לדוגמה, נלקח ממחשב Raspberry Pi שמחובר למערכת ההשקיה בגינה שלי.&lt;br&gt;
+&lt;img src=&quot;https://yehudab.com/img/2017/raspberry-pi-open-sprinkler.jpg&quot; alt=&quot;Raspberry Pi with Open Sprinkler &quot;&gt;&lt;br&gt;
+האם הוא ישרוד עד 2038? אולי. עד עכשיו, החלפתי בממוצע מחשב השקייה כל 10 שנים: הראשון בגלל הבטרייה שזלגה, והשני עדיין עבד, רק שרציתי להחליף אותו בדגם שמאפשר תכנות דרך הרשת במקום ממשק לא ידידותי. למזלי, ה 19 בינואר יוצא בחורף, כך שיהיו לי כמה חודשים טובים לדאוג למחליף במידת הצורך.&lt;/p&gt;
+&lt;p&gt;ולמה נזכרתי בכל זה עכשיו? כי מחר (2 ביולי 2017) יעבור מספר השניות את סף ה 1.499 מיליארד, ובעוד שבועיים (14 ביולי) הוא יעבור את סף ה 1.5 מיליארד.&lt;/p&gt;
+&lt;p&gt;השעון מתקתק…&lt;/p&gt;
+&lt;pre&gt;
+&lt;script src=&quot;https://yehudab.com/scripts/msec-ticker.js&quot;&gt;
+&lt;/script&gt;
+&lt;/pre&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>HTTP/2</title>
+      <link href="https://yehudab.com/blog/2017/07/http2/"/>
+      <updated>2017-07-07T14:18:52+00:00</updated>
+      <id>https://yehudab.com/blog/2017/07/http2/</id>
+      <content type="html">&lt;p&gt;עוד שדרוג קטן לבלוג.&lt;br&gt;
+הפעם העברתי את השרת מ apache ל nginx, ועל הדרך הפעלתי HTTP/2.&lt;br&gt;
+זה אמור לשפר את הביצועים, למרות שאני לא ממש מרגיש בזה בנתיים.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2017/nginx-logs-sm.jpg&quot; alt=&quot;Hex dump of nginx logs&quot;&gt;&lt;/p&gt;
+&lt;p&gt;למעוניינים, &lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-with-http-2-support-on-ubuntu-16-04&quot;&gt;המדריך הזה&lt;/a&gt; מסביר על התקנת nginx, והגדרות HTTP/2. &lt;a href=&quot;http://nginxlibrary.com/wordpress-permalinks/&quot;&gt;כאן&lt;/a&gt; תמצאו הסבר על ההגדרות הדרושות ב nginx לטובת הפעלת WordPress במקום mod_rewrite של apache.&lt;/p&gt;
+&lt;p&gt;התוצאה הסופית של כל ההגדרות האלה, כפי שנשמרה בקובץ ‎/etc/nginx/sites-available/default היא זו:&lt;/p&gt;
+&lt;pre class=&quot;language-nginx&quot;&gt;&lt;code class=&quot;language-nginx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;server&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br&gt;&lt;br&gt;        &lt;span class=&quot;token keyword&quot;&gt;listen&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;443&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;ssl&lt;/span&gt; http2 default_server&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br&gt;        &lt;span class=&quot;token keyword&quot;&gt;listen&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;443&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;ssl&lt;/span&gt; http2 default_server&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br&gt;        &lt;span class=&quot;token keyword&quot;&gt;include&lt;/span&gt; snippets&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;gzip&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;conf&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br&gt;&lt;br&gt;        &lt;span class=&quot;token keyword&quot;&gt;ssl_certificate&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;etc&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;nginx&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;ssl&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;live&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;yehudab&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;com&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;fullchain&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;pem&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br&gt;        &lt;span class=&quot;token keyword&quot;&gt;ssl_certificate_key&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;etc&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;nginx&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;ssl&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;live&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;yehudab&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;com&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;privkey&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;pem&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br&gt;        &lt;span class=&quot;token keyword&quot;&gt;ssl_dhparam&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;etc&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;nginx&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;ssl&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;live&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;yehudab&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;com&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;dhparam&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;pem&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br&gt;&lt;br&gt;        &lt;span class=&quot;token keyword&quot;&gt;root&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;var&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;www&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;yehudab&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;com&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br&gt;&lt;br&gt;        &lt;span class=&quot;token keyword&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;html &lt;span class=&quot;token keyword&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;htm &lt;span class=&quot;token keyword&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;php &lt;span class=&quot;token keyword&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;nginx&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;debian&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;html&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br&gt;&lt;br&gt;        &lt;span class=&quot;token keyword&quot;&gt;server_name&lt;/span&gt; yehudab&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;com&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br&gt;&lt;br&gt;        &lt;span class=&quot;token keyword&quot;&gt;location&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br&gt;                &lt;span class=&quot;token keyword&quot;&gt;try_files&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$uri&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$uri&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;404&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br&gt;        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br&gt;&lt;br&gt;        &lt;span class=&quot;token keyword&quot;&gt;location&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;blog&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br&gt;                &lt;span class=&quot;token keyword&quot;&gt;try_files&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$uri&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$uri&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;blog&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;php&lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;$args&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br&gt;        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br&gt;        &lt;span class=&quot;token keyword&quot;&gt;location&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;~&lt;/span&gt; \&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;php$ &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br&gt;                &lt;span class=&quot;token keyword&quot;&gt;include&lt;/span&gt; snippets&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;fastcgi&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;php&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;conf&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br&gt;                &lt;span class=&quot;token keyword&quot;&gt;fastcgi_pass&lt;/span&gt; unix&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;run&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;php&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;php7&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;fpm&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sock&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br&gt;        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br&gt;&lt;br&gt;        &lt;span class=&quot;token keyword&quot;&gt;location&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;~&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;\&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;ht &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br&gt;                &lt;span class=&quot;token keyword&quot;&gt;deny&lt;/span&gt; all&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br&gt;        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br&gt;        &lt;span class=&quot;token keyword&quot;&gt;include&lt;/span&gt; snippets&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;expires&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;conf&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span class=&quot;token keyword&quot;&gt;server&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br&gt;       &lt;span class=&quot;token keyword&quot;&gt;listen&lt;/span&gt;         &lt;span class=&quot;token number&quot;&gt;80&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br&gt;       &lt;span class=&quot;token keyword&quot;&gt;listen&lt;/span&gt;    &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;80&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br&gt;       &lt;span class=&quot;token keyword&quot;&gt;server_name&lt;/span&gt;    yehudab&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;com&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br&gt;       &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt;         &lt;span class=&quot;token number&quot;&gt;301&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;$server_name&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;$request_uri&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;לאחר סיום ההגדרות, ניתן לוודא את תמיכת האתר ל HTTP/2 באמצעות &lt;a href=&quot;https://tools.keycdn.com/http2-test&quot;&gt;דף הבדיקה של KeyCDN&lt;/a&gt;.&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>חם יותר מיולי</title>
+      <link href="https://yehudab.com/blog/2017/07/hotter-than-july/"/>
+      <updated>2017-07-07T17:19:11+00:00</updated>
+      <id>https://yehudab.com/blog/2017/07/hotter-than-july/</id>
+      <content type="html">&lt;p&gt;טלפון ציבורי, רדיו טרנזיסטור, מסוף VT 100, ותקליט של סטיבי וונדר הם החומרים שמרכיבים את הפעם הראשונה שהרווחתי משהו מלדעת לתכנת.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2017/hotter-then-july.jpg&quot; alt=&quot;Hotter then July album cover   &quot;&gt;&lt;/p&gt;
+&lt;p&gt;זה היה בתחילת שנות השמונים של המאה שעברה. אני ועוד תלמיד &lt;a href=&quot;https://www.leyada.net/&quot;&gt;מהתיכון שלמדתי בו&lt;/a&gt; נהגנו לבלות בחדר המחשבים של בניין רוס באוניברסיטה העברית. באותה תקופה שודרה ברדיו תוכנית חידונים שנקראה ״עד 120״. הרעיון היה פשוט: הקריין שואל 10 שאלות, שהתשובה לכל אחת מהן היא מספר. המאזינים צריכים להתקשר לתחנה והראשון שעונה את התשובה הנכונה מקבל תקליט מתנה. אחרי שהצטברו 10 מספרים, מגיע השלב שעניין אותי: צריך היה לקחת את עשרת המספרים ובאמצעות 4 פעולות חשבון בינהם להגיע למספר 120. הראשון שהתקשר לאולפן עם התרגיל הפתור קיבל 10 תקליטים. בדרך כלל, היה די קשה להגיע בדיוק למספר, ולכן ניתן היה לעגל תוצאות של חילוק. על תשובה מעוגלת חילקו פרס קטן יותר (2-4 תקליטים, תלוי במספר הפותרים).&lt;/p&gt;
+&lt;p&gt;אחרי מספר נסיונות לפתור את החלק המתמטי בעזרת נייר ועפרון, החלטנו לנצל את מחשבי האוניברסיטה לטובת הפרס הנחשק. תכנית מחשב שתעבור על כל האפשרויות הייתה מחוץ לתחום במשאבים שהיו זמינים לנו אז (נדמה לי שזה היה מחשב &lt;a href=&quot;https://en.wikipedia.org/wiki/VAX-11#VAX-11.2F780&quot;&gt;VAX-11/780&lt;/a&gt;, שהריץ גרסת יוניקס של ברקלי), וכנראה גם לא היום – מדובר בכטרליון תרגילים אפשריים – אבל בעזרת יוריסטיקה פשוטה יחסית הצלחנו לכתוב תוכנית שתמצא פתרון בזמן סביר. העניין היותר מורכב בשלב הזה היה החלק הלוגיסטי: להביא רדיו למעבדה, להקשיב לתוכנית, להזין את המספרים ואז לרוץ לטלפון הציבורי בקומה השניה ולהתקשר לאולפן.&lt;/p&gt;
+&lt;p&gt;בסופו של דבר עליתי לשידור מספר פעמים וצברתי בסה״כ כ-10 תקליטים, בינהם התקליט &lt;a href=&quot;https://en.wikipedia.org/wiki/Hotter_than_July&quot;&gt;Hotter then July&lt;/a&gt; של סטיבי וונדר.&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>לייב בלוגינג – עד לשניה ה-1,500,000,000</title>
+      <link href="https://yehudab.com/blog/2017/07/live-blogging-1-5-billion/"/>
+      <updated>2017-07-13T17:58:18+00:00</updated>
+      <id>https://yehudab.com/blog/2017/07/live-blogging-1-5-billion/</id>
+      <content type="html">&lt;pre&gt;
+&lt;script src=&quot;https://yehudab.com/scripts/msec-ticker.js&quot;&gt;
+&lt;/script&gt;
+&lt;/pre&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>8 ספרות</title>
+      <link href="https://yehudab.com/blog/2017/08/8-digits/"/>
+      <updated>2017-08-02T18:02:18+00:00</updated>
+      <id>https://yehudab.com/blog/2017/08/8-digits/</id>
+      <content type="html">&lt;p&gt;יש לי חיבה נסתרת למספרי מכוניות. מאז המכונית החדשה הראשונה של הורי (רנו 12, מודל 1972, מס: 644-486) ועד לאחרונה שלי (פיאט 500L, מודל 2014, מס: 64-249-32) אני זוכר כל מספר, וגם את ההיגיון מאחוריו: הספרה הראשונה בשנות ה-70 יצגה את האזור בארץ. 6 היה אזור ירושלים. בתחילת שנות השמונים, שתי הספרות האחרונות יצגו את השנה, אלא שמהר מאוד הבינו ש 90 אלף מספרים לא יספיקו לשנה שלמה, ועברו לשימוש ב 5 במקום 8. מכונית עם סיומת 54 יוצרה בשנת 1984. בשנות ה-90, שתי הספרות האחרונות יצגו את היבואן. המכונית הראשונה שקניתי (פיז׳ו 106xs, מודל 1996, מס: 84-360-04) הסתיימה ב-04 כמו כל המכוניות של פיז׳ו-סיטרואן באותה תקופה. יבואן BMW קיבל את הסיומת 16, שאותה ״זכה״ לשמר עמוק לתוך שנות ה-2000 בגלל מספר נמוך יחסית של מכוניות שנמכרו בכל שנה.&lt;/p&gt;
+&lt;p&gt;היום ראיתי ״בשטח״ לראשונה מכונית עם 8 ספרות. משרד הרישוי החליט לשים באמצע זוג ספרות ובצדדים שלשות. אוהבים להתייחס לחזית המכונית כמייצגת פנים, אבל גם לאחורי המכונית יש מראה כזה. השיטה החדשה מתאימה לפנסים אחוריים מאורכים (פנים עם עיניים מלוכסנות), שגם הם חזרו לאופנה בשנים האחרונות.&lt;/p&gt;
+&lt;p&gt;בתמונות: 8 ספרות על מכונית עם פנסים מאורכים, לעומת 7 ספרות על מכונית עם פנסים מרובעים.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2017/8-digits-sm.jpg&quot; alt=&quot;לוחית רישוי 8 ספרות&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2017/7-digits-sm.jpg&quot; alt=&quot;לוחית רישוי 7 ספרות&quot;&gt;&lt;/p&gt;
+&lt;p&gt;כמובן שצריך להזכיר את עניין הבאגים הקשורים ל-8 ספרות: מחסום לחניון שלא נפתח, משאבת דלק שמסרבת לתדלק, ועוד. אם נתקלתם באחד, ספרו בתגובות.&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>איפון 8 או X?</title>
+      <link href="https://yehudab.com/blog/2017/09/iphone-8-or-x/"/>
+      <updated>2017-09-20T21:24:08+00:00</updated>
+      <id>https://yehudab.com/blog/2017/09/iphone-8-or-x/</id>
+      <content type="html">&lt;p&gt;בקרוב יגיעו האייפונים החדשים לארץ (לפי iDigital: ״בצמוד להשקה בארה״ב״), ושאלת מיליון הדולר — או יותר נכון 1000 הדולר — היא אייפון 8 או X?&lt;/p&gt;
+&lt;p&gt;למי שמתלבט כמוני, ג׳ון גרובר נותן תשובה מוחצת בהערת השוליים &lt;a href=&quot;https://daringfireball.net/2017/09/the_iphones_8&quot;&gt;בסקירה שלו&lt;/a&gt;. (בתרגום חופשי): ״לך, זה שקורא גם את הערות השוליים בסקירות האלה, זה כנראה לא מתאים (הכוונה לקנות את ה-8 – י.ב.). אבל יש אנשים שמעדיפים פשוט דגם חדש שיראה ויתנהג כמו האייפון שיש להם עכשיו״.&lt;br&gt;
+&lt;img src=&quot;https://yehudab.com/img/2017/gruber-iphone-8-footnote.jpg&quot; alt=&quot;צילום מסך&quot;&gt;&lt;/p&gt;
+&lt;p&gt;עם כל השאלות של מה יהיה עם זיהוי הפנים שפישל בדמו, או הנישה המצחיקה שמפריעה לווידאו, בתור אחד שקורא הערות שוליים, נראה לי שקיבלתי תשובה.&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>וורדפרס 5.0</title>
+      <link href="https://yehudab.com/blog/2018/12/wordpress-5-0/"/>
+      <updated>2018-12-08T12:09:55+00:00</updated>
+      <id>https://yehudab.com/blog/2018/12/wordpress-5-0/</id>
+      <content type="html">&lt;p&gt;גרסה חדשה של וורדפרס יצאה השבוע, והבלוג קיבל את השדרוג המתחייב. על הדרך, עברתי לתבנית 2019 החדשה (הקודמת הייתה 2016).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/blog512.jpg&quot; alt=&quot;&quot;&gt;
+בקרוב פוסט עם תוכן אמיתי ותמונה לא ממוחזרת.&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>2020</title>
+      <link href="https://yehudab.com/blog/2019/12/2020/"/>
+      <updated>2019-12-31T21:33:55+00:00</updated>
+      <id>https://yehudab.com/blog/2019/12/2020/</id>
+      <content type="html">&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2019/New-Year-2020-PNG-File.png&quot; alt=&quot;2020&quot;&gt;
+שנה חדשה היא הזדמנות טובה להחלפת תבנית. אז ברוכים הבאים ל-2020, או כמו ש WordPress קוראים לה: &lt;a href=&quot;https://wordpress.org/themes/twentytwenty/&quot;&gt;TwentyTwenty&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;התבנית קצת יותר ״חמה״ לעומת TwentyNineteen המינימליסטית שבה השתמשתי קודם. התרגום לעברית והתמיכה בכיווניות זקוקים לקצת ״שיוף״, אבל התבנית לגמרי שימושית כפי שהיא.&lt;/p&gt;
+&lt;p&gt;אז שתהיה לכולם שנה טובה ועשור טוב. מקווה (הפעם באמת) ליצור תוכן מעניין יותר במהלך השנה.&lt;/p&gt;
+&lt;p&gt;Image license: &lt;a href=&quot;https://creativecommons.org/licenses/by-nc/4.0/&quot;&gt;CC BY-NC 4.0&lt;/a&gt; pngall.com&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>php 7.4</title>
+      <link href="https://yehudab.com/blog/2020/03/php-7-4/"/>
+      <updated>2020-03-01T20:07:57+00:00</updated>
+      <id>https://yehudab.com/blog/2020/03/php-7-4/</id>
+      <content type="html">&lt;p&gt;חלפה למעלה משנה מאז ש&lt;a href=&quot;https://www.php.net/eol.php&quot;&gt;התמיכה ב-7.0 php הופסקה&lt;/a&gt;, וזה הזמן לשדרג את הבלוג לגרסה 7.4. כרגיל, צריך לקרוא את כל ה breaking changes, אבל אם הבלוג והתוספים מתוחזקים לגרסה העדכנית ביותר, אפשר לסמוך בדרך כלל שהכל יעובד. גיבוי של הקוד והדאטה רצוי גם כן.&lt;/p&gt;
+&lt;p&gt;את הגיבויים אני מבצע לאחרונה בעזרת &lt;a href=&quot;https://restic.net/&quot;&gt;restic&lt;/a&gt;, כאשר הקבצים מועלים לאכסון (הזול יחסית) של &lt;a href=&quot;https://www.backblaze.com/b2/cloud-storage.html&quot;&gt;Backblaze B2&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;אחרי שמכניסים את הגדרות ל restic למשתני סביבה, סקריפט הגיבוי פשוט למדי:&lt;/p&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token shebang important&quot;&gt;#!/bin/bash&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token assign-left variable&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;date&lt;/span&gt; +%Y-%m-%d&lt;span class=&quot;token variable&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;mysqldump -u *** -p *** &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; ~/backup/sql/yehudab-&lt;span class=&quot;token variable&quot;&gt;${d}&lt;/span&gt;.sql&lt;br&gt;&lt;span class=&quot;token function&quot;&gt;gzip&lt;/span&gt; ~/backup/sql/*.sql&lt;br&gt;&lt;span class=&quot;token function&quot;&gt;tar&lt;/span&gt; -czf ~/backup/site/yehudab.com-&lt;span class=&quot;token variable&quot;&gt;${d}&lt;/span&gt;.tar.gz yehudab.com&lt;br&gt;restic backup ~/backup&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;לצורך השדרוג, עקבתי אחרי &lt;a href=&quot;https://www.cloudbooklet.com/upgrade-php-version-to-php-7-4-on-ubuntu/&quot;&gt;המדריך ב CloudBooklet&lt;/a&gt;. מכוון שאני מריץ php דרך ngnix, ביצעתי את הסעיפים הרלוונטים לגרסת fpm.&lt;/p&gt;
+&lt;p&gt;אה, וכמובן, להשתמש ב vi, כי nano זה לחלשים.&lt;/p&gt;
+&lt;p&gt;אחרי השדרוג, אני מנסה לשמור את הפוסט הזה ובום error 500. בדיקה מהירה בלוג של nginx על השרת מגלה ששכחתי להתקין את php7.4-memcache שהמדריך הנ&amp;quot;ל לא מחשיב כ common extension. הרצת:&lt;/p&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;apt&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; php7.4-memcache&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;וריסטרט לשרת פתרו את הבעיה.&lt;br&gt;
+&lt;img src=&quot;https://yehudab.com/img/2020/upgrade.png&quot; alt=&quot;שדרוג&quot;&gt;&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>עוברים דירה</title>
+      <link href="https://yehudab.com/blog/2020/07/docker/"/>
+      <updated>2020-07-18T12:06:54+00:00</updated>
+      <id>https://yehudab.com/blog/2020/07/docker/</id>
+      <content type="html">&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2020/Docker.PNG&quot; alt=&quot;Docker&quot;&gt;
+אחרי שלוש שנים שבהן &lt;a href=&quot;https://yehudab.com/blog/2017/06/yet-another-blog-upgrade/&quot;&gt;האתר הזה רץ מעל שרות האחסון של Scaleway&lt;/a&gt;, קיבלתי מהם הודעה שהחומרה שעליה אני רץ (dual core ARM CPU, 2GB RAM, 50GB SSD) תפסיק לעבוד בעוד מספר חודשים. הם הציעו לי לעבור באותו מחיר לשרת VPS מבוסס אינטל, אלא שעוד לפני שהספקתי להגיב, קיבלתי את המכתב שזו כותרתו: We’re evolving our Instances prices, או בתרגום חופשי: נמאס לנו להיות הכי זולים בשוק, אז נעלה את המחיר ב 66%.&lt;/p&gt;
+&lt;p&gt;החלטתי שזה הזמן לחפש שרות אכסון חדש, והגעתי דרך חבר לעבודה ל &lt;a href=&quot;https://www.ovh.ie/&quot;&gt;OVHcloud&lt;/a&gt;. השרת הבסיסי נראה על הנייר חלש יותר (מעבד אחד בלבד ודיסק קטן יותר), אבל בבדיקות ביצועים בשטח הוא משמעותית יותר מהיר. זה מורגש גם בעבודת ההתקנה (פרטים בהמשך) וגם בזמן ריצה, כפי שנמדד ע״י StatusCake. המחיר זהה למחיר (הישן) של Scaleway: שלושה אירו לחודש, בלי התחייבות.&lt;/p&gt;
+&lt;p&gt;השרת שלי מריץ בנוסף גם שני שרתי node קטנים, כך שהעברת כל הטוב הזה היא לא פשוטה, ולכן החלטתי הפעם ללכת על Docker. למי שלא מכיר את Docker, מומלץ לקרוא את סדרת המאמרים באתר של רן בר-זיק. שם הוא גם &lt;a href=&quot;https://internet-israel.com/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%D7%9D/docker/%D7%95%D7%95%D7%A8%D7%93%D7%A4%D7%A8%D7%A1-%D7%A2%D7%9C-docker/&quot;&gt;מדגים התקנת WordPress&lt;/a&gt;. אני בחרתי לעקוב אחרי &lt;a href=&quot;https://github.com/mjstealey/wordpress-nginx-docker&quot;&gt;המדריך של Michael J. Stealey&lt;/a&gt; ב GitHub, שממנו גם עשיתי פורק לריפו משלי. המדריך הזה קצת יותר מתאים לסביבה הנוכחית שלי שכוללת MariaDB במקום MySQL, וגם סקריפטים מוכנים לתמיכה ב https, דרך השרות של &lt;a href=&quot;https://letsencrypt.org/&quot;&gt;Let’s Encrypt&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;רוב התהליך עוקב אחרי ה README, אבל מכוון שלא התחלתי מאתר חדש כפי שהמדריך מתאר, ביצעתי מספר שינויים, כמו שיחזור של ה DB ומבנה הקבצים מהשרת הנוכחי. זו הייתה טבילת האש הראשונה ל restic שהזכרתי &lt;a href=&quot;https://yehudab.com/blog/2020/03/php-7-4/&quot;&gt;באחד הפוסטים הקודמים&lt;/a&gt; והוא הוכיח את עצמו מצויין. שחזור של MySQL שרץ בתוך קונייטנר הוא קצת מורכב, וגם כאן &lt;a href=&quot;https://internet-israel.com/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%D7%9D/docker/%D7%93%D7%95%D7%A7%D7%A8-%D7%9B%D7%A0%D7%99%D7%A1%D7%94-%D7%9C%D7%AA%D7%95%D7%9A-%D7%A7%D7%95%D7%A0%D7%98%D7%99%D7%99%D7%A0%D7%A8-%D7%95%D7%A4%D7%A2%D7%95%D7%9C%D7%95%D7%AA-%D7%91%D7%AA%D7%95%D7%9B/&quot;&gt;יש לבר-זיק מדריך טוב&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;אז נשארו לי כמה קצוות לסגור, כמו חידוש אוטומטי של הסרטיפיקטים ב Let’s Encrypt, והפעלה של גיבויים, אבל בסך הכל נראה שדוקר עושה עבודה טובה, והמעבר הבא יצריך ״רק״:&lt;/p&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; docker-compose up -d&lt;/code&gt;&lt;/pre&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>11ty</title>
+      <link href="https://yehudab.com/blog/2020/07/11ty/"/>
+      <updated>2020-07-31T18:01:27+00:00</updated>
+      <id>https://yehudab.com/blog/2020/07/11ty/</id>
+      <content type="html">&lt;p&gt;המעבר לשרת חדש גרם לי לחשוב שוב על WordPress והאם הוא עדיין מתאים לבלוגים ב-2020. כאשר התחלתי את האתר, PHP הייתה אחת משתי שפות התכנות המובילות לווב (יחד עם העולה החדש דאז Ruby on Rails). מאוחר יותר זו גם הייתה שפת התכנות בה עבדתי, וזה נראה לי טבעי להמשיך איתה. מאז עברתי לסביבה חדשה מבוססת NodeJS, ו-PHP נראית לי כמו עוף מוזר (שלא לאמר דינוזאור).&lt;/p&gt;
+&lt;p&gt;אחרי בחינה של מספר אפשרויות, הגעתי למסקנה שהנתיב הטבעי להמשך הוא Static Site Generators (SSG). הרעיון כאן הוא ליצר את קבצי ה HTML של האתר מתוך התכנים הדינמיים, ומכאן והלאה ההגשה לדפדפן נעשית של קבצים סטטיים בלבד. מתוך &lt;a href=&quot;https://gohugo.io/&quot; title=&quot;HUGO&quot;&gt;המגוון&lt;/a&gt; &lt;a href=&quot;https://jekyllrb.com/&quot; title=&quot;Jekyll&quot;&gt;הגדול&lt;/a&gt; של &lt;a href=&quot;https://vuepress.vuejs.org/&quot; title=&quot;VuePress&quot;&gt;האפשרויות&lt;/a&gt;, בחרתי את &lt;a href=&quot;https://www.11ty.dev/&quot;&gt;Eleventy&lt;/a&gt; (או בקיצור 11ty). הוא מבוסס NodeJS, ויחסית לאחיו הוותיק יותר (&lt;a href=&quot;https://www.gatsbyjs.org/&quot;&gt;Gatsby&lt;/a&gt;), הוא פחות אפליקציה ויותר SSG טהור.&lt;/p&gt;
+&lt;p&gt;ייצור האתר נעשה ע&amp;quot;י הגדרת תבניות והפעלה שלהן על תוכן האתר שהוא קבצי Markdown. את קבצי התוכן שומרים ב git יחד עם הקוד של האתר, כך שנוצר סוג של בלבול בינהם. כדי לבצע את ההפרדה בצורה טובה יותר וגם בגלל &lt;a href=&quot;https://talk.commonmark.org/t/explicit-rtl-indication-in-pure-markdown/286/4&quot; title=&quot;דיון ארוך שבסופו הוחלט שלא עושים כלום ותסדרו לבד&quot;&gt;התמיכה הבעייתית של Markdown בעברית&lt;/a&gt;, בחרתי להשתמש ב Headless CMS: מערכת ניהול תוכן, שבה כתיבה התכנים מנותקת מההצגה שלהן (בניגוד ל WordPress שבה העריכה והתצוגה נעשים באותה מערכת). הרעיון כאן הוא לאפשר לכותבי תוכן שאינם מכירים קוד או אפילו Markdown לערוך את התוכן דרך עורך יעודי (סטייל WordPress), כאשר הקבצים נשלחים מהעורך אל ה git-repo. יתרון משמעותי ליושבים בציון (ובשאר המזרח התיכון) הוא האפשרות לתמיכה הרבה יותר טובה בעריכה ב-RTL.&lt;/p&gt;
+&lt;p&gt;ל Headless CMS בחרתי את &lt;a href=&quot;https://forestry.io/&quot;&gt;Forestry&lt;/a&gt; (ישנן אלטרנטיבות נוספות כמו: &lt;a href=&quot;https://www.contentful.com/&quot;&gt;Contentful&lt;/a&gt;, &lt;a href=&quot;https://www.netlifycms.org/&quot;&gt;Netlify CMS&lt;/a&gt;), שנראית לי הנקייה ביותר לשימוש. בניגוד ל Contentful, אין לה תמיכה מובנית ב-RTL, אבל באמצעות תפריט &amp;quot;הפוך כוון כתיבה&amp;quot; של Firefox, אפשר לערוך את התוכן בקלות. ל Forestry יש גם תמיכה נוחה בעריכת ה meta-data של הפוסטים (כותרת, קטגוריות וכד&#39;), כך שמקבלים כמעט חוויה מלאה של עורך תוכן משולב, כמו שניתן לראות כאן:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2020/07/forestry-edit-post.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;לצורך השוואה, כך נראה ה Markdown של אותו הפוסט ב GitHub:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2020/07/github-edit-post.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;אז איך עושים את המעבר? על כך בפוסט הבא.&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>מוורדפרס ל-11ty</title>
+      <link href="https://yehudab.com/blog/2020/08/11ty-howto-migrate/"/>
+      <updated>2020-08-01T15:00:54+00:00</updated>
+      <id>https://yehudab.com/blog/2020/08/11ty-howto-migrate/</id>
+      <content type="html">&lt;p&gt;אז אחרי שמחליטים על מעבר ל-11ty, צריך לדאוג לשמר את תוכן הפוסטים והתגובות.&lt;/p&gt;
+&lt;p&gt;בשלב הראשון של המעבר יש צורך ליצא את כל התוכן מוורדפרס ל-Markdown. לטובת זה השתמשתי בפלאגאין לוורדפרס שפותח דווקא עבור Gatsby ונקרא: &lt;a href=&quot;https://wordpress.org/plugins/wp-gatsby-markdown-exporter/&quot;&gt;WP Gatsby Markdown Exporter&lt;/a&gt;. בקישור ניתן לקרוא כיצד להפעיל אותו. אני השתמשתי באופציית ה &lt;a href=&quot;https://wp-cli.org/&quot; title=&quot;WordPress Command Line&quot;&gt;WP-CLI&lt;/a&gt;. משום מה הייתה לו בעיה ליצא את התמונות, ולכן הפעלתי את האופציות שמנטרלות את החלק הזה. הפקודה הסופית הייתה:&lt;/p&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;wp gatsby-markdown-export --skip_copy_uploads --skip_original_images --directory&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;/var/www/html/md-export&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;זה מייצר אוסף של קבצי Markdown, שנראה בערך ככה:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2020/08/export.png&quot; alt=&quot;היררכיית קבצים לאחר היצוא מוורפרס&quot;&gt;&lt;/p&gt;
+&lt;p&gt;שמות הקבצים בכל תיקייה נלקחים מה slag, ולמזלי הקפדתי לאורך השנים להשתמש בשמות באנגלית, כך שכעת קל למצוא את הפוסטים לפי שנה, חודש וה slag.&lt;/p&gt;
+&lt;p&gt;בשלב הבא בחרתי ב starter project מתוך &lt;a href=&quot;https://jamstackthemes.dev/ssg/eleventy/&quot; title=&quot;Eleventy Themes&quot;&gt;דף התבניות של Eleventy&lt;/a&gt;. המבחר די דל, ואין עדיין אף תבנית מותאמת עברית. לבסוף, בחרתי בתבנית &lt;a href=&quot;https://github.com/reeseschultz/11r&quot;&gt;11r&lt;/a&gt;.  זוהי תבנית dark mode, ומבוססת &lt;a href=&quot;https://tailwindcss.com/&quot;&gt;Tailwind CSS&lt;/a&gt;, ורוב היפוכי הכוון הגיעו out of the box, ברגע שהוספתי &lt;code&gt;dir=rtl&lt;/code&gt; לתגית הראשית של הדף. את התוצאה אחרי הגיור תוכלו למזלג &lt;a href=&quot;https://github.com/yehudab/11r&quot;&gt;מהריפו שלי&lt;/a&gt;. את הפוסטים בהיררכיה המקורית מעלים לתיקיית &lt;code&gt;src/posts&lt;/code&gt;, ואחרי מעקב אחרי ההוראות בREADME, אפשר לראות את התוצאה.&lt;/p&gt;
+&lt;p&gt;החלק היותר מורכב בתהליך הוא תמיכה בתגובות. כאן עדיין אין פתרון בית-ספר, ונאלצתי לאלתר &lt;a href=&quot;https://github.com/dKab/blog/blob/master/_includes/comments.liquid&quot;&gt;מכמה&lt;/a&gt; &lt;a href=&quot;https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html&quot;&gt;מקורות&lt;/a&gt;. הבעיה הבסיסית היא שאתר סטטי מטיבו אינו מאפשר הוספת תוכן דינמי כמו תגובות. אחד הפתרון האפשריים הוא שימוש בתוסף צד שלישי כמו &lt;a href=&quot;https://disqus.com/&quot;&gt;Disqus&lt;/a&gt;, אבל &lt;a href=&quot;https://fatfrogmedia.com/delete-disqus-comments-wordpress/&quot; title=&quot;Why I Deleted Disqus and Why You Should Too&quot;&gt;הדעה&lt;/a&gt; &lt;a href=&quot;https://markosaric.com/remove-disqus/&quot; title=&quot;Why you should remove Disqus from your site&quot;&gt;המקובלת&lt;/a&gt; בקרב בעלי האתרים הסטטים הוא שזה לא לעניין, הן בגלל &lt;a href=&quot;https://markosaric.com/remove-disqus/#site-speed-and-performance&quot;&gt;תוספת הקוד לכל דף&lt;/a&gt;, והן בגלל טענות על &lt;a href=&quot;https://twitter.com/martingund/status/1207327648093003777&quot; title=&quot;disqus shared the personal data of tens of millions of users &quot;&gt;הפרת פרטיות של משתמשי המערכת&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;האפשרות שאני בחרתי בה היא שימוש ב &lt;a href=&quot;https://staticman.net/&quot;&gt;Staticman&lt;/a&gt;. הרעיון כאן הוא שכל תגובה היא בעצם קובץ שנשמר גם כן בgit, ומנגנון אישור התגובה נעשה באופן דומה לאישור Pull Request. המנוע של Staticman דואג לייצר את ה PR-ים, כך שמבחינת המשתמשים באתר שליחת התגובה מתבצעת באמצעות טופס על הדף, בדומה לוורדפרס.&lt;/p&gt;
+&lt;p&gt;בנוסף לזה, יש צורך לייבא ולשמר את התגובות מהבלוג הישן. כאן השתמשתי &lt;a href=&quot;https://github.com/arthurlacoste/wordpress-comments-jekyll-staticman&quot;&gt;בכלי&lt;/a&gt; שבמקור נכתב לטובת העברת תגובות לאתרים סטטים מבוססי &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;. נדרשו שינויים קלים, אבל בסופו של דבר גם כאן זה מסתכם בהרצה לפי ה README, והוספה של כל קבצי התגובות תחת התיקיה &lt;a href=&quot;https://github.com/yehudab/11r/tree/master/11r/src/globals/comments&quot;&gt;&lt;code&gt;src/globals/comments&lt;/code&gt;&lt;/a&gt; כך שכל התגובות לפוסט מסויים מרוכזות תחת תיקיה לפי ה slag של הפוסט. מי שמעוניין יכול לקרוא עוד על &lt;a href=&quot;https://www.11ty.dev/docs/data-global/&quot;&gt;מודל הנתונים של Eleventy&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;התוספת האחרונה היא מעט קוד שידע לשלוף את התגובות המתאימות לכל פוסט ולהציג אותן לפי ההיררכיה המקורית. הקוד הזה מחולק בין קוד JS, שאותו ניתן למצוא ב &lt;code&gt;/filters/comments-tree.js&lt;/code&gt; ונראה כך:&lt;/p&gt;
+&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function-variable function&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br&gt;  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; allComments &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; obj &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; Object&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;obj&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br&gt;  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; commentsById &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br&gt;  allComments&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;forEach&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br&gt;    c&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;id &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; c&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;id &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; c&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;_id&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br&gt;    commentsById&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;c&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;id&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; c&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br&gt;  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br&gt;  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; rootComments &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br&gt;  allComments&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;forEach&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br&gt;    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;c&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;parentId &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; c&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;parentId &lt;span class=&quot;token operator&quot;&gt;!==&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;0&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; parent &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; commentsById&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;c&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;parentId&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;parent&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br&gt;        parent&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;replies &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; parent&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;replies &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br&gt;        parent&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;replies&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;c&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br&gt;        console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;can&#39;t find parentID: &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;c&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;parentId&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt; for ID: &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;c&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;id&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br&gt;    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br&gt;      rootComments&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;c&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br&gt;    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br&gt;&lt;br&gt;  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br&gt;  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; rootComments&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;והחלק המשלים שנמצא בתבנית התגובות &lt;a href=&quot;https://github.com/yehudab/11r/blob/master/src/includes/comments.njk&quot;&gt;&lt;code&gt;src/includes/comments.njk&lt;/code&gt;&lt;/a&gt;. על ריקורסיה ב nunjucks למדתי &lt;a href=&quot;https://github.com/mozilla/nunjucks/issues/416#issuecomment-206335032&quot;&gt;מהissue הזה&lt;/a&gt;. עכשיו ניתן לראות גם את התגובות בהתאם לדו-שיח שנוהל בזמנו:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2020/09/comments-dark.png&quot; alt=&quot;תגובות משורשרות&quot;&gt;&lt;/p&gt;
+&lt;p&gt;בפוסט הבא ארחיב על הכנת הטופס לתגובות והאינטגרציה עם הבוט של Staticman.&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>ניהול תגובות באמצעות staticman</title>
+      <link href="https://yehudab.com/blog/2020/10/staticman-for-11ty-comments/"/>
+      <updated>2020-10-03T10:18:58+00:00</updated>
+      <id>https://yehudab.com/blog/2020/10/staticman-for-11ty-comments/</id>
+      <content type="html">&lt;p&gt;ב&lt;a href=&quot;https://yehudab.com/blog/2020/08/11ty-howto-migrate/&quot; title=&quot;מוורדפרס ל-11ty&quot;&gt;פוסט הקודם&lt;/a&gt; הסברתי איך לייבא את התגובות הישנות מ Wordpress ל-&lt;a href=&quot;https://www.11ty.dev/&quot;&gt;11ty&lt;/a&gt;. בפוסט הזה, אראה איך להתקין שרת &lt;a href=&quot;https://staticman.net/&quot;&gt;Staticman&lt;/a&gt;, ואיך לחבר אליו את טופס התגובות באתר.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2020/10/staticman-logo.png&quot; alt=&quot;Staticman logo&quot;&gt;
+Staticman logo by &lt;a href=&quot;http://erlen.co.uk/&quot;&gt;Erlen Masson&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;גם הפעם הסתמכתי על &lt;a href=&quot;https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html&quot; title=&quot;Adding Staticman Comments by Travis Downs&quot;&gt;מדריך קיים&lt;/a&gt; שחיבר Travis Downs עבור שילוב Staticman בבלוג מבוסס Jekyll. בסופו של דבר, ביצעתי את השלבים הבאים:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html#set-up-github-bot-account&quot;&gt;יצירת חשבון בוט ב GitHub&lt;/a&gt; (לגמרי לפי המדריך הנ&amp;quot;ל)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html#configuring-staticmanyml&quot;&gt;הגדרות staticman.yml&lt;/a&gt; (גם כן לפי המדריך)&lt;/li&gt;
+&lt;li&gt;הגדרות staticman בתוך &lt;code&gt;src/globals/site.json&lt;/code&gt;. כאן יש הבדל לעומת המדריך, מכוון שקובץ זה יחודי ל 11ty, ובמדריך ההתיחסות היא לסביבת Jekyll. בכל מקרה, העקרונות דומים, ו&lt;a href=&quot;https://github.com/yehudab/11r/blob/master/src/includes/comments.njk&quot; title=&quot;site.json&quot;&gt;כאן&lt;/a&gt; תוכלו לראות את ההגדרות שלי.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html#set-up-the-api-bridge&quot;&gt;הקמת שרת staticman&lt;/a&gt;. אחרי יצירת המפתחות, בחרתי בדרך שונה מהמומלץ (הקמה דרך Heroku), ובמקום זה העלתי שרת עצמאי שרץ דרך docker. בניגוד למוסבר בדקומנטציה, כאן יש חוסר &lt;a href=&quot;https://github.com/eduardoboucas/staticman/blob/master/docs/docker.md&quot;&gt;בתיעוד המקורי&lt;/a&gt;, ויש לזכור להגדיר את מפתחות ההצפנה בקובץ &lt;a href=&quot;https://github.com/eduardoboucas/staticman/blob/master/docker-compose.yml&quot;&gt;docker-compose.yml&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html#invite-and-accept-bot-to-blog-repo&quot; title=&quot;Invite and Accept Bot to Blog Repo&quot;&gt;הזמנת הבוט להשתתף ב repo&lt;/a&gt; (ע&amp;quot;פ המדריך)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html#enable-recaptcha&quot; title=&quot;Enable reCAPTCHA&quot;&gt;הפעלת reCAPCHA&lt;/a&gt; - בעיקר על פי המדריך. יש לשים לב שבחלק המתייחס ל &lt;code&gt;‎_config.yml&lt;/code&gt; יש לבצע את השינויים במקום זאת ב &lt;code&gt;src/globals/site.json&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html#integrate-comments-into-site&quot; title=&quot;Integrate Comments Into Site&quot;&gt;שילוב התגובות באתר&lt;/a&gt;. כאן ההבדלים מעט יותר משמעותיים, הן בגלל ההבדלים בין Jekyll ל-11ty, והן בגלל הרצון שלי לתמוך בקינון מעבר לרמה אחת. בנוסף, לא אהבתי את ה JS של הפוסט המקורי שמשתש במעורב ב jQuery ו-Vanilla JS. במקום זה השתמשתי בספריה רזה יותר בשם &lt;a href=&quot;https://github.com/fabiospampinato/cash&quot;&gt;cash&lt;/a&gt;, שמאפשרת סינטקס דמוי jQuery במחיר של תמיכה בפחות פיצ&#39;רים ופחות דפדפנים ישנים (אבל עדיין תומכת ב IE11). על הצגת התגובות כתבתי בפוסט הקודם. העבודה על טופס התגובות החדשות מסתכמת בסופו של דבר בקבצי ה &lt;a href=&quot;https://github.com/yehudab/11r/blob/master/src/includes/comment-form.njk&quot; title=&quot;comment-form.njk&quot;&gt;HTML&lt;/a&gt;, &lt;a href=&quot;https://github.com/yehudab/11r/blob/master/src/styles/comments.css&quot; title=&quot;comments.css&quot;&gt;CSS&lt;/a&gt;, ו-&lt;a href=&quot;https://github.com/yehudab/11r/blob/master/src/scripts/comment-form.js&quot; title=&quot;comment-form.js&quot;&gt;JS &lt;/a&gt;אותם תוכלו לראות ב repo הסופי.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;מוזמנים להגיב למטה ולראות איך כל ה flow עובד. עד לאישור, תוכלו לצפות בתגובות שלכם באזור ה &lt;a href=&quot;https://github.com/yehudab/11r/pulls&quot;&gt;Pull Requests&lt;/a&gt; של הבלוג.&lt;/p&gt;
+</content>
+    </entry>
+</feed>
