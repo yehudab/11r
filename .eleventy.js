@@ -1,8 +1,11 @@
 const yaml = require("js-yaml");
 const siteSettings = require('./src/globals/site.json');
+const pluginSyntaxhighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = (config) => {
-  config.addPlugin(require('@11ty/eleventy-plugin-syntaxhighlight'));
+  config.addPlugin(pluginSyntaxhighlight);
+  config.addPlugin(pluginRss);
 
   config.addFilter('dateDisplay', require('./filters/date-display.js'));
   config.addFilter('dateAndTime', require('./filters/date-and-time.js'));
