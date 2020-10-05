@@ -1,0 +1,88 @@
+==================================================================
+https://keybase.io/yehudab
+———————————————————————
+
+I hereby claim:
+
+  * I am an admin of https://yehudab.com
+  * I am yehudab (https://keybase.io/yehudab) on keybase.
+  * I have a public key with fingerprint 3C9B CC1E 4A34 FF9A 39BC  A77F F192 1203 2C45 EA0F
+
+To do so, I am signing this object:
+
+{
+  “body”: {
+    “key”: {
+      “eldest_kid”: “0120de05254b524d98f7ef9d5b4b65c2c152f2b0f9274f421f51920ae98d65b6fd340a”,
+      “fingerprint”: “3c9bcc1e4a34ff9a39bca77ff19212032c45ea0f”,
+      “host”: “keybase.io”,
+      “key_id”: “f19212032c45ea0f”,
+      “kid”: “0101f08b229f65ffabf286e7d5703c4b6311f564693255eb47a75d00af0bb342d09f0a”,
+      “uid”: “c91b50a7de2331d7a56027eb212b4d19”,
+      “username”: “yehudab”
+    },
+    “merkle_root”: {
+      “ctime”: 1568222428,
+      “hash_meta”: “561297fc265cfa2e557567e2d3f6ed6ece09b45409ae70e761e340addcded333”,
+      “seqno”: 6771788
+    },
+    “revoke”: {
+      “sig_ids”: [
+        “a2cc798a8342229dd33488cb32e99563aa7d8abab1e2cf4f94532196069fb4dd0f”
+      ]
+    },
+    “service”: {
+      “hostname”: “yehudab.com”,
+      “protocol”: “https:”
+    },
+    “type”: “web_service_binding”,
+    “version”: 1
+  },
+  “ctime”: 1568222428,
+  “expire_in”: 157680000,
+  “prev”: “225b044798ead325d67f2a725b34ddb2a9eddf18c4daf48d7a6ca5adf281f296”,
+  “seqno”: 12,
+  “tag”: “signature”
+}
+
+which yields the signature:
+
+——BEGIN PGP MESSAGE——
+Version: Keybase OpenPGP v2.1.3
+Comment: https://keybase.io/crypto
+
+yMP5AnicbVN/TFVVHAdRSwwIVLQFmpewNYnde+4998fDfjjF1IxcmTOBHufccw7v
+yuNdfO/y40G0bCZOHS4yc2UmSBTWSI3IkikPaKQsp0yzZZrTwGmKZeaUSDuX5Vqb
+95+7c87n8/l+vp/vOd1xMVGx0b/XJcVkZF9MiO7tdEqj8sMZP1UJ2CZhwVMlFNGR
+H/UTGnK8RRYRPIIoAZFQEQKoYAgUYuhMo8wgECtYhSYwJQgYwCIzgKYwBUgMSgYQ
+ETV0okKsMiIrIhIyBGYFCmmwJGgFHC4rmwY2TYkqSFYYM5DMl0jTGONkXlEGpgIp
+Ehkn+uyQy+DmMArRTMvme3zhHbF3F/wd36LERB0DYDAVMoYwA7pKNQI1UTa5d1ni
+VlVFNWQAIcWKhjRIRBExEWNZAUQ02Ijv0hE505AwFJFGKJBliWgIqiLQKObFsUIk
+wwWGaDCAiilHh6mvlCAsVGcIxTRY5KfeoG07bramY7kICao6AEABOu8PhXzeYuog
+ToSqBAyNmYBHyxCgEGpQ1SggMlMpUalJRQMrUBENRDWRaqpE3XgJMQklsixzGyG6
+MmALHlXTJE3XuYMgLbOLqFs8ZBXy1EKCJ1dAwDQ1Q0c6b5VHRDhZ0XUTy4AaBlRl
+xFvVEUZYosBkCjMUKAPJUEXVYLxhwpPOr3aLBcssc0TcHdP/28807WJuqCRoO7Zp
++/mBz3FKQh43Fidc4iLLKfb+q+HFVoDwO8IZZTQYsuwAj4kj75IYrSixgtRruQio
+qbrIP7cOLeOSAEAsKgpvjiLCZ0tUjQGk8V2Z+8YAGZQQJummQhBTdD5K1UQQEX49
+JAYM9b8IJcB9okKuyYMLIKc0SIXqzkje6Kjo2KixY0a5jycqdtz9d57U7UcTbkbf
+Ez0ttnHMvpScGTNf6GjIWvb39Z6uTF/J0Kr1x6vfD3RuVj8apAf3VI4fSFg1eeVT
+lzd0nCxMb0uc6Xmntq/gXSG1sq3xyw+6X53/1rZTVYfq5mz8rac9Z7a+77Hzh6f/
+qaXvrG86uHHR9kX0Qox/1/nWmMrdN+rPXWtp+75mafe06809p7TmoaYqWBrfO71l
+wrqnV0pL8k63XL63afkVO+qM9UXulAdqAg0n8nLrkkan9A1Nejb5Wk34s7F6BRqX
+9Xrvhmcadi0HucOVm7LS09f6T3ccO/dkzq8vT9uUmqRP3JaTH/J6Fi6Zm/LHjvLw
+6uzrSwYHZv0AL34teCdeGWBnrzwEzi7+ZdSbXQneyOZIeduRDVuHR7VvhlPqz8yZ
+F1H7M5OnWrFLt1xOvcFu7Tngr83/bsXuvP2TT6fd3tqfdGD3X9VHHcf/c+c3Wyva
+v+1JPdaXeHinfCD9vpvnL9T2V22LGyr+quHS5Mcz7FvZW9IajMIn1q6e+lLlw8s6
+hxt3rBtuL0iurcRX489WN5fPfi2Yq/dlde19JP65uk8vVszY1D3rk6b4NH8gsr2g
+YPDFstjbrfnZA61XV5w4mpv1yt5l60fvTzv0nhzX/PnCB1PGoUltqW/4VsflLD5y
+fN6tNTPHD048uaBlwdHw222tkaHoCVbz/B8X9SVHno/fCdb4emvqTxX0ftwfJ/b2
+XSpMbPpwyj/1QwH5
+=+B7V
+——END PGP MESSAGE——
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/yehudab
+
+==================================================================
