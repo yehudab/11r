@@ -120,7 +120,7 @@
 <p>השרת שלי מריץ בנוסף גם שני שרתי node קטנים, כך שהעברת כל הטוב הזה היא לא פשוטה, ולכן החלטתי הפעם ללכת על Docker. למי שלא מכיר את Docker, מומלץ לקרוא את סדרת המאמרים באתר של רן בר-זיק. שם הוא גם <a href="https://internet-israel.com/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%D7%9D/docker/%D7%95%D7%95%D7%A8%D7%93%D7%A4%D7%A8%D7%A1-%D7%A2%D7%9C-docker/">מדגים התקנת WordPress</a>. אני בחרתי לעקוב אחרי <a href="https://github.com/mjstealey/wordpress-nginx-docker">המדריך של Michael J. Stealey</a> ב GitHub, שממנו גם עשיתי פורק לריפו משלי. המדריך הזה קצת יותר מתאים לסביבה הנוכחית שלי שכוללת MariaDB במקום MySQL, וגם סקריפטים מוכנים לתמיכה ב https, דרך השרות של <a href="https://letsencrypt.org/">Let’s Encrypt</a>.</p>
 <p>רוב התהליך עוקב אחרי ה README, אבל מכוון שלא התחלתי מאתר חדש כפי שהמדריך מתאר, ביצעתי מספר שינויים, כמו שיחזור של ה DB ומבנה הקבצים מהשרת הנוכחי. זו הייתה טבילת האש הראשונה ל restic שהזכרתי <a href="https://yehudab.com/blog/2020/03/php-7-4/">באחד הפוסטים הקודמים</a> והוא הוכיח את עצמו מצויין. שחזור של MySQL שרץ בתוך קונייטנר הוא קצת מורכב, וגם כאן <a href="https://internet-israel.com/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%D7%9D/docker/%D7%93%D7%95%D7%A7%D7%A8-%D7%9B%D7%A0%D7%99%D7%A1%D7%94-%D7%9C%D7%AA%D7%95%D7%9A-%D7%A7%D7%95%D7%A0%D7%98%D7%99%D7%99%D7%A0%D7%A8-%D7%95%D7%A4%D7%A2%D7%95%D7%9C%D7%95%D7%AA-%D7%91%D7%AA%D7%95%D7%9B/">יש לבר-זיק מדריך טוב</a>.</p>
 <p>אז נשארו לי כמה קצוות לסגור, כמו חידוש אוטומטי של הסרטיפיקטים ב Let’s Encrypt, והפעלה של גיבויים, אבל בסך הכל נראה שדוקר עושה עבודה טובה, והמעבר הבא יצריך ״רק״:</p>
-<pre class="language-bash"><code class="language-bash"><span class="token function">sudo</span> docker-compose up -d</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">docker-compose</span> up -d</code></pre>
 
                 </div>
             </div>
@@ -281,41 +281,11 @@
   <div class="grid grid-flow-row grid-cols-3 gap-4 mb-2">
     
     
-        <a class="tag mx-auto" href="/tag/דפדפנים">דפדפנים&rlm; (10)</a>
-    
-        <a class="tag mx-auto" href="/tag/קוד פתוח ותוכנה חופשית">קוד פתוח ותוכנה חופשית&rlm; (5)</a>
-    
-        <a class="tag mx-auto" href="/tag/חלונות">חלונות&rlm; (1)</a>
-    
-        <a class="tag mx-auto" href="/tag/מק">מק&rlm; (4)</a>
-    
-        <a class="tag mx-auto" href="/tag/פיירפוקס">פיירפוקס&rlm; (10)</a>
-    
-        <a class="tag mx-auto" href="/tag/TwentyTwenty">TwentyTwenty&rlm; (1)</a>
-    
-        <a class="tag mx-auto" href="/tag/וורדפרס">וורדפרס&rlm; (8)</a>
-    
-        <a class="tag mx-auto" href="/tag/SSG">SSG&rlm; (1)</a>
-    
-        <a class="tag mx-auto" href="/tag/11ty">11ty&rlm; (3)</a>
-    
-        <a class="tag mx-auto" href="/tag/בלוג">בלוג&rlm; (1)</a>
-    
-        <a class="tag mx-auto" href="/tag/Docker">Docker&rlm; (1)</a>
-    
-        <a class="tag mx-auto" href="/tag/Hosting">Hosting&rlm; (1)</a>
-    
-        <a class="tag mx-auto" href="/tag/לינוקס">לינוקס&rlm; (2)</a>
-    
-        <a class="tag mx-auto" href="/tag/Nunjucks">Nunjucks&rlm; (1)</a>
-    
-        <a class="tag mx-auto" href="/tag/Comments">Comments&rlm; (1)</a>
-    
-        <a class="tag mx-auto" href="/tag/staticman">staticman&rlm; (1)</a>
-    
         <a class="tag mx-auto" href="/tag/ie8">ie8&rlm; (2)</a>
     
         <a class="tag mx-auto" href="/tag/מיקרוסופט">מיקרוסופט&rlm; (2)</a>
+    
+        <a class="tag mx-auto" href="/tag/דפדפנים">דפדפנים&rlm; (10)</a>
     
         <a class="tag mx-auto" href="/tag/כללי">כללי&rlm; (3)</a>
     
@@ -333,6 +303,8 @@
     
         <a class="tag mx-auto" href="/tag/CSS">CSS&rlm; (3)</a>
     
+        <a class="tag mx-auto" href="/tag/פיירפוקס">פיירפוקס&rlm; (10)</a>
+    
         <a class="tag mx-auto" href="/tag/אופרה">אופרה&rlm; (2)</a>
     
         <a class="tag mx-auto" href="/tag/ספארי">ספארי&rlm; (3)</a>
@@ -340,6 +312,8 @@
         <a class="tag mx-auto" href="/tag/נגנים">נגנים&rlm; (3)</a>
     
         <a class="tag mx-auto" href="/tag/Flip4Mac">Flip4Mac&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/מק">מק&rlm; (4)</a>
     
         <a class="tag mx-auto" href="/tag/גראצ&#39;ו מרקס">גראצ&#39;ו מרקס&rlm; (1)</a>
     
@@ -350,6 +324,8 @@
         <a class="tag mx-auto" href="/tag/Uncategorized">Uncategorized&rlm; (1)</a>
     
         <a class="tag mx-auto" href="/tag/שטויות שמוצאים באתרים">שטויות שמוצאים באתרים&rlm; (3)</a>
+    
+        <a class="tag mx-auto" href="/tag/וורדפרס">וורדפרס&rlm; (8)</a>
     
         <a class="tag mx-auto" href="/tag/אתרים תומכי פיירפוקס">אתרים תומכי פיירפוקס&rlm; (1)</a>
     
@@ -381,17 +357,41 @@
     
         <a class="tag mx-auto" href="/tag/מזג אויר">מזג אויר&rlm; (2)</a>
     
+        <a class="tag mx-auto" href="/tag/קוד פתוח ותוכנה חופשית">קוד פתוח ותוכנה חופשית&rlm; (5)</a>
+    
+        <a class="tag mx-auto" href="/tag/חלונות">חלונות&rlm; (1)</a>
+    
         <a class="tag mx-auto" href="/tag/wordpress">wordpress&rlm; (1)</a>
     
         <a class="tag mx-auto" href="/tag/שעון קיץ">שעון קיץ&rlm; (1)</a>
     
         <a class="tag mx-auto" href="/tag/חולצה">חולצה&rlm; (1)</a>
     
+        <a class="tag mx-auto" href="/tag/TwentyTwenty">TwentyTwenty&rlm; (1)</a>
+    
         <a class="tag mx-auto" href="/tag/nano">nano&rlm; (1)</a>
     
         <a class="tag mx-auto" href="/tag/php">php&rlm; (1)</a>
     
         <a class="tag mx-auto" href="/tag/vi">vi&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/לינוקס">לינוקס&rlm; (2)</a>
+    
+        <a class="tag mx-auto" href="/tag/SSG">SSG&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/11ty">11ty&rlm; (3)</a>
+    
+        <a class="tag mx-auto" href="/tag/בלוג">בלוג&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/Docker">Docker&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/Hosting">Hosting&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/Nunjucks">Nunjucks&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/Comments">Comments&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/staticman">staticman&rlm; (1)</a>
     
 </div>
 

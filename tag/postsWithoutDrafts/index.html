@@ -208,7 +208,7 @@ Staticman logo by <a href="http://erlen.co.uk">Erlen Masson</a></p>
 <p>השרת שלי מריץ בנוסף גם שני שרתי node קטנים, כך שהעברת כל הטוב הזה היא לא פשוטה, ולכן החלטתי הפעם ללכת על Docker. למי שלא מכיר את Docker, מומלץ לקרוא את סדרת המאמרים באתר של רן בר-זיק. שם הוא גם <a href="https://internet-israel.com/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%D7%9D/docker/%D7%95%D7%95%D7%A8%D7%93%D7%A4%D7%A8%D7%A1-%D7%A2%D7%9C-docker/">מדגים התקנת WordPress</a>. אני בחרתי לעקוב אחרי <a href="https://github.com/mjstealey/wordpress-nginx-docker">המדריך של Michael J. Stealey</a> ב GitHub, שממנו גם עשיתי פורק לריפו משלי. המדריך הזה קצת יותר מתאים לסביבה הנוכחית שלי שכוללת MariaDB במקום MySQL, וגם סקריפטים מוכנים לתמיכה ב https, דרך השרות של <a href="https://letsencrypt.org/">Let’s Encrypt</a>.</p>
 <p>רוב התהליך עוקב אחרי ה README, אבל מכוון שלא התחלתי מאתר חדש כפי שהמדריך מתאר, ביצעתי מספר שינויים, כמו שיחזור של ה DB ומבנה הקבצים מהשרת הנוכחי. זו הייתה טבילת האש הראשונה ל restic שהזכרתי <a href="https://yehudab.com/blog/2020/03/php-7-4/">באחד הפוסטים הקודמים</a> והוא הוכיח את עצמו מצויין. שחזור של MySQL שרץ בתוך קונייטנר הוא קצת מורכב, וגם כאן <a href="https://internet-israel.com/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%D7%9D/docker/%D7%93%D7%95%D7%A7%D7%A8-%D7%9B%D7%A0%D7%99%D7%A1%D7%94-%D7%9C%D7%AA%D7%95%D7%9A-%D7%A7%D7%95%D7%A0%D7%98%D7%99%D7%99%D7%A0%D7%A8-%D7%95%D7%A4%D7%A2%D7%95%D7%9C%D7%95%D7%AA-%D7%91%D7%AA%D7%95%D7%9B/">יש לבר-זיק מדריך טוב</a>.</p>
 <p>אז נשארו לי כמה קצוות לסגור, כמו חידוש אוטומטי של הסרטיפיקטים ב Let’s Encrypt, והפעלה של גיבויים, אבל בסך הכל נראה שדוקר עושה עבודה טובה, והמעבר הבא יצריך ״רק״:</p>
-<pre class="language-bash"><code class="language-bash"><span class="token function">sudo</span> docker-compose up -d</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">docker-compose</span> up -d</code></pre>
 
                 </div>
             </div>
@@ -420,7 +420,7 @@ Staticman logo by <a href="http://erlen.co.uk">Erlen Masson</a></p>
 <p><img src="/img/2017/nginx-logs-sm.jpg" alt="Hex dump of nginx logs"></p>
 <p>למעוניינים, <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-with-http-2-support-on-ubuntu-16-04">המדריך הזה</a> מסביר על התקנת nginx, והגדרות HTTP/2. <a href="http://nginxlibrary.com/wordpress-permalinks/">כאן</a> תמצאו הסבר על ההגדרות הדרושות ב nginx לטובת הפעלת WordPress במקום mod_rewrite של apache.</p>
 <p>התוצאה הסופית של כל ההגדרות האלה, כפי שנשמרה בקובץ ‎/etc/nginx/sites-available/default היא זו:</p>
-<pre class="language-nginx"><code class="language-nginx"><span class="token keyword">server</span> <span class="token punctuation">{</span><br><br>        <span class="token keyword">listen</span> <span class="token number">443</span> <span class="token keyword">ssl</span> http2 default_server<span class="token punctuation">;</span><br>        <span class="token keyword">listen</span> <span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">:</span><span class="token number">443</span> <span class="token keyword">ssl</span> http2 default_server<span class="token punctuation">;</span><br>        <span class="token keyword">include</span> snippets<span class="token operator">/</span><span class="token keyword">gzip</span><span class="token punctuation">.</span>conf<span class="token punctuation">;</span><br><br>        <span class="token keyword">ssl_certificate</span> <span class="token operator">/</span>etc<span class="token operator">/</span>nginx<span class="token operator">/</span><span class="token keyword">ssl</span><span class="token operator">/</span>live<span class="token operator">/</span>yehudab<span class="token punctuation">.</span>com<span class="token operator">/</span>fullchain<span class="token punctuation">.</span>pem<span class="token punctuation">;</span><br>        <span class="token keyword">ssl_certificate_key</span> <span class="token operator">/</span>etc<span class="token operator">/</span>nginx<span class="token operator">/</span><span class="token keyword">ssl</span><span class="token operator">/</span>live<span class="token operator">/</span>yehudab<span class="token punctuation">.</span>com<span class="token operator">/</span>privkey<span class="token punctuation">.</span>pem<span class="token punctuation">;</span><br>        <span class="token keyword">ssl_dhparam</span> <span class="token operator">/</span>etc<span class="token operator">/</span>nginx<span class="token operator">/</span><span class="token keyword">ssl</span><span class="token operator">/</span>live<span class="token operator">/</span>yehudab<span class="token punctuation">.</span>com<span class="token operator">/</span>dhparam<span class="token punctuation">.</span>pem<span class="token punctuation">;</span><br><br>        <span class="token keyword">root</span> <span class="token operator">/</span>var<span class="token operator">/</span>www<span class="token operator">/</span>yehudab<span class="token punctuation">.</span>com<span class="token punctuation">;</span><br><br>        <span class="token keyword">index</span> <span class="token keyword">index</span><span class="token punctuation">.</span>html <span class="token keyword">index</span><span class="token punctuation">.</span>htm <span class="token keyword">index</span><span class="token punctuation">.</span>php <span class="token keyword">index</span><span class="token punctuation">.</span>nginx<span class="token operator">-</span>debian<span class="token punctuation">.</span>html<span class="token punctuation">;</span><br><br>        <span class="token keyword">server_name</span> yehudab<span class="token punctuation">.</span>com<span class="token punctuation">;</span><br><br>        <span class="token keyword">location</span> <span class="token operator">/</span> <span class="token punctuation">{</span><br>                <span class="token keyword">try_files</span> <span class="token variable">$uri</span> <span class="token variable">$uri</span><span class="token operator">/</span> <span class="token operator">=</span><span class="token number">404</span><span class="token punctuation">;</span><br>        <span class="token punctuation">}</span><br><br>        <span class="token keyword">location</span> <span class="token operator">/</span>blog<span class="token operator">/</span> <span class="token punctuation">{</span><br>                <span class="token keyword">try_files</span> <span class="token variable">$uri</span> <span class="token variable">$uri</span><span class="token operator">/</span> <span class="token operator">/</span>blog<span class="token operator">/</span><span class="token keyword">index</span><span class="token punctuation">.</span>php<span class="token operator">?</span><span class="token variable">$args</span><span class="token punctuation">;</span><br>        <span class="token punctuation">}</span><br>        <span class="token keyword">location</span> <span class="token operator">~</span> \<span class="token punctuation">.</span>php$ <span class="token punctuation">{</span><br>                <span class="token keyword">include</span> snippets<span class="token operator">/</span>fastcgi<span class="token operator">-</span>php<span class="token punctuation">.</span>conf<span class="token punctuation">;</span><br>                <span class="token keyword">fastcgi_pass</span> unix<span class="token punctuation">:</span><span class="token operator">/</span>run<span class="token operator">/</span>php<span class="token operator">/</span>php7<span class="token punctuation">.</span><span class="token number">0</span><span class="token operator">-</span>fpm<span class="token punctuation">.</span>sock<span class="token punctuation">;</span><br>        <span class="token punctuation">}</span><br><br>        <span class="token keyword">location</span> <span class="token operator">~</span> <span class="token operator">/</span>\<span class="token punctuation">.</span>ht <span class="token punctuation">{</span><br>                <span class="token keyword">deny</span> all<span class="token punctuation">;</span><br>        <span class="token punctuation">}</span><br>        <span class="token keyword">include</span> snippets<span class="token operator">/</span><span class="token keyword">expires</span><span class="token punctuation">.</span>conf<span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><br><span class="token keyword">server</span> <span class="token punctuation">{</span><br>       <span class="token keyword">listen</span>         <span class="token number">80</span><span class="token punctuation">;</span><br>       <span class="token keyword">listen</span>    <span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">:</span><span class="token number">80</span><span class="token punctuation">;</span><br>       <span class="token keyword">server_name</span>    yehudab<span class="token punctuation">.</span>com<span class="token punctuation">;</span><br>       <span class="token keyword">return</span>         <span class="token number">301</span> <span class="token keyword">https</span><span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span><span class="token variable">$server_name</span><span class="token variable">$request_uri</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+<pre class="language-nginx"><code class="language-nginx"><span class="token directive"><span class="token keyword">server</span></span> <span class="token punctuation">{</span><br><br>        <span class="token directive"><span class="token keyword">listen</span> <span class="token number">443</span> ssl http2 default_server</span><span class="token punctuation">;</span><br>        <span class="token directive"><span class="token keyword">listen</span> [::]:443 ssl http2 default_server</span><span class="token punctuation">;</span><br>        <span class="token directive"><span class="token keyword">include</span> snippets/gzip.conf</span><span class="token punctuation">;</span><br><br>        <span class="token directive"><span class="token keyword">ssl_certificate</span> /etc/nginx/ssl/live/yehudab.com/fullchain.pem</span><span class="token punctuation">;</span><br>        <span class="token directive"><span class="token keyword">ssl_certificate_key</span> /etc/nginx/ssl/live/yehudab.com/privkey.pem</span><span class="token punctuation">;</span><br>        <span class="token directive"><span class="token keyword">ssl_dhparam</span> /etc/nginx/ssl/live/yehudab.com/dhparam.pem</span><span class="token punctuation">;</span><br><br>        <span class="token directive"><span class="token keyword">root</span> /var/www/yehudab.com</span><span class="token punctuation">;</span><br><br>        <span class="token directive"><span class="token keyword">index</span> index.html index.htm index.php index.nginx-debian.html</span><span class="token punctuation">;</span><br><br>        <span class="token directive"><span class="token keyword">server_name</span> yehudab.com</span><span class="token punctuation">;</span><br><br>        <span class="token directive"><span class="token keyword">location</span> /</span> <span class="token punctuation">{</span><br>                <span class="token directive"><span class="token keyword">try_files</span> <span class="token variable">$uri</span> <span class="token variable">$uri</span>/ =404</span><span class="token punctuation">;</span><br>        <span class="token punctuation">}</span><br><br>        <span class="token directive"><span class="token keyword">location</span> /blog/</span> <span class="token punctuation">{</span><br>                <span class="token directive"><span class="token keyword">try_files</span> <span class="token variable">$uri</span> <span class="token variable">$uri</span>/ /blog/index.php?<span class="token variable">$args</span></span><span class="token punctuation">;</span><br>        <span class="token punctuation">}</span><br>        <span class="token directive"><span class="token keyword">location</span> ~ \.php$</span> <span class="token punctuation">{</span><br>                <span class="token directive"><span class="token keyword">include</span> snippets/fastcgi-php.conf</span><span class="token punctuation">;</span><br>                <span class="token directive"><span class="token keyword">fastcgi_pass</span> unix:/run/php/php7.0-fpm.sock</span><span class="token punctuation">;</span><br>        <span class="token punctuation">}</span><br><br>        <span class="token directive"><span class="token keyword">location</span> ~ /\.ht</span> <span class="token punctuation">{</span><br>                <span class="token directive"><span class="token keyword">deny</span> all</span><span class="token punctuation">;</span><br>        <span class="token punctuation">}</span><br>        <span class="token directive"><span class="token keyword">include</span> snippets/expires.conf</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><br><span class="token directive"><span class="token keyword">server</span></span> <span class="token punctuation">{</span><br>       <span class="token directive"><span class="token keyword">listen</span>         <span class="token number">80</span></span><span class="token punctuation">;</span><br>       <span class="token directive"><span class="token keyword">listen</span>    [::]:80</span><span class="token punctuation">;</span><br>       <span class="token directive"><span class="token keyword">server_name</span>    yehudab.com</span><span class="token punctuation">;</span><br>       <span class="token directive"><span class="token keyword">return</span>         <span class="token number">301</span> https://<span class="token variable">$server_name</span><span class="token variable">$request_uri</span></span><span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
 <p>לאחר סיום ההגדרות, ניתן לוודא את תמיכת האתר ל HTTP/2 באמצעות <a href="https://tools.keycdn.com/http2-test">דף הבדיקה של KeyCDN</a>.</p>
 
                 </div>
@@ -1373,7 +1373,7 @@ $ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
                     2 באפריל 2010
                 </span>
 
-                <a class="tag" href="/tag/gps">gps</a><a class="tag" href="/tag/ביקורת מוצרים">ביקורת מוצרים</a><a class="tag" href="/tag/שמישות">שמישות</a><a class="tag" href="/tag/garmin">garmin</a><a class="tag" href="/tag/gps">gps</a>
+                <a class="tag" href="/tag/gps">gps</a><a class="tag" href="/tag/ביקורת מוצרים">ביקורת מוצרים</a><a class="tag" href="/tag/שמישות">שמישות</a><a class="tag" href="/tag/garmin">garmin</a>
                 <div class="clear-both"></div>
 
                 <div class="content post">
@@ -2013,41 +2013,11 @@ $ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
   <div class="grid grid-flow-row grid-cols-3 gap-4 mb-2">
     
     
-        <a class="tag mx-auto" href="/tag/דפדפנים">דפדפנים&rlm; (10)</a>
-    
-        <a class="tag mx-auto" href="/tag/קוד פתוח ותוכנה חופשית">קוד פתוח ותוכנה חופשית&rlm; (5)</a>
-    
-        <a class="tag mx-auto" href="/tag/חלונות">חלונות&rlm; (1)</a>
-    
-        <a class="tag mx-auto" href="/tag/מק">מק&rlm; (4)</a>
-    
-        <a class="tag mx-auto" href="/tag/פיירפוקס">פיירפוקס&rlm; (10)</a>
-    
-        <a class="tag mx-auto" href="/tag/TwentyTwenty">TwentyTwenty&rlm; (1)</a>
-    
-        <a class="tag mx-auto" href="/tag/וורדפרס">וורדפרס&rlm; (8)</a>
-    
-        <a class="tag mx-auto" href="/tag/SSG">SSG&rlm; (1)</a>
-    
-        <a class="tag mx-auto" href="/tag/11ty">11ty&rlm; (3)</a>
-    
-        <a class="tag mx-auto" href="/tag/בלוג">בלוג&rlm; (1)</a>
-    
-        <a class="tag mx-auto" href="/tag/Docker">Docker&rlm; (1)</a>
-    
-        <a class="tag mx-auto" href="/tag/Hosting">Hosting&rlm; (1)</a>
-    
-        <a class="tag mx-auto" href="/tag/לינוקס">לינוקס&rlm; (2)</a>
-    
-        <a class="tag mx-auto" href="/tag/Nunjucks">Nunjucks&rlm; (1)</a>
-    
-        <a class="tag mx-auto" href="/tag/Comments">Comments&rlm; (1)</a>
-    
-        <a class="tag mx-auto" href="/tag/staticman">staticman&rlm; (1)</a>
-    
         <a class="tag mx-auto" href="/tag/ie8">ie8&rlm; (2)</a>
     
         <a class="tag mx-auto" href="/tag/מיקרוסופט">מיקרוסופט&rlm; (2)</a>
+    
+        <a class="tag mx-auto" href="/tag/דפדפנים">דפדפנים&rlm; (10)</a>
     
         <a class="tag mx-auto" href="/tag/כללי">כללי&rlm; (3)</a>
     
@@ -2065,6 +2035,8 @@ $ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
     
         <a class="tag mx-auto" href="/tag/CSS">CSS&rlm; (3)</a>
     
+        <a class="tag mx-auto" href="/tag/פיירפוקס">פיירפוקס&rlm; (10)</a>
+    
         <a class="tag mx-auto" href="/tag/אופרה">אופרה&rlm; (2)</a>
     
         <a class="tag mx-auto" href="/tag/ספארי">ספארי&rlm; (3)</a>
@@ -2072,6 +2044,8 @@ $ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
         <a class="tag mx-auto" href="/tag/נגנים">נגנים&rlm; (3)</a>
     
         <a class="tag mx-auto" href="/tag/Flip4Mac">Flip4Mac&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/מק">מק&rlm; (4)</a>
     
         <a class="tag mx-auto" href="/tag/גראצ&#39;ו מרקס">גראצ&#39;ו מרקס&rlm; (1)</a>
     
@@ -2082,6 +2056,8 @@ $ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
         <a class="tag mx-auto" href="/tag/Uncategorized">Uncategorized&rlm; (1)</a>
     
         <a class="tag mx-auto" href="/tag/שטויות שמוצאים באתרים">שטויות שמוצאים באתרים&rlm; (3)</a>
+    
+        <a class="tag mx-auto" href="/tag/וורדפרס">וורדפרס&rlm; (8)</a>
     
         <a class="tag mx-auto" href="/tag/אתרים תומכי פיירפוקס">אתרים תומכי פיירפוקס&rlm; (1)</a>
     
@@ -2113,17 +2089,41 @@ $ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
     
         <a class="tag mx-auto" href="/tag/מזג אויר">מזג אויר&rlm; (2)</a>
     
+        <a class="tag mx-auto" href="/tag/קוד פתוח ותוכנה חופשית">קוד פתוח ותוכנה חופשית&rlm; (5)</a>
+    
+        <a class="tag mx-auto" href="/tag/חלונות">חלונות&rlm; (1)</a>
+    
         <a class="tag mx-auto" href="/tag/wordpress">wordpress&rlm; (1)</a>
     
         <a class="tag mx-auto" href="/tag/שעון קיץ">שעון קיץ&rlm; (1)</a>
     
         <a class="tag mx-auto" href="/tag/חולצה">חולצה&rlm; (1)</a>
     
+        <a class="tag mx-auto" href="/tag/TwentyTwenty">TwentyTwenty&rlm; (1)</a>
+    
         <a class="tag mx-auto" href="/tag/nano">nano&rlm; (1)</a>
     
         <a class="tag mx-auto" href="/tag/php">php&rlm; (1)</a>
     
         <a class="tag mx-auto" href="/tag/vi">vi&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/לינוקס">לינוקס&rlm; (2)</a>
+    
+        <a class="tag mx-auto" href="/tag/SSG">SSG&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/11ty">11ty&rlm; (3)</a>
+    
+        <a class="tag mx-auto" href="/tag/בלוג">בלוג&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/Docker">Docker&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/Hosting">Hosting&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/Nunjucks">Nunjucks&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/Comments">Comments&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/staticman">staticman&rlm; (1)</a>
     
 </div>
 
