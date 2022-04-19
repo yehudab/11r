@@ -6,6 +6,10 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 module.exports = (config) => {
   config.addPlugin(pluginSyntaxhighlight);
   config.addPlugin(pluginRss);
+  config.setLiquidOptions({
+    strictFilters: false,
+    dynamicPartials: false
+  })
 
   config.addFilter('dateDisplay', require('./filters/date-display.js'));
   config.addFilter('dateAndTime', require('./filters/date-and-time.js'));
@@ -22,11 +26,11 @@ module.exports = (config) => {
 
   // Yaml
   config.addDataExtension("yaml", (contents) =>
-    yaml.safeLoad(contents)
+    yaml.load(contents)
   );
   // Yml
   config.addDataExtension("yml", (contents) =>
-    yaml.safeLoad(contents)
+    yaml.load(contents)
   );
 
   config.setBrowserSyncConfig({
