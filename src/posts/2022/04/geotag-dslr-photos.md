@@ -3,7 +3,7 @@ date: 2022-04-23T08:37:27Z
 status: publish
 author: יהודה
 type: post
-title: תיוג מיקום במצלמת DLSR
+title: תיוג מיקום במצלמת DSLR
 path: geotag-dslr-photos
 excerpt: ''
 tags:
