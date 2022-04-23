@@ -1169,7 +1169,7 @@ Staticman logo by &lt;a href=&quot;http://erlen.co.uk/&quot;&gt;Erlen Masson&lt;
 &lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2022/04/qr-clock.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;הורדת קבצי ההליכה והתמונות (כולל תמונת ה QR) למחשב והפעלת סקריפט שמתייג את המיקום תוך כדי ההתחשבות בהפרש הזמנים. לשם כך אני משתמש בשתי תוכנות בקוד פתוח: &lt;a href=&quot;https://github.com/mchehab/zbar&quot; title=&quot;zbar GitHub repo&quot;&gt;zbar&lt;/a&gt; שיודעת לחלץ את השעה מקוד ה QR, ו-&lt;a href=&quot;https://exiftool.org/&quot;&gt;ExifTool&lt;/a&gt; שיודעת (בין השאר) לתייג מיקום ע״פ קובץ GPS והפרש זמנים. את הסקריפט עצמו (גרסה למק, יתכן שלא יעבוד as-is בלינוקס) אפשר למצוא ב &lt;a href=&quot;https://github.com/yehudab/things/blob/main/geotag.sh&quot; title=&quot;geotag.sh in GitHub&quot;&gt;GitHub שלי&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;הורדת קבצי ההליכה והתמונות (כולל תמונת ה QR) למחשב והפעלת סקריפט שמתייג את המיקום תוך כדי ההתחשבות בהפרש הזמנים. לשם כך אני משתמש בשתי תוכנות בקוד פתוח: &lt;a href=&quot;https://github.com/mchehab/zbar&quot; title=&quot;zbar GitHub repo&quot;&gt;zbar&lt;/a&gt; שיודעת לחלץ את השעה מקוד ה QR, ו-&lt;a href=&quot;https://exiftool.org/&quot;&gt;ExifTool&lt;/a&gt; שיודעת לחלץ את שעת הצילום מתמונת שעון ה-QR  ולתייג מיקום ע״פ קובץ GPX והפרש זמנים. את הסקריפט עצמו (גרסה למק, יתכן שלא יעבוד as-is בלינוקס) אפשר למצוא ב &lt;a href=&quot;https://github.com/yehudab/things/blob/main/geotag.sh&quot; title=&quot;geotag.sh in GitHub&quot;&gt;GitHub שלי&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;בהנחה שהקלטת המסלול נשמרה בקובץ: track.pgx, תמונת שעון ה QR נשמרה בקובץ qr.jpeg, וכל התמונות מהמסלול הזה נשמרו בתיקיה הנוכחית, הפעלת הסקירפט נעשית ע״י שורה אחת:&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
