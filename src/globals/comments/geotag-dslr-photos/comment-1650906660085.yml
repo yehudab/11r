@@ -1,0 +1,7 @@
+_id: ad9a8970-c4ba-11ec-802a-ef941e8c4abc
+parentId: ''
+message: "אני לא מבין למה אצלך היה מסובך. אני משתמש ב-exiftool בשביל לתייג תמונות ממצלמה די ישנה לפי קובץ gpx בלי שום qr. השעה במצלמה מכוונת ידנית ולא צריך יותר. \r\nהפקודה הזו מספיקה:\r\n<code>exiftool -geotag ./*.gpx -overwrite_original</code> ."
+name: חתול
+email: b0c3702cd8088eee5db028e1e32c46ff
+url: 'https://hatul. info'
+date: '2022-04-25T17:11:00.082Z'
