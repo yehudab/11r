@@ -28,7 +28,7 @@
         {{ commentsList(postComments) }}
     {% endif %}
 
-    {% if (allowNewComments) %}
+    {% if (allowNewComments and not disableNewComments) %}
         <div id="respond" class="comment-new">
             {% include 'comment-form.njk' %}
         </div>

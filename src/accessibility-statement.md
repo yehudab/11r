@@ -1,12 +1,13 @@
 ---
 title: הצהרת נגישות
-date: '2021-08-21T21:18:00+03:00'
+date: '2022-08-21T21:18:00+03:00'
 status: publish
 path: accessibility-statement
 author: יהודה
 excerpt: ''
 type: page
 layout: post
+disableNewComments: true
 ---
 
 בלוג פשוט הוא אתר המנוהל ע״י אדם פרטי, ואינו נותן כל שרות או גובה כסף.
