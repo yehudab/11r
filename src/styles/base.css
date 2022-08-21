@@ -3,7 +3,7 @@
 
 html,
 body {
-  @apply antialiased text-gray-600 bg-gray-900;
+  @apply antialiased text-gray-500 bg-gray-900;
   font-family: sans-serif;
 }
 
