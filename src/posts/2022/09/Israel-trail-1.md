@@ -6,6 +6,7 @@ type: post
 title: שביל ישראל 1 - ארץ ירדן וחרמונים
 path: Israel-trail-1
 excerpt: ''
+ogImage: 'img/2022/09/shvil-1-1.jpeg'
 tags:
 - שביל ישראל
 
