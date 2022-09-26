@@ -35,5 +35,11 @@ fields:
 - type: list
   name: tags
   label: tags
+- name: ogImage
+  type: text
+  config:
+    required: false
+  label: Main image
+  description: Type the image's relative path to root without leading /
 pages:
 - src/posts/2020/10/staticman-for-11ty-comments.md
