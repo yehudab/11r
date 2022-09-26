@@ -61,6 +61,96 @@
         
             <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
                 <h2>
+                    <a class="block" href="/blog/2012/05/otp-il/">חישוב מסלול נסיעה בתחבורה ציבורית</a>
+                </h2>
+
+                <p class="excerpt"></p>
+
+                <span class="block md:inline md:float-left md:pt-4 pt-2 created-date" datetime="Fri May 18 2012 08:21:13 GMT+0000 (Coordinated Universal Time)">
+                    18 במאי 2012
+                </span>
+
+                
+                <div class="clear-both"></div>
+
+                <div class="content post">
+                    <p>משרד התחבורה החל לפרסם לפני כשבוע מאגר מידע חדש הכולל לוחות זמנים ונתיבים של התחבורה הציבורית בארץ. <a href="http://data.gov.il/dataset/383">המאגר</a> מפורסם לפי תקן פתוח של גוגל שנקרא GTFS. במסגרת שיתוף פעולה של מספר חברים ברשימת התפוצה של <a href="http://www.hamakor.org.il/">המקור</a>, הקמנו פיילוט שמדגים את יכולות המאגר. הקוד בפיילוט מבוסס על פרויקט OpenTripPlanner. תודה לירון על עבודת התרגום, ולשאר החברים על העידוד והתמיכה.</p>
+<p>עד להקמת שרת ציבורי, ניתן להתרשם מצילומי המסך:</p>
+<p>מסלול שלם:<br>
+<img src="/img/2012/05/9b691287-b202-4e4c-89ba-7f025f6a11ba.png" alt="מסלול שלם"></p>
+<p>התמקדות על מקטעים:<br>
+<img src="https://img.skitch.com/20120517-rpfeyxpb4nx3t8rpdw9qycshut.png" alt="התמקדות על מקטעים"></p>
+<p>גרסה להדפסה:<br>
+<img src="https://img.skitch.com/20120517-fnrapyjp427xmw9e86ha791d3g.png" alt="גרסה להדפסה"></p>
+<h3>ההסבר בהמשך מיועד למי שרוצה להקים שרת. לא למי שרוצה לחשב מסלול !! (מה שנקרא: Don't try this at home).</h3>
+<p>להקמת השרת, יש לבצע את הפעולות הבאות: (זה הרקע. הקוד בפסקה הבאה מבצע את הפעולות)</p>
+<p>לוודא שאזור הזמן של השרת הוא Asia/Jerusalem.<br>
+להוריד ולפתוח את הקוד של OpenTripPlanner (גודל הקובץ כ 90MB) וליצור קישור סימבולי ל / .<br>
+להוריד ולפתוח קובץ Open Street Map של ישראל מהאתר <a href="http://downloads.cloudmade.com/asia/western_asia/israel">cloudmade.com</a> (גודל הקובץ 22MB).<br>
+למצוא את כתובת קובץ ה GTFS <a href="http://data.gov.il/dataset/383">מאתר מאגרי המידע </a>של הממשלה, ולהוריד אותו. מכוון שהקובץ מוגש (זמנית?) משרת ftp ולא http, צריך לארח אותו מחדש על שרת אחר. בדוגמאות הקוד בהמשך האירוח הוא בשרת מקומי</p>
+<pre><code>$ date
+# Make sure timezone is correct. If not, run the command:
+# $ sudo ln -sf /usr/share/zoneinfo/Asia/Jerusalem /etc/localtime
+# make sure ntp is installed and running. if not, follow these instructions: &lt;a href=&quot;http://www.ehow.com/how_8251011_sync-time-centos.html&quot;&gt;http://www.ehow.com/how_8251011_sync-time-centos.html&lt;/a&gt;
+$ mkdir ~/GTFS
+$ cd ~/GTFS
+$ curl -L -O &quot;http://maps5.trimet.org/otp-dev/otp.zip&quot;
+$ curl -L -O &quot;http://downloads.cloudmade.com/asia/western_asia/israel/israel.osm.bz2&quot;
+$ curl -L -O &quot;ftp://199.203.58.18/israel-public-transportation.zip&quot;
+# !! replace IP above with correct IP
+$ unzip otp.zip
+$ bunzip2 israel.osm.bz2
+$ sudo ln -s ~/GTFS/otp /
+$ ln -s ~/GTFS/israel.osm /otp/cache/osm/
+</code></pre>
+<p>יש לערוך מספר קבצי הגדרות:</p>
+<pre><code>$ vi /otp/graph-builder.xml
+# Line 13, change properties to 'name=&quot;path&quot; value=&quot;/home/yehuda/GTFS/israel-public-transportation.zip&quot;'
+#              (or whatever path you placed the file in)
+# Line 40, change file name of OSM from or-wa.osm to israel.osm (just file part)
+$ vi /otp/bin/build-graph.sh
+# Line 1, change -Xmx2048m to -Xmx6114m. If you have more memory, put as much as possible
+$ vi /otp/bin/start-server.sh
+# Line 1, change -Xmx2048m to -Xmx4096m. If you have more memory, put as much as possible
+</code></pre>
+<p>בניית הגרף (משלב נתוני OSM עם נתוני תח&quot;ץ)</p>
+<pre><code>$ cd /otp
+$ bin/build-graph.sh &gt;&amp; ~/GTFS/build-graph.err
+# might take 15-30 minutes depending on processor power and memory
+$ ls -l /otp/Graph.obj
+# should be around 1GB
+</code></pre>
+<p>אחרי הריצה חשוב לוודא בלוג שאין תעופה בגלל חוסר זכרון !!</p>
+<p>עכשיו אפשר להריץ את השרת האפליקטיבי:</p>
+<pre><code>$ cd /otp
+$ bin/start-server.sh
+# Wait for line: &quot;Winstone Servlet Engine v0.9.10 running...&quot;
+</code></pre>
+<p>עכשיו אפשר לפתוח דפדן לכתובת : http://localhost:8080/opentripplanner-webapp/index.html (אם השרת אינו מקומי, להחליף localhost בכתובת השרת). ולנסות לחשב מסלול.</p>
+<p>תרגום לעברית:<br>
+לבדוק האם הקובץ ‎/otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js‏ קיים. אם לא, להוריד אותו <a href="https://github.com/openplans/OpenTripPlanner/blob/master/opentripplanner-webapp/src/main/webapp/js/otp/locale/Hebrew.js">מכאן</a> ולשמור בנתיב הנ&quot;ל. אחר-כך, יש לבצע מספר תיקונים בקוד:</p>
+<pre><code>$ vi /otp/webapps/opentripplanner-webapp/index.html
+# line 2, add 'dir=&quot;rtl&quot;' to html tag
+# line 53, duplicate this line and change file name to &quot;js/otp/locale/Hebrew.js&quot;
+$ vi /otp/webapps/opentripplanner-webapp/js/otp/config.js
+# line 12, change otp.locale.English to otp.locale.Hebrew (at end of line)
+# line 175, change value of 'enabled' to 'true'
+# line 177, add this to end of string:
+# + '&lt;div style=&quot;margin:10px auto;width:205px&quot;&gt;&lt;a href=&quot;http://www.opentripplanner.org/&quot;&gt;&lt;img src=&quot;images/logo-otp.png&quot; title=&quot;OpenTripPlanner&quot; /&gt;&lt;/a&gt;' +  '&lt;a style=&quot;margin:0 10px&quot; href=&quot;http://www.hamakor.org.il/&quot;&gt;&lt;img src=&quot;images/logo-hamakor.png&quot; title=&quot;עמותת המקור&quot; /&gt;&lt;/a&gt;' + '&lt;a href=&quot;http://www.hetz.biz/&quot;&gt;&lt;img src=&quot;images/logo-hetz.png&quot; title=&quot;חץ ביז&quot; /&gt;&lt;/a&gt;&lt;/div&gt;'
+$ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
+# line 28, change title to: &quot;אודות האתר&quot;
+# line 29, change content to:
+# 'אתר זה הוקם ע&quot;י יהודה ב. על בסיס נתוני &quot;לו&quot;ז ומידע גאוגראפי בתחבורה הציבורית&quot; הזמינים מאתר &lt;a href=&quot;http://data.gov.il/&quot;&gt;data.gov.il&lt;/a&gt; ועל בסיס תוכנת הקוד הפתוח &lt;a href=&quot;http://www.opentripplanner.org/&quot;&gt;OpenTripPlanner&lt;/a&gt;.' + '&lt;br&gt;' + 'תרגום התוכנה לעברית בוצע ע&quot;י ירון שהרבני. אירוח אתר זה בחסות &lt;a href=&quot;http://www.hamakor.org.il/&quot;&gt;עמותת המקור&lt;/a&gt; ובאדיבות &lt;a href=&quot;http://www.hetz.biz/&quot;&gt;חץ ביז&lt;/a&gt;.' + '&lt;br&gt;' +  'תנאי שימוש: עמותת המקור עושה כמיטב יכולתה בכדי לספק שירות זה על בסיס נתונים מדוייקים ועדכניים אולם ייתכנו טעויות. המידע ניתן כפי שהוא ללא אחריות. ראו גם &lt;a href=&quot;http://data.gov.il/dataset/383&quot;&gt;תנאי שימוש של משרד התחבורה&lt;/a&gt;.'
+</code></pre>
+<p>עכשיו לרפרש את הדפדפן ולהנות מההמשק העברי. יתכן שתתקבל הודעה על כשלון בחישוב המסלול. במקרה זה, יש לבחור תאריך חדש לחישוב בתחום המכוסה על-ידי הקובץ (יום הורדת הקובץ ועד שבועיים קדימה)</p>
+
+                </div>
+            </div>
+        
+    
+        
+            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
+                <h2>
                     <a class="block" href="/blog/2011/12/mako-vod-same-same-but-different/">מאקו VOD – קצת אחרת</a>
                 </h2>
 
@@ -190,32 +280,6 @@
                 <div class="content post">
                     <p>בעקבות הוספת נתוני הלחות היחסית באתר <a href="http://www.israelweather.co.il/">IsraelWeather</a> נשבר ווידג'ט מזג האויר. משתמשי מק מוזמנים לשדרג לגרסה 1.8 שמתקנת את התקלה, וכן מציגה את הלחות היחסית באמצעות tooltip. <a href="http://yehudab.com/widgets/WeatherIL-1d8.zip">שדרגו מכאן</a>.<br>
 <img src="https://img.skitch.com/20110107-k7w2wjgcbfssda6i2ffifjdfcr.png" alt="יהיה קר ורטוב"></p>
-
-                </div>
-            </div>
-        
-    
-        
-            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
-                <h2>
-                    <a class="block" href="/blog/2011/01/ff4-beta-shirt/">משתלם להיות בטא טסטר של פיירפוקס 4</a>
-                </h2>
-
-                <p class="excerpt"></p>
-
-                <span class="block md:inline md:float-left md:pt-4 pt-2 created-date" datetime="2011-01-07T10:30:09+02:00">
-                    7 בינואר 2011
-                </span>
-
-                <a class="tag" href="/tag/חולצה">חולצה</a><a class="tag" href="/tag/פיירפוקס">פיירפוקס</a>
-                <div class="clear-both"></div>
-
-                <div class="content post">
-                    <p>הנה מה שהגיע אלי במתנה היום בדואר:<br>
-<img src="/img/2011/01/ff4shirt-front.jpg" alt="FF4 beta tester shirt"></p>
-<p>וזו הכתובת על הצד האחורי:<br>
-<img src="/img/2011/01/ff4shirt-back.jpg" alt="FF4 beta tester shirt back"></p>
-<p>בהחלט עוד לא מאוחר להוריד את הבטא האחרונה (נכון לעכשיו היא השמינית במספר), ומי שמוריד <a href="http://firefoxlive.mozilla.org/">מהקישור הזה</a> גם עוזר לתרום משחקים לשני גורי פיירפוקס חמודים שגדלים בגן החיות ב Knoxville, Tennessee.</p>
 
                 </div>
             </div>
