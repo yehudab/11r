@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    
+    <meta itemprop="name" content="מפת השביל | בלוג פשוט">
+    <meta itemprop="description" content="צר עולמי כ  U+200A">
+
+    
+    <meta name="twitter:title" content="מפת השביל | בלוג פשוט">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="צר עולמי כ  U+200A">
+    <meta name="twitter:site" content="@yehudab">
+    <meta name="twitter:creator" content="@yehudab">
+    <meta name="twitter:image:src" content="">
+
+    
+    <meta name="og:title" content="מפת השביל | בלוג פשוט">
+    <meta name="og:description" content="צר עולמי כ  U+200A">
+    <meta name="og:image" content="">
+    <meta name="og:url" content="https://yehudab.com/">
+    <meta name="og:site_name" content="בלוג פשוט">
+    <meta name="og:locale" content="en_GB">
+    <meta name="og:type" content="website">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+
+    <title>
+      מפת השביל
+      
+       | בלוג פשוט</title>
+
+    <link rel="stylesheet" href="/assets/main.bundle.css">
+
+    
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <header>
+  <nav class="container mx-auto max-w-3xl px-8 pt-2 flex flex-wrap justify-between">
+    <div>
+      <h1>
+        <a href="/">בלוג פשוט</a>
+      </h1>
+      <p>צר עולמי כ  U+200A</p>
+    </div>
+
+    <ul class="flex flex-wrap sm:w-32 w-full mt-6 md:justify-between justify-evenly">
+      <li>
+        <a href="/blog/about">אודות</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+    <main class="container mx-auto max-w-3xl p-8 flex-grow">
+      
+    <p></p>
+    <div>
+        <h2>מפת השביל</h2>
+
+        
+
+        
+
+        
+            <p class="text-sm italic">נכתב ב<span datetime="2022-09-27T20:00:00+03:00">27 בספטמבר 2022</span>.</p>
+        
+
+        <div class="content post">
+            <p>אז זה מה שעשינו עד עכשיו</p>
+<pre><code>{
+  &quot;$schema&quot;: &quot;https://vega.github.io/schema/vega-lite/v5.json&quot;,
+  &quot;width&quot;: 300,
+  &quot;height&quot;: 600,
+  &quot;background&quot;: null,
+  &quot;view&quot;: {
+    &quot;stroke&quot;: &quot;transparent&quot;
+  },
+  &quot;layer&quot;: [
+    {
+      &quot;data&quot;: {
+        &quot;url&quot;: &quot;public/json/israel-topo.json&quot;,
+        &quot;format&quot;: {
+          &quot;type&quot;: &quot;topojson&quot;,
+          &quot;feature&quot;: &quot;boroughs&quot;
+        }
+      },
+      &quot;mark&quot;: {
+        &quot;type&quot;: &quot;geoshape&quot;,
+        &quot;stroke&quot;: &quot;white&quot;,
+        &quot;strokeWidth&quot;: 0
+      },
+      &quot;encoding&quot;: {
+        &quot;color&quot;: {
+          &quot;value&quot;: &quot;#bbb&quot;
+        }
+      }
+    },
+    {
+      &quot;data&quot;: {
+        &quot;url&quot;: &quot;public/json/lakes-topo.json&quot;,
+        &quot;format&quot;: {
+          &quot;type&quot;: &quot;topojson&quot;,
+          &quot;feature&quot;: &quot;boroughs&quot;
+        }
+      },
+      &quot;mark&quot;: {
+        &quot;type&quot;: &quot;geoshape&quot;,
+        &quot;stroke&quot;: &quot;white&quot;,
+        &quot;strokeWidth&quot;: 0
+      },
+      &quot;encoding&quot;: {
+        &quot;color&quot;: {
+          &quot;value&quot;: &quot;#63bfea&quot;
+        }
+      }
+    }
+  ]
+}
+</code></pre>
+
+        </div>
+
+<div class="comments">
+    
+
+    
+</div>
+    </div>
+
+    </main>
+    <footer class="bg-gray-900 pb-10">
+  <p class="block text-center text-sm mb-6">
+    CC-BY-SA
+    <a href="/">
+      Yehuda Bar Nir
+    </a>
+    &bull; Built with <a href="https://www.11ty.dev/">11ty</a> 
+    &bull; Based on <a target="_blank" href="https://github.com/reeseschultz/11r">11r</a> by
+    <a target="_blank" href="https://reeseschultz.com">
+      Reese Schultz
+    </a>
+    &bull; אתר נגיש <a href="/blog/accessibility-statement/">הצהרת נגישות</a> 
+  </p>
+
+</footer>
+    
+    <script src="/assets/lib/cash.js"></script>
+    <script src="/assets/main.bundle.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script async src="https://ackee.yehudab.com/blog-utils.js" 
+      data-ackee-server="https://ackee.yehudab.com"
+      data-ackee-domain-id="9c5f49e5-e4a2-44dd-99bf-9f38e447246c"
+      data-ackee-opts='{ "ignoreLocalhost": true, "detailed": true, "ignoreOwnVisits": true }'></script>
+  </body>
+</html>
