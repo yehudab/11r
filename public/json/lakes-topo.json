@@ -1,5 +1,49 @@
 {
     "type": "Topology",
+    "transform": {
+        "scale": [
+            0.00024398893510740538,
+            0.0003722804846626135
+        ],
+        "translate": [
+            35.358581416742226,
+            31.08643742381201
+        ]
+    },
+    "objects": {
+        "boroughs": {
+            "type": "GeometryCollection",
+            "geometries": [
+                {
+                    "type": "Polygon",
+                    "arcs": [
+                        [
+                            0
+                        ]
+                    ],
+                    "id": "הכנרת"
+                },
+                {
+                    "type": "Polygon",
+                    "arcs": [
+                        [
+                            1
+                        ]
+                    ],
+                    "id": "ים המלח צפון"
+                },
+                {
+                    "type": "Polygon",
+                    "arcs": [
+                        [
+                            2
+                        ]
+                    ],
+                    "id": "ים המלח דרום"
+                }
+            ]
+        }
+    },
     "arcs": [
         [
             [
@@ -386,176 +430,6 @@
                 145,
                 -30
             ]
-        ]
-    ],
-    "transform": {
-        "scale": [
-            0.00024398893510740538,
-            0.0003722804846626135
-        ],
-        "translate": [
-            35.358581416742226,
-            31.08643742381201
-        ]
-    },
-    "objects": {
-        "lakes": {
-            "type": "GeometryCollection",
-            "geometries": [
-                {
-                    "arcs": [
-                        [
-                            0
-                        ]
-                    ],
-                    "type": "Polygon",
-                    "properties": {
-                        "featurecla": "Lake",
-                        "scalerank": 5,
-                        "name": "Sea of Galilee",
-                        "name_abb": "Sea of Galilee",
-                        "name_alt": null,
-                        "note": null,
-                        "delta": null,
-                        "dam_name": null,
-                        "year": -99,
-                        "admin": null,
-                        "min_zoom": 4.7,
-                        "min_label": 6,
-                        "label": "Sea of Galilee",
-                        "wikidataid": "Q126982",
-                        "name_ar": "بحيرة طبريا",
-                        "name_bn": "গালীল সাগর",
-                        "name_de": "Genezareth",
-                        "name_en": "Sea of Galilee",
-                        "name_es": "mar de Galilea",
-                        "name_fr": "Tibériade",
-                        "name_el": "Θάλασσα της Γαλιλαίας",
-                        "name_hi": "गलील सागर",
-                        "name_hu": "Galileai-tenger",
-                        "name_id": "Galilea",
-                        "name_it": "Tiberiade",
-                        "name_ja": "ガリラヤ湖",
-                        "name_ko": "갈릴리 호",
-                        "name_nl": "Meer van Tiberias",
-                        "name_pl": "Jezioro Tyberiadzkie",
-                        "name_pt": "Mar da Galileia",
-                        "name_ru": "Тивериадское озеро",
-                        "name_sv": "Galileiska sjön",
-                        "name_tr": "Taberiye",
-                        "name_vi": "Biển Galilee",
-                        "name_zh": "加利利海",
-                        "ne_id": 1159114879,
-                        "name_fa": "دریاچه طبریه",
-                        "name_he": "הכנרת",
-                        "name_uk": "Тиверіадське озеро",
-                        "name_ur": "بحیرہ طبريہ",
-                        "name_zht": "加利利海"
-                    }
-                },
-                {
-                    "arcs": [
-                        [
-                            1
-                        ]
-                    ],
-                    "type": "Polygon",
-                    "properties": {
-                        "featurecla": "Alkaline Lake",
-                        "scalerank": 3,
-                        "name": "Dead Sea",
-                        "name_abb": "Dead Sea",
-                        "name_alt": "Salt Sea",
-                        "note": null,
-                        "delta": null,
-                        "dam_name": null,
-                        "year": -99,
-                        "admin": "admin-0 more",
-                        "min_zoom": 3,
-                        "min_label": 4,
-                        "label": "Dead Sea",
-                        "wikidataid": "Q23883",
-                        "name_ar": "البحر الميت",
-                        "name_bn": "মৃত সাগর",
-                        "name_de": "Totes Meer",
-                        "name_en": "Dead Sea",
-                        "name_es": "mar Muerto",
-                        "name_fr": "mer Morte",
-                        "name_el": "Νεκρά θάλασσα",
-                        "name_hi": "मृत सागर",
-                        "name_hu": "Holt-tenger",
-                        "name_id": "Laut Mati",
-                        "name_it": "Mar Morto",
-                        "name_ja": "死海",
-                        "name_ko": "사해",
-                        "name_nl": "Dode Zee",
-                        "name_pl": "Morze Martwe",
-                        "name_pt": "Mar Morto",
-                        "name_ru": "Мёртвое море",
-                        "name_sv": "Döda havet",
-                        "name_tr": "Lut",
-                        "name_vi": "Biển Chết",
-                        "name_zh": "死海",
-                        "ne_id": 1159126747,
-                        "name_fa": "دریای مرده",
-                        "name_he": "ים המלח",
-                        "name_uk": "Мертве море",
-                        "name_ur": "بحیرہ مردار",
-                        "name_zht": "死海"
-                    }
-                },
-                {
-                    "arcs": [
-                        [
-                            2
-                        ]
-                    ],
-                    "type": "Polygon",
-                    "properties": {
-                        "featurecla": "Alkaline Lake",
-                        "scalerank": 5,
-                        "name": "Dead Sea",
-                        "name_abb": "Dead Sea",
-                        "name_alt": null,
-                        "note": null,
-                        "delta": null,
-                        "dam_name": null,
-                        "year": -99,
-                        "admin": "admin-0 more",
-                        "min_zoom": 4.7,
-                        "min_label": 6,
-                        "label": "Dead Sea",
-                        "wikidataid": "Q23883",
-                        "name_ar": "البحر الميت",
-                        "name_bn": "মৃত সাগর",
-                        "name_de": "Totes Meer",
-                        "name_en": "Dead Sea",
-                        "name_es": "mar Muerto",
-                        "name_fr": "mer Morte",
-                        "name_el": "Νεκρά θάλασσα",
-                        "name_hi": "मृत सागर",
-                        "name_hu": "Holt-tenger",
-                        "name_id": "Laut Mati",
-                        "name_it": "Mar Morto",
-                        "name_ja": "死海",
-                        "name_ko": "사해",
-                        "name_nl": "Dode Zee",
-                        "name_pl": "Morze Martwe",
-                        "name_pt": "Mar Morto",
-                        "name_ru": "Мёртвое море",
-                        "name_sv": "Döda havet",
-                        "name_tr": "Lut",
-                        "name_vi": "Biển Chết",
-                        "name_zh": "死海",
-                        "ne_id": 1159126865,
-                        "name_fa": "دریای مرده",
-                        "name_he": "ים המלח",
-                        "name_uk": "Мертве море",
-                        "name_ur": "بحیرہ مردار",
-                        "name_zht": "死海"
-                    }
-                }
-            ]
-        }
-    }
+        ]        
+    ]
 }

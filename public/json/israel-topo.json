@@ -1,5 +1,31 @@
 {
     "type": "Topology",
+    "transform": {
+        "scale": [
+            0.0002358584556587596,
+            0.0004359036531270808
+        ],
+        "translate": [
+            34.200269441306034,
+            29.48969147300005
+        ]
+    },
+    "objects": {
+        "boroughs": {
+            "type": "GeometryCollection",
+            "geometries": [
+                {
+                    "type": "Polygon",
+                    "arcs": [
+                        [
+                            0
+                        ]
+                    ],
+                    "id": "ישראל"
+                }
+            ]
+        }
+    },
     "arcs": [
         [
             [
@@ -1495,200 +1521,5 @@
                 39
             ]
         ]
-    ],
-    "transform": {
-        "scale": [
-            0.0002358584556587596,
-            0.0004359036531270808
-        ],
-        "translate": [
-            34.200269441306034,
-            29.48969147300005
-        ]
-    },
-    "objects": {
-        "israel-1": {
-            "type": "GeometryCollection",
-            "geometries": [
-                {
-                    "arcs": [
-                        [
-                            0
-                        ]
-                    ],
-                    "type": "Polygon",
-                    "properties": {
-                        "ADM0_A3_IL": "ISR",
-                        "featurecla": "Admin-0 country",
-                        "scalerank": 0,
-                        "LABELRANK": 4,
-                        "SOVEREIGNT": "Israel",
-                        "SOV_A3": "IS1",
-                        "ADM0_DIF": 1,
-                        "LEVEL": 2,
-                        "TYPE": "Disputed",
-                        "TLC": "1",
-                        "ADMIN": "Israel",
-                        "ADM0_A3": "ISR",
-                        "GEOU_DIF": 0,
-                        "GEOUNIT": "Israel",
-                        "GU_A3": "ISR",
-                        "SU_DIF": 0,
-                        "SUBUNIT": "Israel",
-                        "SU_A3": "ISR",
-                        "BRK_DIFF": 1,
-                        "NAME": "Israel",
-                        "NAME_LONG": "Israel",
-                        "BRK_A3": "ISR",
-                        "BRK_NAME": "Israel",
-                        "BRK_GROUP": null,
-                        "ABBREV": "Isr.",
-                        "POSTAL": "IS",
-                        "FORMAL_EN": "State of Israel",
-                        "FORMAL_FR": null,
-                        "NAME_CIAWF": "Israel",
-                        "NOTE_ADM0": null,
-                        "NOTE_BRK": null,
-                        "NAME_SORT": "Israel",
-                        "NAME_ALT": null,
-                        "MAPCOLOR7": 3,
-                        "MAPCOLOR8": 2,
-                        "MAPCOLOR9": 5,
-                        "MAPCOLOR13": 9,
-                        "POP_EST": 9053300,
-                        "POP_RANK": 13,
-                        "POP_YEAR": 2019,
-                        "GDP_MD": 394652,
-                        "GDP_YEAR": 2019,
-                        "ECONOMY": "2. Developed region: nonG7",
-                        "INCOME_GRP": "1. High income: OECD",
-                        "FIPS_10": "-99",
-                        "ISO_A2": "IL",
-                        "ISO_A2_EH": "IL",
-                        "ISO_A3": "ISR",
-                        "ISO_A3_EH": "ISR",
-                        "ISO_N3": "376",
-                        "ISO_N3_EH": "376",
-                        "UN_A3": "376",
-                        "WB_A2": "IL",
-                        "WB_A3": "ISR",
-                        "WOE_ID": 23424852,
-                        "WOE_ID_EH": 23424852,
-                        "WOE_NOTE": "Exact WOE match as country",
-                        "ADM0_ISO": "ISR",
-                        "ADM0_DIFF": null,
-                        "ADM0_TLC": "ISR",
-                        "ADM0_A3_US": "ISR",
-                        "ADM0_A3_FR": "ISR",
-                        "ADM0_A3_RU": "ISR",
-                        "ADM0_A3_ES": "ISR",
-                        "ADM0_A3_CN": "ISR",
-                        "ADM0_A3_TW": "ISR",
-                        "ADM0_A3_IN": "ISR",
-                        "ADM0_A3_NP": "ISR",
-                        "ADM0_A3_PK": "PSX",
-                        "ADM0_A3_DE": "ISR",
-                        "ADM0_A3_GB": "ISR",
-                        "ADM0_A3_BR": "ISR",
-                        "ADM0_A3_PS": "ISR",
-                        "ADM0_A3_SA": "PSX",
-                        "ADM0_A3_EG": "ISR",
-                        "ADM0_A3_MA": "ISR",
-                        "ADM0_A3_PT": "ISR",
-                        "ADM0_A3_AR": "ISR",
-                        "ADM0_A3_JP": "ISR",
-                        "ADM0_A3_KO": "ISR",
-                        "ADM0_A3_VN": "ISR",
-                        "ADM0_A3_TR": "ISR",
-                        "ADM0_A3_ID": "ISR",
-                        "ADM0_A3_PL": "ISR",
-                        "ADM0_A3_GR": "ISR",
-                        "ADM0_A3_IT": "ISR",
-                        "ADM0_A3_NL": "ISR",
-                        "ADM0_A3_SE": "ISR",
-                        "ADM0_A3_BD": "PSX",
-                        "ADM0_A3_UA": "ISR",
-                        "ADM0_A3_UN": -99,
-                        "ADM0_A3_WB": -99,
-                        "CONTINENT": "Asia",
-                        "REGION_UN": "Asia",
-                        "SUBREGION": "Western Asia",
-                        "REGION_WB": "Middle East & North Africa",
-                        "NAME_LEN": 6,
-                        "LONG_LEN": 6,
-                        "ABBREV_LEN": 4,
-                        "TINY": -99,
-                        "HOMEPART": 1,
-                        "MIN_ZOOM": 0,
-                        "MIN_LABEL": 3,
-                        "MAX_LABEL": 8,
-                        "LABEL_X": 34.847915,
-                        "LABEL_Y": 30.911148,
-                        "NE_ID": 1159320895,
-                        "WIKIDATAID": "Q801",
-                        "NAME_AR": "إسرائيل",
-                        "NAME_BN": "ইসরায়েল",
-                        "NAME_DE": "Israel",
-                        "NAME_EN": "Israel",
-                        "NAME_ES": "Israel",
-                        "NAME_FA": "اسرائیل",
-                        "NAME_FR": "Israël",
-                        "NAME_EL": "Ισραήλ",
-                        "NAME_HE": "ישראל",
-                        "NAME_HI": "इज़राइल",
-                        "NAME_HU": "Izrael",
-                        "NAME_ID": "Israel",
-                        "NAME_IT": "Israele",
-                        "NAME_JA": "イスラエル",
-                        "NAME_KO": "이스라엘",
-                        "NAME_NL": "Israël",
-                        "NAME_PL": "Izrael",
-                        "NAME_PT": "Israel",
-                        "NAME_RU": "Израиль",
-                        "NAME_SV": "Israel",
-                        "NAME_TR": "İsrail",
-                        "NAME_UK": "Ізраїль",
-                        "NAME_UR": "اسرائیل",
-                        "NAME_VI": "Israel",
-                        "NAME_ZH": "以色列",
-                        "NAME_ZHT": "以色列",
-                        "FCLASS_ISO": "Admin-0 country",
-                        "TLC_DIFF": null,
-                        "FCLASS_TLC": "Admin-0 country",
-                        "FCLASS_US": null,
-                        "FCLASS_FR": null,
-                        "FCLASS_RU": null,
-                        "FCLASS_ES": null,
-                        "FCLASS_CN": null,
-                        "FCLASS_TW": null,
-                        "FCLASS_IN": null,
-                        "FCLASS_NP": null,
-                        "FCLASS_PK": "Unrecognized",
-                        "FCLASS_DE": null,
-                        "FCLASS_GB": null,
-                        "FCLASS_BR": null,
-                        "FCLASS_IL": null,
-                        "FCLASS_PS": null,
-                        "FCLASS_SA": "Unrecognized",
-                        "FCLASS_EG": null,
-                        "FCLASS_MA": null,
-                        "FCLASS_PT": null,
-                        "FCLASS_AR": null,
-                        "FCLASS_JP": null,
-                        "FCLASS_KO": null,
-                        "FCLASS_VN": null,
-                        "FCLASS_TR": null,
-                        "FCLASS_ID": null,
-                        "FCLASS_PL": null,
-                        "FCLASS_GR": null,
-                        "FCLASS_IT": null,
-                        "FCLASS_NL": null,
-                        "FCLASS_SE": null,
-                        "FCLASS_BD": "Unrecognized",
-                        "FCLASS_UA": null
-                    }
-                }
-            ]
-        }
-    }
+    ]
 }

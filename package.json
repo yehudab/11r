@@ -20,6 +20,7 @@
     "autoprefixer": "^10.4.4",
     "cash-dom": "^8.1.1",
     "cross-env": "^7.0.3",
+    "eleventy-charts": "^1.0.3",
     "intl": "^1.2.5",
     "js-yaml": "^4.1.0",
     "luxon": "^2.3.2",
