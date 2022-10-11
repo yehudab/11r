@@ -117,7 +117,7 @@ hr {
 .previous-page,
 .first-page,
 .last-page {
-  @apply font-bold whitespace-no-wrap text-center;
+  @apply font-bold whitespace-nowrap text-center;
 }
 
 .next-page::before {

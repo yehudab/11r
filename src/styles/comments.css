@@ -55,7 +55,7 @@
 }
 
 .comments-form button:focus {
-  @apply shadow-outline outline-none;
+  @apply ring outline-none;
 }
 
 .comments button.comment-reply {
