@@ -1,0 +1,19 @@
+---json
+{
+  "permalink": "/sitemap.xml",
+  "eleventyExcludeFromCollections": true,
+  "metadata": {
+    "url": "https://yehudab.com/"
+  }
+}
+---
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for page in collections.postsWithoutDrafts %}
+  {%- set absolutePostUrl %}{{ page.url | url | absoluteUrl(metadata.url) }}{% endset %}
+  <url>
+    <loc>{{ absolutePostUrl }}</loc>
+    <lastmod>{{ page.date | htmlDateString }}</lastmod>
+  </url>
+{%- endfor %}
+</urlset>

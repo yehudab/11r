@@ -14,6 +14,7 @@ module.exports = (config) => {
   })
 
   config.addFilter('dateDisplay', require('./filters/date-display.js'));
+  config.addFilter('htmlDateString', require('./filters/html-date-string.js'));
   config.addFilter('dateAndTime', require('./filters/date-and-time.js'));
   config.addFilter('yearMonthFile', require('./filters/year-month-file.js'));
   config.addFilter('commentsTree', require('./filters/comments-tree.js'));
