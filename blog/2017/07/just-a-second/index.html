@@ -76,9 +76,9 @@
             <p>רק שניה מפרידה בין השעה 03:14:07 ל 03:14:08 בתאריך: 19 בינואר 2038. לכאורה, זה לא צריך לעניין אף אחד. אבל אם אתה יוניקס/טיים גיק כמוני, התאריך הזה מייד אמור להדליק לך נורה אדומה.<br>
 למה? כי בשניה הזאת יעברו בדיוק 2,147,483,648 (או 2 בחזקת 31) שניות מתאריך 1.1.1970 בשעה 00:00:00. מחשב לינוקס בארכיטקטורת 32 ביט לא יכול להציג את הזמן הזה.<br>
 נסו להריץ את הפקודה הבאה על מחשב הלינוקס הקרוב:</p>
-<pre class="language-bash"><code class="language-bash"><span class="token function">date</span> --date<span class="token operator">=</span><span class="token string">'@2147483647'</span></code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">date</span> <span class="token parameter variable">--date</span><span class="token operator">=</span><span class="token string">'@2147483647'</span></code></pre>
 <p>או במערכות מבוססות BSD (כמו macOS), את הפקודה הזאת:</p>
-<pre class="language-bash"><code class="language-bash"><span class="token function">date</span> -r <span class="token number">2147483647</span></code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">date</span> <span class="token parameter variable">-r</span> <span class="token number">2147483647</span></code></pre>
 <p>זה אמור לעבוד בלי בעיה. אבל אם תוסיפו שניה נוספת (כלומר להחליף את ה-7 ב-8), אתם עלולים לראות משהו כזה:<br>
 <img src="/img/2017/Unix-date-32-bit.jpg" alt="2038 on 32 bit Linux "></p>
 <p>לעומת זאת, על מחשב 64 ביט, התוצאה תקינה:<br>
