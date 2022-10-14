@@ -2,11 +2,13 @@ const yaml = require("js-yaml");
 const siteSettings = require('./src/globals/site.json');
 const pluginSyntaxhighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
-// const charts = require('eleventy-charts');
+const charts = require('eleventy-charts');
 
 module.exports = (config) => {
-  // config.addPlugin(charts);
-  config.addPlugin(pluginSyntaxhighlight);
+  config.addPlugin(charts);
+  config.addPlugin(pluginSyntaxhighlight, {
+    ignoreInvalidLanguages: "md"
+  });
   config.addPlugin(pluginRss);
   config.setLiquidOptions({
     strictFilters: false,
