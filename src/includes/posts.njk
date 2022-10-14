@@ -21,6 +21,9 @@
 
                 <div class="content post">
                     {{ post.templateContent | safe }}
+                    {%- if post.data.trailSerial %}
+                        {%- include 'trail-data.njk' %}
+                    {% endif %}
                 </div>
             </div>
         {% endif %}

@@ -29,10 +29,10 @@ permalink: "blog/{{ page.inputPath | yearMonthFile }}/index.html"
 
         <div class="content post">
             {{ content | safe }}
+            {%- if trailSerial %}
+                {%- include 'trail-data.njk' %}
+            {% endif %}
         </div>
-        {%- if trailSerial %}
-            {%- include 'trail-data.njk' %}
-        {% endif %}
 
         {%- set postComments = comments[page.fileSlug] | commentsTree %}
         {%- set allowNewComments = date | isCommentable %}
