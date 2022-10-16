@@ -25,10 +25,10 @@ disableNewComments: true
   "layer": [
     {
       "data": {
-        "url": "public/json/israel-topo.json",
+        "url": "public/topojson/israel.topojson",
         "format": {
           "type": "topojson",
-          "feature": "boroughs"
+          "feature": "israel"
         }
       },
       "mark": {
@@ -44,10 +44,10 @@ disableNewComments: true
     },
     {
       "data": {
-        "url": "public/json/lakes-topo.json",
+        "url": "public/topojson/lakes.topojson",
         "format": {
           "type": "topojson",
-          "feature": "boroughs"
+          "feature": "lakes"
         }
       },
       "mark": {
@@ -63,10 +63,10 @@ disableNewComments: true
     },
     {
       "data": {
-        "url": "public/json/trail-1.json",
+        "url": "public/topojson/trail-01.topojson",
         "format": {
           "type": "topojson",
-          "feature": "trail-1"
+          "feature": "trail-01"
         }
       },
       "mark": {
