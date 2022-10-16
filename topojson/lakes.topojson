@@ -11,7 +11,7 @@
         ]
     },
     "objects": {
-        "boroughs": {
+        "lakes": {
             "type": "GeometryCollection",
             "geometries": [
                 {
