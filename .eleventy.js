@@ -51,6 +51,12 @@ module.exports = (config) => {
     )
   );
 
+  config.addCollection('postsAndPagesWithoutDrafts', (collection) =>
+    [...collection.getFilteredByGlob('src/{post,page}s/**/*.md')].filter(
+      (post) => !post.data.draft && post.data.status === 'publish'
+    )
+  );
+
   return {
     pathPrefix: siteSettings.baseUrl,
     dir: {

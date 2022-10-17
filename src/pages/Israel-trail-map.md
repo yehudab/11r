@@ -1,8 +1,9 @@
 ---
 title: שביל ישראל - ראשי
 date: '2022-09-27T20:00:00+03:00'
+lastUpdate: '2022-10-17T20:00:00+03:00'
 status: publish
-path: about
+path: Israel-trail-map
 author: יהודה
 excerpt: ''
 type: page
