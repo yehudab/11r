@@ -2,6 +2,7 @@
     trailSerial: trailSerial,
     trailStart: trailStart,
     trailEnd: trailEnd,
+    trailDirection: trailDirection,
     trailDistance: trailDistance,
     trailAscend: trailAscend,
     trailDescend: trailDescend,
@@ -38,6 +39,14 @@
         </td>
         <td>
             {{data.trailEnd}}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            כוון:
+        </td>
+        <td>
+            {{ "מצפון לדרום" if data.trailDirection == "southbound" else "מדרום לצפון" }}
         </td>
     </tr>
     <tr>

@@ -13,6 +13,7 @@ tags:
 trailSerial: 1
 trailStart: בית אוסישקין
 trailEnd: גן הצפון
+trailDirection: southbound
 trailDistance: 7.93
 trailAscend: 13
 trailDescend: 103
