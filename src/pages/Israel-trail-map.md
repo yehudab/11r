@@ -80,6 +80,25 @@ disableNewComments: true
           "value": "#B56045"
         }
       }
+    },
+    {
+      "data": {
+        "url": "public/topojson/trail-02.topojson",
+        "format": {
+          "type": "topojson",
+          "feature": "trail-02"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "filled": false,
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "color": {
+          "value": "#B56045"
+        }
+      }
     }
   ]
 }
@@ -89,3 +108,4 @@ disableNewComments: true
 ### תאור הקטעים
 #### עונה 1 - 2022-2023
 1. [ארץ ירדן וחרמונים](/blog/2022/09/Israel-trail-1)
+2. [אין דבר](/blog/2022/10/Israel-trail-2)
