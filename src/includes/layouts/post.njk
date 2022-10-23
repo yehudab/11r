@@ -9,10 +9,6 @@ permalink: "blog/{{ page.inputPath | yearMonthFile }}/index.html"
     <div>
         <h2>{{ title }}</h2>
 
-        {% if excerpt %}
-            <p class="excerpt">{{ excerpt }}</p>
-        {% endif %}
-
         {% if tags %}
             <div class="mb-2">
                 {% for tag in tags %}
