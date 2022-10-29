@@ -18,13 +18,13 @@
     <meta name="twitter:image:src" content="{% if ogImage %}{{ site.url }}{{ site.baseUrl }}{{ ogImage }}{% endif %}">
 
     {# Open Graph #}
-    <meta name="og:title" content="{% if metaTitle %}{{ metaTitle }}{{ ' | '}}{% endif %}{% if title %}{{ title }}{{ ' | '}}{% endif %}{% if site.name %}{{ site.name }}{% endif %}">
-    <meta name="og:description" content="{% if excerpt %}{{ excerpt }}{% else %}{{ site.description }}{% endif %}">
-    <meta name="og:image" content="{% if ogImage %}{{ site.url }}{{ site.baseUrl }}{{ ogImage }}{% endif %}">
-    <meta name="og:url" content="{{ site.url }}{{ site.baseUrl }}">
-    <meta name="og:site_name" content="{{ site.name }}">
-    <meta name="og:locale" content="en_GB">
-    <meta name="og:type" content="website">
+    <meta property="og:title" content="{% if metaTitle %}{{ metaTitle }}{{ ' | '}}{% endif %}{% if title %}{{ title }}{{ ' | '}}{% endif %}{% if site.name %}{{ site.name }}{% endif %}">
+    <meta property="og:description" content="{% if excerpt %}{{ excerpt }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="og:image" content="{% if ogImage %}{{ site.url }}{{ site.baseUrl }}{{ ogImage }}{% endif %}">
+    <meta property="og:url" content="{{ site.url }}{{ site.baseUrl }}">
+    <meta property="og:site_name" content="{{ site.name }}">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:type" content="website">
 
     <link rel="icon" type="image/x-icon" href="{{ site.baseUrl }}favicon.ico"/>
 
