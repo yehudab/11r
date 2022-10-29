@@ -5,7 +5,8 @@ lastUpdate: '2022-10-17T20:00:00+03:00'
 status: publish
 path: Israel-trail-map
 author: יהודה
-excerpt: ''
+excerpt: 'מפת ההתקדמות לאורך כל שביל ישראל וקישור לתאורי הקטעים ע״פ עונות'
+ogImage: 'img/2022/09/shvil-1-6.jpeg'
 type: page
 layout: post
 disableNewComments: true
@@ -109,3 +110,7 @@ disableNewComments: true
 #### עונה 1 - 2022-2023
 1. [ארץ ירדן וחרמונים](/blog/2022/09/Israel-trail-1)
 2. [אין דבר](/blog/2022/10/Israel-trail-2)
+
+---
+
+![שביל ישראל](/img/2022/09/shvil-1-6.jpeg "שביל ישראל")
