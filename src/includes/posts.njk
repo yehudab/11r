@@ -6,6 +6,15 @@
                     <a class="block" href="{{ post.url | url }}">{{ post.data.title }}</a>
                 </h2>
 
+                {%- set numComments = comments[post.fileSlug] | commentsCount %}
+                {%- if numComments.count > 0 -%}
+                    <a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
+                        href="{{ post.url | url }}#comments"
+                        title="{{ numComments.text }}">
+                        💬 {{ numComments.count }}
+                    </a>
+                {%- endif -%}
+
                 <span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="{{ post.data.date }}">
                     {{ post.data.date | dateDisplay }}
                 </span>

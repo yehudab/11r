@@ -20,6 +20,7 @@ module.exports = (config) => {
   config.addFilter('dateAndTime', require('./filters/date-and-time.js'));
   config.addFilter('yearMonthFile', require('./filters/year-month-file.js'));
   config.addFilter('commentsTree', require('./filters/comments-tree.js'));
+  config.addFilter('commentsCount', require('./filters/comments-count.js'));
   config.addFilter('getTags', require('./filters/get-tags.js'));
   config.addFilter('isCommentable', require('./filters/is-commentable.js'));
 
