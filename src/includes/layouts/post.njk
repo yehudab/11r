@@ -13,7 +13,7 @@ permalink: "blog/{{ page.inputPath | yearMonthFile }}/index.html"
             <div class="mb-2">
                 {% for tag in tags %}
                     {%- if tag !== "post" -%}
-                        <a class="tag {{ tag | replace('.', '') }}" href="{{ site.baseUrl }}tag/{{ tag }}">{{ tag }}</a>
+                        <a class="tag {{ tag | replace('.', '') }}" href="{{ site.baseUrl }}tag/{{ tag }}/">{{ tag }}</a>
                     {%- endif -%}
                 {% endfor %}
             </div>

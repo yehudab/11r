@@ -12,7 +12,7 @@
 
                 {% for tag in post.data.tags %}
                     {%- if tag !== "post" -%}
-                        <a class="tag" href="{{ site.baseUrl }}tag/{{ tag }}">{{ tag }}</a>
+                        <a class="tag" href="{{ site.baseUrl }}tag/{{ tag }}/">{{ tag }}</a>
                     {%- endif -%}
                 {% endfor %}
                 <div class="clear-both"></div>
