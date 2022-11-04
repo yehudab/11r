@@ -4,7 +4,7 @@ status: publish
 author: יהודה
 type: post
 title: ניהול תגובות באמצעות staticman
-excerpt: ''
+excerpt: 'בפוסט הקודם הסברתי איך לייבא את התגובות הישנות מ Wordpress ל-11ty. בפוסט הזה, אראה איך להתקין שרת Staticman, ואיך לחבר אליו את טופס התגובות באתר.'
 ogImage: 'img/2020/10/staticman-logo.png'
 tags:
 - staticman

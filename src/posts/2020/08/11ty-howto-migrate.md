@@ -5,7 +5,8 @@ author: יהודה
 type: post
 title: מוורדפרס ל-11ty
 path: 11ty-howto-migrate
-excerpt: ''
+excerpt: 'אז אחרי שמחליטים על מעבר ל-11ty, צריך לדאוג לשמר את תוכן הפוסטים והתגובות.
+בשלב הראשון של המעבר יש צורך ליצא את כל התוכן מוורדפרס ל-Markdown. לטובת זה השתמשתי בפלאגאין לוורדפרס שפותח דווקא עבור Gatsby ונקרא: WP Gatsby Markdown Exporter.'
 ogImage: 'img/2020/08/export.png'
 tags:
 - Nunjucks
