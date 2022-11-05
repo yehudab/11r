@@ -1,13 +1,6 @@
-const Hebrew = new Intl.DateTimeFormat('he',
-    {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-        hour: 'numeric',
-        minute: 'numeric',
-        hour12: false
-    }
-);
+const tz = require('timezone/loaded');
 
-module.exports = (date) =>
-    Hebrew.format(new Date(date));
+module.exports = (date) => {
+    const utc = tz(date);
+    return tz(utc, '%-d ב%B %Y בשעה %-H:%M', 'he_IL', 'Asia/Jerusalem')
+};

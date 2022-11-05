@@ -1,8 +1,6 @@
-const IntlPolyfill = require('intl');
-Intl.NumberFormat = IntlPolyfill.NumberFormat;
-Intl.DateTimeFormat = IntlPolyfill.DateTimeFormat;
+const tz = require('timezone/loaded');
 
-const Hebrew = new Intl.DateTimeFormat('he', { year: 'numeric', month: 'long', day: 'numeric' });
-
-module.exports = (date) =>
-  Hebrew.format(new Date(date));
+module.exports = (date) => {
+    const utc = tz(date);
+    return tz(utc, '%-d ב%B %Y', 'he_IL', 'Asia/Jerusalem')
+};
