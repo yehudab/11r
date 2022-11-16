@@ -3,7 +3,8 @@ title: 'חם יותר מיולי'
 date: '2017-07-07T20:19:11+03:00'
 status: publish
 author: יהודה
-excerpt: ''
+excerpt: 'טלפון ציבורי, רדיו טרנזיסטור, מסוף VT 100, ותקליט של סטיבי וונדר הם החומרים שמרכיבים את הפעם הראשונה שהרווחתי משהו מלדעת לתכנת'
+ogImage: 'img/2017/hotter-then-july.jpg'
 type: post
 id: 801
 category:

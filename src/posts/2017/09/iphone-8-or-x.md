@@ -3,7 +3,8 @@ title: 'איפון 8 או X?'
 date: '2017-09-21T00:24:08+03:00'
 status: publish
 author: יהודה
-excerpt: ''
+excerpt: 'בקרוב יגיעו האייפונים החדשים לארץ (לפי iDigital: ״בצמוד להשקה בארה״ב״), ושאלת מיליון הדולר — או יותר נכון 1000 הדולר — היא אייפון 8 או X?'
+ogImage: 'img/2017/gruber-iphone-8-footnote.jpg'
 type: post
 id: 819
 category:

@@ -3,7 +3,8 @@ title: HTTP/2
 date: '2017-07-07T17:18:52+03:00'
 status: publish
 author: יהודה
-excerpt: ''
+excerpt: 'עוד שדרוג קטן לבלוג. הפעם העברתי את השרת מ apache ל nginx, ועל הדרך הפעלתי HTTP/2. זה אמור לשפר את הביצועים, למרות שאני לא ממש מרגיש בזה בנתיים.'
+ogImage: 'img/2017/nginx-logs-sm.jpg'
 type: post
 id: 796
 category:

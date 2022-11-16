@@ -3,7 +3,8 @@ title: 'מדריך למתחילים בסקראץ׳'
 date: '2014-08-16T18:02:22+03:00'
 status: publish
 author: יהודה
-excerpt: ''
+excerpt: 'סקראץ׳ (Scratch) היא שפת תיכנות שמאפשרת ליצור סיפורים אינטראקטיביים, אנימציות, משחקים, מוזיקה ואומנות. המדריך הזה יאפשר לכם ליצור פרויקט בסקראץ׳.'
+ogImage: 'img/2014/08/Scratch_cat_med.png'
 type: post
 id: 712
 category:

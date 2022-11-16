@@ -6,6 +6,7 @@ type: post
 title: תיוג מיקום במצלמת DSLR
 path: geotag-dslr-photos
 excerpt: 'אחרי שנים רבות של צילום במצלמת הטלפון בלבד, החלטתי לחזור למקורות ולקנות מצלמה דיגיטלית ״אמיתית״. בחרתי בדגם כניסה של Canon, וצימדתי לו עדשת פריים טובה, ועוד כמה עדשות זום סבירות.'
+ogImage: 'img/2022/04/photo-in-gaig-gps-after-geo-tagging.png'
 tags:
 - Geotagging
 - קוד פתוח ותוכנה חופשית
