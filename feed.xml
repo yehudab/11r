@@ -988,10 +988,10 @@ $ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
       <link href="https://yehudab.com/blog/2017/07/live-blogging-1-5-billion/"/>
       <updated>2017-07-13T17:58:18Z</updated>
       <id>https://yehudab.com/blog/2017/07/live-blogging-1-5-billion/</id>
-      <content type="html">&lt;pre&gt;
-&lt;script src=&quot;https://yehudab.com/scripts/msec-ticker.js&quot;&gt;
-&lt;/script&gt;
+      <content type="html">&lt;figure class=&quot;text-center p-4 border-slate-600	border-2&quot;&gt;
+&lt;pre id=&quot;to-be-replaced-by-time-ticker&quot; class=&quot;text-2xl&quot;&gt;
 &lt;/pre&gt;
+&lt;/figure&gt;
 </content>
     </entry>
     
