@@ -63,6 +63,49 @@
         
             <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
                 <h2 class="mb-2">
+                    <a class="block" href="/blog/2010/04/garmin-nuvi-speedtraps/">Garmin nüvi – מכמונות מהירות</a>
+                </h2><a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
+                        href="/blog/2010/04/garmin-nuvi-speedtraps/#comments"
+                        title="4 תגובות">
+                        💬 4
+                    </a><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="2010-04-05T19:09:35+03:00">
+                    5 באפריל 2010
+                </span>
+
+                <a class="tag" href="/tag/garmin/">garmin</a><a class="tag" href="/tag/gps/">gps</a><a class="tag" href="/tag/speedtraps/">speedtraps</a>
+                <div class="clear-both"></div>
+
+                <div class="content post">
+                    <p>הניבי מגיע ללא מידע על מכמונות מהירות בישראל. עם זאת, יש תמיכה בקבלת התרעה קולית וויזואלית כאשר המכונית עוברת במהירות מסויימת ומעלה ליד נקודת עניין (POI) מסוג מסויים. רשמית זה מיועד לקבלת התרעה לפני שמגיעים לאזור שבו כדאי להוריד מהירות כמו ליד בית-ספר או בור בכביש, אבל בפועל כולם יודעים מה המטרה.<br>
+כדי לנצל את היכולת הזאת, צריך להכין או להוריד קובץ מכמונות מהירות מעודכן בפורמט GPX או CSV, ולהעלות אותו למכשיר באמצעות תוכנת <a href="http://www8.garmin.com/products/poiloader/">POI Loader</a> המסופקת חינם ע&quot;י גרמין. שוב, יש לציין לחיוב, ישנה גרסה למק או לחלונות.</p>
+<p>קובץ המכמונות שהורדתי התקבל דרך קבוצת הדיון <a href="http://groups.google.co.il/group/1go_speedcamupdates">1go – התראה על מכמונות מהירות בישראל באמצעות GPS</a> בגוגל. הקבוצה סגורה, וכדי להוריד את הקבצים צריך להגיש בקשה, כפי שמפורט <a href="http://topspeed.co.il/forum/forum_posts.asp?TID=32967&amp;PN=1&amp;TPN=1">בפורום TopSpeed</a>.<br>
+הקובץ עצמו מפורסם בפורמט תואם iGo (נכון לפרסום הפוסט, הקובץ האחרון הוא: 1go_iGO_091206.zip), ולפני ההעלאה לגרמין צריך לבצע המרה. ההמרה נעשית ע&quot;י קובץ Excel שגם אותו ניתן להוריד דרך הקבוצה.<br>
+<img src="http://img.skitch.com/20100405-eph2hc5eudu4m4erbcqupt3676.png" alt="קבצים להורדה"><br>
+אחרי שנפתח את ה-zip-ים, נזדקק לשני קבצים מתוכם: האחד נקרא SpeedcamUpdates.spud והשני SpeedcamUpdates 0.99-symbian.xls . צריך לפתוח את קובץ ה Excel וללחוץ על כפתור ה-Import. אחר-כך, יש לבחור בדיאלוג את קובץ ה spud , ללחוץ Open ולוודא שהטבלה מתמלאת. השלב הבא הוא מעבר ללשונית שנקראת symbian (מסומנת בצהוב). בלשונית הזאת נבחר מלבן המכיל את 3 העמודות הראשונות של כל השורות בהן מופיע מידע (כ 400 שורות), כולל שורת הכותרת.<br>
+<img src="http://img.skitch.com/20100405-8eddbrxd8t3xdhj7cq1u4byg7g.png" alt="בחירת המלבן"><br>
+את המלבן הזה נעתיק ונדביק בלשונית חדשה. את תוכן הלשונית החדשה שומרים בפורמט csv. חשוב מאוד: בשם הקובץ הנשמר יש לדאוג לסיומת speed_NN.csv (לדוגמה garmin_speed_60.csv) כדי שהמכשיר ידע שאלה נקודות של מכמונות מהירות. המספר 60 הוא ברירת המחדל להתראת מהירות (בקמ&quot;ש), למרות שבדרך-כלל אין צורך בו משום שהמידע עבור כל מכמונת מופיע בקובץ עצמו. <strong>חשוב מאוד: אין לפרסם את הקובץ המומר בכל צורה שהיא</strong>.</p>
+<p>ישנן מספר בעיות ידועות בהפעלת ה Excel:</p>
+<ul>
+<li>הרצת ההמרה נעשית ע&quot;י הפעלת מקרו. יש לאפשר ל Excel להריץ אותם (נקרא לפעמים Active Content)</li>
+<li>למשתמשי מק: לא ניתן להשתמש ב OpenOffice או NeoOffice, מכוון שהקובץ מכיל קוד ב VB שאינו נתמך ע&quot;י אופן אופיס. לא בדקתי על Office של מיקרוסופט למק.</li>
+<li>בפתיחת הקובץ על חלונות, תתכן הודעת שגיאה על ספריה חסרה. בחלון שנפתח צריך לבטל את<br>
+הסימון ליד השורה שמתחילה ב MISSING, ואז ללחוץ OK.<br>
+<img src="http://img.skitch.com/20100405-1rp6891hd9p6pdrbwm8ey6g5jh.png" alt="תקלת מקרו"></li>
+</ul>
+<p>השלב האחרון הוא העלאה של הקובץ למכשיר. לשם כך, נחבר את הניבי בכבל usb למחשב. אחר-כך, יש להריץ את תוכנת ה POI loader, ולוודא שהיא זיהתה את המכשיר. בהמשך יש לבחור את ברירות המחדל, פרט למסך המוצג למטה בו יש לבחור את הפולדר בו שמור ה csv והמידות אותן יש לשנות לקמ&quot;ש/מטרים.<br>
+<img src="http://img.skitch.com/20100405-ee6mkfgrpqbxtkhrbywqup2ra3.jpg" alt="POI loader"></p>
+<p>אחרי העלאת הנקודות למכשיר, אפשר להתחיל בנווט כרגיל. בכל פעם שמתקרבים למכמונת, ישמעו שני צפצופים רצופים (בלי קשר למהירות), תוצג הודעה עם מהירות הסף של המכמונת, ותראה נקודה ירוקה על הכביש לסימון המיקום. אם עוברים על מהירות הסף (שהיא בדרך-כלל 10 קמ&quot;ש מעל המהירות המותרת), צבע ההודעה הופך לאדום, ונשמעים צפצופים רצופים כל עוד המהירות גבוהה מהמוגדר.<br>
+<img src="http://img.skitch.com/20100405-wfxdr21jef4i3jxcefr66i855.png" alt="מכמונת קרובה"></p>
+<p>חסרון מסויים של התהליך המתואר כאן, הוא שהמידע על כוון המכמונת הולך לאיבוד. זה גורם לכך שמקבלים התראה גם בדרך הלוך וגם בדרך חזור, ולעיתים רק כשחוצים את כביש שבו יש מכמונת קרובה.</p>
+<p>סעו בזהירות.</p>
+
+                </div>
+            </div>
+        
+    
+        
+            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
+                <h2 class="mb-2">
                     <a class="block" href="/blog/2010/04/garmin-nuvi-review-1/">סקירה: Garmin nüvi 1310 – חלק ראשון</a>
                 </h2><a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
                         href="/blog/2010/04/garmin-nuvi-review-1/#comments"
@@ -219,37 +262,6 @@
             </div>
         
     
-        
-            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
-                <h2 class="mb-2">
-                    <a class="block" href="/blog/2009/10/acid2-rt/">מבחן חומצה 2 – האם הדפדפן החביב עליכם באמת תומך בעברית?</a>
-                </h2><a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
-                        href="/blog/2009/10/acid2-rt/#comments"
-                        title="21 תגובות">
-                        💬 21
-                    </a><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="2009-10-14T23:45:09+02:00">
-                    14 באוקטובר 2009
-                </span>
-
-                <a class="tag" href="/tag/דפדפנים/">דפדפנים</a><a class="tag" href="/tag/acid2/">acid2</a><a class="tag" href="/tag/אופרה/">אופרה</a><a class="tag" href="/tag/אינטרנט אקספלורר/">אינטרנט אקספלורר</a><a class="tag" href="/tag/ספארי/">ספארי</a><a class="tag" href="/tag/פיירפוקס/">פיירפוקס</a>
-                <div class="clear-both"></div>
-
-                <div class="content post">
-                    <p>הדפדפנים המודרנים (פיירפוקס, ספארי, אופרה, ו IE8) מתגאים בכך שעברו את המבחן <a href="http://www.webstandards.org/files/acid2/test.html">acid2</a> לבדיקת תאימות לתקנים. ככל הידוע לי, לא קיים מבחן מקביל לבדיקת התאימות במצב RTL. מכוון שכך, החלטתי לגייר את המבחן ולבדוק. התוצאות קצת מפתיעות, כאשר 2 מתוך הרביעה נכשלו במידה זו או אחרת. תוכלו לנסות את המבחן בעצמכם <a href="http://yehudab.com/files/acid2/test-rtl.html">בקישור הזה</a>.<br>
-אלה צילומי מסך מהבדיקה שאני עשיתי:</p>
-<p><img src="http://img.skitch.com/20091014-ttcd7n39w68e7bduij9564y9k4.png" alt="Firefox 3 acid2-rtl"><br>
-פיירפוקס 3/3.5</p>
-<p><img src="http://img.skitch.com/20091014-c2bf8edcydcyi8tx8br4xxgbmk.png" alt="Safar 3.1.2 acid2-rtl"><br>
-ספארי 3.1.2/כרום 3</p>
-<p><img src="http://img.skitch.com/20091014-h4896crhij2ch6kgptxw32byp.png" alt="IE8 acid2-rtl"><br>
-אקספלורר 8</p>
-<p><img src="http://img.skitch.com/20091014-1itwmbss9sw3yssfes6id8ixw2.png" alt="Opera 10 acid2-rtl"><br>
-אופרה 10</p>
-
-                </div>
-            </div>
-        
-    
 </div>
 
   <div>
@@ -277,7 +289,7 @@
 
             
                 <div class="mx-auto">
-                    <a class="last-page" href="/page/11/">לדף האחרון</a>
+                    <a class="last-page" href="/page/12/">לדף האחרון</a>
                 </div>
             
         </div>
@@ -286,7 +298,7 @@
     <p class="text-center text-sm italic mb-10">(דף
         8
         מתוך
-        11)</p>
+        12)</p>
 </div>
 
 
