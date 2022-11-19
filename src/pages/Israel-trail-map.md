@@ -100,6 +100,25 @@ disableNewComments: true
           "value": "#B56045"
         }
       }
+    },
+    {
+      "data": {
+        "url": "public/topojson/trail-03.topojson",
+        "format": {
+          "type": "topojson",
+          "feature": "trail-03"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "filled": false,
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "color": {
+          "value": "#B56045"
+        }
+      }
     }
   ]
 }
@@ -110,6 +129,7 @@ disableNewComments: true
 #### עונה 1 - 2022-2023
 1. [ארץ ירדן וחרמונים](/blog/2022/09/Israel-trail-1)
 2. [אין דבר](/blog/2022/10/Israel-trail-2)
+2. [בקעה, לא עמק](/blog/2022/11/Israel-trail-3)
 
 ---
 
