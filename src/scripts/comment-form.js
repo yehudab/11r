@@ -2,6 +2,14 @@
 // modified from https://github.com/travisdowns/travisdowns.github.io/blob/master/assets/main.js
 
 function attachFormEvents() {
+    $("#alert-ok [role=button]").on('click', () => {
+        $("#alert-ok").hide();
+    });
+
+    $("#alert-error [role=button]").on('click', () => {
+        $("#alert-error").hide();
+    });
+
     $('.js-form').on('submit', function () {
         var form = this;
 
@@ -9,6 +17,8 @@ function attachFormEvents() {
             '<svg class="icon spin"><use xlink:href="#icon-loading"></use></svg> על זה...'
         );
         $(form).addClass('disabled');
+        $("#alert-ok").hide();
+        $("#alert-error").hide();
 
         const url = $(this).attr('action');
         let response = null;
@@ -23,7 +33,7 @@ function attachFormEvents() {
             .then(response => response.json())
             .then(data => {
                 if (data && data.success) {
-                    alert("התגובה התקבלה ותוצג לאחר בקרה");
+                    showSuccess();
 
                     $("#comment-form-submit")
                         .html("שליחה");
@@ -40,14 +50,14 @@ function attachFormEvents() {
                             error = data.error.text;
                         }
                     }
-                    console.log(error);
-                    alert(`Oops, something is wrong: ${error}`);
+                    console.error(error);
+                    showError(error);
                     $("#comment-form-submit").html("שליחה")
                     $(form).removeClass('disabled');
                     grecaptcha.reset();
                 }
             }).catch(err => {
-                alert("Oops, something is wrong: " + err.toString());
+                showError(err.toString());
                 $("#comment-form-submit").html("שליחה")
                 $(form).removeClass('disabled');
                 grecaptcha.reset();
@@ -77,6 +87,15 @@ function attachReplyToEvents() {
             return false;
         });
     });
+}
+
+function showError(error) {
+    $("#error-reason").text(error);
+    $("#alert-error").show();
+}
+
+function showSuccess() {
+    $("#alert-ok").show();
 }
 
 export { attachFormEvents, attachReplyToEvents };
