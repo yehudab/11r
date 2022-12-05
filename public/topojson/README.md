@@ -7,7 +7,7 @@
 5. Adjust number of points until no jugged edges exist (first suggestion: 4 nodes per KM)
 6. Download in GeoJSON
 7. Rename downloaded file to: `trail-xx.geojson`
-8. Add new section in `map.md` for the new trail number. Make sure to adjust both the `data.url` and the `format.feature` values
+8. Add new section in `map.md` for the new trail number. Make sure to adjust the `data.url`, `mark.href`, and the `format.feature` values
 9. Run in command line:
 
 ```bash 

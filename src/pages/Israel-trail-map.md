@@ -24,6 +24,13 @@ disableNewComments: true
   "view": {
     "stroke": "transparent"
   },
+  "config": {
+    "geoshape": {
+        "filled": false,
+        "strokeWidth": 1,
+        "color": "#B56045"
+    }
+  },
   "layer": [
     {
       "data": {
@@ -35,13 +42,9 @@ disableNewComments: true
       },
       "mark": {
         "type": "geoshape",
-        "stroke": "white",
-        "strokeWidth": 0
-      },
-      "encoding": {
-        "color": {
-          "value": "#bbb"
-        }
+        "filled": true,
+        "strokeWidth": 0,
+        "color": "#bbb"
       }
     },
     {
@@ -54,13 +57,9 @@ disableNewComments: true
       },
       "mark": {
         "type": "geoshape",
-        "stroke": "white",
-        "strokeWidth": 0
-      },
-      "encoding": {
-        "color": {
-          "value": "#63bfea"
-        }
+        "filled": true,
+        "strokeWidth": 0,
+        "color": "#63bfea"
       }
     },
     {
@@ -73,13 +72,7 @@ disableNewComments: true
       },
       "mark": {
         "type": "geoshape",
-        "filled": false,
-        "strokeWidth": 1
-      },
-      "encoding": {
-        "color": {
-          "value": "#B56045"
-        }
+        "href": "/maps/trail-1/#map"
       }
     },
     {
@@ -92,13 +85,7 @@ disableNewComments: true
       },
       "mark": {
         "type": "geoshape",
-        "filled": false,
-        "strokeWidth": 1
-      },
-      "encoding": {
-        "color": {
-          "value": "#B56045"
-        }
+        "href": "/maps/trail-2/#map"
       }
     },
     {
@@ -111,13 +98,7 @@ disableNewComments: true
       },
       "mark": {
         "type": "geoshape",
-        "filled": false,
-        "strokeWidth": 1
-      },
-      "encoding": {
-        "color": {
-          "value": "#B56045"
-        }
+        "href": "/maps/trail-3/#map"
       }
     }
   ]
