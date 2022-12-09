@@ -26,6 +26,7 @@ module.exports = (config) => {
 
   config.addPassthroughCopy({
     "public": './',
+    "favicon_io": './',
     "img": './img',
     "node_modules/cash-dom/dist/cash.min.js": "./assets/lib/cash.js",
     "CNAME": "./CNAME"

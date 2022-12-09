@@ -22,13 +22,17 @@
     {# Open Graph #}
     <meta property="og:title" content="{% if metaTitle %}{{ metaTitle }}{{ ' | '}}{% endif %}{% if title %}{{ title }}{{ ' | '}}{% endif %}{% if site.name %}{{ site.name }}{% endif %}">
     <meta property="og:description" content="{% if excerpt %}{{ excerpt }}{% else %}{{ site.description }}{% endif %}">
-    <meta property="og:image" content="{% if ogImage %}{{ site.url }}{{ site.baseUrl }}{{ ogImage }}{% endif %}">
+    <meta property="og:image" content="{% if ogImage %}{{ site.url }}{{ site.baseUrl }}{{ ogImage }}{% else %}{{ site.url }}{{ site.baseUrl }}img/2022/12/blog-image.webp{% endif %}">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <meta property="og:site_name" content="{{ site.name }}">
     <meta property="og:locale" content="he_il">
     <meta property="og:type" content="website">
 
-    <link rel="icon" type="image/x-icon" href="{{ site.baseUrl }}favicon.ico"/>
+    <link rel="icon" type="image/x-icon" href="{{ site.baseUrl }}favicon.ico?v=2"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseUrl }}apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseUrl }}favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseUrl }}favicon-16x16.png">
+    <link rel="manifest" href="{{ site.baseUrl }}site.webmanifest">
 
     <title>
       {% if metaTitle %}{{ metaTitle }}
