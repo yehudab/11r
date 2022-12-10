@@ -13,6 +13,4 @@ post_format: []
 ---
 שוב שינוי קל בווידג'ט מזג האויר בעקבות שינויים באתר [IsraelWeather](http://www.israelweather.co.il/). מוזמנים להוריד את העדכון [מכאן](http://yehudab.com/widgets/WeatherIL-2d1.zip).
 
-![ווידג'ט מזג האויר, גרסה 2.1](https://img.skitch.com/20111022-8d8s83dafu7d79js3qyi3fqbs.png)
-
 תודה לנרי על הדווח.

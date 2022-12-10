@@ -14,4 +14,4 @@ tags:
 post_format: []
 ---
 בעקבות הוספת נתוני הלחות היחסית באתר [IsraelWeather](http://www.israelweather.co.il/) נשבר ווידג'ט מזג האויר. משתמשי מק מוזמנים לשדרג לגרסה 1.8 שמתקנת את התקלה, וכן מציגה את הלחות היחסית באמצעות tooltip. [שדרגו מכאן](http://yehudab.com/widgets/WeatherIL-1d8.zip).  
-![יהיה קר ורטוב](https://img.skitch.com/20110107-k7w2wjgcbfssda6i2ffifjdfcr.png)
+![יהיה קר ורטוב](/img/2011/01/weather-1-8.png)

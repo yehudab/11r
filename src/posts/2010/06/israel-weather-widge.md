@@ -19,4 +19,4 @@ post_format: []
 - יש רשימה קבועה של אזורי מזג אויר, ואין צורך לחפש בטקסט חופשי
 - התחזית לקוחה מאחד מאתרי מזג האוויר המובילים בישראלים: [IsraelWeather.co.il](http://www.israelweather.co.il/) ובדרך כלל התחזית שלו מדויקת בהרבה מהתחזית בווידג'ט הסטנדרטי
 
-[![ווידג'ט מזג האויר בישראל](http://img.skitch.com/20100629-br3mghdmwwpwxu2rjbxuik5pfq.png)](http://yehudab.com/widgets/WeatherIL1d6.zip)
+![ווידג'ט מזג האויר בישראל](/img/2010/06/israel-weather-widget-1.png)

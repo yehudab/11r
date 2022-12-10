@@ -13,7 +13,7 @@ tags:
 post_format: []
 ---
 אתמול ניסיתי לבדוק איך נראה הבלוג שלי באינטרנט אקספלורר 8 בטא1. במילים עדינות, המראות היו קשים.  
-![הבלוג באינטרנט אקספלורר 8 בטא 1](http://img.skitch.com/20080725-pixkfh5qminumykpattpik6acj.png)  
+![הבלוג באינטרנט אקספלורר 8 בטא 1](/img/2008/07/direction-rtl-ie8-beta-1.png)  
 משום מה, אין ממש תמיכה בסטייל direction:rtl. לא מצאתי אזכור לזה בשום מקום רשמי של מיקרוסופט, פרט לשאלה ותשובה לקונית [בצ'ט החודשי של חודש מרץ 2008](http://www.microsoft.com/windowsxp/expertzone/chats/transcripts/08_0320_ez_ie8.mspx):
 
 > **Jane\[MSFT\] (Expert):**  

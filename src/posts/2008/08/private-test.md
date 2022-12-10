@@ -1,7 +1,7 @@
 ---
 title: 'פרטי: בדיקה'
 date: '2008-08-23T13:25:53+03:00'
-status: private
+status: draft
 author: יהודה
 excerpt: ''
 type: post

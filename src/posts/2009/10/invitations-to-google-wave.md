@@ -10,7 +10,7 @@ tags:
     - 'Google wave'
 post_format: []
 ---
-![כל הקודם זוכה](http://img.skitch.com/20091001-eur1qys66xiyntdsmc14w51cuw.png)
+![כל הקודם זוכה](/img/2009/10/invitations-to-google-wave-1.png)
 
 רוצים הזמנה? 4 הראשונים שתגובתם תופיע ללא צורך באישור (כלומר כאלו שהגיבו כאן לפחות פעם אחת) יקבלו אחת.
 
