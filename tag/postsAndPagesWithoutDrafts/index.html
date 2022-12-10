@@ -1327,7 +1327,6 @@ Staticman logo by <a href="http://erlen.co.uk">Erlen Masson</a></p>
 
                 <div class="content post">
                     <p>פחות משבוע אחרי <a href="http://www.tlv1.co.il/?p=5930">הפרסום הראשון</a> של נתוני התחבורה הציבורית בפורמט תיקני, עלה לאויר <a href="http://otp.hamakor.org.il/">שרות חופשי לתכנון מסלולי נסיעה</a> המבוסס על הנתונים אלה. ניתן לתכנן נסיעה בתחבורה ציבורית מכל מקום לכל מקום בארץ, אם כי לא כל חברות התח&quot;צ מכוסות. בולטת בהעדרה רכבת-ישראל. השרות הוא נסיוני, והכתובת והשרת יוחלפו בקרוב. בנתיים מוזמנים לנסות ולשלוח תגובות למטה.</p>
-<p><img src="https://img.skitch.com/20120520-d4dysf5u9ruawex2jm83yihied.png" alt="תכנון מסלול לדוגמה"></p>
 <p>שימו לב! השרות מוגש as-is. אין שום הבטחה לתקינות הנתונים מבחינת האפשרות לנסוע במסלול, יעילות המסלול, זמנים, מספרי הקוים, או מחיר הנסיעה (אם וכאשר יפורסם).<br>
 שוב תודה לחברי ומנהלי <a href="http://www.hamakor.org.il/">עמותת המקור</a> על התמיכה בפרויקט.</p>
 
@@ -1354,71 +1353,29 @@ Staticman logo by <a href="http://erlen.co.uk">Erlen Masson</a></p>
                     <p>משרד התחבורה החל לפרסם לפני כשבוע מאגר מידע חדש הכולל לוחות זמנים ונתיבים של התחבורה הציבורית בארץ. <a href="http://data.gov.il/dataset/383">המאגר</a> מפורסם לפי תקן פתוח של גוגל שנקרא GTFS. במסגרת שיתוף פעולה של מספר חברים ברשימת התפוצה של <a href="http://www.hamakor.org.il/">המקור</a>, הקמנו פיילוט שמדגים את יכולות המאגר. הקוד בפיילוט מבוסס על פרויקט OpenTripPlanner. תודה לירון על עבודת התרגום, ולשאר החברים על העידוד והתמיכה.</p>
 <p>עד להקמת שרת ציבורי, ניתן להתרשם מצילומי המסך:</p>
 <p>מסלול שלם:<br>
-<img src="/img/2012/05/9b691287-b202-4e4c-89ba-7f025f6a11ba.png" alt="מסלול שלם"></p>
+<img src="/img/2012/05/otp-il-1.png" alt="מסלול שלם"></p>
 <p>התמקדות על מקטעים:<br>
-<img src="https://img.skitch.com/20120517-rpfeyxpb4nx3t8rpdw9qycshut.png" alt="התמקדות על מקטעים"></p>
+<img src="/img/2012/05/otp-il-2.png" alt="התמקדות על מקטעים"></p>
 <p>גרסה להדפסה:<br>
-<img src="https://img.skitch.com/20120517-fnrapyjp427xmw9e86ha791d3g.png" alt="גרסה להדפסה"></p>
+<img src="/img/2012/05/otp-il-3.png" alt="גרסה להדפסה"></p>
 <h3>ההסבר בהמשך מיועד למי שרוצה להקים שרת. לא למי שרוצה לחשב מסלול !! (מה שנקרא: Don't try this at home).</h3>
 <p>להקמת השרת, יש לבצע את הפעולות הבאות: (זה הרקע. הקוד בפסקה הבאה מבצע את הפעולות)</p>
 <p>לוודא שאזור הזמן של השרת הוא Asia/Jerusalem.<br>
 להוריד ולפתוח את הקוד של OpenTripPlanner (גודל הקובץ כ 90MB) וליצור קישור סימבולי ל / .<br>
 להוריד ולפתוח קובץ Open Street Map של ישראל מהאתר <a href="http://downloads.cloudmade.com/asia/western_asia/israel">cloudmade.com</a> (גודל הקובץ 22MB).<br>
 למצוא את כתובת קובץ ה GTFS <a href="http://data.gov.il/dataset/383">מאתר מאגרי המידע </a>של הממשלה, ולהוריד אותו. מכוון שהקובץ מוגש (זמנית?) משרת ftp ולא http, צריך לארח אותו מחדש על שרת אחר. בדוגמאות הקוד בהמשך האירוח הוא בשרת מקומי</p>
-<pre><code>$ date
-# Make sure timezone is correct. If not, run the command:
-# $ sudo ln -sf /usr/share/zoneinfo/Asia/Jerusalem /etc/localtime
-# make sure ntp is installed and running. if not, follow these instructions: &lt;a href=&quot;http://www.ehow.com/how_8251011_sync-time-centos.html&quot;&gt;http://www.ehow.com/how_8251011_sync-time-centos.html&lt;/a&gt;
-$ mkdir ~/GTFS
-$ cd ~/GTFS
-$ curl -L -O &quot;http://maps5.trimet.org/otp-dev/otp.zip&quot;
-$ curl -L -O &quot;http://downloads.cloudmade.com/asia/western_asia/israel/israel.osm.bz2&quot;
-$ curl -L -O &quot;ftp://199.203.58.18/israel-public-transportation.zip&quot;
-# !! replace IP above with correct IP
-$ unzip otp.zip
-$ bunzip2 israel.osm.bz2
-$ sudo ln -s ~/GTFS/otp /
-$ ln -s ~/GTFS/israel.osm /otp/cache/osm/
-</code></pre>
+<pre class="language-shell"><code class="language-shell">$ <span class="token function">date</span><br><span class="token comment"># Make sure timezone is correct. If not, run the command:</span><br><span class="token comment"># $ sudo ln -sf /usr/share/zoneinfo/Asia/Jerusalem /etc/localtime</span><br><span class="token comment"># make sure ntp is installed and running. if not, follow these instructions: &lt;a href="http://www.ehow.com/how_8251011_sync-time-centos.html">http://www.ehow.com/how_8251011_sync-time-centos.html&lt;/a></span><br>$ <span class="token function">mkdir</span> ~/GTFS<br>$ <span class="token builtin class-name">cd</span> ~/GTFS<br>$ <span class="token function">curl</span> <span class="token parameter variable">-L</span> <span class="token parameter variable">-O</span> <span class="token string">"http://maps5.trimet.org/otp-dev/otp.zip"</span><br>$ <span class="token function">curl</span> <span class="token parameter variable">-L</span> <span class="token parameter variable">-O</span> <span class="token string">"http://downloads.cloudmade.com/asia/western_asia/israel/israel.osm.bz2"</span><br>$ <span class="token function">curl</span> <span class="token parameter variable">-L</span> <span class="token parameter variable">-O</span> <span class="token string">"ftp://199.203.58.18/israel-public-transportation.zip"</span><br><span class="token comment"># !! replace IP above with correct IP</span><br>$ <span class="token function">unzip</span> otp.zip<br>$ bunzip2 israel.osm.bz2<br>$ <span class="token function">sudo</span> <span class="token function">ln</span> <span class="token parameter variable">-s</span> ~/GTFS/otp /<br>$ <span class="token function">ln</span> <span class="token parameter variable">-s</span> ~/GTFS/israel.osm /otp/cache/osm/</code></pre>
 <p>יש לערוך מספר קבצי הגדרות:</p>
-<pre><code>$ vi /otp/graph-builder.xml
-# Line 13, change properties to 'name=&quot;path&quot; value=&quot;/home/yehuda/GTFS/israel-public-transportation.zip&quot;'
-#              (or whatever path you placed the file in)
-# Line 40, change file name of OSM from or-wa.osm to israel.osm (just file part)
-$ vi /otp/bin/build-graph.sh
-# Line 1, change -Xmx2048m to -Xmx6114m. If you have more memory, put as much as possible
-$ vi /otp/bin/start-server.sh
-# Line 1, change -Xmx2048m to -Xmx4096m. If you have more memory, put as much as possible
-</code></pre>
+<pre class="language-shell"><code class="language-shell">$ <span class="token function">vi</span> /otp/graph-builder.xml<br><span class="token comment"># Line 13, change properties to 'name="path" value="/home/yehuda/GTFS/israel-public-transportation.zip"'</span><br><span class="token comment">#              (or whatever path you placed the file in)</span><br><span class="token comment"># Line 40, change file name of OSM from or-wa.osm to israel.osm (just file part)</span><br>$ <span class="token function">vi</span> /otp/bin/build-graph.sh<br><span class="token comment"># Line 1, change -Xmx2048m to -Xmx6114m. If you have more memory, put as much as possible</span><br>$ <span class="token function">vi</span> /otp/bin/start-server.sh<br><span class="token comment"># Line 1, change -Xmx2048m to -Xmx4096m. If you have more memory, put as much as possible</span></code></pre>
 <p>בניית הגרף (משלב נתוני OSM עם נתוני תח&quot;ץ)</p>
-<pre><code>$ cd /otp
-$ bin/build-graph.sh &gt;&amp; ~/GTFS/build-graph.err
-# might take 15-30 minutes depending on processor power and memory
-$ ls -l /otp/Graph.obj
-# should be around 1GB
-</code></pre>
+<pre class="language-shell"><code class="language-shell">$ <span class="token builtin class-name">cd</span> /otp<br>$ bin/build-graph.sh <span class="token operator">>&amp;</span> ~/GTFS/build-graph.err<br><span class="token comment"># might take 15-30 minutes depending on processor power and memory</span><br>$ <span class="token function">ls</span> <span class="token parameter variable">-l</span> /otp/Graph.obj<br><span class="token comment"># should be around 1GB</span></code></pre>
 <p>אחרי הריצה חשוב לוודא בלוג שאין תעופה בגלל חוסר זכרון !!</p>
 <p>עכשיו אפשר להריץ את השרת האפליקטיבי:</p>
-<pre><code>$ cd /otp
-$ bin/start-server.sh
-# Wait for line: &quot;Winstone Servlet Engine v0.9.10 running...&quot;
-</code></pre>
+<pre class="language-shell"><code class="language-shell">$ <span class="token builtin class-name">cd</span> /otp<br>$ bin/start-server.sh<br><span class="token comment"># Wait for line: "Winstone Servlet Engine v0.9.10 running..."</span></code></pre>
 <p>עכשיו אפשר לפתוח דפדן לכתובת : http://localhost:8080/opentripplanner-webapp/index.html (אם השרת אינו מקומי, להחליף localhost בכתובת השרת). ולנסות לחשב מסלול.</p>
 <p>תרגום לעברית:<br>
 לבדוק האם הקובץ ‎/otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js‏ קיים. אם לא, להוריד אותו <a href="https://github.com/openplans/OpenTripPlanner/blob/master/opentripplanner-webapp/src/main/webapp/js/otp/locale/Hebrew.js">מכאן</a> ולשמור בנתיב הנ&quot;ל. אחר-כך, יש לבצע מספר תיקונים בקוד:</p>
-<pre><code>$ vi /otp/webapps/opentripplanner-webapp/index.html
-# line 2, add 'dir=&quot;rtl&quot;' to html tag
-# line 53, duplicate this line and change file name to &quot;js/otp/locale/Hebrew.js&quot;
-$ vi /otp/webapps/opentripplanner-webapp/js/otp/config.js
-# line 12, change otp.locale.English to otp.locale.Hebrew (at end of line)
-# line 175, change value of 'enabled' to 'true'
-# line 177, add this to end of string:
-# + '&lt;div style=&quot;margin:10px auto;width:205px&quot;&gt;&lt;a href=&quot;http://www.opentripplanner.org/&quot;&gt;&lt;img src=&quot;images/logo-otp.png&quot; title=&quot;OpenTripPlanner&quot; /&gt;&lt;/a&gt;' +  '&lt;a style=&quot;margin:0 10px&quot; href=&quot;http://www.hamakor.org.il/&quot;&gt;&lt;img src=&quot;images/logo-hamakor.png&quot; title=&quot;עמותת המקור&quot; /&gt;&lt;/a&gt;' + '&lt;a href=&quot;http://www.hetz.biz/&quot;&gt;&lt;img src=&quot;images/logo-hetz.png&quot; title=&quot;חץ ביז&quot; /&gt;&lt;/a&gt;&lt;/div&gt;'
-$ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
-# line 28, change title to: &quot;אודות האתר&quot;
-# line 29, change content to:
-# 'אתר זה הוקם ע&quot;י יהודה ב. על בסיס נתוני &quot;לו&quot;ז ומידע גאוגראפי בתחבורה הציבורית&quot; הזמינים מאתר &lt;a href=&quot;http://data.gov.il/&quot;&gt;data.gov.il&lt;/a&gt; ועל בסיס תוכנת הקוד הפתוח &lt;a href=&quot;http://www.opentripplanner.org/&quot;&gt;OpenTripPlanner&lt;/a&gt;.' + '&lt;br&gt;' + 'תרגום התוכנה לעברית בוצע ע&quot;י ירון שהרבני. אירוח אתר זה בחסות &lt;a href=&quot;http://www.hamakor.org.il/&quot;&gt;עמותת המקור&lt;/a&gt; ובאדיבות &lt;a href=&quot;http://www.hetz.biz/&quot;&gt;חץ ביז&lt;/a&gt;.' + '&lt;br&gt;' +  'תנאי שימוש: עמותת המקור עושה כמיטב יכולתה בכדי לספק שירות זה על בסיס נתונים מדוייקים ועדכניים אולם ייתכנו טעויות. המידע ניתן כפי שהוא ללא אחריות. ראו גם &lt;a href=&quot;http://data.gov.il/dataset/383&quot;&gt;תנאי שימוש של משרד התחבורה&lt;/a&gt;.'
-</code></pre>
+<pre class="language-shell"><code class="language-shell">$ <span class="token function">vi</span> /otp/webapps/opentripplanner-webapp/index.html<br><span class="token comment"># line 2, add 'dir="rtl"' to html tag</span><br><span class="token comment"># line 53, duplicate this line and change file name to "js/otp/locale/Hebrew.js"</span><br>$ <span class="token function">vi</span> /otp/webapps/opentripplanner-webapp/js/otp/config.js<br><span class="token comment"># line 12, change otp.locale.English to otp.locale.Hebrew (at end of line)</span><br><span class="token comment"># line 175, change value of 'enabled' to 'true'</span><br><span class="token comment"># line 177, add this to end of string:</span><br><span class="token comment"># + '&lt;div style="margin:10px auto;width:205px">&lt;a href="http://www.opentripplanner.org/">&lt;img src="images/logo-otp.png" title="OpenTripPlanner" />&lt;/a>' +  '&lt;a style="margin:0 10px" href="http://www.hamakor.org.il/">&lt;img src="images/logo-hamakor.png" title="עמותת המקור" />&lt;/a>' + '&lt;a href="http://www.hetz.biz/">&lt;img src="images/logo-hetz.png" title="חץ ביז" />&lt;/a>&lt;/div>'</span><br>$ <span class="token function">vi</span> /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js<br><span class="token comment"># line 28, change title to: "אודות האתר"</span><br><span class="token comment"># line 29, change content to:</span><br><span class="token comment"># 'אתר זה הוקם ע"י יהודה ב. על בסיס נתוני "לו"ז ומידע גאוגראפי בתחבורה הציבורית" הזמינים מאתר &lt;a href="http://data.gov.il/">data.gov.il&lt;/a> ועל בסיס תוכנת הקוד הפתוח &lt;a href="http://www.opentripplanner.org/">OpenTripPlanner&lt;/a>.' + '&lt;br>' + 'תרגום התוכנה לעברית בוצע ע"י ירון שהרבני. אירוח אתר זה בחסות &lt;a href="http://www.hamakor.org.il/">עמותת המקור&lt;/a> ובאדיבות &lt;a href="http://www.hetz.biz/">חץ ביז&lt;/a>.' + '&lt;br>' +  'תנאי שימוש: עמותת המקור עושה כמיטב יכולתה בכדי לספק שירות זה על בסיס נתונים מדוייקים ועדכניים אולם ייתכנו טעויות. המידע ניתן כפי שהוא ללא אחריות. ראו גם &lt;a href="http://data.gov.il/dataset/383">תנאי שימוש של משרד התחבורה&lt;/a>.'</span></code></pre>
 <p>עכשיו לרפרש את הדפדפן ולהנות מההמשק העברי. יתכן שתתקבל הודעה על כשלון בחישוב המסלול. במקרה זה, יש לבחור תאריך חדש לחישוב בתחום המכוסה על-ידי הקובץ (יום הורדת הקובץ ועד שבועיים קדימה)</p>
 
                 </div>
@@ -1443,19 +1400,12 @@ $ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
                 <div class="content post">
                     <p>אחרי פניות רבות בעניין מאקו VOD, חזרתי לבדוק את המצב שם ולראות איך ניתן לצפות בשידורים על מק ולינוקס ללא שימוש בסקריפטים. מסתבר שמאקו עברו בחלק מן הסדרות לנגן פלאש, שבסך הכל פועל לא רע. לסדרות אחרות (כמו רמזור), נדרשים עדיין מעקפים לצפיה במק. הפתעה לטובה היתה לי דווקא בלינוקס (נבדק על אובונטו 11.10), אבל נתחיל קודם במק:<br>
 נכון לעכשיו, ניסיון של custup (ספקית הווידאו ברשת של מאקו) לתמוך במק יחד עם ישום לא מוצלח של flip4mac גורמים לבעיה. כדי להתגבר עליה, יש להתקין את הנגן <a href="http://www.videolan.org/vlc/download-macosx.html">VLC</a>, ולגרום לאתר לחשוב שאנחנו רצים דווקא על חלונות. אני אדגים את השיטה על סאפרי, אבל ניתן ליישם באופן דומה על פיירפוקס עם התוסף User Agent Switcher.</p>
-<p>בספארי, צריך לבחור בתפריט הראשי Prefrences ושם בטאב ה Advanced, לבחור את האפשרות: Show Develop menu in menu bar. נסגור את החלון ונאתחל את ספארי.<br>
-<img src="https://img.skitch.com/20111228-kjbwn1ya1us757kd3yhtcrkirx.png" alt="הגדרות ספארי"></p>
-<p>יופיע תפריט חדש: Develop ושם נבחר בתת-התפריט User Agent את האפשרות Safari 5.1 – Windows. בעקרון אפשר לבחור כל כניסה אחרת המכילה את המילה Windows, אבל זו נראית לי הכי בטוחה (וגם תעזור לשמור על הסטטיסטיקות של ספארי, במקרה שמישהו במאקו בודק אותן).<br>
-<img src="https://img.skitch.com/20111228-fhcppetmmx6shtj77pdsqxbx67.png" alt="שינוי שם הדפדפן"></p>
+<p>בספארי, צריך לבחור בתפריט הראשי Prefrences ושם בטאב ה Advanced, לבחור את האפשרות: Show Develop menu in menu bar. נסגור את החלון ונאתחל את ספארי.</p>
+<p>יופיע תפריט חדש: Develop ושם נבחר בתת-התפריט User Agent את האפשרות Safari 5.1 – Windows. בעקרון אפשר לבחור כל כניסה אחרת המכילה את המילה Windows, אבל זו נראית לי הכי בטוחה (וגם תעזור לשמור על הסטטיסטיקות של ספארי, במקרה שמישהו במאקו בודק אותן).</p>
 <p>שימו לב שהבחירה משפיעה רק על הטאב הנוכחי. עכשיו ניגש לדף התוכנית במאקו. נקבל את החלון הבא, ובו יש ללחוץ על הכתפור Click to Play:</p>
-<p><img src="https://img.skitch.com/20111228-bwerwtcq2qipxnqm9y6ywnj85f.png" alt="Click to Play"></p>
 <p>יפתח טאב חדש ובו הווידאו ינסה לנגן. רוב הסיכויים שהוא יכשל, וכאן יש להעתיק את ה URL מראש הדף ולהדביק ב VLC.</p>
-<p><img src="https://img.skitch.com/20111228-f57921p9yiuxhs6igtjdeci7p9.png" alt="להעתיק את ה URL"></p>
 <p>ב VLC, נבחר את האפשרות File-&gt;Open Network ונדביק את ה URL.</p>
-<p><img src="https://img.skitch.com/20111228-graukaq7utnuj15eafxwf7k643.png" alt="Open Network"><br>
-<img src="https://img.skitch.com/20111228-88dcgisktijmai6ff14f49a4jj.png" alt="להדביק"></p>
-<p>צפיה מהנה:</p>
-<p><img src="https://img.skitch.com/20111228-1xyiamn37huhunpwkpy8yjpe36.jpg" alt="סרט"></p>
+<p>צפיה מהנה</p>
 
                 </div>
             </div>
@@ -1478,7 +1428,6 @@ $ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
 
                 <div class="content post">
                     <p>שוב שינוי קל בווידג'ט מזג האויר בעקבות שינויים באתר <a href="http://www.israelweather.co.il/">IsraelWeather</a>. מוזמנים להוריד את העדכון <a href="http://yehudab.com/widgets/WeatherIL-2d1.zip">מכאן</a>.</p>
-<p><img src="https://img.skitch.com/20111022-8d8s83dafu7d79js3qyi3fqbs.png" alt="ווידג'ט מזג האויר, גרסה 2.1"></p>
 <p>תודה לנרי על הדווח.</p>
 
                 </div>
@@ -1533,7 +1482,7 @@ $ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
 
                 <div class="content post">
                     <p>עוד עדכון לווידג'ט מזג האויר. הפעם, בנוסף להתאמת הווידג'ט בגלל השינויים באתר <a href="http://www.israelweather.co.il/">Israel Weather</a>, גם תוספת של יומיים לתחזית. <a href="http://yehudab.com/widgets/WeatherIL-2d0.zip">ההורדה מכאן</a>.<br>
-<img src="https://img.skitch.com/20110127-kem3nbpb3xbe57miewf2kk9s7k.png" alt="עוד שבוע שלג בירושלים"></p>
+<img src="/img/2011/01/7dweather.png" alt="עוד שבוע שלג בירושלים"></p>
 
                 </div>
             </div>
@@ -1556,7 +1505,7 @@ $ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
 
                 <div class="content post">
                     <p>בעקבות הוספת נתוני הלחות היחסית באתר <a href="http://www.israelweather.co.il/">IsraelWeather</a> נשבר ווידג'ט מזג האויר. משתמשי מק מוזמנים לשדרג לגרסה 1.8 שמתקנת את התקלה, וכן מציגה את הלחות היחסית באמצעות tooltip. <a href="http://yehudab.com/widgets/WeatherIL-1d8.zip">שדרגו מכאן</a>.<br>
-<img src="https://img.skitch.com/20110107-k7w2wjgcbfssda6i2ffifjdfcr.png" alt="יהיה קר ורטוב"></p>
+<img src="/img/2011/01/weather-1-8.png" alt="יהיה קר ורטוב"></p>
 
                 </div>
             </div>
@@ -1700,9 +1649,9 @@ $ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
                 <div class="content post">
                     <p>למי שלא זוכר, לפני כשנתיים יצאה גרסה 3.0 של פיירפוקס. הגרסה כללה שינוי משמעותי במסגרת הדפדפן (מה שקרוי כרום – בלי קשר לדפדן של גוגל), ודרשה התאמות רבות לטובת תמיכה בממשק העברי. ההתאמות האלה צריכות להעשות בנפרד לגרסאות מערכת ההפעלה השונות (חלונות, מק ולינקוס), ולכן בזמנו כאשר יצאה גרסת הבטא העברית הראשונה של פיירפוקס 3, <a href="http://mozilla.org.il/news/2008/03/13/bug-hunting-season/">לא יצאה גרסה למק</a>.<br>
 כך נראה אז סרגל הניווט בגרסה העברית למק:<br>
-<img src="http://img.skitch.com/20100824-k4pk7tu6cw528t1ghrd8pk3cr2.png" alt="סרגל נווט פיירפוקס 3.0 בעברית למק"></p>
+<img src="/img/2010/08/windows-no-soup-for-you-1.png" alt="סרגל נווט פיירפוקס 3.0 בעברית למק"></p>
 <p>מאז, זרמו הרבה מים בירקון, גרסה 3.0 <a href="http://mozilla.org.il/news/2008/04/24/firefox3-osx-theme/">תוקנה לתמיכה בעברית</a> (בין השאר בזכות פצ'ים ששלחתי) והיום יצאה גרסת <a href="http://www.mozilla.com/en-US/firefox/all-beta.html">בטא 4 של פיירפוקס 4</a> (הראשונה עם תמיכה בממשק עברי). וראו זה פלא, מי לא מופיע בגרסאות להורדה בעברית? נכון, חלונות. אז לא שיש לי משהו נגד משתמשי חלונות (some of my best friends…), ואני בטוח שהבטא הבאה תעבוד כמו שצריך על חלונות ובעברית, אבל תרשו לי בכל זאת להגניב חיוך קטן.</p>
-<p><img src="http://img.skitch.com/20100824-8abd6xm3ptrs5mgcd6q438g5ex.png" alt="למי אין גרסה?"></p>
+<p><img src="/img/2010/08/windows-no-soup-for-you-2.png" alt="למי אין גרסה?"></p>
 
                 </div>
             </div>
@@ -1725,7 +1674,7 @@ $ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
 
                 <div class="content post">
                     <p>בעקבות הוספת נתוני עומס החום החזויים באתר <a href="http://www.israelweather.co.il/">IsraelWeather</a> נשבר ווידג'ט מזג האויר. משתמשי מק מוזמנים לשדרג לגרסה 1.7 שמתקנת את התקלה, וכן מציגה את עומס החום החזוי באמצעות tooltip. <a href="http://yehudab.com/widgets/WeatherIL-1d7.zip">שדרגו מכאן</a>.<br>
-<img src="http://img.skitch.com/20100729-q22ngwrgswp53bcgnscrc8hmsd.png" alt="יהיה חם ומגניב"></p>
+<img src="/img/2010/07/weather-widget-1.png" alt="יהיה חם ומגניב"></p>
 
                 </div>
             </div>
@@ -1749,7 +1698,7 @@ $ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
                 <div class="content post">
                     <p>עדכון קל <a href="http://yehudab.com/widgets/IsraelRailways-1d7.zip">לווידג'ט רכבת ישראל</a>, שהפסיק להציג את זמני הרכבות בגלל תקלה בהעברת הפרמטרים לאתר הרכבת.<br>
 בהזדמנות זו, הוספתי הצגה של מצב הבקשה לשרת הרכבת, כך שניתן יהיה להבדיל בין מצב שבו הבקשה נשלחה ולא התקבלה תשובה (connecting), מצב שגיאה (bad response) ומצב שבו אין יותר רכבות לאותו היום (–:–).<br>
-<img src="http://img.skitch.com/20100706-di196macmjuh768f6ca1k2u374.png" alt="מתחבר"><br>
+<img src="/img/2010/07/israel-rail-1-6.png" alt="מתחבר"><br>
 תודה ליובל שדווח על התקלה.</p>
 
                 </div>
@@ -1775,13 +1724,13 @@ $ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
                     <p>אחרי חידוש ושיכון מחדש של ווידג'ט מזג האויר, הגיע תורו של ווידג'ט רכבת ישראל. הגרסה הראשונה של הווידג'ט נכתבה כך שתמשוך נתונים מאתר הרכבת הישן, שהיה בלתי שמיש מחוץ לאקספלורר. לאחר שדרוג האתר, לא היה צורך בווידג'ט לטובת תאימות, ולכן דחיתי את העדכון שלו. הסתבר שההתאמה <a href="http://www.rail.co.il/">לאתר הרכבת החדש</a> לא הייתה מסובכת במיוחד, והווידג'ט כבר מוכן <a href="http://yehudab.com/widgets/IsraelRailways-1d7.zip">להורדה מכאן</a>. גם כאן, הווידג'ט מותאם למשתמשי מק בלבד (טיגר ומעלה). יתכן שבעתיד אכין גם חלופות לחלונות וללינוקס.</p>
 <p>התפעול של הווידג'ט קצת מסובך יותר מזה של מזג האויר, לכן צרפתי צילומי מסך עם הסברים קצרים.</p>
 <p>במצב רגיל מוצגות תחנת המוצא, תחנת היעד, וזמני שלוש הרכבות הקרובות. הזמנים מתעדכנים אוטומטית, כך שבמצב המצולם למטה הרכבת של 7:53 תזוז ימינה בשעה 7:32 ותופיע בתור הרכבת הבאה.<br>
-<img src="http://img.skitch.com/20100630-xcij8gkpgbtcucnsqbp53d64s9.png" alt="מצב רגיל"></p>
+<img src="/img/2010/06/israel-rail-widget-1.png" alt="מצב רגיל"></p>
 <p>כדי לשנות את מצבי התצוגה או לבחור תחנות אחרות, יש להעביר את הסמן מעל הווידג'ט ואז מופיע כפתור בצורת מפתח שבדי בפינת הימנית התחתונה. לחיצה עליו תפתח את סרגל הכלים, כפי שנראה למטה:<br>
-<img src="http://img.skitch.com/20100630-mn59w61k3f8auad66x3m8guxxb.png" alt="כפתור פתיחת סרגל הכלים"></p>
+<img src="/img/2010/06/israel-rail-widget-2.png" alt="כפתור פתיחת סרגל הכלים"></p>
 <p>אלו הכפתורים הזמינים במצב סרגל כלים פתוח:<br>
-<img src="http://img.skitch.com/20100630-phc113at991ke4agsx4wtjsfug.png" alt="סרגל כלים פתוח"></p>
+<img src="/img/2010/06/israel-rail-widget-3.png" alt="סרגל כלים פתוח"></p>
 <p>לבסוף, לאחר לחיצה על כפתור בחירת התחנות, יופיע הצד האחורי של הווידג'ט:<br>
-<img src="http://img.skitch.com/20100630-xichmaw5m7kmgp33yawmgu6biw.png" alt="הצד האחורי והחלפת תחנות"></p>
+<img src="/img/2010/06/israel-rail-widget-4.png" alt="הצד האחורי והחלפת תחנות"></p>
 <p>לאחר החלפת תחנה או בחירת יום חדש, מתבצעת התקשרות לאתר הרכבת שלוקחת מספר שניות. יש להתאזר בסבלות עד לקבלת זמני הרכבות המבוקשות.</p>
 <p>הערה למי כבר מותקן אצלו הווידג'ט הישן: לצערי הגדרות התחנות הישנות לא תואמות לאתר החדש, ולכן תצטרכו לבחור את התחנות מחדש בצד האחורי של הווידג'ט לאחר ההתקנה.</p>
 <p>בהזדמנות זו, תודה <a href="http://hafontia.com/">לבן נתן</a> מעצב הפונט, ול Gilles Landry מעצב האיקונים.</p>
@@ -1813,7 +1762,7 @@ $ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
 <li>יש רשימה קבועה של אזורי מזג אויר, ואין צורך לחפש בטקסט חופשי</li>
 <li>התחזית לקוחה מאחד מאתרי מזג האוויר המובילים בישראלים: <a href="http://www.israelweather.co.il/">IsraelWeather.co.il</a> ובדרך כלל התחזית שלו מדויקת בהרבה מהתחזית בווידג'ט הסטנדרטי</li>
 </ul>
-<p><a href="http://yehudab.com/widgets/WeatherIL1d6.zip"><img src="http://img.skitch.com/20100629-br3mghdmwwpwxu2rjbxuik5pfq.png" alt="ווידג'ט מזג האויר בישראל"></a></p>
+<p><img src="/img/2010/06/israel-weather-widget-1.png" alt="ווידג'ט מזג האויר בישראל"></p>
 
                 </div>
             </div>
@@ -1839,9 +1788,9 @@ $ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
 כדי לנצל את היכולת הזאת, צריך להכין או להוריד קובץ מכמונות מהירות מעודכן בפורמט GPX או CSV, ולהעלות אותו למכשיר באמצעות תוכנת <a href="http://www8.garmin.com/products/poiloader/">POI Loader</a> המסופקת חינם ע&quot;י גרמין. שוב, יש לציין לחיוב, ישנה גרסה למק או לחלונות.</p>
 <p>קובץ המכמונות שהורדתי התקבל דרך קבוצת הדיון <a href="http://groups.google.co.il/group/1go_speedcamupdates">1go – התראה על מכמונות מהירות בישראל באמצעות GPS</a> בגוגל. הקבוצה סגורה, וכדי להוריד את הקבצים צריך להגיש בקשה, כפי שמפורט <a href="http://topspeed.co.il/forum/forum_posts.asp?TID=32967&amp;PN=1&amp;TPN=1">בפורום TopSpeed</a>.<br>
 הקובץ עצמו מפורסם בפורמט תואם iGo (נכון לפרסום הפוסט, הקובץ האחרון הוא: 1go_iGO_091206.zip), ולפני ההעלאה לגרמין צריך לבצע המרה. ההמרה נעשית ע&quot;י קובץ Excel שגם אותו ניתן להוריד דרך הקבוצה.<br>
-<img src="http://img.skitch.com/20100405-eph2hc5eudu4m4erbcqupt3676.png" alt="קבצים להורדה"><br>
+<img src="/img/2010/04/garmin-nuvi-speedtraps-1.png" alt="קבצים להורדה"><br>
 אחרי שנפתח את ה-zip-ים, נזדקק לשני קבצים מתוכם: האחד נקרא SpeedcamUpdates.spud והשני SpeedcamUpdates 0.99-symbian.xls . צריך לפתוח את קובץ ה Excel וללחוץ על כפתור ה-Import. אחר-כך, יש לבחור בדיאלוג את קובץ ה spud , ללחוץ Open ולוודא שהטבלה מתמלאת. השלב הבא הוא מעבר ללשונית שנקראת symbian (מסומנת בצהוב). בלשונית הזאת נבחר מלבן המכיל את 3 העמודות הראשונות של כל השורות בהן מופיע מידע (כ 400 שורות), כולל שורת הכותרת.<br>
-<img src="http://img.skitch.com/20100405-8eddbrxd8t3xdhj7cq1u4byg7g.png" alt="בחירת המלבן"><br>
+<img src="/img/2010/04/garmin-nuvi-speedtraps-2.png" alt="בחירת המלבן"><br>
 את המלבן הזה נעתיק ונדביק בלשונית חדשה. את תוכן הלשונית החדשה שומרים בפורמט csv. חשוב מאוד: בשם הקובץ הנשמר יש לדאוג לסיומת speed_NN.csv (לדוגמה garmin_speed_60.csv) כדי שהמכשיר ידע שאלה נקודות של מכמונות מהירות. המספר 60 הוא ברירת המחדל להתראת מהירות (בקמ&quot;ש), למרות שבדרך-כלל אין צורך בו משום שהמידע עבור כל מכמונת מופיע בקובץ עצמו. <strong>חשוב מאוד: אין לפרסם את הקובץ המומר בכל צורה שהיא</strong>.</p>
 <p>ישנן מספר בעיות ידועות בהפעלת ה Excel:</p>
 <ul>
@@ -1849,12 +1798,12 @@ $ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
 <li>למשתמשי מק: לא ניתן להשתמש ב OpenOffice או NeoOffice, מכוון שהקובץ מכיל קוד ב VB שאינו נתמך ע&quot;י אופן אופיס. לא בדקתי על Office של מיקרוסופט למק.</li>
 <li>בפתיחת הקובץ על חלונות, תתכן הודעת שגיאה על ספריה חסרה. בחלון שנפתח צריך לבטל את<br>
 הסימון ליד השורה שמתחילה ב MISSING, ואז ללחוץ OK.<br>
-<img src="http://img.skitch.com/20100405-1rp6891hd9p6pdrbwm8ey6g5jh.png" alt="תקלת מקרו"></li>
+<img src="/img/2010/04/garmin-nuvi-speedtraps-3.png" alt="תקלת מקרו"></li>
 </ul>
 <p>השלב האחרון הוא העלאה של הקובץ למכשיר. לשם כך, נחבר את הניבי בכבל usb למחשב. אחר-כך, יש להריץ את תוכנת ה POI loader, ולוודא שהיא זיהתה את המכשיר. בהמשך יש לבחור את ברירות המחדל, פרט למסך המוצג למטה בו יש לבחור את הפולדר בו שמור ה csv והמידות אותן יש לשנות לקמ&quot;ש/מטרים.<br>
-<img src="http://img.skitch.com/20100405-ee6mkfgrpqbxtkhrbywqup2ra3.jpg" alt="POI loader"></p>
+<img src="/img/2010/04/garmin-nuvi-speedtraps-4.jpg" alt="POI loader"></p>
 <p>אחרי העלאת הנקודות למכשיר, אפשר להתחיל בנווט כרגיל. בכל פעם שמתקרבים למכמונת, ישמעו שני צפצופים רצופים (בלי קשר למהירות), תוצג הודעה עם מהירות הסף של המכמונת, ותראה נקודה ירוקה על הכביש לסימון המיקום. אם עוברים על מהירות הסף (שהיא בדרך-כלל 10 קמ&quot;ש מעל המהירות המותרת), צבע ההודעה הופך לאדום, ונשמעים צפצופים רצופים כל עוד המהירות גבוהה מהמוגדר.<br>
-<img src="http://img.skitch.com/20100405-wfxdr21jef4i3jxcefr66i855.png" alt="מכמונת קרובה"></p>
+<img src="/img/2010/04/garmin-nuvi-speedtraps-5.png" alt="מכמונת קרובה"></p>
 <p>חסרון מסויים של התהליך המתואר כאן, הוא שהמידע על כוון המכמונת הולך לאיבוד. זה גורם לכך שמקבלים התראה גם בדרך הלוך וגם בדרך חזור, ולעיתים רק כשחוצים את כביש שבו יש מכמונת קרובה.</p>
 <p>סעו בזהירות.</p>
 
@@ -1879,7 +1828,7 @@ $ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
 
                 <div class="content post">
                     <p>הפעם, שינוי קל מהמתכונת השגרתית של הבלוג: לא עוד סקריפט, או עוד אתר שלא פועל, אלא סקירת מוצר. מדובר במכשיר GPS יעודי (PND) של חברת גרמין, מדגם nüvi 1310 (מבטאים בעברית &quot;ניבי&quot; – כמו שם ילד). רכשתי אותו לפני כשבוע, והוא צבר מאז קילומטרז' של כ 500 ק&quot;מ, הכוללים נסיעות עירוניות, בן-עירוניות, נסיעה לאתרי טיולים, והליכה בעיר. גילוי נאות: זהן מכשיר ה GPS הראשון שלי, כך שהביקורת אינה מבוססת על השוואה למוצרים מתחרים. מפאת אורכה, הסקירה מחולקת לשני פוסטים. בחלק השני יסקרו שינויי נתיב תוך כדי נסיעה, עצירות ביניים, נקודות עניין, דיבורית ועוד.</p>
-<p><img src="http://img.skitch.com/20100402-1rtsjtfcfth7nswg3995ibrjxa.jpg" alt="גרמין נובי 1310"></p>
+<p><img src="/img/2010/04/garmin-nuvi-review-1.jpg" alt="גרמין נובי 1310"></p>
 <h3>מראה חיצוני והתרשמות כללית</h3>
 <p>ביד המכשיר מרגיש קצת כבד (162 גר') ועבה (1.6 ס&quot;מ) – גם המסגרת מסביב לשטח התצוגה נראית טיפה עבה מדי. במכונית, לעומת זאת, הוא יושב &quot;טוב&quot; על המעמד המסופק, ובדרך כלל משתלב יפה ברכב. להשלמת המראה ברכב רצוי לטעון את המכשיר בבית מראש, ואז אין צורך להתחבר למצת כל עוד הנסיעה אינה ארוכה מדי.</p>
 <p>עוד מבחוץ: בחלק העליון כפתור כבוי והדלקה, בצד שמאל מקום לכרטיס הרחבה לזכרון ומיקרופון לדיבורית, ומאחור רמקול וחיבור mini USB המשמש גם לחיבור ספק הכח. החלק האחורי התחתון מחוספס מעט למניעת החלקה.</p>
@@ -1892,7 +1841,7 @@ $ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
 <p>מומלץ להשאיר את המכשיר מחובר למחשב למשך מספר שעות לאחר עדכון הגרסה כדי לטעון את הסוללה, ורק אז לצאת לנווט. חסרון משמעותי בשלב זה הוא שאין חווי על התקדמות הטעינה כל עוד המכשיר מחובר. לאחר טעינה מלאה, הסוללה אמורה להספיק ל-4 שעות שימוש. בפועל, זה קרוב יותר ל-3 שעות. לפני הניתוק, מומלץ לבצע eject לכונן הוירטואלי שמתווסף למחשב.</p>
 <h3>חיפוש כתובת</h3>
 <p>המסך הראשי של המכשיר פשוט ביותר, וזה בהחלט יתרון. הוא כולל שני כפתורים עיקרים: &quot;לאן?&quot; ו&quot;הצג מפה&quot;. לחיצה על &quot;לאן?&quot; מביאה למסך נוסף שבו יש לבחור את סוג החיפוש: כתובת, נקודות עניין, מועדפים וכו'. אחרי בחירת &quot;כתובת&quot; יש מסך ביינים (1) לבחירה בין הזנה של עיר ואחר-כך רחוב, או ישירות רחוב ואז המכשיר יחפש אותו בכל הארץ. ההקשה די מהירה בסך הכל, כאשר לאחר הקשת שניים או שלושה תוים מופיע מיד מסך ובו מספר אפשרויות המתחילות באותן אותיות. בדוגמה למטה, אחרי הקשת &quot;תל &quot; (2) מופיעים הערים/ישובים: תל אביב, תל יוסף, תל מונד ותל עדשים (3). אחר-כך, יש להזין ולבחור רחוב (6-5-4), מספר בית (7) לבסוף, יש ללחוץ על &quot;לדרך&quot; (8) והנווט מתחיל (9). את כל הרצף ניתן לראות במסכים למטה.</p>
-<p><img src="http://img.skitch.com/20100401-rb12pb1jd1528tecs7d7t45s7p.jpg" alt="חיפוש כתובת"></p>
+<p><img src="/img/2010/04/garmin-nuvi-review-2.jpg" alt="חיפוש כתובת"></p>
 <p>מספר בעיות שנראות בתצוגה וקשורות כולן בגיור המכשיר מעט מפריעות. זה נכון שניתן להתרגל אליהן די מהר, אבל רצוי שיתוקנו בגרסאות הבאות:</p>
 <ul>
 <li>אחרי הקשת רווח (מסך 2) האות &quot;ת&quot; בורחת קצת ימינה. הקשת תו נוסף מחזירה אותו למקום. זו בעיית RTL קלאסית, שמוכרת בלא מעט תוכנות אחרות.</li>
@@ -1904,9 +1853,9 @@ $ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
 <p>אחרי הגדרת היעד מתבצע חיפוש לווינים (אם אלה לא אותרו עד כה) ואחר-כך חישוב של הנתיב. בדרך-כלל שתי הפעולות מהירות למדי, ואם לא נמצאים בחניון תת-קרקעי ניתן לצאת לדרך תוך שניות ספורות.</p>
 <p>הנתיב הנבחר בדרך-כלל יעיל ומדוייק, כאשר ישנה העדפה לרחובות וכבישים ראשיים. המפות יחסית מעודכנות ומדויקות, וכוללות בין השאר את כל כביש 431, את החלק הצפוני של כביש 6 ואת אזור התעשיה החדש שבו נמצא סניף איקאה בראשון. מצד שני, על כביש 431 הגשר של מחלף ענבה עדיין &quot;בבניה&quot;, ואילו סניף איקאה עצמו עדיין לא נמצא ברשימת נקודות העניין. עוד אי-דיוקים או חוסר עדכניות שמצאתי הם פניה שמאלה מרחוב ברקוביץ' לשד' שאול המלך בתל-אביב שכבר לא אפשרית, כיכר במפגש כבישים 4 ו-6531 שהפכה לרמזור בעקבות הרחבת הכביש, ומיקום לא מדויק של הנתיבים בצומת התשבי – מה שגרם להודעת &quot;מחשב נתיב מחדש&quot;, למרות שהייתי על הנתיב. שגיאה אחרת במפה לא אפשרה פניה שמאלה מרחוב דובנוב (בנסיעה דרומה) לרח' קפלן. במקום זאת הופנתי למעקף דרך הרחובות לסקוב, הפטמן וליאונרדו. גרסת המפות המותקנת היא 2010.11</p>
 <p>בזמן הנסיעה מוצגת מפת תלת מימד (אך ללא מבנים ב 3D). על המפה מסומן הנתיב הנוכחי בצבע סגול (1) ועליו חץ לבן לסימון הפניות (2). עוד מוצגים: זמן הגעה משוער (3 – בצילום הוחלף במרחק ליעד), מהירות נוכחית (4), מהירות מקסימלית (בחלק מהכבישים), מרחק עד הפניה הבאה (5), שם הרחוב שאליו פונים (6) ובחלק מהצמתים גם נתיב מומלץ לפניה (7). אם חלוקת הנתיבים לא ידועה, יופיע חץ כללי לכוון. ניתן <a href="http://yehudab.com/blog/2010/04/garmin-nuvi-speedtraps/">לטעון נתוני מכמונות מהירות</a>, אבל אין דווחים על עומסי תנועה.<br>
-<img src="http://img.skitch.com/20100401-gnjcpdh3khhs65uj4pdtkrxanx.png" alt="נווט"></p>
+<img src="/img/2010/04/garmin-nuvi-review-3.png" alt="נווט"></p>
 <p>לחיצה על אזורים 3, 4, 5 תביא לשינוי התצוגה או תאפשר הגדרות נוספות, כפי שנראה בצילומי המסך למטה.<br>
-<img src="http://img.skitch.com/20100402-fhemp5i8a8mb9juw2kc3tr3d12.jpg" alt="מסכי הרחבה ואפשרויות בזמן נווט"></p>
+<img src="/img/2010/04/garmin-nuvi-review-4.jpg" alt="מסכי הרחבה ואפשרויות בזמן נווט"></p>
 <h3>הנחיה קולית</h3>
 <p>למרות התצוגה הנאה ומגוון האפשרויות להרחבת מידע, בזמן הנהיגה מה שבאמת קובע את הצלחת הנווט הוא ההנחיות הקוליות. אלה מושמעות פעם ראשונה כמה מאות מטרים לפני הפניה, בנוסח: &quot;עוד 400 מטר פנה שמאלה&quot;, וכן שוב כמה עשרות מטרים לפני הפניה: &quot;פנה שמאלה&quot;. אם יש רצף של שתי פניות בזו אחר זו, יופיעו שתיהן גם בהנחיה המוקדמת וגם לפני הפניות עצמן. בדוגמה דומה, ישמע הרצף הבא: &quot;עוד 400 מטר פנה ימינה ואז פנה שמאלה&quot; … &quot;פנה ימינה ואז פנה שמאלה&quot; … &quot;פנה שמאלה&quot;. לפני כניסה למחלפים, ההנחיה היא בדרך כלל לפי נתיב: &quot;השאר בנתיב הימני&quot;, &quot;המשך בנתיב הנסיעה&quot;, או &quot;השאר בנתיב השמאלי&quot;. לפני כיכר, ההנחיה היא לפי מספר היציאה מהכיכר, כך שכדי לחצות את הכיכר ולהמשיך ישר נשמע: &quot;בכיכר צא ביציאה השניה&quot;. ההנחיות הן בלשון זכר בלבד, ולא ניתן לבחור מגוון קולות. מה שכן, גרמין מספקת תוכנה למחשב האישי שאיתה ניתן להקליט הנחיות בקולות שלכם או של בני המשפחה. ניתן לנצל זאת כמובן להקלטה בלשון נקבה (פני ימינה).</p>
 <p>חסרון משמעותי של הלוקליזציה בסעיף זה הוא חוסר התמיכה בהקראת שמות רחובות שאליהן תתבצע הפניה. זה בעיקר רלוונטי בעיר במקומות בהן יש שתי פניות לאותו כוון (&quot;חצי ימינה&quot; ו&quot;ימינה&quot;), או במחלפים בהם יש מספר יציאות, וההנחיה &quot;השאר בנתיב הימני&quot; לא מספיקה. מעבר להקראה באנגלית ממש פותח עיניים (או יותר נכון אוזניים) בעניין הזה, אם כי לא מעשי לנסיעה יום-יומית – נסו לחפש את &quot;דרק קנקין&quot; בחיפה.</p>
@@ -1936,14 +1885,14 @@ $ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
                 <div class="content post">
                     <p>הפעם משהו למשתמשי ספארי המושבעים.<br>
 אם ניסיתם לצפות בחלק מהבלוגים של תפוז (<a href="http://blog.tapuz.co.il/CooknBake">למשל CooknBake</a>), ולא ראיתם שום תוכן זה לא אשמתכם. ככה זה נראה לפני:<br>
-<img src="http://img.skitch.com/20100213-gk9b6gyh134cx8sut4f3j2waeq.png" alt="הבלוגיה בספארי"></p>
+<img src="/img/2010/02/blogia-for-safari-1.png" alt="הבלוגיה בספארי"></p>
 <p>כל התוכן נמצא בדף, רק שהוא מוסתר. אני מניח שמתכנני הבלוגיה רצו להציג את התוכן רק לאחר שכולו נטען, אבל משום מה זה לא מצליח להם, והתוכן נשאר מוסתר. כדי להתגבר על הבעיה, נשתמש ביכולת הבנויה לתוך לספארי והיא מאפשרת לשנות את האופן שבו מוצג הדף. בדרך כלל זה משמש לחסימת פרסומות או סתם לשינויי צבע/גודל וכו'. הפעם נשתמש ביכולת זו כדי לפתור את בעית הבלוג הנעלם.</p>
 <p>אז איך זה עובד:<br>
 נתחיל בהורדת <a href="http://userstyles.org/styles/25152.css">הקובץ הזה</a> (לחיצה עם עכבר ימין ובחירת Download Linked File As…). את הקובץ אפשר לשמור בכל פולדר שתירצו, רק כדאי לזכור היכן שמרתם אותם בשביל השלב הבא. רצוי גם לשנות לו את השם מ 25152 לשם קצת יותר ברור (כמו blogia.css).</p>
 <p>השלב הבא הוא לפתוח את מסך ההעדפות של ספארי. משם נבחר את הטאב Advanced (האחרון מימין). בשדה Style sheet, נבחר &quot;Other&quot; ונדפדף למקום שבו שמרנו את הקובץ קודם.<br>
-<img src="http://img.skitch.com/20100213-k9wki6tbknmwrw7wh4h56u99ee.png" alt="שינוי הגדרות"></p>
+<img src="/img/2010/02/blogia-for-safari-2.png" alt="שינוי הגדרות"></p>
 <p>זהו, הבלוג מוצג, ואם לא, נסו לסגור ולפתוח את הדפדפן.<br>
-<img src="http://img.skitch.com/20100213-b88pabtxidmpcma99mm1yf5tc2.png" alt="הבלוג אחרי"></p>
+<img src="/img/2010/02/blogia-for-safari-3.png" alt="הבלוג אחרי"></p>
 
                 </div>
             </div>
@@ -2013,7 +1962,7 @@ $ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
 
                 <div class="content post">
                     <p>בזמן האחרון מופיעה פרסומת teaser שמכבב בה רובוט דמוי wall-e שנקרא primo. אם רציתם לדעת למה הפרסומת, התשובה בכותרת הסרטון.<br>
-<img src="http://img.skitch.com/20091106-ci4itq12grm99j75qwjetin3if.jpg" alt="PRIMO?  סתם תמי4"></p>
+<img src="/img/2009/11/primo-tami-4.jpg" alt="PRIMO?  סתם תמי4"></p>
 <p>עריכה (10/11/2009):<br>
 עכשיו זה כבר רשמי, פרימו הוא באמת <a href="http://www.tami4.co.il/product/195">מתקן מים</a> של תמי4. ואותי מעניין מה זה בדיוק &quot;ממשק משתמש חכם וחדשני – ייחודי לתמי 4&quot;?</p>
 
@@ -2039,13 +1988,13 @@ $ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
                 <div class="content post">
                     <p>הדפדפנים המודרנים (פיירפוקס, ספארי, אופרה, ו IE8) מתגאים בכך שעברו את המבחן <a href="http://www.webstandards.org/files/acid2/test.html">acid2</a> לבדיקת תאימות לתקנים. ככל הידוע לי, לא קיים מבחן מקביל לבדיקת התאימות במצב RTL. מכוון שכך, החלטתי לגייר את המבחן ולבדוק. התוצאות קצת מפתיעות, כאשר 2 מתוך הרביעה נכשלו במידה זו או אחרת. תוכלו לנסות את המבחן בעצמכם <a href="http://yehudab.com/files/acid2/test-rtl.html">בקישור הזה</a>.<br>
 אלה צילומי מסך מהבדיקה שאני עשיתי:</p>
-<p><img src="http://img.skitch.com/20091014-ttcd7n39w68e7bduij9564y9k4.png" alt="Firefox 3 acid2-rtl"><br>
+<p><img src="/img/2009/10/acid2-rtl-Firefox-3.png" alt="Firefox 3 acid2-rtl"><br>
 פיירפוקס 3/3.5</p>
-<p><img src="http://img.skitch.com/20091014-c2bf8edcydcyi8tx8br4xxgbmk.png" alt="Safar 3.1.2 acid2-rtl"><br>
+<p><img src="/img/2009/10/acid2-rtl-Safar-3.1.2.png" alt="Safar 3.1.2 acid2-rtl"><br>
 ספארי 3.1.2/כרום 3</p>
-<p><img src="http://img.skitch.com/20091014-h4896crhij2ch6kgptxw32byp.png" alt="IE8 acid2-rtl"><br>
+<p><img src="/img/2009/10/acid2-rtl-IE-8.png" alt="IE8 acid2-rtl"><br>
 אקספלורר 8</p>
-<p><img src="http://img.skitch.com/20091014-1itwmbss9sw3yssfes6id8ixw2.png" alt="Opera 10 acid2-rtl"><br>
+<p><img src="/img/2009/10/acid2-rtl-Opera-10.png" alt="Opera 10 acid2-rtl"><br>
 אופרה 10</p>
 
                 </div>
@@ -2069,11 +2018,11 @@ $ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
 
                 <div class="content post">
                     <p>גם אני ניסיתי אתמול להזמין פיצה ב 50% הנחה מדומינוס. בניגוד <a href="http://www.ynet.co.il/articles/0,7340,L-3787194,00.html">לדווחים על עומס</a>, האתר דווקא עבד יפה, ואפילו תואם פיירפוקס. הבעייה התחילה כשנדרשתי להזין סיסמה. ניסיתי מספר סיסמאות, עד שהתייאשתי ולחצתי על כפתור ה&quot;שכחתי סיסמה&quot;. אז הגעתי למסך הבא:<br>
-<img src="http://img.skitch.com/20091010-pc1qwwnutr15nrr4b268mfrwjd.png" alt="אז שכחנו לחדש, אז מה כבר קרה?"></p>
+<img src="/img/2009/10/dominos-fail-1.png" alt="אז שכחנו לחדש, אז מה כבר קרה?"></p>
 <p>בפעם הבאה, רק בטלפון.</p>
 <p>עדכון: 12/10/2009<br>
 למרות ההבטחה, לא התייאשתי. נרשמתי מחדש עם email אחר (הפעם דאגתי שפיירפוקס ישמור את הסיסמה). ההזמנה כנראה הצליחה (נדע עוד 30 דקות), אבל הסרבר של דומינוס נתקע ב timeout:<br>
-<img src="http://img.skitch.com/20091012-m7bumu79g965h29rgj3ny2tefy.png" alt="בפעם הבאה, נא להגדיל את ה timeout"></p>
+<img src="/img/2009/10/dominos-fail-2.png" alt="בפעם הבאה, נא להגדיל את ה timeout"></p>
 
                 </div>
             </div>
@@ -2095,7 +2044,7 @@ $ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
                 <div class="clear-both"></div>
 
                 <div class="content post">
-                    <p><img src="http://img.skitch.com/20091001-eur1qys66xiyntdsmc14w51cuw.png" alt="כל הקודם זוכה"></p>
+                    <p><img src="/img/2009/10/invitations-to-google-wave-1.png" alt="כל הקודם זוכה"></p>
 <p>רוצים הזמנה? 4 הראשונים שתגובתם תופיע ללא צורך באישור (כלומר כאלו שהגיבו כאן לפחות פעם אחת) יקבלו אחת.</p>
 <p>עדכון (5/10/2009):<br>
 למיטב ידיעתי, אף אחד מ-4 הזוכים עוד לא קיבל הזמנה מגוגל. אם אתם יודעים אחרת, נא לעדכן.<br>
@@ -2125,7 +2074,7 @@ $ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
 
                 <div class="content post">
                     <p>אחד ממעוזי ההתנגדות האחרונים לפיירפוקס נשבר השבוע. אתר <a href="http://www.leumi-card.co.il/">לאומי קארד</a> עבר התאמה לפיירפוקס ועכשיו ניתן לגשת ולבצע את כל הפעולות ללא צורך בתוכנות וירטואליציה למינהן. אז אמנם לקח קצת יותר מדי זמן, אבל כשמגיע קרדיט (הבנתם…) אז נותנים.<br>
-<img src="http://img.skitch.com/20090814-n6cfbkdga9dnwnid7rin2y5gs3.png" alt="הלו, זה פיירפוקס?"></p>
+<img src="/img/2009/08/leumi-card-firefox-1.png" alt="הלו, זה פיירפוקס?"></p>
 <p>תודה למדווח האלמוני <a href="http://mozilla.org.il/board/viewtopic.php?f=13&amp;t=6060#p38057">מפורום מוזילה ישראל</a></p>
 
                 </div>
@@ -2180,9 +2129,9 @@ $ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
                     <p><a href="http://www.talgalili.com/?p=1004">טל התחיל בפרויקט הקבוצתי</a> ואני מצטרף ולא רק ליום אחד, אלא מהיום ועד להודעה חדשה. גולשים ב IE6 שיגיעו לבלוג הזה, יופנו אחר כבוד לשדרג אותו לגרסה מתקדמת יותר, או לעבור לדפדפן אחר.</p>
 <p>למעשה, די קל לי להצטרף <a href="http://www.we-cms.info/blog/die-ie6/">למחאה העולמית הגואה</a> בעניין. הבלוג הזה מקבל בין 4% ל-8% של קליקים מאינטרנט אקספלורר 6, ורובם (לפחות לפי בדיקה של מילות החיפוש), כנראה בטעות. גם מעולם לא טרחתי לדאוג להתאמה של תבנית הבלוג ל IE6 כפי שניתן לראות בצילומי המסך למטה:</p>
 <p>IE6:<br>
-<img src="http://img.skitch.com/20090802-gpni1jak62wkcj8kshhbqhh3ih.jpg" alt="בלוג פשוט ב ie6"></p>
+<img src="/img/2009/08/using-ie6-no-soup-for-you-1.jpg" alt="בלוג פשוט ב ie6"></p>
 <p>IE7:<br>
-<img src="http://img.skitch.com/20090802-cqr5bn56apaknhwnw5hm7adas8.jpg" alt="בלוג פשוט ב ie7"></p>
+<img src="/img/2009/08/using-ie6-no-soup-for-you-2.jpg" alt="בלוג פשוט ב ie7"></p>
 <p>יש כמובן <a href="http://tomercohen.com/2009/07/31/%D7%97%D7%A1%D7%99%D7%9E%D7%AA-%D7%90%D7%99%D7%A0%D7%98%D7%A8%D7%A0%D7%98-%D7%90%D7%A7%D7%A1%D7%A4%D7%9C%D7%95%D7%A8%D7%A8/#comment-4339">הרבה</a> מתנגדים <a href="http://www.talgalili.com/?p=1004&amp;cpage=1#comment-79492">בתגובות</a> וגם <a href="http://marksw.com/wordpress/?p=1317">במאמרים נפרדים</a>, ולא יעלה על הדעת, אבל אחרי כל-כך הרבה אתרים שחסמו עבורי את השימוש בפיירפוקס (בין במפורש ובין פשוט בגלל חוסר תפקוד), אני מרגיש צורך בנקמה קטנה.</p>
 
                 </div>
@@ -2228,7 +2177,7 @@ $ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
 
                 <div class="content post">
                     <p>לא יאומן, אבל 53 מקוראי הבלוג (טוב, 52 כי פעם אחת גם אני הצבעתי לעצמי – כמו מלצרים ששמים קצת כסף קטן בכוס הטיפים) ממש טרחו להצביע עבורי <a href="http://www.blogerim.net/node/39803">בתחרות הבלוגרים העצמאיים</a>.</p>
-<p><img src="http://img.skitch.com/20081103-fc4dx1n142hscb3pxw46wdc4ny.png" alt="53 הצבעות"></p>
+<p><img src="/img/2008/11/blogerim-voter-thank-you-1.png" alt="53 הצבעות"></p>
 <p>כשפתחתי את הבלוג לפני 4 חודשים, לא האמנתי שאגיע ל 52 קוראים, אז זה בהחלט הישג נחמד. לא שהגעתי למקמות הראשונים או משהו, אבל בהחלט כיף להיות בדף הפותח (מבין 3) <a href="http://www.blogerim.net/blog-votes?page=2&amp;op0=AND&amp;filter0%5B0%5D=2504">ברשימה הממויינת בקטגוריה &quot;טכנולוגיה ואינטרנט&quot;</a>. אני מבין גם שלא רמת הכתיבה המשובחת שלי כאן זכתה לקרדיט, אלא יותר רמת הכתיבה בסקריפטים, אבל לזה עדיין אין תחרות.</p>
 <p>לשנה הבאה בעשירייה הראשונה.</p>
 
@@ -2305,9 +2254,9 @@ $ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
                 <div class="content post">
                     <p>עוד אחד מחידושי פיירפוקס 3.1 הוא האפשרות להציג ווידאו ואודיו בתוך הדפדפן, ללא צורך בפלאגין ותוספות אחרות. הכנתי דוגמה קטנה בפורמט <a href="http://www.theora.org/">ogg</a> בפוסט הזה (מצטער על כישורי האנימציה והסאונד החובבניים). כדי לראות את הסרטון תזדקקו לפיירפוקס 3.1 <a href="http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-trunk/">בגרסה הלילית האחרונה</a> ו…זהו.<br>
 <video controls="true" src="/img/saltandpepper.ogg"></video></p>
-<div style="border:2px solid #F72020;padding:5px">אופס, כנראה שאין לך אפשרות לראות את הסרטון. [ככה](http://img.skitch.com/20080831-8mgecc652cudt6ubk5q7xsy19g.png) זה אמור להיראות.</div>עדכון:  
-מסתבר שהמצב עדיין לא כל-כך ורוד: בחלונות הסרט מנגן אבל אין סאונד; וורדפרס שבר לי את ה html, כך שתגי הפתיחה והסגירה של ה video נעטפו בתגי p; ואחרון חביב: בלי קשר (או עם), גם google reader לא מזהה את תגי הווידאו ולכן החליט לזרוק אותם החוצה.  
-אז עוג אולי עדיין לא מלך, אבל בהחלט יורש העצר.
+<p>עדכון:<br>
+מסתבר שהמצב עדיין לא כל-כך ורוד: בחלונות הסרט מנגן אבל אין סאונד; וורדפרס שבר לי את ה html, כך שתגי הפתיחה והסגירה של ה video נעטפו בתגי p; ואחרון חביב: בלי קשר (או עם), גם google reader לא מזהה את תגי הווידאו ולכן החליט לזרוק אותם החוצה.<br>
+אז עוג אולי עדיין לא מלך, אבל בהחלט יורש העצר.</p>
 
                 </div>
             </div>
@@ -2330,7 +2279,7 @@ $ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
 
                 <div class="content post">
                     <p>לפני פחות מחודש <a href="/blog/2008/08/%D7%AA%D7%9B%D7%95%D7%A0%D7%AA-text-shadow-%D7%91%D7%A4%D7%A8%D7%99%D7%99%D7%A4%D7%95%D7%A7%D7%A1-31/">דיווחתי כאן</a> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=449519">ובבאגזילה</a> על באג בתכונת text-shadow. תודות לעבודה מהירה של אנשי מוזילה <a href="http://weblogs.mozillazine.org/roc/">רוברט או'קלהן</a> ו<a href="http://www.smontagu.org/blog/">סיימון מונטגו</a> הבאג תוקן, וכעת ניתן לראות התנהגות תקינה של הצל גם מתחת לטקסט עברי וערבי. גרסת אלפא2 (או בטא) ל3.1 עדיין לא יצאה, אבל ניתן <a href="http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-trunk/">להוריד גרסת פרה-אלפא2</a> ששם כבר מוצג הצל נכון.<br>
-<img src="http://img.skitch.com/20080828-bywhnma95fsf71um33xx7jkd5n.png" alt="הצל תוקן בגרסת פרה-אלפא2"></p>
+<img src="/img/2008/08/firefox-3-1-text-shadow-bug-fixed-1.png" alt="הצל תוקן בגרסת פרה-אלפא2"></p>
 
                 </div>
             </div>
@@ -2353,7 +2302,7 @@ $ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
 
                 <div class="content post">
                     <p><a href="http://www.flip4mac.com/wmv.htm">Flip4Mac</a> הוא פלאג-אין לקוויקטיים המאפשר לנגן קבצי מדיה של Microsoft על מחשבי מקינטוש. לגרסה האחרונה של הנגן (2.2.0.49) היו מספר בעיות שגרמו בין השאר לקריסת הנגן ביחד עם הדפדפן, ולתצוגה קטועה של אזור השליטה שלו (כפתור ה play/pause, ציר הזמן וכו') בפיירפוקס 3. עיקר הבעיה הייתה עם קבצי asx המשמשים בדרך כלל לשילוב פרסומות וקדימונים לפני ואחרי הסרט. אלה גרמו בחלק מהמקרים לקריסות ובפעמים אחרות לניגון הפרסומת בלבד ללא הסרט. זו הייתה אחת הסיבות לכך שברוב הסקריפטים שלי שילבתי מסנן פרסומת (כן, גם הסיבה האחרת לא פחות חשובה…)<br>
-<img src="http://img.skitch.com/20080827-n26f1j3bab3kh9tmt7ha7bukyi.png" alt="Flip4Mac 2.2.0.49"><br>
+<img src="/img/2008/08/flip-4-mac-beta-1.png" alt="Flip4Mac 2.2.0.49"><br>
 גרסה חדשה של הנגן (2.2.1.7) שוחררה לא מזמן כגרסת בטא, והיא זמינה להורדה דרך אתרי התוכנות למק: <a href="http://www.macupdate.com/info.php/id/17787/flip4mac-wmv-player">Macupdate</a>, <a href="http://www.versiontracker.com/dyn/moreinfo/macosx/28842">VersionTracker</a>, ואחרים. הערות השחרור של הגרסה הבטיחו שיפור בניגון בתוך ספארי, שיפור תאימות בספארי וקמינו, ותיקון קריסות. התקנתי את הגרסה, והנה ההתרשמות שלי:</p>
 <ul>
 <li>אין הבדל ממשי מבחינת כפתור השליטה בפיירפוקס – הם עדיין נעלמים ומופיעים כרצונם.</li>
@@ -2361,7 +2310,7 @@ $ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
 <li>קריסות אחרות בנתיים לא משתחזרות (נבדק בנענע10 ו TheMarker).</li>
 </ul>
 <p>ההמלצה שלי: <strong>להתקין</strong>.<br>
-<img src="http://img.skitch.com/20080827-fx2yx855cai8f7hewyhw8p9ntx.png" alt="Flip4Mac Beta"></p>
+<img src="/img/2008/08/flip-4-mac-beta-2.png" alt="Flip4Mac Beta"></p>
 
                 </div>
             </div>
@@ -2387,7 +2336,7 @@ $ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
 הורדתי את הגרסה ובדקתי את התצוגה בבלוג שלי. לשם כך הוספתי את הפרמטרים הבאים בקובץ ה styles.css:</p>
 <pre class="language-css"><code class="language-css"><span class="token selector">#header h1</span> <span class="token punctuation">{</span><br>	<span class="token property">text-shadow</span><span class="token punctuation">:</span> #999 3px 3px 3px<span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><span class="token selector">.post h2</span> <span class="token punctuation">{</span><br>	<span class="token property">text-shadow</span><span class="token punctuation">:</span> #999 2px 2px 2px<span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
 <p>התוצאה הייתה מאכזבת: כל הטקטסים בעברית לא קיבלו הצללה, אלא רק מספרים וטקסט באנגלית. הנה תוצאה השוואתית (מלמעלה למטה: פיירפוקס Gecko/2008072510 Shiretoko/3.1a1 , אופרה 9.51, ספארי נייטלי 35417 – כולם בגסרת מק)<br>
-<img src="http://img.skitch.com/20080803-e2g4scij82sf14djt45fcg3xtp.png" alt="text-shadow פיירפוקס, אופרה, ספארי"><br>
+<img src="/img/2008/08/firefox-3-1-text-shadow-1.png" alt="text-shadow פיירפוקס, אופרה, ספארי"><br>
 אני אדווח על הבאג בבאגזילה ואעדכן כאן כאשר יהיו התפתחויות.</p>
 <p>עדכון (7/8/2008): מסתבר שהבאג תלוי ברדיוס הטשטוש של הצל. אם הוא 0, כלומר ללא טשטוש, הצל מוצג היטב. תמיד טוב לייצר דוגמה מינימלית (במקרה הזה זה היה כדי לדווח בבאגזילה). למי שרוצה לעקוב, מספר הבאג בבאגזילה הוא: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=449519">449519</a></p>
 
@@ -2442,7 +2391,7 @@ $ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
 
                 <div class="content post">
                     <p>אורנג' מנסה להסביר באתר שלה<a href="http://www.orange.co.il/PlansAndRates/1517.html"> מה ההבדל בין תוכנית לחבילה</a>. מי שיצליח לתמצת את ההבדלים במשפט אחד יזכה בחבילה (או שאולי זאת תוכנית) של 20 sms-ים חינם ליום מהאתר של אורנג' (אורנג' לאורנג' בלבד).<br>
-<img src="http://img.skitch.com/20080725-ei6kwcujhm5ugmmwc3b9666mw2.png" alt="מה ההבדל בין תוכנית וחבילה?"><br>
+<img src="/img/2008/07/orange-find-diff-1.png" alt="מה ההבדל בין תוכנית וחבילה?"><br>
 לשם שינוי פוסט על תוכן ולא על מאחורי הקלעים, אם כי קשור לנושא חשוב שעוד ידון רבות בבלוג הזה: שמישות.</p>
 
                 </div>
@@ -2466,7 +2415,7 @@ $ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
 
                 <div class="content post">
                     <p>אתמול ניסיתי לבדוק איך נראה הבלוג שלי באינטרנט אקספלורר 8 בטא1. במילים עדינות, המראות היו קשים.<br>
-<img src="http://img.skitch.com/20080725-pixkfh5qminumykpattpik6acj.png" alt="הבלוג באינטרנט אקספלורר 8 בטא 1"><br>
+<img src="/img/2008/07/direction-rtl-ie8-beta-1.png" alt="הבלוג באינטרנט אקספלורר 8 בטא 1"><br>
 משום מה, אין ממש תמיכה בסטייל direction:rtl. לא מצאתי אזכור לזה בשום מקום רשמי של מיקרוסופט, פרט לשאלה ותשובה לקונית <a href="http://www.microsoft.com/windowsxp/expertzone/chats/transcripts/08_0320_ez_ie8.mspx">בצ'ט החודשי של חודש מרץ 2008</a>:</p>
 <blockquote>
 <p><strong>Jane[MSFT] (Expert):</strong><br>

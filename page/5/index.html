@@ -108,7 +108,6 @@
 
                 <div class="content post">
                     <p>פחות משבוע אחרי <a href="http://www.tlv1.co.il/?p=5930">הפרסום הראשון</a> של נתוני התחבורה הציבורית בפורמט תיקני, עלה לאויר <a href="http://otp.hamakor.org.il/">שרות חופשי לתכנון מסלולי נסיעה</a> המבוסס על הנתונים אלה. ניתן לתכנן נסיעה בתחבורה ציבורית מכל מקום לכל מקום בארץ, אם כי לא כל חברות התח&quot;צ מכוסות. בולטת בהעדרה רכבת-ישראל. השרות הוא נסיוני, והכתובת והשרת יוחלפו בקרוב. בנתיים מוזמנים לנסות ולשלוח תגובות למטה.</p>
-<p><img src="https://img.skitch.com/20120520-d4dysf5u9ruawex2jm83yihied.png" alt="תכנון מסלול לדוגמה"></p>
 <p>שימו לב! השרות מוגש as-is. אין שום הבטחה לתקינות הנתונים מבחינת האפשרות לנסוע במסלול, יעילות המסלול, זמנים, מספרי הקוים, או מחיר הנסיעה (אם וכאשר יפורסם).<br>
 שוב תודה לחברי ומנהלי <a href="http://www.hamakor.org.il/">עמותת המקור</a> על התמיכה בפרויקט.</p>
 
@@ -135,71 +134,29 @@
                     <p>משרד התחבורה החל לפרסם לפני כשבוע מאגר מידע חדש הכולל לוחות זמנים ונתיבים של התחבורה הציבורית בארץ. <a href="http://data.gov.il/dataset/383">המאגר</a> מפורסם לפי תקן פתוח של גוגל שנקרא GTFS. במסגרת שיתוף פעולה של מספר חברים ברשימת התפוצה של <a href="http://www.hamakor.org.il/">המקור</a>, הקמנו פיילוט שמדגים את יכולות המאגר. הקוד בפיילוט מבוסס על פרויקט OpenTripPlanner. תודה לירון על עבודת התרגום, ולשאר החברים על העידוד והתמיכה.</p>
 <p>עד להקמת שרת ציבורי, ניתן להתרשם מצילומי המסך:</p>
 <p>מסלול שלם:<br>
-<img src="/img/2012/05/9b691287-b202-4e4c-89ba-7f025f6a11ba.png" alt="מסלול שלם"></p>
+<img src="/img/2012/05/otp-il-1.png" alt="מסלול שלם"></p>
 <p>התמקדות על מקטעים:<br>
-<img src="https://img.skitch.com/20120517-rpfeyxpb4nx3t8rpdw9qycshut.png" alt="התמקדות על מקטעים"></p>
+<img src="/img/2012/05/otp-il-2.png" alt="התמקדות על מקטעים"></p>
 <p>גרסה להדפסה:<br>
-<img src="https://img.skitch.com/20120517-fnrapyjp427xmw9e86ha791d3g.png" alt="גרסה להדפסה"></p>
+<img src="/img/2012/05/otp-il-3.png" alt="גרסה להדפסה"></p>
 <h3>ההסבר בהמשך מיועד למי שרוצה להקים שרת. לא למי שרוצה לחשב מסלול !! (מה שנקרא: Don't try this at home).</h3>
 <p>להקמת השרת, יש לבצע את הפעולות הבאות: (זה הרקע. הקוד בפסקה הבאה מבצע את הפעולות)</p>
 <p>לוודא שאזור הזמן של השרת הוא Asia/Jerusalem.<br>
 להוריד ולפתוח את הקוד של OpenTripPlanner (גודל הקובץ כ 90MB) וליצור קישור סימבולי ל / .<br>
 להוריד ולפתוח קובץ Open Street Map של ישראל מהאתר <a href="http://downloads.cloudmade.com/asia/western_asia/israel">cloudmade.com</a> (גודל הקובץ 22MB).<br>
 למצוא את כתובת קובץ ה GTFS <a href="http://data.gov.il/dataset/383">מאתר מאגרי המידע </a>של הממשלה, ולהוריד אותו. מכוון שהקובץ מוגש (זמנית?) משרת ftp ולא http, צריך לארח אותו מחדש על שרת אחר. בדוגמאות הקוד בהמשך האירוח הוא בשרת מקומי</p>
-<pre><code>$ date
-# Make sure timezone is correct. If not, run the command:
-# $ sudo ln -sf /usr/share/zoneinfo/Asia/Jerusalem /etc/localtime
-# make sure ntp is installed and running. if not, follow these instructions: &lt;a href=&quot;http://www.ehow.com/how_8251011_sync-time-centos.html&quot;&gt;http://www.ehow.com/how_8251011_sync-time-centos.html&lt;/a&gt;
-$ mkdir ~/GTFS
-$ cd ~/GTFS
-$ curl -L -O &quot;http://maps5.trimet.org/otp-dev/otp.zip&quot;
-$ curl -L -O &quot;http://downloads.cloudmade.com/asia/western_asia/israel/israel.osm.bz2&quot;
-$ curl -L -O &quot;ftp://199.203.58.18/israel-public-transportation.zip&quot;
-# !! replace IP above with correct IP
-$ unzip otp.zip
-$ bunzip2 israel.osm.bz2
-$ sudo ln -s ~/GTFS/otp /
-$ ln -s ~/GTFS/israel.osm /otp/cache/osm/
-</code></pre>
+<pre class="language-shell"><code class="language-shell">$ <span class="token function">date</span><br><span class="token comment"># Make sure timezone is correct. If not, run the command:</span><br><span class="token comment"># $ sudo ln -sf /usr/share/zoneinfo/Asia/Jerusalem /etc/localtime</span><br><span class="token comment"># make sure ntp is installed and running. if not, follow these instructions: &lt;a href="http://www.ehow.com/how_8251011_sync-time-centos.html">http://www.ehow.com/how_8251011_sync-time-centos.html&lt;/a></span><br>$ <span class="token function">mkdir</span> ~/GTFS<br>$ <span class="token builtin class-name">cd</span> ~/GTFS<br>$ <span class="token function">curl</span> <span class="token parameter variable">-L</span> <span class="token parameter variable">-O</span> <span class="token string">"http://maps5.trimet.org/otp-dev/otp.zip"</span><br>$ <span class="token function">curl</span> <span class="token parameter variable">-L</span> <span class="token parameter variable">-O</span> <span class="token string">"http://downloads.cloudmade.com/asia/western_asia/israel/israel.osm.bz2"</span><br>$ <span class="token function">curl</span> <span class="token parameter variable">-L</span> <span class="token parameter variable">-O</span> <span class="token string">"ftp://199.203.58.18/israel-public-transportation.zip"</span><br><span class="token comment"># !! replace IP above with correct IP</span><br>$ <span class="token function">unzip</span> otp.zip<br>$ bunzip2 israel.osm.bz2<br>$ <span class="token function">sudo</span> <span class="token function">ln</span> <span class="token parameter variable">-s</span> ~/GTFS/otp /<br>$ <span class="token function">ln</span> <span class="token parameter variable">-s</span> ~/GTFS/israel.osm /otp/cache/osm/</code></pre>
 <p>יש לערוך מספר קבצי הגדרות:</p>
-<pre><code>$ vi /otp/graph-builder.xml
-# Line 13, change properties to 'name=&quot;path&quot; value=&quot;/home/yehuda/GTFS/israel-public-transportation.zip&quot;'
-#              (or whatever path you placed the file in)
-# Line 40, change file name of OSM from or-wa.osm to israel.osm (just file part)
-$ vi /otp/bin/build-graph.sh
-# Line 1, change -Xmx2048m to -Xmx6114m. If you have more memory, put as much as possible
-$ vi /otp/bin/start-server.sh
-# Line 1, change -Xmx2048m to -Xmx4096m. If you have more memory, put as much as possible
-</code></pre>
+<pre class="language-shell"><code class="language-shell">$ <span class="token function">vi</span> /otp/graph-builder.xml<br><span class="token comment"># Line 13, change properties to 'name="path" value="/home/yehuda/GTFS/israel-public-transportation.zip"'</span><br><span class="token comment">#              (or whatever path you placed the file in)</span><br><span class="token comment"># Line 40, change file name of OSM from or-wa.osm to israel.osm (just file part)</span><br>$ <span class="token function">vi</span> /otp/bin/build-graph.sh<br><span class="token comment"># Line 1, change -Xmx2048m to -Xmx6114m. If you have more memory, put as much as possible</span><br>$ <span class="token function">vi</span> /otp/bin/start-server.sh<br><span class="token comment"># Line 1, change -Xmx2048m to -Xmx4096m. If you have more memory, put as much as possible</span></code></pre>
 <p>בניית הגרף (משלב נתוני OSM עם נתוני תח&quot;ץ)</p>
-<pre><code>$ cd /otp
-$ bin/build-graph.sh &gt;&amp; ~/GTFS/build-graph.err
-# might take 15-30 minutes depending on processor power and memory
-$ ls -l /otp/Graph.obj
-# should be around 1GB
-</code></pre>
+<pre class="language-shell"><code class="language-shell">$ <span class="token builtin class-name">cd</span> /otp<br>$ bin/build-graph.sh <span class="token operator">>&amp;</span> ~/GTFS/build-graph.err<br><span class="token comment"># might take 15-30 minutes depending on processor power and memory</span><br>$ <span class="token function">ls</span> <span class="token parameter variable">-l</span> /otp/Graph.obj<br><span class="token comment"># should be around 1GB</span></code></pre>
 <p>אחרי הריצה חשוב לוודא בלוג שאין תעופה בגלל חוסר זכרון !!</p>
 <p>עכשיו אפשר להריץ את השרת האפליקטיבי:</p>
-<pre><code>$ cd /otp
-$ bin/start-server.sh
-# Wait for line: &quot;Winstone Servlet Engine v0.9.10 running...&quot;
-</code></pre>
+<pre class="language-shell"><code class="language-shell">$ <span class="token builtin class-name">cd</span> /otp<br>$ bin/start-server.sh<br><span class="token comment"># Wait for line: "Winstone Servlet Engine v0.9.10 running..."</span></code></pre>
 <p>עכשיו אפשר לפתוח דפדן לכתובת : http://localhost:8080/opentripplanner-webapp/index.html (אם השרת אינו מקומי, להחליף localhost בכתובת השרת). ולנסות לחשב מסלול.</p>
 <p>תרגום לעברית:<br>
 לבדוק האם הקובץ ‎/otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js‏ קיים. אם לא, להוריד אותו <a href="https://github.com/openplans/OpenTripPlanner/blob/master/opentripplanner-webapp/src/main/webapp/js/otp/locale/Hebrew.js">מכאן</a> ולשמור בנתיב הנ&quot;ל. אחר-כך, יש לבצע מספר תיקונים בקוד:</p>
-<pre><code>$ vi /otp/webapps/opentripplanner-webapp/index.html
-# line 2, add 'dir=&quot;rtl&quot;' to html tag
-# line 53, duplicate this line and change file name to &quot;js/otp/locale/Hebrew.js&quot;
-$ vi /otp/webapps/opentripplanner-webapp/js/otp/config.js
-# line 12, change otp.locale.English to otp.locale.Hebrew (at end of line)
-# line 175, change value of 'enabled' to 'true'
-# line 177, add this to end of string:
-# + '&lt;div style=&quot;margin:10px auto;width:205px&quot;&gt;&lt;a href=&quot;http://www.opentripplanner.org/&quot;&gt;&lt;img src=&quot;images/logo-otp.png&quot; title=&quot;OpenTripPlanner&quot; /&gt;&lt;/a&gt;' +  '&lt;a style=&quot;margin:0 10px&quot; href=&quot;http://www.hamakor.org.il/&quot;&gt;&lt;img src=&quot;images/logo-hamakor.png&quot; title=&quot;עמותת המקור&quot; /&gt;&lt;/a&gt;' + '&lt;a href=&quot;http://www.hetz.biz/&quot;&gt;&lt;img src=&quot;images/logo-hetz.png&quot; title=&quot;חץ ביז&quot; /&gt;&lt;/a&gt;&lt;/div&gt;'
-$ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
-# line 28, change title to: &quot;אודות האתר&quot;
-# line 29, change content to:
-# 'אתר זה הוקם ע&quot;י יהודה ב. על בסיס נתוני &quot;לו&quot;ז ומידע גאוגראפי בתחבורה הציבורית&quot; הזמינים מאתר &lt;a href=&quot;http://data.gov.il/&quot;&gt;data.gov.il&lt;/a&gt; ועל בסיס תוכנת הקוד הפתוח &lt;a href=&quot;http://www.opentripplanner.org/&quot;&gt;OpenTripPlanner&lt;/a&gt;.' + '&lt;br&gt;' + 'תרגום התוכנה לעברית בוצע ע&quot;י ירון שהרבני. אירוח אתר זה בחסות &lt;a href=&quot;http://www.hamakor.org.il/&quot;&gt;עמותת המקור&lt;/a&gt; ובאדיבות &lt;a href=&quot;http://www.hetz.biz/&quot;&gt;חץ ביז&lt;/a&gt;.' + '&lt;br&gt;' +  'תנאי שימוש: עמותת המקור עושה כמיטב יכולתה בכדי לספק שירות זה על בסיס נתונים מדוייקים ועדכניים אולם ייתכנו טעויות. המידע ניתן כפי שהוא ללא אחריות. ראו גם &lt;a href=&quot;http://data.gov.il/dataset/383&quot;&gt;תנאי שימוש של משרד התחבורה&lt;/a&gt;.'
-</code></pre>
+<pre class="language-shell"><code class="language-shell">$ <span class="token function">vi</span> /otp/webapps/opentripplanner-webapp/index.html<br><span class="token comment"># line 2, add 'dir="rtl"' to html tag</span><br><span class="token comment"># line 53, duplicate this line and change file name to "js/otp/locale/Hebrew.js"</span><br>$ <span class="token function">vi</span> /otp/webapps/opentripplanner-webapp/js/otp/config.js<br><span class="token comment"># line 12, change otp.locale.English to otp.locale.Hebrew (at end of line)</span><br><span class="token comment"># line 175, change value of 'enabled' to 'true'</span><br><span class="token comment"># line 177, add this to end of string:</span><br><span class="token comment"># + '&lt;div style="margin:10px auto;width:205px">&lt;a href="http://www.opentripplanner.org/">&lt;img src="images/logo-otp.png" title="OpenTripPlanner" />&lt;/a>' +  '&lt;a style="margin:0 10px" href="http://www.hamakor.org.il/">&lt;img src="images/logo-hamakor.png" title="עמותת המקור" />&lt;/a>' + '&lt;a href="http://www.hetz.biz/">&lt;img src="images/logo-hetz.png" title="חץ ביז" />&lt;/a>&lt;/div>'</span><br>$ <span class="token function">vi</span> /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js<br><span class="token comment"># line 28, change title to: "אודות האתר"</span><br><span class="token comment"># line 29, change content to:</span><br><span class="token comment"># 'אתר זה הוקם ע"י יהודה ב. על בסיס נתוני "לו"ז ומידע גאוגראפי בתחבורה הציבורית" הזמינים מאתר &lt;a href="http://data.gov.il/">data.gov.il&lt;/a> ועל בסיס תוכנת הקוד הפתוח &lt;a href="http://www.opentripplanner.org/">OpenTripPlanner&lt;/a>.' + '&lt;br>' + 'תרגום התוכנה לעברית בוצע ע"י ירון שהרבני. אירוח אתר זה בחסות &lt;a href="http://www.hamakor.org.il/">עמותת המקור&lt;/a> ובאדיבות &lt;a href="http://www.hetz.biz/">חץ ביז&lt;/a>.' + '&lt;br>' +  'תנאי שימוש: עמותת המקור עושה כמיטב יכולתה בכדי לספק שירות זה על בסיס נתונים מדוייקים ועדכניים אולם ייתכנו טעויות. המידע ניתן כפי שהוא ללא אחריות. ראו גם &lt;a href="http://data.gov.il/dataset/383">תנאי שימוש של משרד התחבורה&lt;/a>.'</span></code></pre>
 <p>עכשיו לרפרש את הדפדפן ולהנות מההמשק העברי. יתכן שתתקבל הודעה על כשלון בחישוב המסלול. במקרה זה, יש לבחור תאריך חדש לחישוב בתחום המכוסה על-ידי הקובץ (יום הורדת הקובץ ועד שבועיים קדימה)</p>
 
                 </div>
@@ -224,19 +181,12 @@ $ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
                 <div class="content post">
                     <p>אחרי פניות רבות בעניין מאקו VOD, חזרתי לבדוק את המצב שם ולראות איך ניתן לצפות בשידורים על מק ולינוקס ללא שימוש בסקריפטים. מסתבר שמאקו עברו בחלק מן הסדרות לנגן פלאש, שבסך הכל פועל לא רע. לסדרות אחרות (כמו רמזור), נדרשים עדיין מעקפים לצפיה במק. הפתעה לטובה היתה לי דווקא בלינוקס (נבדק על אובונטו 11.10), אבל נתחיל קודם במק:<br>
 נכון לעכשיו, ניסיון של custup (ספקית הווידאו ברשת של מאקו) לתמוך במק יחד עם ישום לא מוצלח של flip4mac גורמים לבעיה. כדי להתגבר עליה, יש להתקין את הנגן <a href="http://www.videolan.org/vlc/download-macosx.html">VLC</a>, ולגרום לאתר לחשוב שאנחנו רצים דווקא על חלונות. אני אדגים את השיטה על סאפרי, אבל ניתן ליישם באופן דומה על פיירפוקס עם התוסף User Agent Switcher.</p>
-<p>בספארי, צריך לבחור בתפריט הראשי Prefrences ושם בטאב ה Advanced, לבחור את האפשרות: Show Develop menu in menu bar. נסגור את החלון ונאתחל את ספארי.<br>
-<img src="https://img.skitch.com/20111228-kjbwn1ya1us757kd3yhtcrkirx.png" alt="הגדרות ספארי"></p>
-<p>יופיע תפריט חדש: Develop ושם נבחר בתת-התפריט User Agent את האפשרות Safari 5.1 – Windows. בעקרון אפשר לבחור כל כניסה אחרת המכילה את המילה Windows, אבל זו נראית לי הכי בטוחה (וגם תעזור לשמור על הסטטיסטיקות של ספארי, במקרה שמישהו במאקו בודק אותן).<br>
-<img src="https://img.skitch.com/20111228-fhcppetmmx6shtj77pdsqxbx67.png" alt="שינוי שם הדפדפן"></p>
+<p>בספארי, צריך לבחור בתפריט הראשי Prefrences ושם בטאב ה Advanced, לבחור את האפשרות: Show Develop menu in menu bar. נסגור את החלון ונאתחל את ספארי.</p>
+<p>יופיע תפריט חדש: Develop ושם נבחר בתת-התפריט User Agent את האפשרות Safari 5.1 – Windows. בעקרון אפשר לבחור כל כניסה אחרת המכילה את המילה Windows, אבל זו נראית לי הכי בטוחה (וגם תעזור לשמור על הסטטיסטיקות של ספארי, במקרה שמישהו במאקו בודק אותן).</p>
 <p>שימו לב שהבחירה משפיעה רק על הטאב הנוכחי. עכשיו ניגש לדף התוכנית במאקו. נקבל את החלון הבא, ובו יש ללחוץ על הכתפור Click to Play:</p>
-<p><img src="https://img.skitch.com/20111228-bwerwtcq2qipxnqm9y6ywnj85f.png" alt="Click to Play"></p>
 <p>יפתח טאב חדש ובו הווידאו ינסה לנגן. רוב הסיכויים שהוא יכשל, וכאן יש להעתיק את ה URL מראש הדף ולהדביק ב VLC.</p>
-<p><img src="https://img.skitch.com/20111228-f57921p9yiuxhs6igtjdeci7p9.png" alt="להעתיק את ה URL"></p>
 <p>ב VLC, נבחר את האפשרות File-&gt;Open Network ונדביק את ה URL.</p>
-<p><img src="https://img.skitch.com/20111228-graukaq7utnuj15eafxwf7k643.png" alt="Open Network"><br>
-<img src="https://img.skitch.com/20111228-88dcgisktijmai6ff14f49a4jj.png" alt="להדביק"></p>
-<p>צפיה מהנה:</p>
-<p><img src="https://img.skitch.com/20111228-1xyiamn37huhunpwkpy8yjpe36.jpg" alt="סרט"></p>
+<p>צפיה מהנה</p>
 
                 </div>
             </div>
@@ -259,7 +209,6 @@ $ vi /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js
 
                 <div class="content post">
                     <p>שוב שינוי קל בווידג'ט מזג האויר בעקבות שינויים באתר <a href="http://www.israelweather.co.il/">IsraelWeather</a>. מוזמנים להוריד את העדכון <a href="http://yehudab.com/widgets/WeatherIL-2d1.zip">מכאן</a>.</p>
-<p><img src="https://img.skitch.com/20111022-8d8s83dafu7d79js3qyi3fqbs.png" alt="ווידג'ט מזג האויר, גרסה 2.1"></p>
 <p>תודה לנרי על הדווח.</p>
 
                 </div>

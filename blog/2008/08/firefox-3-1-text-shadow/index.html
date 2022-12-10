@@ -92,7 +92,7 @@
 הורדתי את הגרסה ובדקתי את התצוגה בבלוג שלי. לשם כך הוספתי את הפרמטרים הבאים בקובץ ה styles.css:</p>
 <pre class="language-css"><code class="language-css"><span class="token selector">#header h1</span> <span class="token punctuation">{</span><br>	<span class="token property">text-shadow</span><span class="token punctuation">:</span> #999 3px 3px 3px<span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><span class="token selector">.post h2</span> <span class="token punctuation">{</span><br>	<span class="token property">text-shadow</span><span class="token punctuation">:</span> #999 2px 2px 2px<span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
 <p>התוצאה הייתה מאכזבת: כל הטקטסים בעברית לא קיבלו הצללה, אלא רק מספרים וטקסט באנגלית. הנה תוצאה השוואתית (מלמעלה למטה: פיירפוקס Gecko/2008072510 Shiretoko/3.1a1 , אופרה 9.51, ספארי נייטלי 35417 – כולם בגסרת מק)<br>
-<img src="http://img.skitch.com/20080803-e2g4scij82sf14djt45fcg3xtp.png" alt="text-shadow פיירפוקס, אופרה, ספארי"><br>
+<img src="/img/2008/08/firefox-3-1-text-shadow-1.png" alt="text-shadow פיירפוקס, אופרה, ספארי"><br>
 אני אדווח על הבאג בבאגזילה ואעדכן כאן כאשר יהיו התפתחויות.</p>
 <p>עדכון (7/8/2008): מסתבר שהבאג תלוי ברדיוס הטשטוש של הצל. אם הוא 0, כלומר ללא טשטוש, הצל מוצג היטב. תמיד טוב לייצר דוגמה מינימלית (במקרה הזה זה היה כדי לדווח בבאגזילה). למי שרוצה לעקוב, מספר הבאג בבאגזילה הוא: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=449519">449519</a></p>
 
