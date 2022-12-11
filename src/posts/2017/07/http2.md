@@ -4,21 +4,20 @@ date: '2017-07-07T17:18:52+03:00'
 status: publish
 author: יהודה
 excerpt: 'עוד שדרוג קטן לבלוג. הפעם העברתי את השרת מ apache ל nginx, ועל הדרך הפעלתי HTTP/2. זה אמור לשפר את הביצועים, למרות שאני לא ממש מרגיש בזה בנתיים.'
-ogImage: 'img/2017/nginx-logs-sm.jpg'
+ogImage: 'img/2017/07/nginx-logs.jpg'
 type: post
 id: 796
-category:
+tags:
     - וורדפרס
     - לינוקס
     - 'קוד פתוח ותוכנה חופשית'
-tags: []
 post_format: []
 ---
 עוד שדרוג קטן לבלוג.  
 הפעם העברתי את השרת מ apache ל nginx, ועל הדרך הפעלתי HTTP/2.  
 זה אמור לשפר את הביצועים, למרות שאני לא ממש מרגיש בזה בנתיים.
 
-![Hex dump of nginx logs](/img/2017/nginx-logs-sm.jpg)
+![Hex dump of nginx logs](/img/2017/07/nginx-logs.jpg)
 
 למעוניינים, [המדריך הזה](https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-with-http-2-support-on-ubuntu-16-04) מסביר על התקנת nginx, והגדרות HTTP/2. [כאן](http://nginxlibrary.com/wordpress-permalinks/) תמצאו הסבר על ההגדרות הדרושות ב nginx לטובת הפעלת WordPress במקום mod\_rewrite של apache.
 

@@ -22,7 +22,7 @@ trailMinElevation: 311
 trailNetTime: "3:04"
 trailTotalTime: "5:45"
 trailAvgSpeed: 1.6
-trailEndImage: /img/2022/11/shvil-3-9.jpeg
+trailEndImage: img/2022/11/shvil-3-9.jpeg
 trailEndImageAlt: בקעת החולה והחרמון ממצפה אגמון החולה
 ---
 

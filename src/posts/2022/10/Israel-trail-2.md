@@ -22,7 +22,7 @@ trailMinElevation: 245
 trailNetTime: "3:11"
 trailTotalTime: "5:36"
 trailAvgSpeed: 2.4
-trailEndImage: /img/2022/10/shvil-2-5.jpeg
+trailEndImage: img/2022/10/shvil-2-5.jpeg
 trailEndImageAlt: האריה השואג
 ---
 

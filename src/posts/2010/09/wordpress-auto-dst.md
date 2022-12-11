@@ -7,8 +7,6 @@ excerpt: 'גם אני הלכתי לישון לפי שעון חורף מתוך ה
 ogImage: 'img/2010/09/wordpress-dst.png'
 type: post
 id: 521
-category:
-    - וורדפרס
 tags:
     - וורדפרס
     - 'שעון קיץ'

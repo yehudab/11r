@@ -6,9 +6,8 @@ author: יהודה
 excerpt: ''
 type: post
 id: 763
-category:
+tags:
     - 'ווידג''טים'
-tags: []
 post_format: []
 ---
 לפני מספר חודשים התווספה באתר [IsraelWeather](http://www.israelweather.co.il/) תצוגה של מדד עומס הקור. רק היום התפניתי לתקן גם את הווידג׳ט והעלתי את גרסה 2.4.

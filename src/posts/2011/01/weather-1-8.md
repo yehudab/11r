@@ -6,9 +6,8 @@ author: יהודה
 excerpt: ''
 type: post
 id: 560
-category:
-    - 'ווידג''טים'
 tags:
+    - 'ווידג''טים'
     - 'מזג אויר'
     - מק
 post_format: []

@@ -5,7 +5,7 @@ status: publish
 author: יהודה
 excerpt: 'חלפה למעלה משנה מאז שהתמיכה ב-7.0 php הופסקה, וזה הזמן לשדרג את הבלוג לגרסה 7.4. כרגיל, צריך לקרוא את כל ה breaking changes, אבל אם הבלוג והתוספים מתוחזקים לגרסה העדכנית ביותר, אפשר לסמוך בדרך כלל שהכל יעובד. גיבוי של הקוד והדאטה רצוי גם כן.'
 type: post
-ogImage: 'img/2020/upgrade.png'
+ogImage: 'img/2020/03/upgrade.png'
 id: 859
 tags:
     - nano
@@ -42,4 +42,4 @@ sudo apt install php7.4-memcache
 ```
 
 וריסטרט לשרת פתרו את הבעיה.  
-![שדרוג](/img/2020/upgrade.png)
+![שדרוג](/img/2020/03/upgrade.png)

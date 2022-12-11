@@ -4,12 +4,11 @@ date: '2017-06-29T23:58:06+03:00'
 status: publish
 author: יהודה
 excerpt: '7:00 שעון מעורר (מפעיל סנוז) 7:09 שעון מעורר (מכבה סנוז) 7:10 מייל (פרטי) 7:11 ג׳ימייל (עבודה) 7:12 פייסבוק'
-ogImage: 'img/iphone-apps.png'
+ogImage: 'img/2017/06/iphone-apps.png'
 type: post
 id: 777
-category:
+tags:
     - iPhone
-tags: []
 post_format: []
 ---
 7:00 שעון מעורר (מפעיל סנוז)  
@@ -54,4 +53,4 @@ post_format: []
 23:58 ספארי (מפרסם את הפוסט)  
 23:59 מטען, מצב מטוס
 
-![Apps on iPhone ](/img/iphone-apps.png)
+![Apps on iPhone ](/img/2017/06/iphone-apps.png)

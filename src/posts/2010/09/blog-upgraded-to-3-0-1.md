@@ -6,10 +6,9 @@ author: יהודה
 excerpt: ''
 type: post
 id: 513
-category:
+tags:
     - וורדפרס
     - כללי
-tags:
     - wordpress
 post_format: []
 ---

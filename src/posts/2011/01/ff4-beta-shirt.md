@@ -6,10 +6,9 @@ author: יהודה
 excerpt: ''
 type: post
 id: 557
-category:
+tags:
     - דפדפנים
     - 'קוד פתוח ותוכנה חופשית'
-tags:
     - חולצה
     - פיירפוקס
 post_format: []

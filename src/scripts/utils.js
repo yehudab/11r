@@ -20,11 +20,11 @@ function fixEmail() {
 }
 
 function fixTimeTicker() {
-    const timeTicker = $('#to-be-replaced-by-time-ticker');
+    const timeTicker = $('.to-be-replaced-by-time-ticker');
     if (timeTicker.length) {
-        timeTicker.text(msTime()); 
+        timeTicker.each((i, e) => { $(e).text(msTime()) }); 
         window.setInterval(function(){
-            timeTicker.text(msTime()); 
+            timeTicker.each((i, e) => { $(e).text(msTime()) });
         }, 1000);
     }
 }

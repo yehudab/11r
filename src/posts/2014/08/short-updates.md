@@ -6,11 +6,10 @@ author: יהודה
 excerpt: ''
 type: post
 id: 707
-category:
+tags:
     - 'ווידג''טים'
     - כללי
     - שמישות
-tags: []
 post_format: []
 ---
 1. לראשונה מאז הקמת הבלוג החלפתי את ערכת העיצוב לערכת העיצוב האחרונה של WordPress: [Twenty Fourteen](http://wordpress.org/themes/twentyfourteen). השינוי המהותי (פרט לצבעים) הוא תמיכה ב Responsive Design, כך שהבלוג יוצג מעתה בצורה טובה גם על מכשירים ניידים. קצת מאוחר, אבל better late then never.

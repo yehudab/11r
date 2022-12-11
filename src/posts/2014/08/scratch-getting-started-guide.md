@@ -7,10 +7,9 @@ excerpt: 'סקראץ׳ (Scratch) היא שפת תיכנות שמאפשרת לי�
 ogImage: 'img/2014/08/Scratch_cat_med.png'
 type: post
 id: 712
-category:
+tags:
     - סקראץ׳
     - 'קוד פתוח ותוכנה חופשית'
-tags: []
 post_format: []
 ---
 \[פוסט זה הוא תרגום של מדריך המשתמש הרשמי של Scratch. תוכלו להוריד את המדריך באנגלית מ[דף העזרה באתר](http://scratch.mit.edu/help/). הזכויות למקור שמורות ל Lifelong Kindergarten Group, MIT Media Lab. מופץ ברשיון CC-BY-SA 2.0\]

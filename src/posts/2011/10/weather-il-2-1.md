@@ -6,9 +6,8 @@ author: יהודה
 excerpt: ''
 type: post
 id: 654
-category:
+tags: 
     - 'ווידג''טים'
-tags: []
 post_format: []
 ---
 שוב שינוי קל בווידג'ט מזג האויר בעקבות שינויים באתר [IsraelWeather](http://www.israelweather.co.il/). מוזמנים להוריד את העדכון [מכאן](http://yehudab.com/widgets/WeatherIL-2d1.zip).

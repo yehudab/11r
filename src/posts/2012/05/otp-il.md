@@ -6,9 +6,8 @@ author: יהודה
 excerpt: ''
 type: post
 id: "665"
-category:
-- קוד פתוח ותוכנה חופשית
-tags: []
+tags:
+    - קוד פתוח ותוכנה חופשית
 post_format: []
 
 ---

@@ -19,7 +19,7 @@ post_format: []
 הנועזים שבניכם יכולים להוריד את [גרסת 3.6 אלפא האחרונה](http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-trunk/) ולנסות את הדף [בקישור הבא](http://yehudab.com/apps/drag-n-drop/demo.html).
 
 אחרים מוזמנים לצפות בסרטון ההדגמה:  
-<video controls="true" src="/img/drag-n-drop.ogg"><object height="300" width="400"><param name="allowfullscreen" value="true"></param><param name="allowscriptaccess" value="always"></param><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=6055152&server=vimeo.com&show_title=1&show_byline=1&show_portrait=0&color=&fullscreen=1"></param><embed allowfullscreen="true" allowscriptaccess="always" height="300" src="http://vimeo.com/moogaloop.swf?clip_id=6055152&server=vimeo.com&show_title=1&show_byline=1&show_portrait=0&color=&fullscreen=1" type="application/x-shockwave-flash" width="400"></embed></object></video>
+<video controls="true" src="/img/2009/08/drag-n-drop.ogg"><object height="300" width="400"><param name="allowfullscreen" value="true"></param><param name="allowscriptaccess" value="always"></param><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=6055152&server=vimeo.com&show_title=1&show_byline=1&show_portrait=0&color=&fullscreen=1"></param><embed allowfullscreen="true" allowscriptaccess="always" height="300" src="http://vimeo.com/moogaloop.swf?clip_id=6055152&server=vimeo.com&show_title=1&show_byline=1&show_portrait=0&color=&fullscreen=1" type="application/x-shockwave-flash" width="400"></embed></object></video>
 
 [Firefox 3.6 file upload via drag and drop](http://vimeo.com/6055152) from [Yehuda B.](http://vimeo.com/user2155199) on [Vimeo](http://vimeo.com).
 

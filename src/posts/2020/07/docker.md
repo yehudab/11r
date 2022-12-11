@@ -6,7 +6,7 @@ author: יהודה
 excerpt: 'אחרי שלוש שנים שבהן האתר הזה רץ מעל שרות האחסון של Scaleway, קיבלתי מהם הודעה שהחומרה שעליה אני רץ (dual core ARM CPU, 2GB RAM, 50GB SSD) תפסיק לעבוד בעוד מספר חודשים. הם הציעו לי לעבור באותו מחיר לשרת VPS מבוסס אינטל, אלא שעוד לפני שהספקתי להגיב, קיבלתי את המכתב שזו כותרתו: We’re evolving our Instances prices, או בתרגום חופשי: נמאס לנו להיות הכי זולים בשוק, אז נעלה את המחיר ב 66%'
 type: post
 id: "890"
-ogImage: 'img/2020/Docker.PNG'
+ogImage: 'img/2020/07/Docker.PNG'
 tags:
 - Docker
 - Hosting
@@ -16,7 +16,7 @@ tags:
 post_format: []
 
 ---
-![Docker](/img/2020/Docker.PNG)
+![Docker](/img/2020/07/Docker.PNG)
 אחרי שלוש שנים שבהן [האתר הזה רץ מעל שרות האחסון של Scaleway](https://yehudab.com/blog/2017/06/yet-another-blog-upgrade/), קיבלתי מהם הודעה שהחומרה שעליה אני רץ (dual core ARM CPU, 2GB RAM, 50GB SSD) תפסיק לעבוד בעוד מספר חודשים. הם הציעו לי לעבור באותו מחיר לשרת VPS מבוסס אינטל, אלא שעוד לפני שהספקתי להגיב, קיבלתי את המכתב שזו כותרתו: We’re evolving our Instances prices, או בתרגום חופשי: נמאס לנו להיות הכי זולים בשוק, אז נעלה את המחיר ב 66%.
 
 

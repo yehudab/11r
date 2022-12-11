@@ -6,12 +6,11 @@ author: יהודה
 excerpt: 'שעון שסופר את הזמן בשניות מאז 1.1.1970'
 type: post
 id: 807
-category:
+tags:
     - זמן
-tags: []
 post_format: []
 ---
 <figure class="text-center p-4 border-slate-600	border-2">
-<pre id="to-be-replaced-by-time-ticker" class="text-2xl">
+<pre class="to-be-replaced-by-time-ticker text-2xl">
 </pre>
 </figure>
