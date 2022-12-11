@@ -117,7 +117,7 @@
       <updated>2008-08-31T04:28:25Z</updated>
       <id>https://yehudab.com/blog/2008/08/ogg-is-the-king/</id>
       <content type="html">&lt;p&gt;עוד אחד מחידושי פיירפוקס 3.1 הוא האפשרות להציג ווידאו ואודיו בתוך הדפדפן, ללא צורך בפלאגין ותוספות אחרות. הכנתי דוגמה קטנה בפורמט &lt;a href=&quot;http://www.theora.org/&quot;&gt;ogg&lt;/a&gt; בפוסט הזה (מצטער על כישורי האנימציה והסאונד החובבניים). כדי לראות את הסרטון תזדקקו לפיירפוקס 3.1 &lt;a href=&quot;http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-trunk/&quot;&gt;בגרסה הלילית האחרונה&lt;/a&gt; ו…זהו.&lt;br /&gt;
-&lt;video controls=&quot;true&quot; src=&quot;https://yehudab.com/img/saltandpepper.ogg&quot;&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;video controls=&quot;true&quot; src=&quot;https://yehudab.com/img/2008/08/saltandpepper.ogg&quot;&gt;&lt;/video&gt;&lt;/p&gt;
 &lt;p&gt;עדכון:&lt;br /&gt;
 מסתבר שהמצב עדיין לא כל-כך ורוד: בחלונות הסרט מנגן אבל אין סאונד; וורדפרס שבר לי את ה html, כך שתגי הפתיחה והסגירה של ה video נעטפו בתגי p; ואחרון חביב: בלי קשר (או עם), גם google reader לא מזהה את תגי הווידאו ולכן החליט לזרוק אותם החוצה.&lt;br /&gt;
 אז עוג אולי עדיין לא מלך, אבל בהחלט יורש העצר.&lt;/p&gt;
@@ -198,7 +198,7 @@
 &lt;p&gt;כתבתי דף קצר שמדגים חלק מהיכולות הללו: בחירה של מספר קבצים, גרירתם לתוך דף, והעלאה שלהם לאתר האחסון. בזמן ההעלאה ניתן לראות את אחוזי ההתקדמות וקצב ההעלאה של כל קובץ, וכן לגרור קבצים נוספים. הדף בנוי תוך שימוש ב html, javascript, ו- css, ללא פלאש, java או כל תוסף אחר.&lt;/p&gt;
 &lt;p&gt;הנועזים שבניכם יכולים להוריד את &lt;a href=&quot;http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-trunk/&quot;&gt;גרסת 3.6 אלפא האחרונה&lt;/a&gt; ולנסות את הדף &lt;a href=&quot;http://yehudab.com/apps/drag-n-drop/demo.html&quot;&gt;בקישור הבא&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;אחרים מוזמנים לצפות בסרטון ההדגמה:&lt;br /&gt;
-&lt;video controls=&quot;true&quot; src=&quot;https://yehudab.com/img/drag-n-drop.ogg&quot;&gt;&lt;object height=&quot;300&quot; width=&quot;400&quot;&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot; /&gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot; /&gt;&lt;param name=&quot;movie&quot; value=&quot;http://vimeo.com/moogaloop.swf?clip_id=6055152&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1&quot; /&gt;&lt;embed allowfullscreen=&quot;true&quot; allowscriptaccess=&quot;always&quot; height=&quot;300&quot; src=&quot;http://vimeo.com/moogaloop.swf?clip_id=6055152&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1&quot; type=&quot;application/x-shockwave-flash&quot; width=&quot;400&quot; /&gt;&lt;/object&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;video controls=&quot;true&quot; src=&quot;https://yehudab.com/img/2009/08/drag-n-drop.ogg&quot;&gt;&lt;object height=&quot;300&quot; width=&quot;400&quot;&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot; /&gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot; /&gt;&lt;param name=&quot;movie&quot; value=&quot;http://vimeo.com/moogaloop.swf?clip_id=6055152&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1&quot; /&gt;&lt;embed allowfullscreen=&quot;true&quot; allowscriptaccess=&quot;always&quot; height=&quot;300&quot; src=&quot;http://vimeo.com/moogaloop.swf?clip_id=6055152&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1&quot; type=&quot;application/x-shockwave-flash&quot; width=&quot;400&quot; /&gt;&lt;/object&gt;&lt;/video&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://vimeo.com/6055152&quot;&gt;Firefox 3.6 file upload via drag and drop&lt;/a&gt; from &lt;a href=&quot;http://vimeo.com/user2155199&quot;&gt;Yehuda B.&lt;/a&gt; on &lt;a href=&quot;http://vimeo.com/&quot;&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;הקוד מבוסס על עבודתם של אנשי מוזילה Olli Pettay ו-Matin Movassate. הרעיון לכתיבת הדף הועלה ע&amp;quot;י סיימון מונטגו.&lt;/p&gt;
 &lt;p&gt;עדכון: לבקשת הקהל, מי שיקרא את הפוסט בדפדפן מתקדם (פיירפוקס 3.5 ומעלה, ספארי 3.1 ומעלה, ואולי גם כרום 3 בטא) יוכל לצפות בסרטון בפורמט הפתוח ogg. לאחרים יוצג בפלאש.&lt;/p&gt;
@@ -815,7 +815,7 @@
       <updated>2017-06-24T17:43:45Z</updated>
       <id>https://yehudab.com/blog/2017/06/yet-another-blog-upgrade/</id>
       <content type="html">&lt;p&gt;&lt;em&gt;בעידן שבו הבלוגים הולכים ונעלמים, קצת מוזר לכתוב פוסט חדש כאן ולא בפייסבוק, או טוויטר. בכל זאת, אם מישהו עדיין מקבל עדכונים על פוסטים חדשים, או שסתם הגיע לכאן מגוגל, נסו לקרוא את הפוסט כאילו עכשיו 2006 ובלוגים זה הדבר הכי מגניב שיש.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/blog512.jpg&quot; alt=&quot;בלוג&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2017/06/blog.jpg&quot; alt=&quot;בלוג&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;דבר ראשון, בקטנה, שדרוג מתחייב לגרסה האחרונה (4.8).&lt;/p&gt;
 &lt;p&gt;חוץ מזה, תוסף חדש: &lt;a href=&quot;https://wordpress.org/plugins/wordpress-seo/&quot;&gt;Yoast SEO&lt;/a&gt;, כי פייסבוק דורש מטה תגיות, וזה הכי קל.&lt;/p&gt;
 &lt;p&gt;אבל הכי חשוב, החלפתי את שרות האירוח מאכסון משותף על &lt;a href=&quot;https://www.nearlyfreespeech.net/&quot;&gt;NearlyFreeSpeach&lt;/a&gt; לשרת וירטואלי פרטי של &lt;a href=&quot;https://www.scaleway.com/armv8-cloud-servers/&quot;&gt;Scaleway&lt;/a&gt;. בחרתי בשרת מבוסס ARMv8 כך שהמחיר יוצא כמעט אותו דבר (3$ בראשון, 3€ באחרון), כשכאן אני מקבל שרת פרטי, יכול להריץ עליו מה שאני רוצה, וגם הביצועים טובים הרבה יותר. כמובן, אני צריך לדאוג לבד לשדרוגי תוכנה, אבטחה, גיבויים וכד׳, אבל זה חלק מהעניין. המדריך ב &lt;a href=&quot;https://www.linuxbabe.com/ubuntu/install-wordpress-ubuntu-16-04-apache&quot;&gt;LinuxBabe&lt;/a&gt; יכול לעזור כאן.&lt;/p&gt;
@@ -870,7 +870,7 @@
 23:46 פרומפט (מוריד את הצילום מדרופבוקס לשרת)&lt;br /&gt;
 23:58 ספארי (מפרסם את הפוסט)&lt;br /&gt;
 23:59 מטען, מצב מטוס&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/iphone-apps.png&quot; alt=&quot;Apps on iPhone &quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2017/06/iphone-apps.png&quot; alt=&quot;Apps on iPhone &quot; /&gt;&lt;/p&gt;
 </content>
     </entry>
     
@@ -886,20 +886,20 @@
 &lt;p&gt;או במערכות מבוססות BSD (כמו macOS), את הפקודה הזאת:&lt;/p&gt;
 &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;date&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-r&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2147483647&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;זה אמור לעבוד בלי בעיה. אבל אם תוסיפו שניה נוספת (כלומר להחליף את ה-7 ב-8), אתם עלולים לראות משהו כזה:&lt;br /&gt;
-&lt;img src=&quot;https://yehudab.com/img/2017/Unix-date-32-bit.jpg&quot; alt=&quot;2038 on 32 bit Linux &quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://yehudab.com/img/2017/07/Unix-date-32-bit.jpg&quot; alt=&quot;2038 on 32 bit Linux &quot; /&gt;&lt;/p&gt;
 &lt;p&gt;לעומת זאת, על מחשב 64 ביט, התוצאה תקינה:&lt;br /&gt;
-&lt;img src=&quot;https://yehudab.com/img/2017/Unix-date-64-bit.jpg&quot; alt=&quot;2038 on 64 bit Linux &quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://yehudab.com/img/2017/07/Unix-date-64-bit.jpg&quot; alt=&quot;2038 on 64 bit Linux &quot; /&gt;&lt;/p&gt;
 &lt;p&gt;אז למה זה מעניין עכשיו, ומה איכפת לי ממשהו שיקרה בעוד קצת יותר מ-20 שנה?&lt;/p&gt;
 &lt;p&gt;קודם כל, כי הזמן עובר. 20 שנה נשמע כמו המון זמן, אבל אם תסתכלו סביבכם בחדר, תראו לא מעט מכשירי חשמל שעובדים 20 שנה ויותר. תוסיפו לזה את העובדה שהיום כמעט כל מכשיר (ממנורה ועד טלוויזיה) מחובר לאינטרנט, ותבינו שיתכן שזו פצצת זמן שנדרכת עם כל קניה של מכשיר חדש שנעשית היום. וזה עוד בלי להזכיר מטוסים, בתי חולים, מערכות רכב (מישהו מוכן להיכנס למכונית אוטונומית ב 2038?) רמזורים, מעליות.&lt;/p&gt;
 &lt;p&gt;צילום המסך העליון, לדוגמה, נלקח ממחשב Raspberry Pi שמחובר למערכת ההשקיה בגינה שלי.&lt;br /&gt;
-&lt;img src=&quot;https://yehudab.com/img/2017/raspberry-pi-open-sprinkler.jpg&quot; alt=&quot;Raspberry Pi with Open Sprinkler &quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;https://yehudab.com/img/2017/07/raspberry-pi-open-sprinkler.jpg&quot; alt=&quot;Raspberry Pi with Open Sprinkler &quot; /&gt;&lt;br /&gt;
 האם הוא ישרוד עד 2038? אולי. עד עכשיו, החלפתי בממוצע מחשב השקייה כל 10 שנים: הראשון בגלל הבטרייה שזלגה, והשני עדיין עבד, רק שרציתי להחליף אותו בדגם שמאפשר תכנות דרך הרשת במקום ממשק לא ידידותי. למזלי, ה 19 בינואר יוצא בחורף, כך שיהיו לי כמה חודשים טובים לדאוג למחליף במידת הצורך.&lt;/p&gt;
 &lt;p&gt;ולמה נזכרתי בכל זה עכשיו? כי מחר (2 ביולי 2017) יעבור מספר השניות את סף ה 1.499 מיליארד, ובעוד שבועיים (14 ביולי) הוא יעבור את סף ה 1.5 מיליארד.&lt;/p&gt;
 &lt;p&gt;השעון מתקתק…&lt;/p&gt;
-&lt;pre&gt;
-&lt;script src=&quot;https://yehudab.com/scripts/msec-ticker.js&quot;&gt;
-&lt;/script&gt;
+&lt;figure class=&quot;text-center p-4 border-slate-600	border-2&quot;&gt;
+&lt;pre class=&quot;to-be-replaced-by-time-ticker text-2xl&quot;&gt;
 &lt;/pre&gt;
+&lt;/figure&gt;
 </content>
     </entry>
     
@@ -911,7 +911,7 @@
       <content type="html">&lt;p&gt;עוד שדרוג קטן לבלוג.&lt;br /&gt;
 הפעם העברתי את השרת מ apache ל nginx, ועל הדרך הפעלתי HTTP/2.&lt;br /&gt;
 זה אמור לשפר את הביצועים, למרות שאני לא ממש מרגיש בזה בנתיים.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2017/nginx-logs-sm.jpg&quot; alt=&quot;Hex dump of nginx logs&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2017/07/nginx-logs.jpg&quot; alt=&quot;Hex dump of nginx logs&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;למעוניינים, &lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-with-http-2-support-on-ubuntu-16-04&quot;&gt;המדריך הזה&lt;/a&gt; מסביר על התקנת nginx, והגדרות HTTP/2. &lt;a href=&quot;http://nginxlibrary.com/wordpress-permalinks/&quot;&gt;כאן&lt;/a&gt; תמצאו הסבר על ההגדרות הדרושות ב nginx לטובת הפעלת WordPress במקום mod_rewrite של apache.&lt;/p&gt;
 &lt;p&gt;התוצאה הסופית של כל ההגדרות האלה, כפי שנשמרה בקובץ ‎/etc/nginx/sites-available/default היא זו:&lt;/p&gt;
 &lt;pre class=&quot;language-nginx&quot;&gt;&lt;code class=&quot;language-nginx&quot;&gt;&lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;server&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;        &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;listen&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;443&lt;/span&gt; ssl http2 default_server&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;        &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;listen&lt;/span&gt; [::]:443 ssl http2 default_server&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;        &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;include&lt;/span&gt; snippets/gzip.conf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;        &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;ssl_certificate&lt;/span&gt; /etc/nginx/ssl/live/yehudab.com/fullchain.pem&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;        &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;ssl_certificate_key&lt;/span&gt; /etc/nginx/ssl/live/yehudab.com/privkey.pem&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;        &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;ssl_dhparam&lt;/span&gt; /etc/nginx/ssl/live/yehudab.com/dhparam.pem&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;        &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;root&lt;/span&gt; /var/www/yehudab.com&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;        &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;index&lt;/span&gt; index.html index.htm index.php index.nginx-debian.html&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;        &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;server_name&lt;/span&gt; yehudab.com&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;        &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;location&lt;/span&gt; /&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;                &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;try_files&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$uri&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$uri&lt;/span&gt;/ =404&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;        &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;location&lt;/span&gt; /blog/&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;                &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;try_files&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$uri&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$uri&lt;/span&gt;/ /blog/index.php?&lt;span class=&quot;token variable&quot;&gt;$args&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;        &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;location&lt;/span&gt; ~ \.php$&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;                &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;include&lt;/span&gt; snippets/fastcgi-php.conf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;                &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;fastcgi_pass&lt;/span&gt; unix:/run/php/php7.0-fpm.sock&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;        &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;location&lt;/span&gt; ~ /\.ht&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;                &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;deny&lt;/span&gt; all&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;        &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;include&lt;/span&gt; snippets/expires.conf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;server&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;       &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;listen&lt;/span&gt;         &lt;span class=&quot;token number&quot;&gt;80&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;       &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;listen&lt;/span&gt;    [::]:80&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;       &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;server_name&lt;/span&gt;    yehudab.com&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;       &lt;span class=&quot;token directive&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt;         &lt;span class=&quot;token number&quot;&gt;301&lt;/span&gt; https://&lt;span class=&quot;token variable&quot;&gt;$server_name&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;$request_uri&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
@@ -925,7 +925,7 @@
       <updated>2017-07-07T17:19:11Z</updated>
       <id>https://yehudab.com/blog/2017/07/hotter-than-july/</id>
       <content type="html">&lt;p&gt;טלפון ציבורי, רדיו טרנזיסטור, מסוף VT 100, ותקליט של סטיבי וונדר הם החומרים שמרכיבים את הפעם הראשונה שהרווחתי משהו מלדעת לתכנת.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2017/hotter-then-july.jpg&quot; alt=&quot;Hotter then July album cover   &quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2017/07/hotter-then-july.jpg&quot; alt=&quot;Hotter then July album cover   &quot; /&gt;&lt;/p&gt;
 &lt;p&gt;זה היה בתחילת שנות השמונים של המאה שעברה. אני ועוד תלמיד &lt;a href=&quot;https://www.leyada.net/&quot;&gt;מהתיכון שלמדתי בו&lt;/a&gt; נהגנו לבלות בחדר המחשבים של בניין רוס באוניברסיטה העברית. באותה תקופה שודרה ברדיו תוכנית חידונים שנקראה ״עד 120״. הרעיון היה פשוט: הקריין שואל 10 שאלות, שהתשובה לכל אחת מהן היא מספר. המאזינים צריכים להתקשר לתחנה והראשון שעונה את התשובה הנכונה מקבל תקליט מתנה. אחרי שהצטברו 10 מספרים, מגיע השלב שעניין אותי: צריך היה לקחת את עשרת המספרים ובאמצעות 4 פעולות חשבון בינהם להגיע למספר 120. הראשון שהתקשר לאולפן עם התרגיל הפתור קיבל 10 תקליטים. בדרך כלל, היה די קשה להגיע בדיוק למספר, ולכן ניתן היה לעגל תוצאות של חילוק. על תשובה מעוגלת חילקו פרס קטן יותר (2-4 תקליטים, תלוי במספר הפותרים).&lt;/p&gt;
 &lt;p&gt;אחרי מספר נסיונות לפתור את החלק המתמטי בעזרת נייר ועפרון, החלטנו לנצל את מחשבי האוניברסיטה לטובת הפרס הנחשק. תכנית מחשב שתעבור על כל האפשרויות הייתה מחוץ לתחום במשאבים שהיו זמינים לנו אז (נדמה לי שזה היה מחשב &lt;a href=&quot;https://en.wikipedia.org/wiki/VAX-11#VAX-11.2F780&quot;&gt;VAX-11/780&lt;/a&gt;, שהריץ גרסת יוניקס של ברקלי), וכנראה גם לא היום – מדובר בכטרליון תרגילים אפשריים – אבל בעזרת יוריסטיקה פשוטה יחסית הצלחנו לכתוב תוכנית שתמצא פתרון בזמן סביר. העניין היותר מורכב בשלב הזה היה החלק הלוגיסטי: להביא רדיו למעבדה, להקשיב לתוכנית, להזין את המספרים ואז לרוץ לטלפון הציבורי בקומה השניה ולהתקשר לאולפן.&lt;/p&gt;
 &lt;p&gt;בסופו של דבר עליתי לשידור מספר פעמים וצברתי בסה״כ כ-10 תקליטים, בינהם התקליט &lt;a href=&quot;https://en.wikipedia.org/wiki/Hotter_than_July&quot;&gt;Hotter then July&lt;/a&gt; של סטיבי וונדר.&lt;/p&gt;
@@ -938,7 +938,7 @@
       <updated>2017-07-13T17:58:18Z</updated>
       <id>https://yehudab.com/blog/2017/07/live-blogging-1-5-billion/</id>
       <content type="html">&lt;figure class=&quot;text-center p-4 border-slate-600	border-2&quot;&gt;
-&lt;pre id=&quot;to-be-replaced-by-time-ticker&quot; class=&quot;text-2xl&quot;&gt;
+&lt;pre class=&quot;to-be-replaced-by-time-ticker text-2xl&quot;&gt;
 &lt;/pre&gt;
 &lt;/figure&gt;
 </content>
@@ -952,8 +952,8 @@
       <content type="html">&lt;p&gt;יש לי חיבה נסתרת למספרי מכוניות. מאז המכונית החדשה הראשונה של הורי (רנו 12, מודל 1972, מס: 644-486) ועד לאחרונה שלי (פיאט 500L, מודל 2014, מס: 64-249-32) אני זוכר כל מספר, וגם את ההיגיון מאחוריו: הספרה הראשונה בשנות ה-70 יצגה את האזור בארץ. 6 היה אזור ירושלים. בתחילת שנות השמונים, שתי הספרות האחרונות יצגו את השנה, אלא שמהר מאוד הבינו ש 90 אלף מספרים לא יספיקו לשנה שלמה, ועברו לשימוש ב 5 במקום 8. מכונית עם סיומת 54 יוצרה בשנת 1984. בשנות ה-90, שתי הספרות האחרונות יצגו את היבואן. המכונית הראשונה שקניתי (פיז׳ו 106xs, מודל 1996, מס: 84-360-04) הסתיימה ב-04 כמו כל המכוניות של פיז׳ו-סיטרואן באותה תקופה. יבואן BMW קיבל את הסיומת 16, שאותה ״זכה״ לשמר עמוק לתוך שנות ה-2000 בגלל מספר נמוך יחסית של מכוניות שנמכרו בכל שנה.&lt;/p&gt;
 &lt;p&gt;היום ראיתי ״בשטח״ לראשונה מכונית עם 8 ספרות. משרד הרישוי החליט לשים באמצע זוג ספרות ובצדדים שלשות. אוהבים להתייחס לחזית המכונית כמייצגת פנים, אבל גם לאחורי המכונית יש מראה כזה. השיטה החדשה מתאימה לפנסים אחוריים מאורכים (פנים עם עיניים מלוכסנות), שגם הם חזרו לאופנה בשנים האחרונות.&lt;/p&gt;
 &lt;p&gt;בתמונות: 8 ספרות על מכונית עם פנסים מאורכים, לעומת 7 ספרות על מכונית עם פנסים מרובעים.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2017/8-digits-sm.jpg&quot; alt=&quot;לוחית רישוי 8 ספרות&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2017/7-digits-sm.jpg&quot; alt=&quot;לוחית רישוי 7 ספרות&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2017/08/8-digits.jpg&quot; alt=&quot;לוחית רישוי 8 ספרות&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2017/08/7-digits.jpg&quot; alt=&quot;לוחית רישוי 7 ספרות&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;כמובן שצריך להזכיר את עניין הבאגים הקשורים ל-8 ספרות: מחסום לחניון שלא נפתח, משאבת דלק שמסרבת לתדלק, ועוד. אם נתקלתם באחד, ספרו בתגובות.&lt;/p&gt;
 </content>
     </entry>
@@ -965,7 +965,7 @@
       <id>https://yehudab.com/blog/2017/09/iphone-8-or-x/</id>
       <content type="html">&lt;p&gt;בקרוב יגיעו האייפונים החדשים לארץ (לפי iDigital: ״בצמוד להשקה בארה״ב״), ושאלת מיליון הדולר — או יותר נכון 1000 הדולר — היא אייפון 8 או X?&lt;/p&gt;
 &lt;p&gt;למי שמתלבט כמוני, ג׳ון גרובר נותן תשובה מוחצת בהערת השוליים &lt;a href=&quot;https://daringfireball.net/2017/09/the_iphones_8&quot;&gt;בסקירה שלו&lt;/a&gt;. (בתרגום חופשי): ״לך, זה שקורא גם את הערות השוליים בסקירות האלה, זה כנראה לא מתאים (הכוונה לקנות את ה-8 – י.ב.). אבל יש אנשים שמעדיפים פשוט דגם חדש שיראה ויתנהג כמו האייפון שיש להם עכשיו״.&lt;br /&gt;
-&lt;img src=&quot;https://yehudab.com/img/2017/gruber-iphone-8-footnote.jpg&quot; alt=&quot;צילום מסך&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://yehudab.com/img/2017/09/gruber-iphone-8-footnote.jpg&quot; alt=&quot;צילום מסך&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;עם כל השאלות של מה יהיה עם זיהוי הפנים שפישל בדמו, או הנישה המצחיקה שמפריעה לווידאו, בתור אחד שקורא הערות שוליים, נראה לי שקיבלתי תשובה.&lt;/p&gt;
 </content>
     </entry>
@@ -976,7 +976,7 @@
       <updated>2018-12-08T12:09:55Z</updated>
       <id>https://yehudab.com/blog/2018/12/wordpress-5-0/</id>
       <content type="html">&lt;p&gt;גרסה חדשה של וורדפרס יצאה השבוע, והבלוג קיבל את השדרוג המתחייב. על הדרך, עברתי לתבנית 2019 החדשה (הקודמת הייתה 2016).&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/blog512.jpg&quot; alt=&quot;&quot; /&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2017/06/blog.jpg&quot; alt=&quot;&quot; /&gt;
 בקרוב פוסט עם תוכן אמיתי ותמונה לא ממוחזרת.&lt;/p&gt;
 </content>
     </entry>
@@ -986,7 +986,7 @@
       <link href="https://yehudab.com/blog/2019/12/2020/"/>
       <updated>2019-12-31T21:33:55Z</updated>
       <id>https://yehudab.com/blog/2019/12/2020/</id>
-      <content type="html">&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2019/New-Year-2020-PNG-File.png&quot; alt=&quot;2020&quot; /&gt;
+      <content type="html">&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2019/12/New-Year-2020-PNG-File.png&quot; alt=&quot;2020&quot; /&gt;
 שנה חדשה היא הזדמנות טובה להחלפת תבנית. אז ברוכים הבאים ל-2020, או כמו ש WordPress קוראים לה: &lt;a href=&quot;https://wordpress.org/themes/twentytwenty/&quot;&gt;TwentyTwenty&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;התבנית קצת יותר ״חמה״ לעומת TwentyNineteen המינימליסטית שבה השתמשתי קודם. התרגום לעברית והתמיכה בכיווניות זקוקים לקצת ״שיוף״, אבל התבנית לגמרי שימושית כפי שהיא.&lt;/p&gt;
 &lt;p&gt;אז שתהיה לכולם שנה טובה ועשור טוב. מקווה (הפעם באמת) ליצור תוכן מעניין יותר במהלך השנה.&lt;/p&gt;
@@ -1008,7 +1008,7 @@
 &lt;p&gt;אחרי השדרוג, אני מנסה לשמור את הפוסט הזה ובום error 500. בדיקה מהירה בלוג של nginx על השרת מגלה ששכחתי להתקין את php7.4-memcache שהמדריך הנ&amp;quot;ל לא מחשיב כ common extension. הרצת:&lt;/p&gt;
 &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;apt&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; php7.4-memcache&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;וריסטרט לשרת פתרו את הבעיה.&lt;br /&gt;
-&lt;img src=&quot;https://yehudab.com/img/2020/upgrade.png&quot; alt=&quot;שדרוג&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://yehudab.com/img/2020/03/upgrade.png&quot; alt=&quot;שדרוג&quot; /&gt;&lt;/p&gt;
 </content>
     </entry>
     
@@ -1017,7 +1017,7 @@
       <link href="https://yehudab.com/blog/2020/07/docker/"/>
       <updated>2020-07-18T12:06:54Z</updated>
       <id>https://yehudab.com/blog/2020/07/docker/</id>
-      <content type="html">&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2020/Docker.PNG&quot; alt=&quot;Docker&quot; /&gt;
+      <content type="html">&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2020/07/Docker.PNG&quot; alt=&quot;Docker&quot; /&gt;
 אחרי שלוש שנים שבהן &lt;a href=&quot;https://yehudab.com/blog/2017/06/yet-another-blog-upgrade/&quot;&gt;האתר הזה רץ מעל שרות האחסון של Scaleway&lt;/a&gt;, קיבלתי מהם הודעה שהחומרה שעליה אני רץ (dual core ARM CPU, 2GB RAM, 50GB SSD) תפסיק לעבוד בעוד מספר חודשים. הם הציעו לי לעבור באותו מחיר לשרת VPS מבוסס אינטל, אלא שעוד לפני שהספקתי להגיב, קיבלתי את המכתב שזו כותרתו: We’re evolving our Instances prices, או בתרגום חופשי: נמאס לנו להיות הכי זולים בשוק, אז נעלה את המחיר ב 66%.&lt;/p&gt;
 &lt;p&gt;החלטתי שזה הזמן לחפש שרות אכסון חדש, והגעתי דרך חבר לעבודה ל &lt;a href=&quot;https://www.ovh.ie/&quot;&gt;OVHcloud&lt;/a&gt;. השרת הבסיסי נראה על הנייר חלש יותר (מעבד אחד בלבד ודיסק קטן יותר), אבל בבדיקות ביצועים בשטח הוא משמעותית יותר מהיר. זה מורגש גם בעבודת ההתקנה (פרטים בהמשך) וגם בזמן ריצה, כפי שנמדד ע״י StatusCake. המחיר זהה למחיר (הישן) של Scaleway: שלושה אירו לחודש, בלי התחייבות.&lt;/p&gt;
 &lt;p&gt;השרת שלי מריץ בנוסף גם שני שרתי node קטנים, כך שהעברת כל הטוב הזה היא לא פשוטה, ולכן החלטתי הפעם ללכת על Docker. למי שלא מכיר את Docker, מומלץ לקרוא את סדרת המאמרים באתר של רן בר-זיק. שם הוא גם &lt;a href=&quot;https://internet-israel.com/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%D7%9D/docker/%D7%95%D7%95%D7%A8%D7%93%D7%A4%D7%A8%D7%A1-%D7%A2%D7%9C-docker/&quot;&gt;מדגים התקנת WordPress&lt;/a&gt;. אני בחרתי לעקוב אחרי &lt;a href=&quot;https://github.com/mjstealey/wordpress-nginx-docker&quot;&gt;המדריך של Michael J. Stealey&lt;/a&gt; ב GitHub, שממנו גם עשיתי פורק לריפו משלי. המדריך הזה קצת יותר מתאים לסביבה הנוכחית שלי שכוללת MariaDB במקום MySQL, וגם סקריפטים מוכנים לתמיכה ב https, דרך השרות של &lt;a href=&quot;https://letsencrypt.org/&quot;&gt;Let’s Encrypt&lt;/a&gt;.&lt;/p&gt;

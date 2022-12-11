@@ -141,7 +141,7 @@
                 <div class="clear-both"></div>
 
                 <div class="content post">
-                    <p><img src="/img/2020/Docker.PNG" alt="Docker">
+                    <p><img src="/img/2020/07/Docker.PNG" alt="Docker">
 אחרי שלוש שנים שבהן <a href="https://yehudab.com/blog/2017/06/yet-another-blog-upgrade/">האתר הזה רץ מעל שרות האחסון של Scaleway</a>, קיבלתי מהם הודעה שהחומרה שעליה אני רץ (dual core ARM CPU, 2GB RAM, 50GB SSD) תפסיק לעבוד בעוד מספר חודשים. הם הציעו לי לעבור באותו מחיר לשרת VPS מבוסס אינטל, אלא שעוד לפני שהספקתי להגיב, קיבלתי את המכתב שזו כותרתו: We’re evolving our Instances prices, או בתרגום חופשי: נמאס לנו להיות הכי זולים בשוק, אז נעלה את המחיר ב 66%.</p>
 <p>החלטתי שזה הזמן לחפש שרות אכסון חדש, והגעתי דרך חבר לעבודה ל <a href="https://www.ovh.ie/">OVHcloud</a>. השרת הבסיסי נראה על הנייר חלש יותר (מעבד אחד בלבד ודיסק קטן יותר), אבל בבדיקות ביצועים בשטח הוא משמעותית יותר מהיר. זה מורגש גם בעבודת ההתקנה (פרטים בהמשך) וגם בזמן ריצה, כפי שנמדד ע״י StatusCake. המחיר זהה למחיר (הישן) של Scaleway: שלושה אירו לחודש, בלי התחייבות.</p>
 <p>השרת שלי מריץ בנוסף גם שני שרתי node קטנים, כך שהעברת כל הטוב הזה היא לא פשוטה, ולכן החלטתי הפעם ללכת על Docker. למי שלא מכיר את Docker, מומלץ לקרוא את סדרת המאמרים באתר של רן בר-זיק. שם הוא גם <a href="https://internet-israel.com/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%D7%9D/docker/%D7%95%D7%95%D7%A8%D7%93%D7%A4%D7%A8%D7%A1-%D7%A2%D7%9C-docker/">מדגים התקנת WordPress</a>. אני בחרתי לעקוב אחרי <a href="https://github.com/mjstealey/wordpress-nginx-docker">המדריך של Michael J. Stealey</a> ב GitHub, שממנו גם עשיתי פורק לריפו משלי. המדריך הזה קצת יותר מתאים לסביבה הנוכחית שלי שכוללת MariaDB במקום MySQL, וגם סקריפטים מוכנים לתמיכה ב https, דרך השרות של <a href="https://letsencrypt.org/">Let’s Encrypt</a>.</p>
@@ -174,7 +174,7 @@
 <p>אחרי השדרוג, אני מנסה לשמור את הפוסט הזה ובום error 500. בדיקה מהירה בלוג של nginx על השרת מגלה ששכחתי להתקין את php7.4-memcache שהמדריך הנ&quot;ל לא מחשיב כ common extension. הרצת:</p>
 <pre class="language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> php7.4-memcache</code></pre>
 <p>וריסטרט לשרת פתרו את הבעיה.<br>
-<img src="/img/2020/upgrade.png" alt="שדרוג"></p>
+<img src="/img/2020/03/upgrade.png" alt="שדרוג"></p>
 
                 </div>
             </div>
@@ -188,11 +188,11 @@
                     31 בדצמבר 2019
                 </span>
 
-                <a class="tag" href="/tag/TwentyTwenty/">TwentyTwenty</a><a class="tag" href="/tag/וורדפרס/">וורדפרס</a>
+                <a class="tag" href="/tag/וורדפרס/">וורדפרס</a>
                 <div class="clear-both"></div>
 
                 <div class="content post">
-                    <p><img src="/img/2019/New-Year-2020-PNG-File.png" alt="2020">
+                    <p><img src="/img/2019/12/New-Year-2020-PNG-File.png" alt="2020">
 שנה חדשה היא הזדמנות טובה להחלפת תבנית. אז ברוכים הבאים ל-2020, או כמו ש WordPress קוראים לה: <a href="https://wordpress.org/themes/twentytwenty/">TwentyTwenty</a>.</p>
 <p>התבנית קצת יותר ״חמה״ לעומת TwentyNineteen המינימליסטית שבה השתמשתי קודם. התרגום לעברית והתמיכה בכיווניות זקוקים לקצת ״שיוף״, אבל התבנית לגמרי שימושית כפי שהיא.</p>
 <p>אז שתהיה לכולם שנה טובה ועשור טוב. מקווה (הפעם באמת) ליצור תוכן מעניין יותר במהלך השנה.</p>
@@ -215,7 +215,7 @@
 
                 <div class="content post">
                     <p>גרסה חדשה של וורדפרס יצאה השבוע, והבלוג קיבל את השדרוג המתחייב. על הדרך, עברתי לתבנית 2019 החדשה (הקודמת הייתה 2016).</p>
-<p><img src="/img/blog512.jpg" alt="">
+<p><img src="/img/2017/06/blog.jpg" alt="">
 בקרוב פוסט עם תוכן אמיתי ותמונה לא ממוחזרת.</p>
 
                 </div>
@@ -249,7 +249,7 @@
 
             
                 <div class="mx-auto">
-                    <a class="last-page" href="/page/12/">לדף האחרון</a>
+                    <a class="last-page" href="/page/11/">לדף האחרון</a>
                 </div>
             
         </div>
@@ -258,7 +258,7 @@
     <p class="text-center text-sm italic mb-10">(דף
         2
         מתוך
-        12)</p>
+        11)</p>
 </div>
 
 

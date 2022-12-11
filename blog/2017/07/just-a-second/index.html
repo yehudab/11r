@@ -17,12 +17,12 @@
     <meta name="twitter:description" content="רק שניה מפרידה בין השעה 03:14:07 ל 03:14:08 בתאריך: 19 בינואר 2038. לכאורה, זה לא צריך לעניין אף אחד. אבל אם אתה יוניקס/טיים גיק כמוני, התאריך הזה מייד אמור להדליק לך נורה אדומה.">
     <meta name="twitter:site" content="@yehudab">
     <meta name="twitter:creator" content="@yehudab">
-    <meta name="twitter:image:src" content="https://yehudab.com/img/2017/raspberry-pi-open-sprinkler.jpg">
+    <meta name="twitter:image:src" content="https://yehudab.com/img/2017/07/raspberry-pi-open-sprinkler.jpg">
 
     
     <meta property="og:title" content="רק שניה | בלוג פשוט">
     <meta property="og:description" content="רק שניה מפרידה בין השעה 03:14:07 ל 03:14:08 בתאריך: 19 בינואר 2038. לכאורה, זה לא צריך לעניין אף אחד. אבל אם אתה יוניקס/טיים גיק כמוני, התאריך הזה מייד אמור להדליק לך נורה אדומה.">
-    <meta property="og:image" content="https://yehudab.com/img/2017/raspberry-pi-open-sprinkler.jpg">
+    <meta property="og:image" content="https://yehudab.com/img/2017/07/raspberry-pi-open-sprinkler.jpg">
     <meta property="og:url" content="https://yehudab.com/blog/2017/07/just-a-second/">
     <meta property="og:site_name" content="בלוג פשוט">
     <meta property="og:locale" content="he_il">
@@ -68,7 +68,7 @@
 
         
             <div class="mb-2">
-                
+                <a class="tag זמן" href="/tag/זמן/">זמן</a><a class="tag לינוקס" href="/tag/לינוקס/">לינוקס</a><a class="tag קוד פתוח ותוכנה חופשית" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a>
             </div>
         
 
@@ -95,20 +95,20 @@
 <p>או במערכות מבוססות BSD (כמו macOS), את הפקודה הזאת:</p>
 <pre class="language-bash"><code class="language-bash"><span class="token function">date</span> <span class="token parameter variable">-r</span> <span class="token number">2147483647</span></code></pre>
 <p>זה אמור לעבוד בלי בעיה. אבל אם תוסיפו שניה נוספת (כלומר להחליף את ה-7 ב-8), אתם עלולים לראות משהו כזה:<br>
-<img src="/img/2017/Unix-date-32-bit.jpg" alt="2038 on 32 bit Linux "></p>
+<img src="/img/2017/07/Unix-date-32-bit.jpg" alt="2038 on 32 bit Linux "></p>
 <p>לעומת זאת, על מחשב 64 ביט, התוצאה תקינה:<br>
-<img src="/img/2017/Unix-date-64-bit.jpg" alt="2038 on 64 bit Linux "></p>
+<img src="/img/2017/07/Unix-date-64-bit.jpg" alt="2038 on 64 bit Linux "></p>
 <p>אז למה זה מעניין עכשיו, ומה איכפת לי ממשהו שיקרה בעוד קצת יותר מ-20 שנה?</p>
 <p>קודם כל, כי הזמן עובר. 20 שנה נשמע כמו המון זמן, אבל אם תסתכלו סביבכם בחדר, תראו לא מעט מכשירי חשמל שעובדים 20 שנה ויותר. תוסיפו לזה את העובדה שהיום כמעט כל מכשיר (ממנורה ועד טלוויזיה) מחובר לאינטרנט, ותבינו שיתכן שזו פצצת זמן שנדרכת עם כל קניה של מכשיר חדש שנעשית היום. וזה עוד בלי להזכיר מטוסים, בתי חולים, מערכות רכב (מישהו מוכן להיכנס למכונית אוטונומית ב 2038?) רמזורים, מעליות.</p>
 <p>צילום המסך העליון, לדוגמה, נלקח ממחשב Raspberry Pi שמחובר למערכת ההשקיה בגינה שלי.<br>
-<img src="/img/2017/raspberry-pi-open-sprinkler.jpg" alt="Raspberry Pi with Open Sprinkler "><br>
+<img src="/img/2017/07/raspberry-pi-open-sprinkler.jpg" alt="Raspberry Pi with Open Sprinkler "><br>
 האם הוא ישרוד עד 2038? אולי. עד עכשיו, החלפתי בממוצע מחשב השקייה כל 10 שנים: הראשון בגלל הבטרייה שזלגה, והשני עדיין עבד, רק שרציתי להחליף אותו בדגם שמאפשר תכנות דרך הרשת במקום ממשק לא ידידותי. למזלי, ה 19 בינואר יוצא בחורף, כך שיהיו לי כמה חודשים טובים לדאוג למחליף במידת הצורך.</p>
 <p>ולמה נזכרתי בכל זה עכשיו? כי מחר (2 ביולי 2017) יעבור מספר השניות את סף ה 1.499 מיליארד, ובעוד שבועיים (14 ביולי) הוא יעבור את סף ה 1.5 מיליארד.</p>
 <p>השעון מתקתק…</p>
-<pre>
-<script src="/scripts/msec-ticker.js">
-</script>
+<figure class="text-center p-4 border-slate-600	border-2">
+<pre class="to-be-replaced-by-time-ticker text-2xl">
 </pre>
+</figure>
 
         </div>
 

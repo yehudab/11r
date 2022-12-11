@@ -122,7 +122,7 @@
                 <div class="clear-both"></div>
 
                 <div class="content post">
-                    <p><img src="/img/2020/Docker.PNG" alt="Docker">
+                    <p><img src="/img/2020/07/Docker.PNG" alt="Docker">
 אחרי שלוש שנים שבהן <a href="https://yehudab.com/blog/2017/06/yet-another-blog-upgrade/">האתר הזה רץ מעל שרות האחסון של Scaleway</a>, קיבלתי מהם הודעה שהחומרה שעליה אני רץ (dual core ARM CPU, 2GB RAM, 50GB SSD) תפסיק לעבוד בעוד מספר חודשים. הם הציעו לי לעבור באותו מחיר לשרת VPS מבוסס אינטל, אלא שעוד לפני שהספקתי להגיב, קיבלתי את המכתב שזו כותרתו: We’re evolving our Instances prices, או בתרגום חופשי: נמאס לנו להיות הכי זולים בשוק, אז נעלה את המחיר ב 66%.</p>
 <p>החלטתי שזה הזמן לחפש שרות אכסון חדש, והגעתי דרך חבר לעבודה ל <a href="https://www.ovh.ie/">OVHcloud</a>. השרת הבסיסי נראה על הנייר חלש יותר (מעבד אחד בלבד ודיסק קטן יותר), אבל בבדיקות ביצועים בשטח הוא משמעותית יותר מהיר. זה מורגש גם בעבודת ההתקנה (פרטים בהמשך) וגם בזמן ריצה, כפי שנמדד ע״י StatusCake. המחיר זהה למחיר (הישן) של Scaleway: שלושה אירו לחודש, בלי התחייבות.</p>
 <p>השרת שלי מריץ בנוסף גם שני שרתי node קטנים, כך שהעברת כל הטוב הזה היא לא פשוטה, ולכן החלטתי הפעם ללכת על Docker. למי שלא מכיר את Docker, מומלץ לקרוא את סדרת המאמרים באתר של רן בר-זיק. שם הוא גם <a href="https://internet-israel.com/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%D7%9D/docker/%D7%95%D7%95%D7%A8%D7%93%D7%A4%D7%A8%D7%A1-%D7%A2%D7%9C-docker/">מדגים התקנת WordPress</a>. אני בחרתי לעקוב אחרי <a href="https://github.com/mjstealey/wordpress-nginx-docker">המדריך של Michael J. Stealey</a> ב GitHub, שממנו גם עשיתי פורק לריפו משלי. המדריך הזה קצת יותר מתאים לסביבה הנוכחית שלי שכוללת MariaDB במקום MySQL, וגם סקריפטים מוכנים לתמיכה ב https, דרך השרות של <a href="https://letsencrypt.org/">Let’s Encrypt</a>.</p>
@@ -155,7 +155,7 @@
 <p>אחרי השדרוג, אני מנסה לשמור את הפוסט הזה ובום error 500. בדיקה מהירה בלוג של nginx על השרת מגלה ששכחתי להתקין את php7.4-memcache שהמדריך הנ&quot;ל לא מחשיב כ common extension. הרצת:</p>
 <pre class="language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> php7.4-memcache</code></pre>
 <p>וריסטרט לשרת פתרו את הבעיה.<br>
-<img src="/img/2020/upgrade.png" alt="שדרוג"></p>
+<img src="/img/2020/03/upgrade.png" alt="שדרוג"></p>
 
                 </div>
             </div>
@@ -174,8 +174,374 @@
 
                 <div class="content post">
                     <p>גרסה חדשה של וורדפרס יצאה השבוע, והבלוג קיבל את השדרוג המתחייב. על הדרך, עברתי לתבנית 2019 החדשה (הקודמת הייתה 2016).</p>
-<p><img src="/img/blog512.jpg" alt="">
+<p><img src="/img/2017/06/blog.jpg" alt="">
 בקרוב פוסט עם תוכן אמיתי ותמונה לא ממוחזרת.</p>
+
+                </div>
+            </div>
+        
+    
+        
+            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
+                <h2 class="mb-2">
+                    <a class="block" href="/blog/2017/07/hotter-than-july/">חם יותר מיולי</a>
+                </h2><a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
+                        href="/blog/2017/07/hotter-than-july/#comments"
+                        title="5 תגובות">
+                        💬 5
+                    </a><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="2017-07-07T20:19:11+03:00">
+                    7 ביולי 2017
+                </span>
+
+                <a class="tag" href="/tag/אישי/">אישי</a><a class="tag" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a>
+                <div class="clear-both"></div>
+
+                <div class="content post">
+                    <p>טלפון ציבורי, רדיו טרנזיסטור, מסוף VT 100, ותקליט של סטיבי וונדר הם החומרים שמרכיבים את הפעם הראשונה שהרווחתי משהו מלדעת לתכנת.</p>
+<p><img src="/img/2017/07/hotter-then-july.jpg" alt="Hotter then July album cover   "></p>
+<p>זה היה בתחילת שנות השמונים של המאה שעברה. אני ועוד תלמיד <a href="https://www.leyada.net">מהתיכון שלמדתי בו</a> נהגנו לבלות בחדר המחשבים של בניין רוס באוניברסיטה העברית. באותה תקופה שודרה ברדיו תוכנית חידונים שנקראה ״עד 120״. הרעיון היה פשוט: הקריין שואל 10 שאלות, שהתשובה לכל אחת מהן היא מספר. המאזינים צריכים להתקשר לתחנה והראשון שעונה את התשובה הנכונה מקבל תקליט מתנה. אחרי שהצטברו 10 מספרים, מגיע השלב שעניין אותי: צריך היה לקחת את עשרת המספרים ובאמצעות 4 פעולות חשבון בינהם להגיע למספר 120. הראשון שהתקשר לאולפן עם התרגיל הפתור קיבל 10 תקליטים. בדרך כלל, היה די קשה להגיע בדיוק למספר, ולכן ניתן היה לעגל תוצאות של חילוק. על תשובה מעוגלת חילקו פרס קטן יותר (2-4 תקליטים, תלוי במספר הפותרים).</p>
+<p>אחרי מספר נסיונות לפתור את החלק המתמטי בעזרת נייר ועפרון, החלטנו לנצל את מחשבי האוניברסיטה לטובת הפרס הנחשק. תכנית מחשב שתעבור על כל האפשרויות הייתה מחוץ לתחום במשאבים שהיו זמינים לנו אז (נדמה לי שזה היה מחשב <a href="https://en.wikipedia.org/wiki/VAX-11#VAX-11.2F780">VAX-11/780</a>, שהריץ גרסת יוניקס של ברקלי), וכנראה גם לא היום – מדובר בכטרליון תרגילים אפשריים – אבל בעזרת יוריסטיקה פשוטה יחסית הצלחנו לכתוב תוכנית שתמצא פתרון בזמן סביר. העניין היותר מורכב בשלב הזה היה החלק הלוגיסטי: להביא רדיו למעבדה, להקשיב לתוכנית, להזין את המספרים ואז לרוץ לטלפון הציבורי בקומה השניה ולהתקשר לאולפן.</p>
+<p>בסופו של דבר עליתי לשידור מספר פעמים וצברתי בסה״כ כ-10 תקליטים, בינהם התקליט <a href="https://en.wikipedia.org/wiki/Hotter_than_July">Hotter then July</a> של סטיבי וונדר.</p>
+
+                </div>
+            </div>
+        
+    
+        
+            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
+                <h2 class="mb-2">
+                    <a class="block" href="/blog/2017/07/http2/">HTTP/2</a>
+                </h2><a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
+                        href="/blog/2017/07/http2/#comments"
+                        title="תגובה אחת">
+                        💬 1
+                    </a><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="2017-07-07T17:18:52+03:00">
+                    7 ביולי 2017
+                </span>
+
+                <a class="tag" href="/tag/וורדפרס/">וורדפרס</a><a class="tag" href="/tag/לינוקס/">לינוקס</a><a class="tag" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a>
+                <div class="clear-both"></div>
+
+                <div class="content post">
+                    <p>עוד שדרוג קטן לבלוג.<br>
+הפעם העברתי את השרת מ apache ל nginx, ועל הדרך הפעלתי HTTP/2.<br>
+זה אמור לשפר את הביצועים, למרות שאני לא ממש מרגיש בזה בנתיים.</p>
+<p><img src="/img/2017/07/nginx-logs.jpg" alt="Hex dump of nginx logs"></p>
+<p>למעוניינים, <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-with-http-2-support-on-ubuntu-16-04">המדריך הזה</a> מסביר על התקנת nginx, והגדרות HTTP/2. <a href="http://nginxlibrary.com/wordpress-permalinks/">כאן</a> תמצאו הסבר על ההגדרות הדרושות ב nginx לטובת הפעלת WordPress במקום mod_rewrite של apache.</p>
+<p>התוצאה הסופית של כל ההגדרות האלה, כפי שנשמרה בקובץ ‎/etc/nginx/sites-available/default היא זו:</p>
+<pre class="language-nginx"><code class="language-nginx"><span class="token directive"><span class="token keyword">server</span></span> <span class="token punctuation">{</span><br><br>        <span class="token directive"><span class="token keyword">listen</span> <span class="token number">443</span> ssl http2 default_server</span><span class="token punctuation">;</span><br>        <span class="token directive"><span class="token keyword">listen</span> [::]:443 ssl http2 default_server</span><span class="token punctuation">;</span><br>        <span class="token directive"><span class="token keyword">include</span> snippets/gzip.conf</span><span class="token punctuation">;</span><br><br>        <span class="token directive"><span class="token keyword">ssl_certificate</span> /etc/nginx/ssl/live/yehudab.com/fullchain.pem</span><span class="token punctuation">;</span><br>        <span class="token directive"><span class="token keyword">ssl_certificate_key</span> /etc/nginx/ssl/live/yehudab.com/privkey.pem</span><span class="token punctuation">;</span><br>        <span class="token directive"><span class="token keyword">ssl_dhparam</span> /etc/nginx/ssl/live/yehudab.com/dhparam.pem</span><span class="token punctuation">;</span><br><br>        <span class="token directive"><span class="token keyword">root</span> /var/www/yehudab.com</span><span class="token punctuation">;</span><br><br>        <span class="token directive"><span class="token keyword">index</span> index.html index.htm index.php index.nginx-debian.html</span><span class="token punctuation">;</span><br><br>        <span class="token directive"><span class="token keyword">server_name</span> yehudab.com</span><span class="token punctuation">;</span><br><br>        <span class="token directive"><span class="token keyword">location</span> /</span> <span class="token punctuation">{</span><br>                <span class="token directive"><span class="token keyword">try_files</span> <span class="token variable">$uri</span> <span class="token variable">$uri</span>/ =404</span><span class="token punctuation">;</span><br>        <span class="token punctuation">}</span><br><br>        <span class="token directive"><span class="token keyword">location</span> /blog/</span> <span class="token punctuation">{</span><br>                <span class="token directive"><span class="token keyword">try_files</span> <span class="token variable">$uri</span> <span class="token variable">$uri</span>/ /blog/index.php?<span class="token variable">$args</span></span><span class="token punctuation">;</span><br>        <span class="token punctuation">}</span><br>        <span class="token directive"><span class="token keyword">location</span> ~ \.php$</span> <span class="token punctuation">{</span><br>                <span class="token directive"><span class="token keyword">include</span> snippets/fastcgi-php.conf</span><span class="token punctuation">;</span><br>                <span class="token directive"><span class="token keyword">fastcgi_pass</span> unix:/run/php/php7.0-fpm.sock</span><span class="token punctuation">;</span><br>        <span class="token punctuation">}</span><br><br>        <span class="token directive"><span class="token keyword">location</span> ~ /\.ht</span> <span class="token punctuation">{</span><br>                <span class="token directive"><span class="token keyword">deny</span> all</span><span class="token punctuation">;</span><br>        <span class="token punctuation">}</span><br>        <span class="token directive"><span class="token keyword">include</span> snippets/expires.conf</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><br><span class="token directive"><span class="token keyword">server</span></span> <span class="token punctuation">{</span><br>       <span class="token directive"><span class="token keyword">listen</span>         <span class="token number">80</span></span><span class="token punctuation">;</span><br>       <span class="token directive"><span class="token keyword">listen</span>    [::]:80</span><span class="token punctuation">;</span><br>       <span class="token directive"><span class="token keyword">server_name</span>    yehudab.com</span><span class="token punctuation">;</span><br>       <span class="token directive"><span class="token keyword">return</span>         <span class="token number">301</span> https://<span class="token variable">$server_name</span><span class="token variable">$request_uri</span></span><span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+<p>לאחר סיום ההגדרות, ניתן לוודא את תמיכת האתר ל HTTP/2 באמצעות <a href="https://tools.keycdn.com/http2-test">דף הבדיקה של KeyCDN</a>.</p>
+
+                </div>
+            </div>
+        
+    
+        
+            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
+                <h2 class="mb-2">
+                    <a class="block" href="/blog/2017/07/just-a-second/">רק שניה</a>
+                </h2><a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
+                        href="/blog/2017/07/just-a-second/#comments"
+                        title="8 תגובות">
+                        💬 8
+                    </a><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="2017-07-01T11:28:09+03:00">
+                    1 ביולי 2017
+                </span>
+
+                <a class="tag" href="/tag/זמן/">זמן</a><a class="tag" href="/tag/לינוקס/">לינוקס</a><a class="tag" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a>
+                <div class="clear-both"></div>
+
+                <div class="content post">
+                    <p>רק שניה מפרידה בין השעה 03:14:07 ל 03:14:08 בתאריך: 19 בינואר 2038. לכאורה, זה לא צריך לעניין אף אחד. אבל אם אתה יוניקס/טיים גיק כמוני, התאריך הזה מייד אמור להדליק לך נורה אדומה.<br>
+למה? כי בשניה הזאת יעברו בדיוק 2,147,483,648 (או 2 בחזקת 31) שניות מתאריך 1.1.1970 בשעה 00:00:00. מחשב לינוקס בארכיטקטורת 32 ביט לא יכול להציג את הזמן הזה.<br>
+נסו להריץ את הפקודה הבאה על מחשב הלינוקס הקרוב:</p>
+<pre class="language-bash"><code class="language-bash"><span class="token function">date</span> <span class="token parameter variable">--date</span><span class="token operator">=</span><span class="token string">'@2147483647'</span></code></pre>
+<p>או במערכות מבוססות BSD (כמו macOS), את הפקודה הזאת:</p>
+<pre class="language-bash"><code class="language-bash"><span class="token function">date</span> <span class="token parameter variable">-r</span> <span class="token number">2147483647</span></code></pre>
+<p>זה אמור לעבוד בלי בעיה. אבל אם תוסיפו שניה נוספת (כלומר להחליף את ה-7 ב-8), אתם עלולים לראות משהו כזה:<br>
+<img src="/img/2017/07/Unix-date-32-bit.jpg" alt="2038 on 32 bit Linux "></p>
+<p>לעומת זאת, על מחשב 64 ביט, התוצאה תקינה:<br>
+<img src="/img/2017/07/Unix-date-64-bit.jpg" alt="2038 on 64 bit Linux "></p>
+<p>אז למה זה מעניין עכשיו, ומה איכפת לי ממשהו שיקרה בעוד קצת יותר מ-20 שנה?</p>
+<p>קודם כל, כי הזמן עובר. 20 שנה נשמע כמו המון זמן, אבל אם תסתכלו סביבכם בחדר, תראו לא מעט מכשירי חשמל שעובדים 20 שנה ויותר. תוסיפו לזה את העובדה שהיום כמעט כל מכשיר (ממנורה ועד טלוויזיה) מחובר לאינטרנט, ותבינו שיתכן שזו פצצת זמן שנדרכת עם כל קניה של מכשיר חדש שנעשית היום. וזה עוד בלי להזכיר מטוסים, בתי חולים, מערכות רכב (מישהו מוכן להיכנס למכונית אוטונומית ב 2038?) רמזורים, מעליות.</p>
+<p>צילום המסך העליון, לדוגמה, נלקח ממחשב Raspberry Pi שמחובר למערכת ההשקיה בגינה שלי.<br>
+<img src="/img/2017/07/raspberry-pi-open-sprinkler.jpg" alt="Raspberry Pi with Open Sprinkler "><br>
+האם הוא ישרוד עד 2038? אולי. עד עכשיו, החלפתי בממוצע מחשב השקייה כל 10 שנים: הראשון בגלל הבטרייה שזלגה, והשני עדיין עבד, רק שרציתי להחליף אותו בדגם שמאפשר תכנות דרך הרשת במקום ממשק לא ידידותי. למזלי, ה 19 בינואר יוצא בחורף, כך שיהיו לי כמה חודשים טובים לדאוג למחליף במידת הצורך.</p>
+<p>ולמה נזכרתי בכל זה עכשיו? כי מחר (2 ביולי 2017) יעבור מספר השניות את סף ה 1.499 מיליארד, ובעוד שבועיים (14 ביולי) הוא יעבור את סף ה 1.5 מיליארד.</p>
+<p>השעון מתקתק…</p>
+<figure class="text-center p-4 border-slate-600	border-2">
+<pre class="to-be-replaced-by-time-ticker text-2xl">
+</pre>
+</figure>
+
+                </div>
+            </div>
+        
+    
+        
+            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
+                <h2 class="mb-2">
+                    <a class="block" href="/blog/2017/06/yet-another-blog-upgrade/">שוב שדרוג לבלוג</a>
+                </h2><a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
+                        href="/blog/2017/06/yet-another-blog-upgrade/#comments"
+                        title="2 תגובות">
+                        💬 2
+                    </a><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="2017-06-24T20:43:45+03:00">
+                    24 ביוני 2017
+                </span>
+
+                <a class="tag" href="/tag/וורדפרס/">וורדפרס</a><a class="tag" href="/tag/לינוקס/">לינוקס</a><a class="tag" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a>
+                <div class="clear-both"></div>
+
+                <div class="content post">
+                    <p><em>בעידן שבו הבלוגים הולכים ונעלמים, קצת מוזר לכתוב פוסט חדש כאן ולא בפייסבוק, או טוויטר. בכל זאת, אם מישהו עדיין מקבל עדכונים על פוסטים חדשים, או שסתם הגיע לכאן מגוגל, נסו לקרוא את הפוסט כאילו עכשיו 2006 ובלוגים זה הדבר הכי מגניב שיש.</em></p>
+<p><img src="/img/2017/06/blog.jpg" alt="בלוג"></p>
+<p>דבר ראשון, בקטנה, שדרוג מתחייב לגרסה האחרונה (4.8).</p>
+<p>חוץ מזה, תוסף חדש: <a href="https://wordpress.org/plugins/wordpress-seo/">Yoast SEO</a>, כי פייסבוק דורש מטה תגיות, וזה הכי קל.</p>
+<p>אבל הכי חשוב, החלפתי את שרות האירוח מאכסון משותף על <a href="https://www.nearlyfreespeech.net">NearlyFreeSpeach</a> לשרת וירטואלי פרטי של <a href="https://www.scaleway.com/armv8-cloud-servers/">Scaleway</a>. בחרתי בשרת מבוסס ARMv8 כך שהמחיר יוצא כמעט אותו דבר (3$ בראשון, 3€ באחרון), כשכאן אני מקבל שרת פרטי, יכול להריץ עליו מה שאני רוצה, וגם הביצועים טובים הרבה יותר. כמובן, אני צריך לדאוג לבד לשדרוגי תוכנה, אבטחה, גיבויים וכד׳, אבל זה חלק מהעניין. המדריך ב <a href="https://www.linuxbabe.com/ubuntu/install-wordpress-ubuntu-16-04-apache">LinuxBabe</a> יכול לעזור כאן.</p>
+<p>Scaleway לא כ״כ אוהבים ששולחים מייל מהשרת שלהם (כדי שלא ישמשו לספאם), אז נרשמתי לשירות <a href="https://www.mailgun.com">mailgun</a> שמאפשר לשלוח עד 10,000 מיילים בחודש בחינם. הוא עובד יחד עם התוסף המקביל ב WordPress. באתר wpbeginner יש <a href="http://www.wpbeginner.com/wp-tutorials/how-to-fix-wordpress-not-sending-email-issue/">הסבר מפורט</a> איך להשתמש בשניהם.</p>
+<p>דבר אחרון, העברתי את האתר לעבוד דרך https, כי בכל זאת 2017. המדריך הנ״ל מ LinuxBabe מסביר איך לעשות את זה בחינם דרך <a href="https://letsencrypt.org">Let's Encrypt</a>.</p>
+
+                </div>
+            </div>
+        
+    
+        
+            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
+                <h2 class="mb-2">
+                    <a class="block" href="/blog/2014/08/scratch-getting-started-guide/">מדריך למתחילים בסקראץ׳</a>
+                </h2><a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
+                        href="/blog/2014/08/scratch-getting-started-guide/#comments"
+                        title="5 תגובות">
+                        💬 5
+                    </a><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="2014-08-16T18:02:22+03:00">
+                    16 באוגוסט 2014
+                </span>
+
+                <a class="tag" href="/tag/סקראץ׳/">סקראץ׳</a><a class="tag" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a>
+                <div class="clear-both"></div>
+
+                <div class="content post">
+                    <p>[פוסט זה הוא תרגום של מדריך המשתמש הרשמי של Scratch. תוכלו להוריד את המדריך באנגלית מ<a href="http://scratch.mit.edu/help/">דף העזרה באתר</a>. הזכויות למקור שמורות ל Lifelong Kindergarten Group, MIT Media Lab. מופץ ברשיון CC-BY-SA 2.0]</p>
+<p><img src="/img/2014/08/Scratch_cat_med.png" alt="Scartch Cat"></p>
+<p><strong>סקראץ׳</strong> (Scratch) היא שפת תיכנות שמאפשרת ליצור סיפורים אינטראקטיביים, אנימציות, משחקים, מוזיקה ואומנות.</p>
+<p><img src="/img/2014/08/getting-started-0-a.png" alt="מסך לדוגמה מסקראץ׳"></p>
+<p>המדריך הזה יאפשר לכם ליצור פרויקט ב<strong>סקראץ׳</strong>.</p>
+<p>ליצירת פרויקט חדש, גשו לאתר: <a href="http://scratch.mit.edu">http://scratch.mit.edu</a>. אם האתר נפתח באנגלית, ניתן לשנות את שפת הממשק מהתפריט בתחתית הדף. לאחר מכן, לחצו על הכפתור צור.<br>
+<img src="/img/2014/08/getting-started-0-b.png" alt="צור"></p>
+<p>אם יש לכם כבר חשבון ב<strong>סקראץ׳</strong>, הכנסו למערכת כדי שהפריוקט שלכם ישמר.<br>
+<img src="/img/2014/08/getting-started-0-c.png" alt="כניסה"></p>
+<h2>1 – התחילו לזוז</h2>
+<p><img src="/img/2014/08/getting-started-1.png" alt="לבנת זוז"></p>
+<p>גררו לבנת <strong>זוז</strong> לאזור התסריטים.</p>
+<p><img src="/img/2014/08/getting-started-2.png" alt="לחצו על הלבנה"></p>
+<p>לחצו על הלבנה כדי לגרום לחתול לזוז.</p>
+<h2>2 – הוסיפו צלילים</h2>
+<p><img src="/img/2014/08/getting-started-3.png" alt="לבנת נגן בתוף"></p>
+<p>גררו לבנת <strong>נגן בתוף</strong> וחברו אותה ללבנת ה<strong>זוז</strong>.</p>
+<p><img src="/img/2014/08/getting-started-4.png" alt="לחצו והקשיבו"></p>
+<p>לחצו והקשיבו.<br>
+<em>אם לא הצלחתם לשמוע, בדקו שהרמקול במחשב שלכם מופעל.</em></p>
+<p><img src="/img/2014/08/getting-started-5.png" alt="החלפת צלילים"></p>
+<p>תוכלו לבחור סוג אחר של תופים מהתפריט.</p>
+<h2>3 – התחילו ריקוד</h2>
+<p><img src="/img/2014/08/getting-started-6.png" alt="הוספת לבנת זוז חדשה"></p>
+<p>הוסיפו לבנת <strong>זוז</strong> חדשה. לחצו בתוך הלבנה והוסיפו סימן מינוס.</p>
+<p><img src="/img/2014/08/getting-started-7.png" alt="לחצו להפעלה"></p>
+<p>לחצו על כל אחת מהלבנים כדי להריץ את כל הערמה.</p>
+<p><img src="/img/2014/08/getting-started-8.png" alt="לבנת נגן בתוף נוספת"></p>
+<p>הוסיפו לבנת <strong>נגן בתוף</strong> חדשה, והחליפו את סוג התוף מהתפריט. לחצו להרצה.</p>
+<h2>4 – שוב ושוב</h2>
+<p><img src="/img/2014/08/getting-started-9.png" alt="לבנת חזור"></p>
+<p>גררו לבנת <strong>חזור</strong> והצמידו אותה לראש הערמה. הפה של לבנת ה<strong>חזור</strong> צריך לעטוף את שאר הלבנים.</p>
+<p><em>כדי לגרור את הערמה, יש לתפוס אותה מהלבנה העליונה.</em></p>
+<p><img src="/img/2014/08/getting-started-10.png" alt="שינוי מספר החזרות"></p>
+<p>תוכלו לשנות את מספר החזרות שיבוצעו.</p>
+<p>לחצו כדי להריץ.<br>
+<em>אפשר ללחוץ על כל אחת מהלבנים להרצת הערמה כולה.</em></p>
+<h2>5 – אמרו משהו</h2>
+<p><img src="/img/2014/08/getting-started-11.png" alt="לבנת אמור"></p>
+<p>לחצו על קטגוריית ה<strong>מראה</strong> וגגרו החוצה לבנת <strong>אמור</strong>.</p>
+<p><img src="/img/2014/08/getting-started-12.png" alt="שינוי טקסט"></p>
+<p>לחצו בתוך לבנת ה<strong>אמור</strong> והקלידו כדי לשנות את המילים. לחצו כדי לנסות.</p>
+<p><img src="/img/2014/08/getting-started-13.png" alt="חברו לראש הערמה"></p>
+<p>אחר-כך, חברו את לבנת ה<strong>אמור</strong> להתחלה.</p>
+<h2>6 – דגל ירוק</h2>
+<p><img src="/img/2014/08/getting-started-14.png" alt="כאשר לוחצים על הדגל הירוק"></p>
+<p>גררו לבנת <img src="/img/2014/08/15.png" alt="כאשר לוחצים על הדגל הירוק"> וחברו אותה להתחלה.</p>
+<p><img src="/img/2014/08/16.png" alt="הפעלת הדגל הירוק"></p>
+<p>בכל פעם שלוחצים על הדגל הירוק, התסריט מתחיל לפעול.<br>
+להפסקה, לחצו על כפתור העצור.</p>
+<h2>7 – שנו צבע</h2>
+<p>עכשיו, נסו משהו שונה…</p>
+<p><img src="/img/2014/08/17.png" alt="לבנת שנה אפקט"></p>
+<p>גררו לבנת <strong>שנה אפקט</strong>.</p>
+<p><img src="/img/2014/08/18.png" alt="לחצו על לבנת שנה אפקט"><br>
+לחצו כדי לראות מה קורה.</p>
+<h2>8 – לחיצה על מקשים</h2>
+<p><img src="/img/2014/08/19.png" alt="לבנת כאשר נלחץ מקש"></p>
+<p>חברו לבנת <img src="/img/2014/08/20.png" alt="כאשר נלחץ מקש"></p>
+<p>עכשיו, לחצו על מקש הרווח במקלדת שלכם.</p>
+<p><img src="/img/2014/08/21.png" alt="בחירת מקש"></p>
+<p>תוכלו לבחור מקש שונה מהתפריט</p>
+<h2>9 – הוסיפו רקע</h2>
+<p>תוכלו להוסיף רקע לבמה.</p>
+<p><img src="/img/2014/08/22b.png" alt="בחירת רקע"></p>
+<p>לחצו <img src="/img/2014/08/22a.png" alt="כפתור רקע"> כדי לבחור רקע חדש.</p>
+<p>בחרו רקע מהספריה (למשל &quot;spotlight-stage&quot;).</p>
+<p><img src="/img/2014/08/23.png" alt="ספרית הרקעים"></p>
+<p>לחצו <strong>אישור</strong>.</p>
+<p>הרקע החדש מופיע כעת על הבמה.</p>
+<p><img src="/img/2014/08/24.png" alt="הרקע החדש"></p>
+<h2>10 – הוסיפו דמות</h2>
+<p>כל אוביקט (משתתף) ב<strong>סקראץ׳</strong> נקרא <strong>דמות</strong>.<br>
+להוספת דמות חדשה, לחצו על אחד הכפתורים האלה:</p>
+<p><img src="/img/2014/08/25.png" alt="כפתורי הוספת דמות"></p>
+<p><strong>כפתורי הוספת דמות:</strong></p>
+<p><img src="/img/2014/08/26.png" alt="דמות מהספריה"> בחרו דמות מהספריה</p>
+<p><img src="/img/2014/08/27.png" alt="צייר דמות"> ציירו דמות משלכם</p>
+<p><img src="/img/2014/08/28.png" alt="דמות מקובץ"> העלו דמות/תמונה מקובץ</p>
+<p><img src="/img/2014/08/29.png" alt="דמות ממצלמת רשת"> צלמו תמונה (ממצלמת רשת)</p>
+<p>כדי להוסיף את הדמות הזאת:<br>
+<img src="/img/2014/08/30.png" alt="קייסי רוקדת"><br>
+לחצו על <img src="/img/2014/08/26.png" alt="דמות מהספריה"> ואז לחצו על קטגורית <strong>אנשים</strong> ובחרו את הדמות &quot;cassy dance&quot; (קייסי רוקדת).</p>
+<p>תוכלו לגרור את הדמויות ולמקם אותן על הבמה.<br>
+<img src="/img/2014/08/31.png" alt="גררו את הדמות"></p>
+<h2>11 – חקרו!</h2>
+<p>עכשיו תוכלו להגיד לדמות מה לעשות. נסו את האפשרויות הבאות או חקרו בעצמכם.</p>
+<p><strong>הוסיפו צליל:</strong><br>
+<img src="/img/2014/08/34.png" alt="צלילים"></p>
+<p>לחצו על לשונית הצלילים. תוכלו לבחור צליל <img src="/img/2014/08/28.png" alt="בחר צליל">. (בפורמט AIF, MP3 או WAV)</p>
+<p><img src="/img/2014/08/35.png" alt="הוספת צליל לתסריט"><br>
+עכשיו לחצו על לשונית התסריטים וגררו לבנת <strong>נגן צליל</strong> לתסריט. בחרו את הצליל מהתפריט.</p>
+<p><strong>שנו תלבושות:</strong><br>
+<img src="/img/2014/08/36.png" alt="תלבושות"></p>
+<p>לכל דמות יכולות להיות מספר תלבושות.<br>
+לשינוי התלבושת הנוכחית, לחצו על לשונית ה<strong>תלבושת</strong>.<br>
+אחר-כך לחצו על תלבושת שונה לדמות.</p>
+<p><strong>צרו אנימציה:</strong><br>
+<img src="/img/2014/08/37.png" alt="אנימציה"></p>
+<p>תוכלו ליצור אנימציה ע&quot;י החלפת תלבושות.<br>
+לחצו על לשונית התסריטים.<br>
+צרו תסריט שמחליף בין התלבושות.</p>
+<h2>12 – טיפים!</h2>
+<p><img src="/img/2014/08/38.png" alt="שם לפרויקט"><br>
+תנו שם לפרויקט שלכם.</p>
+<p>לרעיונות נוספים, לחצו על טיפים:<br>
+<img src="/img/2014/08/39.png" alt="טיפים"></p>
+<p><img src="/img/2014/08/tips.png" alt="חלון טיפים"></p>
+<p>חלון הטיפים מראה דוגמאות תסריטים שבהם תוכלו להשתמש בפרויקט.</p>
+<p>הוא גם מסביר מה כל אחת מהלבנים של <strong>סקראץ׳</strong> עושה.</p>
+<h2>שמור ושתף</h2>
+<p>כדי לשמור את הפרויקט ברשת, הקפידו להתחבר לאתר. <img src="/img/2014/08/43.png" alt="התחבר"></p>
+<p>(אם תרצו לשמור את הפרויקט במחשב שלכם, לחצו על תפריט <strong>קובץ</strong> ובחרו באפשרות: ״הורד למחשב שלך״.)</p>
+<p>כאשר אתם מוכנים, לחצו על <img src="/img/2014/08/42.png" alt="ראה דף פרויקט"></p>
+<p><strong>דף פרויקט</strong><br>
+<img src="/img/2014/08/40.png" alt="דף פרויקט"></p>
+<p>לחצו <img src="/img/2014/08/44.png" alt="מסך מלא"> לקבלת מסך מלא.</p>
+<p>לחצו <img src="/img/2014/08/41.png" alt="שיתוף"> כדי שאחרים יוכלו לצפות ולשחק בפרויקט שלכם. כאשר אתם משתפים, אחרים יכולים לבקר ולשחק בפרויקט שלכם.</p>
+<p>הוסיפו הערות לפרויקט.</p>
+<p>מה עכשיו? תוכלו ל<img src="/img/2014/08/46.png" alt="צור"> לקבלת רעיונות.</p>
+<p>כדי ללמוד עוד, לחצו <img src="/img/2014/08/47.png" alt="עזרה"> או גלשו אל <a href="http://scratch.mit.edu/help">http://scratch.mit.edu/help</a> (אנגלית).</p>
+<p>למי שרוצה להעמיק עוד יותר, מומלץ לקרוא את הספר בעברית: <strong>עקרונות ומושגים במדעי המחשב דרך Scratch</strong>, מאת מיכל ארמוני ומוטי בן-ארי. ניתן <a href="http://stwww.weizmann.ac.il/g-cs/scratch/learning_book.html">להוריד את הספר בחינם</a>. שימו לב: הספר נכתב לגרסה 1.4 של <strong>סקראץ׳</strong>. ניתן להוריד מאותו קישור דף הסבר על השינויים בגרסה 2.</p>
+
+                </div>
+            </div>
+        
+    
+        
+            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
+                <h2 class="mb-2">
+                    <a class="block" href="/blog/2012/05/otp-il-temp-server/">השרות הנסיוני לתכנון נסיעה בתח&quot;צ עלה לאויר</a>
+                </h2><a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
+                        href="/blog/2012/05/otp-il-temp-server/#comments"
+                        title="21 תגובות">
+                        💬 21
+                    </a><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="2012-05-20T06:28:50+03:00">
+                    20 במאי 2012
+                </span>
+
+                <a class="tag" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a>
+                <div class="clear-both"></div>
+
+                <div class="content post">
+                    <p>פחות משבוע אחרי <a href="http://www.tlv1.co.il/?p=5930">הפרסום הראשון</a> של נתוני התחבורה הציבורית בפורמט תיקני, עלה לאויר <a href="http://otp.hamakor.org.il/">שרות חופשי לתכנון מסלולי נסיעה</a> המבוסס על הנתונים אלה. ניתן לתכנן נסיעה בתחבורה ציבורית מכל מקום לכל מקום בארץ, אם כי לא כל חברות התח&quot;צ מכוסות. בולטת בהעדרה רכבת-ישראל. השרות הוא נסיוני, והכתובת והשרת יוחלפו בקרוב. בנתיים מוזמנים לנסות ולשלוח תגובות למטה.</p>
+<p>שימו לב! השרות מוגש as-is. אין שום הבטחה לתקינות הנתונים מבחינת האפשרות לנסוע במסלול, יעילות המסלול, זמנים, מספרי הקוים, או מחיר הנסיעה (אם וכאשר יפורסם).<br>
+שוב תודה לחברי ומנהלי <a href="http://www.hamakor.org.il/">עמותת המקור</a> על התמיכה בפרויקט.</p>
+
+                </div>
+            </div>
+        
+    
+        
+            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
+                <h2 class="mb-2">
+                    <a class="block" href="/blog/2012/05/otp-il/">חישוב מסלול נסיעה בתחבורה ציבורית</a>
+                </h2><a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
+                        href="/blog/2012/05/otp-il/#comments"
+                        title="8 תגובות">
+                        💬 8
+                    </a><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="Fri May 18 2012 08:21:13 GMT+0000 (Coordinated Universal Time)">
+                    18 במאי 2012
+                </span>
+
+                <a class="tag" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a>
+                <div class="clear-both"></div>
+
+                <div class="content post">
+                    <p>משרד התחבורה החל לפרסם לפני כשבוע מאגר מידע חדש הכולל לוחות זמנים ונתיבים של התחבורה הציבורית בארץ. <a href="http://data.gov.il/dataset/383">המאגר</a> מפורסם לפי תקן פתוח של גוגל שנקרא GTFS. במסגרת שיתוף פעולה של מספר חברים ברשימת התפוצה של <a href="http://www.hamakor.org.il/">המקור</a>, הקמנו פיילוט שמדגים את יכולות המאגר. הקוד בפיילוט מבוסס על פרויקט OpenTripPlanner. תודה לירון על עבודת התרגום, ולשאר החברים על העידוד והתמיכה.</p>
+<p>עד להקמת שרת ציבורי, ניתן להתרשם מצילומי המסך:</p>
+<p>מסלול שלם:<br>
+<img src="/img/2012/05/otp-il-1.png" alt="מסלול שלם"></p>
+<p>התמקדות על מקטעים:<br>
+<img src="/img/2012/05/otp-il-2.png" alt="התמקדות על מקטעים"></p>
+<p>גרסה להדפסה:<br>
+<img src="/img/2012/05/otp-il-3.png" alt="גרסה להדפסה"></p>
+<h3>ההסבר בהמשך מיועד למי שרוצה להקים שרת. לא למי שרוצה לחשב מסלול !! (מה שנקרא: Don't try this at home).</h3>
+<p>להקמת השרת, יש לבצע את הפעולות הבאות: (זה הרקע. הקוד בפסקה הבאה מבצע את הפעולות)</p>
+<p>לוודא שאזור הזמן של השרת הוא Asia/Jerusalem.<br>
+להוריד ולפתוח את הקוד של OpenTripPlanner (גודל הקובץ כ 90MB) וליצור קישור סימבולי ל / .<br>
+להוריד ולפתוח קובץ Open Street Map של ישראל מהאתר <a href="http://downloads.cloudmade.com/asia/western_asia/israel">cloudmade.com</a> (גודל הקובץ 22MB).<br>
+למצוא את כתובת קובץ ה GTFS <a href="http://data.gov.il/dataset/383">מאתר מאגרי המידע </a>של הממשלה, ולהוריד אותו. מכוון שהקובץ מוגש (זמנית?) משרת ftp ולא http, צריך לארח אותו מחדש על שרת אחר. בדוגמאות הקוד בהמשך האירוח הוא בשרת מקומי</p>
+<pre class="language-shell"><code class="language-shell">$ <span class="token function">date</span><br><span class="token comment"># Make sure timezone is correct. If not, run the command:</span><br><span class="token comment"># $ sudo ln -sf /usr/share/zoneinfo/Asia/Jerusalem /etc/localtime</span><br><span class="token comment"># make sure ntp is installed and running. if not, follow these instructions: &lt;a href="http://www.ehow.com/how_8251011_sync-time-centos.html">http://www.ehow.com/how_8251011_sync-time-centos.html&lt;/a></span><br>$ <span class="token function">mkdir</span> ~/GTFS<br>$ <span class="token builtin class-name">cd</span> ~/GTFS<br>$ <span class="token function">curl</span> <span class="token parameter variable">-L</span> <span class="token parameter variable">-O</span> <span class="token string">"http://maps5.trimet.org/otp-dev/otp.zip"</span><br>$ <span class="token function">curl</span> <span class="token parameter variable">-L</span> <span class="token parameter variable">-O</span> <span class="token string">"http://downloads.cloudmade.com/asia/western_asia/israel/israel.osm.bz2"</span><br>$ <span class="token function">curl</span> <span class="token parameter variable">-L</span> <span class="token parameter variable">-O</span> <span class="token string">"ftp://199.203.58.18/israel-public-transportation.zip"</span><br><span class="token comment"># !! replace IP above with correct IP</span><br>$ <span class="token function">unzip</span> otp.zip<br>$ bunzip2 israel.osm.bz2<br>$ <span class="token function">sudo</span> <span class="token function">ln</span> <span class="token parameter variable">-s</span> ~/GTFS/otp /<br>$ <span class="token function">ln</span> <span class="token parameter variable">-s</span> ~/GTFS/israel.osm /otp/cache/osm/</code></pre>
+<p>יש לערוך מספר קבצי הגדרות:</p>
+<pre class="language-shell"><code class="language-shell">$ <span class="token function">vi</span> /otp/graph-builder.xml<br><span class="token comment"># Line 13, change properties to 'name="path" value="/home/yehuda/GTFS/israel-public-transportation.zip"'</span><br><span class="token comment">#              (or whatever path you placed the file in)</span><br><span class="token comment"># Line 40, change file name of OSM from or-wa.osm to israel.osm (just file part)</span><br>$ <span class="token function">vi</span> /otp/bin/build-graph.sh<br><span class="token comment"># Line 1, change -Xmx2048m to -Xmx6114m. If you have more memory, put as much as possible</span><br>$ <span class="token function">vi</span> /otp/bin/start-server.sh<br><span class="token comment"># Line 1, change -Xmx2048m to -Xmx4096m. If you have more memory, put as much as possible</span></code></pre>
+<p>בניית הגרף (משלב נתוני OSM עם נתוני תח&quot;ץ)</p>
+<pre class="language-shell"><code class="language-shell">$ <span class="token builtin class-name">cd</span> /otp<br>$ bin/build-graph.sh <span class="token operator">>&amp;</span> ~/GTFS/build-graph.err<br><span class="token comment"># might take 15-30 minutes depending on processor power and memory</span><br>$ <span class="token function">ls</span> <span class="token parameter variable">-l</span> /otp/Graph.obj<br><span class="token comment"># should be around 1GB</span></code></pre>
+<p>אחרי הריצה חשוב לוודא בלוג שאין תעופה בגלל חוסר זכרון !!</p>
+<p>עכשיו אפשר להריץ את השרת האפליקטיבי:</p>
+<pre class="language-shell"><code class="language-shell">$ <span class="token builtin class-name">cd</span> /otp<br>$ bin/start-server.sh<br><span class="token comment"># Wait for line: "Winstone Servlet Engine v0.9.10 running..."</span></code></pre>
+<p>עכשיו אפשר לפתוח דפדן לכתובת : http://localhost:8080/opentripplanner-webapp/index.html (אם השרת אינו מקומי, להחליף localhost בכתובת השרת). ולנסות לחשב מסלול.</p>
+<p>תרגום לעברית:<br>
+לבדוק האם הקובץ ‎/otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js‏ קיים. אם לא, להוריד אותו <a href="https://github.com/openplans/OpenTripPlanner/blob/master/opentripplanner-webapp/src/main/webapp/js/otp/locale/Hebrew.js">מכאן</a> ולשמור בנתיב הנ&quot;ל. אחר-כך, יש לבצע מספר תיקונים בקוד:</p>
+<pre class="language-shell"><code class="language-shell">$ <span class="token function">vi</span> /otp/webapps/opentripplanner-webapp/index.html<br><span class="token comment"># line 2, add 'dir="rtl"' to html tag</span><br><span class="token comment"># line 53, duplicate this line and change file name to "js/otp/locale/Hebrew.js"</span><br>$ <span class="token function">vi</span> /otp/webapps/opentripplanner-webapp/js/otp/config.js<br><span class="token comment"># line 12, change otp.locale.English to otp.locale.Hebrew (at end of line)</span><br><span class="token comment"># line 175, change value of 'enabled' to 'true'</span><br><span class="token comment"># line 177, add this to end of string:</span><br><span class="token comment"># + '&lt;div style="margin:10px auto;width:205px">&lt;a href="http://www.opentripplanner.org/">&lt;img src="images/logo-otp.png" title="OpenTripPlanner" />&lt;/a>' +  '&lt;a style="margin:0 10px" href="http://www.hamakor.org.il/">&lt;img src="images/logo-hamakor.png" title="עמותת המקור" />&lt;/a>' + '&lt;a href="http://www.hetz.biz/">&lt;img src="images/logo-hetz.png" title="חץ ביז" />&lt;/a>&lt;/div>'</span><br>$ <span class="token function">vi</span> /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js<br><span class="token comment"># line 28, change title to: "אודות האתר"</span><br><span class="token comment"># line 29, change content to:</span><br><span class="token comment"># 'אתר זה הוקם ע"י יהודה ב. על בסיס נתוני "לו"ז ומידע גאוגראפי בתחבורה הציבורית" הזמינים מאתר &lt;a href="http://data.gov.il/">data.gov.il&lt;/a> ועל בסיס תוכנת הקוד הפתוח &lt;a href="http://www.opentripplanner.org/">OpenTripPlanner&lt;/a>.' + '&lt;br>' + 'תרגום התוכנה לעברית בוצע ע"י ירון שהרבני. אירוח אתר זה בחסות &lt;a href="http://www.hamakor.org.il/">עמותת המקור&lt;/a> ובאדיבות &lt;a href="http://www.hetz.biz/">חץ ביז&lt;/a>.' + '&lt;br>' +  'תנאי שימוש: עמותת המקור עושה כמיטב יכולתה בכדי לספק שירות זה על בסיס נתונים מדוייקים ועדכניים אולם ייתכנו טעויות. המידע ניתן כפי שהוא ללא אחריות. ראו גם &lt;a href="http://data.gov.il/dataset/383">תנאי שימוש של משרד התחבורה&lt;/a>.'</span></code></pre>
+<p>עכשיו לרפרש את הדפדפן ולהנות מההמשק העברי. יתכן שתתקבל הודעה על כשלון בחישוב המסלול. במקרה זה, יש לבחור תאריך חדש לחישוב בתחום המכוסה על-ידי הקובץ (יום הורדת הקובץ ועד שבועיים קדימה)</p>
+
+                </div>
+            </div>
+        
+    
+        
+            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
+                <h2 class="mb-2">
+                    <a class="block" href="/blog/2011/01/ff4-beta-shirt/">משתלם להיות בטא טסטר של פיירפוקס 4</a>
+                </h2><a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
+                        href="/blog/2011/01/ff4-beta-shirt/#comments"
+                        title="8 תגובות">
+                        💬 8
+                    </a><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="2011-01-07T10:30:09+02:00">
+                    7 בינואר 2011
+                </span>
+
+                <a class="tag" href="/tag/דפדפנים/">דפדפנים</a><a class="tag" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a><a class="tag" href="/tag/חולצה/">חולצה</a><a class="tag" href="/tag/פיירפוקס/">פיירפוקס</a>
+                <div class="clear-both"></div>
+
+                <div class="content post">
+                    <p>הנה מה שהגיע אלי במתנה היום בדואר:<br>
+<img src="/img/2011/01/ff4shirt-front.jpg" alt="FF4 beta tester shirt"></p>
+<p>וזו הכתובת על הצד האחורי:<br>
+<img src="/img/2011/01/ff4shirt-back.jpg" alt="FF4 beta tester shirt back"></p>
+<p>בהחלט עוד לא מאוחר להוריד את הבטא האחרונה (נכון לעכשיו היא השמינית במספר), ומי שמוריד <a href="http://firefoxlive.mozilla.org/">מהקישור הזה</a> גם עוזר לתרום משחקים לשני גורי פיירפוקס חמודים שגדלים בגן החיות ב Knoxville, Tennessee.</p>
 
                 </div>
             </div>
@@ -245,15 +611,15 @@
     
         <a class="tag mx-auto" href="/tag/מיקרוסופט/">מיקרוסופט&rlm; (2)</a>
     
-        <a class="tag mx-auto" href="/tag/דפדפנים/">דפדפנים&rlm; (10)</a>
+        <a class="tag mx-auto" href="/tag/דפדפנים/">דפדפנים&rlm; (11)</a>
     
-        <a class="tag mx-auto" href="/tag/כללי/">כללי&rlm; (4)</a>
+        <a class="tag mx-auto" href="/tag/כללי/">כללי&rlm; (6)</a>
     
         <a class="tag mx-auto" href="/tag/אורנג&#39;/">אורנג&#39;&rlm; (1)</a>
     
         <a class="tag mx-auto" href="/tag/אתרים בארץ/">אתרים בארץ&rlm; (1)</a>
     
-        <a class="tag mx-auto" href="/tag/שמישות/">שמישות&rlm; (3)</a>
+        <a class="tag mx-auto" href="/tag/שמישות/">שמישות&rlm; (5)</a>
     
         <a class="tag mx-auto" href="/tag/BlogDay2008/">BlogDay2008&rlm; (1)</a>
     
@@ -269,7 +635,7 @@
     
         <a class="tag mx-auto" href="/tag/ספארי/">ספארי&rlm; (3)</a>
     
-        <a class="tag mx-auto" href="/tag/נגנים/">נגנים&rlm; (3)</a>
+        <a class="tag mx-auto" href="/tag/נגנים/">נגנים&rlm; (4)</a>
     
         <a class="tag mx-auto" href="/tag/Flip4Mac/">Flip4Mac&rlm; (1)</a>
     
@@ -281,11 +647,9 @@
     
         <a class="tag mx-auto" href="/tag/video/">video&rlm; (1)</a>
     
-        <a class="tag mx-auto" href="/tag/Uncategorized/">Uncategorized&rlm; (1)</a>
+        <a class="tag mx-auto" href="/tag/שטויות שמוצאים באתרים/">שטויות שמוצאים באתרים&rlm; (5)</a>
     
-        <a class="tag mx-auto" href="/tag/שטויות שמוצאים באתרים/">שטויות שמוצאים באתרים&rlm; (3)</a>
-    
-        <a class="tag mx-auto" href="/tag/וורדפרס/">וורדפרס&rlm; (8)</a>
+        <a class="tag mx-auto" href="/tag/וורדפרס/">וורדפרס&rlm; (13)</a>
     
         <a class="tag mx-auto" href="/tag/אתרים תומכי פיירפוקס/">אתרים תומכי פיירפוקס&rlm; (1)</a>
     
@@ -311,13 +675,13 @@
     
         <a class="tag mx-auto" href="/tag/speedtraps/">speedtraps&rlm; (1)</a>
     
-        <a class="tag mx-auto" href="/tag/ווידג&#39;טים/">ווידג&#39;טים&rlm; (4)</a>
+        <a class="tag mx-auto" href="/tag/ווידג&#39;טים/">ווידג&#39;טים&rlm; (10)</a>
     
         <a class="tag mx-auto" href="/tag/רכבת ישראל/">רכבת ישראל&rlm; (2)</a>
     
         <a class="tag mx-auto" href="/tag/מזג אויר/">מזג אויר&rlm; (2)</a>
     
-        <a class="tag mx-auto" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית&rlm; (6)</a>
+        <a class="tag mx-auto" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית&rlm; (14)</a>
     
         <a class="tag mx-auto" href="/tag/חלונות/">חלונות&rlm; (1)</a>
     
@@ -327,15 +691,23 @@
     
         <a class="tag mx-auto" href="/tag/חולצה/">חולצה&rlm; (1)</a>
     
-        <a class="tag mx-auto" href="/tag/TwentyTwenty/">TwentyTwenty&rlm; (1)</a>
+        <a class="tag mx-auto" href="/tag/סקראץ׳/">סקראץ׳&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/iPhone/">iPhone&rlm; (2)</a>
+    
+        <a class="tag mx-auto" href="/tag/לינוקס/">לינוקס&rlm; (5)</a>
+    
+        <a class="tag mx-auto" href="/tag/אישי/">אישי&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/זמן/">זמן&rlm; (2)</a>
+    
+        <a class="tag mx-auto" href="/tag/מכוניות/">מכוניות&rlm; (1)</a>
     
         <a class="tag mx-auto" href="/tag/nano/">nano&rlm; (1)</a>
     
         <a class="tag mx-auto" href="/tag/php/">php&rlm; (1)</a>
     
         <a class="tag mx-auto" href="/tag/vi/">vi&rlm; (1)</a>
-    
-        <a class="tag mx-auto" href="/tag/לינוקס/">לינוקס&rlm; (2)</a>
     
         <a class="tag mx-auto" href="/tag/SSG/">SSG&rlm; (1)</a>
     

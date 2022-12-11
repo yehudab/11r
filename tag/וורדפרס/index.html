@@ -116,7 +116,7 @@
                 <div class="clear-both"></div>
 
                 <div class="content post">
-                    <p><img src="/img/2020/Docker.PNG" alt="Docker">
+                    <p><img src="/img/2020/07/Docker.PNG" alt="Docker">
 אחרי שלוש שנים שבהן <a href="https://yehudab.com/blog/2017/06/yet-another-blog-upgrade/">האתר הזה רץ מעל שרות האחסון של Scaleway</a>, קיבלתי מהם הודעה שהחומרה שעליה אני רץ (dual core ARM CPU, 2GB RAM, 50GB SSD) תפסיק לעבוד בעוד מספר חודשים. הם הציעו לי לעבור באותו מחיר לשרת VPS מבוסס אינטל, אלא שעוד לפני שהספקתי להגיב, קיבלתי את המכתב שזו כותרתו: We’re evolving our Instances prices, או בתרגום חופשי: נמאס לנו להיות הכי זולים בשוק, אז נעלה את המחיר ב 66%.</p>
 <p>החלטתי שזה הזמן לחפש שרות אכסון חדש, והגעתי דרך חבר לעבודה ל <a href="https://www.ovh.ie/">OVHcloud</a>. השרת הבסיסי נראה על הנייר חלש יותר (מעבד אחד בלבד ודיסק קטן יותר), אבל בבדיקות ביצועים בשטח הוא משמעותית יותר מהיר. זה מורגש גם בעבודת ההתקנה (פרטים בהמשך) וגם בזמן ריצה, כפי שנמדד ע״י StatusCake. המחיר זהה למחיר (הישן) של Scaleway: שלושה אירו לחודש, בלי התחייבות.</p>
 <p>השרת שלי מריץ בנוסף גם שני שרתי node קטנים, כך שהעברת כל הטוב הזה היא לא פשוטה, ולכן החלטתי הפעם ללכת על Docker. למי שלא מכיר את Docker, מומלץ לקרוא את סדרת המאמרים באתר של רן בר-זיק. שם הוא גם <a href="https://internet-israel.com/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%D7%9D/docker/%D7%95%D7%95%D7%A8%D7%93%D7%A4%D7%A8%D7%A1-%D7%A2%D7%9C-docker/">מדגים התקנת WordPress</a>. אני בחרתי לעקוב אחרי <a href="https://github.com/mjstealey/wordpress-nginx-docker">המדריך של Michael J. Stealey</a> ב GitHub, שממנו גם עשיתי פורק לריפו משלי. המדריך הזה קצת יותר מתאים לסביבה הנוכחית שלי שכוללת MariaDB במקום MySQL, וגם סקריפטים מוכנים לתמיכה ב https, דרך השרות של <a href="https://letsencrypt.org/">Let’s Encrypt</a>.</p>
@@ -149,7 +149,7 @@
 <p>אחרי השדרוג, אני מנסה לשמור את הפוסט הזה ובום error 500. בדיקה מהירה בלוג של nginx על השרת מגלה ששכחתי להתקין את php7.4-memcache שהמדריך הנ&quot;ל לא מחשיב כ common extension. הרצת:</p>
 <pre class="language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> php7.4-memcache</code></pre>
 <p>וריסטרט לשרת פתרו את הבעיה.<br>
-<img src="/img/2020/upgrade.png" alt="שדרוג"></p>
+<img src="/img/2020/03/upgrade.png" alt="שדרוג"></p>
 
                 </div>
             </div>
@@ -163,11 +163,11 @@
                     31 בדצמבר 2019
                 </span>
 
-                <a class="tag" href="/tag/TwentyTwenty/">TwentyTwenty</a><a class="tag" href="/tag/וורדפרס/">וורדפרס</a>
+                <a class="tag" href="/tag/וורדפרס/">וורדפרס</a>
                 <div class="clear-both"></div>
 
                 <div class="content post">
-                    <p><img src="/img/2019/New-Year-2020-PNG-File.png" alt="2020">
+                    <p><img src="/img/2019/12/New-Year-2020-PNG-File.png" alt="2020">
 שנה חדשה היא הזדמנות טובה להחלפת תבנית. אז ברוכים הבאים ל-2020, או כמו ש WordPress קוראים לה: <a href="https://wordpress.org/themes/twentytwenty/">TwentyTwenty</a>.</p>
 <p>התבנית קצת יותר ״חמה״ לעומת TwentyNineteen המינימליסטית שבה השתמשתי קודם. התרגום לעברית והתמיכה בכיווניות זקוקים לקצת ״שיוף״, אבל התבנית לגמרי שימושית כפי שהיא.</p>
 <p>אז שתהיה לכולם שנה טובה ועשור טוב. מקווה (הפעם באמת) ליצור תוכן מעניין יותר במהלך השנה.</p>
@@ -190,8 +190,105 @@
 
                 <div class="content post">
                     <p>גרסה חדשה של וורדפרס יצאה השבוע, והבלוג קיבל את השדרוג המתחייב. על הדרך, עברתי לתבנית 2019 החדשה (הקודמת הייתה 2016).</p>
-<p><img src="/img/blog512.jpg" alt="">
+<p><img src="/img/2017/06/blog.jpg" alt="">
 בקרוב פוסט עם תוכן אמיתי ותמונה לא ממוחזרת.</p>
+
+                </div>
+            </div>
+        
+    
+        
+            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
+                <h2 class="mb-2">
+                    <a class="block" href="/blog/2017/07/http2/">HTTP/2</a>
+                </h2><a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
+                        href="/blog/2017/07/http2/#comments"
+                        title="תגובה אחת">
+                        💬 1
+                    </a><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="2017-07-07T17:18:52+03:00">
+                    7 ביולי 2017
+                </span>
+
+                <a class="tag" href="/tag/וורדפרס/">וורדפרס</a><a class="tag" href="/tag/לינוקס/">לינוקס</a><a class="tag" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a>
+                <div class="clear-both"></div>
+
+                <div class="content post">
+                    <p>עוד שדרוג קטן לבלוג.<br>
+הפעם העברתי את השרת מ apache ל nginx, ועל הדרך הפעלתי HTTP/2.<br>
+זה אמור לשפר את הביצועים, למרות שאני לא ממש מרגיש בזה בנתיים.</p>
+<p><img src="/img/2017/07/nginx-logs.jpg" alt="Hex dump of nginx logs"></p>
+<p>למעוניינים, <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-with-http-2-support-on-ubuntu-16-04">המדריך הזה</a> מסביר על התקנת nginx, והגדרות HTTP/2. <a href="http://nginxlibrary.com/wordpress-permalinks/">כאן</a> תמצאו הסבר על ההגדרות הדרושות ב nginx לטובת הפעלת WordPress במקום mod_rewrite של apache.</p>
+<p>התוצאה הסופית של כל ההגדרות האלה, כפי שנשמרה בקובץ ‎/etc/nginx/sites-available/default היא זו:</p>
+<pre class="language-nginx"><code class="language-nginx"><span class="token directive"><span class="token keyword">server</span></span> <span class="token punctuation">{</span><br><br>        <span class="token directive"><span class="token keyword">listen</span> <span class="token number">443</span> ssl http2 default_server</span><span class="token punctuation">;</span><br>        <span class="token directive"><span class="token keyword">listen</span> [::]:443 ssl http2 default_server</span><span class="token punctuation">;</span><br>        <span class="token directive"><span class="token keyword">include</span> snippets/gzip.conf</span><span class="token punctuation">;</span><br><br>        <span class="token directive"><span class="token keyword">ssl_certificate</span> /etc/nginx/ssl/live/yehudab.com/fullchain.pem</span><span class="token punctuation">;</span><br>        <span class="token directive"><span class="token keyword">ssl_certificate_key</span> /etc/nginx/ssl/live/yehudab.com/privkey.pem</span><span class="token punctuation">;</span><br>        <span class="token directive"><span class="token keyword">ssl_dhparam</span> /etc/nginx/ssl/live/yehudab.com/dhparam.pem</span><span class="token punctuation">;</span><br><br>        <span class="token directive"><span class="token keyword">root</span> /var/www/yehudab.com</span><span class="token punctuation">;</span><br><br>        <span class="token directive"><span class="token keyword">index</span> index.html index.htm index.php index.nginx-debian.html</span><span class="token punctuation">;</span><br><br>        <span class="token directive"><span class="token keyword">server_name</span> yehudab.com</span><span class="token punctuation">;</span><br><br>        <span class="token directive"><span class="token keyword">location</span> /</span> <span class="token punctuation">{</span><br>                <span class="token directive"><span class="token keyword">try_files</span> <span class="token variable">$uri</span> <span class="token variable">$uri</span>/ =404</span><span class="token punctuation">;</span><br>        <span class="token punctuation">}</span><br><br>        <span class="token directive"><span class="token keyword">location</span> /blog/</span> <span class="token punctuation">{</span><br>                <span class="token directive"><span class="token keyword">try_files</span> <span class="token variable">$uri</span> <span class="token variable">$uri</span>/ /blog/index.php?<span class="token variable">$args</span></span><span class="token punctuation">;</span><br>        <span class="token punctuation">}</span><br>        <span class="token directive"><span class="token keyword">location</span> ~ \.php$</span> <span class="token punctuation">{</span><br>                <span class="token directive"><span class="token keyword">include</span> snippets/fastcgi-php.conf</span><span class="token punctuation">;</span><br>                <span class="token directive"><span class="token keyword">fastcgi_pass</span> unix:/run/php/php7.0-fpm.sock</span><span class="token punctuation">;</span><br>        <span class="token punctuation">}</span><br><br>        <span class="token directive"><span class="token keyword">location</span> ~ /\.ht</span> <span class="token punctuation">{</span><br>                <span class="token directive"><span class="token keyword">deny</span> all</span><span class="token punctuation">;</span><br>        <span class="token punctuation">}</span><br>        <span class="token directive"><span class="token keyword">include</span> snippets/expires.conf</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><br><span class="token directive"><span class="token keyword">server</span></span> <span class="token punctuation">{</span><br>       <span class="token directive"><span class="token keyword">listen</span>         <span class="token number">80</span></span><span class="token punctuation">;</span><br>       <span class="token directive"><span class="token keyword">listen</span>    [::]:80</span><span class="token punctuation">;</span><br>       <span class="token directive"><span class="token keyword">server_name</span>    yehudab.com</span><span class="token punctuation">;</span><br>       <span class="token directive"><span class="token keyword">return</span>         <span class="token number">301</span> https://<span class="token variable">$server_name</span><span class="token variable">$request_uri</span></span><span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+<p>לאחר סיום ההגדרות, ניתן לוודא את תמיכת האתר ל HTTP/2 באמצעות <a href="https://tools.keycdn.com/http2-test">דף הבדיקה של KeyCDN</a>.</p>
+
+                </div>
+            </div>
+        
+    
+        
+            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
+                <h2 class="mb-2">
+                    <a class="block" href="/blog/2017/06/yet-another-blog-upgrade/">שוב שדרוג לבלוג</a>
+                </h2><a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
+                        href="/blog/2017/06/yet-another-blog-upgrade/#comments"
+                        title="2 תגובות">
+                        💬 2
+                    </a><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="2017-06-24T20:43:45+03:00">
+                    24 ביוני 2017
+                </span>
+
+                <a class="tag" href="/tag/וורדפרס/">וורדפרס</a><a class="tag" href="/tag/לינוקס/">לינוקס</a><a class="tag" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a>
+                <div class="clear-both"></div>
+
+                <div class="content post">
+                    <p><em>בעידן שבו הבלוגים הולכים ונעלמים, קצת מוזר לכתוב פוסט חדש כאן ולא בפייסבוק, או טוויטר. בכל זאת, אם מישהו עדיין מקבל עדכונים על פוסטים חדשים, או שסתם הגיע לכאן מגוגל, נסו לקרוא את הפוסט כאילו עכשיו 2006 ובלוגים זה הדבר הכי מגניב שיש.</em></p>
+<p><img src="/img/2017/06/blog.jpg" alt="בלוג"></p>
+<p>דבר ראשון, בקטנה, שדרוג מתחייב לגרסה האחרונה (4.8).</p>
+<p>חוץ מזה, תוסף חדש: <a href="https://wordpress.org/plugins/wordpress-seo/">Yoast SEO</a>, כי פייסבוק דורש מטה תגיות, וזה הכי קל.</p>
+<p>אבל הכי חשוב, החלפתי את שרות האירוח מאכסון משותף על <a href="https://www.nearlyfreespeech.net">NearlyFreeSpeach</a> לשרת וירטואלי פרטי של <a href="https://www.scaleway.com/armv8-cloud-servers/">Scaleway</a>. בחרתי בשרת מבוסס ARMv8 כך שהמחיר יוצא כמעט אותו דבר (3$ בראשון, 3€ באחרון), כשכאן אני מקבל שרת פרטי, יכול להריץ עליו מה שאני רוצה, וגם הביצועים טובים הרבה יותר. כמובן, אני צריך לדאוג לבד לשדרוגי תוכנה, אבטחה, גיבויים וכד׳, אבל זה חלק מהעניין. המדריך ב <a href="https://www.linuxbabe.com/ubuntu/install-wordpress-ubuntu-16-04-apache">LinuxBabe</a> יכול לעזור כאן.</p>
+<p>Scaleway לא כ״כ אוהבים ששולחים מייל מהשרת שלהם (כדי שלא ישמשו לספאם), אז נרשמתי לשירות <a href="https://www.mailgun.com">mailgun</a> שמאפשר לשלוח עד 10,000 מיילים בחודש בחינם. הוא עובד יחד עם התוסף המקביל ב WordPress. באתר wpbeginner יש <a href="http://www.wpbeginner.com/wp-tutorials/how-to-fix-wordpress-not-sending-email-issue/">הסבר מפורט</a> איך להשתמש בשניהם.</p>
+<p>דבר אחרון, העברתי את האתר לעבוד דרך https, כי בכל זאת 2017. המדריך הנ״ל מ LinuxBabe מסביר איך לעשות את זה בחינם דרך <a href="https://letsencrypt.org">Let's Encrypt</a>.</p>
+
+                </div>
+            </div>
+        
+    
+        
+            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
+                <h2 class="mb-2">
+                    <a class="block" href="/blog/2016/08/d7a2d793d799d799d79f-d7a4d794/">עדיין פה</a>
+                </h2><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="2016-08-05T19:58:34+03:00">
+                    5 באוגוסט 2016
+                </span>
+
+                <a class="tag" href="/tag/וורדפרס/">וורדפרס</a>
+                <div class="clear-both"></div>
+
+                <div class="content post">
+                    <p>עדכון קליל של גרסת הבלוג ל 4.5 ותבנית ל 2016.</p>
+
+                </div>
+            </div>
+        
+    
+        
+            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
+                <h2 class="mb-2">
+                    <a class="block" href="/blog/2010/12/no-more-blog-archive/">&quot;ארכיון הבלוג&quot; זה לחלשים</a>
+                </h2><a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
+                        href="/blog/2010/12/no-more-blog-archive/#comments"
+                        title="7 תגובות">
+                        💬 7
+                    </a><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="2010-12-21T07:11:14+02:00">
+                    21 בדצמבר 2010
+                </span>
+
+                <a class="tag" href="/tag/וורדפרס/">וורדפרס</a><a class="tag" href="/tag/שטויות שמוצאים באתרים/">שטויות שמוצאים באתרים</a><a class="tag" href="/tag/שמישות/">שמישות</a>
+                <div class="clear-both"></div>
+
+                <div class="content post">
+                    <p>בעקבות <a href="http://daringfireball.net/2010/12/title_junk">גרובר</a> החלטתי להיפטר מהתוספת &quot;ארכיון הבלוג&quot; (שאצלי עוד הופיעה באנגלית) מכל דפי הבלוג, כולל: פוסטים, קטגוריות, ארכיון לפי חודשים ודף ה&quot;אודות&quot;. הרי כל מה שקוראים כאן הוא ממילא מארכיון (כן, אפילו הפוסט הזה שהוא חם מהתנור עכשיו), אז מה הטעם?</p>
 
                 </div>
             </div>
@@ -213,6 +310,28 @@
 <img src="/img/2010/09/wordpress-dst.png" alt="המאה ה21 הגיעה לוורדפרס"><br>
 חיפוש קצר העלה את <a href="http://wordpress.org/support/topic/wp-28-no-daylight-saving-time-setting">הדיון הזה</a> שלפיו גם גרסה 2.8 (שבה הייתי קודם) אמורה לתמוך בעדכון אוטומטי ולא ברור לי כ&quot;כ למה הפיצ'ר הזה לא עבד אצלי קודם, אבל העיקר שמעכשיו יש לי פחות שעון לעדכן.<br>
 אה… ואף מילה על חרדים, יום כיפור ואם צריך או לא לאחר את המעבר לשעון חורף.</p>
+
+                </div>
+            </div>
+        
+    
+        
+            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
+                <h2 class="mb-2">
+                    <a class="block" href="/blog/2010/09/blog-upgraded-to-3-0-1/">הבלוג שודרג לגרסה 3.0.1</a>
+                </h2><a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
+                        href="/blog/2010/09/blog-upgraded-to-3-0-1/#comments"
+                        title="7 תגובות">
+                        💬 7
+                    </a><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="2010-09-03T16:34:41+03:00">
+                    3 בספטמבר 2010
+                </span>
+
+                <a class="tag" href="/tag/וורדפרס/">וורדפרס</a><a class="tag" href="/tag/כללי/">כללי</a><a class="tag" href="/tag/wordpress/">wordpress</a>
+                <div class="clear-both"></div>
+
+                <div class="content post">
+                    <p>מי שנתקל בבעיות מוזמן להגיב (מצד שני, אם הבעיה היא במנגנון התגובות, אז אכלתי אותה…)</p>
 
                 </div>
             </div>
@@ -271,15 +390,15 @@
     
         <a class="tag mx-auto" href="/tag/מיקרוסופט/">מיקרוסופט&rlm; (2)</a>
     
-        <a class="tag mx-auto" href="/tag/דפדפנים/">דפדפנים&rlm; (10)</a>
+        <a class="tag mx-auto" href="/tag/דפדפנים/">דפדפנים&rlm; (11)</a>
     
-        <a class="tag mx-auto" href="/tag/כללי/">כללי&rlm; (4)</a>
+        <a class="tag mx-auto" href="/tag/כללי/">כללי&rlm; (6)</a>
     
         <a class="tag mx-auto" href="/tag/אורנג&#39;/">אורנג&#39;&rlm; (1)</a>
     
         <a class="tag mx-auto" href="/tag/אתרים בארץ/">אתרים בארץ&rlm; (1)</a>
     
-        <a class="tag mx-auto" href="/tag/שמישות/">שמישות&rlm; (3)</a>
+        <a class="tag mx-auto" href="/tag/שמישות/">שמישות&rlm; (5)</a>
     
         <a class="tag mx-auto" href="/tag/BlogDay2008/">BlogDay2008&rlm; (1)</a>
     
@@ -295,7 +414,7 @@
     
         <a class="tag mx-auto" href="/tag/ספארי/">ספארי&rlm; (3)</a>
     
-        <a class="tag mx-auto" href="/tag/נגנים/">נגנים&rlm; (3)</a>
+        <a class="tag mx-auto" href="/tag/נגנים/">נגנים&rlm; (4)</a>
     
         <a class="tag mx-auto" href="/tag/Flip4Mac/">Flip4Mac&rlm; (1)</a>
     
@@ -307,11 +426,9 @@
     
         <a class="tag mx-auto" href="/tag/video/">video&rlm; (1)</a>
     
-        <a class="tag mx-auto" href="/tag/Uncategorized/">Uncategorized&rlm; (1)</a>
+        <a class="tag mx-auto" href="/tag/שטויות שמוצאים באתרים/">שטויות שמוצאים באתרים&rlm; (5)</a>
     
-        <a class="tag mx-auto" href="/tag/שטויות שמוצאים באתרים/">שטויות שמוצאים באתרים&rlm; (3)</a>
-    
-        <a class="tag mx-auto" href="/tag/וורדפרס/">וורדפרס&rlm; (8)</a>
+        <a class="tag mx-auto" href="/tag/וורדפרס/">וורדפרס&rlm; (13)</a>
     
         <a class="tag mx-auto" href="/tag/אתרים תומכי פיירפוקס/">אתרים תומכי פיירפוקס&rlm; (1)</a>
     
@@ -337,13 +454,13 @@
     
         <a class="tag mx-auto" href="/tag/speedtraps/">speedtraps&rlm; (1)</a>
     
-        <a class="tag mx-auto" href="/tag/ווידג&#39;טים/">ווידג&#39;טים&rlm; (4)</a>
+        <a class="tag mx-auto" href="/tag/ווידג&#39;טים/">ווידג&#39;טים&rlm; (10)</a>
     
         <a class="tag mx-auto" href="/tag/רכבת ישראל/">רכבת ישראל&rlm; (2)</a>
     
         <a class="tag mx-auto" href="/tag/מזג אויר/">מזג אויר&rlm; (2)</a>
     
-        <a class="tag mx-auto" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית&rlm; (6)</a>
+        <a class="tag mx-auto" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית&rlm; (14)</a>
     
         <a class="tag mx-auto" href="/tag/חלונות/">חלונות&rlm; (1)</a>
     
@@ -353,15 +470,23 @@
     
         <a class="tag mx-auto" href="/tag/חולצה/">חולצה&rlm; (1)</a>
     
-        <a class="tag mx-auto" href="/tag/TwentyTwenty/">TwentyTwenty&rlm; (1)</a>
+        <a class="tag mx-auto" href="/tag/סקראץ׳/">סקראץ׳&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/iPhone/">iPhone&rlm; (2)</a>
+    
+        <a class="tag mx-auto" href="/tag/לינוקס/">לינוקס&rlm; (5)</a>
+    
+        <a class="tag mx-auto" href="/tag/אישי/">אישי&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/זמן/">זמן&rlm; (2)</a>
+    
+        <a class="tag mx-auto" href="/tag/מכוניות/">מכוניות&rlm; (1)</a>
     
         <a class="tag mx-auto" href="/tag/nano/">nano&rlm; (1)</a>
     
         <a class="tag mx-auto" href="/tag/php/">php&rlm; (1)</a>
     
         <a class="tag mx-auto" href="/tag/vi/">vi&rlm; (1)</a>
-    
-        <a class="tag mx-auto" href="/tag/לינוקס/">לינוקס&rlm; (2)</a>
     
         <a class="tag mx-auto" href="/tag/SSG/">SSG&rlm; (1)</a>
     
