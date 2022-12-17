@@ -67,6 +67,41 @@
         
             <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
                 <h2 class="mb-2">
+                    <a class="block" href="/blog/2020/10/staticman-for-11ty-comments/">ניהול תגובות באמצעות staticman</a>
+                </h2><a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
+                        href="/blog/2020/10/staticman-for-11ty-comments/#comments"
+                        title="3 תגובות">
+                        💬 3
+                    </a><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="Sat Oct 03 2020 10:18:58 GMT+0000 (Coordinated Universal Time)">
+                    3 באוקטובר 2020
+                </span>
+
+                <a class="tag" href="/tag/staticman/">staticman</a><a class="tag" href="/tag/11ty/">11ty</a>
+                <div class="clear-both"></div>
+
+                <div class="content post">
+                    <p>ב<a href="/blog/2020/08/11ty-howto-migrate/" title="מוורדפרס ל-11ty">פוסט הקודם</a> הסברתי איך לייבא את התגובות הישנות מ Wordpress ל-<a href="https://www.11ty.dev/">11ty</a>. בפוסט הזה, אראה איך להתקין שרת <a href="https://staticman.net/">Staticman</a>, ואיך לחבר אליו את טופס התגובות באתר.</p>
+<p><img src="/img/2020/10/staticman-logo.png" alt="Staticman logo">
+Staticman logo by <a href="http://erlen.co.uk">Erlen Masson</a></p>
+<p>גם הפעם הסתמכתי על <a href="https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html" title="Adding Staticman Comments by Travis Downs">מדריך קיים</a> שחיבר Travis Downs עבור שילוב Staticman בבלוג מבוסס Jekyll. בסופו של דבר, ביצעתי את השלבים הבאים:</p>
+<ol>
+<li><a href="https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html#set-up-github-bot-account">יצירת חשבון בוט ב GitHub</a> (לגמרי לפי המדריך הנ&quot;ל)</li>
+<li><a href="https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html#configuring-staticmanyml">הגדרות staticman.yml</a> (גם כן לפי המדריך)</li>
+<li>הגדרות staticman בתוך <code>src/globals/site.json</code>. כאן יש הבדל לעומת המדריך, מכוון שקובץ זה יחודי ל 11ty, ובמדריך ההתיחסות היא לסביבת Jekyll. בכל מקרה, העקרונות דומים, ו<a href="https://github.com/yehudab/11r/blob/master/src/includes/comments.njk" title="site.json">כאן</a> תוכלו לראות את ההגדרות שלי.</li>
+<li><a href="https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html#set-up-the-api-bridge">הקמת שרת staticman</a>. אחרי יצירת המפתחות, בחרתי בדרך שונה מהמומלץ (הקמה דרך Heroku), ובמקום זה העלתי שרת עצמאי שרץ דרך docker. בניגוד למוסבר בדקומנטציה, כאן יש חוסר <a href="https://github.com/eduardoboucas/staticman/blob/master/docs/docker.md">בתיעוד המקורי</a>, ויש לזכור להגדיר את מפתחות ההצפנה בקובץ <a href="https://github.com/eduardoboucas/staticman/blob/master/docker-compose.yml">docker-compose.yml</a></li>
+<li><a href="https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html#invite-and-accept-bot-to-blog-repo" title="Invite and Accept Bot to Blog Repo">הזמנת הבוט להשתתף ב repo</a> (ע&quot;פ המדריך)</li>
+<li><a href="https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html#enable-recaptcha" title="Enable reCAPTCHA">הפעלת reCAPCHA</a> - בעיקר על פי המדריך. יש לשים לב שבחלק המתייחס ל <code>‎_config.yml</code> יש לבצע את השינויים במקום זאת ב <code>src/globals/site.json</code></li>
+<li><a href="https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html#integrate-comments-into-site" title="Integrate Comments Into Site">שילוב התגובות באתר</a>. כאן ההבדלים מעט יותר משמעותיים, הן בגלל ההבדלים בין Jekyll ל-11ty, והן בגלל הרצון שלי לתמוך בקינון מעבר לרמה אחת. בנוסף, לא אהבתי את ה JS של הפוסט המקורי שמשתש במעורב ב jQuery ו-Vanilla JS. במקום זה השתמשתי בספריה רזה יותר בשם <a href="https://github.com/fabiospampinato/cash">cash</a>, שמאפשרת סינטקס דמוי jQuery במחיר של תמיכה בפחות פיצ'רים ופחות דפדפנים ישנים (אבל עדיין תומכת ב IE11). על הצגת התגובות כתבתי בפוסט הקודם. העבודה על טופס התגובות החדשות מסתכמת בסופו של דבר בקבצי ה <a href="https://github.com/yehudab/11r/blob/master/src/includes/comment-form.njk" title="comment-form.njk">HTML</a>, <a href="https://github.com/yehudab/11r/blob/master/src/styles/comments.css" title="comments.css">CSS</a>, ו-<a href="https://github.com/yehudab/11r/blob/master/src/scripts/comment-form.js" title="comment-form.js">JS </a>אותם תוכלו לראות ב repo הסופי.</li>
+</ol>
+<p>מוזמנים להגיב למטה ולראות איך כל ה flow עובד. עד לאישור, תוכלו לצפות בתגובות שלכם באזור ה <a href="https://github.com/yehudab/11r/pulls">Pull Requests</a> של הבלוג.</p>
+
+                </div>
+            </div>
+        
+    
+        
+            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
+                <h2 class="mb-2">
                     <a class="block" href="/blog/2020/08/11ty-howto-migrate/">מוורדפרס ל-11ty</a>
                 </h2><a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
                         href="/blog/2020/08/11ty-howto-migrate/#comments"
@@ -202,26 +237,6 @@
             </div>
         
     
-        
-            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
-                <h2 class="mb-2">
-                    <a class="block" href="/blog/2018/12/wordpress-5-0/">וורדפרס 5.0</a>
-                </h2><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="2018-12-08T14:09:55+02:00">
-                    8 בדצמבר 2018
-                </span>
-
-                <a class="tag" href="/tag/וורדפרס/">וורדפרס</a><a class="tag" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a>
-                <div class="clear-both"></div>
-
-                <div class="content post">
-                    <p>גרסה חדשה של וורדפרס יצאה השבוע, והבלוג קיבל את השדרוג המתחייב. על הדרך, עברתי לתבנית 2019 החדשה (הקודמת הייתה 2016).</p>
-<p><img src="/img/2017/06/blog.jpg" alt="">
-בקרוב פוסט עם תוכן אמיתי ותמונה לא ממוחזרת.</p>
-
-                </div>
-            </div>
-        
-    
 </div>
 
   <div>
@@ -249,7 +264,7 @@
 
             
                 <div class="mx-auto">
-                    <a class="last-page" href="/page/11/">לדף האחרון</a>
+                    <a class="last-page" href="/page/12/">לדף האחרון</a>
                 </div>
             
         </div>
@@ -258,7 +273,7 @@
     <p class="text-center text-sm italic mb-10">(דף
         2
         מתוך
-        11)</p>
+        12)</p>
 </div>
 
 
