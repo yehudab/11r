@@ -100,6 +100,19 @@ disableNewComments: true
         "type": "geoshape",
         "href": "/maps/trail-3/#map"
       }
+    },
+    {
+      "data": {
+        "url": "public/topojson/trail-04.topojson",
+        "format": {
+          "type": "topojson",
+          "feature": "trail-04"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "href": "/maps/trail-4/#map"
+      }
     }
   ]
 }
