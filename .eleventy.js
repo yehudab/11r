@@ -3,6 +3,7 @@ const siteSettings = require('./src/globals/site.json');
 const pluginSyntaxhighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const charts = require('eleventy-charts');
+const mdImg = require('./extensions/md-img.js')
 
 module.exports = (config) => {
   config.addPlugin(charts);
@@ -23,6 +24,13 @@ module.exports = (config) => {
   config.addFilter('commentsCount', require('./filters/comments-count.js'));
   config.addFilter('getTags', require('./filters/get-tags.js'));
   config.addFilter('isCommentable', require('./filters/is-commentable.js'));
+
+  // 11ty Image plug-in
+  config.addExtension('md', {
+    read: true,
+    compile: mdImg.compile
+  });
+  config.addNunjucksShortcode("image", mdImg.imageShortcodeSync);
 
   config.addPassthroughCopy({
     "public": './',
