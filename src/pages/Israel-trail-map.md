@@ -113,6 +113,19 @@ disableNewComments: true
         "type": "geoshape",
         "href": "/maps/trail-4/#map"
       }
+    },
+    {
+      "data": {
+        "url": "public/topojson/trail-06.topojson",
+        "format": {
+          "type": "topojson",
+          "feature": "trail-06"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "href": "/maps/trail-6/#map"
+      }
     }
   ]
 }
@@ -124,6 +137,9 @@ disableNewComments: true
 1. [ארץ ירדן וחרמונים](/blog/2022/09/Israel-trail-1)
 2. [אין דבר](/blog/2022/10/Israel-trail-2)
 2. [בקעה, לא עמק](/blog/2022/11/Israel-trail-3)
+2. [שלום רב שובך](/blog/2022/12/Israel-trail-4)
+2. קטע חסר
+2. [יב״א בה בה בה בה בה בה בם](/blog/2023/02/Israel-trail-6)
 
 ---
 
