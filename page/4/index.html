@@ -67,6 +67,35 @@
         
             <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
                 <h2 class="mb-2">
+                    <a class="block" href="/blog/2017/07/http2/">HTTP/2</a>
+                </h2><a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
+                        href="/blog/2017/07/http2/#comments"
+                        title="תגובה אחת">
+                        💬 1
+                    </a><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="2017-07-07T17:18:52+03:00">
+                    7 ביולי 2017
+                </span>
+
+                <a class="tag" href="/tag/וורדפרס/">וורדפרס</a><a class="tag" href="/tag/לינוקס/">לינוקס</a><a class="tag" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a>
+                <div class="clear-both"></div>
+
+                <div class="content post">
+                    <p>עוד שדרוג קטן לבלוג.<br>
+הפעם העברתי את השרת מ apache ל nginx, ועל הדרך הפעלתי HTTP/2.<br>
+זה אמור לשפר את הביצועים, למרות שאני לא ממש מרגיש בזה בנתיים.</p>
+<p><img src="/img/2017/07/nginx-logs.jpg" alt="Hex dump of nginx logs"></p>
+<p>למעוניינים, <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-with-http-2-support-on-ubuntu-16-04">המדריך הזה</a> מסביר על התקנת nginx, והגדרות HTTP/2. <a href="http://nginxlibrary.com/wordpress-permalinks/">כאן</a> תמצאו הסבר על ההגדרות הדרושות ב nginx לטובת הפעלת WordPress במקום mod_rewrite של apache.</p>
+<p>התוצאה הסופית של כל ההגדרות האלה, כפי שנשמרה בקובץ ‎/etc/nginx/sites-available/default היא זו:</p>
+<pre class="language-nginx"><code class="language-nginx"><span class="token directive"><span class="token keyword">server</span></span> <span class="token punctuation">{</span><br><br>        <span class="token directive"><span class="token keyword">listen</span> <span class="token number">443</span> ssl http2 default_server</span><span class="token punctuation">;</span><br>        <span class="token directive"><span class="token keyword">listen</span> [::]:443 ssl http2 default_server</span><span class="token punctuation">;</span><br>        <span class="token directive"><span class="token keyword">include</span> snippets/gzip.conf</span><span class="token punctuation">;</span><br><br>        <span class="token directive"><span class="token keyword">ssl_certificate</span> /etc/nginx/ssl/live/yehudab.com/fullchain.pem</span><span class="token punctuation">;</span><br>        <span class="token directive"><span class="token keyword">ssl_certificate_key</span> /etc/nginx/ssl/live/yehudab.com/privkey.pem</span><span class="token punctuation">;</span><br>        <span class="token directive"><span class="token keyword">ssl_dhparam</span> /etc/nginx/ssl/live/yehudab.com/dhparam.pem</span><span class="token punctuation">;</span><br><br>        <span class="token directive"><span class="token keyword">root</span> /var/www/yehudab.com</span><span class="token punctuation">;</span><br><br>        <span class="token directive"><span class="token keyword">index</span> index.html index.htm index.php index.nginx-debian.html</span><span class="token punctuation">;</span><br><br>        <span class="token directive"><span class="token keyword">server_name</span> yehudab.com</span><span class="token punctuation">;</span><br><br>        <span class="token directive"><span class="token keyword">location</span> /</span> <span class="token punctuation">{</span><br>                <span class="token directive"><span class="token keyword">try_files</span> <span class="token variable">$uri</span> <span class="token variable">$uri</span>/ =404</span><span class="token punctuation">;</span><br>        <span class="token punctuation">}</span><br><br>        <span class="token directive"><span class="token keyword">location</span> /blog/</span> <span class="token punctuation">{</span><br>                <span class="token directive"><span class="token keyword">try_files</span> <span class="token variable">$uri</span> <span class="token variable">$uri</span>/ /blog/index.php?<span class="token variable">$args</span></span><span class="token punctuation">;</span><br>        <span class="token punctuation">}</span><br>        <span class="token directive"><span class="token keyword">location</span> ~ \.php$</span> <span class="token punctuation">{</span><br>                <span class="token directive"><span class="token keyword">include</span> snippets/fastcgi-php.conf</span><span class="token punctuation">;</span><br>                <span class="token directive"><span class="token keyword">fastcgi_pass</span> unix:/run/php/php7.0-fpm.sock</span><span class="token punctuation">;</span><br>        <span class="token punctuation">}</span><br><br>        <span class="token directive"><span class="token keyword">location</span> ~ /\.ht</span> <span class="token punctuation">{</span><br>                <span class="token directive"><span class="token keyword">deny</span> all</span><span class="token punctuation">;</span><br>        <span class="token punctuation">}</span><br>        <span class="token directive"><span class="token keyword">include</span> snippets/expires.conf</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><br><span class="token directive"><span class="token keyword">server</span></span> <span class="token punctuation">{</span><br>       <span class="token directive"><span class="token keyword">listen</span>         <span class="token number">80</span></span><span class="token punctuation">;</span><br>       <span class="token directive"><span class="token keyword">listen</span>    [::]:80</span><span class="token punctuation">;</span><br>       <span class="token directive"><span class="token keyword">server_name</span>    yehudab.com</span><span class="token punctuation">;</span><br>       <span class="token directive"><span class="token keyword">return</span>         <span class="token number">301</span> https://<span class="token variable">$server_name</span><span class="token variable">$request_uri</span></span><span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+<p>לאחר סיום ההגדרות, ניתן לוודא את תמיכת האתר ל HTTP/2 באמצעות <a href="https://tools.keycdn.com/http2-test">דף הבדיקה של KeyCDN</a>.</p>
+
+                </div>
+            </div>
+        
+    
+        
+            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
+                <h2 class="mb-2">
                     <a class="block" href="/blog/2017/07/just-a-second/">רק שניה</a>
                 </h2><a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
                         href="/blog/2017/07/just-a-second/#comments"
@@ -234,149 +263,6 @@
 <p><img src="/img/2015/02/contextMenu.png" alt="איך לפתוח את הקובץ"></p>
 <p>לאחר מכן, יש ללחוץ על הווידג׳ט המוצג, ולרענן אותו ע״י שילוב המקשים ⌘+R.</p>
 <p>הווידג׳ט זמין למחשבי מק בלבד.</p>
-
-                </div>
-            </div>
-        
-    
-        
-            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
-                <h2 class="mb-2">
-                    <a class="block" href="/blog/2014/08/scratch-getting-started-guide/">מדריך למתחילים בסקראץ׳</a>
-                </h2><a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
-                        href="/blog/2014/08/scratch-getting-started-guide/#comments"
-                        title="5 תגובות">
-                        💬 5
-                    </a><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="2014-08-16T18:02:22+03:00">
-                    16 באוגוסט 2014
-                </span>
-
-                <a class="tag" href="/tag/סקראץ׳/">סקראץ׳</a><a class="tag" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a>
-                <div class="clear-both"></div>
-
-                <div class="content post">
-                    <p>[פוסט זה הוא תרגום של מדריך המשתמש הרשמי של Scratch. תוכלו להוריד את המדריך באנגלית מ<a href="http://scratch.mit.edu/help/">דף העזרה באתר</a>. הזכויות למקור שמורות ל Lifelong Kindergarten Group, MIT Media Lab. מופץ ברשיון CC-BY-SA 2.0]</p>
-<p><img src="/img/2014/08/Scratch_cat_med.png" alt="Scartch Cat"></p>
-<p><strong>סקראץ׳</strong> (Scratch) היא שפת תיכנות שמאפשרת ליצור סיפורים אינטראקטיביים, אנימציות, משחקים, מוזיקה ואומנות.</p>
-<p><img src="/img/2014/08/getting-started-0-a.png" alt="מסך לדוגמה מסקראץ׳"></p>
-<p>המדריך הזה יאפשר לכם ליצור פרויקט ב<strong>סקראץ׳</strong>.</p>
-<p>ליצירת פרויקט חדש, גשו לאתר: <a href="http://scratch.mit.edu">http://scratch.mit.edu</a>. אם האתר נפתח באנגלית, ניתן לשנות את שפת הממשק מהתפריט בתחתית הדף. לאחר מכן, לחצו על הכפתור צור.<br>
-<img src="/img/2014/08/getting-started-0-b.png" alt="צור"></p>
-<p>אם יש לכם כבר חשבון ב<strong>סקראץ׳</strong>, הכנסו למערכת כדי שהפריוקט שלכם ישמר.<br>
-<img src="/img/2014/08/getting-started-0-c.png" alt="כניסה"></p>
-<h2>1 – התחילו לזוז</h2>
-<p><img src="/img/2014/08/getting-started-1.png" alt="לבנת זוז"></p>
-<p>גררו לבנת <strong>זוז</strong> לאזור התסריטים.</p>
-<p><img src="/img/2014/08/getting-started-2.png" alt="לחצו על הלבנה"></p>
-<p>לחצו על הלבנה כדי לגרום לחתול לזוז.</p>
-<h2>2 – הוסיפו צלילים</h2>
-<p><img src="/img/2014/08/getting-started-3.png" alt="לבנת נגן בתוף"></p>
-<p>גררו לבנת <strong>נגן בתוף</strong> וחברו אותה ללבנת ה<strong>זוז</strong>.</p>
-<p><img src="/img/2014/08/getting-started-4.png" alt="לחצו והקשיבו"></p>
-<p>לחצו והקשיבו.<br>
-<em>אם לא הצלחתם לשמוע, בדקו שהרמקול במחשב שלכם מופעל.</em></p>
-<p><img src="/img/2014/08/getting-started-5.png" alt="החלפת צלילים"></p>
-<p>תוכלו לבחור סוג אחר של תופים מהתפריט.</p>
-<h2>3 – התחילו ריקוד</h2>
-<p><img src="/img/2014/08/getting-started-6.png" alt="הוספת לבנת זוז חדשה"></p>
-<p>הוסיפו לבנת <strong>זוז</strong> חדשה. לחצו בתוך הלבנה והוסיפו סימן מינוס.</p>
-<p><img src="/img/2014/08/getting-started-7.png" alt="לחצו להפעלה"></p>
-<p>לחצו על כל אחת מהלבנים כדי להריץ את כל הערמה.</p>
-<p><img src="/img/2014/08/getting-started-8.png" alt="לבנת נגן בתוף נוספת"></p>
-<p>הוסיפו לבנת <strong>נגן בתוף</strong> חדשה, והחליפו את סוג התוף מהתפריט. לחצו להרצה.</p>
-<h2>4 – שוב ושוב</h2>
-<p><img src="/img/2014/08/getting-started-9.png" alt="לבנת חזור"></p>
-<p>גררו לבנת <strong>חזור</strong> והצמידו אותה לראש הערמה. הפה של לבנת ה<strong>חזור</strong> צריך לעטוף את שאר הלבנים.</p>
-<p><em>כדי לגרור את הערמה, יש לתפוס אותה מהלבנה העליונה.</em></p>
-<p><img src="/img/2014/08/getting-started-10.png" alt="שינוי מספר החזרות"></p>
-<p>תוכלו לשנות את מספר החזרות שיבוצעו.</p>
-<p>לחצו כדי להריץ.<br>
-<em>אפשר ללחוץ על כל אחת מהלבנים להרצת הערמה כולה.</em></p>
-<h2>5 – אמרו משהו</h2>
-<p><img src="/img/2014/08/getting-started-11.png" alt="לבנת אמור"></p>
-<p>לחצו על קטגוריית ה<strong>מראה</strong> וגגרו החוצה לבנת <strong>אמור</strong>.</p>
-<p><img src="/img/2014/08/getting-started-12.png" alt="שינוי טקסט"></p>
-<p>לחצו בתוך לבנת ה<strong>אמור</strong> והקלידו כדי לשנות את המילים. לחצו כדי לנסות.</p>
-<p><img src="/img/2014/08/getting-started-13.png" alt="חברו לראש הערמה"></p>
-<p>אחר-כך, חברו את לבנת ה<strong>אמור</strong> להתחלה.</p>
-<h2>6 – דגל ירוק</h2>
-<p><img src="/img/2014/08/getting-started-14.png" alt="כאשר לוחצים על הדגל הירוק"></p>
-<p>גררו לבנת <img src="/img/2014/08/15.png" alt="כאשר לוחצים על הדגל הירוק"> וחברו אותה להתחלה.</p>
-<p><img src="/img/2014/08/16.png" alt="הפעלת הדגל הירוק"></p>
-<p>בכל פעם שלוחצים על הדגל הירוק, התסריט מתחיל לפעול.<br>
-להפסקה, לחצו על כפתור העצור.</p>
-<h2>7 – שנו צבע</h2>
-<p>עכשיו, נסו משהו שונה…</p>
-<p><img src="/img/2014/08/17.png" alt="לבנת שנה אפקט"></p>
-<p>גררו לבנת <strong>שנה אפקט</strong>.</p>
-<p><img src="/img/2014/08/18.png" alt="לחצו על לבנת שנה אפקט"><br>
-לחצו כדי לראות מה קורה.</p>
-<h2>8 – לחיצה על מקשים</h2>
-<p><img src="/img/2014/08/19.png" alt="לבנת כאשר נלחץ מקש"></p>
-<p>חברו לבנת <img src="/img/2014/08/20.png" alt="כאשר נלחץ מקש"></p>
-<p>עכשיו, לחצו על מקש הרווח במקלדת שלכם.</p>
-<p><img src="/img/2014/08/21.png" alt="בחירת מקש"></p>
-<p>תוכלו לבחור מקש שונה מהתפריט</p>
-<h2>9 – הוסיפו רקע</h2>
-<p>תוכלו להוסיף רקע לבמה.</p>
-<p><img src="/img/2014/08/22b.png" alt="בחירת רקע"></p>
-<p>לחצו <img src="/img/2014/08/22a.png" alt="כפתור רקע"> כדי לבחור רקע חדש.</p>
-<p>בחרו רקע מהספריה (למשל &quot;spotlight-stage&quot;).</p>
-<p><img src="/img/2014/08/23.png" alt="ספרית הרקעים"></p>
-<p>לחצו <strong>אישור</strong>.</p>
-<p>הרקע החדש מופיע כעת על הבמה.</p>
-<p><img src="/img/2014/08/24.png" alt="הרקע החדש"></p>
-<h2>10 – הוסיפו דמות</h2>
-<p>כל אוביקט (משתתף) ב<strong>סקראץ׳</strong> נקרא <strong>דמות</strong>.<br>
-להוספת דמות חדשה, לחצו על אחד הכפתורים האלה:</p>
-<p><img src="/img/2014/08/25.png" alt="כפתורי הוספת דמות"></p>
-<p><strong>כפתורי הוספת דמות:</strong></p>
-<p><img src="/img/2014/08/26.png" alt="דמות מהספריה"> בחרו דמות מהספריה</p>
-<p><img src="/img/2014/08/27.png" alt="צייר דמות"> ציירו דמות משלכם</p>
-<p><img src="/img/2014/08/28.png" alt="דמות מקובץ"> העלו דמות/תמונה מקובץ</p>
-<p><img src="/img/2014/08/29.png" alt="דמות ממצלמת רשת"> צלמו תמונה (ממצלמת רשת)</p>
-<p>כדי להוסיף את הדמות הזאת:<br>
-<img src="/img/2014/08/30.png" alt="קייסי רוקדת"><br>
-לחצו על <img src="/img/2014/08/26.png" alt="דמות מהספריה"> ואז לחצו על קטגורית <strong>אנשים</strong> ובחרו את הדמות &quot;cassy dance&quot; (קייסי רוקדת).</p>
-<p>תוכלו לגרור את הדמויות ולמקם אותן על הבמה.<br>
-<img src="/img/2014/08/31.png" alt="גררו את הדמות"></p>
-<h2>11 – חקרו!</h2>
-<p>עכשיו תוכלו להגיד לדמות מה לעשות. נסו את האפשרויות הבאות או חקרו בעצמכם.</p>
-<p><strong>הוסיפו צליל:</strong><br>
-<img src="/img/2014/08/34.png" alt="צלילים"></p>
-<p>לחצו על לשונית הצלילים. תוכלו לבחור צליל <img src="/img/2014/08/28.png" alt="בחר צליל">. (בפורמט AIF, MP3 או WAV)</p>
-<p><img src="/img/2014/08/35.png" alt="הוספת צליל לתסריט"><br>
-עכשיו לחצו על לשונית התסריטים וגררו לבנת <strong>נגן צליל</strong> לתסריט. בחרו את הצליל מהתפריט.</p>
-<p><strong>שנו תלבושות:</strong><br>
-<img src="/img/2014/08/36.png" alt="תלבושות"></p>
-<p>לכל דמות יכולות להיות מספר תלבושות.<br>
-לשינוי התלבושת הנוכחית, לחצו על לשונית ה<strong>תלבושת</strong>.<br>
-אחר-כך לחצו על תלבושת שונה לדמות.</p>
-<p><strong>צרו אנימציה:</strong><br>
-<img src="/img/2014/08/37.png" alt="אנימציה"></p>
-<p>תוכלו ליצור אנימציה ע&quot;י החלפת תלבושות.<br>
-לחצו על לשונית התסריטים.<br>
-צרו תסריט שמחליף בין התלבושות.</p>
-<h2>12 – טיפים!</h2>
-<p><img src="/img/2014/08/38.png" alt="שם לפרויקט"><br>
-תנו שם לפרויקט שלכם.</p>
-<p>לרעיונות נוספים, לחצו על טיפים:<br>
-<img src="/img/2014/08/39.png" alt="טיפים"></p>
-<p><img src="/img/2014/08/tips.png" alt="חלון טיפים"></p>
-<p>חלון הטיפים מראה דוגמאות תסריטים שבהם תוכלו להשתמש בפרויקט.</p>
-<p>הוא גם מסביר מה כל אחת מהלבנים של <strong>סקראץ׳</strong> עושה.</p>
-<h2>שמור ושתף</h2>
-<p>כדי לשמור את הפרויקט ברשת, הקפידו להתחבר לאתר. <img src="/img/2014/08/43.png" alt="התחבר"></p>
-<p>(אם תרצו לשמור את הפרויקט במחשב שלכם, לחצו על תפריט <strong>קובץ</strong> ובחרו באפשרות: ״הורד למחשב שלך״.)</p>
-<p>כאשר אתם מוכנים, לחצו על <img src="/img/2014/08/42.png" alt="ראה דף פרויקט"></p>
-<p><strong>דף פרויקט</strong><br>
-<img src="/img/2014/08/40.png" alt="דף פרויקט"></p>
-<p>לחצו <img src="/img/2014/08/44.png" alt="מסך מלא"> לקבלת מסך מלא.</p>
-<p>לחצו <img src="/img/2014/08/41.png" alt="שיתוף"> כדי שאחרים יוכלו לצפות ולשחק בפרויקט שלכם. כאשר אתם משתפים, אחרים יכולים לבקר ולשחק בפרויקט שלכם.</p>
-<p>הוסיפו הערות לפרויקט.</p>
-<p>מה עכשיו? תוכלו ל<img src="/img/2014/08/46.png" alt="צור"> לקבלת רעיונות.</p>
-<p>כדי ללמוד עוד, לחצו <img src="/img/2014/08/47.png" alt="עזרה"> או גלשו אל <a href="http://scratch.mit.edu/help">http://scratch.mit.edu/help</a> (אנגלית).</p>
-<p>למי שרוצה להעמיק עוד יותר, מומלץ לקרוא את הספר בעברית: <strong>עקרונות ומושגים במדעי המחשב דרך Scratch</strong>, מאת מיכל ארמוני ומוטי בן-ארי. ניתן <a href="http://stwww.weizmann.ac.il/g-cs/scratch/learning_book.html">להוריד את הספר בחינם</a>. שימו לב: הספר נכתב לגרסה 1.4 של <strong>סקראץ׳</strong>. ניתן להוריד מאותו קישור דף הסבר על השינויים בגרסה 2.</p>
 
                 </div>
             </div>
