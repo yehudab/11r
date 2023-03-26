@@ -67,6 +67,33 @@
         
             <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
                 <h2 class="mb-2">
+                    <a class="block" href="/blog/2020/03/php-7-4/">php 7.4</a>
+                </h2><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="2020-03-01T22:07:57+02:00">
+                    1 במרץ 2020
+                </span>
+
+                <a class="tag" href="/tag/nano/">nano</a><a class="tag" href="/tag/php/">php</a><a class="tag" href="/tag/vi/">vi</a><a class="tag" href="/tag/וורדפרס/">וורדפרס</a><a class="tag" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a><a class="tag" href="/tag/לינוקס/">לינוקס</a>
+                <div class="clear-both"></div>
+
+                <div class="content post">
+                    <p>חלפה למעלה משנה מאז ש<a href="https://www.php.net/eol.php">התמיכה ב-7.0 php הופסקה</a>, וזה הזמן לשדרג את הבלוג לגרסה 7.4. כרגיל, צריך לקרוא את כל ה breaking changes, אבל אם הבלוג והתוספים מתוחזקים לגרסה העדכנית ביותר, אפשר לסמוך בדרך כלל שהכל יעובד. גיבוי של הקוד והדאטה רצוי גם כן.</p>
+<p>את הגיבויים אני מבצע לאחרונה בעזרת <a href="https://restic.net/">restic</a>, כאשר הקבצים מועלים לאכסון (הזול יחסית) של <a href="https://www.backblaze.com/b2/cloud-storage.html">Backblaze B2</a>.</p>
+<p>אחרי שמכניסים את הגדרות ל restic למשתני סביבה, סקריפט הגיבוי פשוט למדי:</p>
+<pre class="language-bash"><code class="language-bash"><span class="token shebang important">#!/bin/bash</span><br><span class="token assign-left variable">d</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">date</span> +%Y-%m-%d<span class="token variable">)</span></span><br>mysqldump <span class="token parameter variable">-u</span> *** <span class="token parameter variable">-p</span> *** <span class="token operator">></span> ~/backup/sql/yehudab-<span class="token variable">${d}</span>.sql<br><span class="token function">gzip</span> ~/backup/sql/*.sql<br><span class="token function">tar</span> <span class="token parameter variable">-czf</span> ~/backup/site/yehudab.com-<span class="token variable">${d}</span>.tar.gz yehudab.com<br>restic backup ~/backup</code></pre>
+<p>לצורך השדרוג, עקבתי אחרי <a href="https://www.cloudbooklet.com/upgrade-php-version-to-php-7-4-on-ubuntu/">המדריך ב CloudBooklet</a>. מכוון שאני מריץ php דרך ngnix, ביצעתי את הסעיפים הרלוונטים לגרסת fpm.</p>
+<p>אה, וכמובן, להשתמש ב vi, כי nano זה לחלשים.</p>
+<p>אחרי השדרוג, אני מנסה לשמור את הפוסט הזה ובום error 500. בדיקה מהירה בלוג של nginx על השרת מגלה ששכחתי להתקין את php7.4-memcache שהמדריך הנ&quot;ל לא מחשיב כ common extension. הרצת:</p>
+<pre class="language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> php7.4-memcache</code></pre>
+<p>וריסטרט לשרת פתרו את הבעיה.<br>
+<img src="/img/2020/03/upgrade.png" alt="שדרוג"></p>
+
+                </div>
+            </div>
+        
+    
+        
+            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
+                <h2 class="mb-2">
                     <a class="block" href="/blog/2019/12/2020/">2020</a>
                 </h2><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="Tue Dec 31 2019 21:33:55 GMT+0000 (Coordinated Universal Time)">
                     31 בדצמבר 2019
@@ -170,32 +197,6 @@
 <pre class="to-be-replaced-by-time-ticker text-2xl">
 </pre>
 </figure>
-
-                </div>
-            </div>
-        
-    
-        
-            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
-                <h2 class="mb-2">
-                    <a class="block" href="/blog/2017/07/hotter-than-july/">חם יותר מיולי</a>
-                </h2><a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
-                        href="/blog/2017/07/hotter-than-july/#comments"
-                        title="5 תגובות">
-                        💬 5
-                    </a><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="2017-07-07T20:19:11+03:00">
-                    7 ביולי 2017
-                </span>
-
-                <a class="tag" href="/tag/אישי/">אישי</a><a class="tag" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a>
-                <div class="clear-both"></div>
-
-                <div class="content post">
-                    <p>טלפון ציבורי, רדיו טרנזיסטור, מסוף VT 100, ותקליט של סטיבי וונדר הם החומרים שמרכיבים את הפעם הראשונה שהרווחתי משהו מלדעת לתכנת.</p>
-<p><img src="/img/2017/07/hotter-then-july.jpg" alt="Hotter then July album cover   "></p>
-<p>זה היה בתחילת שנות השמונים של המאה שעברה. אני ועוד תלמיד <a href="https://www.leyada.net">מהתיכון שלמדתי בו</a> נהגנו לבלות בחדר המחשבים של בניין רוס באוניברסיטה העברית. באותה תקופה שודרה ברדיו תוכנית חידונים שנקראה ״עד 120״. הרעיון היה פשוט: הקריין שואל 10 שאלות, שהתשובה לכל אחת מהן היא מספר. המאזינים צריכים להתקשר לתחנה והראשון שעונה את התשובה הנכונה מקבל תקליט מתנה. אחרי שהצטברו 10 מספרים, מגיע השלב שעניין אותי: צריך היה לקחת את עשרת המספרים ובאמצעות 4 פעולות חשבון בינהם להגיע למספר 120. הראשון שהתקשר לאולפן עם התרגיל הפתור קיבל 10 תקליטים. בדרך כלל, היה די קשה להגיע בדיוק למספר, ולכן ניתן היה לעגל תוצאות של חילוק. על תשובה מעוגלת חילקו פרס קטן יותר (2-4 תקליטים, תלוי במספר הפותרים).</p>
-<p>אחרי מספר נסיונות לפתור את החלק המתמטי בעזרת נייר ועפרון, החלטנו לנצל את מחשבי האוניברסיטה לטובת הפרס הנחשק. תכנית מחשב שתעבור על כל האפשרויות הייתה מחוץ לתחום במשאבים שהיו זמינים לנו אז (נדמה לי שזה היה מחשב <a href="https://en.wikipedia.org/wiki/VAX-11#VAX-11.2F780">VAX-11/780</a>, שהריץ גרסת יוניקס של ברקלי), וכנראה גם לא היום – מדובר בכטרליון תרגילים אפשריים – אבל בעזרת יוריסטיקה פשוטה יחסית הצלחנו לכתוב תוכנית שתמצא פתרון בזמן סביר. העניין היותר מורכב בשלב הזה היה החלק הלוגיסטי: להביא רדיו למעבדה, להקשיב לתוכנית, להזין את המספרים ואז לרוץ לטלפון הציבורי בקומה השניה ולהתקשר לאולפן.</p>
-<p>בסופו של דבר עליתי לשידור מספר פעמים וצברתי בסה״כ כ-10 תקליטים, בינהם התקליט <a href="https://en.wikipedia.org/wiki/Hotter_than_July">Hotter then July</a> של סטיבי וונדר.</p>
 
                 </div>
             </div>

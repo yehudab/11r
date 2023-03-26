@@ -67,6 +67,30 @@
         
             <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
                 <h2 class="mb-2">
+                    <a class="block" href="/blog/2015/02/weather-il-2-4/">לכבוד גל הקור – עדכון לווידג׳ט מזג האויר</a>
+                </h2><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="2015-02-20T12:01:19+02:00">
+                    20 בפברואר 2015
+                </span>
+
+                <a class="tag" href="/tag/ווידג&#39;טים/">ווידג&#39;טים</a>
+                <div class="clear-both"></div>
+
+                <div class="content post">
+                    <p>לפני מספר חודשים התווספה באתר <a href="http://www.israelweather.co.il/">IsraelWeather</a> תצוגה של מדד עומס הקור. רק היום התפניתי לתקן גם את הווידג׳ט והעלתי את גרסה 2.4.</p>
+<p><img src="/img/2015/02/Screen-Shot-2015-02-20-at-11.44.35.png" alt="ווידג׳ט מזג האויר"></p>
+<p>מוזמנים להוריד את הגרסה האחרונה <a href="http://yehudab.com/widgets/WeatherIL-2d4.zip">מכאן</a>.</p>
+<p>בעלי OS X 10.7.5 ומעלה: אחרי הורדת הזיפ ופתיחתו, יש ללחוץ על הקובץ שנפתח עם כפתור ימין של העכבר ולבחור Open מהתפריט. אחרת תיתקלו בהודעת שגיאה של ה Gatekeepr.</p>
+<p><img src="/img/2015/02/contextMenu.png" alt="איך לפתוח את הקובץ"></p>
+<p>לאחר מכן, יש ללחוץ על הווידג׳ט המוצג, ולרענן אותו ע״י שילוב המקשים ⌘+R.</p>
+<p>הווידג׳ט זמין למחשבי מק בלבד.</p>
+
+                </div>
+            </div>
+        
+    
+        
+            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
+                <h2 class="mb-2">
                     <a class="block" href="/blog/2014/08/scratch-getting-started-guide/">מדריך למתחילים בסקראץ׳</a>
                 </h2><a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
                         href="/blog/2014/08/scratch-getting-started-guide/#comments"
@@ -326,35 +350,6 @@
 לבדוק האם הקובץ ‎/otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js‏ קיים. אם לא, להוריד אותו <a href="https://github.com/openplans/OpenTripPlanner/blob/master/opentripplanner-webapp/src/main/webapp/js/otp/locale/Hebrew.js">מכאן</a> ולשמור בנתיב הנ&quot;ל. אחר-כך, יש לבצע מספר תיקונים בקוד:</p>
 <pre class="language-shell"><code class="language-shell">$ <span class="token function">vi</span> /otp/webapps/opentripplanner-webapp/index.html<br><span class="token comment"># line 2, add 'dir="rtl"' to html tag</span><br><span class="token comment"># line 53, duplicate this line and change file name to "js/otp/locale/Hebrew.js"</span><br>$ <span class="token function">vi</span> /otp/webapps/opentripplanner-webapp/js/otp/config.js<br><span class="token comment"># line 12, change otp.locale.English to otp.locale.Hebrew (at end of line)</span><br><span class="token comment"># line 175, change value of 'enabled' to 'true'</span><br><span class="token comment"># line 177, add this to end of string:</span><br><span class="token comment"># + '&lt;div style="margin:10px auto;width:205px">&lt;a href="http://www.opentripplanner.org/">&lt;img src="images/logo-otp.png" title="OpenTripPlanner" />&lt;/a>' +  '&lt;a style="margin:0 10px" href="http://www.hamakor.org.il/">&lt;img src="images/logo-hamakor.png" title="עמותת המקור" />&lt;/a>' + '&lt;a href="http://www.hetz.biz/">&lt;img src="images/logo-hetz.png" title="חץ ביז" />&lt;/a>&lt;/div>'</span><br>$ <span class="token function">vi</span> /otp/webapps/opentripplanner-webapp/js/otp/locale/Hebrew.js<br><span class="token comment"># line 28, change title to: "אודות האתר"</span><br><span class="token comment"># line 29, change content to:</span><br><span class="token comment"># 'אתר זה הוקם ע"י יהודה ב. על בסיס נתוני "לו"ז ומידע גאוגראפי בתחבורה הציבורית" הזמינים מאתר &lt;a href="http://data.gov.il/">data.gov.il&lt;/a> ועל בסיס תוכנת הקוד הפתוח &lt;a href="http://www.opentripplanner.org/">OpenTripPlanner&lt;/a>.' + '&lt;br>' + 'תרגום התוכנה לעברית בוצע ע"י ירון שהרבני. אירוח אתר זה בחסות &lt;a href="http://www.hamakor.org.il/">עמותת המקור&lt;/a> ובאדיבות &lt;a href="http://www.hetz.biz/">חץ ביז&lt;/a>.' + '&lt;br>' +  'תנאי שימוש: עמותת המקור עושה כמיטב יכולתה בכדי לספק שירות זה על בסיס נתונים מדוייקים ועדכניים אולם ייתכנו טעויות. המידע ניתן כפי שהוא ללא אחריות. ראו גם &lt;a href="http://data.gov.il/dataset/383">תנאי שימוש של משרד התחבורה&lt;/a>.'</span></code></pre>
 <p>עכשיו לרפרש את הדפדפן ולהנות מההמשק העברי. יתכן שתתקבל הודעה על כשלון בחישוב המסלול. במקרה זה, יש לבחור תאריך חדש לחישוב בתחום המכוסה על-ידי הקובץ (יום הורדת הקובץ ועד שבועיים קדימה)</p>
-
-                </div>
-            </div>
-        
-    
-        
-            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
-                <h2 class="mb-2">
-                    <a class="block" href="/blog/2011/12/mako-vod-same-same-but-different/">מאקו VOD – קצת אחרת</a>
-                </h2><a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
-                        href="/blog/2011/12/mako-vod-same-same-but-different/#comments"
-                        title="2 תגובות">
-                        💬 2
-                    </a><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="2011-12-30T11:34:03+02:00">
-                    30 בדצמבר 2011
-                </span>
-
-                <a class="tag" href="/tag/נגנים/">נגנים</a>
-                <div class="clear-both"></div>
-
-                <div class="content post">
-                    <p>אחרי פניות רבות בעניין מאקו VOD, חזרתי לבדוק את המצב שם ולראות איך ניתן לצפות בשידורים על מק ולינוקס ללא שימוש בסקריפטים. מסתבר שמאקו עברו בחלק מן הסדרות לנגן פלאש, שבסך הכל פועל לא רע. לסדרות אחרות (כמו רמזור), נדרשים עדיין מעקפים לצפיה במק. הפתעה לטובה היתה לי דווקא בלינוקס (נבדק על אובונטו 11.10), אבל נתחיל קודם במק:<br>
-נכון לעכשיו, ניסיון של custup (ספקית הווידאו ברשת של מאקו) לתמוך במק יחד עם ישום לא מוצלח של flip4mac גורמים לבעיה. כדי להתגבר עליה, יש להתקין את הנגן <a href="http://www.videolan.org/vlc/download-macosx.html">VLC</a>, ולגרום לאתר לחשוב שאנחנו רצים דווקא על חלונות. אני אדגים את השיטה על סאפרי, אבל ניתן ליישם באופן דומה על פיירפוקס עם התוסף User Agent Switcher.</p>
-<p>בספארי, צריך לבחור בתפריט הראשי Prefrences ושם בטאב ה Advanced, לבחור את האפשרות: Show Develop menu in menu bar. נסגור את החלון ונאתחל את ספארי.</p>
-<p>יופיע תפריט חדש: Develop ושם נבחר בתת-התפריט User Agent את האפשרות Safari 5.1 – Windows. בעקרון אפשר לבחור כל כניסה אחרת המכילה את המילה Windows, אבל זו נראית לי הכי בטוחה (וגם תעזור לשמור על הסטטיסטיקות של ספארי, במקרה שמישהו במאקו בודק אותן).</p>
-<p>שימו לב שהבחירה משפיעה רק על הטאב הנוכחי. עכשיו ניגש לדף התוכנית במאקו. נקבל את החלון הבא, ובו יש ללחוץ על הכתפור Click to Play:</p>
-<p>יפתח טאב חדש ובו הווידאו ינסה לנגן. רוב הסיכויים שהוא יכשל, וכאן יש להעתיק את ה URL מראש הדף ולהדביק ב VLC.</p>
-<p>ב VLC, נבחר את האפשרות File-&gt;Open Network ונדביק את ה URL.</p>
-<p>צפיה מהנה</p>
 
                 </div>
             </div>

@@ -67,6 +67,48 @@
         
             <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
                 <h2 class="mb-2">
+                    <a class="block" href="/blog/2022/04/geotag-dslr-photos/">תיוג מיקום במצלמת DSLR</a>
+                </h2><a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
+                        href="/blog/2022/04/geotag-dslr-photos/#comments"
+                        title="2 תגובות">
+                        💬 2
+                    </a><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="Sat Apr 23 2022 08:37:27 GMT+0000 (Coordinated Universal Time)">
+                    23 באפריל 2022
+                </span>
+
+                <a class="tag" href="/tag/Geotagging/">Geotagging</a><a class="tag" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a>
+                <div class="clear-both"></div>
+
+                <div class="content post">
+                    <p>אחרי שנים רבות של צילום במצלמת הטלפון בלבד, החלטתי לחזור למקורות ולקנות מצלמה דיגיטלית ״אמיתית״. בחרתי <a href="https://www.dpreview.com/products/canon/slrs/canon_eos2000d" title="Canon EOS 2000D">בדגם כניסה של Canon</a>, וצימדתי לו <a href="https://www.dpreview.com/products/canon/lenses/canon_50_1p8_stm" title="Canon EF 50mm F1.8 STM">עדשת פריים טובה</a>, ועוד כמה עדשות זום סבירות.</p>
+<p>את הבסיס לשימוש במצלמה למדתי דרך כמה <a href="https://www.youtube.com/user/JaredPolin" title="Jared Polin">ערוצים</a> <a href="https://www.youtube.com/channel/UC9lyUdwosxq_OxC1uggjUPA" title="Photo Genius">פופלריים</a> ב youtube והשאר מניסיון. מה שבעיקר היה חסר לי בצילום במצלמה הזאת (וכנראה נכון למספר גדול מאוד של דגמים, כולל יקרים הרבה יותר) הוא חוסר היכולת לתייג בקלות את מיקום התמונות. זה פחות מפריע אם מצלמים בארוע במקום ידוע, ויותר בעייתי כאשר מצלמים בטיולים.</p>
+<p>לחלק מהדגמים אפשר <a href="https://www.bhphotovideo.com/c/product/847538-REG/Canon_6363B001_GPS_Receiver_GP_E2.html" title="Canon GPS Receiver GP-E2">לצמד GPS חיצוני</a>. דגמים אחרים מאפשרים לתייג תוך כדי צילום ע״י אפליקציה שרצה במקביל על הטלפון, אבל זה מחייב הפעלת Wi-Fi על שני המכשירים וגוזלת אחוזי סוללה נכבדים תוך כדי שימוש. בכל מקרה, למצלמה שלי לא ניתן לחבר את המכשיר החיצוני, וגם דרך האפליקציה הרשמית של קנון לא הצלחתי לתייג תוך כדי תנועה. יותר מזה, כאשר הטלפון מחובר ל Wi-Fi של המצלמה, אין אפשרות להתחבר במקביל לאינטרנט.</p>
+<p>כדי לפתור את הבעיה, פיתחתי תהליך עבודה פשוט (יחסית...). התהליך כולל שלושה שלבים:</p>
+<ol>
+<li>
+<p>הקלטת מסלול ההליכה. את זה אני בדרך-כלל עושה ממילא כדי לדעת נתונים כמו מרחק וקצב ההליכה, כמות עליות וירידות, ולפעמים כדי למצוא את הרכב בסוף המסלול. אני משתמש באפליקציה החינמית <a href="https://www.gaiagps.com">Gaia GPS</a>, אבל כל אפליקציה שיודעת ליצא קבצי GPX של המסלול תעשה את העבודה. במקרה של האפליקציה הזאת, ההקלטה גם נשמרת בענן, ואפשר בקלות להוריד אותה למחשב דרך האתר שלהם:</p>
+<p><img src="/img/2022/04/gaia-gps-export-to-gpx.png" alt=""></p>
+</li>
+<li>
+<p>סינכרון הזמנים בין שעון המצלמה לשעון הטלפון. לכל צורך מעשי, מספיק לעדכן פעם בשבוע-שבועיים את שעון המצלמה. מצד שני, לכל צורך מעשי כנראה מספיק לצלם בטלפון, אז לא בשביל זה באנו לכאן... מה שאני עושה הוא לצלם במצלמת ה DSLR קוד QR שמוצג על הטלפון ומתחלף כל שניה ומכיל את התאריך והשעה המדוייקים. הצילום מכיל כמטא-דתה את השעה בשעון המצלמה, וה QR מקודד את השעה המדוייקת וכך ניתן לדעת מה ההפרש. הייתי בטוח שיש המון אפליקציות שמציגות את השעה ב-QR-ית, אבל לא מצאתי. מה שכן מצאתי הוא <a href="https://github.com/kaelhem/qr-clock" title="QR clock by kaelhem">אפליקציית ווב בקוד פתוח</a>, אבל היא הציגה את התאריך בפורמט לא נח לפרסור, אז <a href="https://github.com/yehudab/qr-clock" title="QR clock GitHub repo">מיזלגתי אותה</a> והעלתי עותק פרטי <a href="https://apps.yehudab.com/qr-clock/" title="QR Clock">לאתר שלי</a>. ככה נראה צילום כזה:</p>
+<p><img src="/img/2022/04/qr-clock.jpg" alt=""></p>
+</li>
+<li>
+<p>הורדת קבצי ההליכה והתמונות (כולל תמונת ה QR) למחשב והפעלת סקריפט שמתייג את המיקום תוך כדי ההתחשבות בהפרש הזמנים. לשם כך אני משתמש בשתי תוכנות בקוד פתוח: <a href="https://github.com/mchehab/zbar" title="zbar GitHub repo">zbar</a> שיודעת לחלץ את השעה מקוד ה QR, ו-<a href="https://exiftool.org">ExifTool</a> שיודעת לחלץ את שעת הצילום מתמונת שעון ה-QR  ולתייג מיקום ע״פ קובץ GPX והפרש זמנים. את הסקריפט עצמו (גרסה למק, יתכן שלא יעבוד as-is בלינוקס) אפשר למצוא ב <a href="https://github.com/yehudab/things/blob/main/geotag.sh" title="geotag.sh in GitHub">GitHub שלי</a>.</p>
+<p>בהנחה שהקלטת המסלול נשמרה בקובץ: track.pgx, תמונת שעון ה QR נשמרה בקובץ qr.jpeg, וכל התמונות מהמסלול הזה נשמרו בתיקיה הנוכחית, הפעלת הסקירפט נעשית ע״י שורה אחת:</p>
+</li>
+</ol>
+<pre class="language-bash"><code class="language-bash">geotag.sh qr.jpeg track.gpx</code></pre>
+<p>עכשיו נוכל לראות את התמונות בדיוק במקום שבו הן צולמו:</p>
+<p><img src="/img/2022/04/photo-in-gaig-gps-after-geo-tagging.png" alt=""></p>
+
+                </div>
+            </div>
+        
+    
+        
+            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
+                <h2 class="mb-2">
                     <a class="block" href="/blog/2020/12/back-to-the-mac/">חזרה למק</a>
                 </h2><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="Mon Dec 14 2020 21:39:00 GMT+0000 (Coordinated Universal Time)">
                     14 בדצמבר 2020
@@ -203,33 +245,6 @@ Staticman logo by <a href="http://erlen.co.uk">Erlen Masson</a></p>
 <p>רוב התהליך עוקב אחרי ה README, אבל מכוון שלא התחלתי מאתר חדש כפי שהמדריך מתאר, ביצעתי מספר שינויים, כמו שיחזור של ה DB ומבנה הקבצים מהשרת הנוכחי. זו הייתה טבילת האש הראשונה ל restic שהזכרתי <a href="https://yehudab.com/blog/2020/03/php-7-4/">באחד הפוסטים הקודמים</a> והוא הוכיח את עצמו מצויין. שחזור של MySQL שרץ בתוך קונייטנר הוא קצת מורכב, וגם כאן <a href="https://internet-israel.com/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%D7%9D/docker/%D7%93%D7%95%D7%A7%D7%A8-%D7%9B%D7%A0%D7%99%D7%A1%D7%94-%D7%9C%D7%AA%D7%95%D7%9A-%D7%A7%D7%95%D7%A0%D7%98%D7%99%D7%99%D7%A0%D7%A8-%D7%95%D7%A4%D7%A2%D7%95%D7%9C%D7%95%D7%AA-%D7%91%D7%AA%D7%95%D7%9B/">יש לבר-זיק מדריך טוב</a>.</p>
 <p>אז נשארו לי כמה קצוות לסגור, כמו חידוש אוטומטי של הסרטיפיקטים ב Let’s Encrypt, והפעלה של גיבויים, אבל בסך הכל נראה שדוקר עושה עבודה טובה, והמעבר הבא יצריך ״רק״:</p>
 <pre class="language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">docker-compose</span> up <span class="token parameter variable">-d</span></code></pre>
-
-                </div>
-            </div>
-        
-    
-        
-            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
-                <h2 class="mb-2">
-                    <a class="block" href="/blog/2020/03/php-7-4/">php 7.4</a>
-                </h2><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="2020-03-01T22:07:57+02:00">
-                    1 במרץ 2020
-                </span>
-
-                <a class="tag" href="/tag/nano/">nano</a><a class="tag" href="/tag/php/">php</a><a class="tag" href="/tag/vi/">vi</a><a class="tag" href="/tag/וורדפרס/">וורדפרס</a><a class="tag" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a><a class="tag" href="/tag/לינוקס/">לינוקס</a>
-                <div class="clear-both"></div>
-
-                <div class="content post">
-                    <p>חלפה למעלה משנה מאז ש<a href="https://www.php.net/eol.php">התמיכה ב-7.0 php הופסקה</a>, וזה הזמן לשדרג את הבלוג לגרסה 7.4. כרגיל, צריך לקרוא את כל ה breaking changes, אבל אם הבלוג והתוספים מתוחזקים לגרסה העדכנית ביותר, אפשר לסמוך בדרך כלל שהכל יעובד. גיבוי של הקוד והדאטה רצוי גם כן.</p>
-<p>את הגיבויים אני מבצע לאחרונה בעזרת <a href="https://restic.net/">restic</a>, כאשר הקבצים מועלים לאכסון (הזול יחסית) של <a href="https://www.backblaze.com/b2/cloud-storage.html">Backblaze B2</a>.</p>
-<p>אחרי שמכניסים את הגדרות ל restic למשתני סביבה, סקריפט הגיבוי פשוט למדי:</p>
-<pre class="language-bash"><code class="language-bash"><span class="token shebang important">#!/bin/bash</span><br><span class="token assign-left variable">d</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">date</span> +%Y-%m-%d<span class="token variable">)</span></span><br>mysqldump <span class="token parameter variable">-u</span> *** <span class="token parameter variable">-p</span> *** <span class="token operator">></span> ~/backup/sql/yehudab-<span class="token variable">${d}</span>.sql<br><span class="token function">gzip</span> ~/backup/sql/*.sql<br><span class="token function">tar</span> <span class="token parameter variable">-czf</span> ~/backup/site/yehudab.com-<span class="token variable">${d}</span>.tar.gz yehudab.com<br>restic backup ~/backup</code></pre>
-<p>לצורך השדרוג, עקבתי אחרי <a href="https://www.cloudbooklet.com/upgrade-php-version-to-php-7-4-on-ubuntu/">המדריך ב CloudBooklet</a>. מכוון שאני מריץ php דרך ngnix, ביצעתי את הסעיפים הרלוונטים לגרסת fpm.</p>
-<p>אה, וכמובן, להשתמש ב vi, כי nano זה לחלשים.</p>
-<p>אחרי השדרוג, אני מנסה לשמור את הפוסט הזה ובום error 500. בדיקה מהירה בלוג של nginx על השרת מגלה ששכחתי להתקין את php7.4-memcache שהמדריך הנ&quot;ל לא מחשיב כ common extension. הרצת:</p>
-<pre class="language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> php7.4-memcache</code></pre>
-<p>וריסטרט לשרת פתרו את הבעיה.<br>
-<img src="/img/2020/03/upgrade.png" alt="שדרוג"></p>
 
                 </div>
             </div>
