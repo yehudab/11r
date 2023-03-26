@@ -126,6 +126,19 @@ disableNewComments: true
         "type": "geoshape",
         "href": "/maps/trail-6/#map"
       }
+    },
+    {
+      "data": {
+        "url": "public/topojson/trail-07.topojson",
+        "format": {
+          "type": "topojson",
+          "feature": "trail-07"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "href": "/maps/trail-7/#map"
+      }
     }
   ]
 }
@@ -140,6 +153,7 @@ disableNewComments: true
 2. [שלום רב שובך](/blog/2022/12/Israel-trail-4)
 2. קטע חסר
 2. [יב״א בה בה בה בה בה בה בם](/blog/2023/02/Israel-trail-6)
+2. [ארבעים נכנסו לפרד״ס](/blog/2023/03/Israel-trail-7)
 
 ---
 
