@@ -139,6 +139,19 @@ disableNewComments: true
         "type": "geoshape",
         "href": "/maps/trail-7/#map"
       }
+    },
+    {
+      "data": {
+        "url": "public/topojson/trail-08.topojson",
+        "format": {
+          "type": "topojson",
+          "feature": "trail-08"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "href": "/maps/trail-8/#map"
+      }
     }
   ]
 }
@@ -154,6 +167,7 @@ disableNewComments: true
 2. קטע חסר
 2. [יב״א בה בה בה בה בה בה בם](/blog/2023/02/Israel-trail-6)
 2. [ארבעים נכנסו לפרד״ס](/blog/2023/03/Israel-trail-7)
+2. [Stairway to Heaven](/blog/2023/04/Israel-trail-8)
 
 ---
 
