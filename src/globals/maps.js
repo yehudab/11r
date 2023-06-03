@@ -16,7 +16,7 @@ async function parseMapFile(file) {
     const topology = JSON.parse(data);
     let geojson = topojson.feature(topology, topology.objects[objectName]);
     let geojsonFeature = geojson.features[0];
-    let name = geojsonFeature.properties.name;
+    let name = `${number} - ${geojsonFeature.properties.name}`;
     geojsonFeature = JSON.stringify(geojsonFeature);
 
     return {number, name, geojsonFeature};

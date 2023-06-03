@@ -9,7 +9,8 @@
 6. Download in GeoJSON
 7. Rename downloaded file to: `trail-xx.geojson`
 8. Add new section in `Israel-trail-map.md` for the new trail number. Make sure to adjust the `data.url`, `mark.href`, and the `format.feature` values
-9. Run in command line:
+9. Update the `lastUpdate` front matter field in `Israel-trail-map.md`
+10. Run in command line:
 
 ```bash 
 geo2topo ~/Downloads/trail-xx.geojson | jq > ~/Dev/11r/public/topojson/trail-xx.topojson
