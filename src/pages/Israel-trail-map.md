@@ -1,7 +1,7 @@
 ---
 title: שביל ישראל - ראשי
 date: '2022-09-27T20:00:00+03:00'
-lastUpdate: '2023-05-13T14:10:00.000+00:00'
+lastUpdate: '2023-06-04T14:10:00.000+00:00'
 status: publish
 path: Israel-trail-map
 author: יהודה
@@ -152,6 +152,19 @@ disableNewComments: true
         "type": "geoshape",
         "href": "/maps/trail-8/#map"
       }
+    },
+    {
+      "data": {
+        "url": "public/topojson/trail-09.topojson",
+        "format": {
+          "type": "topojson",
+          "feature": "trail-09"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "href": "/maps/trail-9/#map"
+      }
     }
   ]
 }
@@ -168,6 +181,7 @@ disableNewComments: true
 2. [יב״א בה בה בה בה בה בה בם](/blog/2023/02/Israel-trail-6)
 2. [ארבעים נכנסו לפרד״ס](/blog/2023/03/Israel-trail-7)
 2. [Stairway to Heaven](/blog/2023/04/Israel-trail-8)
+2. [טופוגרפיה פסיכית](/blog/2023/05/Israel-trail-9)
 
 ---
 
