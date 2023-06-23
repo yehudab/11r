@@ -66,48 +66,29 @@
 
   
 
-  <div>
+  <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
     
         
-            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
-                <h2 class="mb-2">
-                    <a class="block" href="/blog/2022/04/geotag-dslr-photos/">תיוג מיקום במצלמת DSLR</a>
-                </h2><a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
+        <div class="overflow-hidden rounded-md"><div class="aspect-w-3 aspect-h-2">
+                <img
+                class="w-full aspect-square object-cover object-center"
+                src="/img/2022/04/photo-in-gaig-gps-after-geo-tagging.png"
+                alt={props.instance.frontmatter.imgAlt}
+                loading="lazy"
+                />
+            </div><div class="px-3 pt-4 pb-6 ">
+                <h3 class="text-xl font-semibold text-center">
+                <a href="/blog/2022/04/geotag-dslr-photos/">תיוג מיקום במצלמת DSLR</a>
+                </h3><a class="block inline float-left mt-2 comments-count mr-2 text-xs" 
                         href="/blog/2022/04/geotag-dslr-photos/#comments"
                         title="2 תגובות">
                         💬 2
-                    </a><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="Sat Apr 23 2022 08:37:27 GMT+0000 (Coordinated Universal Time)">
+                    </a><div class="text-xs mt-2 created-date" datetime="Sat Apr 23 2022 08:37:27 GMT+0000 (Coordinated Universal Time)">
                     23 באפריל 2022
-                </span>
-
-                <a class="tag" href="/tag/Geotagging/">Geotagging</a><a class="tag" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a>
-                <div class="clear-both"></div>
-
-                <div class="content post">
-                    <p>אחרי שנים רבות של צילום במצלמת הטלפון בלבד, החלטתי לחזור למקורות ולקנות מצלמה דיגיטלית ״אמיתית״. בחרתי <a href="https://www.dpreview.com/products/canon/slrs/canon_eos2000d" title="Canon EOS 2000D">בדגם כניסה של Canon</a>, וצימדתי לו <a href="https://www.dpreview.com/products/canon/lenses/canon_50_1p8_stm" title="Canon EF 50mm F1.8 STM">עדשת פריים טובה</a>, ועוד כמה עדשות זום סבירות.</p>
-<p>את הבסיס לשימוש במצלמה למדתי דרך כמה <a href="https://www.youtube.com/user/JaredPolin" title="Jared Polin">ערוצים</a> <a href="https://www.youtube.com/channel/UC9lyUdwosxq_OxC1uggjUPA" title="Photo Genius">פופלריים</a> ב youtube והשאר מניסיון. מה שבעיקר היה חסר לי בצילום במצלמה הזאת (וכנראה נכון למספר גדול מאוד של דגמים, כולל יקרים הרבה יותר) הוא חוסר היכולת לתייג בקלות את מיקום התמונות. זה פחות מפריע אם מצלמים בארוע במקום ידוע, ויותר בעייתי כאשר מצלמים בטיולים.</p>
-<p>לחלק מהדגמים אפשר <a href="https://www.bhphotovideo.com/c/product/847538-REG/Canon_6363B001_GPS_Receiver_GP_E2.html" title="Canon GPS Receiver GP-E2">לצמד GPS חיצוני</a>. דגמים אחרים מאפשרים לתייג תוך כדי צילום ע״י אפליקציה שרצה במקביל על הטלפון, אבל זה מחייב הפעלת Wi-Fi על שני המכשירים וגוזלת אחוזי סוללה נכבדים תוך כדי שימוש. בכל מקרה, למצלמה שלי לא ניתן לחבר את המכשיר החיצוני, וגם דרך האפליקציה הרשמית של קנון לא הצלחתי לתייג תוך כדי תנועה. יותר מזה, כאשר הטלפון מחובר ל Wi-Fi של המצלמה, אין אפשרות להתחבר במקביל לאינטרנט.</p>
-<p>כדי לפתור את הבעיה, פיתחתי תהליך עבודה פשוט (יחסית...). התהליך כולל שלושה שלבים:</p>
-<ol>
-<li>
-<p>הקלטת מסלול ההליכה. את זה אני בדרך-כלל עושה ממילא כדי לדעת נתונים כמו מרחק וקצב ההליכה, כמות עליות וירידות, ולפעמים כדי למצוא את הרכב בסוף המסלול. אני משתמש באפליקציה החינמית <a href="https://www.gaiagps.com">Gaia GPS</a>, אבל כל אפליקציה שיודעת ליצא קבצי GPX של המסלול תעשה את העבודה. במקרה של האפליקציה הזאת, ההקלטה גם נשמרת בענן, ואפשר בקלות להוריד אותה למחשב דרך האתר שלהם:</p>
-<p><img src="/img/2022/04/gaia-gps-export-to-gpx.png" alt=""></p>
-</li>
-<li>
-<p>סינכרון הזמנים בין שעון המצלמה לשעון הטלפון. לכל צורך מעשי, מספיק לעדכן פעם בשבוע-שבועיים את שעון המצלמה. מצד שני, לכל צורך מעשי כנראה מספיק לצלם בטלפון, אז לא בשביל זה באנו לכאן... מה שאני עושה הוא לצלם במצלמת ה DSLR קוד QR שמוצג על הטלפון ומתחלף כל שניה ומכיל את התאריך והשעה המדוייקים. הצילום מכיל כמטא-דתה את השעה בשעון המצלמה, וה QR מקודד את השעה המדוייקת וכך ניתן לדעת מה ההפרש. הייתי בטוח שיש המון אפליקציות שמציגות את השעה ב-QR-ית, אבל לא מצאתי. מה שכן מצאתי הוא <a href="https://github.com/kaelhem/qr-clock" title="QR clock by kaelhem">אפליקציית ווב בקוד פתוח</a>, אבל היא הציגה את התאריך בפורמט לא נח לפרסור, אז <a href="https://github.com/yehudab/qr-clock" title="QR clock GitHub repo">מיזלגתי אותה</a> והעלתי עותק פרטי <a href="https://apps.yehudab.com/qr-clock/" title="QR Clock">לאתר שלי</a>. ככה נראה צילום כזה:</p>
-<p><img src="/img/2022/04/qr-clock.jpg" alt=""></p>
-</li>
-<li>
-<p>הורדת קבצי ההליכה והתמונות (כולל תמונת ה QR) למחשב והפעלת סקריפט שמתייג את המיקום תוך כדי ההתחשבות בהפרש הזמנים. לשם כך אני משתמש בשתי תוכנות בקוד פתוח: <a href="https://github.com/mchehab/zbar" title="zbar GitHub repo">zbar</a> שיודעת לחלץ את השעה מקוד ה QR, ו-<a href="https://exiftool.org">ExifTool</a> שיודעת לחלץ את שעת הצילום מתמונת שעון ה-QR  ולתייג מיקום ע״פ קובץ GPX והפרש זמנים. את הסקריפט עצמו (גרסה למק, יתכן שלא יעבוד as-is בלינוקס) אפשר למצוא ב <a href="https://github.com/yehudab/things/blob/main/geotag.sh" title="geotag.sh in GitHub">GitHub שלי</a>.</p>
-<p>בהנחה שהקלטת המסלול נשמרה בקובץ: track.pgx, תמונת שעון ה QR נשמרה בקובץ qr.jpeg, וכל התמונות מהמסלול הזה נשמרו בתיקיה הנוכחית, הפעלת הסקירפט נעשית ע״י שורה אחת:</p>
-</li>
-</ol>
-<pre class="language-bash"><code class="language-bash">geotag.sh qr.jpeg track.gpx</code></pre>
-<p>עכשיו נוכל לראות את התמונות בדיוק במקום שבו הן צולמו:</p>
-<p><img src="/img/2022/04/photo-in-gaig-gps-after-geo-tagging.png" alt=""></p>
-
-                </div>
-            </div>
+                </div><div class="mt-2 text-md">
+                אחרי שנים רבות של צילום במצלמת הטלפון בלבד, החלטתי לחזור למקורות ולקנות מצלמה דיגיטלית ״אמיתית״. בחרתי בדגם כניסה של Canon, וצימדתי לו עדשת פריים טובה&hellip; <a href="/blog/2022/04/geotag-dslr-photos/">יש&nbsp;עוד</a>
+                </div></div>
+        </div>
         
     
 </div>
@@ -183,7 +164,7 @@
     
         <a class="tag mx-auto" href="/tag/speedtraps/">speedtraps&rlm; (1)</a>
     
-        <a class="tag mx-auto" href="/tag/ווידג&#39;טים/">ווידג&#39;טים&rlm; (10)</a>
+        <a class="tag mx-auto" href="/tag/ווידג׳טים/">ווידג׳טים&rlm; (10)</a>
     
         <a class="tag mx-auto" href="/tag/רכבת ישראל/">רכבת ישראל&rlm; (2)</a>
     

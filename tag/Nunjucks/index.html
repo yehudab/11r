@@ -66,42 +66,29 @@
 
   
 
-  <div>
+  <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
     
         
-            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
-                <h2 class="mb-2">
-                    <a class="block" href="/blog/2020/08/11ty-howto-migrate/">מוורדפרס ל-11ty</a>
-                </h2><a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
+        <div class="overflow-hidden rounded-md"><div class="aspect-w-3 aspect-h-2">
+                <img
+                class="w-full aspect-square object-cover object-center"
+                src="/img/2020/08/export.png"
+                alt={props.instance.frontmatter.imgAlt}
+                loading="lazy"
+                />
+            </div><div class="px-3 pt-4 pb-6 ">
+                <h3 class="text-xl font-semibold text-center">
+                <a href="/blog/2020/08/11ty-howto-migrate/">מוורדפרס ל-11ty</a>
+                </h3><a class="block inline float-left mt-2 comments-count mr-2 text-xs" 
                         href="/blog/2020/08/11ty-howto-migrate/#comments"
                         title="תגובה אחת">
                         💬 1
-                    </a><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="Sat Aug 01 2020 15:00:54 GMT+0000 (Coordinated Universal Time)">
+                    </a><div class="text-xs mt-2 created-date" datetime="Sat Aug 01 2020 15:00:54 GMT+0000 (Coordinated Universal Time)">
                     1 באוגוסט 2020
-                </span>
-
-                <a class="tag" href="/tag/Nunjucks/">Nunjucks</a><a class="tag" href="/tag/Comments/">Comments</a><a class="tag" href="/tag/11ty/">11ty</a><a class="tag" href="/tag/וורדפרס/">וורדפרס</a>
-                <div class="clear-both"></div>
-
-                <div class="content post">
-                    <p>אז אחרי שמחליטים על מעבר ל-11ty, צריך לדאוג לשמר את תוכן הפוסטים והתגובות.</p>
-<p>בשלב הראשון של המעבר יש צורך ליצא את כל התוכן מוורדפרס ל-Markdown. לטובת זה השתמשתי בפלאגאין לוורדפרס שפותח דווקא עבור Gatsby ונקרא: <a href="https://wordpress.org/plugins/wp-gatsby-markdown-exporter/">WP Gatsby Markdown Exporter</a>. בקישור ניתן לקרוא כיצד להפעיל אותו. אני השתמשתי באופציית ה <a href="https://wp-cli.org/" title="WordPress Command Line">WP-CLI</a>. משום מה הייתה לו בעיה ליצא את התמונות, ולכן הפעלתי את האופציות שמנטרלות את החלק הזה. הפקודה הסופית הייתה:</p>
-<pre class="language-bash"><code class="language-bash">wp gatsby-markdown-export <span class="token parameter variable">--skip_copy_uploads</span> <span class="token parameter variable">--skip_original_images</span> <span class="token parameter variable">--directory</span><span class="token operator">=</span>/var/www/html/md-export</code></pre>
-<p>זה מייצר אוסף של קבצי Markdown, שנראה בערך ככה:</p>
-<p><img src="/img/2020/08/export.png" alt="היררכיית קבצים לאחר היצוא מוורפרס"></p>
-<p>שמות הקבצים בכל תיקייה נלקחים מה slag, ולמזלי הקפדתי לאורך השנים להשתמש בשמות באנגלית, כך שכעת קל למצוא את הפוסטים לפי שנה, חודש וה slag.</p>
-<p>בשלב הבא בחרתי ב starter project מתוך <a href="https://jamstackthemes.dev/ssg/eleventy/" title="Eleventy Themes">דף התבניות של Eleventy</a>. המבחר די דל, ואין עדיין אף תבנית מותאמת עברית. לבסוף, בחרתי בתבנית <a href="https://github.com/reeseschultz/11r">11r</a>.  זוהי תבנית dark mode, ומבוססת <a href="https://tailwindcss.com/">Tailwind CSS</a>, ורוב היפוכי הכוון הגיעו out of the box, ברגע שהוספתי <code>dir=rtl</code> לתגית הראשית של הדף. את התוצאה אחרי הגיור תוכלו למזלג <a href="https://github.com/yehudab/11r">מהריפו שלי</a>. את הפוסטים בהיררכיה המקורית מעלים לתיקיית <code>src/posts</code>, ואחרי מעקב אחרי ההוראות בREADME, אפשר לראות את התוצאה.</p>
-<p>החלק היותר מורכב בתהליך הוא תמיכה בתגובות. כאן עדיין אין פתרון בית-ספר, ונאלצתי לאלתר <a href="https://github.com/dKab/blog/blob/master/_includes/comments.liquid">מכמה</a> <a href="https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html">מקורות</a>. הבעיה הבסיסית היא שאתר סטטי מטיבו אינו מאפשר הוספת תוכן דינמי כמו תגובות. אחד הפתרון האפשריים הוא שימוש בתוסף צד שלישי כמו <a href="https://disqus.com/">Disqus</a>, אבל <a href="https://fatfrogmedia.com/delete-disqus-comments-wordpress/" title="Why I Deleted Disqus and Why You Should Too">הדעה</a> <a href="https://markosaric.com/remove-disqus/" title="Why you should remove Disqus from your site">המקובלת</a> בקרב בעלי האתרים הסטטים הוא שזה לא לעניין, הן בגלל <a href="https://markosaric.com/remove-disqus/#site-speed-and-performance">תוספת הקוד לכל דף</a>, והן בגלל טענות על <a href="https://twitter.com/martingund/status/1207327648093003777" title="disqus shared the personal data of tens of millions of users ">הפרת פרטיות של משתמשי המערכת</a>.</p>
-<p>האפשרות שאני בחרתי בה היא שימוש ב <a href="https://staticman.net/">Staticman</a>. הרעיון כאן הוא שכל תגובה היא בעצם קובץ שנשמר גם כן בgit, ומנגנון אישור התגובה נעשה באופן דומה לאישור Pull Request. המנוע של Staticman דואג לייצר את ה PR-ים, כך שמבחינת המשתמשים באתר שליחת התגובה מתבצעת באמצעות טופס על הדף, בדומה לוורדפרס.</p>
-<p>בנוסף לזה, יש צורך לייבא ולשמר את התגובות מהבלוג הישן. כאן השתמשתי <a href="https://github.com/arthurlacoste/wordpress-comments-jekyll-staticman">בכלי</a> שבמקור נכתב לטובת העברת תגובות לאתרים סטטים מבוססי <a href="https://jekyllrb.com/">Jekyll</a>. נדרשו שינויים קלים, אבל בסופו של דבר גם כאן זה מסתכם בהרצה לפי ה README, והוספה של כל קבצי התגובות תחת התיקיה <a href="https://github.com/yehudab/11r/tree/master/11r/src/globals/comments"><code>src/globals/comments</code></a> כך שכל התגובות לפוסט מסויים מרוכזות תחת תיקיה לפי ה slag של הפוסט. מי שמעוניין יכול לקרוא עוד על <a href="https://www.11ty.dev/docs/data-global/">מודל הנתונים של Eleventy</a>.</p>
-<p>התוספת האחרונה היא מעט קוד שידע לשלוף את התגובות המתאימות לכל פוסט ולהציג אותן לפי ההיררכיה המקורית. הקוד הזה מחולק בין קוד JS, שאותו ניתן למצוא ב <code>/filters/comments-tree.js</code> ונראה כך:</p>
-<pre class="language-js"><code class="language-js">module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">obj</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><br>  <span class="token keyword">const</span> allComments <span class="token operator">=</span> obj <span class="token operator">?</span> Object<span class="token punctuation">.</span><span class="token function">values</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span><br>  <span class="token keyword">const</span> commentsById <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span><br>  allComments<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">c</span> <span class="token operator">=></span> <span class="token punctuation">{</span><br>    c<span class="token punctuation">.</span>id <span class="token operator">=</span> c<span class="token punctuation">.</span>id <span class="token operator">||</span> c<span class="token punctuation">.</span>_id<span class="token punctuation">;</span><br>    commentsById<span class="token punctuation">[</span>c<span class="token punctuation">.</span>id<span class="token punctuation">]</span> <span class="token operator">=</span> c<span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>  <span class="token keyword">const</span> rootComments <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span><br>  allComments<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">c</span> <span class="token operator">=></span> <span class="token punctuation">{</span><br>    <span class="token keyword">if</span> <span class="token punctuation">(</span>c<span class="token punctuation">.</span>parentId <span class="token operator">&amp;&amp;</span> c<span class="token punctuation">.</span>parentId <span class="token operator">!==</span> <span class="token string">"0"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>      <span class="token keyword">const</span> parent <span class="token operator">=</span> commentsById<span class="token punctuation">[</span>c<span class="token punctuation">.</span>parentId<span class="token punctuation">]</span><span class="token punctuation">;</span><br>      <span class="token keyword">if</span> <span class="token punctuation">(</span>parent<span class="token punctuation">)</span> <span class="token punctuation">{</span><br>        parent<span class="token punctuation">.</span>replies <span class="token operator">=</span> parent<span class="token punctuation">.</span>replies <span class="token operator">||</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span><br>        parent<span class="token punctuation">.</span>replies<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span><br>      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span><br>        console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">can't find parentID: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>c<span class="token punctuation">.</span>parentId<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> for ID: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>c<span class="token punctuation">.</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>      <span class="token punctuation">}</span><br>    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span><br>      rootComments<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token punctuation">}</span><br><br>  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>  <span class="token keyword">return</span> rootComments<span class="token punctuation">;</span><br><span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
-<p>והחלק המשלים שנמצא בתבנית התגובות <a href="https://github.com/yehudab/11r/blob/master/src/includes/comments.njk"><code>src/includes/comments.njk</code></a>. על ריקורסיה ב nunjucks למדתי <a href="https://github.com/mozilla/nunjucks/issues/416#issuecomment-206335032">מהissue הזה</a>. עכשיו ניתן לראות גם את התגובות בהתאם לדו-שיח שנוהל בזמנו:</p>
-<p><img src="/img/2020/09/comments-dark.png" alt="תגובות משורשרות"></p>
-<p>בפוסט הבא ארחיב על הכנת הטופס לתגובות והאינטגרציה עם הבוט של Staticman.</p>
-
-                </div>
-            </div>
+                </div><div class="mt-2 text-md">
+                אז אחרי שמחליטים על מעבר ל-11ty, צריך לדאוג לשמר את תוכן הפוסטים והתגובות. בשלב הראשון של המעבר יש צורך ליצא את כל התוכן מוורדפרס ל-Markdown. לטובת זה&hellip; <a href="/blog/2020/08/11ty-howto-migrate/">יש&nbsp;עוד</a>
+                </div></div>
+        </div>
         
     
 </div>
@@ -177,7 +164,7 @@
     
         <a class="tag mx-auto" href="/tag/speedtraps/">speedtraps&rlm; (1)</a>
     
-        <a class="tag mx-auto" href="/tag/ווידג&#39;טים/">ווידג&#39;טים&rlm; (10)</a>
+        <a class="tag mx-auto" href="/tag/ווידג׳טים/">ווידג׳טים&rlm; (10)</a>
     
         <a class="tag mx-auto" href="/tag/רכבת ישראל/">רכבת ישראל&rlm; (2)</a>
     

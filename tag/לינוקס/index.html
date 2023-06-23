@@ -66,156 +66,113 @@
 
   
 
-  <div>
+  <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
     
         
-            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
-                <h2 class="mb-2">
-                    <a class="block" href="/blog/2020/07/docker/">עוברים דירה</a>
-                </h2><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="Sat Jul 18 2020 12:06:54 GMT+0000 (Coordinated Universal Time)">
+        <div class="overflow-hidden rounded-md"><div class="aspect-w-3 aspect-h-2">
+                <img
+                class="w-full aspect-square object-cover object-center"
+                src="/img/2020/07/Docker.PNG"
+                alt={props.instance.frontmatter.imgAlt}
+                loading="lazy"
+                />
+            </div><div class="px-3 pt-4 pb-6 ">
+                <h3 class="text-xl font-semibold text-center">
+                <a href="/blog/2020/07/docker/">עוברים דירה</a>
+                </h3><div class="text-xs mt-2 created-date" datetime="Sat Jul 18 2020 12:06:54 GMT+0000 (Coordinated Universal Time)">
                     18 ביולי 2020
-                </span>
-
-                <a class="tag" href="/tag/Docker/">Docker</a><a class="tag" href="/tag/Hosting/">Hosting</a><a class="tag" href="/tag/וורדפרס/">וורדפרס</a><a class="tag" href="/tag/לינוקס/">לינוקס</a><a class="tag" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a>
-                <div class="clear-both"></div>
-
-                <div class="content post">
-                    <p><img src="/img/2020/07/Docker.PNG" alt="Docker">
-אחרי שלוש שנים שבהן <a href="https://yehudab.com/blog/2017/06/yet-another-blog-upgrade/">האתר הזה רץ מעל שרות האחסון של Scaleway</a>, קיבלתי מהם הודעה שהחומרה שעליה אני רץ (dual core ARM CPU, 2GB RAM, 50GB SSD) תפסיק לעבוד בעוד מספר חודשים. הם הציעו לי לעבור באותו מחיר לשרת VPS מבוסס אינטל, אלא שעוד לפני שהספקתי להגיב, קיבלתי את המכתב שזו כותרתו: We’re evolving our Instances prices, או בתרגום חופשי: נמאס לנו להיות הכי זולים בשוק, אז נעלה את המחיר ב 66%.</p>
-<p>החלטתי שזה הזמן לחפש שרות אכסון חדש, והגעתי דרך חבר לעבודה ל <a href="https://www.ovh.ie/">OVHcloud</a>. השרת הבסיסי נראה על הנייר חלש יותר (מעבד אחד בלבד ודיסק קטן יותר), אבל בבדיקות ביצועים בשטח הוא משמעותית יותר מהיר. זה מורגש גם בעבודת ההתקנה (פרטים בהמשך) וגם בזמן ריצה, כפי שנמדד ע״י StatusCake. המחיר זהה למחיר (הישן) של Scaleway: שלושה אירו לחודש, בלי התחייבות.</p>
-<p>השרת שלי מריץ בנוסף גם שני שרתי node קטנים, כך שהעברת כל הטוב הזה היא לא פשוטה, ולכן החלטתי הפעם ללכת על Docker. למי שלא מכיר את Docker, מומלץ לקרוא את סדרת המאמרים באתר של רן בר-זיק. שם הוא גם <a href="https://internet-israel.com/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%D7%9D/docker/%D7%95%D7%95%D7%A8%D7%93%D7%A4%D7%A8%D7%A1-%D7%A2%D7%9C-docker/">מדגים התקנת WordPress</a>. אני בחרתי לעקוב אחרי <a href="https://github.com/mjstealey/wordpress-nginx-docker">המדריך של Michael J. Stealey</a> ב GitHub, שממנו גם עשיתי פורק לריפו משלי. המדריך הזה קצת יותר מתאים לסביבה הנוכחית שלי שכוללת MariaDB במקום MySQL, וגם סקריפטים מוכנים לתמיכה ב https, דרך השרות של <a href="https://letsencrypt.org/">Let’s Encrypt</a>.</p>
-<p>רוב התהליך עוקב אחרי ה README, אבל מכוון שלא התחלתי מאתר חדש כפי שהמדריך מתאר, ביצעתי מספר שינויים, כמו שיחזור של ה DB ומבנה הקבצים מהשרת הנוכחי. זו הייתה טבילת האש הראשונה ל restic שהזכרתי <a href="https://yehudab.com/blog/2020/03/php-7-4/">באחד הפוסטים הקודמים</a> והוא הוכיח את עצמו מצויין. שחזור של MySQL שרץ בתוך קונייטנר הוא קצת מורכב, וגם כאן <a href="https://internet-israel.com/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%D7%9D/docker/%D7%93%D7%95%D7%A7%D7%A8-%D7%9B%D7%A0%D7%99%D7%A1%D7%94-%D7%9C%D7%AA%D7%95%D7%9A-%D7%A7%D7%95%D7%A0%D7%98%D7%99%D7%99%D7%A0%D7%A8-%D7%95%D7%A4%D7%A2%D7%95%D7%9C%D7%95%D7%AA-%D7%91%D7%AA%D7%95%D7%9B/">יש לבר-זיק מדריך טוב</a>.</p>
-<p>אז נשארו לי כמה קצוות לסגור, כמו חידוש אוטומטי של הסרטיפיקטים ב Let’s Encrypt, והפעלה של גיבויים, אבל בסך הכל נראה שדוקר עושה עבודה טובה, והמעבר הבא יצריך ״רק״:</p>
-<pre class="language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">docker-compose</span> up <span class="token parameter variable">-d</span></code></pre>
-
-                </div>
-            </div>
+                </div><div class="mt-2 text-md">
+                אחרי שלוש שנים שבהן האתר הזה רץ מעל שרות האחסון של Scaleway, קיבלתי מהם הודעה שהחומרה שעליה אני רץ (dual core ARM CPU, 2GB RAM, 50GB SSD) תפסיק לעבוד &hellip; <a href="/blog/2020/07/docker/">יש&nbsp;עוד</a>
+                </div></div>
+        </div>
         
     
         
-            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
-                <h2 class="mb-2">
-                    <a class="block" href="/blog/2020/03/php-7-4/">php 7.4</a>
-                </h2><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="2020-03-01T22:07:57+02:00">
+        <div class="overflow-hidden rounded-md"><div class="aspect-w-3 aspect-h-2">
+                <img
+                class="w-full aspect-square object-cover object-center"
+                src="/img/2020/03/upgrade.png"
+                alt={props.instance.frontmatter.imgAlt}
+                loading="lazy"
+                />
+            </div><div class="px-3 pt-4 pb-6 ">
+                <h3 class="text-xl font-semibold text-center">
+                <a href="/blog/2020/03/php-7-4/">php 7.4</a>
+                </h3><div class="text-xs mt-2 created-date" datetime="2020-03-01T22:07:57+02:00">
                     1 במרץ 2020
-                </span>
-
-                <a class="tag" href="/tag/nano/">nano</a><a class="tag" href="/tag/php/">php</a><a class="tag" href="/tag/vi/">vi</a><a class="tag" href="/tag/וורדפרס/">וורדפרס</a><a class="tag" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a><a class="tag" href="/tag/לינוקס/">לינוקס</a>
-                <div class="clear-both"></div>
-
-                <div class="content post">
-                    <p>חלפה למעלה משנה מאז ש<a href="https://www.php.net/eol.php">התמיכה ב-7.0 php הופסקה</a>, וזה הזמן לשדרג את הבלוג לגרסה 7.4. כרגיל, צריך לקרוא את כל ה breaking changes, אבל אם הבלוג והתוספים מתוחזקים לגרסה העדכנית ביותר, אפשר לסמוך בדרך כלל שהכל יעובד. גיבוי של הקוד והדאטה רצוי גם כן.</p>
-<p>את הגיבויים אני מבצע לאחרונה בעזרת <a href="https://restic.net/">restic</a>, כאשר הקבצים מועלים לאכסון (הזול יחסית) של <a href="https://www.backblaze.com/b2/cloud-storage.html">Backblaze B2</a>.</p>
-<p>אחרי שמכניסים את הגדרות ל restic למשתני סביבה, סקריפט הגיבוי פשוט למדי:</p>
-<pre class="language-bash"><code class="language-bash"><span class="token shebang important">#!/bin/bash</span><br><span class="token assign-left variable">d</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">date</span> +%Y-%m-%d<span class="token variable">)</span></span><br>mysqldump <span class="token parameter variable">-u</span> *** <span class="token parameter variable">-p</span> *** <span class="token operator">></span> ~/backup/sql/yehudab-<span class="token variable">${d}</span>.sql<br><span class="token function">gzip</span> ~/backup/sql/*.sql<br><span class="token function">tar</span> <span class="token parameter variable">-czf</span> ~/backup/site/yehudab.com-<span class="token variable">${d}</span>.tar.gz yehudab.com<br>restic backup ~/backup</code></pre>
-<p>לצורך השדרוג, עקבתי אחרי <a href="https://www.cloudbooklet.com/upgrade-php-version-to-php-7-4-on-ubuntu/">המדריך ב CloudBooklet</a>. מכוון שאני מריץ php דרך ngnix, ביצעתי את הסעיפים הרלוונטים לגרסת fpm.</p>
-<p>אה, וכמובן, להשתמש ב vi, כי nano זה לחלשים.</p>
-<p>אחרי השדרוג, אני מנסה לשמור את הפוסט הזה ובום error 500. בדיקה מהירה בלוג של nginx על השרת מגלה ששכחתי להתקין את php7.4-memcache שהמדריך הנ&quot;ל לא מחשיב כ common extension. הרצת:</p>
-<pre class="language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> php7.4-memcache</code></pre>
-<p>וריסטרט לשרת פתרו את הבעיה.<br>
-<img src="/img/2020/03/upgrade.png" alt="שדרוג"></p>
-
-                </div>
-            </div>
+                </div><div class="mt-2 text-md">
+                חלפה למעלה משנה מאז שהתמיכה ב-7.0 php הופסקה, וזה הזמן לשדרג את הבלוג לגרסה 7.4. כרגיל, צריך לקרוא את כל ה breaking changes, אבל אם הבלוג והתוספים מתו&hellip; <a href="/blog/2020/03/php-7-4/">יש&nbsp;עוד</a>
+                </div></div>
+        </div>
         
     
         
-            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
-                <h2 class="mb-2">
-                    <a class="block" href="/blog/2017/07/http2/">HTTP/2</a>
-                </h2><a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
+        <div class="overflow-hidden rounded-md"><div class="aspect-w-3 aspect-h-2">
+                <img
+                class="w-full aspect-square object-cover object-center"
+                src="/img/2017/07/nginx-logs.jpg"
+                alt={props.instance.frontmatter.imgAlt}
+                loading="lazy"
+                />
+            </div><div class="px-3 pt-4 pb-6 ">
+                <h3 class="text-xl font-semibold text-center">
+                <a href="/blog/2017/07/http2/">HTTP/2</a>
+                </h3><a class="block inline float-left mt-2 comments-count mr-2 text-xs" 
                         href="/blog/2017/07/http2/#comments"
                         title="תגובה אחת">
                         💬 1
-                    </a><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="2017-07-07T17:18:52+03:00">
+                    </a><div class="text-xs mt-2 created-date" datetime="2017-07-07T17:18:52+03:00">
                     7 ביולי 2017
-                </span>
-
-                <a class="tag" href="/tag/וורדפרס/">וורדפרס</a><a class="tag" href="/tag/לינוקס/">לינוקס</a><a class="tag" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a>
-                <div class="clear-both"></div>
-
-                <div class="content post">
-                    <p>עוד שדרוג קטן לבלוג.<br>
-הפעם העברתי את השרת מ apache ל nginx, ועל הדרך הפעלתי HTTP/2.<br>
-זה אמור לשפר את הביצועים, למרות שאני לא ממש מרגיש בזה בנתיים.</p>
-<p><img src="/img/2017/07/nginx-logs.jpg" alt="Hex dump of nginx logs"></p>
-<p>למעוניינים, <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-with-http-2-support-on-ubuntu-16-04">המדריך הזה</a> מסביר על התקנת nginx, והגדרות HTTP/2. <a href="http://nginxlibrary.com/wordpress-permalinks/">כאן</a> תמצאו הסבר על ההגדרות הדרושות ב nginx לטובת הפעלת WordPress במקום mod_rewrite של apache.</p>
-<p>התוצאה הסופית של כל ההגדרות האלה, כפי שנשמרה בקובץ ‎/etc/nginx/sites-available/default היא זו:</p>
-<pre class="language-nginx"><code class="language-nginx"><span class="token directive"><span class="token keyword">server</span></span> <span class="token punctuation">{</span><br><br>        <span class="token directive"><span class="token keyword">listen</span> <span class="token number">443</span> ssl http2 default_server</span><span class="token punctuation">;</span><br>        <span class="token directive"><span class="token keyword">listen</span> [::]:443 ssl http2 default_server</span><span class="token punctuation">;</span><br>        <span class="token directive"><span class="token keyword">include</span> snippets/gzip.conf</span><span class="token punctuation">;</span><br><br>        <span class="token directive"><span class="token keyword">ssl_certificate</span> /etc/nginx/ssl/live/yehudab.com/fullchain.pem</span><span class="token punctuation">;</span><br>        <span class="token directive"><span class="token keyword">ssl_certificate_key</span> /etc/nginx/ssl/live/yehudab.com/privkey.pem</span><span class="token punctuation">;</span><br>        <span class="token directive"><span class="token keyword">ssl_dhparam</span> /etc/nginx/ssl/live/yehudab.com/dhparam.pem</span><span class="token punctuation">;</span><br><br>        <span class="token directive"><span class="token keyword">root</span> /var/www/yehudab.com</span><span class="token punctuation">;</span><br><br>        <span class="token directive"><span class="token keyword">index</span> index.html index.htm index.php index.nginx-debian.html</span><span class="token punctuation">;</span><br><br>        <span class="token directive"><span class="token keyword">server_name</span> yehudab.com</span><span class="token punctuation">;</span><br><br>        <span class="token directive"><span class="token keyword">location</span> /</span> <span class="token punctuation">{</span><br>                <span class="token directive"><span class="token keyword">try_files</span> <span class="token variable">$uri</span> <span class="token variable">$uri</span>/ =404</span><span class="token punctuation">;</span><br>        <span class="token punctuation">}</span><br><br>        <span class="token directive"><span class="token keyword">location</span> /blog/</span> <span class="token punctuation">{</span><br>                <span class="token directive"><span class="token keyword">try_files</span> <span class="token variable">$uri</span> <span class="token variable">$uri</span>/ /blog/index.php?<span class="token variable">$args</span></span><span class="token punctuation">;</span><br>        <span class="token punctuation">}</span><br>        <span class="token directive"><span class="token keyword">location</span> ~ \.php$</span> <span class="token punctuation">{</span><br>                <span class="token directive"><span class="token keyword">include</span> snippets/fastcgi-php.conf</span><span class="token punctuation">;</span><br>                <span class="token directive"><span class="token keyword">fastcgi_pass</span> unix:/run/php/php7.0-fpm.sock</span><span class="token punctuation">;</span><br>        <span class="token punctuation">}</span><br><br>        <span class="token directive"><span class="token keyword">location</span> ~ /\.ht</span> <span class="token punctuation">{</span><br>                <span class="token directive"><span class="token keyword">deny</span> all</span><span class="token punctuation">;</span><br>        <span class="token punctuation">}</span><br>        <span class="token directive"><span class="token keyword">include</span> snippets/expires.conf</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><br><span class="token directive"><span class="token keyword">server</span></span> <span class="token punctuation">{</span><br>       <span class="token directive"><span class="token keyword">listen</span>         <span class="token number">80</span></span><span class="token punctuation">;</span><br>       <span class="token directive"><span class="token keyword">listen</span>    [::]:80</span><span class="token punctuation">;</span><br>       <span class="token directive"><span class="token keyword">server_name</span>    yehudab.com</span><span class="token punctuation">;</span><br>       <span class="token directive"><span class="token keyword">return</span>         <span class="token number">301</span> https://<span class="token variable">$server_name</span><span class="token variable">$request_uri</span></span><span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
-<p>לאחר סיום ההגדרות, ניתן לוודא את תמיכת האתר ל HTTP/2 באמצעות <a href="https://tools.keycdn.com/http2-test">דף הבדיקה של KeyCDN</a>.</p>
-
-                </div>
-            </div>
+                </div><div class="mt-2 text-md">
+                עוד שדרוג קטן לבלוג. הפעם העברתי את השרת מ apache ל nginx, ועל הדרך הפעלתי HTTP/2. זה אמור לשפר את הביצועים, למרות שאני לא ממש מרגיש בזה בנתיים.&hellip; <a href="/blog/2017/07/http2/">יש&nbsp;עוד</a>
+                </div></div>
+        </div>
         
     
         
-            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
-                <h2 class="mb-2">
-                    <a class="block" href="/blog/2017/07/just-a-second/">רק שניה</a>
-                </h2><a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
+        <div class="overflow-hidden rounded-md"><div class="aspect-w-3 aspect-h-2">
+                <img
+                class="w-full aspect-square object-cover object-center"
+                src="/img/2017/07/raspberry-pi-open-sprinkler.jpg"
+                alt={props.instance.frontmatter.imgAlt}
+                loading="lazy"
+                />
+            </div><div class="px-3 pt-4 pb-6 ">
+                <h3 class="text-xl font-semibold text-center">
+                <a href="/blog/2017/07/just-a-second/">רק שניה</a>
+                </h3><a class="block inline float-left mt-2 comments-count mr-2 text-xs" 
                         href="/blog/2017/07/just-a-second/#comments"
                         title="8 תגובות">
                         💬 8
-                    </a><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="2017-07-01T11:28:09+03:00">
+                    </a><div class="text-xs mt-2 created-date" datetime="2017-07-01T11:28:09+03:00">
                     1 ביולי 2017
-                </span>
-
-                <a class="tag" href="/tag/זמן/">זמן</a><a class="tag" href="/tag/לינוקס/">לינוקס</a><a class="tag" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a>
-                <div class="clear-both"></div>
-
-                <div class="content post">
-                    <p>רק שניה מפרידה בין השעה 03:14:07 ל 03:14:08 בתאריך: 19 בינואר 2038. לכאורה, זה לא צריך לעניין אף אחד. אבל אם אתה יוניקס/טיים גיק כמוני, התאריך הזה מייד אמור להדליק לך נורה אדומה.<br>
-למה? כי בשניה הזאת יעברו בדיוק 2,147,483,648 (או 2 בחזקת 31) שניות מתאריך 1.1.1970 בשעה 00:00:00. מחשב לינוקס בארכיטקטורת 32 ביט לא יכול להציג את הזמן הזה.<br>
-נסו להריץ את הפקודה הבאה על מחשב הלינוקס הקרוב:</p>
-<pre class="language-bash"><code class="language-bash"><span class="token function">date</span> <span class="token parameter variable">--date</span><span class="token operator">=</span><span class="token string">'@2147483647'</span></code></pre>
-<p>או במערכות מבוססות BSD (כמו macOS), את הפקודה הזאת:</p>
-<pre class="language-bash"><code class="language-bash"><span class="token function">date</span> <span class="token parameter variable">-r</span> <span class="token number">2147483647</span></code></pre>
-<p>זה אמור לעבוד בלי בעיה. אבל אם תוסיפו שניה נוספת (כלומר להחליף את ה-7 ב-8), אתם עלולים לראות משהו כזה:<br>
-<img src="/img/2017/07/Unix-date-32-bit.jpg" alt="2038 on 32 bit Linux "></p>
-<p>לעומת זאת, על מחשב 64 ביט, התוצאה תקינה:<br>
-<img src="/img/2017/07/Unix-date-64-bit.jpg" alt="2038 on 64 bit Linux "></p>
-<p>אז למה זה מעניין עכשיו, ומה איכפת לי ממשהו שיקרה בעוד קצת יותר מ-20 שנה?</p>
-<p>קודם כל, כי הזמן עובר. 20 שנה נשמע כמו המון זמן, אבל אם תסתכלו סביבכם בחדר, תראו לא מעט מכשירי חשמל שעובדים 20 שנה ויותר. תוסיפו לזה את העובדה שהיום כמעט כל מכשיר (ממנורה ועד טלוויזיה) מחובר לאינטרנט, ותבינו שיתכן שזו פצצת זמן שנדרכת עם כל קניה של מכשיר חדש שנעשית היום. וזה עוד בלי להזכיר מטוסים, בתי חולים, מערכות רכב (מישהו מוכן להיכנס למכונית אוטונומית ב 2038?) רמזורים, מעליות.</p>
-<p>צילום המסך העליון, לדוגמה, נלקח ממחשב Raspberry Pi שמחובר למערכת ההשקיה בגינה שלי.<br>
-<img src="/img/2017/07/raspberry-pi-open-sprinkler.jpg" alt="Raspberry Pi with Open Sprinkler "><br>
-האם הוא ישרוד עד 2038? אולי. עד עכשיו, החלפתי בממוצע מחשב השקייה כל 10 שנים: הראשון בגלל הבטרייה שזלגה, והשני עדיין עבד, רק שרציתי להחליף אותו בדגם שמאפשר תכנות דרך הרשת במקום ממשק לא ידידותי. למזלי, ה 19 בינואר יוצא בחורף, כך שיהיו לי כמה חודשים טובים לדאוג למחליף במידת הצורך.</p>
-<p>ולמה נזכרתי בכל זה עכשיו? כי מחר (2 ביולי 2017) יעבור מספר השניות את סף ה 1.499 מיליארד, ובעוד שבועיים (14 ביולי) הוא יעבור את סף ה 1.5 מיליארד.</p>
-<p>השעון מתקתק…</p>
-<figure class="text-center p-4 border-slate-600	border-2">
-<pre class="to-be-replaced-by-time-ticker text-2xl">
-</pre>
-</figure>
-
-                </div>
-            </div>
+                </div><div class="mt-2 text-md">
+                רק שניה מפרידה בין השעה 03:14:07 ל 03:14:08 בתאריך: 19 בינואר 2038. לכאורה, זה לא צריך לעניין אף אחד. אבל אם אתה יוניקס/טיים גיק כמוני, התאריך הזה מיי&hellip; <a href="/blog/2017/07/just-a-second/">יש&nbsp;עוד</a>
+                </div></div>
+        </div>
         
     
         
-            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
-                <h2 class="mb-2">
-                    <a class="block" href="/blog/2017/06/yet-another-blog-upgrade/">שוב שדרוג לבלוג</a>
-                </h2><a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
+        <div class="overflow-hidden rounded-md"><div class="aspect-w-3 aspect-h-2">
+                <img
+                class="w-full aspect-square object-cover object-center"
+                src="/img/2017/06/blog.jpg"
+                alt={props.instance.frontmatter.imgAlt}
+                loading="lazy"
+                />
+            </div><div class="px-3 pt-4 pb-6 ">
+                <h3 class="text-xl font-semibold text-center">
+                <a href="/blog/2017/06/yet-another-blog-upgrade/">שוב שדרוג לבלוג</a>
+                </h3><a class="block inline float-left mt-2 comments-count mr-2 text-xs" 
                         href="/blog/2017/06/yet-another-blog-upgrade/#comments"
                         title="2 תגובות">
                         💬 2
-                    </a><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="2017-06-24T20:43:45+03:00">
+                    </a><div class="text-xs mt-2 created-date" datetime="2017-06-24T20:43:45+03:00">
                     24 ביוני 2017
-                </span>
-
-                <a class="tag" href="/tag/וורדפרס/">וורדפרס</a><a class="tag" href="/tag/לינוקס/">לינוקס</a><a class="tag" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a>
-                <div class="clear-both"></div>
-
-                <div class="content post">
-                    <p><em>בעידן שבו הבלוגים הולכים ונעלמים, קצת מוזר לכתוב פוסט חדש כאן ולא בפייסבוק, או טוויטר. בכל זאת, אם מישהו עדיין מקבל עדכונים על פוסטים חדשים, או שסתם הגיע לכאן מגוגל, נסו לקרוא את הפוסט כאילו עכשיו 2006 ובלוגים זה הדבר הכי מגניב שיש.</em></p>
-<p><img src="/img/2017/06/blog.jpg" alt="בלוג"></p>
-<p>דבר ראשון, בקטנה, שדרוג מתחייב לגרסה האחרונה (4.8).</p>
-<p>חוץ מזה, תוסף חדש: <a href="https://wordpress.org/plugins/wordpress-seo/">Yoast SEO</a>, כי פייסבוק דורש מטה תגיות, וזה הכי קל.</p>
-<p>אבל הכי חשוב, החלפתי את שרות האירוח מאכסון משותף על <a href="https://www.nearlyfreespeech.net">NearlyFreeSpeach</a> לשרת וירטואלי פרטי של <a href="https://www.scaleway.com/armv8-cloud-servers/">Scaleway</a>. בחרתי בשרת מבוסס ARMv8 כך שהמחיר יוצא כמעט אותו דבר (3$ בראשון, 3€ באחרון), כשכאן אני מקבל שרת פרטי, יכול להריץ עליו מה שאני רוצה, וגם הביצועים טובים הרבה יותר. כמובן, אני צריך לדאוג לבד לשדרוגי תוכנה, אבטחה, גיבויים וכד׳, אבל זה חלק מהעניין. המדריך ב <a href="https://www.linuxbabe.com/ubuntu/install-wordpress-ubuntu-16-04-apache">LinuxBabe</a> יכול לעזור כאן.</p>
-<p>Scaleway לא כ״כ אוהבים ששולחים מייל מהשרת שלהם (כדי שלא ישמשו לספאם), אז נרשמתי לשירות <a href="https://www.mailgun.com">mailgun</a> שמאפשר לשלוח עד 10,000 מיילים בחודש בחינם. הוא עובד יחד עם התוסף המקביל ב WordPress. באתר wpbeginner יש <a href="http://www.wpbeginner.com/wp-tutorials/how-to-fix-wordpress-not-sending-email-issue/">הסבר מפורט</a> איך להשתמש בשניהם.</p>
-<p>דבר אחרון, העברתי את האתר לעבוד דרך https, כי בכל זאת 2017. המדריך הנ״ל מ LinuxBabe מסביר איך לעשות את זה בחינם דרך <a href="https://letsencrypt.org">Let's Encrypt</a>.</p>
-
-                </div>
-            </div>
+                </div><div class="mt-2 text-md">
+                בעידן שבו הבלוגים הולכים ונעלמים, קצת מוזר לכתוב פוסט חדש כאן ולא בפייסבוק, או טוויטר. בכל זאת, אם מישהו עדיין מקבל עדכונים על פוסטים חדשים, או שסתם ה&hellip; <a href="/blog/2017/06/yet-another-blog-upgrade/">יש&nbsp;עוד</a>
+                </div></div>
+        </div>
         
     
 </div>
@@ -291,7 +248,7 @@
     
         <a class="tag mx-auto" href="/tag/speedtraps/">speedtraps&rlm; (1)</a>
     
-        <a class="tag mx-auto" href="/tag/ווידג&#39;טים/">ווידג&#39;טים&rlm; (10)</a>
+        <a class="tag mx-auto" href="/tag/ווידג׳טים/">ווידג׳טים&rlm; (10)</a>
     
         <a class="tag mx-auto" href="/tag/רכבת ישראל/">רכבת ישראל&rlm; (2)</a>
     

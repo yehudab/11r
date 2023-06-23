@@ -389,48 +389,48 @@
     </entry>
     
     <entry>
-      <title>ווידג&#39;ט מזג האויר בישראל</title>
+      <title>ווידג׳ט מזג האויר בישראל</title>
       <link href="https://yehudab.com/blog/2010/06/israel-weather-widge/"/>
       <updated>2010-06-29T17:43:47Z</updated>
       <id>https://yehudab.com/blog/2010/06/israel-weather-widge/</id>
-      <content type="html">&lt;p&gt;אחד הפרויקטים הראשונים שעשיתי למק (כן, עוד לפני הסקריפטים) היה ווידג&#39;טים לדשבורד. אחד מהם היה ווידג&#39;ט מזג האויר בישראל והשני ווידג&#39;ט רכבת ישראל (שלא פועל כרגע, ואולי עוד אחדש אותו בהזדמנות). הווידג&#39;טים שכנו באתר &lt;a href=&quot;http://dashboardwidgets.com/&quot;&gt;dashboardwidgets&lt;/a&gt; שלאחרונה הפסיק לפעול. לטובת מי שמחפש את ווידג&#39;ט מזג האויר העברתי את דף ההורדה לבלוג הזה, וניתן למצוא אותו כעת &lt;a href=&quot;http://yehudab.com/widgets/WeatherIL-1d7.zip&quot;&gt;כאן&lt;/a&gt;. בהזדמנות זו בצעתי גם עדכון קל לרשימת האזורים המוצגים (תודה לרונן על דווח השגיאה).&lt;/p&gt;
-&lt;p&gt;למי שלא מכיר את הווידג&#39;ט ורוצה לדעת למה להשתמש בו ולא בווידג&#39;ט של אפל, הנה מספר סיבות:&lt;/p&gt;
+      <content type="html">&lt;p&gt;אחד הפרויקטים הראשונים שעשיתי למק (כן, עוד לפני הסקריפטים) היה ווידג׳טים לדשבורד. אחד מהם היה ווידג׳ט מזג האויר בישראל והשני ווידג׳ט רכבת ישראל (שלא פועל כרגע, ואולי עוד אחדש אותו בהזדמנות). הווידג׳טים שכנו באתר &lt;a href=&quot;http://dashboardwidgets.com/&quot;&gt;dashboardwidgets&lt;/a&gt; שלאחרונה הפסיק לפעול. לטובת מי שמחפש את ווידג׳ט מזג האויר העברתי את דף ההורדה לבלוג הזה, וניתן למצוא אותו כעת &lt;a href=&quot;http://yehudab.com/widgets/WeatherIL-1d7.zip&quot;&gt;כאן&lt;/a&gt;. בהזדמנות זו בצעתי גם עדכון קל לרשימת האזורים המוצגים (תודה לרונן על דווח השגיאה).&lt;/p&gt;
+&lt;p&gt;למי שלא מכיר את הווידג׳ט ורוצה לדעת למה להשתמש בו ולא בווידג׳ט של אפל, הנה מספר סיבות:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;הוא דובר עברית&lt;/li&gt;
 &lt;li&gt;יש רשימה קבועה של אזורי מזג אויר, ואין צורך לחפש בטקסט חופשי&lt;/li&gt;
-&lt;li&gt;התחזית לקוחה מאחד מאתרי מזג האוויר המובילים בישראלים: &lt;a href=&quot;http://www.israelweather.co.il/&quot;&gt;IsraelWeather.co.il&lt;/a&gt; ובדרך כלל התחזית שלו מדויקת בהרבה מהתחזית בווידג&#39;ט הסטנדרטי&lt;/li&gt;
+&lt;li&gt;התחזית לקוחה מאחד מאתרי מזג האוויר המובילים בישראלים: &lt;a href=&quot;http://www.israelweather.co.il/&quot;&gt;IsraelWeather.co.il&lt;/a&gt; ובדרך כלל התחזית שלו מדויקת בהרבה מהתחזית בווידג׳ט הסטנדרטי&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2010/06/israel-weather-widget-1.png&quot; alt=&quot;ווידג&#39;ט מזג האויר בישראל&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2010/06/israel-weather-widget-1.png&quot; alt=&quot;ווידג׳ט מזג האויר בישראל&quot; /&gt;&lt;/p&gt;
 </content>
     </entry>
     
     <entry>
-      <title>ווידג&#39;ט רכבת ישראל</title>
+      <title>ווידג׳ט רכבת ישראל</title>
       <link href="https://yehudab.com/blog/2010/06/israel-rail-widget/"/>
       <updated>2010-06-30T20:46:17Z</updated>
       <id>https://yehudab.com/blog/2010/06/israel-rail-widget/</id>
-      <content type="html">&lt;p&gt;אחרי חידוש ושיכון מחדש של ווידג&#39;ט מזג האויר, הגיע תורו של ווידג&#39;ט רכבת ישראל. הגרסה הראשונה של הווידג&#39;ט נכתבה כך שתמשוך נתונים מאתר הרכבת הישן, שהיה בלתי שמיש מחוץ לאקספלורר. לאחר שדרוג האתר, לא היה צורך בווידג&#39;ט לטובת תאימות, ולכן דחיתי את העדכון שלו. הסתבר שההתאמה &lt;a href=&quot;http://www.rail.co.il/&quot;&gt;לאתר הרכבת החדש&lt;/a&gt; לא הייתה מסובכת במיוחד, והווידג&#39;ט כבר מוכן &lt;a href=&quot;http://yehudab.com/widgets/IsraelRailways-1d7.zip&quot;&gt;להורדה מכאן&lt;/a&gt;. גם כאן, הווידג&#39;ט מותאם למשתמשי מק בלבד (טיגר ומעלה). יתכן שבעתיד אכין גם חלופות לחלונות וללינוקס.&lt;/p&gt;
-&lt;p&gt;התפעול של הווידג&#39;ט קצת מסובך יותר מזה של מזג האויר, לכן צרפתי צילומי מסך עם הסברים קצרים.&lt;/p&gt;
+      <content type="html">&lt;p&gt;אחרי חידוש ושיכון מחדש של ווידג׳ט מזג האויר, הגיע תורו של ווידג׳ט רכבת ישראל. הגרסה הראשונה של הווידג׳ט נכתבה כך שתמשוך נתונים מאתר הרכבת הישן, שהיה בלתי שמיש מחוץ לאקספלורר. לאחר שדרוג האתר, לא היה צורך בווידג׳ט לטובת תאימות, ולכן דחיתי את העדכון שלו. הסתבר שההתאמה &lt;a href=&quot;http://www.rail.co.il/&quot;&gt;לאתר הרכבת החדש&lt;/a&gt; לא הייתה מסובכת במיוחד, והווידג׳ט כבר מוכן &lt;a href=&quot;http://yehudab.com/widgets/IsraelRailways-1d7.zip&quot;&gt;להורדה מכאן&lt;/a&gt;. גם כאן, הווידג׳ט מותאם למשתמשי מק בלבד (טיגר ומעלה). יתכן שבעתיד אכין גם חלופות לחלונות וללינוקס.&lt;/p&gt;
+&lt;p&gt;התפעול של הווידג׳ט קצת מסובך יותר מזה של מזג האויר, לכן צרפתי צילומי מסך עם הסברים קצרים.&lt;/p&gt;
 &lt;p&gt;במצב רגיל מוצגות תחנת המוצא, תחנת היעד, וזמני שלוש הרכבות הקרובות. הזמנים מתעדכנים אוטומטית, כך שבמצב המצולם למטה הרכבת של 7:53 תזוז ימינה בשעה 7:32 ותופיע בתור הרכבת הבאה.&lt;br /&gt;
 &lt;img src=&quot;https://yehudab.com/img/2010/06/israel-rail-widget-1.png&quot; alt=&quot;מצב רגיל&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;כדי לשנות את מצבי התצוגה או לבחור תחנות אחרות, יש להעביר את הסמן מעל הווידג&#39;ט ואז מופיע כפתור בצורת מפתח שבדי בפינת הימנית התחתונה. לחיצה עליו תפתח את סרגל הכלים, כפי שנראה למטה:&lt;br /&gt;
+&lt;p&gt;כדי לשנות את מצבי התצוגה או לבחור תחנות אחרות, יש להעביר את הסמן מעל הווידג׳ט ואז מופיע כפתור בצורת מפתח שבדי בפינת הימנית התחתונה. לחיצה עליו תפתח את סרגל הכלים, כפי שנראה למטה:&lt;br /&gt;
 &lt;img src=&quot;https://yehudab.com/img/2010/06/israel-rail-widget-2.png&quot; alt=&quot;כפתור פתיחת סרגל הכלים&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;אלו הכפתורים הזמינים במצב סרגל כלים פתוח:&lt;br /&gt;
 &lt;img src=&quot;https://yehudab.com/img/2010/06/israel-rail-widget-3.png&quot; alt=&quot;סרגל כלים פתוח&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;לבסוף, לאחר לחיצה על כפתור בחירת התחנות, יופיע הצד האחורי של הווידג&#39;ט:&lt;br /&gt;
+&lt;p&gt;לבסוף, לאחר לחיצה על כפתור בחירת התחנות, יופיע הצד האחורי של הווידג׳ט:&lt;br /&gt;
 &lt;img src=&quot;https://yehudab.com/img/2010/06/israel-rail-widget-4.png&quot; alt=&quot;הצד האחורי והחלפת תחנות&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;לאחר החלפת תחנה או בחירת יום חדש, מתבצעת התקשרות לאתר הרכבת שלוקחת מספר שניות. יש להתאזר בסבלות עד לקבלת זמני הרכבות המבוקשות.&lt;/p&gt;
-&lt;p&gt;הערה למי כבר מותקן אצלו הווידג&#39;ט הישן: לצערי הגדרות התחנות הישנות לא תואמות לאתר החדש, ולכן תצטרכו לבחור את התחנות מחדש בצד האחורי של הווידג&#39;ט לאחר ההתקנה.&lt;/p&gt;
+&lt;p&gt;הערה למי כבר מותקן אצלו הווידג׳ט הישן: לצערי הגדרות התחנות הישנות לא תואמות לאתר החדש, ולכן תצטרכו לבחור את התחנות מחדש בצד האחורי של הווידג׳ט לאחר ההתקנה.&lt;/p&gt;
 &lt;p&gt;בהזדמנות זו, תודה &lt;a href=&quot;http://hafontia.com/&quot;&gt;לבן נתן&lt;/a&gt; מעצב הפונט, ול Gilles Landry מעצב האיקונים.&lt;/p&gt;
 </content>
     </entry>
     
     <entry>
-      <title>עדכון לווידג&#39;ט רכבת ישראל</title>
+      <title>עדכון לווידג׳ט רכבת ישראל</title>
       <link href="https://yehudab.com/blog/2010/07/israel-rail-1-6/"/>
       <updated>2010-07-06T02:33:44Z</updated>
       <id>https://yehudab.com/blog/2010/07/israel-rail-1-6/</id>
-      <content type="html">&lt;p&gt;עדכון קל &lt;a href=&quot;http://yehudab.com/widgets/IsraelRailways-1d7.zip&quot;&gt;לווידג&#39;ט רכבת ישראל&lt;/a&gt;, שהפסיק להציג את זמני הרכבות בגלל תקלה בהעברת הפרמטרים לאתר הרכבת.&lt;br /&gt;
+      <content type="html">&lt;p&gt;עדכון קל &lt;a href=&quot;http://yehudab.com/widgets/IsraelRailways-1d7.zip&quot;&gt;לווידג׳ט רכבת ישראל&lt;/a&gt;, שהפסיק להציג את זמני הרכבות בגלל תקלה בהעברת הפרמטרים לאתר הרכבת.&lt;br /&gt;
 בהזדמנות זו, הוספתי הצגה של מצב הבקשה לשרת הרכבת, כך שניתן יהיה להבדיל בין מצב שבו הבקשה נשלחה ולא התקבלה תשובה (connecting), מצב שגיאה (bad response) ומצב שבו אין יותר רכבות לאותו היום (–:–).&lt;br /&gt;
 &lt;img src=&quot;https://yehudab.com/img/2010/07/israel-rail-1-6.png&quot; alt=&quot;מתחבר&quot; /&gt;&lt;br /&gt;
 תודה ליובל שדווח על התקלה.&lt;/p&gt;
@@ -438,11 +438,11 @@
     </entry>
     
     <entry>
-      <title>עדכון לווידג&#39;ט מזג האויר</title>
+      <title>עדכון לווידג׳ט מזג האויר</title>
       <link href="https://yehudab.com/blog/2010/07/weather-widget-1/"/>
       <updated>2010-07-29T18:56:39Z</updated>
       <id>https://yehudab.com/blog/2010/07/weather-widget-1/</id>
-      <content type="html">&lt;p&gt;בעקבות הוספת נתוני עומס החום החזויים באתר &lt;a href=&quot;http://www.israelweather.co.il/&quot;&gt;IsraelWeather&lt;/a&gt; נשבר ווידג&#39;ט מזג האויר. משתמשי מק מוזמנים לשדרג לגרסה 1.7 שמתקנת את התקלה, וכן מציגה את עומס החום החזוי באמצעות tooltip. &lt;a href=&quot;http://yehudab.com/widgets/WeatherIL-1d7.zip&quot;&gt;שדרגו מכאן&lt;/a&gt;.&lt;br /&gt;
+      <content type="html">&lt;p&gt;בעקבות הוספת נתוני עומס החום החזויים באתר &lt;a href=&quot;http://www.israelweather.co.il/&quot;&gt;IsraelWeather&lt;/a&gt; נשבר ווידג׳ט מזג האויר. משתמשי מק מוזמנים לשדרג לגרסה 1.7 שמתקנת את התקלה, וכן מציגה את עומס החום החזוי באמצעות tooltip. &lt;a href=&quot;http://yehudab.com/widgets/WeatherIL-1d7.zip&quot;&gt;שדרגו מכאן&lt;/a&gt;.&lt;br /&gt;
 &lt;img src=&quot;https://yehudab.com/img/2010/07/weather-widget-1.png&quot; alt=&quot;יהיה חם ומגניב&quot; /&gt;&lt;/p&gt;
 </content>
     </entry>
@@ -520,21 +520,21 @@
     </entry>
     
     <entry>
-      <title>עדכון לווידג&#39;ט מזג האויר</title>
+      <title>עדכון לווידג׳ט מזג האויר</title>
       <link href="https://yehudab.com/blog/2011/01/weather-1-8/"/>
       <updated>2011-01-07T17:04:19Z</updated>
       <id>https://yehudab.com/blog/2011/01/weather-1-8/</id>
-      <content type="html">&lt;p&gt;בעקבות הוספת נתוני הלחות היחסית באתר &lt;a href=&quot;http://www.israelweather.co.il/&quot;&gt;IsraelWeather&lt;/a&gt; נשבר ווידג&#39;ט מזג האויר. משתמשי מק מוזמנים לשדרג לגרסה 1.8 שמתקנת את התקלה, וכן מציגה את הלחות היחסית באמצעות tooltip. &lt;a href=&quot;http://yehudab.com/widgets/WeatherIL-1d8.zip&quot;&gt;שדרגו מכאן&lt;/a&gt;.&lt;br /&gt;
+      <content type="html">&lt;p&gt;בעקבות הוספת נתוני הלחות היחסית באתר &lt;a href=&quot;http://www.israelweather.co.il/&quot;&gt;IsraelWeather&lt;/a&gt; נשבר ווידג׳ט מזג האויר. משתמשי מק מוזמנים לשדרג לגרסה 1.8 שמתקנת את התקלה, וכן מציגה את הלחות היחסית באמצעות tooltip. &lt;a href=&quot;http://yehudab.com/widgets/WeatherIL-1d8.zip&quot;&gt;שדרגו מכאן&lt;/a&gt;.&lt;br /&gt;
 &lt;img src=&quot;https://yehudab.com/img/2011/01/weather-1-8.png&quot; alt=&quot;יהיה קר ורטוב&quot; /&gt;&lt;/p&gt;
 </content>
     </entry>
     
     <entry>
-      <title>עדכון לווידג&#39;ט מזג האוויר</title>
+      <title>עדכון לווידג׳ט מזג האוויר</title>
       <link href="https://yehudab.com/blog/2011/01/7dweathear/"/>
       <updated>2011-01-27T21:19:57Z</updated>
       <id>https://yehudab.com/blog/2011/01/7dweathear/</id>
-      <content type="html">&lt;p&gt;עוד עדכון לווידג&#39;ט מזג האויר. הפעם, בנוסף להתאמת הווידג&#39;ט בגלל השינויים באתר &lt;a href=&quot;http://www.israelweather.co.il/&quot;&gt;Israel Weather&lt;/a&gt;, גם תוספת של יומיים לתחזית. &lt;a href=&quot;http://yehudab.com/widgets/WeatherIL-2d0.zip&quot;&gt;ההורדה מכאן&lt;/a&gt;.&lt;br /&gt;
+      <content type="html">&lt;p&gt;עוד עדכון לווידג׳ט מזג האויר. הפעם, בנוסף להתאמת הווידג׳ט בגלל השינויים באתר &lt;a href=&quot;http://www.israelweather.co.il/&quot;&gt;Israel Weather&lt;/a&gt;, גם תוספת של יומיים לתחזית. &lt;a href=&quot;http://yehudab.com/widgets/WeatherIL-2d0.zip&quot;&gt;ההורדה מכאן&lt;/a&gt;.&lt;br /&gt;
 &lt;img src=&quot;https://yehudab.com/img/2011/01/7dweather.png&quot; alt=&quot;עוד שבוע שלג בירושלים&quot; /&gt;&lt;/p&gt;
 </content>
     </entry>
@@ -558,11 +558,11 @@
     </entry>
     
     <entry>
-      <title>עדכון לווידג&#39;ט מזג האויר</title>
+      <title>עדכון לווידג׳ט מזג האויר</title>
       <link href="https://yehudab.com/blog/2011/10/weather-il-2-1/"/>
       <updated>2011-10-22T19:21:04Z</updated>
       <id>https://yehudab.com/blog/2011/10/weather-il-2-1/</id>
-      <content type="html">&lt;p&gt;שוב שינוי קל בווידג&#39;ט מזג האויר בעקבות שינויים באתר &lt;a href=&quot;http://www.israelweather.co.il/&quot;&gt;IsraelWeather&lt;/a&gt;. מוזמנים להוריד את העדכון &lt;a href=&quot;http://yehudab.com/widgets/WeatherIL-2d1.zip&quot;&gt;מכאן&lt;/a&gt;.&lt;/p&gt;
+      <content type="html">&lt;p&gt;שוב שינוי קל בווידג׳ט מזג האויר בעקבות שינויים באתר &lt;a href=&quot;http://www.israelweather.co.il/&quot;&gt;IsraelWeather&lt;/a&gt;. מוזמנים להוריד את העדכון &lt;a href=&quot;http://yehudab.com/widgets/WeatherIL-2d1.zip&quot;&gt;מכאן&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;תודה לנרי על הדווח.&lt;/p&gt;
 </content>
     </entry>
@@ -802,9 +802,9 @@
     
     <entry>
       <title>עדיין פה</title>
-      <link href="https://yehudab.com/blog/2016/08/d7a2d793d799d799d79f-d7a4d794/"/>
+      <link href="https://yehudab.com/blog/2016/08/i-m-still-here/"/>
       <updated>2016-08-05T16:58:34Z</updated>
-      <id>https://yehudab.com/blog/2016/08/d7a2d793d799d799d79f-d7a4d794/</id>
+      <id>https://yehudab.com/blog/2016/08/i-m-still-here/</id>
       <content type="html">&lt;p&gt;עדכון קליל של גרסת הבלוג ל 4.5 ותבנית ל 2016.&lt;/p&gt;
 </content>
     </entry>

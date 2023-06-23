@@ -66,35 +66,29 @@
 
   
 
-  <div>
+  <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
     
         
-            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
-                <h2 class="mb-2">
-                    <a class="block" href="/blog/2020/07/11ty/">11ty</a>
-                </h2><a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
+        <div class="overflow-hidden rounded-md"><div class="aspect-w-3 aspect-h-2">
+                <img
+                class="w-full aspect-square object-cover object-center"
+                src="/img/2020/07/forestry-edit-post.png"
+                alt={props.instance.frontmatter.imgAlt}
+                loading="lazy"
+                />
+            </div><div class="px-3 pt-4 pb-6 ">
+                <h3 class="text-xl font-semibold text-center">
+                <a href="/blog/2020/07/11ty/">11ty</a>
+                </h3><a class="block inline float-left mt-2 comments-count mr-2 text-xs" 
                         href="/blog/2020/07/11ty/#comments"
                         title="2 תגובות">
                         💬 2
-                    </a><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="Fri Jul 31 2020 18:01:27 GMT+0000 (Coordinated Universal Time)">
+                    </a><div class="text-xs mt-2 created-date" datetime="Fri Jul 31 2020 18:01:27 GMT+0000 (Coordinated Universal Time)">
                     31 ביולי 2020
-                </span>
-
-                <a class="tag" href="/tag/SSG/">SSG</a><a class="tag" href="/tag/11ty/">11ty</a><a class="tag" href="/tag/בלוג/">בלוג</a>
-                <div class="clear-both"></div>
-
-                <div class="content post">
-                    <p>המעבר לשרת חדש גרם לי לחשוב שוב על WordPress והאם הוא עדיין מתאים לבלוגים ב-2020. כאשר התחלתי את האתר, PHP הייתה אחת משתי שפות התכנות המובילות לווב (יחד עם העולה החדש דאז Ruby on Rails). מאוחר יותר זו גם הייתה שפת התכנות בה עבדתי, וזה נראה לי טבעי להמשיך איתה. מאז עברתי לסביבה חדשה מבוססת NodeJS, ו-PHP נראית לי כמו עוף מוזר (שלא לאמר דינוזאור).</p>
-<p>אחרי בחינה של מספר אפשרויות, הגעתי למסקנה שהנתיב הטבעי להמשך הוא Static Site Generators (SSG). הרעיון כאן הוא ליצר את קבצי ה HTML של האתר מתוך התכנים הדינמיים, ומכאן והלאה ההגשה לדפדפן נעשית של קבצים סטטיים בלבד. מתוך <a href="https://gohugo.io/" title="HUGO">המגוון</a> <a href="https://jekyllrb.com/" title="Jekyll">הגדול</a> של <a href="https://vuepress.vuejs.org/" title="VuePress">האפשרויות</a>, בחרתי את <a href="https://www.11ty.dev/">Eleventy</a> (או בקיצור 11ty). הוא מבוסס NodeJS, ויחסית לאחיו הוותיק יותר (<a href="https://www.gatsbyjs.org/">Gatsby</a>), הוא פחות אפליקציה ויותר SSG טהור.</p>
-<p>ייצור האתר נעשה ע&quot;י הגדרת תבניות והפעלה שלהן על תוכן האתר שהוא קבצי Markdown. את קבצי התוכן שומרים ב git יחד עם הקוד של האתר, כך שנוצר סוג של בלבול בינהם. כדי לבצע את ההפרדה בצורה טובה יותר וגם בגלל <a href="https://talk.commonmark.org/t/explicit-rtl-indication-in-pure-markdown/286/4" title="דיון ארוך שבסופו הוחלט שלא עושים כלום ותסדרו לבד">התמיכה הבעייתית של Markdown בעברית</a>, בחרתי להשתמש ב Headless CMS: מערכת ניהול תוכן, שבה כתיבה התכנים מנותקת מההצגה שלהן (בניגוד ל WordPress שבה העריכה והתצוגה נעשים באותה מערכת). הרעיון כאן הוא לאפשר לכותבי תוכן שאינם מכירים קוד או אפילו Markdown לערוך את התוכן דרך עורך יעודי (סטייל WordPress), כאשר הקבצים נשלחים מהעורך אל ה git-repo. יתרון משמעותי ליושבים בציון (ובשאר המזרח התיכון) הוא האפשרות לתמיכה הרבה יותר טובה בעריכה ב-RTL.</p>
-<p>ל Headless CMS בחרתי את <a href="https://forestry.io/">Forestry</a> (ישנן אלטרנטיבות נוספות כמו: <a href="https://www.contentful.com/">Contentful</a>, <a href="https://www.netlifycms.org/">Netlify CMS</a>), שנראית לי הנקייה ביותר לשימוש. בניגוד ל Contentful, אין לה תמיכה מובנית ב-RTL, אבל באמצעות תפריט &quot;הפוך כוון כתיבה&quot; של Firefox, אפשר לערוך את התוכן בקלות. ל Forestry יש גם תמיכה נוחה בעריכת ה meta-data של הפוסטים (כותרת, קטגוריות וכד'), כך שמקבלים כמעט חוויה מלאה של עורך תוכן משולב, כמו שניתן לראות כאן:</p>
-<p><img src="/img/2020/07/forestry-edit-post.png" alt=""></p>
-<p>לצורך השוואה, כך נראה ה Markdown של אותו הפוסט ב GitHub:</p>
-<p><img src="/img/2020/07/github-edit-post.png" alt=""></p>
-<p>אז איך עושים את המעבר? על כך בפוסט הבא.</p>
-
-                </div>
-            </div>
+                </div><div class="mt-2 text-md">
+                המעבר לשרת חדש גרם לי לחשוב שוב על WordPress והאם הוא עדיין מתאים לבלוגים ב-2020. כאשר התחלתי את האתר, PHP הייתה אחת משתי שפות התכנות המובילות לווב (י&hellip; <a href="/blog/2020/07/11ty/">יש&nbsp;עוד</a>
+                </div></div>
+        </div>
         
     
 </div>
@@ -170,7 +164,7 @@
     
         <a class="tag mx-auto" href="/tag/speedtraps/">speedtraps&rlm; (1)</a>
     
-        <a class="tag mx-auto" href="/tag/ווידג&#39;טים/">ווידג&#39;טים&rlm; (10)</a>
+        <a class="tag mx-auto" href="/tag/ווידג׳טים/">ווידג׳טים&rlm; (10)</a>
     
         <a class="tag mx-auto" href="/tag/רכבת ישראל/">רכבת ישראל&rlm; (2)</a>
     

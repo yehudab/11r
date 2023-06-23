@@ -66,319 +66,281 @@
 
   
 
-  <div>
+  <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
     
         
-            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
-                <h2 class="mb-2">
-                    <a class="block" href="/blog/2020/08/11ty-howto-migrate/">מוורדפרס ל-11ty</a>
-                </h2><a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
+        <div class="overflow-hidden rounded-md"><div class="aspect-w-3 aspect-h-2">
+                <img
+                class="w-full aspect-square object-cover object-center"
+                src="/img/2020/08/export.png"
+                alt={props.instance.frontmatter.imgAlt}
+                loading="lazy"
+                />
+            </div><div class="px-3 pt-4 pb-6 ">
+                <h3 class="text-xl font-semibold text-center">
+                <a href="/blog/2020/08/11ty-howto-migrate/">מוורדפרס ל-11ty</a>
+                </h3><a class="block inline float-left mt-2 comments-count mr-2 text-xs" 
                         href="/blog/2020/08/11ty-howto-migrate/#comments"
                         title="תגובה אחת">
                         💬 1
-                    </a><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="Sat Aug 01 2020 15:00:54 GMT+0000 (Coordinated Universal Time)">
+                    </a><div class="text-xs mt-2 created-date" datetime="Sat Aug 01 2020 15:00:54 GMT+0000 (Coordinated Universal Time)">
                     1 באוגוסט 2020
-                </span>
-
-                <a class="tag" href="/tag/Nunjucks/">Nunjucks</a><a class="tag" href="/tag/Comments/">Comments</a><a class="tag" href="/tag/11ty/">11ty</a><a class="tag" href="/tag/וורדפרס/">וורדפרס</a>
-                <div class="clear-both"></div>
-
-                <div class="content post">
-                    <p>אז אחרי שמחליטים על מעבר ל-11ty, צריך לדאוג לשמר את תוכן הפוסטים והתגובות.</p>
-<p>בשלב הראשון של המעבר יש צורך ליצא את כל התוכן מוורדפרס ל-Markdown. לטובת זה השתמשתי בפלאגאין לוורדפרס שפותח דווקא עבור Gatsby ונקרא: <a href="https://wordpress.org/plugins/wp-gatsby-markdown-exporter/">WP Gatsby Markdown Exporter</a>. בקישור ניתן לקרוא כיצד להפעיל אותו. אני השתמשתי באופציית ה <a href="https://wp-cli.org/" title="WordPress Command Line">WP-CLI</a>. משום מה הייתה לו בעיה ליצא את התמונות, ולכן הפעלתי את האופציות שמנטרלות את החלק הזה. הפקודה הסופית הייתה:</p>
-<pre class="language-bash"><code class="language-bash">wp gatsby-markdown-export <span class="token parameter variable">--skip_copy_uploads</span> <span class="token parameter variable">--skip_original_images</span> <span class="token parameter variable">--directory</span><span class="token operator">=</span>/var/www/html/md-export</code></pre>
-<p>זה מייצר אוסף של קבצי Markdown, שנראה בערך ככה:</p>
-<p><img src="/img/2020/08/export.png" alt="היררכיית קבצים לאחר היצוא מוורפרס"></p>
-<p>שמות הקבצים בכל תיקייה נלקחים מה slag, ולמזלי הקפדתי לאורך השנים להשתמש בשמות באנגלית, כך שכעת קל למצוא את הפוסטים לפי שנה, חודש וה slag.</p>
-<p>בשלב הבא בחרתי ב starter project מתוך <a href="https://jamstackthemes.dev/ssg/eleventy/" title="Eleventy Themes">דף התבניות של Eleventy</a>. המבחר די דל, ואין עדיין אף תבנית מותאמת עברית. לבסוף, בחרתי בתבנית <a href="https://github.com/reeseschultz/11r">11r</a>.  זוהי תבנית dark mode, ומבוססת <a href="https://tailwindcss.com/">Tailwind CSS</a>, ורוב היפוכי הכוון הגיעו out of the box, ברגע שהוספתי <code>dir=rtl</code> לתגית הראשית של הדף. את התוצאה אחרי הגיור תוכלו למזלג <a href="https://github.com/yehudab/11r">מהריפו שלי</a>. את הפוסטים בהיררכיה המקורית מעלים לתיקיית <code>src/posts</code>, ואחרי מעקב אחרי ההוראות בREADME, אפשר לראות את התוצאה.</p>
-<p>החלק היותר מורכב בתהליך הוא תמיכה בתגובות. כאן עדיין אין פתרון בית-ספר, ונאלצתי לאלתר <a href="https://github.com/dKab/blog/blob/master/_includes/comments.liquid">מכמה</a> <a href="https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html">מקורות</a>. הבעיה הבסיסית היא שאתר סטטי מטיבו אינו מאפשר הוספת תוכן דינמי כמו תגובות. אחד הפתרון האפשריים הוא שימוש בתוסף צד שלישי כמו <a href="https://disqus.com/">Disqus</a>, אבל <a href="https://fatfrogmedia.com/delete-disqus-comments-wordpress/" title="Why I Deleted Disqus and Why You Should Too">הדעה</a> <a href="https://markosaric.com/remove-disqus/" title="Why you should remove Disqus from your site">המקובלת</a> בקרב בעלי האתרים הסטטים הוא שזה לא לעניין, הן בגלל <a href="https://markosaric.com/remove-disqus/#site-speed-and-performance">תוספת הקוד לכל דף</a>, והן בגלל טענות על <a href="https://twitter.com/martingund/status/1207327648093003777" title="disqus shared the personal data of tens of millions of users ">הפרת פרטיות של משתמשי המערכת</a>.</p>
-<p>האפשרות שאני בחרתי בה היא שימוש ב <a href="https://staticman.net/">Staticman</a>. הרעיון כאן הוא שכל תגובה היא בעצם קובץ שנשמר גם כן בgit, ומנגנון אישור התגובה נעשה באופן דומה לאישור Pull Request. המנוע של Staticman דואג לייצר את ה PR-ים, כך שמבחינת המשתמשים באתר שליחת התגובה מתבצעת באמצעות טופס על הדף, בדומה לוורדפרס.</p>
-<p>בנוסף לזה, יש צורך לייבא ולשמר את התגובות מהבלוג הישן. כאן השתמשתי <a href="https://github.com/arthurlacoste/wordpress-comments-jekyll-staticman">בכלי</a> שבמקור נכתב לטובת העברת תגובות לאתרים סטטים מבוססי <a href="https://jekyllrb.com/">Jekyll</a>. נדרשו שינויים קלים, אבל בסופו של דבר גם כאן זה מסתכם בהרצה לפי ה README, והוספה של כל קבצי התגובות תחת התיקיה <a href="https://github.com/yehudab/11r/tree/master/11r/src/globals/comments"><code>src/globals/comments</code></a> כך שכל התגובות לפוסט מסויים מרוכזות תחת תיקיה לפי ה slag של הפוסט. מי שמעוניין יכול לקרוא עוד על <a href="https://www.11ty.dev/docs/data-global/">מודל הנתונים של Eleventy</a>.</p>
-<p>התוספת האחרונה היא מעט קוד שידע לשלוף את התגובות המתאימות לכל פוסט ולהציג אותן לפי ההיררכיה המקורית. הקוד הזה מחולק בין קוד JS, שאותו ניתן למצוא ב <code>/filters/comments-tree.js</code> ונראה כך:</p>
-<pre class="language-js"><code class="language-js">module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">obj</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><br>  <span class="token keyword">const</span> allComments <span class="token operator">=</span> obj <span class="token operator">?</span> Object<span class="token punctuation">.</span><span class="token function">values</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span><br>  <span class="token keyword">const</span> commentsById <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span><br>  allComments<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">c</span> <span class="token operator">=></span> <span class="token punctuation">{</span><br>    c<span class="token punctuation">.</span>id <span class="token operator">=</span> c<span class="token punctuation">.</span>id <span class="token operator">||</span> c<span class="token punctuation">.</span>_id<span class="token punctuation">;</span><br>    commentsById<span class="token punctuation">[</span>c<span class="token punctuation">.</span>id<span class="token punctuation">]</span> <span class="token operator">=</span> c<span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>  <span class="token keyword">const</span> rootComments <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span><br>  allComments<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">c</span> <span class="token operator">=></span> <span class="token punctuation">{</span><br>    <span class="token keyword">if</span> <span class="token punctuation">(</span>c<span class="token punctuation">.</span>parentId <span class="token operator">&amp;&amp;</span> c<span class="token punctuation">.</span>parentId <span class="token operator">!==</span> <span class="token string">"0"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>      <span class="token keyword">const</span> parent <span class="token operator">=</span> commentsById<span class="token punctuation">[</span>c<span class="token punctuation">.</span>parentId<span class="token punctuation">]</span><span class="token punctuation">;</span><br>      <span class="token keyword">if</span> <span class="token punctuation">(</span>parent<span class="token punctuation">)</span> <span class="token punctuation">{</span><br>        parent<span class="token punctuation">.</span>replies <span class="token operator">=</span> parent<span class="token punctuation">.</span>replies <span class="token operator">||</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span><br>        parent<span class="token punctuation">.</span>replies<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span><br>      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span><br>        console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">can't find parentID: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>c<span class="token punctuation">.</span>parentId<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> for ID: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>c<span class="token punctuation">.</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>      <span class="token punctuation">}</span><br>    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span><br>      rootComments<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token punctuation">}</span><br><br>  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>  <span class="token keyword">return</span> rootComments<span class="token punctuation">;</span><br><span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
-<p>והחלק המשלים שנמצא בתבנית התגובות <a href="https://github.com/yehudab/11r/blob/master/src/includes/comments.njk"><code>src/includes/comments.njk</code></a>. על ריקורסיה ב nunjucks למדתי <a href="https://github.com/mozilla/nunjucks/issues/416#issuecomment-206335032">מהissue הזה</a>. עכשיו ניתן לראות גם את התגובות בהתאם לדו-שיח שנוהל בזמנו:</p>
-<p><img src="/img/2020/09/comments-dark.png" alt="תגובות משורשרות"></p>
-<p>בפוסט הבא ארחיב על הכנת הטופס לתגובות והאינטגרציה עם הבוט של Staticman.</p>
-
-                </div>
-            </div>
+                </div><div class="mt-2 text-md">
+                אז אחרי שמחליטים על מעבר ל-11ty, צריך לדאוג לשמר את תוכן הפוסטים והתגובות. בשלב הראשון של המעבר יש צורך ליצא את כל התוכן מוורדפרס ל-Markdown. לטובת זה&hellip; <a href="/blog/2020/08/11ty-howto-migrate/">יש&nbsp;עוד</a>
+                </div></div>
+        </div>
         
     
         
-            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
-                <h2 class="mb-2">
-                    <a class="block" href="/blog/2020/07/docker/">עוברים דירה</a>
-                </h2><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="Sat Jul 18 2020 12:06:54 GMT+0000 (Coordinated Universal Time)">
+        <div class="overflow-hidden rounded-md"><div class="aspect-w-3 aspect-h-2">
+                <img
+                class="w-full aspect-square object-cover object-center"
+                src="/img/2020/07/Docker.PNG"
+                alt={props.instance.frontmatter.imgAlt}
+                loading="lazy"
+                />
+            </div><div class="px-3 pt-4 pb-6 ">
+                <h3 class="text-xl font-semibold text-center">
+                <a href="/blog/2020/07/docker/">עוברים דירה</a>
+                </h3><div class="text-xs mt-2 created-date" datetime="Sat Jul 18 2020 12:06:54 GMT+0000 (Coordinated Universal Time)">
                     18 ביולי 2020
-                </span>
-
-                <a class="tag" href="/tag/Docker/">Docker</a><a class="tag" href="/tag/Hosting/">Hosting</a><a class="tag" href="/tag/וורדפרס/">וורדפרס</a><a class="tag" href="/tag/לינוקס/">לינוקס</a><a class="tag" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a>
-                <div class="clear-both"></div>
-
-                <div class="content post">
-                    <p><img src="/img/2020/07/Docker.PNG" alt="Docker">
-אחרי שלוש שנים שבהן <a href="https://yehudab.com/blog/2017/06/yet-another-blog-upgrade/">האתר הזה רץ מעל שרות האחסון של Scaleway</a>, קיבלתי מהם הודעה שהחומרה שעליה אני רץ (dual core ARM CPU, 2GB RAM, 50GB SSD) תפסיק לעבוד בעוד מספר חודשים. הם הציעו לי לעבור באותו מחיר לשרת VPS מבוסס אינטל, אלא שעוד לפני שהספקתי להגיב, קיבלתי את המכתב שזו כותרתו: We’re evolving our Instances prices, או בתרגום חופשי: נמאס לנו להיות הכי זולים בשוק, אז נעלה את המחיר ב 66%.</p>
-<p>החלטתי שזה הזמן לחפש שרות אכסון חדש, והגעתי דרך חבר לעבודה ל <a href="https://www.ovh.ie/">OVHcloud</a>. השרת הבסיסי נראה על הנייר חלש יותר (מעבד אחד בלבד ודיסק קטן יותר), אבל בבדיקות ביצועים בשטח הוא משמעותית יותר מהיר. זה מורגש גם בעבודת ההתקנה (פרטים בהמשך) וגם בזמן ריצה, כפי שנמדד ע״י StatusCake. המחיר זהה למחיר (הישן) של Scaleway: שלושה אירו לחודש, בלי התחייבות.</p>
-<p>השרת שלי מריץ בנוסף גם שני שרתי node קטנים, כך שהעברת כל הטוב הזה היא לא פשוטה, ולכן החלטתי הפעם ללכת על Docker. למי שלא מכיר את Docker, מומלץ לקרוא את סדרת המאמרים באתר של רן בר-זיק. שם הוא גם <a href="https://internet-israel.com/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%D7%9D/docker/%D7%95%D7%95%D7%A8%D7%93%D7%A4%D7%A8%D7%A1-%D7%A2%D7%9C-docker/">מדגים התקנת WordPress</a>. אני בחרתי לעקוב אחרי <a href="https://github.com/mjstealey/wordpress-nginx-docker">המדריך של Michael J. Stealey</a> ב GitHub, שממנו גם עשיתי פורק לריפו משלי. המדריך הזה קצת יותר מתאים לסביבה הנוכחית שלי שכוללת MariaDB במקום MySQL, וגם סקריפטים מוכנים לתמיכה ב https, דרך השרות של <a href="https://letsencrypt.org/">Let’s Encrypt</a>.</p>
-<p>רוב התהליך עוקב אחרי ה README, אבל מכוון שלא התחלתי מאתר חדש כפי שהמדריך מתאר, ביצעתי מספר שינויים, כמו שיחזור של ה DB ומבנה הקבצים מהשרת הנוכחי. זו הייתה טבילת האש הראשונה ל restic שהזכרתי <a href="https://yehudab.com/blog/2020/03/php-7-4/">באחד הפוסטים הקודמים</a> והוא הוכיח את עצמו מצויין. שחזור של MySQL שרץ בתוך קונייטנר הוא קצת מורכב, וגם כאן <a href="https://internet-israel.com/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%D7%9D/docker/%D7%93%D7%95%D7%A7%D7%A8-%D7%9B%D7%A0%D7%99%D7%A1%D7%94-%D7%9C%D7%AA%D7%95%D7%9A-%D7%A7%D7%95%D7%A0%D7%98%D7%99%D7%99%D7%A0%D7%A8-%D7%95%D7%A4%D7%A2%D7%95%D7%9C%D7%95%D7%AA-%D7%91%D7%AA%D7%95%D7%9B/">יש לבר-זיק מדריך טוב</a>.</p>
-<p>אז נשארו לי כמה קצוות לסגור, כמו חידוש אוטומטי של הסרטיפיקטים ב Let’s Encrypt, והפעלה של גיבויים, אבל בסך הכל נראה שדוקר עושה עבודה טובה, והמעבר הבא יצריך ״רק״:</p>
-<pre class="language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">docker-compose</span> up <span class="token parameter variable">-d</span></code></pre>
-
-                </div>
-            </div>
+                </div><div class="mt-2 text-md">
+                אחרי שלוש שנים שבהן האתר הזה רץ מעל שרות האחסון של Scaleway, קיבלתי מהם הודעה שהחומרה שעליה אני רץ (dual core ARM CPU, 2GB RAM, 50GB SSD) תפסיק לעבוד &hellip; <a href="/blog/2020/07/docker/">יש&nbsp;עוד</a>
+                </div></div>
+        </div>
         
     
         
-            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
-                <h2 class="mb-2">
-                    <a class="block" href="/blog/2020/03/php-7-4/">php 7.4</a>
-                </h2><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="2020-03-01T22:07:57+02:00">
+        <div class="overflow-hidden rounded-md"><div class="aspect-w-3 aspect-h-2">
+                <img
+                class="w-full aspect-square object-cover object-center"
+                src="/img/2020/03/upgrade.png"
+                alt={props.instance.frontmatter.imgAlt}
+                loading="lazy"
+                />
+            </div><div class="px-3 pt-4 pb-6 ">
+                <h3 class="text-xl font-semibold text-center">
+                <a href="/blog/2020/03/php-7-4/">php 7.4</a>
+                </h3><div class="text-xs mt-2 created-date" datetime="2020-03-01T22:07:57+02:00">
                     1 במרץ 2020
-                </span>
-
-                <a class="tag" href="/tag/nano/">nano</a><a class="tag" href="/tag/php/">php</a><a class="tag" href="/tag/vi/">vi</a><a class="tag" href="/tag/וורדפרס/">וורדפרס</a><a class="tag" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a><a class="tag" href="/tag/לינוקס/">לינוקס</a>
-                <div class="clear-both"></div>
-
-                <div class="content post">
-                    <p>חלפה למעלה משנה מאז ש<a href="https://www.php.net/eol.php">התמיכה ב-7.0 php הופסקה</a>, וזה הזמן לשדרג את הבלוג לגרסה 7.4. כרגיל, צריך לקרוא את כל ה breaking changes, אבל אם הבלוג והתוספים מתוחזקים לגרסה העדכנית ביותר, אפשר לסמוך בדרך כלל שהכל יעובד. גיבוי של הקוד והדאטה רצוי גם כן.</p>
-<p>את הגיבויים אני מבצע לאחרונה בעזרת <a href="https://restic.net/">restic</a>, כאשר הקבצים מועלים לאכסון (הזול יחסית) של <a href="https://www.backblaze.com/b2/cloud-storage.html">Backblaze B2</a>.</p>
-<p>אחרי שמכניסים את הגדרות ל restic למשתני סביבה, סקריפט הגיבוי פשוט למדי:</p>
-<pre class="language-bash"><code class="language-bash"><span class="token shebang important">#!/bin/bash</span><br><span class="token assign-left variable">d</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">date</span> +%Y-%m-%d<span class="token variable">)</span></span><br>mysqldump <span class="token parameter variable">-u</span> *** <span class="token parameter variable">-p</span> *** <span class="token operator">></span> ~/backup/sql/yehudab-<span class="token variable">${d}</span>.sql<br><span class="token function">gzip</span> ~/backup/sql/*.sql<br><span class="token function">tar</span> <span class="token parameter variable">-czf</span> ~/backup/site/yehudab.com-<span class="token variable">${d}</span>.tar.gz yehudab.com<br>restic backup ~/backup</code></pre>
-<p>לצורך השדרוג, עקבתי אחרי <a href="https://www.cloudbooklet.com/upgrade-php-version-to-php-7-4-on-ubuntu/">המדריך ב CloudBooklet</a>. מכוון שאני מריץ php דרך ngnix, ביצעתי את הסעיפים הרלוונטים לגרסת fpm.</p>
-<p>אה, וכמובן, להשתמש ב vi, כי nano זה לחלשים.</p>
-<p>אחרי השדרוג, אני מנסה לשמור את הפוסט הזה ובום error 500. בדיקה מהירה בלוג של nginx על השרת מגלה ששכחתי להתקין את php7.4-memcache שהמדריך הנ&quot;ל לא מחשיב כ common extension. הרצת:</p>
-<pre class="language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> php7.4-memcache</code></pre>
-<p>וריסטרט לשרת פתרו את הבעיה.<br>
-<img src="/img/2020/03/upgrade.png" alt="שדרוג"></p>
-
-                </div>
-            </div>
+                </div><div class="mt-2 text-md">
+                חלפה למעלה משנה מאז שהתמיכה ב-7.0 php הופסקה, וזה הזמן לשדרג את הבלוג לגרסה 7.4. כרגיל, צריך לקרוא את כל ה breaking changes, אבל אם הבלוג והתוספים מתו&hellip; <a href="/blog/2020/03/php-7-4/">יש&nbsp;עוד</a>
+                </div></div>
+        </div>
         
     
         
-            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
-                <h2 class="mb-2">
-                    <a class="block" href="/blog/2019/12/2020/">2020</a>
-                </h2><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="Tue Dec 31 2019 21:33:55 GMT+0000 (Coordinated Universal Time)">
+        <div class="overflow-hidden rounded-md"><div class="aspect-w-3 aspect-h-2">
+                <img
+                class="w-full aspect-square object-cover object-center"
+                src="/img/2019/12/New-Year-2020-PNG-File.png"
+                alt={props.instance.frontmatter.imgAlt}
+                loading="lazy"
+                />
+            </div><div class="px-3 pt-4 pb-6 ">
+                <h3 class="text-xl font-semibold text-center">
+                <a href="/blog/2019/12/2020/">2020</a>
+                </h3><div class="text-xs mt-2 created-date" datetime="Tue Dec 31 2019 21:33:55 GMT+0000 (Coordinated Universal Time)">
                     31 בדצמבר 2019
-                </span>
-
-                <a class="tag" href="/tag/וורדפרס/">וורדפרס</a>
-                <div class="clear-both"></div>
-
-                <div class="content post">
-                    <p><img src="/img/2019/12/New-Year-2020-PNG-File.png" alt="2020">
-שנה חדשה היא הזדמנות טובה להחלפת תבנית. אז ברוכים הבאים ל-2020, או כמו ש WordPress קוראים לה: <a href="https://wordpress.org/themes/twentytwenty/">TwentyTwenty</a>.</p>
-<p>התבנית קצת יותר ״חמה״ לעומת TwentyNineteen המינימליסטית שבה השתמשתי קודם. התרגום לעברית והתמיכה בכיווניות זקוקים לקצת ״שיוף״, אבל התבנית לגמרי שימושית כפי שהיא.</p>
-<p>אז שתהיה לכולם שנה טובה ועשור טוב. מקווה (הפעם באמת) ליצור תוכן מעניין יותר במהלך השנה.</p>
-<p>Image license: <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a> pngall.com</p>
-
-                </div>
-            </div>
+                </div><div class="mt-2 text-md">
+                שנה חדשה היא הזדמנות טובה להחלפת תבנית. אז ברוכים הבאים ל-2020, או כמו ש WordPress קוראים לה: TwentyTwenty. התבנית קצת יותר ״חמה״ לעומת TwentyNineteen&hellip; <a href="/blog/2019/12/2020/">יש&nbsp;עוד</a>
+                </div></div>
+        </div>
         
     
         
-            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
-                <h2 class="mb-2">
-                    <a class="block" href="/blog/2018/12/wordpress-5-0/">וורדפרס 5.0</a>
-                </h2><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="2018-12-08T14:09:55+02:00">
+        <div class="overflow-hidden rounded-md"><div class="aspect-w-3 aspect-h-2">
+                <img
+                class="w-full aspect-square object-cover object-center"
+                src="/img/2017/06/blog.jpg"
+                alt={props.instance.frontmatter.imgAlt}
+                loading="lazy"
+                />
+            </div><div class="px-3 pt-4 pb-6 ">
+                <h3 class="text-xl font-semibold text-center">
+                <a href="/blog/2018/12/wordpress-5-0/">וורדפרס 5.0</a>
+                </h3><div class="text-xs mt-2 created-date" datetime="2018-12-08T14:09:55+02:00">
                     8 בדצמבר 2018
-                </span>
-
-                <a class="tag" href="/tag/וורדפרס/">וורדפרס</a><a class="tag" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a>
-                <div class="clear-both"></div>
-
-                <div class="content post">
-                    <p>גרסה חדשה של וורדפרס יצאה השבוע, והבלוג קיבל את השדרוג המתחייב. על הדרך, עברתי לתבנית 2019 החדשה (הקודמת הייתה 2016).</p>
-<p><img src="/img/2017/06/blog.jpg" alt="">
-בקרוב פוסט עם תוכן אמיתי ותמונה לא ממוחזרת.</p>
-
-                </div>
-            </div>
+                </div><div class="mt-2 text-md">
+                גרסה חדשה של וורדפרס יצאה השבוע, והבלוג קיבל את השדרוג המתחייב. על הדרך, עברתי לתבנית 2019 החדשה (הקודמת הייתה 2016).&hellip; <a href="/blog/2018/12/wordpress-5-0/">יש&nbsp;עוד</a>
+                </div></div>
+        </div>
         
     
         
-            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
-                <h2 class="mb-2">
-                    <a class="block" href="/blog/2017/07/http2/">HTTP/2</a>
-                </h2><a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
+        <div class="overflow-hidden rounded-md"><div class="aspect-w-3 aspect-h-2">
+                <img
+                class="w-full aspect-square object-cover object-center"
+                src="/img/2017/07/nginx-logs.jpg"
+                alt={props.instance.frontmatter.imgAlt}
+                loading="lazy"
+                />
+            </div><div class="px-3 pt-4 pb-6 ">
+                <h3 class="text-xl font-semibold text-center">
+                <a href="/blog/2017/07/http2/">HTTP/2</a>
+                </h3><a class="block inline float-left mt-2 comments-count mr-2 text-xs" 
                         href="/blog/2017/07/http2/#comments"
                         title="תגובה אחת">
                         💬 1
-                    </a><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="2017-07-07T17:18:52+03:00">
+                    </a><div class="text-xs mt-2 created-date" datetime="2017-07-07T17:18:52+03:00">
                     7 ביולי 2017
-                </span>
-
-                <a class="tag" href="/tag/וורדפרס/">וורדפרס</a><a class="tag" href="/tag/לינוקס/">לינוקס</a><a class="tag" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a>
-                <div class="clear-both"></div>
-
-                <div class="content post">
-                    <p>עוד שדרוג קטן לבלוג.<br>
-הפעם העברתי את השרת מ apache ל nginx, ועל הדרך הפעלתי HTTP/2.<br>
-זה אמור לשפר את הביצועים, למרות שאני לא ממש מרגיש בזה בנתיים.</p>
-<p><img src="/img/2017/07/nginx-logs.jpg" alt="Hex dump of nginx logs"></p>
-<p>למעוניינים, <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-with-http-2-support-on-ubuntu-16-04">המדריך הזה</a> מסביר על התקנת nginx, והגדרות HTTP/2. <a href="http://nginxlibrary.com/wordpress-permalinks/">כאן</a> תמצאו הסבר על ההגדרות הדרושות ב nginx לטובת הפעלת WordPress במקום mod_rewrite של apache.</p>
-<p>התוצאה הסופית של כל ההגדרות האלה, כפי שנשמרה בקובץ ‎/etc/nginx/sites-available/default היא זו:</p>
-<pre class="language-nginx"><code class="language-nginx"><span class="token directive"><span class="token keyword">server</span></span> <span class="token punctuation">{</span><br><br>        <span class="token directive"><span class="token keyword">listen</span> <span class="token number">443</span> ssl http2 default_server</span><span class="token punctuation">;</span><br>        <span class="token directive"><span class="token keyword">listen</span> [::]:443 ssl http2 default_server</span><span class="token punctuation">;</span><br>        <span class="token directive"><span class="token keyword">include</span> snippets/gzip.conf</span><span class="token punctuation">;</span><br><br>        <span class="token directive"><span class="token keyword">ssl_certificate</span> /etc/nginx/ssl/live/yehudab.com/fullchain.pem</span><span class="token punctuation">;</span><br>        <span class="token directive"><span class="token keyword">ssl_certificate_key</span> /etc/nginx/ssl/live/yehudab.com/privkey.pem</span><span class="token punctuation">;</span><br>        <span class="token directive"><span class="token keyword">ssl_dhparam</span> /etc/nginx/ssl/live/yehudab.com/dhparam.pem</span><span class="token punctuation">;</span><br><br>        <span class="token directive"><span class="token keyword">root</span> /var/www/yehudab.com</span><span class="token punctuation">;</span><br><br>        <span class="token directive"><span class="token keyword">index</span> index.html index.htm index.php index.nginx-debian.html</span><span class="token punctuation">;</span><br><br>        <span class="token directive"><span class="token keyword">server_name</span> yehudab.com</span><span class="token punctuation">;</span><br><br>        <span class="token directive"><span class="token keyword">location</span> /</span> <span class="token punctuation">{</span><br>                <span class="token directive"><span class="token keyword">try_files</span> <span class="token variable">$uri</span> <span class="token variable">$uri</span>/ =404</span><span class="token punctuation">;</span><br>        <span class="token punctuation">}</span><br><br>        <span class="token directive"><span class="token keyword">location</span> /blog/</span> <span class="token punctuation">{</span><br>                <span class="token directive"><span class="token keyword">try_files</span> <span class="token variable">$uri</span> <span class="token variable">$uri</span>/ /blog/index.php?<span class="token variable">$args</span></span><span class="token punctuation">;</span><br>        <span class="token punctuation">}</span><br>        <span class="token directive"><span class="token keyword">location</span> ~ \.php$</span> <span class="token punctuation">{</span><br>                <span class="token directive"><span class="token keyword">include</span> snippets/fastcgi-php.conf</span><span class="token punctuation">;</span><br>                <span class="token directive"><span class="token keyword">fastcgi_pass</span> unix:/run/php/php7.0-fpm.sock</span><span class="token punctuation">;</span><br>        <span class="token punctuation">}</span><br><br>        <span class="token directive"><span class="token keyword">location</span> ~ /\.ht</span> <span class="token punctuation">{</span><br>                <span class="token directive"><span class="token keyword">deny</span> all</span><span class="token punctuation">;</span><br>        <span class="token punctuation">}</span><br>        <span class="token directive"><span class="token keyword">include</span> snippets/expires.conf</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><br><span class="token directive"><span class="token keyword">server</span></span> <span class="token punctuation">{</span><br>       <span class="token directive"><span class="token keyword">listen</span>         <span class="token number">80</span></span><span class="token punctuation">;</span><br>       <span class="token directive"><span class="token keyword">listen</span>    [::]:80</span><span class="token punctuation">;</span><br>       <span class="token directive"><span class="token keyword">server_name</span>    yehudab.com</span><span class="token punctuation">;</span><br>       <span class="token directive"><span class="token keyword">return</span>         <span class="token number">301</span> https://<span class="token variable">$server_name</span><span class="token variable">$request_uri</span></span><span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
-<p>לאחר סיום ההגדרות, ניתן לוודא את תמיכת האתר ל HTTP/2 באמצעות <a href="https://tools.keycdn.com/http2-test">דף הבדיקה של KeyCDN</a>.</p>
-
-                </div>
-            </div>
+                </div><div class="mt-2 text-md">
+                עוד שדרוג קטן לבלוג. הפעם העברתי את השרת מ apache ל nginx, ועל הדרך הפעלתי HTTP/2. זה אמור לשפר את הביצועים, למרות שאני לא ממש מרגיש בזה בנתיים.&hellip; <a href="/blog/2017/07/http2/">יש&nbsp;עוד</a>
+                </div></div>
+        </div>
         
     
         
-            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
-                <h2 class="mb-2">
-                    <a class="block" href="/blog/2017/06/yet-another-blog-upgrade/">שוב שדרוג לבלוג</a>
-                </h2><a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
+        <div class="overflow-hidden rounded-md"><div class="aspect-w-3 aspect-h-2">
+                <img
+                class="w-full aspect-square object-cover object-center"
+                src="/img/2017/06/blog.jpg"
+                alt={props.instance.frontmatter.imgAlt}
+                loading="lazy"
+                />
+            </div><div class="px-3 pt-4 pb-6 ">
+                <h3 class="text-xl font-semibold text-center">
+                <a href="/blog/2017/06/yet-another-blog-upgrade/">שוב שדרוג לבלוג</a>
+                </h3><a class="block inline float-left mt-2 comments-count mr-2 text-xs" 
                         href="/blog/2017/06/yet-another-blog-upgrade/#comments"
                         title="2 תגובות">
                         💬 2
-                    </a><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="2017-06-24T20:43:45+03:00">
+                    </a><div class="text-xs mt-2 created-date" datetime="2017-06-24T20:43:45+03:00">
                     24 ביוני 2017
-                </span>
-
-                <a class="tag" href="/tag/וורדפרס/">וורדפרס</a><a class="tag" href="/tag/לינוקס/">לינוקס</a><a class="tag" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a>
-                <div class="clear-both"></div>
-
-                <div class="content post">
-                    <p><em>בעידן שבו הבלוגים הולכים ונעלמים, קצת מוזר לכתוב פוסט חדש כאן ולא בפייסבוק, או טוויטר. בכל זאת, אם מישהו עדיין מקבל עדכונים על פוסטים חדשים, או שסתם הגיע לכאן מגוגל, נסו לקרוא את הפוסט כאילו עכשיו 2006 ובלוגים זה הדבר הכי מגניב שיש.</em></p>
-<p><img src="/img/2017/06/blog.jpg" alt="בלוג"></p>
-<p>דבר ראשון, בקטנה, שדרוג מתחייב לגרסה האחרונה (4.8).</p>
-<p>חוץ מזה, תוסף חדש: <a href="https://wordpress.org/plugins/wordpress-seo/">Yoast SEO</a>, כי פייסבוק דורש מטה תגיות, וזה הכי קל.</p>
-<p>אבל הכי חשוב, החלפתי את שרות האירוח מאכסון משותף על <a href="https://www.nearlyfreespeech.net">NearlyFreeSpeach</a> לשרת וירטואלי פרטי של <a href="https://www.scaleway.com/armv8-cloud-servers/">Scaleway</a>. בחרתי בשרת מבוסס ARMv8 כך שהמחיר יוצא כמעט אותו דבר (3$ בראשון, 3€ באחרון), כשכאן אני מקבל שרת פרטי, יכול להריץ עליו מה שאני רוצה, וגם הביצועים טובים הרבה יותר. כמובן, אני צריך לדאוג לבד לשדרוגי תוכנה, אבטחה, גיבויים וכד׳, אבל זה חלק מהעניין. המדריך ב <a href="https://www.linuxbabe.com/ubuntu/install-wordpress-ubuntu-16-04-apache">LinuxBabe</a> יכול לעזור כאן.</p>
-<p>Scaleway לא כ״כ אוהבים ששולחים מייל מהשרת שלהם (כדי שלא ישמשו לספאם), אז נרשמתי לשירות <a href="https://www.mailgun.com">mailgun</a> שמאפשר לשלוח עד 10,000 מיילים בחודש בחינם. הוא עובד יחד עם התוסף המקביל ב WordPress. באתר wpbeginner יש <a href="http://www.wpbeginner.com/wp-tutorials/how-to-fix-wordpress-not-sending-email-issue/">הסבר מפורט</a> איך להשתמש בשניהם.</p>
-<p>דבר אחרון, העברתי את האתר לעבוד דרך https, כי בכל זאת 2017. המדריך הנ״ל מ LinuxBabe מסביר איך לעשות את זה בחינם דרך <a href="https://letsencrypt.org">Let's Encrypt</a>.</p>
-
-                </div>
-            </div>
+                </div><div class="mt-2 text-md">
+                בעידן שבו הבלוגים הולכים ונעלמים, קצת מוזר לכתוב פוסט חדש כאן ולא בפייסבוק, או טוויטר. בכל זאת, אם מישהו עדיין מקבל עדכונים על פוסטים חדשים, או שסתם ה&hellip; <a href="/blog/2017/06/yet-another-blog-upgrade/">יש&nbsp;עוד</a>
+                </div></div>
+        </div>
         
     
         
-            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
-                <h2 class="mb-2">
-                    <a class="block" href="/blog/2016/08/d7a2d793d799d799d79f-d7a4d794/">עדיין פה</a>
-                </h2><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="2016-08-05T19:58:34+03:00">
+        <div class="overflow-hidden rounded-md"><div class="aspect-w-3 aspect-h-2">
+                <img
+                class="w-full aspect-square object-cover object-center"
+                src="/img/2016/08/twenty-sixteen.png"
+                alt={props.instance.frontmatter.imgAlt}
+                loading="lazy"
+                />
+            </div><div class="px-3 pt-4 pb-6 ">
+                <h3 class="text-xl font-semibold text-center">
+                <a href="/blog/2016/08/i-m-still-here/">עדיין פה</a>
+                </h3><div class="text-xs mt-2 created-date" datetime="2016-08-05T19:58:34+03:00">
                     5 באוגוסט 2016
-                </span>
-
-                <a class="tag" href="/tag/וורדפרס/">וורדפרס</a>
-                <div class="clear-both"></div>
-
-                <div class="content post">
-                    <p>עדכון קליל של גרסת הבלוג ל 4.5 ותבנית ל 2016.</p>
-
-                </div>
-            </div>
+                </div><div class="mt-2 text-md">
+                עדכון קליל של גרסת הבלוג ל 4.5 ותבנית ל 2016&hellip; <a href="/blog/2016/08/i-m-still-here/">יש&nbsp;עוד</a>
+                </div></div>
+        </div>
         
     
         
-            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
-                <h2 class="mb-2">
-                    <a class="block" href="/blog/2010/12/no-more-blog-archive/">&quot;ארכיון הבלוג&quot; זה לחלשים</a>
-                </h2><a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
+        <div class="overflow-hidden rounded-md"><div class="aspect-w-3 aspect-h-2">
+                <img
+                class="w-full aspect-square object-cover object-center"
+                src="/img/2010/12/blog-archive.png"
+                alt={props.instance.frontmatter.imgAlt}
+                loading="lazy"
+                />
+            </div><div class="px-3 pt-4 pb-6 ">
+                <h3 class="text-xl font-semibold text-center">
+                <a href="/blog/2010/12/no-more-blog-archive/">&quot;ארכיון הבלוג&quot; זה לחלשים</a>
+                </h3><a class="block inline float-left mt-2 comments-count mr-2 text-xs" 
                         href="/blog/2010/12/no-more-blog-archive/#comments"
                         title="7 תגובות">
                         💬 7
-                    </a><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="2010-12-21T07:11:14+02:00">
+                    </a><div class="text-xs mt-2 created-date" datetime="2010-12-21T07:11:14+02:00">
                     21 בדצמבר 2010
-                </span>
-
-                <a class="tag" href="/tag/וורדפרס/">וורדפרס</a><a class="tag" href="/tag/שטויות שמוצאים באתרים/">שטויות שמוצאים באתרים</a><a class="tag" href="/tag/שמישות/">שמישות</a>
-                <div class="clear-both"></div>
-
-                <div class="content post">
-                    <p>בעקבות <a href="http://daringfireball.net/2010/12/title_junk">גרובר</a> החלטתי להיפטר מהתוספת &quot;ארכיון הבלוג&quot; (שאצלי עוד הופיעה באנגלית) מכל דפי הבלוג, כולל: פוסטים, קטגוריות, ארכיון לפי חודשים ודף ה&quot;אודות&quot;. הרי כל מה שקוראים כאן הוא ממילא מארכיון (כן, אפילו הפוסט הזה שהוא חם מהתנור עכשיו), אז מה הטעם?</p>
-
-                </div>
-            </div>
+                </div><div class="mt-2 text-md">
+                בעקבות גרובר החלטתי להיפטר מהתוספת &quot;ארכיון הבלוג&quot; (שאצלי עוד הופיעה באנגלית) מכל דפי הבלוג, כולל: פוסטים, קטגוריות, ארכיון לפי חודשים ודף ה&quot;אודות&quot;&hellip; <a href="/blog/2010/12/no-more-blog-archive/">יש&nbsp;עוד</a>
+                </div></div>
+        </div>
         
     
         
-            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
-                <h2 class="mb-2">
-                    <a class="block" href="/blog/2010/09/wordpress-auto-dst/">עדכון אוטומטי לשעון קיץ/חורף בוורדפרס</a>
-                </h2><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="2010-09-12T06:20:01+02:00">
+        <div class="overflow-hidden rounded-md"><div class="aspect-w-3 aspect-h-2">
+                <img
+                class="w-full aspect-square object-cover object-center"
+                src="/img/2010/09/wordpress-dst.png"
+                alt={props.instance.frontmatter.imgAlt}
+                loading="lazy"
+                />
+            </div><div class="px-3 pt-4 pb-6 ">
+                <h3 class="text-xl font-semibold text-center">
+                <a href="/blog/2010/09/wordpress-auto-dst/">עדכון אוטומטי לשעון קיץ/חורף בוורדפרס</a>
+                </h3><div class="text-xs mt-2 created-date" datetime="2010-09-12T06:20:01+02:00">
                     12 בספטמבר 2010
-                </span>
-
-                <a class="tag" href="/tag/וורדפרס/">וורדפרס</a><a class="tag" href="/tag/שעון קיץ/">שעון קיץ</a>
-                <div class="clear-both"></div>
-
-                <div class="content post">
-                    <p>גם אני הלכתי לישון לפי שעון חורף מתוך הנחה שיש לי שעה נוספת וקמתי לפי שעון קיץ כי התחיל אור בחוץ והגוף עדיין רגיל. כדי להעביר את הזמן עברתי בין שעוני הבית (14+ למי שמתעניין) כדי לראות שלא שכחתי אף אחד, וכדי לראות שכל מי שאמור להתעדכן אוטומטית אכן עשה את זה. כחלק מסבב השעונים ניגשתי גם לעדכן את אזור הזמן של הבלוג הזה. בהתחלתי החלפתי את UTC+3 ב UTC+2, אבל אז שמתי לב שההודעה המצחיקה (Unfortunately, you have to manually update this for Daylight Savings Time. Lame, we know, but will be fixed in the future) שהופיעה בעבר מתחת לשדה אזור הזמן נעלמה. חיפוש חוזר במעלה הרשימה גילה שניתן לבחור את ירושלים או תל-אביב ולקבל (אחרי שמירה) את ההודעה הזאת במקומה:<br>
-<img src="/img/2010/09/wordpress-dst.png" alt="המאה ה21 הגיעה לוורדפרס"><br>
-חיפוש קצר העלה את <a href="http://wordpress.org/support/topic/wp-28-no-daylight-saving-time-setting">הדיון הזה</a> שלפיו גם גרסה 2.8 (שבה הייתי קודם) אמורה לתמוך בעדכון אוטומטי ולא ברור לי כ&quot;כ למה הפיצ'ר הזה לא עבד אצלי קודם, אבל העיקר שמעכשיו יש לי פחות שעון לעדכן.<br>
-אה… ואף מילה על חרדים, יום כיפור ואם צריך או לא לאחר את המעבר לשעון חורף.</p>
-
-                </div>
-            </div>
+                </div><div class="mt-2 text-md">
+                גם אני הלכתי לישון לפי שעון חורף מתוך הנחה שיש לי שעה נוספת וקמתי לפי שעון קיץ כי התחיל אור בחוץ והגוף עדיין רגיל. כדי להעביר את הזמן עברתי בין שעוני &hellip; <a href="/blog/2010/09/wordpress-auto-dst/">יש&nbsp;עוד</a>
+                </div></div>
+        </div>
         
     
         
-            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
-                <h2 class="mb-2">
-                    <a class="block" href="/blog/2010/09/blog-upgraded-to-3-0-1/">הבלוג שודרג לגרסה 3.0.1</a>
-                </h2><a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
+        <div class="overflow-hidden rounded-md"><div class="aspect-w-3 aspect-h-2">
+                <img
+                class="w-full aspect-square object-cover object-center"
+                src="/img/2017/06/blog.jpg"
+                alt={props.instance.frontmatter.imgAlt}
+                loading="lazy"
+                />
+            </div><div class="px-3 pt-4 pb-6 ">
+                <h3 class="text-xl font-semibold text-center">
+                <a href="/blog/2010/09/blog-upgraded-to-3-0-1/">הבלוג שודרג לגרסה 3.0.1</a>
+                </h3><a class="block inline float-left mt-2 comments-count mr-2 text-xs" 
                         href="/blog/2010/09/blog-upgraded-to-3-0-1/#comments"
                         title="7 תגובות">
                         💬 7
-                    </a><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="2010-09-03T16:34:41+03:00">
+                    </a><div class="text-xs mt-2 created-date" datetime="2010-09-03T16:34:41+03:00">
                     3 בספטמבר 2010
-                </span>
-
-                <a class="tag" href="/tag/וורדפרס/">וורדפרס</a><a class="tag" href="/tag/כללי/">כללי</a><a class="tag" href="/tag/wordpress/">wordpress</a>
-                <div class="clear-both"></div>
-
-                <div class="content post">
-                    <p>מי שנתקל בבעיות מוזמן להגיב (מצד שני, אם הבעיה היא במנגנון התגובות, אז אכלתי אותה…)</p>
-
-                </div>
-            </div>
+                </div><div class="mt-2 text-md">
+                מי שנתקל בבעיות מוזמן להגיב (מצד שני, אם הבעיה היא במנגנון התגובות, אז אכלתי אותה…)&hellip; <a href="/blog/2010/09/blog-upgraded-to-3-0-1/">יש&nbsp;עוד</a>
+                </div></div>
+        </div>
         
     
         
-            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
-                <h2 class="mb-2">
-                    <a class="block" href="/blog/2009/12/js-is-the-new-killer/">הקץ לספאם?</a>
-                </h2><a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
+        <div class="overflow-hidden rounded-md"><div class="aspect-w-3 aspect-h-2">
+                <img
+                class="w-full aspect-square object-cover object-center"
+                src="/img/2009/12/javascript.png"
+                alt={props.instance.frontmatter.imgAlt}
+                loading="lazy"
+                />
+            </div><div class="px-3 pt-4 pb-6 ">
+                <h3 class="text-xl font-semibold text-center">
+                <a href="/blog/2009/12/js-is-the-new-killer/">הקץ לספאם?</a>
+                </h3><a class="block inline float-left mt-2 comments-count mr-2 text-xs" 
                         href="/blog/2009/12/js-is-the-new-killer/#comments"
                         title="4 תגובות">
                         💬 4
-                    </a><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="2009-12-02T23:29:17+02:00">
+                    </a><div class="text-xs mt-2 created-date" datetime="2009-12-02T23:29:17+02:00">
                     2 בדצמבר 2009
-                </span>
-
-                <a class="tag" href="/tag/וורדפרס/">וורדפרס</a>
-                <div class="clear-both"></div>
-
-                <div class="content post">
-                    <p>בעקבות הדיון אצל <a href="http://ilsh.info/archives/1967">אילן שביט</a> ואחרי שגיליתי שבחודש האחרון Akismet חסם לי תגובה אמיתית אחת, החלטתי לאמץ את מסנן הספאם שהומלץ ע&quot;י <a href="http://art-blog.no-ip.info/newpress/blog/post/79">ארתיום</a>. הרעיון הכללי הוא לתקוף את הספאמרים בנשק יום הדין: Javascript. אם נתקלתם בבעיה עם המסנן החדשה, נא כתבו לי מייל לפי הכתובת בדף <a href="http://yehudab.com/blog/about/">האודות</a> (שגם הוא מוגן שם באותו הנשק).</p>
-
-                </div>
-            </div>
+                </div><div class="mt-2 text-md">
+                בעקבות הדיון אצל אילן שביט ואחרי שגיליתי שבחודש האחרון Akismet חסם לי תגובה אמיתית אחת, החלטתי לאמץ את מסנן הספאם שהומלץ ע&quot;י ארתיום. הרעיון הכללי הוא &hellip; <a href="/blog/2009/12/js-is-the-new-killer/">יש&nbsp;עוד</a>
+                </div></div>
+        </div>
         
     
         
-            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
-                <h2 class="mb-2">
-                    <a class="block" href="/blog/2008/12/wordpress-2-7/">הבלוג שודרג לוורדפרס 2.7</a>
-                </h2><a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
+        <div class="overflow-hidden rounded-md"><div class="aspect-w-3 aspect-h-2">
+                <img
+                class="w-full aspect-square object-cover object-center"
+                src="/img/2008/12/hierarchical-comments.png"
+                alt={props.instance.frontmatter.imgAlt}
+                loading="lazy"
+                />
+            </div><div class="px-3 pt-4 pb-6 ">
+                <h3 class="text-xl font-semibold text-center">
+                <a href="/blog/2008/12/wordpress-2-7/">הבלוג שודרג לוורדפרס 2.7</a>
+                </h3><a class="block inline float-left mt-2 comments-count mr-2 text-xs" 
                         href="/blog/2008/12/wordpress-2-7/#comments"
                         title="10 תגובות">
                         💬 10
-                    </a><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="2008-12-15T23:10:10+02:00">
+                    </a><div class="text-xs mt-2 created-date" datetime="2008-12-15T23:10:10+02:00">
                     15 בדצמבר 2008
-                </span>
-
-                <a class="tag" href="/tag/וורדפרס/">וורדפרס</a>
-                <div class="clear-both"></div>
-
-                <div class="content post">
-                    <p>אמנם <a href="http://www.holesinthenet.co.il/?p=1390">עשו</a> את זה <a href="http://www.onlinemarketing.co.il/%D7%9C%D7%9E%D7%94-%D7%90%D7%A0%D7%99-%D7%9C%D7%90-%D7%90%D7%95%D7%94%D7%91-%D7%90%D7%AA-%D7%95%D7%95%D7%A8%D7%93%D7%A4%D7%A8%D7%A1-27/">קודם</a> <a href="http://firefang.net/blog/1116">לפני</a>, אבל עוד לא ראיתי מישהו שהפעיל את התגובות המשורשרות, אז שרשרו ותיהנו.</p>
-
-                </div>
-            </div>
+                </div><div class="mt-2 text-md">
+                אמנם עשו את זה קודם לפני, אבל עוד לא ראיתי מישהו שהפעיל את התגובות המשורשרות, אז שרשרו ותיהנו&hellip; <a href="/blog/2008/12/wordpress-2-7/">יש&nbsp;עוד</a>
+                </div></div>
+        </div>
         
     
 </div>
@@ -454,7 +416,7 @@
     
         <a class="tag mx-auto" href="/tag/speedtraps/">speedtraps&rlm; (1)</a>
     
-        <a class="tag mx-auto" href="/tag/ווידג&#39;טים/">ווידג&#39;טים&rlm; (10)</a>
+        <a class="tag mx-auto" href="/tag/ווידג׳טים/">ווידג׳טים&rlm; (10)</a>
     
         <a class="tag mx-auto" href="/tag/רכבת ישראל/">רכבת ישראל&rlm; (2)</a>
     

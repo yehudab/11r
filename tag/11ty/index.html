@@ -66,106 +66,75 @@
 
   
 
-  <div>
+  <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
     
         
-            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
-                <h2 class="mb-2">
-                    <a class="block" href="/blog/2020/10/staticman-for-11ty-comments/">ניהול תגובות באמצעות staticman</a>
-                </h2><a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
+        <div class="overflow-hidden rounded-md"><div class="aspect-w-3 aspect-h-2">
+                <img
+                class="w-full aspect-square object-cover object-center"
+                src="/img/2020/10/staticman-logo.png"
+                alt={props.instance.frontmatter.imgAlt}
+                loading="lazy"
+                />
+            </div><div class="px-3 pt-4 pb-6 ">
+                <h3 class="text-xl font-semibold text-center">
+                <a href="/blog/2020/10/staticman-for-11ty-comments/">ניהול תגובות באמצעות staticman</a>
+                </h3><a class="block inline float-left mt-2 comments-count mr-2 text-xs" 
                         href="/blog/2020/10/staticman-for-11ty-comments/#comments"
                         title="3 תגובות">
                         💬 3
-                    </a><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="Sat Oct 03 2020 10:18:58 GMT+0000 (Coordinated Universal Time)">
+                    </a><div class="text-xs mt-2 created-date" datetime="Sat Oct 03 2020 10:18:58 GMT+0000 (Coordinated Universal Time)">
                     3 באוקטובר 2020
-                </span>
-
-                <a class="tag" href="/tag/staticman/">staticman</a><a class="tag" href="/tag/11ty/">11ty</a>
-                <div class="clear-both"></div>
-
-                <div class="content post">
-                    <p>ב<a href="/blog/2020/08/11ty-howto-migrate/" title="מוורדפרס ל-11ty">פוסט הקודם</a> הסברתי איך לייבא את התגובות הישנות מ Wordpress ל-<a href="https://www.11ty.dev/">11ty</a>. בפוסט הזה, אראה איך להתקין שרת <a href="https://staticman.net/">Staticman</a>, ואיך לחבר אליו את טופס התגובות באתר.</p>
-<p><img src="/img/2020/10/staticman-logo.png" alt="Staticman logo">
-Staticman logo by <a href="http://erlen.co.uk">Erlen Masson</a></p>
-<p>גם הפעם הסתמכתי על <a href="https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html" title="Adding Staticman Comments by Travis Downs">מדריך קיים</a> שחיבר Travis Downs עבור שילוב Staticman בבלוג מבוסס Jekyll. בסופו של דבר, ביצעתי את השלבים הבאים:</p>
-<ol>
-<li><a href="https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html#set-up-github-bot-account">יצירת חשבון בוט ב GitHub</a> (לגמרי לפי המדריך הנ&quot;ל)</li>
-<li><a href="https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html#configuring-staticmanyml">הגדרות staticman.yml</a> (גם כן לפי המדריך)</li>
-<li>הגדרות staticman בתוך <code>src/globals/site.json</code>. כאן יש הבדל לעומת המדריך, מכוון שקובץ זה יחודי ל 11ty, ובמדריך ההתיחסות היא לסביבת Jekyll. בכל מקרה, העקרונות דומים, ו<a href="https://github.com/yehudab/11r/blob/master/src/includes/comments.njk" title="site.json">כאן</a> תוכלו לראות את ההגדרות שלי.</li>
-<li><a href="https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html#set-up-the-api-bridge">הקמת שרת staticman</a>. אחרי יצירת המפתחות, בחרתי בדרך שונה מהמומלץ (הקמה דרך Heroku), ובמקום זה העלתי שרת עצמאי שרץ דרך docker. בניגוד למוסבר בדקומנטציה, כאן יש חוסר <a href="https://github.com/eduardoboucas/staticman/blob/master/docs/docker.md">בתיעוד המקורי</a>, ויש לזכור להגדיר את מפתחות ההצפנה בקובץ <a href="https://github.com/eduardoboucas/staticman/blob/master/docker-compose.yml">docker-compose.yml</a></li>
-<li><a href="https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html#invite-and-accept-bot-to-blog-repo" title="Invite and Accept Bot to Blog Repo">הזמנת הבוט להשתתף ב repo</a> (ע&quot;פ המדריך)</li>
-<li><a href="https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html#enable-recaptcha" title="Enable reCAPTCHA">הפעלת reCAPCHA</a> - בעיקר על פי המדריך. יש לשים לב שבחלק המתייחס ל <code>‎_config.yml</code> יש לבצע את השינויים במקום זאת ב <code>src/globals/site.json</code></li>
-<li><a href="https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html#integrate-comments-into-site" title="Integrate Comments Into Site">שילוב התגובות באתר</a>. כאן ההבדלים מעט יותר משמעותיים, הן בגלל ההבדלים בין Jekyll ל-11ty, והן בגלל הרצון שלי לתמוך בקינון מעבר לרמה אחת. בנוסף, לא אהבתי את ה JS של הפוסט המקורי שמשתש במעורב ב jQuery ו-Vanilla JS. במקום זה השתמשתי בספריה רזה יותר בשם <a href="https://github.com/fabiospampinato/cash">cash</a>, שמאפשרת סינטקס דמוי jQuery במחיר של תמיכה בפחות פיצ'רים ופחות דפדפנים ישנים (אבל עדיין תומכת ב IE11). על הצגת התגובות כתבתי בפוסט הקודם. העבודה על טופס התגובות החדשות מסתכמת בסופו של דבר בקבצי ה <a href="https://github.com/yehudab/11r/blob/master/src/includes/comment-form.njk" title="comment-form.njk">HTML</a>, <a href="https://github.com/yehudab/11r/blob/master/src/styles/comments.css" title="comments.css">CSS</a>, ו-<a href="https://github.com/yehudab/11r/blob/master/src/scripts/comment-form.js" title="comment-form.js">JS </a>אותם תוכלו לראות ב repo הסופי.</li>
-</ol>
-<p>מוזמנים להגיב למטה ולראות איך כל ה flow עובד. עד לאישור, תוכלו לצפות בתגובות שלכם באזור ה <a href="https://github.com/yehudab/11r/pulls">Pull Requests</a> של הבלוג.</p>
-
-                </div>
-            </div>
+                </div><div class="mt-2 text-md">
+                בפוסט הקודם הסברתי איך לייבא את התגובות הישנות מ Wordpress ל-11ty. בפוסט הזה, אראה איך להתקין שרת Staticman, ואיך לחבר אליו את טופס התגובות באתר.&hellip; <a href="/blog/2020/10/staticman-for-11ty-comments/">יש&nbsp;עוד</a>
+                </div></div>
+        </div>
         
     
         
-            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
-                <h2 class="mb-2">
-                    <a class="block" href="/blog/2020/08/11ty-howto-migrate/">מוורדפרס ל-11ty</a>
-                </h2><a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
+        <div class="overflow-hidden rounded-md"><div class="aspect-w-3 aspect-h-2">
+                <img
+                class="w-full aspect-square object-cover object-center"
+                src="/img/2020/08/export.png"
+                alt={props.instance.frontmatter.imgAlt}
+                loading="lazy"
+                />
+            </div><div class="px-3 pt-4 pb-6 ">
+                <h3 class="text-xl font-semibold text-center">
+                <a href="/blog/2020/08/11ty-howto-migrate/">מוורדפרס ל-11ty</a>
+                </h3><a class="block inline float-left mt-2 comments-count mr-2 text-xs" 
                         href="/blog/2020/08/11ty-howto-migrate/#comments"
                         title="תגובה אחת">
                         💬 1
-                    </a><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="Sat Aug 01 2020 15:00:54 GMT+0000 (Coordinated Universal Time)">
+                    </a><div class="text-xs mt-2 created-date" datetime="Sat Aug 01 2020 15:00:54 GMT+0000 (Coordinated Universal Time)">
                     1 באוגוסט 2020
-                </span>
-
-                <a class="tag" href="/tag/Nunjucks/">Nunjucks</a><a class="tag" href="/tag/Comments/">Comments</a><a class="tag" href="/tag/11ty/">11ty</a><a class="tag" href="/tag/וורדפרס/">וורדפרס</a>
-                <div class="clear-both"></div>
-
-                <div class="content post">
-                    <p>אז אחרי שמחליטים על מעבר ל-11ty, צריך לדאוג לשמר את תוכן הפוסטים והתגובות.</p>
-<p>בשלב הראשון של המעבר יש צורך ליצא את כל התוכן מוורדפרס ל-Markdown. לטובת זה השתמשתי בפלאגאין לוורדפרס שפותח דווקא עבור Gatsby ונקרא: <a href="https://wordpress.org/plugins/wp-gatsby-markdown-exporter/">WP Gatsby Markdown Exporter</a>. בקישור ניתן לקרוא כיצד להפעיל אותו. אני השתמשתי באופציית ה <a href="https://wp-cli.org/" title="WordPress Command Line">WP-CLI</a>. משום מה הייתה לו בעיה ליצא את התמונות, ולכן הפעלתי את האופציות שמנטרלות את החלק הזה. הפקודה הסופית הייתה:</p>
-<pre class="language-bash"><code class="language-bash">wp gatsby-markdown-export <span class="token parameter variable">--skip_copy_uploads</span> <span class="token parameter variable">--skip_original_images</span> <span class="token parameter variable">--directory</span><span class="token operator">=</span>/var/www/html/md-export</code></pre>
-<p>זה מייצר אוסף של קבצי Markdown, שנראה בערך ככה:</p>
-<p><img src="/img/2020/08/export.png" alt="היררכיית קבצים לאחר היצוא מוורפרס"></p>
-<p>שמות הקבצים בכל תיקייה נלקחים מה slag, ולמזלי הקפדתי לאורך השנים להשתמש בשמות באנגלית, כך שכעת קל למצוא את הפוסטים לפי שנה, חודש וה slag.</p>
-<p>בשלב הבא בחרתי ב starter project מתוך <a href="https://jamstackthemes.dev/ssg/eleventy/" title="Eleventy Themes">דף התבניות של Eleventy</a>. המבחר די דל, ואין עדיין אף תבנית מותאמת עברית. לבסוף, בחרתי בתבנית <a href="https://github.com/reeseschultz/11r">11r</a>.  זוהי תבנית dark mode, ומבוססת <a href="https://tailwindcss.com/">Tailwind CSS</a>, ורוב היפוכי הכוון הגיעו out of the box, ברגע שהוספתי <code>dir=rtl</code> לתגית הראשית של הדף. את התוצאה אחרי הגיור תוכלו למזלג <a href="https://github.com/yehudab/11r">מהריפו שלי</a>. את הפוסטים בהיררכיה המקורית מעלים לתיקיית <code>src/posts</code>, ואחרי מעקב אחרי ההוראות בREADME, אפשר לראות את התוצאה.</p>
-<p>החלק היותר מורכב בתהליך הוא תמיכה בתגובות. כאן עדיין אין פתרון בית-ספר, ונאלצתי לאלתר <a href="https://github.com/dKab/blog/blob/master/_includes/comments.liquid">מכמה</a> <a href="https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html">מקורות</a>. הבעיה הבסיסית היא שאתר סטטי מטיבו אינו מאפשר הוספת תוכן דינמי כמו תגובות. אחד הפתרון האפשריים הוא שימוש בתוסף צד שלישי כמו <a href="https://disqus.com/">Disqus</a>, אבל <a href="https://fatfrogmedia.com/delete-disqus-comments-wordpress/" title="Why I Deleted Disqus and Why You Should Too">הדעה</a> <a href="https://markosaric.com/remove-disqus/" title="Why you should remove Disqus from your site">המקובלת</a> בקרב בעלי האתרים הסטטים הוא שזה לא לעניין, הן בגלל <a href="https://markosaric.com/remove-disqus/#site-speed-and-performance">תוספת הקוד לכל דף</a>, והן בגלל טענות על <a href="https://twitter.com/martingund/status/1207327648093003777" title="disqus shared the personal data of tens of millions of users ">הפרת פרטיות של משתמשי המערכת</a>.</p>
-<p>האפשרות שאני בחרתי בה היא שימוש ב <a href="https://staticman.net/">Staticman</a>. הרעיון כאן הוא שכל תגובה היא בעצם קובץ שנשמר גם כן בgit, ומנגנון אישור התגובה נעשה באופן דומה לאישור Pull Request. המנוע של Staticman דואג לייצר את ה PR-ים, כך שמבחינת המשתמשים באתר שליחת התגובה מתבצעת באמצעות טופס על הדף, בדומה לוורדפרס.</p>
-<p>בנוסף לזה, יש צורך לייבא ולשמר את התגובות מהבלוג הישן. כאן השתמשתי <a href="https://github.com/arthurlacoste/wordpress-comments-jekyll-staticman">בכלי</a> שבמקור נכתב לטובת העברת תגובות לאתרים סטטים מבוססי <a href="https://jekyllrb.com/">Jekyll</a>. נדרשו שינויים קלים, אבל בסופו של דבר גם כאן זה מסתכם בהרצה לפי ה README, והוספה של כל קבצי התגובות תחת התיקיה <a href="https://github.com/yehudab/11r/tree/master/11r/src/globals/comments"><code>src/globals/comments</code></a> כך שכל התגובות לפוסט מסויים מרוכזות תחת תיקיה לפי ה slag של הפוסט. מי שמעוניין יכול לקרוא עוד על <a href="https://www.11ty.dev/docs/data-global/">מודל הנתונים של Eleventy</a>.</p>
-<p>התוספת האחרונה היא מעט קוד שידע לשלוף את התגובות המתאימות לכל פוסט ולהציג אותן לפי ההיררכיה המקורית. הקוד הזה מחולק בין קוד JS, שאותו ניתן למצוא ב <code>/filters/comments-tree.js</code> ונראה כך:</p>
-<pre class="language-js"><code class="language-js">module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">obj</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><br>  <span class="token keyword">const</span> allComments <span class="token operator">=</span> obj <span class="token operator">?</span> Object<span class="token punctuation">.</span><span class="token function">values</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span><br>  <span class="token keyword">const</span> commentsById <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span><br>  allComments<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">c</span> <span class="token operator">=></span> <span class="token punctuation">{</span><br>    c<span class="token punctuation">.</span>id <span class="token operator">=</span> c<span class="token punctuation">.</span>id <span class="token operator">||</span> c<span class="token punctuation">.</span>_id<span class="token punctuation">;</span><br>    commentsById<span class="token punctuation">[</span>c<span class="token punctuation">.</span>id<span class="token punctuation">]</span> <span class="token operator">=</span> c<span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>  <span class="token keyword">const</span> rootComments <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span><br>  allComments<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">c</span> <span class="token operator">=></span> <span class="token punctuation">{</span><br>    <span class="token keyword">if</span> <span class="token punctuation">(</span>c<span class="token punctuation">.</span>parentId <span class="token operator">&amp;&amp;</span> c<span class="token punctuation">.</span>parentId <span class="token operator">!==</span> <span class="token string">"0"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>      <span class="token keyword">const</span> parent <span class="token operator">=</span> commentsById<span class="token punctuation">[</span>c<span class="token punctuation">.</span>parentId<span class="token punctuation">]</span><span class="token punctuation">;</span><br>      <span class="token keyword">if</span> <span class="token punctuation">(</span>parent<span class="token punctuation">)</span> <span class="token punctuation">{</span><br>        parent<span class="token punctuation">.</span>replies <span class="token operator">=</span> parent<span class="token punctuation">.</span>replies <span class="token operator">||</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span><br>        parent<span class="token punctuation">.</span>replies<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span><br>      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span><br>        console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">can't find parentID: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>c<span class="token punctuation">.</span>parentId<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> for ID: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>c<span class="token punctuation">.</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>      <span class="token punctuation">}</span><br>    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span><br>      rootComments<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token punctuation">}</span><br><br>  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>  <span class="token keyword">return</span> rootComments<span class="token punctuation">;</span><br><span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
-<p>והחלק המשלים שנמצא בתבנית התגובות <a href="https://github.com/yehudab/11r/blob/master/src/includes/comments.njk"><code>src/includes/comments.njk</code></a>. על ריקורסיה ב nunjucks למדתי <a href="https://github.com/mozilla/nunjucks/issues/416#issuecomment-206335032">מהissue הזה</a>. עכשיו ניתן לראות גם את התגובות בהתאם לדו-שיח שנוהל בזמנו:</p>
-<p><img src="/img/2020/09/comments-dark.png" alt="תגובות משורשרות"></p>
-<p>בפוסט הבא ארחיב על הכנת הטופס לתגובות והאינטגרציה עם הבוט של Staticman.</p>
-
-                </div>
-            </div>
+                </div><div class="mt-2 text-md">
+                אז אחרי שמחליטים על מעבר ל-11ty, צריך לדאוג לשמר את תוכן הפוסטים והתגובות. בשלב הראשון של המעבר יש צורך ליצא את כל התוכן מוורדפרס ל-Markdown. לטובת זה&hellip; <a href="/blog/2020/08/11ty-howto-migrate/">יש&nbsp;עוד</a>
+                </div></div>
+        </div>
         
     
         
-            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
-                <h2 class="mb-2">
-                    <a class="block" href="/blog/2020/07/11ty/">11ty</a>
-                </h2><a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
+        <div class="overflow-hidden rounded-md"><div class="aspect-w-3 aspect-h-2">
+                <img
+                class="w-full aspect-square object-cover object-center"
+                src="/img/2020/07/forestry-edit-post.png"
+                alt={props.instance.frontmatter.imgAlt}
+                loading="lazy"
+                />
+            </div><div class="px-3 pt-4 pb-6 ">
+                <h3 class="text-xl font-semibold text-center">
+                <a href="/blog/2020/07/11ty/">11ty</a>
+                </h3><a class="block inline float-left mt-2 comments-count mr-2 text-xs" 
                         href="/blog/2020/07/11ty/#comments"
                         title="2 תגובות">
                         💬 2
-                    </a><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="Fri Jul 31 2020 18:01:27 GMT+0000 (Coordinated Universal Time)">
+                    </a><div class="text-xs mt-2 created-date" datetime="Fri Jul 31 2020 18:01:27 GMT+0000 (Coordinated Universal Time)">
                     31 ביולי 2020
-                </span>
-
-                <a class="tag" href="/tag/SSG/">SSG</a><a class="tag" href="/tag/11ty/">11ty</a><a class="tag" href="/tag/בלוג/">בלוג</a>
-                <div class="clear-both"></div>
-
-                <div class="content post">
-                    <p>המעבר לשרת חדש גרם לי לחשוב שוב על WordPress והאם הוא עדיין מתאים לבלוגים ב-2020. כאשר התחלתי את האתר, PHP הייתה אחת משתי שפות התכנות המובילות לווב (יחד עם העולה החדש דאז Ruby on Rails). מאוחר יותר זו גם הייתה שפת התכנות בה עבדתי, וזה נראה לי טבעי להמשיך איתה. מאז עברתי לסביבה חדשה מבוססת NodeJS, ו-PHP נראית לי כמו עוף מוזר (שלא לאמר דינוזאור).</p>
-<p>אחרי בחינה של מספר אפשרויות, הגעתי למסקנה שהנתיב הטבעי להמשך הוא Static Site Generators (SSG). הרעיון כאן הוא ליצר את קבצי ה HTML של האתר מתוך התכנים הדינמיים, ומכאן והלאה ההגשה לדפדפן נעשית של קבצים סטטיים בלבד. מתוך <a href="https://gohugo.io/" title="HUGO">המגוון</a> <a href="https://jekyllrb.com/" title="Jekyll">הגדול</a> של <a href="https://vuepress.vuejs.org/" title="VuePress">האפשרויות</a>, בחרתי את <a href="https://www.11ty.dev/">Eleventy</a> (או בקיצור 11ty). הוא מבוסס NodeJS, ויחסית לאחיו הוותיק יותר (<a href="https://www.gatsbyjs.org/">Gatsby</a>), הוא פחות אפליקציה ויותר SSG טהור.</p>
-<p>ייצור האתר נעשה ע&quot;י הגדרת תבניות והפעלה שלהן על תוכן האתר שהוא קבצי Markdown. את קבצי התוכן שומרים ב git יחד עם הקוד של האתר, כך שנוצר סוג של בלבול בינהם. כדי לבצע את ההפרדה בצורה טובה יותר וגם בגלל <a href="https://talk.commonmark.org/t/explicit-rtl-indication-in-pure-markdown/286/4" title="דיון ארוך שבסופו הוחלט שלא עושים כלום ותסדרו לבד">התמיכה הבעייתית של Markdown בעברית</a>, בחרתי להשתמש ב Headless CMS: מערכת ניהול תוכן, שבה כתיבה התכנים מנותקת מההצגה שלהן (בניגוד ל WordPress שבה העריכה והתצוגה נעשים באותה מערכת). הרעיון כאן הוא לאפשר לכותבי תוכן שאינם מכירים קוד או אפילו Markdown לערוך את התוכן דרך עורך יעודי (סטייל WordPress), כאשר הקבצים נשלחים מהעורך אל ה git-repo. יתרון משמעותי ליושבים בציון (ובשאר המזרח התיכון) הוא האפשרות לתמיכה הרבה יותר טובה בעריכה ב-RTL.</p>
-<p>ל Headless CMS בחרתי את <a href="https://forestry.io/">Forestry</a> (ישנן אלטרנטיבות נוספות כמו: <a href="https://www.contentful.com/">Contentful</a>, <a href="https://www.netlifycms.org/">Netlify CMS</a>), שנראית לי הנקייה ביותר לשימוש. בניגוד ל Contentful, אין לה תמיכה מובנית ב-RTL, אבל באמצעות תפריט &quot;הפוך כוון כתיבה&quot; של Firefox, אפשר לערוך את התוכן בקלות. ל Forestry יש גם תמיכה נוחה בעריכת ה meta-data של הפוסטים (כותרת, קטגוריות וכד'), כך שמקבלים כמעט חוויה מלאה של עורך תוכן משולב, כמו שניתן לראות כאן:</p>
-<p><img src="/img/2020/07/forestry-edit-post.png" alt=""></p>
-<p>לצורך השוואה, כך נראה ה Markdown של אותו הפוסט ב GitHub:</p>
-<p><img src="/img/2020/07/github-edit-post.png" alt=""></p>
-<p>אז איך עושים את המעבר? על כך בפוסט הבא.</p>
-
-                </div>
-            </div>
+                </div><div class="mt-2 text-md">
+                המעבר לשרת חדש גרם לי לחשוב שוב על WordPress והאם הוא עדיין מתאים לבלוגים ב-2020. כאשר התחלתי את האתר, PHP הייתה אחת משתי שפות התכנות המובילות לווב (י&hellip; <a href="/blog/2020/07/11ty/">יש&nbsp;עוד</a>
+                </div></div>
+        </div>
         
     
 </div>
@@ -241,7 +210,7 @@ Staticman logo by <a href="http://erlen.co.uk">Erlen Masson</a></p>
     
         <a class="tag mx-auto" href="/tag/speedtraps/">speedtraps&rlm; (1)</a>
     
-        <a class="tag mx-auto" href="/tag/ווידג&#39;טים/">ווידג&#39;טים&rlm; (10)</a>
+        <a class="tag mx-auto" href="/tag/ווידג׳טים/">ווידג׳טים&rlm; (10)</a>
     
         <a class="tag mx-auto" href="/tag/רכבת ישראל/">רכבת ישראל&rlm; (2)</a>
     

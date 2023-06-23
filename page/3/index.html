@@ -62,149 +62,124 @@
 </header>
     <main class="container mx-auto max-w-3xl p-8 grow">
       
-  <div>
+  <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
     
         
-            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
-                <h2 class="mb-2">
-                    <a class="block" href="/blog/2020/07/11ty/">11ty</a>
-                </h2><a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
+        <div class="overflow-hidden rounded-md"><div class="aspect-w-3 aspect-h-2">
+                <img
+                class="w-full aspect-square object-cover object-center"
+                src="/img/2020/07/forestry-edit-post.png"
+                alt={props.instance.frontmatter.imgAlt}
+                loading="lazy"
+                />
+            </div><div class="px-3 pt-4 pb-6 ">
+                <h3 class="text-xl font-semibold text-center">
+                <a href="/blog/2020/07/11ty/">11ty</a>
+                </h3><a class="block inline float-left mt-2 comments-count mr-2 text-xs" 
                         href="/blog/2020/07/11ty/#comments"
                         title="2 תגובות">
                         💬 2
-                    </a><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="Fri Jul 31 2020 18:01:27 GMT+0000 (Coordinated Universal Time)">
+                    </a><div class="text-xs mt-2 created-date" datetime="Fri Jul 31 2020 18:01:27 GMT+0000 (Coordinated Universal Time)">
                     31 ביולי 2020
-                </span>
-
-                <a class="tag" href="/tag/SSG/">SSG</a><a class="tag" href="/tag/11ty/">11ty</a><a class="tag" href="/tag/בלוג/">בלוג</a>
-                <div class="clear-both"></div>
-
-                <div class="content post">
-                    <p>המעבר לשרת חדש גרם לי לחשוב שוב על WordPress והאם הוא עדיין מתאים לבלוגים ב-2020. כאשר התחלתי את האתר, PHP הייתה אחת משתי שפות התכנות המובילות לווב (יחד עם העולה החדש דאז Ruby on Rails). מאוחר יותר זו גם הייתה שפת התכנות בה עבדתי, וזה נראה לי טבעי להמשיך איתה. מאז עברתי לסביבה חדשה מבוססת NodeJS, ו-PHP נראית לי כמו עוף מוזר (שלא לאמר דינוזאור).</p>
-<p>אחרי בחינה של מספר אפשרויות, הגעתי למסקנה שהנתיב הטבעי להמשך הוא Static Site Generators (SSG). הרעיון כאן הוא ליצר את קבצי ה HTML של האתר מתוך התכנים הדינמיים, ומכאן והלאה ההגשה לדפדפן נעשית של קבצים סטטיים בלבד. מתוך <a href="https://gohugo.io/" title="HUGO">המגוון</a> <a href="https://jekyllrb.com/" title="Jekyll">הגדול</a> של <a href="https://vuepress.vuejs.org/" title="VuePress">האפשרויות</a>, בחרתי את <a href="https://www.11ty.dev/">Eleventy</a> (או בקיצור 11ty). הוא מבוסס NodeJS, ויחסית לאחיו הוותיק יותר (<a href="https://www.gatsbyjs.org/">Gatsby</a>), הוא פחות אפליקציה ויותר SSG טהור.</p>
-<p>ייצור האתר נעשה ע&quot;י הגדרת תבניות והפעלה שלהן על תוכן האתר שהוא קבצי Markdown. את קבצי התוכן שומרים ב git יחד עם הקוד של האתר, כך שנוצר סוג של בלבול בינהם. כדי לבצע את ההפרדה בצורה טובה יותר וגם בגלל <a href="https://talk.commonmark.org/t/explicit-rtl-indication-in-pure-markdown/286/4" title="דיון ארוך שבסופו הוחלט שלא עושים כלום ותסדרו לבד">התמיכה הבעייתית של Markdown בעברית</a>, בחרתי להשתמש ב Headless CMS: מערכת ניהול תוכן, שבה כתיבה התכנים מנותקת מההצגה שלהן (בניגוד ל WordPress שבה העריכה והתצוגה נעשים באותה מערכת). הרעיון כאן הוא לאפשר לכותבי תוכן שאינם מכירים קוד או אפילו Markdown לערוך את התוכן דרך עורך יעודי (סטייל WordPress), כאשר הקבצים נשלחים מהעורך אל ה git-repo. יתרון משמעותי ליושבים בציון (ובשאר המזרח התיכון) הוא האפשרות לתמיכה הרבה יותר טובה בעריכה ב-RTL.</p>
-<p>ל Headless CMS בחרתי את <a href="https://forestry.io/">Forestry</a> (ישנן אלטרנטיבות נוספות כמו: <a href="https://www.contentful.com/">Contentful</a>, <a href="https://www.netlifycms.org/">Netlify CMS</a>), שנראית לי הנקייה ביותר לשימוש. בניגוד ל Contentful, אין לה תמיכה מובנית ב-RTL, אבל באמצעות תפריט &quot;הפוך כוון כתיבה&quot; של Firefox, אפשר לערוך את התוכן בקלות. ל Forestry יש גם תמיכה נוחה בעריכת ה meta-data של הפוסטים (כותרת, קטגוריות וכד'), כך שמקבלים כמעט חוויה מלאה של עורך תוכן משולב, כמו שניתן לראות כאן:</p>
-<p><img src="/img/2020/07/forestry-edit-post.png" alt=""></p>
-<p>לצורך השוואה, כך נראה ה Markdown של אותו הפוסט ב GitHub:</p>
-<p><img src="/img/2020/07/github-edit-post.png" alt=""></p>
-<p>אז איך עושים את המעבר? על כך בפוסט הבא.</p>
-
-                </div>
-            </div>
+                </div><div class="mt-2 text-md">
+                המעבר לשרת חדש גרם לי לחשוב שוב על WordPress והאם הוא עדיין מתאים לבלוגים ב-2020. כאשר התחלתי את האתר, PHP הייתה אחת משתי שפות התכנות המובילות לווב (י&hellip; <a href="/blog/2020/07/11ty/">יש&nbsp;עוד</a>
+                </div></div>
+        </div>
         
     
         
-            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
-                <h2 class="mb-2">
-                    <a class="block" href="/blog/2020/07/docker/">עוברים דירה</a>
-                </h2><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="Sat Jul 18 2020 12:06:54 GMT+0000 (Coordinated Universal Time)">
+        <div class="overflow-hidden rounded-md"><div class="aspect-w-3 aspect-h-2">
+                <img
+                class="w-full aspect-square object-cover object-center"
+                src="/img/2020/07/Docker.PNG"
+                alt={props.instance.frontmatter.imgAlt}
+                loading="lazy"
+                />
+            </div><div class="px-3 pt-4 pb-6 ">
+                <h3 class="text-xl font-semibold text-center">
+                <a href="/blog/2020/07/docker/">עוברים דירה</a>
+                </h3><div class="text-xs mt-2 created-date" datetime="Sat Jul 18 2020 12:06:54 GMT+0000 (Coordinated Universal Time)">
                     18 ביולי 2020
-                </span>
-
-                <a class="tag" href="/tag/Docker/">Docker</a><a class="tag" href="/tag/Hosting/">Hosting</a><a class="tag" href="/tag/וורדפרס/">וורדפרס</a><a class="tag" href="/tag/לינוקס/">לינוקס</a><a class="tag" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a>
-                <div class="clear-both"></div>
-
-                <div class="content post">
-                    <p><img src="/img/2020/07/Docker.PNG" alt="Docker">
-אחרי שלוש שנים שבהן <a href="https://yehudab.com/blog/2017/06/yet-another-blog-upgrade/">האתר הזה רץ מעל שרות האחסון של Scaleway</a>, קיבלתי מהם הודעה שהחומרה שעליה אני רץ (dual core ARM CPU, 2GB RAM, 50GB SSD) תפסיק לעבוד בעוד מספר חודשים. הם הציעו לי לעבור באותו מחיר לשרת VPS מבוסס אינטל, אלא שעוד לפני שהספקתי להגיב, קיבלתי את המכתב שזו כותרתו: We’re evolving our Instances prices, או בתרגום חופשי: נמאס לנו להיות הכי זולים בשוק, אז נעלה את המחיר ב 66%.</p>
-<p>החלטתי שזה הזמן לחפש שרות אכסון חדש, והגעתי דרך חבר לעבודה ל <a href="https://www.ovh.ie/">OVHcloud</a>. השרת הבסיסי נראה על הנייר חלש יותר (מעבד אחד בלבד ודיסק קטן יותר), אבל בבדיקות ביצועים בשטח הוא משמעותית יותר מהיר. זה מורגש גם בעבודת ההתקנה (פרטים בהמשך) וגם בזמן ריצה, כפי שנמדד ע״י StatusCake. המחיר זהה למחיר (הישן) של Scaleway: שלושה אירו לחודש, בלי התחייבות.</p>
-<p>השרת שלי מריץ בנוסף גם שני שרתי node קטנים, כך שהעברת כל הטוב הזה היא לא פשוטה, ולכן החלטתי הפעם ללכת על Docker. למי שלא מכיר את Docker, מומלץ לקרוא את סדרת המאמרים באתר של רן בר-זיק. שם הוא גם <a href="https://internet-israel.com/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%D7%9D/docker/%D7%95%D7%95%D7%A8%D7%93%D7%A4%D7%A8%D7%A1-%D7%A2%D7%9C-docker/">מדגים התקנת WordPress</a>. אני בחרתי לעקוב אחרי <a href="https://github.com/mjstealey/wordpress-nginx-docker">המדריך של Michael J. Stealey</a> ב GitHub, שממנו גם עשיתי פורק לריפו משלי. המדריך הזה קצת יותר מתאים לסביבה הנוכחית שלי שכוללת MariaDB במקום MySQL, וגם סקריפטים מוכנים לתמיכה ב https, דרך השרות של <a href="https://letsencrypt.org/">Let’s Encrypt</a>.</p>
-<p>רוב התהליך עוקב אחרי ה README, אבל מכוון שלא התחלתי מאתר חדש כפי שהמדריך מתאר, ביצעתי מספר שינויים, כמו שיחזור של ה DB ומבנה הקבצים מהשרת הנוכחי. זו הייתה טבילת האש הראשונה ל restic שהזכרתי <a href="https://yehudab.com/blog/2020/03/php-7-4/">באחד הפוסטים הקודמים</a> והוא הוכיח את עצמו מצויין. שחזור של MySQL שרץ בתוך קונייטנר הוא קצת מורכב, וגם כאן <a href="https://internet-israel.com/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%D7%9D/docker/%D7%93%D7%95%D7%A7%D7%A8-%D7%9B%D7%A0%D7%99%D7%A1%D7%94-%D7%9C%D7%AA%D7%95%D7%9A-%D7%A7%D7%95%D7%A0%D7%98%D7%99%D7%99%D7%A0%D7%A8-%D7%95%D7%A4%D7%A2%D7%95%D7%9C%D7%95%D7%AA-%D7%91%D7%AA%D7%95%D7%9B/">יש לבר-זיק מדריך טוב</a>.</p>
-<p>אז נשארו לי כמה קצוות לסגור, כמו חידוש אוטומטי של הסרטיפיקטים ב Let’s Encrypt, והפעלה של גיבויים, אבל בסך הכל נראה שדוקר עושה עבודה טובה, והמעבר הבא יצריך ״רק״:</p>
-<pre class="language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">docker-compose</span> up <span class="token parameter variable">-d</span></code></pre>
-
-                </div>
-            </div>
+                </div><div class="mt-2 text-md">
+                אחרי שלוש שנים שבהן האתר הזה רץ מעל שרות האחסון של Scaleway, קיבלתי מהם הודעה שהחומרה שעליה אני רץ (dual core ARM CPU, 2GB RAM, 50GB SSD) תפסיק לעבוד &hellip; <a href="/blog/2020/07/docker/">יש&nbsp;עוד</a>
+                </div></div>
+        </div>
         
     
         
-            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
-                <h2 class="mb-2">
-                    <a class="block" href="/blog/2020/03/php-7-4/">php 7.4</a>
-                </h2><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="2020-03-01T22:07:57+02:00">
+        <div class="overflow-hidden rounded-md"><div class="aspect-w-3 aspect-h-2">
+                <img
+                class="w-full aspect-square object-cover object-center"
+                src="/img/2020/03/upgrade.png"
+                alt={props.instance.frontmatter.imgAlt}
+                loading="lazy"
+                />
+            </div><div class="px-3 pt-4 pb-6 ">
+                <h3 class="text-xl font-semibold text-center">
+                <a href="/blog/2020/03/php-7-4/">php 7.4</a>
+                </h3><div class="text-xs mt-2 created-date" datetime="2020-03-01T22:07:57+02:00">
                     1 במרץ 2020
-                </span>
-
-                <a class="tag" href="/tag/nano/">nano</a><a class="tag" href="/tag/php/">php</a><a class="tag" href="/tag/vi/">vi</a><a class="tag" href="/tag/וורדפרס/">וורדפרס</a><a class="tag" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a><a class="tag" href="/tag/לינוקס/">לינוקס</a>
-                <div class="clear-both"></div>
-
-                <div class="content post">
-                    <p>חלפה למעלה משנה מאז ש<a href="https://www.php.net/eol.php">התמיכה ב-7.0 php הופסקה</a>, וזה הזמן לשדרג את הבלוג לגרסה 7.4. כרגיל, צריך לקרוא את כל ה breaking changes, אבל אם הבלוג והתוספים מתוחזקים לגרסה העדכנית ביותר, אפשר לסמוך בדרך כלל שהכל יעובד. גיבוי של הקוד והדאטה רצוי גם כן.</p>
-<p>את הגיבויים אני מבצע לאחרונה בעזרת <a href="https://restic.net/">restic</a>, כאשר הקבצים מועלים לאכסון (הזול יחסית) של <a href="https://www.backblaze.com/b2/cloud-storage.html">Backblaze B2</a>.</p>
-<p>אחרי שמכניסים את הגדרות ל restic למשתני סביבה, סקריפט הגיבוי פשוט למדי:</p>
-<pre class="language-bash"><code class="language-bash"><span class="token shebang important">#!/bin/bash</span><br><span class="token assign-left variable">d</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">date</span> +%Y-%m-%d<span class="token variable">)</span></span><br>mysqldump <span class="token parameter variable">-u</span> *** <span class="token parameter variable">-p</span> *** <span class="token operator">></span> ~/backup/sql/yehudab-<span class="token variable">${d}</span>.sql<br><span class="token function">gzip</span> ~/backup/sql/*.sql<br><span class="token function">tar</span> <span class="token parameter variable">-czf</span> ~/backup/site/yehudab.com-<span class="token variable">${d}</span>.tar.gz yehudab.com<br>restic backup ~/backup</code></pre>
-<p>לצורך השדרוג, עקבתי אחרי <a href="https://www.cloudbooklet.com/upgrade-php-version-to-php-7-4-on-ubuntu/">המדריך ב CloudBooklet</a>. מכוון שאני מריץ php דרך ngnix, ביצעתי את הסעיפים הרלוונטים לגרסת fpm.</p>
-<p>אה, וכמובן, להשתמש ב vi, כי nano זה לחלשים.</p>
-<p>אחרי השדרוג, אני מנסה לשמור את הפוסט הזה ובום error 500. בדיקה מהירה בלוג של nginx על השרת מגלה ששכחתי להתקין את php7.4-memcache שהמדריך הנ&quot;ל לא מחשיב כ common extension. הרצת:</p>
-<pre class="language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> php7.4-memcache</code></pre>
-<p>וריסטרט לשרת פתרו את הבעיה.<br>
-<img src="/img/2020/03/upgrade.png" alt="שדרוג"></p>
-
-                </div>
-            </div>
+                </div><div class="mt-2 text-md">
+                חלפה למעלה משנה מאז שהתמיכה ב-7.0 php הופסקה, וזה הזמן לשדרג את הבלוג לגרסה 7.4. כרגיל, צריך לקרוא את כל ה breaking changes, אבל אם הבלוג והתוספים מתו&hellip; <a href="/blog/2020/03/php-7-4/">יש&nbsp;עוד</a>
+                </div></div>
+        </div>
         
     
         
-            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
-                <h2 class="mb-2">
-                    <a class="block" href="/blog/2019/12/2020/">2020</a>
-                </h2><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="Tue Dec 31 2019 21:33:55 GMT+0000 (Coordinated Universal Time)">
+        <div class="overflow-hidden rounded-md"><div class="aspect-w-3 aspect-h-2">
+                <img
+                class="w-full aspect-square object-cover object-center"
+                src="/img/2019/12/New-Year-2020-PNG-File.png"
+                alt={props.instance.frontmatter.imgAlt}
+                loading="lazy"
+                />
+            </div><div class="px-3 pt-4 pb-6 ">
+                <h3 class="text-xl font-semibold text-center">
+                <a href="/blog/2019/12/2020/">2020</a>
+                </h3><div class="text-xs mt-2 created-date" datetime="Tue Dec 31 2019 21:33:55 GMT+0000 (Coordinated Universal Time)">
                     31 בדצמבר 2019
-                </span>
-
-                <a class="tag" href="/tag/וורדפרס/">וורדפרס</a>
-                <div class="clear-both"></div>
-
-                <div class="content post">
-                    <p><img src="/img/2019/12/New-Year-2020-PNG-File.png" alt="2020">
-שנה חדשה היא הזדמנות טובה להחלפת תבנית. אז ברוכים הבאים ל-2020, או כמו ש WordPress קוראים לה: <a href="https://wordpress.org/themes/twentytwenty/">TwentyTwenty</a>.</p>
-<p>התבנית קצת יותר ״חמה״ לעומת TwentyNineteen המינימליסטית שבה השתמשתי קודם. התרגום לעברית והתמיכה בכיווניות זקוקים לקצת ״שיוף״, אבל התבנית לגמרי שימושית כפי שהיא.</p>
-<p>אז שתהיה לכולם שנה טובה ועשור טוב. מקווה (הפעם באמת) ליצור תוכן מעניין יותר במהלך השנה.</p>
-<p>Image license: <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a> pngall.com</p>
-
-                </div>
-            </div>
+                </div><div class="mt-2 text-md">
+                שנה חדשה היא הזדמנות טובה להחלפת תבנית. אז ברוכים הבאים ל-2020, או כמו ש WordPress קוראים לה: TwentyTwenty. התבנית קצת יותר ״חמה״ לעומת TwentyNineteen&hellip; <a href="/blog/2019/12/2020/">יש&nbsp;עוד</a>
+                </div></div>
+        </div>
         
     
         
-            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
-                <h2 class="mb-2">
-                    <a class="block" href="/blog/2018/12/wordpress-5-0/">וורדפרס 5.0</a>
-                </h2><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="2018-12-08T14:09:55+02:00">
+        <div class="overflow-hidden rounded-md"><div class="aspect-w-3 aspect-h-2">
+                <img
+                class="w-full aspect-square object-cover object-center"
+                src="/img/2017/06/blog.jpg"
+                alt={props.instance.frontmatter.imgAlt}
+                loading="lazy"
+                />
+            </div><div class="px-3 pt-4 pb-6 ">
+                <h3 class="text-xl font-semibold text-center">
+                <a href="/blog/2018/12/wordpress-5-0/">וורדפרס 5.0</a>
+                </h3><div class="text-xs mt-2 created-date" datetime="2018-12-08T14:09:55+02:00">
                     8 בדצמבר 2018
-                </span>
-
-                <a class="tag" href="/tag/וורדפרס/">וורדפרס</a><a class="tag" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a>
-                <div class="clear-both"></div>
-
-                <div class="content post">
-                    <p>גרסה חדשה של וורדפרס יצאה השבוע, והבלוג קיבל את השדרוג המתחייב. על הדרך, עברתי לתבנית 2019 החדשה (הקודמת הייתה 2016).</p>
-<p><img src="/img/2017/06/blog.jpg" alt="">
-בקרוב פוסט עם תוכן אמיתי ותמונה לא ממוחזרת.</p>
-
-                </div>
-            </div>
+                </div><div class="mt-2 text-md">
+                גרסה חדשה של וורדפרס יצאה השבוע, והבלוג קיבל את השדרוג המתחייב. על הדרך, עברתי לתבנית 2019 החדשה (הקודמת הייתה 2016).&hellip; <a href="/blog/2018/12/wordpress-5-0/">יש&nbsp;עוד</a>
+                </div></div>
+        </div>
         
     
         
-            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
-                <h2 class="mb-2">
-                    <a class="block" href="/blog/2017/09/iphone-8-or-x/">איפון 8 או X?</a>
-                </h2><span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="2017-09-21T00:24:08+03:00">
+        <div class="overflow-hidden rounded-md"><div class="aspect-w-3 aspect-h-2">
+                <img
+                class="w-full aspect-square object-cover object-center"
+                src="/img/2017/09/gruber-iphone-8-footnote.jpg"
+                alt={props.instance.frontmatter.imgAlt}
+                loading="lazy"
+                />
+            </div><div class="px-3 pt-4 pb-6 ">
+                <h3 class="text-xl font-semibold text-center">
+                <a href="/blog/2017/09/iphone-8-or-x/">איפון 8 או X?</a>
+                </h3><div class="text-xs mt-2 created-date" datetime="2017-09-21T00:24:08+03:00">
                     21 בספטמבר 2017
-                </span>
-
-                <a class="tag" href="/tag/iPhone/">iPhone</a><a class="tag" href="/tag/שטויות שמוצאים באתרים/">שטויות שמוצאים באתרים</a>
-                <div class="clear-both"></div>
-
-                <div class="content post">
-                    <p>בקרוב יגיעו האייפונים החדשים לארץ (לפי iDigital: ״בצמוד להשקה בארה״ב״), ושאלת מיליון הדולר — או יותר נכון 1000 הדולר — היא אייפון 8 או X?</p>
-<p>למי שמתלבט כמוני, ג׳ון גרובר נותן תשובה מוחצת בהערת השוליים <a href="https://daringfireball.net/2017/09/the_iphones_8">בסקירה שלו</a>. (בתרגום חופשי): ״לך, זה שקורא גם את הערות השוליים בסקירות האלה, זה כנראה לא מתאים (הכוונה לקנות את ה-8 – י.ב.). אבל יש אנשים שמעדיפים פשוט דגם חדש שיראה ויתנהג כמו האייפון שיש להם עכשיו״.<br>
-<img src="/img/2017/09/gruber-iphone-8-footnote.jpg" alt="צילום מסך"></p>
-<p>עם כל השאלות של מה יהיה עם זיהוי הפנים שפישל בדמו, או הנישה המצחיקה שמפריעה לווידאו, בתור אחד שקורא הערות שוליים, נראה לי שקיבלתי תשובה.</p>
-
-                </div>
-            </div>
+                </div><div class="mt-2 text-md">
+                בקרוב יגיעו האייפונים החדשים לארץ (לפי iDigital: ״בצמוד להשקה בארה״ב״), ושאלת מיליון הדולר — או יותר נכון 1000 הדולר — היא אייפון 8 או X?&hellip; <a href="/blog/2017/09/iphone-8-or-x/">יש&nbsp;עוד</a>
+                </div></div>
+        </div>
         
     
 </div>
