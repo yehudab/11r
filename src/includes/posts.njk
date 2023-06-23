@@ -1,19 +1,53 @@
-<div>
+<div class="grid grid-cols-1 gap-6 md:grid-cols-3">
     {% for post in posts %}
         {% if not post.data.draft %}
-            <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
-                <h2 class="mb-2">
-                    <a class="block" href="{{ post.url | url }}">{{ post.data.title }}</a>
-                </h2>
+        <div class="overflow-hidden rounded-md">
+            {%- if post.data.ogImage -%}
+            <div class="aspect-w-3 aspect-h-2">
+                <img
+                class="w-full aspect-square object-cover object-center"
+                src="{{ site.baseUrl }}{{ post.data.ogImage }}"
+                alt={props.instance.frontmatter.imgAlt}
+                loading="lazy"
+                />
+            </div>
+            {%- endif -%}
+
+            <div class="px-3 pt-4 pb-6 ">
+                <h3 class="text-xl font-semibold text-center">
+                <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+                </h3>
 
                 {%- set numComments = comments[post.fileSlug] | commentsCount %}
                 {%- if numComments.count > 0 -%}
-                    <a class="block inline float-left mb-2 md:pt-2 comments-count md:mr-2" 
+                    <a class="block inline float-left mt-2 comments-count mr-2 text-xs" 
                         href="{{ post.url | url }}#comments"
                         title="{{ numComments.text }}">
                         💬 {{ numComments.count }}
                     </a>
                 {%- endif -%}
+
+                <div class="text-xs mt-2 created-date" datetime="{{ post.data.date }}">
+                    {{ post.data.date | dateDisplay }}
+                </div>
+
+
+                {# <div class="mt-1 text-xs text-center">
+                {{ post.data.date | dateDisplay }}
+                </div> #}
+
+                {%-if post.data.excerpt -%}
+                <div class="mt-2 text-md">
+                {{ post.data.excerpt.slice(0, 150) }}&hellip; <a href="{{ post.url | url }}">יש&nbsp;עוד</a>
+                </div>
+                {%- endif -%}
+            </div>
+        </div>
+            {# <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
+                <h2 class="mb-2">
+                    <a class="block" href="{{ post.url | url }}">{{ post.data.title }}</a>
+                </h2>
+
 
                 <span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="{{ post.data.date }}">
                     {{ post.data.date | dateDisplay }}
@@ -32,7 +66,7 @@
                         {%- include 'trail-data.njk' %}
                     {% endif %}
                 </div>
-            </div>
+            </div> #}
         {% endif %}
     {% endfor %}
 </div>

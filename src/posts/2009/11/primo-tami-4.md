@@ -3,7 +3,8 @@ title: 'מי זה "PRIMO" ?'
 date: '2009-11-06T07:19:43+02:00'
 status: publish
 author: יהודה
-excerpt: ''
+excerpt: 'בזמן האחרון מופיעה פרסומת teaser שמכבב בה רובוט דמוי wall-e שנקרא primo. אם רציתם לדעת למה הפרסומת, התשובה בכותרת הסרטון'
+ogImage: 'img/2009/11/primo-tami-4.jpg'
 type: post
 id: 361
 tags:

@@ -3,7 +3,8 @@ title: 'הבלוג שודרג לוורדפרס 2.7'
 date: '2008-12-15T23:10:10+02:00'
 status: publish
 author: יהודה
-excerpt: ''
+excerpt: 'אמנם עשו את זה קודם לפני, אבל עוד לא ראיתי מישהו שהפעיל את התגובות המשורשרות, אז שרשרו ותיהנו'
+ogImage: 'img/2008/12/hierarchical-comments.png'
 type: post
 id: 265
 tags:

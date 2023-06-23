@@ -3,7 +3,8 @@ title: 'מבחן חומצה 2 – האם הדפדפן החביב עליכם בא
 date: '2009-10-14T23:45:09+02:00'
 status: publish
 author: יהודה
-excerpt: ''
+excerpt: 'הדפדפנים המודרנים (פיירפוקס, ספארי, אופרה, ו IE8) מתגאים בכך שעברו את המבחן acid2 לבדיקת תאימות לתקנים'
+ogImage: 'img/2009/10/acid2-rtl-Firefox-3.png'
 type: post
 id: 354
 tags:

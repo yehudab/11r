@@ -3,7 +3,8 @@ title: 'direction:rtl באינטרנט אקספלורר 8 בטא 1'
 date: '2008-07-24T11:00:22+03:00'
 status: publish
 author: יהודה
-excerpt: ''
+excerpt: 'אתמול ניסיתי לבדוק איך נראה הבלוג שלי באינטרנט אקספלורר 8 בטא1. במילים עדינות, המראות היו קשים'
+ogImage: 'img/2008/07/direction-rtl-ie8-beta-1.png'
 type: post
 id: 24
 tags:

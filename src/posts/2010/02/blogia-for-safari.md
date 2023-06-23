@@ -3,7 +3,9 @@ title: 'הבלוגיה של תפוז – לחובבי ספארי'
 date: '2010-02-13T22:51:20+02:00'
 status: publish
 author: יהודה
-excerpt: ''
+excerpt: 'הפעם משהו למשתמשי ספארי המושבעים.
+אם ניסיתם לצפות בחלק מהבלוגים של תפוז (למשל CooknBake), ולא ראיתם שום תוכן זה לא אשמתכם. ככה זה נראה לפני'
+ogImage: 'img/2010/02/blogia-for-safari-2.png'
 type: post
 id: 391
 tags:

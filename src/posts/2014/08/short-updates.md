@@ -3,11 +3,12 @@ title: 'עדכונים קצרים'
 date: '2014-08-09T18:22:14+03:00'
 status: publish
 author: יהודה
-excerpt: ''
+excerpt: 'לראשונה מאז הקמת הבלוג החלפתי את ערכת העיצוב לערכת העיצוב האחרונה של WordPress: Twenty Fourteen. השינוי המהותי (פרט לצבעים) הוא תמיכה ב Responsive Design'
+ogImage: 'img/2014/08/twenty-fourteen.png'
 type: post
 id: 707
 tags:
-    - 'ווידג''טים'
+    - 'ווידג׳טים'
     - כללי
     - שמישות
 post_format: []

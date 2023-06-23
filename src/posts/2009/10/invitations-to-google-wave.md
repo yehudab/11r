@@ -3,7 +3,8 @@ title: 'הזמנות ל Google wave'
 date: '2009-10-01T07:22:03+02:00'
 status: publish
 author: יהודה
-excerpt: ''
+excerpt: 'רוצים הזמנה? 4 הראשונים שתגובתם תופיע ללא צורך באישור (כלומר כאלו שהגיבו כאן לפחות פעם אחת) יקבלו אחת.'
+ogImage: 'img/2009/10/invitations-to-google-wave-1.png'
 type: post
 id: 342
 tags:

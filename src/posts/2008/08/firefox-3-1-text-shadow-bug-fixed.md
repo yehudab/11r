@@ -3,7 +3,8 @@ title: 'הבאג תוקן: text-shadow בפרייפוקס 3.1'
 date: '2008-08-28T06:15:04+03:00'
 status: publish
 author: יהודה
-excerpt: ''
+excerpt: 'לפני פחות מחודש דיווחתי כאן ובבאגזילה על באג בתכונת text-shadow. תודות לעבודה מהירה של אנשי מוזילה רוברט או''קלהן וסיימון מונטגו הבאג תוקן, וכעת ניתן לראות התנהגות תקינה של הצל גם מתחת לטקסט עברי וערבי'
+ogImage: 'img/2008/08/firefox-3-1-text-shadow-bug-fixed-1.png'
 type: post
 id: 145
 tags:

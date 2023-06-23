@@ -3,7 +3,8 @@ title: 'משתלם להיות בטא טסטר של פיירפוקס 4'
 date: '2011-01-07T10:30:09+02:00'
 status: publish
 author: יהודה
-excerpt: ''
+excerpt: 'הנה מה שהגיע אלי במתנה היום בדואר'
+ogImage: 'img/2011/01/ff4shirt-front.jpg'
 type: post
 id: 557
 tags:
