@@ -31,11 +31,6 @@
                     {{ post.data.date | dateDisplay }}
                 </div>
 
-
-                {# <div class="mt-1 text-xs text-center">
-                {{ post.data.date | dateDisplay }}
-                </div> #}
-
                 {%-if post.data.excerpt -%}
                 <div class="mt-2 text-md">
                 {{ post.data.excerpt.slice(0, 150) }}&hellip; <a href="{{ post.url | url }}">יש&nbsp;עוד</a>
@@ -43,30 +38,6 @@
                 {%- endif -%}
             </div>
         </div>
-            {# <div class="mb-8 border-dotted border-b pb-8 border-gray-600">
-                <h2 class="mb-2">
-                    <a class="block" href="{{ post.url | url }}">{{ post.data.title }}</a>
-                </h2>
-
-
-                <span class="block md:inline md:float-left mb-2 md:pt-2 created-date" datetime="{{ post.data.date }}">
-                    {{ post.data.date | dateDisplay }}
-                </span>
-
-                {% for tag in post.data.tags %}
-                    {%- if tag !== "post" -%}
-                        <a class="tag" href="{{ site.baseUrl }}tag/{{ tag }}/">{{ tag }}</a>
-                    {%- endif -%}
-                {% endfor %}
-                <div class="clear-both"></div>
-
-                <div class="content post">
-                    {{ post.templateContent | safe }}
-                    {%- if post.data.trailSerial %}
-                        {%- include 'trail-data.njk' %}
-                    {% endif %}
-                </div>
-            </div> #}
         {% endif %}
     {% endfor %}
 </div>
