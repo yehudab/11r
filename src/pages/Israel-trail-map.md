@@ -211,7 +211,7 @@ disableNewComments: true
 2. קטע חסר
 
 #### עונה 2 - 2023-2024
-11. [יבנאל לירדנית](/blog/2023/12/Israel-trail-11)
+11. [יבנאל לירדנית](/blog/2023/12/israel-trail-11)
 
 ---
 
