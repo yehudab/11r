@@ -1,6 +1,7 @@
 ---
 title: אודות
 date: '2008-07-21T18:55:30+03:00'
+lastUpdate: '2022-12-09T13:07:00+02:00'
 status: publish
 path: about
 author: יהודה
