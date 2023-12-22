@@ -85,7 +85,12 @@
             <p>חלפה למעלה משנה מאז ש<a href="https://www.php.net/eol.php">התמיכה ב-7.0 php הופסקה</a>, וזה הזמן לשדרג את הבלוג לגרסה 7.4. כרגיל, צריך לקרוא את כל ה breaking changes, אבל אם הבלוג והתוספים מתוחזקים לגרסה העדכנית ביותר, אפשר לסמוך בדרך כלל שהכל יעובד. גיבוי של הקוד והדאטה רצוי גם כן.</p>
 <p>את הגיבויים אני מבצע לאחרונה בעזרת <a href="https://restic.net/">restic</a>, כאשר הקבצים מועלים לאכסון (הזול יחסית) של <a href="https://www.backblaze.com/b2/cloud-storage.html">Backblaze B2</a>.</p>
 <p>אחרי שמכניסים את הגדרות ל restic למשתני סביבה, סקריפט הגיבוי פשוט למדי:</p>
-<pre class="language-bash"><code class="language-bash"><span class="token shebang important">#!/bin/bash</span><br><span class="token assign-left variable">d</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">date</span> +%Y-%m-%d<span class="token variable">)</span></span><br>mysqldump <span class="token parameter variable">-u</span> *** <span class="token parameter variable">-p</span> *** <span class="token operator">></span> ~/backup/sql/yehudab-<span class="token variable">${d}</span>.sql<br><span class="token function">gzip</span> ~/backup/sql/*.sql<br><span class="token function">tar</span> <span class="token parameter variable">-czf</span> ~/backup/site/yehudab.com-<span class="token variable">${d}</span>.tar.gz yehudab.com<br>restic backup ~/backup</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+<span class="token assign-left variable">d</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">date</span> +%Y-%m-%d<span class="token variable">)</span></span>
+mysqldump <span class="token parameter variable">-u</span> *** <span class="token parameter variable">-p</span> *** <span class="token operator">></span> ~/backup/sql/yehudab-<span class="token variable">${d}</span>.sql
+<span class="token function">gzip</span> ~/backup/sql/*.sql
+<span class="token function">tar</span> <span class="token parameter variable">-czf</span> ~/backup/site/yehudab.com-<span class="token variable">${d}</span>.tar.gz yehudab.com
+restic backup ~/backup</code></pre>
 <p>לצורך השדרוג, עקבתי אחרי <a href="https://www.cloudbooklet.com/upgrade-php-version-to-php-7-4-on-ubuntu/">המדריך ב CloudBooklet</a>. מכוון שאני מריץ php דרך ngnix, ביצעתי את הסעיפים הרלוונטים לגרסת fpm.</p>
 <p>אה, וכמובן, להשתמש ב vi, כי nano זה לחלשים.</p>
 <p>אחרי השדרוג, אני מנסה לשמור את הפוסט הזה ובום error 500. בדיקה מהירה בלוג של nginx על השרת מגלה ששכחתי להתקין את php7.4-memcache שהמדריך הנ&quot;ל לא מחשיב כ common extension. הרצת:</p>
