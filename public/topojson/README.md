@@ -7,8 +7,8 @@
 4. Upload the simplified GPX file to [opengeo](https://opengeo.tech/maps/gpx-simplify-optimizer/)
 5. Adjust number of points until no jugged edges exist (first suggestion: 4 nodes per KM)
 6. Download in GeoJSON
-7. Rename downloaded file to: `trail-xx.geojson`
-8. Add new section in `Israel-trail-map.md` for the new trail number. Make sure to adjust the `data.url`, `mark.href`, and the `format.feature` values
+7. Rename downloaded file to `trail-xx.geojson`
+8. Add the new trail number to the `trailNumbers` var in `vega-map.js`
 9. Update the `lastUpdate` front matter field in `Israel-trail-map.md`
 10. Run in command line:
 
