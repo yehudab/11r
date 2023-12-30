@@ -1,7 +1,7 @@
 ---
 title: שביל ישראל - ראשי
 date: '2022-09-27T20:00:00+03:00'
-lastUpdate: '2023-12-02T14:10:00.000+00:00'
+lastUpdate: '2023-12-30T14:10:00.000+00:00'
 status: publish
 path: Israel-trail-map
 author: יהודה
@@ -32,7 +32,8 @@ disableNewComments: true
 2. קטע חסר
 
 #### עונה 2 - 2023-2024
-11. [יבנאל לירדנית](/blog/2023/12/israel-trail-11)
+11. [מים שאל חלב נתנה](/blog/2023/12/israel-trail-11)
+12. [עולים ... ויורדים](/blog/2023/12/israel-trail-12)
 
 ---
 
