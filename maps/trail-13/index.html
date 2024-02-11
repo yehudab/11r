@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="canonical" href="https://yehudab.com/maps/trail-13/" />
+
+    
+    <meta itemprop="name" content="מפת מקטע מס׳ 13 | בלוג פשוט">
+    <meta itemprop="description" content="צר עולמי כ  U+200A">
+
+    
+    <meta name="twitter:title" content="מפת מקטע מס׳ 13 | בלוג פשוט">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="צר עולמי כ  U+200A">
+    <meta name="twitter:site" content="@yehudab">
+    <meta name="twitter:creator" content="@yehudab">
+    <meta name="twitter:image:src" content="">
+
+    
+    <meta property="og:title" content="מפת מקטע מס׳ 13 | בלוג פשוט">
+    <meta property="og:description" content="צר עולמי כ  U+200A">
+    <meta property="og:image" content="https://yehudab.com/img/2022/12/blog-image.webp">
+    <meta property="og:url" content="https://yehudab.com/maps/trail-13/">
+    <meta property="og:site_name" content="בלוג פשוט">
+    <meta property="og:locale" content="he_il">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <title>
+      מפת מקטע מס׳ 13
+      
+       | בלוג פשוט</title>
+
+    <link rel="stylesheet" href="/assets/main.bundle.css">
+
+    
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <header>
+  <nav class="container mx-auto max-w-3xl px-8 pt-2 flex flex-wrap justify-between">
+    <div>
+      <h1>
+        <a href="/">בלוג פשוט</a>
+      </h1>
+      <p>צר עולמי כ  U+200A</p>
+    </div>
+
+    <ul class="flex flex-wrap sm:w-32 w-full mt-6 md:justify-between justify-evenly">
+      <li>
+        <a href="/blog/about">אודות</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+<div id="bthn" lang="he"></div>
+    <main class="container mx-auto max-w-3xl p-8 grow">
+      
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+  <h2 class="text-center">מפת קטע מס׳ 13 - נוף הגליל לשיבלי</h2>
+  <p class="text-center text-sm italic mb-6">לא מתאימה לצרכי לניווט</p>
+  <div id="map"></div>
+  <style>
+    html,body { height: 100%; }
+    main { min-height: 100%; }
+    #map { height: calc(100% - 7rem); }
+  </style>
+  
+  <script>
+    let taril = {"type":"Feature","properties":{"name":"נוף הגליל לשיבלי"},"geometry":{"type":"LineString","coordinates":[[35.33821,32.71853],[35.33781,32.71779],[35.33772,32.71724],[35.33817,32.71714],[35.33898,32.71667],[35.33861,32.71503],[35.33939,32.71459],[35.33975,32.71404],[35.33916,32.71056],[35.33875,32.70932],[35.34223,32.7099],[35.34222,32.70971],[35.34457,32.71227],[35.34574,32.71161],[35.3464,32.70741],[35.34638,32.70646],[35.35006,32.70337],[35.35024,32.70337],[35.35037,32.70238],[35.35141,32.7015],[35.35057,32.70105],[35.34993,32.70004],[35.35224,32.6994],[35.35292,32.69916],[35.35157,32.69764],[35.35205,32.69732],[35.3545,32.69831],[35.35529,32.69862],[35.35714,32.70284],[35.35722,32.70461],[35.35941,32.70621],[35.3595,32.7078],[35.3678,32.7056],[35.36812,32.70581],[35.368,32.70891],[35.36801,32.71043],[35.36648,32.71257],[35.36696,32.71263],[35.37118,32.71121],[35.37191,32.71093],[35.37684,32.71135],[35.37833,32.71107],[35.38706,32.70525],[35.38754,32.70493],[35.38731,32.70437],[35.38674,32.70348],[35.38444,32.70298],[35.38349,32.70254],[35.38454,32.70192],[35.38656,32.69659],[35.38752,32.69574],[35.38761,32.69451],[35.38472,32.69412]]}};
+    let baseStyle = {
+        "color": "#ff7800",
+        "weight": 5,
+        "opacity": 0.65
+    };
+    let secondStyle = {
+        "color": "#000000",
+        "weight": 1,
+        "opacity": 0.65
+    };
+    let map = L.map('map').setView([33.22966,35.61782], 13);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+    let feature = L.geoJSON(taril, { style: baseStyle}).addTo(map);
+    L.geoJSON(taril, { style: secondStyle}).addTo(map);
+    map.fitBounds(feature.getBounds());
+  </script>
+
+    </main>
+    <footer class="bg-gray-900 pb-10">
+  <p class="block text-center text-sm mb-6">
+    CC-BY-SA
+    <a href="/">
+      Yehuda Bar Nir
+    </a>
+    &bull; Built with <a href="https://www.11ty.dev/">11ty</a> 
+    &bull; Based on <a target="_blank" href="https://github.com/reeseschultz/11r">11r</a> by
+    <a target="_blank" href="https://reeseschultz.com">
+      Reese Schultz
+    </a>
+    &bull; אתר נגיש <a href="/blog/accessibility-statement/">הצהרת נגישות</a>
+    
+  </p>
+
+</footer>
+    
+    <script src="/assets/lib/cash.js"></script>
+    <script src="/assets/main.bundle.js"></script>
+    <script async src="https://ackee.yehudab.com/blog-utils.js" 
+      data-ackee-server="https://ackee.yehudab.com"
+      data-ackee-domain-id="9c5f49e5-e4a2-44dd-99bf-9f38e447246c"
+      data-ackee-opts='{ "ignoreLocalhost": true, "detailed": true, "ignoreOwnVisits": true }'></script>
+    <script async src="https://bringthemhomenow.net/1.0.8/hostages-ticker.js" 
+      integrity="sha384-jQVW0E+wZK5Rv1fyN+b89m7cYY8txH4s3uShzHf1T51hdBTPo7yKL6Yizgr+Gp8C"
+      crossorigin="anonymous"></script> 
+  </body>
+</html>
