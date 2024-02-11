@@ -79,6 +79,13 @@ hr {
 }
 
 .content > blockquote {
+  border-right: 0.5rem solid #718096;
+  margin: 1.5em 1.5em;
+  padding: 0.5em 1em;
+}
+
+.content > blockquote[dir=ltr] {
+  border-right: none;
   border-left: 0.5rem solid #718096;
   margin: 1.5em 1.5em;
   padding: 0.5em 1em;
