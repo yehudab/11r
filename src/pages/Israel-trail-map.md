@@ -1,7 +1,7 @@
 ---
 title: שביל ישראל - ראשי
 date: '2022-09-27T20:00:00+03:00'
-lastUpdate: '2024-03-16T14:00:00.000+00:00'
+lastUpdate: '2024-04-04T14:00:00.000+00:00'
 status: publish
 path: Israel-trail-map
 author: יהודה
@@ -36,7 +36,8 @@ disableNewComments: true
 12. [עולים ... ויורדים](/blog/2023/12/israel-trail-12)
 13. [כשמארק טווין פגש את אורי דביר](/blog/2024/02/israel-trail-13)
 14. [שמעון ולוי](/blog/2024/01/israel-trail-14)
-15. [שם זמני](/blog/2024/03/israel-trail-15)
+15. [שוברים את הכלים](/blog/2024/03/israel-trail-15)
+16. קטע חסר
 
 ---
 
