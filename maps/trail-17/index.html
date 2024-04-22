@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="canonical" href="https://yehudab.com/maps/trail-17/" />
+
+    
+    <meta itemprop="name" content="מפת מקטע מס׳ 17 | בלוג פשוט">
+    <meta itemprop="description" content="צר עולמי כ  U+200A">
+
+    
+    <meta name="twitter:title" content="מפת מקטע מס׳ 17 | בלוג פשוט">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="צר עולמי כ  U+200A">
+    <meta name="twitter:site" content="@yehudab">
+    <meta name="twitter:creator" content="@yehudab">
+    <meta name="twitter:image:src" content="">
+
+    
+    <meta property="og:title" content="מפת מקטע מס׳ 17 | בלוג פשוט">
+    <meta property="og:description" content="צר עולמי כ  U+200A">
+    <meta property="og:image" content="https://yehudab.com/img/2022/12/blog-image.webp">
+    <meta property="og:url" content="https://yehudab.com/maps/trail-17/">
+    <meta property="og:site_name" content="בלוג פשוט">
+    <meta property="og:locale" content="he_il">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <title>
+      מפת מקטע מס׳ 17
+      
+       | בלוג פשוט</title>
+
+    <link rel="stylesheet" href="/assets/main.bundle.css">
+
+    
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <header>
+  <nav class="container mx-auto max-w-3xl px-8 pt-2 flex flex-wrap justify-between">
+    <div>
+      <h1>
+        <a href="/">בלוג פשוט</a>
+      </h1>
+      <p>צר עולמי כ  U+200A</p>
+    </div>
+
+    <ul class="flex flex-wrap sm:w-32 w-full mt-6 md:justify-between justify-evenly">
+      <li>
+        <a href="/blog/about">אודות</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+<div id="bthn" lang="he"></div>
+    <main class="container mx-auto max-w-3xl p-8 grow">
+      
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+  <h2 class="text-center">מפת קטע מס׳ 17 - אלון הגליל לקרית טבעון</h2>
+  <p class="text-center text-sm italic mb-6">לא מתאימה לצרכי לניווט</p>
+  <div id="map"></div>
+  <style>
+    html,body { height: 100%; }
+    main { min-height: 100%; }
+    #map { height: calc(100% - 7rem); }
+  </style>
+  
+  <script>
+    let taril = {"type":"Feature","properties":{"name":"אלון הגליל לקרית טבעון"},"geometry":{"type":"LineString","coordinates":[[35.22359,32.7634],[35.22341,32.76339],[35.22281,32.76389],[35.22107,32.76272],[35.21971,32.7622],[35.21661,32.7627],[35.21568,32.76259],[35.21391,32.76404],[35.21198,32.76454],[35.20858,32.76375],[35.20784,32.76368],[35.20265,32.76416],[35.2022,32.76369],[35.19859,32.76497],[35.19841,32.76488],[35.19839,32.76611],[35.19774,32.76649],[35.19718,32.76601],[35.19686,32.76635],[35.19106,32.76333],[35.1907,32.76324],[35.19016,32.76174],[35.18942,32.76051],[35.18966,32.75852],[35.18918,32.75758],[35.18617,32.75772],[35.18549,32.75821],[35.18201,32.75669],[35.18207,32.75763],[35.17764,32.75506],[35.17661,32.75496],[35.17298,32.75779],[35.17249,32.75844],[35.16927,32.75894],[35.16749,32.75965],[35.16612,32.76137],[35.16515,32.76212],[35.16462,32.7617],[35.16409,32.76225],[35.16339,32.76262],[35.15723,32.76388],[35.15716,32.76438],[35.15454,32.76435],[35.15381,32.76454],[35.15333,32.76497],[35.15283,32.769],[35.15375,32.76979],[35.15447,32.76995],[35.15098,32.76832],[35.15056,32.76801],[35.14364,32.76882],[35.14293,32.76894],[35.14219,32.76745],[35.14183,32.7661],[35.14133,32.76145],[35.14092,32.76043],[35.13555,32.75487],[35.13349,32.7535],[35.13272,32.75156],[35.13119,32.74974],[35.13166,32.74641],[35.13121,32.74538],[35.13137,32.7449],[35.13224,32.74379],[35.1321,32.74208],[35.13211,32.74068],[35.13304,32.74005],[35.13338,32.73975],[35.13615,32.73933]]}};
+    let baseStyle = {
+        "color": "#ff7800",
+        "weight": 5,
+        "opacity": 0.65
+    };
+    let secondStyle = {
+        "color": "#000000",
+        "weight": 1,
+        "opacity": 0.65
+    };
+    let map = L.map('map').setView([33.22966,35.61782], 13);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+    let feature = L.geoJSON(taril, { style: baseStyle}).addTo(map);
+    L.geoJSON(taril, { style: secondStyle}).addTo(map);
+    map.fitBounds(feature.getBounds());
+  </script>
+
+    </main>
+    <footer class="bg-gray-900 pb-10">
+  <p class="block text-center text-sm mb-6">
+    CC-BY-SA
+    <a href="/">
+      Yehuda Bar Nir
+    </a>
+    &bull; Built with <a href="https://www.11ty.dev/">11ty</a> 
+    &bull; Based on <a target="_blank" href="https://github.com/reeseschultz/11r">11r</a> by
+    <a target="_blank" href="https://reeseschultz.com">
+      Reese Schultz
+    </a>
+    &bull; אתר נגיש <a href="/blog/accessibility-statement/">הצהרת נגישות</a>
+    
+  </p>
+
+</footer>
+    
+    <script src="/assets/lib/cash.js"></script>
+    <script src="/assets/main.bundle.js"></script>
+    <script async src="https://ackee.yehudab.com/blog-utils.js" 
+      data-ackee-server="https://ackee.yehudab.com"
+      data-ackee-domain-id="9c5f49e5-e4a2-44dd-99bf-9f38e447246c"
+      data-ackee-opts='{ "ignoreLocalhost": true, "detailed": true, "ignoreOwnVisits": true }'></script>
+    <script async src="https://bringthemhomenow.net/1.0.8/hostages-ticker.js" 
+      integrity="sha384-jQVW0E+wZK5Rv1fyN+b89m7cYY8txH4s3uShzHf1T51hdBTPo7yKL6Yizgr+Gp8C"
+      crossorigin="anonymous"></script> 
+  </body>
+</html>
