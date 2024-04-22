@@ -1,7 +1,7 @@
 ---
 title: שביל ישראל - ראשי
 date: '2022-09-27T20:00:00+03:00'
-lastUpdate: '2024-04-04T14:00:00.000+00:00'
+lastUpdate: '2024-04-13T14:00:00.000+00:00'
 status: publish
 path: Israel-trail-map
 author: יהודה
@@ -38,6 +38,7 @@ disableNewComments: true
 14. [שמעון ולוי](/blog/2024/01/israel-trail-14)
 15. [שוברים את הכלים](/blog/2024/03/israel-trail-15)
 16. קטע חסר
+17. [יחפים בשביל](/blog/2024/04/israel-trail-17)
 
 ---
 
