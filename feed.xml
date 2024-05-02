@@ -4,7 +4,7 @@
   <subtitle>צר עולמי כ U+200A</subtitle>
   <link href="https://yehudab.com/feed.xml" rel="self"/>
   <link href="https://yehudab.com/"/>
-  <updated>2024-04-23T14:00:00Z</updated>
+  <updated>2024-05-02T14:00:00Z</updated>
   <id>https://yehudab.com/</id>
   <author>
     <name>יהודה בר ניר</name>
@@ -1577,6 +1577,22 @@ Tabor stands solitary and alone, a giant sentinel above the Plain of Esdraelon. 
 &lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2024/04/shvil-19-3.jpg&quot; alt=&quot;צניר&quot; title=&quot;צניר&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;לקראת סיום הקטע, שוב ירידה מאתגרת בין סלעים. זה הזמן לקפל את המקלות ולהעזר בחברים עד להגעה לחניון פתחת נחל אורן, שם מחכים לנו הרכבים.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2024/04/shvil-19-5.jpg&quot; alt=&quot;בין הסלעים בירידה לכוון החניון&quot; title=&quot;בין הסלעים בירידה לכוון החניון&quot; /&gt;&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>מה יהיה עם הספאם הזה</title>
+      <link href="https://yehudab.com/blog/2024/05/fighting-spam-again/"/>
+      <updated>2024-05-02T14:00:00Z</updated>
+      <id>https://yehudab.com/blog/2024/05/fighting-spam-again/</id>
+      <content type="html">&lt;p&gt;אני עושה קצת הפסקה בפוסטים על שביל ישראל כדי לתחזק את הבלוג - הפעם לטיפול בנושא התגובות.&lt;/p&gt;
+&lt;p&gt;כמו ש&lt;a href=&quot;https://yehudab.com/blog/2020/10/staticman-for-11ty-comments/&quot;&gt;כתבתי בעבר&lt;/a&gt;, ניהול התגובות נעשה ע״י &lt;a href=&quot;https://staticman.net/&quot;&gt;Staticman&lt;/a&gt; - אפליקציית קוד פתוח להזנת תגובות לאתרים סטטים דרך pull requests. יש ל Staticman תמיכה ב-Captcha, אבל זה כנראה לא מספיק. אין לי מושג אם מושיבים בן אדם לפתור אותם, או שיש איזה דרך בוטית להתגבר על זה, אבל בשורה התחתונה, זה פשוט לא עובד ולאחרונה כמות תגובות הספאם נהייתה בלתי נסבלת.&lt;/p&gt;
+&lt;p&gt;החלטתי לחזור לחבר הוותיק &lt;a href=&quot;https://akismet.com/&quot;&gt;Akismet&lt;/a&gt;, למרות שבעבר &lt;a href=&quot;https://yehudab.com/blog/2009/12/js-is-the-new-killer/&quot;&gt;זנחתי אותו&lt;/a&gt;, אבל כנראה שאין ברירה. גם לזה יש תמיכה מובנית ב-staticman, וכל מה שנדרש הוא להירשם לאתר ולהגדיר את ה-API key בקובץ docker-compose.yml.&lt;/p&gt;
+&lt;p&gt;להפתעתי, גילתי ש-Akismet שמרו את הסטטיסטיקות של האתר הישן (מבוסס WordPress) שאירח את הבלוג. מעניין איך יראו המספרים בעידן החדש.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2024/05/all-time-spam-stats.png&quot; alt=&quot;כמות תגובות הספאם לאורך השנים בבלוג&quot; title=&quot;כמות תגובות הספאם לאורך השנים בבלוג&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;על הדרך, גם שידרגתי את החבילות שבהם משתמש Staticman. לצערי, הפרויקט הזה לא עודכן כבר כמה שנים, ורואים את זה על כמות ה-PR וה-issues שנפתחו לו. &lt;a href=&quot;https://github.com/eduardoboucas/staticman/pull/466&quot;&gt;פתחתי PR&lt;/a&gt; עם התיקונים שלי. אני לא חושב שהוא ימורג׳ג׳ אי-פעם, אבל שיהיה.&lt;/p&gt;
+&lt;p&gt;אם נתקלתם בתגובה שלא הגיעה בגלל הודעת SPAM, אנא שלחו לי מייל מתוך דף &lt;a href=&quot;https://yehudab.com/blog/about&quot;&gt;האודות&lt;/a&gt; של הבלוג.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2024/05/pikaso_texttoimage_robot-hitting-a-can-of-spam-on-top-of-a-computer-t.jpeg&quot; alt=&quot;בוט נלחם ב-SPAM. תמונת AI&quot; title=&quot;בוט נלחם ב-SPAM. תמונת AI&quot; /&gt;&lt;/p&gt;
 </content>
     </entry>
 </feed>
