@@ -76,6 +76,14 @@ comments:
   transforms:
     email: md5
 
+  akismet:
+    enabled: true
+    author: name
+    authorEmail: email
+    authorUrl: url
+    content: message
+    type: comment
+
   reCaptcha:
     enabled: true
     siteKey: 6LfnPtEZAAAAAOjThTjcNoPS37UePCEC7AGYLhOM
