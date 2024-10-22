@@ -1,5 +1,5 @@
 ---
-date: 2022-10-22T10:11:34.000+00:00
+date: '2022-10-22T10:11:34.000+00:00'
 status: publish
 author: יהודה
 type: post

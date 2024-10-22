@@ -1,4 +1,4 @@
-module.exports = (collections) => {
+export default function (collections) {
     const allTags = Object.keys(collections);
     return allTags.filter((tag) =>
         tag !== "postsWithoutDrafts" &&

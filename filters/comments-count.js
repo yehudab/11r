@@ -1,4 +1,4 @@
-module.exports = (obj) => {
+export default function (obj) {
     const allComments = obj ? Object.values(obj) : [];
     const count = allComments.length;
     const text = count == 0 ?

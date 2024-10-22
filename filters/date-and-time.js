@@ -1,6 +1,6 @@
-const tz = require('timezone/loaded');
+import { DateTime } from "luxon";
 
-module.exports = (date) => {
-    const utc = tz(date);
-    return tz(utc, '%-d ב%B %Y בשעה %-H:%M', 'he_IL', 'Asia/Jerusalem')
+export default function (date) {
+    const dt = DateTime.fromISO(date).setZone('Asia/Jerusalem').setLocale('he-IL');
+    return dt.toFormat('d בMMMM yyyy בשעה H:mm');
 };

@@ -1,4 +1,5 @@
 ---
+date: '2000-01-01T20:00:00+03:00'
 layout: post
 title: Privacy Policy
 path: privacy-policy
