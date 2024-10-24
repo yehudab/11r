@@ -1,6 +1,3 @@
-import { DateTime } from "luxon";
+import { formattedDate, DATE } from './date-utils.js';
 
-export default function (date) {
-    const dt = DateTime.fromISO(date).setZone('Asia/Jerusalem').setLocale('he-IL');
-    return dt.toFormat('d בMMMM yyyy');
-};
+export default (date) => formattedDate(date, DATE);

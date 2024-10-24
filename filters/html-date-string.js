@@ -1,8 +1,3 @@
-// https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
+import { formattedDate, ISO_DATE } from './date-utils.js';
 
-import { DateTime } from "luxon";
-
-export default function (date) {
-    const dt = DateTime.fromISO(date).setZone('Asia/Jerusalem');
-    return dt.toFormat('yyyy-LL-dd');
-};
+export default (date) => formattedDate(date, ISO_DATE);

@@ -5,6 +5,7 @@ import pluginRss from "@11ty/eleventy-plugin-rss";
 import dateDisplay from "./filters/date-display.js";
 import htmlDateString from "./filters/html-date-string.js";
 import dateAndTime from "./filters/date-and-time.js";
+import dateISO from "./filters/date-iso.js";
 import yearMonthFile from "./filters/year-month-file.js";
 import commentsTree from "./filters/comments-tree.js";
 import commentsCount from "./filters/comments-count.js";
@@ -25,6 +26,7 @@ export default function (config) {
   config.addFilter('dateDisplay', dateDisplay);
   config.addFilter('htmlDateString', htmlDateString);
   config.addFilter('dateAndTime', dateAndTime);
+  config.addFilter('dateISO', dateISO);
   config.addFilter('yearMonthFile', yearMonthFile);
   config.addFilter('commentsTree', commentsTree);
   config.addFilter('commentsCount', commentsCount);
