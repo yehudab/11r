@@ -27,8 +27,8 @@
                     </a>
                 {%- endif -%}
 
-                <div class="text-xs mt-2 created-date" datetime="{{ post.data.date }}">
-                    {{ post.data.date | dateDisplay }}
+                <div class="text-xs mt-2 created-date" datetime="{{ post.date | dateISO }}">
+                    {{ post.date | dateDisplay }}
                 </div>
 
                 {%-if post.data.excerpt -%}

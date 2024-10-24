@@ -13,7 +13,7 @@
   {%- set absolutePostUrl %}{{ page.url | url | absoluteUrl(metadata.url) }}{% endset %}
   <url>
     <loc>{{ absolutePostUrl }}</loc>
-    <lastmod>{{ (page.data.lastUpdate if page.data.lastUpdate else page.date) | htmlDateString}}</lastmod>
+    <lastmod>{{ (page.data.lastUpdate if page.data.lastUpdate else page.data.date) | htmlDateString}}</lastmod>
   </url>
 {%- endfor %}
 </urlset>

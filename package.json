@@ -1,7 +1,8 @@
 {
   "name": "11r",
-  "author": "Reese Schultz",
+  "author": "Yehuda Bar Nir (original author: Reese Schultz)",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "build": "cross-env NODE_ENV=production npm-run-all clean -p build:*",
     "build:11ty": "eleventy --quiet",
@@ -12,7 +13,7 @@
     "dev:rollup": "rollup -c -w"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@rollup/plugin-replace": "^5.0.2",
@@ -24,7 +25,7 @@
     "glob-promise": "^6.0.2",
     "intl": "^1.2.5",
     "js-yaml": "^4.1.0",
-    "luxon": "^3.3.0",
+    "luxon": "^3.5.0",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.24",
     "postcss-import": "^15.1.0",
@@ -35,7 +36,6 @@
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-svg": "^2.0.0",
     "tailwindcss": "^3.3.2",
-    "timezone": "^1.0.23",
     "topojson-client": "^3.1.0"
   }
 }

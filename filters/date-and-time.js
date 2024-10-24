@@ -1,6 +1,3 @@
-const tz = require('timezone/loaded');
+import { formattedDate, DATE_AND_TIME } from './date-utils.js';
 
-module.exports = (date) => {
-    const utc = tz(date);
-    return tz(utc, '%-d ב%B %Y בשעה %-H:%M', 'he_IL', 'Asia/Jerusalem')
-};
+export default (date) => formattedDate(date, DATE_AND_TIME);

@@ -1,8 +1,3 @@
-// https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
+import { formattedDate, ISO_DATE } from './date-utils.js';
 
-const tz = require('timezone/loaded');
-
-module.exports = (date) => {
-    const utc = tz(date);
-    return tz(utc, '%Y-%m-%d', 'he_IL', 'Asia/Jerusalem')
-};
+export default (date) => formattedDate(date, ISO_DATE);

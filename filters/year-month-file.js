@@ -1,4 +1,4 @@
-module.exports = (fileName) => {
+export default function (fileName) {
     let matches = fileName.match(/\.\/src\/posts\/(.*)\.md/);
     if (matches) {
         return matches[1];

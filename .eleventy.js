@@ -1,24 +1,34 @@
-const yaml = require("js-yaml");
-const siteSettings = require('./src/globals/site.json');
-const pluginSyntaxhighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-const pluginRss = require("@11ty/eleventy-plugin-rss");
+import yaml from "js-yaml";
+import siteSettings from "./src/globals/site.js";
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import pluginRss from "@11ty/eleventy-plugin-rss";
+import dateDisplay from "./filters/date-display.js";
+import htmlDateString from "./filters/html-date-string.js";
+import dateAndTime from "./filters/date-and-time.js";
+import dateISO from "./filters/date-iso.js";
+import yearMonthFile from "./filters/year-month-file.js";
+import commentsTree from "./filters/comments-tree.js";
+import commentsCount from "./filters/comments-count.js";
+import getTags from "./filters/get-tags.js";
+import isCommentable from "./filters/is-commentable.js";
 
-module.exports = (config) => {
-  config.addPlugin(pluginSyntaxhighlight);
+export default function (config) {
+  config.addPlugin(syntaxHighlight);
   config.addPlugin(pluginRss);
   config.setLiquidOptions({
     strictFilters: false,
     dynamicPartials: false
   })
 
-  config.addFilter('dateDisplay', require('./filters/date-display.js'));
-  config.addFilter('htmlDateString', require('./filters/html-date-string.js'));
-  config.addFilter('dateAndTime', require('./filters/date-and-time.js'));
-  config.addFilter('yearMonthFile', require('./filters/year-month-file.js'));
-  config.addFilter('commentsTree', require('./filters/comments-tree.js'));
-  config.addFilter('commentsCount', require('./filters/comments-count.js'));
-  config.addFilter('getTags', require('./filters/get-tags.js'));
-  config.addFilter('isCommentable', require('./filters/is-commentable.js'));
+  config.addFilter('dateDisplay', dateDisplay);
+  config.addFilter('htmlDateString', htmlDateString);
+  config.addFilter('dateAndTime', dateAndTime);
+  config.addFilter('dateISO', dateISO);
+  config.addFilter('yearMonthFile', yearMonthFile);
+  config.addFilter('commentsTree', commentsTree);
+  config.addFilter('commentsCount', commentsCount);
+  config.addFilter('getTags', getTags);
+  config.addFilter('isCommentable', isCommentable);
 
   config.addPassthroughCopy({
     "public": './',

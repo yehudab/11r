@@ -1,7 +1,7 @@
-var { DateTime, Interval } = require('luxon');
+import { DateTime, Interval } from "luxon";
 
 // Allow comments on posts from the last 6 months
-module.exports = (date) => {
+export default function (date) {
     try {
         const isoDate = typeof date === "string" ? date : date.toISOString();
         const postDate = DateTime.fromISO(isoDate);
