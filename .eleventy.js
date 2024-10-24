@@ -11,6 +11,9 @@ import commentsTree from "./filters/comments-tree.js";
 import commentsCount from "./filters/comments-count.js";
 import getTags from "./filters/get-tags.js";
 import isCommentable from "./filters/is-commentable.js";
+import postsByYear from "./filters/posts-by-year.js";
+import getYears from "./filters/get-years.js";
+import postYear from "./filters/post-year.js";
 
 export default function (config) {
   config.addPlugin(syntaxHighlight);
@@ -29,6 +32,9 @@ export default function (config) {
   config.addFilter('commentsCount', commentsCount);
   config.addFilter('getTags', getTags);
   config.addFilter('isCommentable', isCommentable);
+  config.addFilter('postsByYear', postsByYear);
+  config.addFilter('getYears', getYears);
+  config.addFilter('postYear', postYear);
 
   config.addPassthroughCopy({
     "public": './',

@@ -1,0 +1,21 @@
+---
+pagination:
+  data: years
+  size: 1
+  alias: year
+eleventyComputed:
+  title: "ארכיון הבלוג - {{ year.year }}"
+permalink: /archive/{{ year.slag }}
+---
+
+{% extends 'page.njk' %}
+
+{% block body %} 
+  {% set posts = collections.post | postsByYear(year.year) %}
+
+  <p class="text-center text-sm italic mb-6">({%- if posts.length == 0 -%}אין&nbsp;{%- endif -%}פוסטים משנת <strong>{{year.year}}</strong>)</p>
+
+  {% include "posts.njk" %}
+
+  {% include "archive-footer.njk" %}
+{% endblock %}
