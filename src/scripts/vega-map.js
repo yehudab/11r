@@ -66,10 +66,10 @@ function showAdvanceTrailMap() {
     let mapLayers = [
         {
             "data": {
-                "url": "/topojson/israel.topojson",
+                "url": "/topojson/israel-legal.topojson",
                 "format": {
                     "type": "topojson",
-                    "feature": "israel"
+                    "feature": "Israel"
                 }
             },
             "mark": {
