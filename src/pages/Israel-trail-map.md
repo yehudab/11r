@@ -44,7 +44,7 @@ disableNewComments: true
 20. [חבצלת](/blog/2024/06/israel-trail-20)
 
 #### עונה 3 - 2023-2024
-21. [עוד יש מפרש לבן באופק](/blog/2024/12/israel-trail-21)
+21. [עוד יש מפרש לבן באופק](/blog/2024/10/israel-trail-21)
 
 ---
 
