@@ -45,7 +45,7 @@ disableNewComments: true
 
 #### עונה 3 - 2024-2025
 21. [עוד יש מפרש לבן באופק](/blog/2024/10/israel-trail-21)
-22. [נעולים בתוך בועה](/blog/2024/11/israel-trail-22)
+22. [בתוך בועה](/blog/2024/11/israel-trail-22)
 
 ---
 
