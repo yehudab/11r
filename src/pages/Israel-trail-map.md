@@ -1,7 +1,7 @@
 ---
 title: שביל ישראל - ראשי
 date: '2022-09-27T20:00:00+03:00'
-lastUpdate: '2024-10-25T14:00:00.000+00:00'
+lastUpdate: '2024-11-16T14:00:00.000+00:00'
 status: publish
 path: Israel-trail-map
 author: יהודה
@@ -45,6 +45,7 @@ disableNewComments: true
 
 #### עונה 3 - 2024-2025
 21. [עוד יש מפרש לבן באופק](/blog/2024/10/israel-trail-21)
+22. [בתוך בועה](/blog/2024/11/israel-trail-22)
 
 ---
 
