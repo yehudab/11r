@@ -1,18 +1,27 @@
 <header>
-  <nav class="container mx-auto max-w-3xl px-8 pt-2 flex flex-wrap justify-between">
+  <nav class="container mx-auto max-w-3xl px-8 pt-2 flex flex-wrap justify-between items-center">
+    <!-- Branding -->
     <div>
       <h1>
         <a href="{{ site.baseUrl }}">{{ site.name }}</a>
       </h1>
-      <p>{{site.description}}</p>
+      <p>{{ site.description }}</p>
     </div>
 
-    <ul class="flex flex-wrap sm:w-32 w-full mt-6 md:justify-between justify-evenly">
+    <!-- Hamburger Button -->
+    <button id="menu-toggle" class="block md:hidden text-gray-700 focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+
+    <!-- Navigation Links -->
+    <ul id="menu" class="hidden flex-col md:flex md:flex-row sm:w-32 w-full mt-6 md:mt-0 md:justify-between justify-evenly">
       <li>
-        <a href="{{ site.baseUrl }}blog/about">אודות</a>
+        <a href="{{ site.baseUrl }}blog/about" class="block md:inline-block">אודות</a>
       </li>
       <li>
-        <a href="{{ site.baseUrl }}archive">ארכיון</a>
+        <a href="{{ site.baseUrl }}archive" class="block md:inline-block">ארכיון</a>
       </li>
     </ul>
   </nav>

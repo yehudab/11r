@@ -29,6 +29,15 @@ function fixTimeTicker() {
     }
 }
 
+function setupMenu() {
+    const $menu = $('#menu');
+    const $toggle = $('#menu-toggle');
+
+    $toggle.on('click', function () {
+        $menu.toggleClass('hidden');
+    });
+}
+
 function msTime() { return Math.floor(Date.now()/1000); }
 
-export { fixLinks, fixEmail, fixTimeTicker };
+export { fixLinks, fixEmail, fixTimeTicker, setupMenu };
