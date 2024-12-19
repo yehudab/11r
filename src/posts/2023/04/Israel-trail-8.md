@@ -10,20 +10,20 @@ ogImage: 'img/2023/04/shvil-8-1.jpeg'
 tags:
 - שביל ישראל
 
-trailSerial: 8
-trailStart: כביש 85
-trailEnd: עין נון
-trailDirection: southbound
-trailDistance: 10.1
-trailAscend: 30
-trailDescend: 262
-trailMaxElevation: 34
-trailMinElevation: -200
-trailNetTime: "4:07"
-trailTotalTime: "5:30"
-trailAvgSpeed: 1.8
+trailSerial: [8]
+trailStart: ["כביש 85"]
+trailEnd: ["עין נון"]
+trailDirection: ["southbound"]
+trailDistance: [10.1]
+trailAscend: [30]
+trailDescend: [262]
+trailMaxElevation: [34]
+trailMinElevation: ["-200"]
+trailNetTime: ["4:07"]
+trailTotalTime: ["5:30"]
+trailAvgSpeed: [1.8]
 trailEndImage: img/2023/04/shvil-8-6.jpeg
-trailEndImageAlt: קבוצת יסמין
+trailEndImageAlt: ["קבוצת יסמין"]
 ---
 
 שמונה דקות ושתי שניות נמשך הביצוע לשיר [Stairway to Heaven](https://youtu.be/iXQUu5Dti4g) שאותו משמיע לנו אבי כשאנחנו מגיעים ל״סיפון״ של המוביל הארצי. זה הזמן שדרוש בדרך כלל לאחרונים בקבוצה להגיע עד לנקדות העצירה הזאת על נחל עמוד תחתון. אצלנו בקבוצה לא כולם הגיעו, אבל בנתיים צחי מספיק לעלות עד לקצה גרם המדרגות ולצלם את כולנו משם.

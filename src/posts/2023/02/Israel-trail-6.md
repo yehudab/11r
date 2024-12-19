@@ -10,20 +10,20 @@ ogImage: 'img/2023/02/shvil-6-1.jpeg'
 tags:
 - שביל ישראל
 
-trailSerial: 6
-trailStart: בי״ס שדה הר מירון
-trailEnd: חניון עיקול מרון
-trailDirection: southbound
-trailDistance: 10.7
-trailAscend: 276
-trailDescend: 501
-trailMaxElevation: 1184
-trailMinElevation: 650
-trailNetTime: "3:53"
-trailTotalTime: "5:56"
-trailAvgSpeed: 1.8
+trailSerial: [6]
+trailStart: ["בי״ס שדה הר מירון"]
+trailEnd: ["חניון עיקול מרון"]
+trailDirection: ["southbound"]
+trailDistance: [10.7]
+trailAscend: [276]
+trailDescend: [501]
+trailMaxElevation: [1184]
+trailMinElevation: [650]
+trailNetTime: ["3:53"]
+trailTotalTime: ["5:56"]
+trailAvgSpeed: [1.8]
 trailEndImage: img/2023/02/shvil-6-5.jpeg
-trailEndImageAlt: כלנית סגולה
+trailEndImageAlt: ["כלנית סגולה"]
 ---
 כל קטע של שביל ישראל משלב טבע, מורשת קרב (או אם תרצו: הסכסוך היהודי ערבי) ומורשת יהודית. אבל בקטע מספר 6, שכולו סובב סביב הר מירון, כל החלקים האלה מתבטאים בעוצמה גדולה יותר: אם זה הטבע שבו פסגת הר מירון, שהוא הנקודה הגבוהה ביותר בשביל ישראל (1204 מ׳), אם זה הסכסוך שכולל תיאור קרב שבו דווקא חייל דרוזי (סמל סאלח טאפש) הוא החובש הצל״שניק שתיאור הקרב האחרון שלו משחזר מילה במילה את ה[בלדה לחובש](https://benyehuda.org/read/12413), ואם זה הישוב מירון ומתחמי קברות המקובלים שבו ובסביבתו.  
 

@@ -10,20 +10,20 @@ ogImage: 'img/2023/12/shvil-12-1.jpg'
 tags:
 - שביל ישראל
 
-trailSerial: 12
-trailStart: גזית
-trailEnd: שיבלי
-trailDirection: southbound
-trailDistance: 8.61
-trailAscend: 529
-trailDescend: 358
-trailMaxElevation: 560
-trailMinElevation: 59
-trailNetTime: "3:37"
-trailTotalTime: "5:44"
-trailAvgSpeed: 1.4
+trailSerial: [12]
+trailStart: ["גזית"]
+trailEnd: ["שיבלי"]
+trailDirection: ["southbound"]
+trailDistance: [8.61]
+trailAscend: [529]
+trailDescend: [358]
+trailMaxElevation: [560]
+trailMinElevation: [59]
+trailNetTime: ["3:37"]
+trailTotalTime: ["5:44"]
+trailAvgSpeed: [1.4]
 trailEndImage: img/2023/12/shvil-12-7.jpg
-trailEndImageAlt: חתול נוצרי
+trailEndImageAlt: ["חתול נוצרי"]
 ---
 
 בשעה 12:00 בדיוק מתחיל קונצרט פעמונים על הר התבור. תחילה הפעמון הענק של הכנסיה האורתודוקסית ואחריו הפעמון הקטן יותר של הכנסיה הקתולית פרנציסקנית. שתי הכנסיות מציינות את ההשתנות של ישוע שקרתה ע״פ הברית החדשה על ״הר גבוה״ שיותר מאוחר יוחסה להר שאנחנו נמצאים עליו. ע״פ [הסיפור](https://he.wikisource.org/wiki/%D7%94%D7%91%D7%A9%D7%95%D7%A8%D7%94_%D7%A2%D7%9C_%D7%A4%D7%99_%D7%9E%D7%AA%D7%99_%D7%A4%D7%A8%D7%A7_%D7%99%D7%96) ישוע עלה להר יחד עם פטרוס, יעקב ויוחנן, ושם נגלו אליו משה רבנו ואליהו הנביא. פניו של ישוע השתנו וזהרו, ובגדיו הלבינו. התלמידים מציעים לישוע לבנות עבורם שלוש סוכות, אבל אז יוצאת בת קול מתוך ענן ואומרת לתלמידיו של ישו: זֶה־בְּנִי יְדִידִי אֲשֶׁר רָצִיתִי בוֹ אֵלָיו תִּשְׁמָעוּן. התלמידים שמעו והתעלפו, ואחרי שהתעוררו, לא ראו דבר. 

@@ -10,20 +10,20 @@ ogImage: 'img/2024/02/shvil-13-2.jpg'
 tags:
 - שביל ישראל
 
-trailSerial: 13
-trailStart: נוף הגליל
-trailEnd: שיבלי
-trailDirection: northbound
-trailDistance: 11.9
-trailAscend: 232
-trailDescend: 455
-trailMaxElevation: 501
-trailMinElevation: 199
-trailNetTime: "3:21"
-trailTotalTime: "5:05"
-trailAvgSpeed: 2.3
+trailSerial: [13]
+trailStart: ["נוף הגליל"]
+trailEnd: ["שיבלי"]
+trailDirection: ["northbound"]
+trailDistance: [11.9]
+trailAscend: [232]
+trailDescend: [455]
+trailMaxElevation: [501]
+trailMinElevation: [199]
+trailNetTime: ["3:21"]
+trailTotalTime: ["5:05"]
+trailAvgSpeed: [2.3]
 trailEndImage: img/2024/02/shvil-13-6.jpg
-trailEndImageAlt: הר תבור
+trailEndImageAlt: ["הר תבור"]
 ---
 
 המדריכים שלנו אוהבים לשנוא את מארק טוויין. הוא ביקר בארץ בשנת 1867 וכתב יומן מסע ארוך שבו מספר פרקים המוקדשים לארץ ישראל. מכל הציטוטים, חביב עליהם במיוחד [הציטוט הבא](https://www.ynet.co.il/articles/0,7340,L-3834253,00.html):

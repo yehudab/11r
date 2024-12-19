@@ -10,20 +10,20 @@ ogImage: 'img/2024/04/shvil-17-5.jpg'
 tags:
 - שביל ישראל
 
-trailSerial: 17
-trailStart: אלון הגליל
-trailEnd: קרית טבעון
-trailDirection: southbound
-trailDistance: 14.7
-trailAscend: 267
-trailDescend: 297
-trailMaxElevation: 251
-trailMinElevation: 46
-trailNetTime: "4:08"
-trailTotalTime: "6:34"
-trailAvgSpeed: 2.2
+trailSerial: [17]
+trailStart: ["אלון הגליל"]
+trailEnd: ["קרית טבעון"]
+trailDirection: ["southbound"]
+trailDistance: [14.7]
+trailAscend: [267]
+trailDescend: [297]
+trailMaxElevation: [251]
+trailMinElevation: [46]
+trailNetTime: ["4:08"]
+trailTotalTime: ["6:34"]
+trailAvgSpeed: [2.2]
 trailEndImage: img/2024/04/shvil-17-8.jpg
-trailEndImageAlt: קבוצת יסמין
+trailEndImageAlt: ["קבוצת יסמין"]
 --- 
 
 >אלוהים, … שְׁמוֹר אוֹתִי מִפְּנֵי הָהֶרְגֵּל הָהַרְסָנִי לוֹמַר מַשֶׁהוּ עַל כָּל נוֹשֵׂא וּבְכָל הִזְדַּמְנּות.
