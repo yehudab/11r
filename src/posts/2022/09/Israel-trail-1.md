@@ -10,20 +10,20 @@ ogImage: 'img/2022/09/shvil-1-1.jpeg'
 tags:
 - שביל ישראל
 
-trailSerial: 1
-trailStart: בית אוסישקין
-trailEnd: גן הצפון
-trailDirection: southbound
-trailDistance: 7.93
-trailAscend: 13
-trailDescend: 103
-trailMinElevation: 93
-trailMaxElevation: 199
-trailNetTime: "2:18"
-trailTotalTime: "4:23"
-trailAvgSpeed: 1.8
+trailSerial: [1]
+trailStart: ["בית אוסישקין"]
+trailEnd: ["גן הצפון"]
+trailDirection: ["southbound"]
+trailDistance: [7.93]
+trailAscend: [13]
+trailDescend: [103]
+trailMinElevation: [93]
+trailMaxElevation: [199]
+trailNetTime: ["2:18"]
+trailTotalTime: ["4:23"]
+trailAvgSpeed: [1.8]
 trailEndImage: img/2022/09/shvil-1-5.jpeg
-trailEndImageAlt: חצב ליד גן הצפון
+trailEndImageAlt: ["חצב ליד גן הצפון"]
 ---
 מתחילים בעצם בקטע לא רשמי מבית אוסישקין בקיבוץ דן. הקטע הזה הוצא מהשביל הרשמי לפני שנה בגלל שחלק ממנו עובר על כביש מסוכן, והשביל רשמית מתחיל עכשיו בתל-חי.
 

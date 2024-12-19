@@ -10,20 +10,20 @@ ogImage: 'img/2022/12/shvil-4-1.jpeg'
 tags:
 - שביל ישראל
 
-trailSerial: 4
-trailStart: רמות נפתלי
-trailEnd: גשר עלמה
-trailDirection: southbound
-trailDistance: 12.7
-trailAscend: 254
-trailDescend: 331
-trailMaxElevation: 518
-trailMinElevation: 222
-trailNetTime: "4:10"
-trailTotalTime: "6:10"
-trailAvgSpeed: 2.1
+trailSerial: [4]
+trailStart: ["רמות נפתלי"]
+trailEnd: ["גשר עלמה"]
+trailDirection: ["southbound"]
+trailDistance: [12.7]
+trailAscend: [254]
+trailDescend: [331]
+trailMaxElevation: [518]
+trailMinElevation: [222]
+trailNetTime: ["4:10"]
+trailTotalTime: ["6:10"]
+trailAvgSpeed: [2.1]
 trailEndImage: img/2022/12/shvil-4-5.jpeg
-trailEndImageAlt: סוף עונת הנרקיסים
+trailEndImageAlt: ["סוף עונת הנרקיסים"]
 ---
 
 ״שמלה אפורה, חגורה אדומה וסנדלים אדומים״ כך תיאר העיתונאי אמיל פוירשטיין את לורנה וינגייט, אלמנתו של אורד וינגייט לאחר שפגש אותה בבית מלון בתל אביב בסוף חודש מאי של שנת 1948. הסיבה ל[כתבה בעיתון ידיעות](https://www.ynet.co.il/articles/0,7340,L-3437904,00.html) הייתה ארוע שהתרחש כמה שבועות לפני כן, לא רחוק מהמקום שבו אנחנו מתחילים את הקטע הרביעי שלנו בשביל. הליידי וינגייט, כפי שכינה אותה העיתונאי, רצתה להעביר את התנ״ך שהיה של בעלה למגיני רמות נפתלי כדי לעודד את רוחם. מספר התנ״ך הוא  שאב את ההשראה להקים את פלוגות הלילה המיוחדות שחלק מהמגינים היו חברים בהן. את התנ״ך היא לא הצליחה להעביר למגינים, אבל כנראה שפתק בכתב ידה כן הגיע אליהם, ו[עותק שלו](https://www.nli.org.il/he/images/NNL_ARCHIVE_AL997009324294005171/NLI) עובר עכשיו בינינו המטיילים. היה לה כתב יד יפה וברור, אבל אני רק חושב על המגינים המסכנים שרואים את המטוס חג מעליהם, רצים לפתוח את החבילה ומוצאים בה את הפתק במקום תחמושת וחומרי חבישה לפצועים, או לפחות גרביים להחלפה וקופסת סיגריות. 

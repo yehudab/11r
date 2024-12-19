@@ -10,20 +10,20 @@ ogImage: 'img/2023/03/shvil-7-1.jpeg'
 tags:
 - שביל ישראל
 
-trailSerial: 7
-trailStart: חניון עיקול מרון
-trailEnd: כביש 85
-trailDirection: southbound
-trailDistance: 12.4
-trailAscend: 217
-trailDescend: 840
-trailMaxElevation: 652
-trailMinElevation: 29
-trailNetTime: "5:18"
-trailTotalTime: "6:55"
-trailAvgSpeed: 1.8
+trailSerial: [7]
+trailStart: ["חניון עיקול מרון"]
+trailEnd: ["כביש 85"]
+trailDirection: ["southbound"]
+trailDistance: [12.4]
+trailAscend: [217]
+trailDescend: [840]
+trailMaxElevation: [652]
+trailMinElevation: [29]
+trailNetTime: ["5:18"]
+trailTotalTime: ["6:55"]
+trailAvgSpeed: [1.8]
 trailEndImage: img/2023/03/shvil-7-6.jpeg
-trailEndImageAlt: קבוצת יסמין
+trailEndImageAlt: ["קבוצת יסמין"]
 --- 
 
 במיתולוגיה היוונית מסופר על אודיסאוס מלך איתקה (כן, אותה איתקה מ[הדרך לאיתקה](https://www.mouflon.co.il/הדרךלאיתקה) שאותו הקריא לנו שמוליק במקטע הראשון של השביל) שיצא לקרב בטרויה והשאיר את אשתו, [פנלופה](https://he.wikipedia.org/wiki/פנלופה), בבית. הקרב נמשך שנים ארוכות, ומצבו של אודיסאוס לא היה ידוע. מחזרים רבים ניסו לנצל את המצב ולבקש את ידה של פנלופה. כדי להתחמק מהם, היא הודיעה שתינשא לאחד מהם אחרי שתשלים לארוג את התכריכים לקבורת אביו של אודיסאוס. את התכריכים היא ארגה ביום אבל פרמה אותם בסתר בלילה וכך משכה את הזמן עד שאודיסאוס חזר מן הקרב.

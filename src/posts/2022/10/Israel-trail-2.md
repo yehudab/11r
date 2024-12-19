@@ -10,20 +10,20 @@ ogImage: 'img/2022/10/shvil-2-1.jpeg'
 tags:
 - שביל ישראל
 
-trailSerial: 2
-trailStart: יפתח
-trailEnd: תל חי
-trailDirection: northbound
-trailDistance: 13.2
-trailAscend: 213
-trailDescend: 441
-trailMaxElevation: 546
-trailMinElevation: 245
-trailNetTime: "3:11"
-trailTotalTime: "5:36"
-trailAvgSpeed: 2.4
+trailSerial: [2]
+trailStart: ["יפתח"]
+trailEnd: ["תל חי"]
+trailDirection: ["northbound"]
+trailDistance: [13.2]
+trailAscend: [213]
+trailDescend: [441]
+trailMaxElevation: [546]
+trailMinElevation: [245]
+trailNetTime: ["3:11"]
+trailTotalTime: ["5:36"]
+trailAvgSpeed: [2.4]
 trailEndImage: img/2022/10/shvil-2-5.jpeg
-trailEndImageAlt: האריה השואג
+trailEndImageAlt: ["האריה השואג"]
 ---
 
 למקטע השני של השביל אנחנו נפגשים בחניה ליד פסל האריה השואג בתל-חי. את ראשו של האריה אפשר לראות מציץ מעבר לחומה, אבל אנחנו נפגוש אותו במלוא הדרו רק בסוף היום. 

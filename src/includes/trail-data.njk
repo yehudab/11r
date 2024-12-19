@@ -15,124 +15,109 @@
     trailEndImageAlt: trailEndImageAlt
 } 
 %}
-<h4>הקטע במספרים</h4>
-<table>
-    <tr>
-        <td>
-            קטע מספר:
-        </td>
-        <td>
-            {{data.trailSerial}}/60
-        </td>
-    </tr>
-    <tr>
-        <td>
-            נקודת התחלה:
-        </td>
-        <td>
-            {{data.trailStart}}
-        </td>
-    </tr>
-    <tr>
-        <td>
-            נקודת סיום:
-        </td>
-        <td>
-            {{data.trailEnd}}
-        </td>
-    </tr>
-    <tr>
-        <td>
-            כוון:
-        </td>
-        <td>
-            {{ "מצפון לדרום" if data.trailDirection == "southbound" else "מדרום לצפון" }}
-        </td>
-    </tr>
-    <tr>
-        <td>
-            מרחק הליכה:
-        </td>
-        <td>
-            {{data.trailDistance}} ק&quot;מ
-        </td>
-    </tr>
-    {% if data.trailAscend %}
-    <tr>
-        <td>
-            סה״כ עליה:
-        </td>
-        <td>
-            {{data.trailAscend}} מ׳
-        </td>
-    </tr>
-    {% endif %}
-    {% if data.trailDescend %}
-    <tr>
-        <td>
-            סה״כ ירידה:
-        </td>
-        <td>
-            {{data.trailDescend}} מ׳
-        </td>
-    </tr>
-    {% endif %}
-    <tr>
-        <td>
-            גובה מינימלי:
-        </td>
-        <td>
-            &lrm;{{data.trailMinElevation}}&rlm; מ׳
-        </td>
-    </tr>
-    <tr>
-        <td>
-            גובה מקסימלי:
-        </td>
-        <td>
-            &lrm;{{data.trailMaxElevation}}&rlm; מ׳
-        </td>
-    </tr>
-    <tr>
-        <td>
-            זמן הליכה נטו:
-        </td>
-        <td>
-            {{data.trailNetTime}} שעות
-        </td>
-    </tr>
-    <tr>
-        <td>
-            זמן כולל:
-        </td>
-        <td>
-            {{data.trailTotalTime}} שעות
-        </td>
-    </tr>
-    <tr>
-        <td>
-            מהירות ממוצעת:
-        </td>
-        <td>
-            {{data.trailAvgSpeed}} קמ&quot;ש
-        </td>
-    </tr>
-    <tr>
-        <td>
-            מפת הקטע:
-        </td>
-        <td>
-            <a href="/maps/trail-{{data.trailSerial}}/#map">🗺️</a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            למפת התקדמות ואינדקס המקטעים:
-        </td>
-        <td>
-            <a href="/blog/Israel-trail-map/">📂</a>
-        </td>
-    </tr>
+<table class="summary-table">
+    <thead>
+        <tr>
+            <th>הקטע במספרים</th>
+            {% if data.trailSerial | length > 1 %}
+                {% for i in data.trailSerial %}
+                    <th>יום {{ loop.index }}</th>
+                {% endfor %}
+            {% endif %}
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>קטע מספר:</td>
+            {% for serial in data.trailSerial %}
+                <td>{{ serial }}/60</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>נקודת התחלה:</td>
+            {% for start in data.trailStart %}
+                <td>{{ start }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>נקודת סיום:</td>
+            {% for end in data.trailEnd %}
+                <td>{{ end }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>כוון:</td>
+            {% for direction in data.trailDirection %}
+                <td>{{ "מצפון לדרום" if direction == "southbound" else "מדרום לצפון" }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>מרחק הליכה:</td>
+            {% for distance in data.trailDistance %}
+                <td>{{ distance }} ק"מ</td>
+            {% endfor %}
+        </tr>
+        {% if data.trailAscend %}
+        <tr>
+            <td>סה״כ עליה:</td>
+            {% for ascend in data.trailAscend %}
+                <td>{{ ascend }} מ׳</td>
+            {% endfor %}
+        </tr>
+        {% endif %}
+        {% if data.trailDescend %}
+        <tr>
+            <td>סה״כ ירידה:</td>
+            {% for descend in data.trailDescend %}
+                <td>{{ descend }} מ׳</td>
+            {% endfor %}
+        </tr>
+        {% endif %}
+        <tr>
+            <td>גובה מינימלי:</td>
+            {% for minElevation in data.trailMinElevation %}
+                <td>&lrm;{{ minElevation }}&rlm; מ׳</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>גובה מקסימלי:</td>
+            {% for maxElevation in data.trailMaxElevation %}
+                <td>&lrm;{{ maxElevation }}&rlm; מ׳</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>זמן הליכה נטו:</td>
+            {% for netTime in data.trailNetTime %}
+                <td>{{ netTime }} שעות</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>זמן כולל:</td>
+            {% for totalTime in data.trailTotalTime %}
+                <td>{{ totalTime }} שעות</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>מהירות ממוצעת:</td>
+            {% for avgSpeed in data.trailAvgSpeed %}
+                <td>{{ avgSpeed }} קמ"ש</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>מפת הקטע:</td>
+            {% for serial in data.trailSerial %}
+                <td><a href="/maps/trail-{{ serial }}/#map">🗺️</a></td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>
+                למפת התקדמות ואינדקס המקטעים:
+            </td>
+            <td>
+                <a href="/blog/Israel-trail-map/">📂</a>
+            </td>
+        </tr>
+    </tbody>
 </table>
 <img src="/{{data.trailEndImage}}" alt="{{data.trailEndImageAlt}}" title="{{data.trailEndImageAlt}}">
 {# <p>

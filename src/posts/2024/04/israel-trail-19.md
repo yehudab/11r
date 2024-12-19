@@ -10,18 +10,18 @@ ogImage: 'img/2024/04/kidnapped-200-days-sq.jpg'
 tags:
 - שביל ישראל
 
-trailSerial: 19
-trailStart: עוספיה
-trailEnd: חניון פתחת נחל אורן
-trailDirection: southbound
-trailDistance: 12.6
-trailMaxElevation: 520
-trailMinElevation: 50
-trailNetTime: "4:32"
-trailTotalTime: "7:11"
-trailAvgSpeed: 1.7
+trailSerial: [19]
+trailStart: ["עוספיה"]
+trailEnd: ["חניון פתחת נחל אורן"]
+trailDirection: ["southbound"]
+trailDistance: [12.6]
+trailMaxElevation: [520]
+trailMinElevation: [50]
+trailNetTime: ["4:32"]
+trailTotalTime: ["7:11"]
+trailAvgSpeed: [1.7]
 trailEndImage: img/2024/04/shvil-19-1.jpg
-trailEndImageAlt: התחלת המסלול ליד עוספיה
+trailEndImageAlt: ["התחלת המסלול ליד עוספיה"]
 --- 
 
 [מאתיים ימי חרדה](https://he.wikipedia.org/wiki/%D7%9E%D7%90%D7%AA%D7%99%D7%99%D7%9D_%D7%99%D7%9E%D7%99_%D7%97%D7%A8%D7%93%D7%94) - זה השם שניתן לתקופה בין אמצע חודש אפריל 1942 ועד לשלישי בנובמבר של אותה שנה. 200 ימי חרדה עוברים בעת כתיבת שורות אלה על 133 החטופים ומשפחותיהם. אז הפחד היה מפני הצבא הנאצי שהגיע בפיקודו של רומל עד ל-אל עלמיין. היום הפחד הוא להישכח בשבי, ולהפוך חס וחלילה ל-133 רון ארד-ים. באותם 200 ימים של אז, הישוב העברי תכנן לרכז את האוכלוסיה היהודית על הכרמל, למה שכונה [המבצר האחרון](https://he.wikipedia.org/wiki/%D7%AA%D7%95%D7%9B%D7%A0%D7%99%D7%AA_%D7%94%D7%9E%D7%91%D7%A6%D7%A8_%D7%94%D7%90%D7%97%D7%A8%D7%95%D7%9F). הוכנו ביצורים ומקלטים לשליטה על הכוחות. עכשיו האוכלוסיה נטשה בלי כל תכנון את ישובי העוטף ואת הצפון. אז ניצלנו בזכות מונטגומרי שהוביל את הצבא הבריטי ל[ניצחון על רומל](https://he.wikipedia.org/wiki/%D7%A7%D7%A8%D7%91_%D7%90%D7%9C-%D7%A2%D7%9C%D7%9E%D7%99%D7%99%D7%9F_%D7%94%D7%A9%D7%A0%D7%99). היום התקווה היא להפיל את הממשלה הכושלת, ולהתחיל לבנות את הארץ מחדש. [רבותי, ההיסטוריה חוזרת](https://shironet.mako.co.il/artist?type=lyrics&lang=1&prfid=539&wrkid=3248) כדברי השיר שאנחנו שרים על הכרמל באמצע המקטע היום.

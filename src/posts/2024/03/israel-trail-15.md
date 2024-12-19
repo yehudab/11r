@@ -10,20 +10,20 @@ ogImage: 'img/2024/03/shvil-15-3.jpg'
 tags:
 - שביל ישראל
 
-trailSerial: 15
-trailStart: אל-פורעה
-trailEnd: באר אפעה
-trailDirection: southbound
-trailDistance: 10.9
-trailAscend: 56
-trailDescend: 401
-trailMaxElevation: 542
-trailMinElevation: 172
-trailNetTime: "3:35"
-trailTotalTime: "5:46"
-trailAvgSpeed: 1.9
+trailSerial: [15]
+trailStart: ["אל-פורעה"]
+trailEnd: ["באר אפעה"]
+trailDirection: ["southbound"]
+trailDistance: [10.9]
+trailAscend: [56]
+trailDescend: [401]
+trailMaxElevation: [542]
+trailMinElevation: [172]
+trailNetTime: ["3:35"]
+trailTotalTime: ["5:46"]
+trailAvgSpeed: [1.9]
 trailEndImage: img/2024/03/shvil-15-7.jpg
-trailEndImageAlt: עץ השיטה
+trailEndImageAlt: ["עץ השיטה"]
 ---
  את המקטע היום אנחנו מתחילים בפאתי הישוב הבדואי אל-פורעה. יש כאן בית ספר אזורי, אבל לא מים זורמים וחשמל. שביל ישראל הרשמי כבר לא עובר כאן בשנים האחרונות בגלל התוכניות לנצל את כל האזור הנקרא מישור בריר לכריית פוספטים. הכריה תפגע כמובן בטבע ובבדואים שגרים כאן. תוכניות הכריה בנתיים הוקפאו (על כך עוד בסיום הפוסט), אבל השביל לא חזר. 
 

@@ -10,20 +10,20 @@ ogImage: 'img/2024/01/shvil-14-1.jpg'
 tags:
 - שביל ישראל
 
-trailSerial: 14
-trailStart: הר עמשא
-trailEnd: תל ערד
-trailDirection: southbound
-trailDistance: 12.6
-trailAscend: 51
-trailDescend: 353
-trailMaxElevation: 855
-trailMinElevation: 503
-trailNetTime: "3:18"
-trailTotalTime: "5:09"
-trailAvgSpeed: 2.4
+trailSerial: [14]
+trailStart: ["הר עמשא"]
+trailEnd: ["תל ערד"]
+trailDirection: ["southbound"]
+trailDistance: [12.6]
+trailAscend: [51]
+trailDescend: [353]
+trailMaxElevation: [855]
+trailMinElevation: [503]
+trailNetTime: ["3:18"]
+trailTotalTime: ["5:09"]
+trailAvgSpeed: [2.4]
 trailEndImage: img/2024/01/shvil-14-7.jpg
-trailEndImageAlt: קבוצת יסמין
+trailEndImageAlt: ["קבוצת יסמין"]
 ---
 
 כחודש לאחר תחילת המלחמה הופיע ברשתות החברתיות [סרטון](https://x.com/brown_johnbrown/status/1746908883547832368?s=46)  שבו ״מככבים״ ארבעה חיילי גדוד 9208. בסרטון הם מבקשים לא להפסיק את הלחימה בעזה עד שיסיימו את שלושת השלבים: כיבוש, גירוש וישוב מחדש. [אחד המ״פים בגדוד אמר](https://www.haaretz.co.il/opinions/2024-01-16/ty-article-opinion/.premium/0000018d-0cbc-db13-affd-7dbd55b10000) אחרי היציאה מעזה שהם ביצעו שם [מעשה שמעון ולוי](https://he.wikipedia.org/wiki/%D7%9E%D7%A2%D7%A9%D7%94_%D7%A9%D7%9E%D7%A2%D7%95%D7%9F_%D7%95%D7%9C%D7%95%D7%99). הוא אמר את זה לחיילים הדתיים בגדוד, וזה קצת חבל שגם כאן הדתיים קיבלו בעלות על סיפורי התנ״ך: רק הם ידעו להבין את הרפרנס, ולצערי כנראה חלקם גם התגאו בו. אז יעקב העניש את שמעון ולוי בכך שבניהם לא יקבלו נחלה: [שִׁמְע֥וֹן וְלֵוִ֖י אַחִ֑ים כְּלֵ֥י חָמָ֖ס מְכֵרֹתֵיהֶֽם … כִּ֤י בְאַפָּם֙ הָ֣רְגוּ אִ֔ישׁ … אֲחַלְּקֵ֣ם בְּיַעֲקֹ֔ב וַאֲפִיצֵ֖ם בְּיִשְׂרָאֵֽל](https://he.wikisource.org/wiki/%D7%91%D7%A8%D7%90%D7%A9%D7%99%D7%AA_%D7%9E%D7%98). בסופו של דבר שמעון התיישב בדרום נחלת יהודה, באזור שאליו הגענו לקראת סוף המסלול היום. 

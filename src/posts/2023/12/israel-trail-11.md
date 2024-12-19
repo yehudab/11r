@@ -10,20 +10,20 @@ ogImage: 'img/2023/12/shvil-11-3.jpeg'
 tags:
 - שביל ישראל
 
-trailSerial: 11
-trailStart: יבנאל
-trailEnd: ירדנית
-trailDirection: northbound
-trailDistance: 9.41
-trailAscend: 23
-trailDescend: 211
-trailMaxElevation: 0
-trailMinElevation: -212
-trailNetTime: "2:27"
-trailTotalTime: "4:44"
-trailAvgSpeed: 2.0
+trailSerial: [11]
+trailStart: ["יבנאל"]
+trailEnd: ["ירדנית"]
+trailDirection: ["northbound"]
+trailDistance: [9.41]
+trailAscend: [23]
+trailDescend: [211]
+trailMaxElevation: [0]
+trailMinElevation: ["-212"]
+trailNetTime: ["2:27"]
+trailTotalTime: ["4:44"]
+trailAvgSpeed: [2.0]
 trailEndImage: img/2023/12/shvil-11-7.jpeg
-trailEndImageAlt: קבוצת יסמין
+trailEndImageAlt: ["קבוצת יסמין"]
 ---
 
 העץ של גולני מקבל את פנינו לאחר הליכה קצרה מיבנאל. אף אחד לא באמת יודע האם הוא העץ ששימש השראה למאייר סמל היחידה של גולני, אבל תושבי יבנאל [קבעו בטקס רב רושם](https://www.makorrishon.co.il/nrg/online/1/ART2/209/988.html) את השלט וגידרו אותו בספסלי עץ. על הספסלים האלה אנחנו יושבים, שותים את התה שהכין אבי, יוצא גולני, ושומעים את סיפורו של סבה של טל חברת הקבוצה. הוא עלה בתחילת שנות העשרים של המאה הקודמת והתיישב ביבנאל שבה התחלנו את המסלול היום.

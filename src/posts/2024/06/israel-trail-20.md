@@ -11,20 +11,20 @@ ogImage: 'img/2024/06/shvil-20-2.jpg'
 tags:
 - שביל ישראל
 
-trailSerial: 20
-trailStart: בית ינאי
-trailEnd: בית יד לבנים נתניה
-trailDirection: southbound
-trailDistance: 12.7
-trailAscend: 51
-trailDescend: 22
-trailMaxElevation: 45
-trailMinElevation: 0
-trailNetTime: "2:53"
-trailTotalTime: "5:03"
-trailAvgSpeed: 2.5
+trailSerial: [20]
+trailStart: ["בית ינאי"]
+trailEnd: ["בית יד לבנים נתניה"]
+trailDirection: ["southbound"]
+trailDistance: [12.7]
+trailAscend: [51]
+trailDescend: [22]
+trailMaxElevation: [45]
+trailMinElevation: [0]
+trailNetTime: ["2:53"]
+trailTotalTime: ["5:03"]
+trailAvgSpeed: [2.5]
 trailEndImage: img/2024/06/shvil-20-4.jpg
-trailEndImageAlt: אנדרטת הניצחון בנתניה
+trailEndImageAlt: ["אנדרטת הניצחון בנתניה"]
 --- 
 
 בילדותי נהגנו לנסוע פעם בשנה לשבוע חופשה במושב חבצלת השרון. שכרנו שם בית קטן (היום היו קוראים לזה ״צימר״) בחלקה של משפחת בן ארצי. המשפחה גרה בבית גדול יותר באותה חלקה. היה להם לול תרנגולות, ויכולנו לאסוף ביצים טריות לארוחת בוקר. גדלתי בירושלים, אז האטרקציה הגדולה הייתה חוף הים. בדרך כלל נסענו משם לחוף מכמורת, אבל ל״חבצלת״ כמו שקראנו לה, היה גם חוף פרטי. קטן ולא מוסדר, עם לגונה שקטה מוקפת סלעים. המקטע של שביל ישראל שאנחנו עושים היום עובר ליד החוף הזה. החוף עדיין פראי והסלעים שאז נראו לי ענקיים, נראו עכשיו קטנים. אולי הים שחק אותם, ואולי אני גדלתי, אבל הלגונה השקטה עם המים הצלולים היא אותה הלגונה האהובה. 

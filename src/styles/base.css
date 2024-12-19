@@ -217,3 +217,15 @@ hr {
     animation: spin 2s infinite linear;
   }
 }
+
+.summary-table {
+  margin-top: 0.75rem;
+}
+
+.summary-table th {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  text-align: right;
+  --tw-text-opacity: 1;
+  color: rgb(226 232 240/var(--tw-text-opacity))
+}

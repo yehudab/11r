@@ -10,20 +10,20 @@ ogImage: 'img/2024/11/shvil-22-3.jpg'
 tags:
 - שביל ישראל
 
-trailSerial: 22
-trailStart: בית העלמין ירקון
-trailEnd: תל אפק
-trailDirection: southbound
-trailDistance: 16.5
-trailAscend: 106
-trailDescend: 87
-trailMaxElevation: 19
-trailMinElevation: 0
-trailNetTime: "4:18"
-trailTotalTime: "6:06"
-trailAvgSpeed: 2.7
-trailEndImage: img/2024/11/shvil-22-6.jpg
-trailEndImageAlt: קבוצת יסמין
+trailSerial: [22]
+trailStart: ["בית העלמין ירקון"]
+trailEnd: ["תל אפק"]
+trailDirection: ["southbound"]
+trailDistance: [16.5]
+trailAscend: [106]
+trailDescend: [87]
+trailMaxElevation: [19]
+trailMinElevation: [0]
+trailNetTime: ["4:18"]
+trailTotalTime: ["6:06"]
+trailAvgSpeed: [2.7]
+trailEndImage: ["img/2024/11/shvil-22-6.jpg"]
+trailEndImageAlt: ["קבוצת יסמין"]
 --- 
 
 בנסיעה באוטובוס בבוקר מפארק תל אפק לנקודת ההתחלה של המסלול, רמי מציע לנו להכניס את עצמנו לתוך בועה, לנעול את הדלת עם מפתח ולא לפתוח עד לסוף המקטע. זה לא קל לטייל ולהנות מהטבע כאשר המלחמה נמשכת כבר 406 ימים, ולא ממש רואים את הסוף. 

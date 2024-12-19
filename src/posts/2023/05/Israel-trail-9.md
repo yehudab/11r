@@ -10,20 +10,20 @@ ogImage: 'img/2023/05/shvil-9-1.jpeg'
 tags:
 - שביל ישראל
 
-trailSerial: 9
-trailStart: עין נון
-trailEnd: כפר חיטים
-trailDirection: southbound
-trailDistance: 8.85
-trailAscend: 484
-trailDescend: 354
-trailMaxElevation: 166
-trailMinElevation: -204
-trailNetTime: "3:15"
-trailTotalTime: "4:46"
-trailAvgSpeed: 1.9
+trailSerial: [9]
+trailStart: ["עין נון"]
+trailEnd: ["כפר חיטים"]
+trailDirection: ["southbound"]
+trailDistance: [8.85]
+trailAscend: [484]
+trailDescend: [354]
+trailMaxElevation: [166]
+trailMinElevation: ["-204"]
+trailNetTime: ["3:15"]
+trailTotalTime: ["4:46"]
+trailAvgSpeed: [1.9]
 trailEndImage: img/2023/05/shvil-9-9.jpeg
-trailEndImageAlt: קבוצת יסמין
+trailEndImageAlt: ["קבוצת יסמין"]
 ---
 
 כמו בתחרויות ספורט של ילדים, בהן משתדלים שכל אחד יצא עם פרס כמו: מי שהכי השתדל, או מי שהכי עזר לחברים, ככה גם המקטעים של שביל ישראל. יש את המקטע עם הנקודה הכי מזרחית (הקטע הראשון והנקודה היא ליד תל דן); יש את הקטע עם הנקודה הכי נמוכה - לא כולל ים המלח שהתווסף לאחרונה - הקטע האחרון שעשינו שמגיע כמעט עד הכנרת. לידם נמצאים הקטעים עם ״פרסים״ משמעותיים יותר: הקטע עם הנקודה הגבוהה ביותר (הר מירון) והקטע אותו נעשה היום: הקטע בעל השיפוע הגדול ביותר: העליה לארבל.

@@ -10,20 +10,20 @@ ogImage: 'img/2022/11/shvil-3-6.jpeg'
 tags:
 - שביל ישראל
 
-trailSerial: 3
-trailStart: נקיקי יפתח
-trailEnd: רמות נפתלי
-trailDirection: southbound
-trailDistance: 11
-trailAscend: 184
-trailDescend: 284
-trailMaxElevation: 496
-trailMinElevation: 311
-trailNetTime: "3:04"
-trailTotalTime: "5:45"
-trailAvgSpeed: 1.6
+trailSerial: [3]
+trailStart: ["נקיקי יפתח"]
+trailEnd: ["רמות נפתלי"]
+trailDirection: ["southbound"]
+trailDistance: [11]
+trailAscend: [184]
+trailDescend: [284]
+trailMaxElevation: [496]
+trailMinElevation: [311]
+trailNetTime: ["3:04"]
+trailTotalTime: ["5:45"]
+trailAvgSpeed: [1.6]
 trailEndImage: img/2022/11/shvil-3-9.jpeg
-trailEndImageAlt: בקעת החולה והחרמון ממצפה אגמון החולה
+trailEndImageAlt: ["בקעת החולה והחרמון ממצפה אגמון החולה"]
 ---
 
 בקטע השלישי של השביל מקבל את פנינו צוות חדש. אבי שהוא גם הבעלים והמנהל של [על-השביל](https://www.al-hashvil.co.il) הוא ה״שמוליק״ (מדריך) להיום, ודריה היא ה״עמרי״ (אחראית לוגיסטיקה). 
