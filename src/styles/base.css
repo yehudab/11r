@@ -229,3 +229,7 @@ hr {
   --tw-text-opacity: 1;
   color: rgb(226 232 240/var(--tw-text-opacity))
 }
+
+.summary-table td {
+  padding: 0 0.3rem;
+}
