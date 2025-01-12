@@ -1,7 +1,7 @@
 ---
 title: שביל ישראל - ראשי
 date: '2022-09-27T20:00:00+03:00'
-lastUpdate: '2024-12-19T14:00:00.000+00:00'
+lastUpdate: '2025-01-12T08:00:00.000+00:00'
 status: publish
 path: Israel-trail-map
 author: יהודה
@@ -48,6 +48,7 @@ disableNewComments: true
 22. [בתוך בועה](/blog/2024/11/israel-trail-22)
 23. [בזכות הנשרים - יום 1](/blog/2025/01/israel-trail-23-24)
 24. [בזכות הנשרים - יום 2](/blog/2025/01/israel-trail-23-24)
+25. [נתיב לנשר בשמיים](/blog/2025/01/israel-trail-25)
 
 ---
 
