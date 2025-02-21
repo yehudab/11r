@@ -14,6 +14,7 @@ import isCommentable from "./filters/is-commentable.js";
 import postsByYear from "./filters/posts-by-year.js";
 import getYears from "./filters/get-years.js";
 import postYear from "./filters/post-year.js";
+import { execSync } from 'node:child_process';
 
 export default function (config) {
   config.addPlugin(syntaxHighlight);
@@ -71,6 +72,10 @@ export default function (config) {
       (post) => !post.data.draft && post.data.status === 'publish'
     )
   );
+
+  config.on('eleventy.after', () => {
+    execSync('npx pagefind --site dist --glob \"**/*.html\"', { encoding: 'utf-8' })
+  })
 
   return {
     pathPrefix: siteSettings.baseUrl,

@@ -37,7 +37,7 @@ permalink: "blog/{{ page.inputPath | yearMonthFile }}/index.html"
             </p>
         {% endif %}
 
-        <div class="content post">
+        <div class="content post" data-pagefind-body>
             {{ content | safe }}
             {%- if trailSerial %}
                 {%- include 'trail-data.njk' %}
