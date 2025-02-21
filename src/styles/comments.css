@@ -28,26 +28,26 @@
 }
 
 .comments-form label {
-  @apply block tracking-wide text-xs font-bold mb-2 text-lg;
+  @apply block tracking-wide font-bold mb-2 text-lg;
 }
   
 .comments-form input {
-  @apply appearance-none block w-full bg-gray-900 text-gray-200 border border-gray-500 rounded py-3 px-4 mb-3 leading-tight;
+  @apply appearance-none block w-full bg-gray-900 text-gray-200 border border-gray-500 rounded-sm py-3 px-4 mb-3 leading-tight;
 }
 .comments-form input:focus {
-  @apply outline-none border-blue-200;
+  @apply outline-hidden border-blue-200;
 }
 
 .comments-form textarea {
-  @apply appearance-none block w-full bg-gray-900 text-gray-200 border border-gray-500 rounded py-3 px-4 mb-3 leading-tight;
+  @apply appearance-none block w-full bg-gray-900 text-gray-200 border border-gray-500 rounded-sm py-3 px-4 mb-3 leading-tight;
 }
 
 .comments-form textarea:focus {
-  @apply outline-none border-blue-200;
+  @apply outline-hidden border-blue-200;
 }
 
 .comments button {
-  @apply shadow text-lg bg-gray-700 text-white font-bold mt-6 mb-6 py-2 px-4 rounded;
+  @apply shadow-sm text-lg bg-gray-700 text-white font-bold mt-6 mb-6 py-2 px-4 rounded-sm;
 }
 
 .comments-form button:hover {
@@ -55,7 +55,7 @@
 }
 
 .comments-form button:focus {
-  @apply ring outline-none;
+  @apply ring-3 outline-hidden;
 }
 
 .comments button.comment-reply {
