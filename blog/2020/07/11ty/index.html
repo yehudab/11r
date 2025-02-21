@@ -34,7 +34,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
-    <title>
+    <title data-pagefind-meta="title">
       11ty
       
        | בלוג פשוט</title>
@@ -64,12 +64,15 @@
     </button>
 
     <!-- Navigation Links -->
-    <ul id="menu" class="hidden flex-col md:flex md:flex-row sm:w-32 w-full mt-6 md:mt-0 md:justify-between justify-evenly">
+    <ul id="menu" class="hidden flex-col md:flex md:flex-row sm:w-1/4 w-full mt-6 md:mt-0 md:justify-between justify-evenly">
       <li>
         <a href="/blog/about" class="block md:inline-block">אודות</a>
       </li>
       <li>
         <a href="/archive" class="block md:inline-block">ארכיון</a>
+      </li>
+      <li>
+        <a href="/blog/search" class="block md:inline-block">חיפוש</a>
       </li>
     </ul>
   </nav>
@@ -102,7 +105,7 @@
             </p>
         
 
-        <div class="content post">
+        <div class="content post" data-pagefind-body>
             <p>המעבר לשרת חדש גרם לי לחשוב שוב על WordPress והאם הוא עדיין מתאים לבלוגים ב-2020. כאשר התחלתי את האתר, PHP הייתה אחת משתי שפות התכנות המובילות לווב (יחד עם העולה החדש דאז Ruby on Rails). מאוחר יותר זו גם הייתה שפת התכנות בה עבדתי, וזה נראה לי טבעי להמשיך איתה. מאז עברתי לסביבה חדשה מבוססת NodeJS, ו-PHP נראית לי כמו עוף מוזר (שלא לאמר דינוזאור).</p>
 <p>אחרי בחינה של מספר אפשרויות, הגעתי למסקנה שהנתיב הטבעי להמשך הוא Static Site Generators (SSG). הרעיון כאן הוא ליצר את קבצי ה HTML של האתר מתוך התכנים הדינמיים, ומכאן והלאה ההגשה לדפדפן נעשית של קבצים סטטיים בלבד. מתוך <a href="https://gohugo.io/" title="HUGO">המגוון</a> <a href="https://jekyllrb.com/" title="Jekyll">הגדול</a> של <a href="https://vuepress.vuejs.org/" title="VuePress">האפשרויות</a>, בחרתי את <a href="https://www.11ty.dev/">Eleventy</a> (או בקיצור 11ty). הוא מבוסס NodeJS, ויחסית לאחיו הוותיק יותר (<a href="https://www.gatsbyjs.org/">Gatsby</a>), הוא פחות אפליקציה ויותר SSG טהור.</p>
 <p>ייצור האתר נעשה ע&quot;י הגדרת תבניות והפעלה שלהן על תוכן האתר שהוא קבצי Markdown. את קבצי התוכן שומרים ב git יחד עם הקוד של האתר, כך שנוצר סוג של בלבול בינהם. כדי לבצע את ההפרדה בצורה טובה יותר וגם בגלל <a href="https://talk.commonmark.org/t/explicit-rtl-indication-in-pure-markdown/286/4" title="דיון ארוך שבסופו הוחלט שלא עושים כלום ותסדרו לבד">התמיכה הבעייתית של Markdown בעברית</a>, בחרתי להשתמש ב Headless CMS: מערכת ניהול תוכן, שבה כתיבה התכנים מנותקת מההצגה שלהן (בניגוד ל WordPress שבה העריכה והתצוגה נעשים באותה מערכת). הרעיון כאן הוא לאפשר לכותבי תוכן שאינם מכירים קוד או אפילו Markdown לערוך את התוכן דרך עורך יעודי (סטייל WordPress), כאשר הקבצים נשלחים מהעורך אל ה git-repo. יתרון משמעותי ליושבים בציון (ובשאר המזרח התיכון) הוא האפשרות לתמיכה הרבה יותר טובה בעריכה ב-RTL.</p>

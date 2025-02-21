@@ -34,7 +34,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
-    <title>
+    <title data-pagefind-meta="title">
       עדכון לווידג׳ט מזג האויר
       
        | בלוג פשוט</title>
@@ -64,12 +64,15 @@
     </button>
 
     <!-- Navigation Links -->
-    <ul id="menu" class="hidden flex-col md:flex md:flex-row sm:w-32 w-full mt-6 md:mt-0 md:justify-between justify-evenly">
+    <ul id="menu" class="hidden flex-col md:flex md:flex-row sm:w-1/4 w-full mt-6 md:mt-0 md:justify-between justify-evenly">
       <li>
         <a href="/blog/about" class="block md:inline-block">אודות</a>
       </li>
       <li>
         <a href="/archive" class="block md:inline-block">ארכיון</a>
+      </li>
+      <li>
+        <a href="/blog/search" class="block md:inline-block">חיפוש</a>
       </li>
     </ul>
   </nav>
@@ -102,7 +105,7 @@
             </p>
         
 
-        <div class="content post">
+        <div class="content post" data-pagefind-body>
             <p>אחרי כמעט 3 שנים שבהן לא הפצתי גרסה חדשה לווידג׳ט מזג האויר, העלתי היום את גרסה 2.3. הגרסה הזו כוללת שינוי בארכיטקטורת שליפת הנתונים של הווידג׳ט, כך שבמקום לגשת ישירות לאתר <a href="http://www.israelweather.co.il/">IsraelWeather</a>, השליפה נעשית מול שרת יעודי שהקמתי לטובת הווידג׳ט. השרת הזה שולף מראש את הנתונים הגולמיים ומעבד אותם, כך שהתוצאה הסופית אמורה להיות מהירה יותר. זה גם יאפשר לי לתמוך טוב יותר בשינויים עתידיים באתר IsraelWeather, וכן שילוב ב Notification Center, אחרי יציאת גרסה 10.10 .</p>
 <p><img src="/img/2014/06/Screen-Shot-2014-06-28-at-11.49.03-PM.png" alt="ווידג׳ט מזג האויר"></p>
 <p>מוזמנים להוריד את גרסה האחרונה <a href="http://yehudab.com/widgets/WeatherIL-2d3.zip">מכאן</a>.</p>

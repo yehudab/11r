@@ -34,7 +34,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
-    <title>
+    <title data-pagefind-meta="title">
       רק שניה
       
        | בלוג פשוט</title>
@@ -64,12 +64,15 @@
     </button>
 
     <!-- Navigation Links -->
-    <ul id="menu" class="hidden flex-col md:flex md:flex-row sm:w-32 w-full mt-6 md:mt-0 md:justify-between justify-evenly">
+    <ul id="menu" class="hidden flex-col md:flex md:flex-row sm:w-1/4 w-full mt-6 md:mt-0 md:justify-between justify-evenly">
       <li>
         <a href="/blog/about" class="block md:inline-block">אודות</a>
       </li>
       <li>
         <a href="/archive" class="block md:inline-block">ארכיון</a>
+      </li>
+      <li>
+        <a href="/blog/search" class="block md:inline-block">חיפוש</a>
       </li>
     </ul>
   </nav>
@@ -102,7 +105,7 @@
             </p>
         
 
-        <div class="content post">
+        <div class="content post" data-pagefind-body>
             <p>רק שניה מפרידה בין השעה 03:14:07 ל 03:14:08 בתאריך: 19 בינואר 2038. לכאורה, זה לא צריך לעניין אף אחד. אבל אם אתה יוניקס/טיים גיק כמוני, התאריך הזה מייד אמור להדליק לך נורה אדומה.<br>
 למה? כי בשניה הזאת יעברו בדיוק 2,147,483,648 (או 2 בחזקת 31) שניות מתאריך 1.1.1970 בשעה 00:00:00. מחשב לינוקס בארכיטקטורת 32 ביט לא יכול להציג את הזמן הזה.<br>
 נסו להריץ את הפקודה הבאה על מחשב הלינוקס הקרוב:</p>

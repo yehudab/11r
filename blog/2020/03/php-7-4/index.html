@@ -34,7 +34,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
-    <title>
+    <title data-pagefind-meta="title">
       php 7.4
       
        | בלוג פשוט</title>
@@ -64,12 +64,15 @@
     </button>
 
     <!-- Navigation Links -->
-    <ul id="menu" class="hidden flex-col md:flex md:flex-row sm:w-32 w-full mt-6 md:mt-0 md:justify-between justify-evenly">
+    <ul id="menu" class="hidden flex-col md:flex md:flex-row sm:w-1/4 w-full mt-6 md:mt-0 md:justify-between justify-evenly">
       <li>
         <a href="/blog/about" class="block md:inline-block">אודות</a>
       </li>
       <li>
         <a href="/archive" class="block md:inline-block">ארכיון</a>
+      </li>
+      <li>
+        <a href="/blog/search" class="block md:inline-block">חיפוש</a>
       </li>
     </ul>
   </nav>
@@ -95,7 +98,7 @@
         
         
 
-        <div class="content post">
+        <div class="content post" data-pagefind-body>
             <p>חלפה למעלה משנה מאז ש<a href="https://www.php.net/eol.php">התמיכה ב-7.0 php הופסקה</a>, וזה הזמן לשדרג את הבלוג לגרסה 7.4. כרגיל, צריך לקרוא את כל ה breaking changes, אבל אם הבלוג והתוספים מתוחזקים לגרסה העדכנית ביותר, אפשר לסמוך בדרך כלל שהכל יעובד. גיבוי של הקוד והדאטה רצוי גם כן.</p>
 <p>את הגיבויים אני מבצע לאחרונה בעזרת <a href="https://restic.net/">restic</a>, כאשר הקבצים מועלים לאכסון (הזול יחסית) של <a href="https://www.backblaze.com/b2/cloud-storage.html">Backblaze B2</a>.</p>
 <p>אחרי שמכניסים את הגדרות ל restic למשתני סביבה, סקריפט הגיבוי פשוט למדי:</p>

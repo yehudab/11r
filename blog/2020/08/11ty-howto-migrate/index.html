@@ -34,7 +34,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
-    <title>
+    <title data-pagefind-meta="title">
       מוורדפרס ל-11ty
       
        | בלוג פשוט</title>
@@ -64,12 +64,15 @@
     </button>
 
     <!-- Navigation Links -->
-    <ul id="menu" class="hidden flex-col md:flex md:flex-row sm:w-32 w-full mt-6 md:mt-0 md:justify-between justify-evenly">
+    <ul id="menu" class="hidden flex-col md:flex md:flex-row sm:w-1/4 w-full mt-6 md:mt-0 md:justify-between justify-evenly">
       <li>
         <a href="/blog/about" class="block md:inline-block">אודות</a>
       </li>
       <li>
         <a href="/archive" class="block md:inline-block">ארכיון</a>
+      </li>
+      <li>
+        <a href="/blog/search" class="block md:inline-block">חיפוש</a>
       </li>
     </ul>
   </nav>
@@ -102,7 +105,7 @@
             </p>
         
 
-        <div class="content post">
+        <div class="content post" data-pagefind-body>
             <p>אז אחרי שמחליטים על מעבר ל-11ty, צריך לדאוג לשמר את תוכן הפוסטים והתגובות.</p>
 <p>בשלב הראשון של המעבר יש צורך ליצא את כל התוכן מוורדפרס ל-Markdown. לטובת זה השתמשתי בפלאגאין לוורדפרס שפותח דווקא עבור Gatsby ונקרא: <a href="https://wordpress.org/plugins/wp-gatsby-markdown-exporter/">WP Gatsby Markdown Exporter</a>. בקישור ניתן לקרוא כיצד להפעיל אותו. אני השתמשתי באופציית ה <a href="https://wp-cli.org/" title="WordPress Command Line">WP-CLI</a>. משום מה הייתה לו בעיה ליצא את התמונות, ולכן הפעלתי את האופציות שמנטרלות את החלק הזה. הפקודה הסופית הייתה:</p>
 <pre class="language-bash"><code class="language-bash">wp gatsby-markdown-export <span class="token parameter variable">--skip_copy_uploads</span> <span class="token parameter variable">--skip_original_images</span> <span class="token parameter variable">--directory</span><span class="token operator">=</span>/var/www/html/md-export</code></pre>

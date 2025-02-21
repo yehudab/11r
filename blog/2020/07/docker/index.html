@@ -34,7 +34,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
-    <title>
+    <title data-pagefind-meta="title">
       עוברים דירה
       
        | בלוג פשוט</title>
@@ -64,12 +64,15 @@
     </button>
 
     <!-- Navigation Links -->
-    <ul id="menu" class="hidden flex-col md:flex md:flex-row sm:w-32 w-full mt-6 md:mt-0 md:justify-between justify-evenly">
+    <ul id="menu" class="hidden flex-col md:flex md:flex-row sm:w-1/4 w-full mt-6 md:mt-0 md:justify-between justify-evenly">
       <li>
         <a href="/blog/about" class="block md:inline-block">אודות</a>
       </li>
       <li>
         <a href="/archive" class="block md:inline-block">ארכיון</a>
+      </li>
+      <li>
+        <a href="/blog/search" class="block md:inline-block">חיפוש</a>
       </li>
     </ul>
   </nav>
@@ -95,7 +98,7 @@
         
         
 
-        <div class="content post">
+        <div class="content post" data-pagefind-body>
             <p><img src="/img/2020/07/Docker.PNG" alt="Docker">
 אחרי שלוש שנים שבהן <a href="https://yehudab.com/blog/2017/06/yet-another-blog-upgrade/">האתר הזה רץ מעל שרות האחסון של Scaleway</a>, קיבלתי מהם הודעה שהחומרה שעליה אני רץ (dual core ARM CPU, 2GB RAM, 50GB SSD) תפסיק לעבוד בעוד מספר חודשים. הם הציעו לי לעבור באותו מחיר לשרת VPS מבוסס אינטל, אלא שעוד לפני שהספקתי להגיב, קיבלתי את המכתב שזו כותרתו: We’re evolving our Instances prices, או בתרגום חופשי: נמאס לנו להיות הכי זולים בשוק, אז נעלה את המחיר ב 66%.</p>
 <p>החלטתי שזה הזמן לחפש שרות אכסון חדש, והגעתי דרך חבר לעבודה ל <a href="https://www.ovh.ie/">OVHcloud</a>. השרת הבסיסי נראה על הנייר חלש יותר (מעבד אחד בלבד ודיסק קטן יותר), אבל בבדיקות ביצועים בשטח הוא משמעותית יותר מהיר. זה מורגש גם בעבודת ההתקנה (פרטים בהמשך) וגם בזמן ריצה, כפי שנמדד ע״י StatusCake. המחיר זהה למחיר (הישן) של Scaleway: שלושה אירו לחודש, בלי התחייבות.</p>
