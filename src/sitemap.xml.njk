@@ -13,7 +13,11 @@
   {%- set absolutePostUrl %}{{ page.url | url | absoluteUrl(metadata.url) }}{% endset %}
   <url>
     <loc>{{ absolutePostUrl }}</loc>
-    <lastmod>{{ (page.data.lastUpdate if page.data.lastUpdate else page.data.date) | htmlDateString}}</lastmod>
+    {%- if page.data.lastUpdate or page.data.date %}
+      <lastmod>{{ (page.data.lastUpdate if page.data.lastUpdate else page.data.date) | htmlDateString}}</lastmod>
+    {%- else %}
+      <lastmod>{{ "2025-02-01T00:00:00Z" | htmlDateString}}</lastmod>
+    {%- endif %}
   </url>
 {%- endfor %}
 </urlset>
