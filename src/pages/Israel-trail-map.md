@@ -1,7 +1,7 @@
 ---
 title: שביל ישראל - ראשי
 date: '2022-09-27T20:00:00+03:00'
-lastUpdate: '2025-02-14T08:00:00.000+00:00'
+lastUpdate: '2025-04-26T08:00:00.000+00:00'
 status: publish
 path: Israel-trail-map
 author: יהודה
@@ -22,14 +22,14 @@ disableNewComments: true
 #### עונה 1 - 2022-2023
 1. [ארץ ירדן וחרמונים](/blog/2022/09/Israel-trail-1)
 2. [אין דבר](/blog/2022/10/Israel-trail-2)
-2. [בקעה, לא עמק](/blog/2022/11/Israel-trail-3)
-2. [שלום רב שובך](/blog/2022/12/Israel-trail-4)
-2. קטע חסר
-2. [יב״א בה בה בה בה בה בה בם](/blog/2023/02/Israel-trail-6)
-2. [ארבעים נכנסו לפרד״ס](/blog/2023/03/Israel-trail-7)
-2. [Stairway to Heaven](/blog/2023/04/Israel-trail-8)
-2. [טופוגרפיה פסיכית](/blog/2023/05/Israel-trail-9)
-2. קטע חסר
+3. [בקעה, לא עמק](/blog/2022/11/Israel-trail-3)
+4. [שלום רב שובך](/blog/2022/12/Israel-trail-4)
+5. קטע חסר
+6. [יב״א בה בה בה בה בה בה בם](/blog/2023/02/Israel-trail-6)
+7. [ארבעים נכנסו לפרד״ס](/blog/2023/03/Israel-trail-7)
+8. [Stairway to Heaven](/blog/2023/04/Israel-trail-8)
+9. [טופוגרפיה פסיכית](/blog/2023/05/Israel-trail-9)
+10. קטע חסר
 
 #### עונה 2 - 2023-2024
 11. [מים שאל חלב נתנה](/blog/2023/12/israel-trail-11)
@@ -50,6 +50,8 @@ disableNewComments: true
 24. [בזכות הנשרים - יום 2](/blog/2025/01/israel-trail-23-24)
 25. [נתיב לנשר בשמיים](/blog/2025/01/israel-trail-25)
 26. [בננות כל הדרך למטה](/blog/2025/02/israel-trail-26)
+27. קטע חסר
+28. [הים](/blog/2025/04/israel-trail-28)
 
 ---
 
