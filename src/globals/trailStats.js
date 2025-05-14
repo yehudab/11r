@@ -15,6 +15,7 @@ let legs = {
   15: {trailDistance: [10.9]},
   16: {trailDistance: [12.4]},
   17: {trailDistance: [14.7]},
+  18: {trailDistance: [9.1]},
   19: {trailDistance: [12.6]},
   20: {trailDistance: [12.7]},
   21: {trailDistance: [13.9]},
