@@ -42,6 +42,10 @@ permalink: "blog/{{ page.inputPath | yearMonthFile }}/index.html"
             {%- if trailSerial %}
                 {%- include 'trail-data.njk' %}
             {% endif %}
+
+            {%- if trailStats %}
+                {%- include 'trail-stats.njk' %}
+            {% endif %}
         </div>
 
         {%- set postComments = comments[page.fileSlug] | commentsTree %}
