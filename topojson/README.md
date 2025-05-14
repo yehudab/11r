@@ -9,8 +9,9 @@
 6. Download in GeoJSON
 7. Rename downloaded file to `trail-xx.geojson`
 8. Add the new trail number to the `trailNumbers` var in `vega-map.js`
-9. Update the `lastUpdate` front matter field in `Israel-trail-map.md`
-10. Run in command line:
+9. Add the new trail number and distanve `legs` var in `trailStats.js`
+10. Update the `lastUpdate` front matter field in `Israel-trail-map.md`
+11. Run in command line:
 
 ```bash 
 geo2topo ~/Downloads/trail-xx.geojson | jq > ~/Dev/11r/public/topojson/trail-xx.topojson
