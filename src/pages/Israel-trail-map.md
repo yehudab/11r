@@ -10,7 +10,7 @@ ogImage: 'img/2022/09/shvil-1-6.jpeg'
 type: page
 layout: post
 disableNewComments: true
-trailStats: true
+includeTrailStats: true
 ---
 
 ### מפת השביל

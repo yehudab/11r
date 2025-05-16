@@ -43,7 +43,7 @@ permalink: "blog/{{ page.inputPath | yearMonthFile }}/index.html"
                 {%- include 'trail-data.njk' %}
             {% endif %}
 
-            {%- if trailStats %}
+            {%- if includeTrailStats %}
                 {%- include 'trail-stats.njk' %}
             {% endif %}
         </div>
