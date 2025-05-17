@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="canonical" href="https://yehudab.com/maps/trail-6/" />
+    <link rel="canonical" href="https://yehudab.com/maps/trail-07/" />
 
     
-    <meta itemprop="name" content="מפת מקטע מס׳ 6 | בלוג פשוט">
+    <meta itemprop="name" content="מפת מקטע מס׳ 07 | בלוג פשוט">
     <meta itemprop="description" content="צר עולמי כ  U+200A">
 
     
-    <meta name="twitter:title" content="מפת מקטע מס׳ 6 | בלוג פשוט">
+    <meta name="twitter:title" content="מפת מקטע מס׳ 07 | בלוג פשוט">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:description" content="צר עולמי כ  U+200A">
     <meta name="twitter:site" content="@yehudab">
@@ -20,10 +20,10 @@
     <meta name="twitter:image:src" content="">
 
     
-    <meta property="og:title" content="מפת מקטע מס׳ 6 | בלוג פשוט">
+    <meta property="og:title" content="מפת מקטע מס׳ 07 | בלוג פשוט">
     <meta property="og:description" content="צר עולמי כ  U+200A">
     <meta property="og:image" content="https://yehudab.com/img/2022/12/blog-image.webp">
-    <meta property="og:url" content="https://yehudab.com/maps/trail-6/">
+    <meta property="og:url" content="https://yehudab.com/maps/trail-07/">
     <meta property="og:site_name" content="בלוג פשוט">
     <meta property="og:locale" content="he_il">
     <meta property="og:type" content="website">
@@ -35,7 +35,7 @@
     <link rel="manifest" href="/site.webmanifest">
 
     <title data-pagefind-meta="title">
-      מפת מקטע מס׳ 6
+      מפת מקטע מס׳ 07
       
        | בלוג פשוט</title>
 
@@ -86,7 +86,7 @@
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
      crossorigin=""></script>
-  <h2 class="text-center">מפת קטע מס׳ 6 - בי״ס שדה הר מירון לחניון עיקול מרון</h2>
+  <h2 class="text-center">מפת קטע מס׳ 07 - חניון עיקול מרון לכביש 85</h2>
   <p class="text-center text-sm italic mb-6">לא מתאימה לצרכי לניווט</p>
   <div id="map"></div>
   <style>
@@ -96,7 +96,7 @@
   </style>
   
   <script>
-    let taril = {"type":"Feature","properties":{"name":"בי״ס שדה הר מירון לחניון עיקול מרון"},"geometry":{"type":"LineString","coordinates":[[35.39381,33.00875],[35.39928,33.00217],[35.40108,33.00061],[35.40042,32.9994],[35.40049,32.99934],[35.40154,32.99897],[35.40223,32.99908],[35.40264,33.00176],[35.40294,33.00243],[35.40567,32.99978],[35.40639,32.99933],[35.41133,33.00008],[35.41208,33.00013],[35.41608,32.99776],[35.41685,32.99691],[35.41698,32.99543],[35.41668,32.99465],[35.40888,32.99043],[35.40832,32.98983],[35.41324,32.98718],[35.41428,32.9865],[35.41538,32.97866],[35.41549,32.97841],[35.41862,32.97768],[35.41842,32.97736],[35.42136,32.97828],[35.42248,32.97831],[35.42371,32.97721],[35.42545,32.97577],[35.4287,32.97537],[35.43005,32.97463],[35.43074,32.97326],[35.43244,32.97289],[35.43927,32.97702],[35.4396,32.97708],[35.43817,32.97701],[35.43711,32.97654],[35.43765,32.97849],[35.438,32.97883],[35.4424,32.97908]]}};
+    let taril = {"type":"Feature","properties":{"name":"חניון עיקול מרון לכביש 85"},"geometry":{"type":"LineString","coordinates":[[35.44285,32.97924],[35.44369,32.97973],[35.4449,32.98027],[35.44632,32.97958],[35.44838,32.9776],[35.45151,32.97836],[35.45259,32.97907],[35.4578,32.97682],[35.45894,32.97621],[35.46304,32.9768],[35.46394,32.97681],[35.46516,32.97609],[35.46543,32.97564],[35.46795,32.97559],[35.46898,32.97544],[35.47203,32.97383],[35.47206,32.97413],[35.47255,32.97272],[35.47269,32.97186],[35.47511,32.96981],[35.4753,32.96996],[35.47603,32.96716],[35.47601,32.96527],[35.47746,32.96258],[35.47718,32.96117],[35.479,32.9576],[35.47918,32.95631],[35.4761,32.94999],[35.4758,32.94916],[35.47536,32.94497],[35.47565,32.94402],[35.47365,32.94222],[35.47314,32.94165],[35.47515,32.9369],[35.47682,32.93626],[35.47705,32.93105],[35.47729,32.93069],[35.47596,32.92951],[35.47532,32.92705],[35.47178,32.92432],[35.47158,32.92314],[35.47235,32.9221],[35.47497,32.92101],[35.47549,32.91985],[35.4753,32.91863],[35.47942,32.91456],[35.47982,32.91355],[35.48332,32.91255],[35.48427,32.91317],[35.4861,32.91149]]}};
     let baseStyle = {
         "color": "#ff7800",
         "weight": 5,
