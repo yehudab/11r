@@ -10,8 +10,8 @@ module.exports = async function() {
 };
 
 async function parseMapFile(file) {
-    let objectName = file.replace(/.*(trail-[0-9]+).*/, "$1");
-    let number = parseInt(objectName.replace("trail-", ""), 10);
+    let objectName = file.replace(/.*(trail-[0-9a-z]+).*/, "$1");
+    let number = objectName.replace("trail-", "");
     const data = await fs.readFile(file, 'utf-8');
     const topology = JSON.parse(data);
     let geojson = topojson.feature(topology, topology.objects[objectName]);
