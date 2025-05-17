@@ -1,5 +1,6 @@
 {%- set data = post.data or { 
     trailSerial: trailSerial,
+    trailMaps: trailMaps,
     trailStart: trailStart,
     trailEnd: trailEnd,
     trailDirection: trailDirection,
@@ -105,7 +106,7 @@
         </tr>
         <tr>
             <td>מפת הקטע:</td>
-            {% for serial in data.trailSerial %}
+            {% for serial in (data.trailMaps or data.trailSerial) %}
                 <td><a href="/maps/trail-{{ serial }}/#map">🗺️</a></td>
             {% endfor %}
         </tr>

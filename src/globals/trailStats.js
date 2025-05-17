@@ -26,6 +26,7 @@ let legs = {
   26: {trailDistance: [10.7]},
   27: {trailDistance: [8.68]},
   28: {trailDistance: [12.7]},
+  29: {trailDistance: [10.9]},
 };
 
 let total = Object.values(legs).reduce((sum, leg) => {
