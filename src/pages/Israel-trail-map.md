@@ -1,7 +1,7 @@
 ---
 title: שביל ישראל - ראשי
 date: '2022-09-27T20:00:00+03:00'
-lastUpdate: '2025-05-16T08:00:00.000+00:00'
+lastUpdate: '2025-06-06T08:00:00.000+00:00'
 status: publish
 path: Israel-trail-map
 author: יהודה
@@ -54,6 +54,7 @@ includeTrailStats: true
 27. קטע חסר
 28. [הים](/blog/2025/04/israel-trail-28)
 29. [הליכה מקיסריה](/blog/2025/05/israel-trail-29)
+30. [פרש טורקי](/blog/2025/06/israel-trail-30)
 
 ---
 
