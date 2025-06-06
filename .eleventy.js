@@ -14,6 +14,7 @@ import isCommentable from "./filters/is-commentable.js";
 import postsByYear from "./filters/posts-by-year.js";
 import getYears from "./filters/get-years.js";
 import postYear from "./filters/post-year.js";
+import parseSongs from "./filters/parse-songs.js";
 import { execSync } from 'node:child_process';
 
 export default function (config) {
@@ -36,6 +37,7 @@ export default function (config) {
   config.addFilter('postsByYear', postsByYear);
   config.addFilter('getYears', getYears);
   config.addFilter('postYear', postYear);
+  config.addFilter('parseSongs', parseSongs);
 
   config.addPassthroughCopy({
     "public": './',

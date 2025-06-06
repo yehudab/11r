@@ -13,7 +13,8 @@
     trailTotalTime: trailTotalTime,
     trailAvgSpeed: trailAvgSpeed,
     trailEndImage: trailEndImage,
-    trailEndImageAlt: trailEndImageAlt
+    trailEndImageAlt: trailEndImageAlt,
+    trailSongs: trailSongs
 } 
 %}
 <table class="summary-table">
@@ -104,6 +105,14 @@
                 <td>{{ avgSpeed }} קמ"ש</td>
             {% endfor %}
         </tr>
+        {% if (data.trailSongs) %}
+        <tr>
+            <td>שירים ששמענו:</td>
+            {% for song in data.trailSongs | parseSongs %}
+                <td>{{ song.name }} <a href="{{song.url}}" target="_blank">🔊</a></td>
+            {% endfor %}
+        </tr>
+        {% endif %}
         <tr>
             <td>מפת הקטע:</td>
             {% for serial in (data.trailMaps or data.trailSerial) %}
