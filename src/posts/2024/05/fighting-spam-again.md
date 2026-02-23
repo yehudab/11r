@@ -1,6 +1,6 @@
 ---
 date: '2024-05-02T14:00:00.000+00:00'
-status: publish
+status: draft
 author: יהודה
 type: post
 title: מה יהיה עם הספאם הזה
