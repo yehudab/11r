@@ -1,6 +1,6 @@
 ---
 date: '2020-10-03T10:18:58.000+00:00'
-status: publish
+status: draft
 author: יהודה
 type: post
 title: ניהול תגובות באמצעות staticman
