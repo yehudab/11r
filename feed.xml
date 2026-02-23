@@ -1135,28 +1135,6 @@ restic backup ~/backup&lt;/code&gt;&lt;/pre&gt;
     </entry>
     
     <entry>
-      <title>ניהול תגובות באמצעות staticman</title>
-      <link href="https://yehudab.com/blog/2020/10/staticman-for-11ty-comments/"/>
-      <updated>2020-10-03T10:18:58Z</updated>
-      <id>https://yehudab.com/blog/2020/10/staticman-for-11ty-comments/</id>
-      <content type="html">&lt;p&gt;ב&lt;a href=&quot;https://yehudab.com/blog/2020/08/11ty-howto-migrate/&quot; title=&quot;מוורדפרס ל-11ty&quot;&gt;פוסט הקודם&lt;/a&gt; הסברתי איך לייבא את התגובות הישנות מ Wordpress ל-&lt;a href=&quot;https://www.11ty.dev/&quot;&gt;11ty&lt;/a&gt;. בפוסט הזה, אראה איך להתקין שרת &lt;a href=&quot;https://staticman.net/&quot;&gt;Staticman&lt;/a&gt;, ואיך לחבר אליו את טופס התגובות באתר.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://yehudab.com/img/2020/10/staticman-logo.png&quot; alt=&quot;Staticman logo&quot; /&gt;
-Staticman logo by &lt;a href=&quot;http://erlen.co.uk/&quot;&gt;Erlen Masson&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;גם הפעם הסתמכתי על &lt;a href=&quot;https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html&quot; title=&quot;Adding Staticman Comments by Travis Downs&quot;&gt;מדריך קיים&lt;/a&gt; שחיבר Travis Downs עבור שילוב Staticman בבלוג מבוסס Jekyll. בסופו של דבר, ביצעתי את השלבים הבאים:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html#set-up-github-bot-account&quot;&gt;יצירת חשבון בוט ב GitHub&lt;/a&gt; (לגמרי לפי המדריך הנ&amp;quot;ל)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html#configuring-staticmanyml&quot;&gt;הגדרות staticman.yml&lt;/a&gt; (גם כן לפי המדריך)&lt;/li&gt;
-&lt;li&gt;הגדרות staticman בתוך &lt;code&gt;src/globals/site.json&lt;/code&gt;. כאן יש הבדל לעומת המדריך, מכוון שקובץ זה יחודי ל 11ty, ובמדריך ההתיחסות היא לסביבת Jekyll. בכל מקרה, העקרונות דומים, ו&lt;a href=&quot;https://github.com/yehudab/11r/blob/master/src/includes/comments.njk&quot; title=&quot;site.json&quot;&gt;כאן&lt;/a&gt; תוכלו לראות את ההגדרות שלי.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html#set-up-the-api-bridge&quot;&gt;הקמת שרת staticman&lt;/a&gt;. אחרי יצירת המפתחות, בחרתי בדרך שונה מהמומלץ (הקמה דרך Heroku), ובמקום זה העלתי שרת עצמאי שרץ דרך docker. בניגוד למוסבר בדקומנטציה, כאן יש חוסר &lt;a href=&quot;https://github.com/eduardoboucas/staticman/blob/master/docs/docker.md&quot;&gt;בתיעוד המקורי&lt;/a&gt;, ויש לזכור להגדיר את מפתחות ההצפנה בקובץ &lt;a href=&quot;https://github.com/eduardoboucas/staticman/blob/master/docker-compose.yml&quot;&gt;docker-compose.yml&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html#invite-and-accept-bot-to-blog-repo&quot; title=&quot;Invite and Accept Bot to Blog Repo&quot;&gt;הזמנת הבוט להשתתף ב repo&lt;/a&gt; (ע&amp;quot;פ המדריך)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html#enable-recaptcha&quot; title=&quot;Enable reCAPTCHA&quot;&gt;הפעלת reCAPCHA&lt;/a&gt; - בעיקר על פי המדריך. יש לשים לב שבחלק המתייחס ל &lt;code&gt;‎_config.yml&lt;/code&gt; יש לבצע את השינויים במקום זאת ב &lt;code&gt;src/globals/site.json&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html#integrate-comments-into-site&quot; title=&quot;Integrate Comments Into Site&quot;&gt;שילוב התגובות באתר&lt;/a&gt;. כאן ההבדלים מעט יותר משמעותיים, הן בגלל ההבדלים בין Jekyll ל-11ty, והן בגלל הרצון שלי לתמוך בקינון מעבר לרמה אחת. בנוסף, לא אהבתי את ה JS של הפוסט המקורי שמשתש במעורב ב jQuery ו-Vanilla JS. במקום זה השתמשתי בספריה רזה יותר בשם &lt;a href=&quot;https://github.com/fabiospampinato/cash&quot;&gt;cash&lt;/a&gt;, שמאפשרת סינטקס דמוי jQuery במחיר של תמיכה בפחות פיצ&#39;רים ופחות דפדפנים ישנים (אבל עדיין תומכת ב IE11). על הצגת התגובות כתבתי בפוסט הקודם. העבודה על טופס התגובות החדשות מסתכמת בסופו של דבר בקבצי ה &lt;a href=&quot;https://github.com/yehudab/11r/blob/master/src/includes/comment-form.njk&quot; title=&quot;comment-form.njk&quot;&gt;HTML&lt;/a&gt;, &lt;a href=&quot;https://github.com/yehudab/11r/blob/master/src/styles/comments.css&quot; title=&quot;comments.css&quot;&gt;CSS&lt;/a&gt;, ו-&lt;a href=&quot;https://github.com/yehudab/11r/blob/master/src/scripts/comment-form.js&quot; title=&quot;comment-form.js&quot;&gt;JS &lt;/a&gt;אותם תוכלו לראות ב repo הסופי.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;מוזמנים להגיב למטה ולראות איך כל ה flow עובד. עד לאישור, תוכלו לצפות בתגובות שלכם באזור ה &lt;a href=&quot;https://github.com/yehudab/11r/pulls&quot;&gt;Pull Requests&lt;/a&gt; של הבלוג.&lt;/p&gt;
-</content>
-    </entry>
-    
-    <entry>
       <title>חזרה למק</title>
       <link href="https://yehudab.com/blog/2020/12/back-to-the-mac/"/>
       <updated>2020-12-14T21:39:00Z</updated>
