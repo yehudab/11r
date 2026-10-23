@@ -1,4 +1,4 @@
-import yaml from "js-yaml";
+import { load as yamlLoad } from "js-yaml";
 import siteSettings from "./src/globals/site.js";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import { rssPlugin } from "@11ty/eleventy-plugin-rss";
@@ -49,11 +49,11 @@ export default function (config) {
 
   // Yaml
   config.addDataExtension("yaml", (contents) =>
-    yaml.load(contents)
+    yamlLoad(contents)
   );
   // Yml
   config.addDataExtension("yml", (contents) =>
-    yaml.load(contents)
+    yamlLoad(contents)
   );
 
   config.setBrowserSyncConfig({
