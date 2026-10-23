@@ -1,7 +1,7 @@
-import yaml from "js-yaml";
+import { load as yamlLoad } from "js-yaml";
 import siteSettings from "./src/globals/site.js";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
-import pluginRss from "@11ty/eleventy-plugin-rss";
+import { rssPlugin } from "@11ty/eleventy-plugin-rss";
 import dateDisplay from "./filters/date-display.js";
 import htmlDateString from "./filters/html-date-string.js";
 import dateAndTime from "./filters/date-and-time.js";
@@ -19,7 +19,7 @@ import { execSync } from 'node:child_process';
 
 export default function (config) {
   config.addPlugin(syntaxHighlight);
-  config.addPlugin(pluginRss);
+  config.addPlugin(rssPlugin);
   config.setLiquidOptions({
     strictFilters: false,
     dynamicPartials: false
@@ -49,11 +49,11 @@ export default function (config) {
 
   // Yaml
   config.addDataExtension("yaml", (contents) =>
-    yaml.load(contents)
+    yamlLoad(contents)
   );
   // Yml
   config.addDataExtension("yml", (contents) =>
-    yaml.load(contents)
+    yamlLoad(contents)
   );
 
   config.setBrowserSyncConfig({
