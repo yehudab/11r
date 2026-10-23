@@ -1,49 +1,8 @@
-@keyframes tag-hover {
-  100% {
-    border: 1px solid #fff;
-    background-color: transparent;
-    color: #fff;
-  }
-}
-
 .tag {
-  @apply inline-block px-4 py-2 ml-2 mb-2 text-xs font-bold rounded-sm lowercase text-white;
-  border: 1px solid transparent;
+  @apply inline-block px-4 py-2 ml-2 mb-2 text-xs font-bold rounded-sm lowercase text-meta border border-meta;
+  transition: background-color 200ms ease, color 200ms ease;
 }
 
 .tag:hover {
-  animation: tag-hover 500ms both;
-}
-/* 
-.tag:before {
-  content: "#";
-} */
-
-
-.tag {
-  @apply bg-gray-700;
-}
-
-.tag.cats {
-  @apply bg-red-700;
-}
-
-.tag.enchiladas {
-  @apply bg-orange-700;
-}
-
-.tag.beer {
-  @apply bg-teal-700;
-}
-
-.tag.spirituality {
-  @apply bg-indigo-700;
-}
-
-.tag.orcas {
-  @apply bg-purple-700;
-}
-
-.tag.stoicism {
-  @apply bg-pink-700;
+  @apply bg-meta text-meta-ink no-underline;
 }

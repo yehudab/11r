@@ -10,11 +10,11 @@ layout: post
 <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
 <style>
     :root {
-      --pagefind-ui-primary: var(--color-gray-200);
-      --pagefind-ui-text: var(--color-gray-200);
-      --pagefind-ui-background: var(--color-gray-900);
-      --pagefind-ui-border: var(--color-gray-500);
-      --pagefind-ui-tag: var(--color-gray-500);
+      --pagefind-ui-primary: var(--color-accent);
+      --pagefind-ui-text: var(--color-body);
+      --pagefind-ui-background: var(--color-ink);
+      --pagefind-ui-border: var(--color-line);
+      --pagefind-ui-tag: var(--color-surface);
       --pagefind-ui-font: inherit;
     }
 </style>

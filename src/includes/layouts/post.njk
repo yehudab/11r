@@ -7,35 +7,10 @@ permalink: "blog/{{ page.inputPath | yearMonthFile }}/index.html"
 {% block body %}
     <p>{{url}}</p>
     <div>
-        <h2 class="mb-2">{{ title }}</h2>
-
-        {% if tags %}
-            <div class="mb-2">
-                {% for tag in tags %}
-                    {%- if tag !== "post" -%}
-                        <a class="tag {{ tag | replace('.', '') }}" href="{{ site.baseUrl }}tag/{{ tag }}/">{{ tag }}</a>
-                    {%- endif -%}
-                {% endfor %}
-            </div>
-        {% endif %}
-
-        {% if date %}
-            <p class="text-sm italic mb-2">נכתב ב<span datetime="{{ date | dateISO }}">{{ date | dateDisplay }}</span>
-            {%- if lastUpdate %},
-                עדכון אחרון: <span datetime="{{ lastUpdate | dateISO }}">{{ lastUpdate | dateDisplay }}</span>
-            {%- endif %}.
-            </p>
-        {% endif %}
+        <h1 class="mb-3">{{ title }}</h1>
 
         {% set numComments = comments[page.fileSlug] | commentsCount %}
-        {% if numComments.count > 0 %}
-            <p class="text-sm italic">
-                <a class="comments-count" 
-                    href="#comments">
-                    {{ numComments.text }}
-                </a>
-            </p>
-        {% endif %}
+        {%- include 'post-meta.njk' %}
 
         <div class="content post" data-pagefind-body>
             {{ content | safe }}

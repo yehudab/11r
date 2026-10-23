@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import 'prism-themes/themes/prism-dracula.css';
+@import './fonts.css';
 @import './base.css' layer(base);
 @import './copy.css' layer(base);
 @import './tags.css' layer(base);
@@ -13,6 +14,19 @@
   --color-current: currentColor;
   --color-black: #000;
   --color-white: #fff;
+
+  /* Site palette, by role */
+  --color-ink: #141b2d;
+  --color-surface: #1e2840;
+  --color-line: #2c3854;
+  --color-body: #c9d3e3;
+  --color-heading: #f4f1ea;
+  --color-accent: #fbbf4d;
+  --color-accent-soft: #ffd88a;
+  --color-meta: #5fd4c4;
+  --color-meta-ink: #0f2e2a;
+  --color-highlight: #ff7a6b;
+  --color-muted: #8b98b0;
 
   --color-gray-100: #f7fafc;
   --color-gray-200: #edf2f7;
@@ -114,7 +128,7 @@
   --color-pink-800: #97266d;
   --color-pink-900: #702459;
 
-  --font-inter: 'Inter', sans-serif;
+  --font-sans: 'Heebo Variable', 'Arial Hebrew', Arial, sans-serif;
 }
 
 /*

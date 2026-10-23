@@ -15,6 +15,8 @@ import postsByYear from "./filters/posts-by-year.js";
 import getYears from "./filters/get-years.js";
 import postYear from "./filters/post-year.js";
 import parseSongs from "./filters/parse-songs.js";
+import readingTime from "./filters/reading-time.js";
+import imageFigures from "./markdown/image-figures.js";
 import { execSync } from 'node:child_process';
 
 export default function (config) {
@@ -38,12 +40,17 @@ export default function (config) {
   config.addFilter('getYears', getYears);
   config.addFilter('postYear', postYear);
   config.addFilter('parseSongs', parseSongs);
+  config.addFilter('readingTime', readingTime);
+
+  config.amendLibrary('md', (md) => md.use(imageFigures));
 
   config.addPassthroughCopy({
     "public": './',
     "favicon_io": './',
     "img": './img',
     "node_modules/cash-dom/dist/cash.min.js": "./assets/lib/cash.js",
+    "node_modules/@fontsource-variable/heebo/files/heebo-hebrew-wght-normal.woff2": "./assets/fonts/heebo-hebrew-wght-normal.woff2",
+    "node_modules/@fontsource-variable/heebo/files/heebo-latin-wght-normal.woff2": "./assets/fonts/heebo-latin-wght-normal.woff2",
     "CNAME": "./CNAME"
   });
 

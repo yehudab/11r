@@ -4,6 +4,7 @@ pagination:
     size: 1
     alias: map
 permalink: "maps/trail-{{ map.number }}/"
+hasOwnTitle: true
 eleventyComputed:
   title: "מפת מקטע מס׳ {{map.number}}"
 ---
@@ -15,7 +16,7 @@ eleventyComputed:
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
      crossorigin=""></script>
-  <h2 class="text-center">מפת קטע מס׳ {{map.name}}</h2>
+  <h1 class="text-center">מפת קטע מס׳ {{map.name}}</h1>
   <p class="text-center text-sm italic mb-6">לא מתאימה לצרכי לניווט</p>
   <div id="map"></div>
   <style>
