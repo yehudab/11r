@@ -1,12 +1,13 @@
 ---
 title: '404 – הדף לא קיים'
 permalink: /404.html
+hasOwnTitle: true
 ---
 
 {% extends 'page.njk' %}
 
 {% block body %}
-  <h2 class="mb-2">{{ title }}</h2>
+  <h1 class="mb-2">{{ title }}</h1>
   <p class="mb-2">לא מצאנו את הדף שביקשת.</p>
   <a href="{{ site.baseUrl }}">חזרה לדף הבית</a>
 {% endblock %}

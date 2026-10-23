@@ -131,7 +131,12 @@
         </tr>
     </tbody>
 </table>
-<img src="/{{data.trailEndImage}}" alt="{{data.trailEndImageAlt}}" title="{{data.trailEndImageAlt}}">
+<figure>
+    <img src="/{{data.trailEndImage}}" alt="{{data.trailEndImageAlt}}">
+    {%- if data.trailEndImageAlt %}
+    <figcaption aria-hidden="true">{{ data.trailEndImageAlt }}</figcaption>
+    {%- endif %}
+</figure>
 {# <p>
 {% image data.trailEndImage, data.trailEndImageAlt %}
 </p> #}
