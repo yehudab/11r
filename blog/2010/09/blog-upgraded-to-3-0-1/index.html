@@ -50,14 +50,14 @@
   <nav class="container mx-auto max-w-3xl px-8 pt-2 flex flex-wrap justify-between items-center">
     <!-- Branding -->
     <div>
-      <h1>
+      <p class="site-title">
         <a href="/">בלוג פשוט</a>
-      </h1>
-      <p>צר עולמי כ  U+200A</p>
+      </p>
+      <p class="site-description">צר עולמי כ  U+200A</p>
     </div>
 
     <!-- Hamburger Button -->
-    <button id="menu-toggle" class="block md:hidden text-gray-700 focus:outline-hidden">
+    <button id="menu-toggle" class="block md:hidden text-heading focus:outline-hidden">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
       </svg>
@@ -82,28 +82,29 @@
       
     <p></p>
     <div>
-        <h2 class="mb-2">הבלוג שודרג לגרסה 3.0.1</h2>
+        <h1 class="mb-3">הבלוג שודרג לגרסה 3.0.1</h1>
 
         
-            <div class="mb-2">
-                <a class="tag וורדפרס" href="/tag/וורדפרס/">וורדפרס</a><a class="tag כללי" href="/tag/כללי/">כללי</a><a class="tag wordpress" href="/tag/wordpress/">wordpress</a>
-            </div>
-        
+<div class="post-meta">
+    <span>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        נכתב ב<time datetime="2010-09-03T16:34:41.000+03:00">3 בספטמבר 2010</time>
+    </span>
+    <span>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        דקת קריאה אחת
+    </span>
+    <a class="comments-count" href="#comments">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9 9 0 0 1-4-.9L3 21l1.9-5A8.4 8.4 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z"/></svg>
+        7 תגובות
+    </a>
+    <span class="tags">
+            <a class="tag" href="/tag/וורדפרס/">וורדפרס</a>
+            <a class="tag" href="/tag/כללי/">כללי</a>
+            <a class="tag" href="/tag/wordpress/">wordpress</a>
+    </span>
+</div>
 
-        
-            <p class="text-sm italic mb-2">נכתב ב<span datetime="2010-09-03T16:34:41.000+03:00">3 בספטמבר 2010</span>.
-            </p>
-        
-
-        
-        
-            <p class="text-sm italic">
-                <a class="comments-count" 
-                    href="#comments">
-                    7 תגובות
-                </a>
-            </p>
-        
 
         <div class="content post" data-pagefind-body>
             <p>מי שנתקל בבעיות מוזמן להגיב (מצד שני, אם הבעיה היא במנגנון התגובות, אז אכלתי אותה…)</p>
@@ -125,7 +126,7 @@
                     
           (3 בספטמבר 2010 בשעה 20:23): 
         </p>
-                <p>הייתי חייבת לבדוק.. נראה שזה בסדר...
+                <p class="comment-message no-reply">הייתי חייבת לבדוק.. נראה שזה בסדר...
 
 שאלה לי: האם יש אפשרות לקבל הודעה כשיש לך פוסט חדש?</p>
                 
@@ -140,7 +141,7 @@
                     
           (3 בספטמבר 2010 בשעה 22:02): 
         </p>
-                <p>הי שירלי,
+                <p class="comment-message no-reply">הי שירלי,
 אין כרגע אפשרות דרך mail, אלא רק באמצעות rss (כמו google reader)</p>
                 
                 
@@ -154,7 +155,7 @@
                     
           (3 בספטמבר 2010 בשעה 22:07): 
         </p>
-                <p>אתה מעביר את הבלוג שלך דרך feedburner?‬
+                <p class="comment-message no-reply">אתה מעביר את הבלוג שלך דרך feedburner?‬
 
 ‫יש להם שם אפשרות לרישום בדואר אלקטרוני. אתה יכול לראות דוגמה לכך ב־&lt;a href=&quot;http://mozilla.org.il/news/&quot; rel=&quot;nofollow&quot;&gt;http://mozilla.org.il/news/&lt;/a&gt;.</p>
                 
@@ -169,7 +170,7 @@
                     
           (4 בספטמבר 2010 בשעה 3:26): 
         </p>
-                <p>תומר, 
+                <p class="comment-message no-reply">תומר, 
 תודה על ההצעה.
 
 שירלי,
@@ -186,7 +187,7 @@
                     
           (4 בספטמבר 2010 בשעה 23:41): 
         </p>
-                <p>נרשמתי, תודה</p>
+                <p class="comment-message no-reply">נרשמתי, תודה</p>
                 
                 
             </li>
@@ -218,7 +219,7 @@
                     
           (3 בספטמבר 2010 בשעה 21:05): 
         </p>
-                <p>אתה בטוח שטופס התגובות עובד?</p>
+                <p class="comment-message no-reply">אתה בטוח שטופס התגובות עובד?</p>
                 
                 
                     
@@ -231,7 +232,7 @@
                     
           (4 בספטמבר 2010 בשעה 2:31): 
         </p>
-                <p>עכשיו כן :-)</p>
+                <p class="comment-message no-reply">עכשיו כן :-)</p>
                 
                 
             </li>
@@ -261,7 +262,7 @@
     </div>
 
     </main>
-    <footer class="bg-gray-900 pb-10">
+    <footer class="bg-ink pb-10">
   <p class="block text-center text-sm mb-6">
     CC-BY-SA
     <a href="/">

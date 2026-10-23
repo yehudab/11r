@@ -50,14 +50,14 @@
   <nav class="container mx-auto max-w-3xl px-8 pt-2 flex flex-wrap justify-between items-center">
     <!-- Branding -->
     <div>
-      <h1>
+      <p class="site-title">
         <a href="/">בלוג פשוט</a>
-      </h1>
-      <p>צר עולמי כ  U+200A</p>
+      </p>
+      <p class="site-description">צר עולמי כ  U+200A</p>
     </div>
 
     <!-- Hamburger Button -->
-    <button id="menu-toggle" class="block md:hidden text-gray-700 focus:outline-hidden">
+    <button id="menu-toggle" class="block md:hidden text-heading focus:outline-hidden">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
       </svg>
@@ -82,18 +82,17 @@
       
     <p></p>
     <div>
-        <h2 class="mb-2">שביל ישראל - ראשי</h2>
+        <h1 class="mb-3">שביל ישראל - ראשי</h1>
 
         
+<div class="post-meta">
+    <span>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        נכתב ב<time datetime="2022-09-27T20:00:00.000+03:00">27 בספטמבר 2022</time>,
+            עדכון אחרון: <time datetime="2025-06-06T11:00:00.000+03:00">6 ביוני 2025</time>
+    </span>
+</div>
 
-        
-            <p class="text-sm italic mb-2">נכתב ב<span datetime="2022-09-27T20:00:00.000+03:00">27 בספטמבר 2022</span>,
-                עדכון אחרון: <span datetime="2025-06-06T11:00:00.000+03:00">6 ביוני 2025</span>.
-            </p>
-        
-
-        
-        
 
         <div class="content post" data-pagefind-body>
             <h3>מפת השביל</h3>
@@ -140,8 +139,7 @@
 <li><a href="/blog/2025/06/israel-trail-30">פרש טורקי</a></li>
 </ol>
 <hr>
-<p><img src="/img/2022/09/shvil-1-6.jpeg" alt="שביל ישראל" title="שביל ישראל"></p>
-
+<figure><img src="/img/2022/09/shvil-1-6.jpeg" alt="שביל ישראל"><figcaption aria-hidden="true">שביל ישראל</figcaption></figure>
 <table class="summary-table">
     <thead>
         <tr>
@@ -169,7 +167,7 @@
     </div>
 
     </main>
-    <footer class="bg-gray-900 pb-10">
+    <footer class="bg-ink pb-10">
   <p class="block text-center text-sm mb-6">
     CC-BY-SA
     <a href="/">

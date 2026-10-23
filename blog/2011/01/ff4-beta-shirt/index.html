@@ -50,14 +50,14 @@
   <nav class="container mx-auto max-w-3xl px-8 pt-2 flex flex-wrap justify-between items-center">
     <!-- Branding -->
     <div>
-      <h1>
+      <p class="site-title">
         <a href="/">בלוג פשוט</a>
-      </h1>
-      <p>צר עולמי כ  U+200A</p>
+      </p>
+      <p class="site-description">צר עולמי כ  U+200A</p>
     </div>
 
     <!-- Hamburger Button -->
-    <button id="menu-toggle" class="block md:hidden text-gray-700 focus:outline-hidden">
+    <button id="menu-toggle" class="block md:hidden text-heading focus:outline-hidden">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
       </svg>
@@ -82,28 +82,30 @@
       
     <p></p>
     <div>
-        <h2 class="mb-2">משתלם להיות בטא טסטר של פיירפוקס 4</h2>
+        <h1 class="mb-3">משתלם להיות בטא טסטר של פיירפוקס 4</h1>
 
         
-            <div class="mb-2">
-                <a class="tag דפדפנים" href="/tag/דפדפנים/">דפדפנים</a><a class="tag קוד פתוח ותוכנה חופשית" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a><a class="tag חולצה" href="/tag/חולצה/">חולצה</a><a class="tag פיירפוקס" href="/tag/פיירפוקס/">פיירפוקס</a>
-            </div>
-        
+<div class="post-meta">
+    <span>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        נכתב ב<time datetime="2011-01-07T10:30:09.000+02:00">7 בינואר 2011</time>
+    </span>
+    <span>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        דקת קריאה אחת
+    </span>
+    <a class="comments-count" href="#comments">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9 9 0 0 1-4-.9L3 21l1.9-5A8.4 8.4 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z"/></svg>
+        8 תגובות
+    </a>
+    <span class="tags">
+            <a class="tag" href="/tag/דפדפנים/">דפדפנים</a>
+            <a class="tag" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a>
+            <a class="tag" href="/tag/חולצה/">חולצה</a>
+            <a class="tag" href="/tag/פיירפוקס/">פיירפוקס</a>
+    </span>
+</div>
 
-        
-            <p class="text-sm italic mb-2">נכתב ב<span datetime="2011-01-07T10:30:09.000+02:00">7 בינואר 2011</span>.
-            </p>
-        
-
-        
-        
-            <p class="text-sm italic">
-                <a class="comments-count" 
-                    href="#comments">
-                    8 תגובות
-                </a>
-            </p>
-        
 
         <div class="content post" data-pagefind-body>
             <p>הנה מה שהגיע אלי במתנה היום בדואר:<br>
@@ -129,7 +131,7 @@
                     
           (7 בינואר 2011 בשעה 15:05): 
         </p>
-                <p>אלי הגיע גם אלבום התמונות מ־Mozilla Summit באותו המשלוח.</p>
+                <p class="comment-message no-reply">אלי הגיע גם אלבום התמונות מ־Mozilla Summit באותו המשלוח.</p>
                 
                 
             </li>
@@ -141,7 +143,7 @@
                     
           (7 בינואר 2011 בשעה 16:43): 
         </p>
-                <p>האם כבר ישנה גרסה בעברית לבטא (או לפחות סידור סרגל הסימניות מימין לשמאל?)</p>
+                <p class="comment-message no-reply">האם כבר ישנה גרסה בעברית לבטא (או לפחות סידור סרגל הסימניות מימין לשמאל?)</p>
                 
                 
                     
@@ -154,7 +156,7 @@
                     
           (8 בינואר 2011 בשעה 0:51): 
         </p>
-                <p>יש גרסה עברית (נדמה לי שכבר מהבטא השביעית).</p>
+                <p class="comment-message no-reply">יש גרסה עברית (נדמה לי שכבר מהבטא השביעית).</p>
                 
                 
             </li>
@@ -166,7 +168,7 @@
                     
           (8 בינואר 2011 בשעה 1:50): 
         </p>
-                <p>http://mozilla.org.il/news/2010/12/23/firefox4b8/</p>
+                <p class="comment-message no-reply">http://mozilla.org.il/news/2010/12/23/firefox4b8/</p>
                 
                 
             </li>
@@ -183,7 +185,7 @@
                     
           (8 בינואר 2011 בשעה 22:01): 
         </p>
-                <p>מה צריך לעשות כדי לקבל חולצה?
+                <p class="comment-message no-reply">מה צריך לעשות כדי לקבל חולצה?
 אני מבין שלא מספיק להתקין את הבטא על המחשב (התקנתי ומשום מה לא שלחו לי כלום בדואר :wink:)</p>
                 
                 
@@ -197,7 +199,7 @@
                     
           (9 בינואר 2011 בשעה 1:19): 
         </p>
-                <p>בעקרון היה איזה מייל עם המידע בנושא. תבדוק טוב שהוא לא נחת אצלך בתיקיית הספאם.</p>
+                <p class="comment-message no-reply">בעקרון היה איזה מייל עם המידע בנושא. תבדוק טוב שהוא לא נחת אצלך בתיקיית הספאם.</p>
                 
                 
                     
@@ -210,7 +212,7 @@
                     
           (9 בינואר 2011 בשעה 2:06): 
         </p>
-                <p>אם הוא נחת שם, יכול להיות שמאוחר מדי. אני קיבלתי את ההודעה על החולצה ב 3.12.2010 וגוגל שומר ספאם רק חודש אחורה.</p>
+                <p class="comment-message no-reply">אם הוא נחת שם, יכול להיות שמאוחר מדי. אני קיבלתי את ההודעה על החולצה ב 3.12.2010 וגוגל שומר ספאם רק חודש אחורה.</p>
                 
                 
                     
@@ -223,7 +225,7 @@
                     
           (10 בינואר 2011 בשעה 15:40): 
         </p>
-                <p>נו, בטח פספסתי את זה איכשהו. אני אאלץ לקנות חולצות בחנות.</p>
+                <p class="comment-message no-reply">נו, בטח פספסתי את זה איכשהו. אני אאלץ לקנות חולצות בחנות.</p>
                 
                 
             </li>
@@ -263,7 +265,7 @@
     </div>
 
     </main>
-    <footer class="bg-gray-900 pb-10">
+    <footer class="bg-ink pb-10">
   <p class="block text-center text-sm mb-6">
     CC-BY-SA
     <a href="/">

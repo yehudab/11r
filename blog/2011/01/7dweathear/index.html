@@ -50,14 +50,14 @@
   <nav class="container mx-auto max-w-3xl px-8 pt-2 flex flex-wrap justify-between items-center">
     <!-- Branding -->
     <div>
-      <h1>
+      <p class="site-title">
         <a href="/">בלוג פשוט</a>
-      </h1>
-      <p>צר עולמי כ  U+200A</p>
+      </p>
+      <p class="site-description">צר עולמי כ  U+200A</p>
     </div>
 
     <!-- Hamburger Button -->
-    <button id="menu-toggle" class="block md:hidden text-gray-700 focus:outline-hidden">
+    <button id="menu-toggle" class="block md:hidden text-heading focus:outline-hidden">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
       </svg>
@@ -82,28 +82,27 @@
       
     <p></p>
     <div>
-        <h2 class="mb-2">עדכון לווידג׳ט מזג האוויר</h2>
+        <h1 class="mb-3">עדכון לווידג׳ט מזג האוויר</h1>
 
         
-            <div class="mb-2">
-                <a class="tag ווידג׳טים" href="/tag/ווידג׳טים/">ווידג׳טים</a>
-            </div>
-        
+<div class="post-meta">
+    <span>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        נכתב ב<time datetime="2011-01-27T23:19:57.000+02:00">27 בינואר 2011</time>
+    </span>
+    <span>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        דקת קריאה אחת
+    </span>
+    <a class="comments-count" href="#comments">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9 9 0 0 1-4-.9L3 21l1.9-5A8.4 8.4 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z"/></svg>
+        20 תגובות
+    </a>
+    <span class="tags">
+            <a class="tag" href="/tag/ווידג׳טים/">ווידג׳טים</a>
+    </span>
+</div>
 
-        
-            <p class="text-sm italic mb-2">נכתב ב<span datetime="2011-01-27T23:19:57.000+02:00">27 בינואר 2011</span>.
-            </p>
-        
-
-        
-        
-            <p class="text-sm italic">
-                <a class="comments-count" 
-                    href="#comments">
-                    20 תגובות
-                </a>
-            </p>
-        
 
         <div class="content post" data-pagefind-body>
             <p>עוד עדכון לווידג׳ט מזג האויר. הפעם, בנוסף להתאמת הווידג׳ט בגלל השינויים באתר <a href="http://www.israelweather.co.il/">Israel Weather</a>, גם תוספת של יומיים לתחזית. <a href="http://yehudab.com/widgets/WeatherIL-2d0.zip">ההורדה מכאן</a>.<br>
@@ -126,7 +125,7 @@
                     
           (28 בינואר 2011 בשעה 17:19): 
         </p>
-                <p>אני רואה שמתחת לכל יום מופיעים שני מספרים?
+                <p class="comment-message no-reply">אני רואה שמתחת לכל יום מופיעים שני מספרים?
 
 למשל ביום ה&#39; כתוב 17 ומתחתיו 9.
 
@@ -143,7 +142,7 @@
                     
           (28 בינואר 2011 בשעה 19:28): 
         </p>
-                <p>העליון זה טמפ׳ מקסימום והתחתון מינימום</p>
+                <p class="comment-message no-reply">העליון זה טמפ׳ מקסימום והתחתון מינימום</p>
                 
                 
             </li>
@@ -160,7 +159,7 @@
                     
           (28 בינואר 2011 בשעה 17:21): 
         </p>
-                <p>ועוד שאלה, מה ההבדל בין הווידג׳ט שלך לבין הווידג׳ט שאפל במספקים כברירת מחדל במערכת ההפעלה? הרי גם שם אני יכול להגדיר את התחזית לjerusalem ולראות את אותו מידע</p>
+                <p class="comment-message no-reply">ועוד שאלה, מה ההבדל בין הווידג׳ט שלך לבין הווידג׳ט שאפל במספקים כברירת מחדל במערכת ההפעלה? הרי גם שם אני יכול להגדיר את התחזית לjerusalem ולראות את אותו מידע</p>
                 
                 
                     
@@ -173,7 +172,7 @@
                     
           (28 בינואר 2011 בשעה 19:31): 
         </p>
-                <p>כמה הבדלים:
+                <p class="comment-message no-reply">כמה הבדלים:
 בשלי יש יותר ערים בישראל
 שלי דובר עברית
 ואולי הכי חשוב: הוא מבוסס על נתונים של אתר חיזוי ישראלי עם הבנה בתהפוכות מזג האויר שלנו</p>
@@ -193,7 +192,7 @@
                     
           (28 בינואר 2011 בשעה 19:46): 
         </p>
-                <p>נפלא, הורדתי</p>
+                <p class="comment-message no-reply">נפלא, הורדתי</p>
                 
                 
             </li>
@@ -205,7 +204,7 @@
                     
           (28 בינואר 2011 בשעה 19:48): 
         </p>
-                <p>הורדתי ובסך הכל הכל בסדר, רק שתי הערות:
+                <p class="comment-message no-reply">הורדתי ובסך הכל הכל בסדר, רק שתי הערות:
 
 1. לפי דעתי העיצוב מעט טעון שיפור
 
@@ -222,7 +221,7 @@
                     
           (29 בינואר 2011 בשעה 0:56): 
         </p>
-                <p>נתוני זמני אמת מבוססים על יאהו. התחזית היא לפי Israel wethear.</p>
+                <p class="comment-message no-reply">נתוני זמני אמת מבוססים על יאהו. התחזית היא לפי Israel wethear.</p>
                 
                 
             </li>
@@ -239,7 +238,7 @@
                     
           (29 בינואר 2011 בשעה 5:45): 
         </p>
-                <p>שלום!
+                <p class="comment-message no-reply">שלום!
 סקריפט מצויין, אבל קצת מוזר לי שזה לא אותן תוצאות כמו הווידג׳ט הרגיל שבא עם המערכת... ממה שאני יודע הוא לוקח את המידע מaccuweather. אתה חושב שאלו תוצאות מדוייקות יותר?
 
 נ.ב.
@@ -261,7 +260,7 @@
                     
           (29 בינואר 2011 בשעה 10:20): 
         </p>
-                <p>זו בהחלט אחת המטרות של הווידג׳ט הזה: להיות יותר מדוייק מהווידג׳ט המובנה. בקשר לשתי השאלות האחרות, תוכל למצוא תשובות בדף האודות של הבלוג</p>
+                <p class="comment-message no-reply">זו בהחלט אחת המטרות של הווידג׳ט הזה: להיות יותר מדוייק מהווידג׳ט המובנה. בקשר לשתי השאלות האחרות, תוכל למצוא תשובות בדף האודות של הבלוג</p>
                 
                 
             </li>
@@ -278,7 +277,7 @@
                     
           (31 בינואר 2011 בשעה 1:54): 
         </p>
-                <p>העם דורש שהקוד יותאם למערכות הפעלה נוספות!</p>
+                <p class="comment-message no-reply">העם דורש שהקוד יותאם למערכות הפעלה נוספות!</p>
                 
                 
                     
@@ -291,7 +290,7 @@
                     
           (31 בינואר 2011 בשעה 9:03): 
         </p>
-                <p>האמת היא שהקוד כבר מותאם למערכות אחרות (אם כי לא כווידג׳ט). אתה יכול לפרוס את הזיפ, להזיז קובץ אחד ולפתוח בדפדפן. הבעיה היחידה היא שפיירפוקס לא מוכן לעשות קריאות XHR בין file:/// לבין דומיינים חיצוניים. יש לך מושג למה?</p>
+                <p class="comment-message no-reply">האמת היא שהקוד כבר מותאם למערכות אחרות (אם כי לא כווידג׳ט). אתה יכול לפרוס את הזיפ, להזיז קובץ אחד ולפתוח בדפדפן. הבעיה היחידה היא שפיירפוקס לא מוכן לעשות קריאות XHR בין file:/// לבין דומיינים חיצוניים. יש לך מושג למה?</p>
                 
                 
             </li>
@@ -303,7 +302,7 @@
                     
           (11 במרץ 2011 בשעה 17:13): 
         </p>
-                <p>1. אפשר כGadget לווינדוז.
+                <p class="comment-message no-reply">1. אפשר כGadget לווינדוז.
 צריך קובץ gadget.xml, הבעיה היא שצריך להתאים לIE.
 זה לא אמור להיות קשה (לטעון css בlink ולא עם include, שנה מגיעה מלכתחילה ב-4 ספרות ובעיה עם הקידוד באתר israel weather)
 
@@ -324,7 +323,7 @@
                     
           (11 במרץ 2011 בשעה 19:15): 
         </p>
-                <p>בעצם לגבי 2 אני לא בטוח.</p>
+                <p class="comment-message no-reply">בעצם לגבי 2 אני לא בטוח.</p>
                 
                 
             </li>
@@ -336,7 +335,7 @@
                     
           (12 במרץ 2011 בשעה 21:41): 
         </p>
-                <p>הי שמוליק,
+                <p class="comment-message no-reply">הי שמוליק,
 אין לי בעיה לפרסם את קוד המקור תחת רשיון שיתופי כלשהו. הבעיה היחידה היא עם מקור המידע לתחזית (האתר IsraelWeather) - בזמנו סיכמתי עם מנהל האתר שהווידג׳ט יהיה למק בלבד, כי הוא לא רוצה לאבד מבקרים באתר.
 אני יכול להכין גרסה אחרת שתיקח את התחזית ממקור בין-לאומי (כמו Yahoo), אבל אז הדיוק יהיה פחות טוב. 
 יהודה</p>
@@ -361,7 +360,7 @@
                     
           (19 באוגוסט 2011 בשעה 19:29): 
         </p>
-                <p>אם כבר ווידג׳ט שמותאם לישראל - אפשר להוסיף אחוזי לחות ו/או עומס חום?</p>
+                <p class="comment-message no-reply">אם כבר ווידג׳ט שמותאם לישראל - אפשר להוסיף אחוזי לחות ו/או עומס חום?</p>
                 
                 
                     
@@ -374,7 +373,7 @@
                     
           (19 באוגוסט 2011 בשעה 19:47): 
         </p>
-                <p>אה, יצאתי שקשוקה. זה קיים ב־tooltip. ובכל זאת, אפשר שזה יופיע כשורה שלישית של מספרים?</p>
+                <p class="comment-message no-reply">אה, יצאתי שקשוקה. זה קיים ב־tooltip. ובכל זאת, אפשר שזה יופיע כשורה שלישית של מספרים?</p>
                 
                 
                     
@@ -387,7 +386,7 @@
                     
           (20 באוגוסט 2011 בשעה 0:11): 
         </p>
-                <p>תודה על ההצעה. אני אחשוב על זה</p>
+                <p class="comment-message no-reply">תודה על ההצעה. אני אחשוב על זה</p>
                 
                 
             </li>
@@ -409,7 +408,7 @@
                     
           (22 באוקטובר 2011 בשעה 16:05): 
         </p>
-                <p>אהלן יהודה,
+                <p class="comment-message no-reply">אהלן יהודה,
 לאחרונה (מששדרגתי ל-ליון..?) אני לא רואה תחזית לת&quot;א.
 לכל שאר הערים כן ורק לת&quot;א מופיעים כאלה: --.
 מה עושים??</p>
@@ -425,7 +424,7 @@
                     
           (22 באוקטובר 2011 בשעה 16:30): 
         </p>
-                <p>הבעיה לא רק אצלך וגם לא קשורה לליון. אני אבדוק את העניין ואשתדל לתקן בקרוב</p>
+                <p class="comment-message no-reply">הבעיה לא רק אצלך וגם לא קשורה לליון. אני אבדוק את העניין ואשתדל לתקן בקרוב</p>
                 
                 
             </li>
@@ -437,7 +436,7 @@
                     
           (22 באוקטובר 2011 בשעה 23:25): 
         </p>
-                <p>הגרסה החדשה זמינה להורדה. ראה את &lt;a href=&quot;http://yehudab.com/blog/2011/10/weather-il-2-1/&quot; rel=&quot;nofollow&quot;&gt;הפוסט החדש בבלוג.&lt;/a&gt;</p>
+                <p class="comment-message no-reply">הגרסה החדשה זמינה להורדה. ראה את &lt;a href=&quot;http://yehudab.com/blog/2011/10/weather-il-2-1/&quot; rel=&quot;nofollow&quot;&gt;הפוסט החדש בבלוג.&lt;/a&gt;</p>
                 
                 
             </li>
@@ -467,7 +466,7 @@
     </div>
 
     </main>
-    <footer class="bg-gray-900 pb-10">
+    <footer class="bg-ink pb-10">
   <p class="block text-center text-sm mb-6">
     CC-BY-SA
     <a href="/">

@@ -50,14 +50,14 @@
   <nav class="container mx-auto max-w-3xl px-8 pt-2 flex flex-wrap justify-between items-center">
     <!-- Branding -->
     <div>
-      <h1>
+      <h1 class="site-title">
         <a href="/">בלוג פשוט</a>
       </h1>
-      <p>צר עולמי כ  U+200A</p>
+      <p class="site-description">צר עולמי כ  U+200A</p>
     </div>
 
     <!-- Hamburger Button -->
-    <button id="menu-toggle" class="block md:hidden text-gray-700 focus:outline-hidden">
+    <button id="menu-toggle" class="block md:hidden text-heading focus:outline-hidden">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
       </svg>
@@ -87,7 +87,7 @@
                 <img
                 class="w-full aspect-square object-cover object-center"
                 src="/img/2017/06/blog.jpg"
-                alt={props.instance.frontmatter.imgAlt}
+                alt=""
                 loading="lazy"
                 />
             </div><div class="px-3 pt-4 pb-6 ">
@@ -106,7 +106,7 @@
                 <img
                 class="w-full aspect-square object-cover object-center"
                 src="/img/2017/09/gruber-iphone-8-footnote.jpg"
-                alt={props.instance.frontmatter.imgAlt}
+                alt=""
                 loading="lazy"
                 />
             </div><div class="px-3 pt-4 pb-6 ">
@@ -125,7 +125,7 @@
                 <img
                 class="w-full aspect-square object-cover object-center"
                 src="/img/2017/08/8-digits.jpg"
-                alt={props.instance.frontmatter.imgAlt}
+                alt=""
                 loading="lazy"
                 />
             </div><div class="px-3 pt-4 pb-6 ">
@@ -148,7 +148,7 @@
                 <img
                 class="w-full aspect-square object-cover object-center"
                 src="/img/2017/07/count-down-1-5b.png"
-                alt={props.instance.frontmatter.imgAlt}
+                alt=""
                 loading="lazy"
                 />
             </div><div class="px-3 pt-4 pb-6 ">
@@ -167,7 +167,7 @@
                 <img
                 class="w-full aspect-square object-cover object-center"
                 src="/img/2017/07/hotter-then-july.jpg"
-                alt={props.instance.frontmatter.imgAlt}
+                alt=""
                 loading="lazy"
                 />
             </div><div class="px-3 pt-4 pb-6 ">
@@ -190,7 +190,7 @@
                 <img
                 class="w-full aspect-square object-cover object-center"
                 src="/img/2017/07/nginx-logs.jpg"
-                alt={props.instance.frontmatter.imgAlt}
+                alt=""
                 loading="lazy"
                 />
             </div><div class="px-3 pt-4 pb-6 ">
@@ -249,7 +249,7 @@
 
 
     </main>
-    <footer class="bg-gray-900 pb-10">
+    <footer class="bg-ink pb-10">
   <p class="block text-center text-sm mb-6">
     CC-BY-SA
     <a href="/">

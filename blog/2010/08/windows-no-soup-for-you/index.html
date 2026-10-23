@@ -50,14 +50,14 @@
   <nav class="container mx-auto max-w-3xl px-8 pt-2 flex flex-wrap justify-between items-center">
     <!-- Branding -->
     <div>
-      <h1>
+      <p class="site-title">
         <a href="/">בלוג פשוט</a>
-      </h1>
-      <p>צר עולמי כ  U+200A</p>
+      </p>
+      <p class="site-description">צר עולמי כ  U+200A</p>
     </div>
 
     <!-- Hamburger Button -->
-    <button id="menu-toggle" class="block md:hidden text-gray-700 focus:outline-hidden">
+    <button id="menu-toggle" class="block md:hidden text-heading focus:outline-hidden">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
       </svg>
@@ -82,36 +82,38 @@
       
     <p></p>
     <div>
-        <h2 class="mb-2">הו-הו-הו-הו, איך שגלגל מתהפך לו...</h2>
+        <h1 class="mb-3">הו-הו-הו-הו, איך שגלגל מתהפך לו...</h1>
 
         
-            <div class="mb-2">
-                <a class="tag דפדפנים" href="/tag/דפדפנים/">דפדפנים</a><a class="tag קוד פתוח ותוכנה חופשית" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a><a class="tag חלונות" href="/tag/חלונות/">חלונות</a><a class="tag מק" href="/tag/מק/">מק</a><a class="tag פיירפוקס" href="/tag/פיירפוקס/">פיירפוקס</a>
-            </div>
-        
+<div class="post-meta">
+    <span>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        נכתב ב<time datetime="2010-08-24T21:59:11.000+03:00">24 באוגוסט 2010</time>
+    </span>
+    <span>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        דקת קריאה אחת
+    </span>
+    <a class="comments-count" href="#comments">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9 9 0 0 1-4-.9L3 21l1.9-5A8.4 8.4 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z"/></svg>
+        5 תגובות
+    </a>
+    <span class="tags">
+            <a class="tag" href="/tag/דפדפנים/">דפדפנים</a>
+            <a class="tag" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a>
+            <a class="tag" href="/tag/חלונות/">חלונות</a>
+            <a class="tag" href="/tag/מק/">מק</a>
+            <a class="tag" href="/tag/פיירפוקס/">פיירפוקס</a>
+    </span>
+</div>
 
-        
-            <p class="text-sm italic mb-2">נכתב ב<span datetime="2010-08-24T21:59:11.000+03:00">24 באוגוסט 2010</span>.
-            </p>
-        
-
-        
-        
-            <p class="text-sm italic">
-                <a class="comments-count" 
-                    href="#comments">
-                    5 תגובות
-                </a>
-            </p>
-        
 
         <div class="content post" data-pagefind-body>
             <p>למי שלא זוכר, לפני כשנתיים יצאה גרסה 3.0 של פיירפוקס. הגרסה כללה שינוי משמעותי במסגרת הדפדפן (מה שקרוי כרום – בלי קשר לדפדן של גוגל), ודרשה התאמות רבות לטובת תמיכה בממשק העברי. ההתאמות האלה צריכות להעשות בנפרד לגרסאות מערכת ההפעלה השונות (חלונות, מק ולינקוס), ולכן בזמנו כאשר יצאה גרסת הבטא העברית הראשונה של פיירפוקס 3, <a href="http://mozilla.org.il/news/2008/03/13/bug-hunting-season/">לא יצאה גרסה למק</a>.<br>
 כך נראה אז סרגל הניווט בגרסה העברית למק:<br>
 <img src="/img/2010/08/windows-no-soup-for-you-1.png" alt="סרגל נווט פיירפוקס 3.0 בעברית למק"></p>
 <p>מאז, זרמו הרבה מים בירקון, גרסה 3.0 <a href="http://mozilla.org.il/news/2008/04/24/firefox3-osx-theme/">תוקנה לתמיכה בעברית</a> (בין השאר בזכות פצ'ים ששלחתי) והיום יצאה גרסת <a href="http://www.mozilla.com/en-US/firefox/all-beta.html">בטא 4 של פיירפוקס 4</a> (הראשונה עם תמיכה בממשק עברי). וראו זה פלא, מי לא מופיע בגרסאות להורדה בעברית? נכון, חלונות. אז לא שיש לי משהו נגד משתמשי חלונות (some of my best friends…), ואני בטוח שהבטא הבאה תעבוד כמו שצריך על חלונות ובעברית, אבל תרשו לי בכל זאת להגניב חיוך קטן.</p>
-<p><img src="/img/2010/08/windows-no-soup-for-you-2.png" alt="למי אין גרסה?"></p>
-
+<figure><img src="/img/2010/08/windows-no-soup-for-you-2.png" alt="למי אין גרסה?"><figcaption aria-hidden="true">למי אין גרסה?</figcaption></figure>
         </div>
 
 
@@ -129,7 +131,7 @@
                     
           (25 באוגוסט 2010 בשעה 18:18): 
         </p>
-                <p>ועדיין לגרסאת ווינדוס יש ביצועים טובים יותר.
+                <p class="comment-message no-reply">ועדיין לגרסאת ווינדוס יש ביצועים טובים יותר.
 ישנן לא מעט טענות אודות הזנחת משתמשי  פלטפורמות אחרות לטובת ווינדוס הפופולרית, אכן נקמה מתוקה..</p>
                 
                 
@@ -143,7 +145,7 @@
                     
           (25 באוגוסט 2010 בשעה 18:33): 
         </p>
-                <p>אני אעשה בקרוב השוואה מקיפה, אבל בתחושה גרסה 4.0 די מיישרת קו מבחינת ביצועים בין כולם.</p>
+                <p class="comment-message no-reply">אני אעשה בקרוב השוואה מקיפה, אבל בתחושה גרסה 4.0 די מיישרת קו מבחינת ביצועים בין כולם.</p>
                 
                 
             </li>
@@ -160,7 +162,7 @@
                     
           (27 באוגוסט 2010 בשעה 1:33): 
         </p>
-                <p>ישנה את ההשוואה &lt;a href=&quot;http://www.whatsup.org.il/modules.php?op=modload&amp;name=News&amp;file=article&amp;sid=6707&quot; rel=&quot;nofollow&quot;&gt;הזו&lt;/a&gt; כחומר למחשבה ולעזר...
+                <p class="comment-message no-reply">ישנה את ההשוואה &lt;a href=&quot;http://www.whatsup.org.il/modules.php?op=modload&amp;name=News&amp;file=article&amp;sid=6707&quot; rel=&quot;nofollow&quot;&gt;הזו&lt;/a&gt; כחומר למחשבה ולעזר...
 </p>
                 
                 
@@ -174,7 +176,7 @@
                     
           (28 באוגוסט 2010 בשעה 21:51): 
         </p>
-                <p>כן, אני מכיר את המבחן הזה, ואני מתכוון לפרסם פוסט משווה ל 4.0 בהשראתו. בנתיים, קבל &quot;טעימה&quot; מתוצאות המבחן הראשון משם  
+                <p class="comment-message no-reply">כן, אני מכיר את המבחן הזה, ואני מתכוון לפרסם פוסט משווה ל 4.0 בהשראתו. בנתיים, קבל &quot;טעימה&quot; מתוצאות המבחן הראשון משם  
 &lt;img src=&quot;https://spreadsheets.google.com/oimg?key=0AuST_lfULL9WdDk0ZFhXV0FFZHlQSGVkcTd6Y2RpcWc&amp;oid=2&amp;zx=pni95s-djl0r7&quot; alt=&quot;sunspider test&quot; /&gt;
 </p>
                 
@@ -193,7 +195,7 @@
                     
           (30 באוגוסט 2010 בשעה 9:08): 
         </p>
-                <p>ואני אומר - למה לא ? :-P</p>
+                <p class="comment-message no-reply">ואני אומר - למה לא ? :-P</p>
                 
                 
             </li>
@@ -218,7 +220,7 @@
     </div>
 
     </main>
-    <footer class="bg-gray-900 pb-10">
+    <footer class="bg-ink pb-10">
   <p class="block text-center text-sm mb-6">
     CC-BY-SA
     <a href="/">

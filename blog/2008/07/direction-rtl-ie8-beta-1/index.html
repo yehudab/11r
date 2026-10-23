@@ -50,14 +50,14 @@
   <nav class="container mx-auto max-w-3xl px-8 pt-2 flex flex-wrap justify-between items-center">
     <!-- Branding -->
     <div>
-      <h1>
+      <p class="site-title">
         <a href="/">בלוג פשוט</a>
-      </h1>
-      <p>צר עולמי כ  U+200A</p>
+      </p>
+      <p class="site-description">צר עולמי כ  U+200A</p>
     </div>
 
     <!-- Hamburger Button -->
-    <button id="menu-toggle" class="block md:hidden text-gray-700 focus:outline-hidden">
+    <button id="menu-toggle" class="block md:hidden text-heading focus:outline-hidden">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
       </svg>
@@ -82,28 +82,29 @@
       
     <p></p>
     <div>
-        <h2 class="mb-2">direction:rtl באינטרנט אקספלורר 8 בטא 1</h2>
+        <h1 class="mb-3">direction:rtl באינטרנט אקספלורר 8 בטא 1</h1>
 
         
-            <div class="mb-2">
-                <a class="tag ie8" href="/tag/ie8/">ie8</a><a class="tag מיקרוסופט" href="/tag/מיקרוסופט/">מיקרוסופט</a><a class="tag דפדפנים" href="/tag/דפדפנים/">דפדפנים</a>
-            </div>
-        
+<div class="post-meta">
+    <span>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        נכתב ב<time datetime="2008-07-24T11:00:22.000+03:00">24 ביולי 2008</time>
+    </span>
+    <span>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        דקת קריאה אחת
+    </span>
+    <a class="comments-count" href="#comments">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9 9 0 0 1-4-.9L3 21l1.9-5A8.4 8.4 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z"/></svg>
+        9 תגובות
+    </a>
+    <span class="tags">
+            <a class="tag" href="/tag/ie8/">ie8</a>
+            <a class="tag" href="/tag/מיקרוסופט/">מיקרוסופט</a>
+            <a class="tag" href="/tag/דפדפנים/">דפדפנים</a>
+    </span>
+</div>
 
-        
-            <p class="text-sm italic mb-2">נכתב ב<span datetime="2008-07-24T11:00:22.000+03:00">24 ביולי 2008</span>.
-            </p>
-        
-
-        
-        
-            <p class="text-sm italic">
-                <a class="comments-count" 
-                    href="#comments">
-                    9 תגובות
-                </a>
-            </p>
-        
 
         <div class="content post" data-pagefind-body>
             <p>אתמול ניסיתי לבדוק איך נראה הבלוג שלי באינטרנט אקספלורר 8 בטא1. במילים עדינות, המראות היו קשים.<br>
@@ -135,7 +136,7 @@
                     
           (24 ביולי 2008 בשעה 15:44): 
         </p>
-                <p>אכן, וורדפרס נראה זוועה על אקספלורר 8 בטא.
+                <p class="comment-message no-reply">אכן, וורדפרס נראה זוועה על אקספלורר 8 בטא.
 הבלוג שלי לא נראה יותר טוב.</p>
                 
                 
@@ -148,7 +149,7 @@
                     
           (24 ביולי 2008 בשעה 16:45): 
         </p>
-                <p>חתול,
+                <p class="comment-message no-reply">חתול,
 אם זה ממש קריטי לך, אפשר לעבור לפתרון ה&quot;קל&quot; שגורם ל IE8 לעבוד במוד תאימות ל IE7. יש כאן הסבר:
 http://www.cherny.com/webdev/103/the-ie-8-x-ua-compatible-meta-tag</p>
                 
@@ -162,7 +163,7 @@ http://www.cherny.com/webdev/103/the-ie-8-x-ua-compatible-meta-tag</p>
                     
           (29 ביולי 2008 בשעה 0:25): 
         </p>
-                <p>למה שלא יתמכו בסופו של דבר? כל האקספלוררים תמכו מאז ומעולם בכיווניות ימין-שמאל.</p>
+                <p class="comment-message no-reply">למה שלא יתמכו בסופו של דבר? כל האקספלוררים תמכו מאז ומעולם בכיווניות ימין-שמאל.</p>
                 
                 
             </li>
@@ -174,7 +175,7 @@ http://www.cherny.com/webdev/103/the-ie-8-x-ua-compatible-meta-tag</p>
                     
           (29 ביולי 2008 בשעה 0:53): 
         </p>
-                <p>יוש,
+                <p class="comment-message no-reply">יוש,
 אני גם חושב שיתמכו. פשוט מוזר שזה לא עובד בבטא. מה שכן, להגיד &quot;כל האקספלוררים תמכו מאז ומעולם בכווניות&quot; נשמע לי קצת מופרך. אני די בטוח שאקספלורר 1 לא תמך בכווניות, שלא לדבר על פונטים בעברית.</p>
                 
                 
@@ -187,7 +188,7 @@ http://www.cherny.com/webdev/103/the-ie-8-x-ua-compatible-meta-tag</p>
                     
           (31 ביולי 2008 בשעה 14:42): 
         </p>
-                <p>הדבר הטוב ביותר שיכול לקרות לאינטרנט בארץ כרגע זה שאינטרנט אקספלורר יפסיק לתמוך בעברית</p>
+                <p class="comment-message no-reply">הדבר הטוב ביותר שיכול לקרות לאינטרנט בארץ כרגע זה שאינטרנט אקספלורר יפסיק לתמוך בעברית</p>
                 
                 
             </li>
@@ -199,7 +200,7 @@ http://www.cherny.com/webdev/103/the-ie-8-x-ua-compatible-meta-tag</p>
                     
           (31 ביולי 2008 בשעה 16:55): 
         </p>
-                <p>רן,
+                <p class="comment-message no-reply">רן,
 אני חושב ש ie8 כן הולך בכיוון טוב. הדבר הטוב ביותר שיכול לקרות לאינטרנט בארץ זה ש ie6 יפסיק לתמוך בעברית, ואז האתרים יוכלו לכתוב במוד סטנדרטי, בלי יותר מדי מאמץ לתמיכה אחורה ב ie6.</p>
                 
                 
@@ -212,7 +213,7 @@ http://www.cherny.com/webdev/103/the-ie-8-x-ua-compatible-meta-tag</p>
                     
           (31 ביולי 2008 בשעה 20:03): 
         </p>
-                <p>ייתכן, אבל אני לא חושב שמיקרוסופט תפיץ פאץ&#39; שיסיר ממחשבי לקוחותיה את התמיכה בעברית באקספלורר 6. גם התרחיש השני לא סביר, אבל אפשר לחלום</p>
+                <p class="comment-message no-reply">ייתכן, אבל אני לא חושב שמיקרוסופט תפיץ פאץ&#39; שיסיר ממחשבי לקוחותיה את התמיכה בעברית באקספלורר 6. גם התרחיש השני לא סביר, אבל אפשר לחלום</p>
                 
                 
             </li>
@@ -224,7 +225,7 @@ http://www.cherny.com/webdev/103/the-ie-8-x-ua-compatible-meta-tag</p>
                     
           (3 באוגוסט 2008 בשעה 8:09): 
         </p>
-                <p>[...] שמונה ימים כתבתי כאן על באג באינטרנט אקספלורר 8, שלא תומך בהצגת תכנים בעברית [...]</p>
+                <p class="comment-message no-reply">[...] שמונה ימים כתבתי כאן על באג באינטרנט אקספלורר 8, שלא תומך בהצגת תכנים בעברית [...]</p>
                 
                 
             </li>
@@ -236,7 +237,7 @@ http://www.cherny.com/webdev/103/the-ie-8-x-ua-compatible-meta-tag</p>
                     
           (29 באוגוסט 2008 בשעה 2:06): 
         </p>
-                <p>&lt;strong&gt;בטא חדשה לIE8: תמיכה בכתיבה מימין לשמאל...&lt;/strong&gt;
+                <p class="comment-message no-reply">&lt;strong&gt;בטא חדשה לIE8: תמיכה בכתיבה מימין לשמאל...&lt;/strong&gt;
 
 גרסת הבטא הראשונה של Internet Explorer 8 הכילה אמנם כמה חידושים מרעננים, אבל לא תמכה בכתיבה מימין לשמאל......</p>
                 
@@ -263,7 +264,7 @@ http://www.cherny.com/webdev/103/the-ie-8-x-ua-compatible-meta-tag</p>
     </div>
 
     </main>
-    <footer class="bg-gray-900 pb-10">
+    <footer class="bg-ink pb-10">
   <p class="block text-center text-sm mb-6">
     CC-BY-SA
     <a href="/">

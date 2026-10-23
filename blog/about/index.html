@@ -50,14 +50,14 @@
   <nav class="container mx-auto max-w-3xl px-8 pt-2 flex flex-wrap justify-between items-center">
     <!-- Branding -->
     <div>
-      <h1>
+      <p class="site-title">
         <a href="/">בלוג פשוט</a>
-      </h1>
-      <p>צר עולמי כ  U+200A</p>
+      </p>
+      <p class="site-description">צר עולמי כ  U+200A</p>
     </div>
 
     <!-- Hamburger Button -->
-    <button id="menu-toggle" class="block md:hidden text-gray-700 focus:outline-hidden">
+    <button id="menu-toggle" class="block md:hidden text-heading focus:outline-hidden">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
       </svg>
@@ -82,18 +82,17 @@
       
     <p></p>
     <div>
-        <h2 class="mb-2">אודות</h2>
+        <h1 class="mb-3">אודות</h1>
 
         
+<div class="post-meta">
+    <span>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        נכתב ב<time datetime="2008-07-21T18:55:30.000+03:00">21 ביולי 2008</time>,
+            עדכון אחרון: <time datetime="2022-12-09T13:07:00.000+02:00">9 בדצמבר 2022</time>
+    </span>
+</div>
 
-        
-            <p class="text-sm italic mb-2">נכתב ב<span datetime="2008-07-21T18:55:30.000+03:00">21 ביולי 2008</span>,
-                עדכון אחרון: <span datetime="2022-12-09T13:07:00.000+02:00">9 בדצמבר 2022</span>.
-            </p>
-        
-
-        
-        
 
         <div class="content post" data-pagefind-body>
             <p>שמי יהודה בר-ניר.</p>
@@ -118,7 +117,7 @@ The man has eyeglasses with a thin frame. Black on white. Vector style --v 4</p>
     </div>
 
     </main>
-    <footer class="bg-gray-900 pb-10">
+    <footer class="bg-ink pb-10">
   <p class="block text-center text-sm mb-6">
     CC-BY-SA
     <a href="/">

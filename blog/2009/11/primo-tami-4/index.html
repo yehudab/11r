@@ -50,14 +50,14 @@
   <nav class="container mx-auto max-w-3xl px-8 pt-2 flex flex-wrap justify-between items-center">
     <!-- Branding -->
     <div>
-      <h1>
+      <p class="site-title">
         <a href="/">בלוג פשוט</a>
-      </h1>
-      <p>צר עולמי כ  U+200A</p>
+      </p>
+      <p class="site-description">צר עולמי כ  U+200A</p>
     </div>
 
     <!-- Hamburger Button -->
-    <button id="menu-toggle" class="block md:hidden text-gray-700 focus:outline-hidden">
+    <button id="menu-toggle" class="block md:hidden text-heading focus:outline-hidden">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
       </svg>
@@ -82,28 +82,28 @@
       
     <p></p>
     <div>
-        <h2 class="mb-2">מי זה &quot;PRIMO&quot; ?</h2>
+        <h1 class="mb-3">מי זה &quot;PRIMO&quot; ?</h1>
 
         
-            <div class="mb-2">
-                <a class="tag נגנים" href="/tag/נגנים/">נגנים</a><a class="tag שטויות שמוצאים באתרים" href="/tag/שטויות שמוצאים באתרים/">שטויות שמוצאים באתרים</a>
-            </div>
-        
+<div class="post-meta">
+    <span>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        נכתב ב<time datetime="2009-11-06T07:19:43.000+02:00">6 בנובמבר 2009</time>
+    </span>
+    <span>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        דקת קריאה אחת
+    </span>
+    <a class="comments-count" href="#comments">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9 9 0 0 1-4-.9L3 21l1.9-5A8.4 8.4 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z"/></svg>
+        20 תגובות
+    </a>
+    <span class="tags">
+            <a class="tag" href="/tag/נגנים/">נגנים</a>
+            <a class="tag" href="/tag/שטויות שמוצאים באתרים/">שטויות שמוצאים באתרים</a>
+    </span>
+</div>
 
-        
-            <p class="text-sm italic mb-2">נכתב ב<span datetime="2009-11-06T07:19:43.000+02:00">6 בנובמבר 2009</span>.
-            </p>
-        
-
-        
-        
-            <p class="text-sm italic">
-                <a class="comments-count" 
-                    href="#comments">
-                    20 תגובות
-                </a>
-            </p>
-        
 
         <div class="content post" data-pagefind-body>
             <p>בזמן האחרון מופיעה פרסומת teaser שמכבב בה רובוט דמוי wall-e שנקרא primo. אם רציתם לדעת למה הפרסומת, התשובה בכותרת הסרטון.<br>
@@ -128,7 +128,7 @@
                     
           (6 בנובמבר 2009 בשעה 13:23): 
         </p>
-                <p>קצת יפחיד אותי אם הברז יבהה בי בשעת לילה מאוחרת.</p>
+                <p class="comment-message no-reply">קצת יפחיד אותי אם הברז יבהה בי בשעת לילה מאוחרת.</p>
                 
                 
                     
@@ -141,7 +141,7 @@
                     
           (6 בנובמבר 2009 בשעה 19:47): 
         </p>
-                <p>נראה לי שהחלק עם העינים נשאר תמיד בפנים. אני בכל אופן נאמן למי-עדן.</p>
+                <p class="comment-message no-reply">נראה לי שהחלק עם העינים נשאר תמיד בפנים. אני בכל אופן נאמן למי-עדן.</p>
                 
                 
                     
@@ -154,7 +154,7 @@
                     
           (8 בנובמבר 2009 בשעה 23:50): 
         </p>
-                <p>איחולי, הרבה אנשים עומדים להגיע אליך בשעות הקרובות דרך גוגל כי הם סקרנים. האם מחר תתגלה האמת לגבי אחיו החורג של חביתוש?</p>
+                <p class="comment-message no-reply">איחולי, הרבה אנשים עומדים להגיע אליך בשעות הקרובות דרך גוגל כי הם סקרנים. האם מחר תתגלה האמת לגבי אחיו החורג של חביתוש?</p>
                 
                 
                     
@@ -167,7 +167,7 @@
                     
           (9 בנובמבר 2009 בשעה 0:00): 
         </p>
-                <p>כן, שים לב ל-4. נראה לי שהגיל הממוצע של המגיבים(ות?) פה ירד לחצי.</p>
+                <p class="comment-message no-reply">כן, שים לב ל-4. נראה לי שהגיל הממוצע של המגיבים(ות?) פה ירד לחצי.</p>
                 
                 
                     
@@ -180,7 +180,7 @@
                     
           (9 בנובמבר 2009 בשעה 0:04): 
         </p>
-                <p>האתר שלך עוד מספר להם על נפלאות הדפדפנים המודרניים, או שהפסקת? 
+                <p class="comment-message no-reply">האתר שלך עוד מספר להם על נפלאות הדפדפנים המודרניים, או שהפסקת? 
 
 
 תראה איזה קטע. מאקו &lt;a href=&quot;http://www.mako.co.il/tv-bigbrother/season2-articles/Article-5d7f15dd683c421006.htm&quot; rel=&quot;nofollow&quot;&gt;הכינו סרגל לאקספלורר&lt;/a&gt;, והם &lt;a href=&quot;http://www.makolive.ourtoolbar.com/xpi&quot; rel=&quot;nofollow&quot;&gt;מחביאים&lt;/a&gt; את הגירסה לפיירפוקס בשביל לא לעשות לעצמם פאדיחות.
@@ -198,7 +198,7 @@
                     
           (9 בנובמבר 2009 בשעה 0:09): 
         </p>
-                <p>מספר בהחלט. עדיין לא בטוח שהתנועה החדשה תשנה משהו. בכל מקרה, מחר תהיה החשיפה הרשמית.
+                <p class="comment-message no-reply">מספר בהחלט. עדיין לא בטוח שהתנועה החדשה תשנה משהו. בכל מקרה, מחר תהיה החשיפה הרשמית.
 
 הגל החדש יהיה כנראה באח הגדול 2.</p>
                 
@@ -213,7 +213,7 @@
                     
           (9 בנובמבר 2009 בשעה 0:11): 
         </p>
-                <p>אגב &quot;האח הגדול&quot;, האם הכנת כבר את התסריט לעונה החדשה של האח הגדול, או שנקווה לטוב?</p>
+                <p class="comment-message no-reply">אגב &quot;האח הגדול&quot;, האם הכנת כבר את התסריט לעונה החדשה של האח הגדול, או שנקווה לטוב?</p>
                 
                 
                     
@@ -226,7 +226,7 @@
                     
           (9 בנובמבר 2009 בשעה 0:13): 
         </p>
-                <p>אין לי איך להכין, עד שלא מתחיל השידור הראשון. נקווה שזה יהיה טיפול קל ב url-ים ולא משהו מסובך יותר.</p>
+                <p class="comment-message no-reply">אין לי איך להכין, עד שלא מתחיל השידור הראשון. נקווה שזה יהיה טיפול קל ב url-ים ולא משהו מסובך יותר.</p>
                 
                 
                     
@@ -239,7 +239,7 @@
                     
           (9 בנובמבר 2009 בשעה 0:15): 
         </p>
-                <p>נקווה שהם ישכחו לפתוח מדור חדש, והעונה תתנהל תחת מדור &quot;האח הגדול 1&quot; או &quot;כוכב נולד 5&quot;. :)</p>
+                <p class="comment-message no-reply">נקווה שהם ישכחו לפתוח מדור חדש, והעונה תתנהל תחת מדור &quot;האח הגדול 1&quot; או &quot;כוכב נולד 5&quot;. :)</p>
                 
                 
             </li>
@@ -271,7 +271,7 @@
                     
           (9 בנובמבר 2009 בשעה 19:07): 
         </p>
-                <p>צודק :-)</p>
+                <p class="comment-message no-reply">צודק :-)</p>
                 
                 
             </li>
@@ -303,7 +303,7 @@
                     
           (8 בנובמבר 2009 בשעה 11:05): 
         </p>
-                <p>[...] This post was mentioned on Twitter by yehudab, omrynet. omrynet said: אחרי שימים ארוכים הציפו אותנו בפרסומת לרובוט חדש שנקרא פרימו מדובר על קמפיין גרילה של תמי 4 : http://bit.ly/2C4rKQ [...]</p>
+                <p class="comment-message no-reply">[...] This post was mentioned on Twitter by yehudab, omrynet. omrynet said: אחרי שימים ארוכים הציפו אותנו בפרסומת לרובוט חדש שנקרא פרימו מדובר על קמפיין גרילה של תמי 4 : http://bit.ly/2C4rKQ [...]</p>
                 
                 
             </li>
@@ -315,7 +315,7 @@
                     
           (8 בנובמבר 2009 בשעה 15:49): 
         </p>
-                <p>ענק (הגילוי).
+                <p class="comment-message no-reply">ענק (הגילוי).
 אם זה רובוט עם מים הוא גם מנקה את הריצפה ?</p>
                 
                 
@@ -329,7 +329,7 @@
                     
           (8 בנובמבר 2009 בשעה 16:29): 
         </p>
-                <p>קודם נראה אותו מכין קפה.</p>
+                <p class="comment-message no-reply">קודם נראה אותו מכין קפה.</p>
                 
                 
             </li>
@@ -346,7 +346,7 @@
                     
           (8 בנובמבר 2009 בשעה 22:23): 
         </p>
-                <p>וואיי אייזהה מאמיי הוואאא !!! . 
+                <p class="comment-message no-reply">וואיי אייזהה מאמיי הוואאא !!! . 
 אוווףף אנחנו עכשיו נתקנו עם תמי4 חדששש אם יש אותו אז אז אז אז קודם כל הוא בטח יעלה מלאאאא ככססףף איזה 5,000 שJJJJח</p>
                 
                 
@@ -359,7 +359,7 @@
                     
           (8 בנובמבר 2009 בשעה 23:12): 
         </p>
-                <p>יש מצב שהגענו לעידן של הרובוטים ואנחנו לא יודעים 0_0</p>
+                <p class="comment-message no-reply">יש מצב שהגענו לעידן של הרובוטים ואנחנו לא יודעים 0_0</p>
                 
                 
                     
@@ -372,7 +372,7 @@
                     
           (9 בנובמבר 2009 בשעה 19:03): 
         </p>
-                <p>ברור!
+                <p class="comment-message no-reply">ברור!
 בכל יום רובוטי צילום והפצצה טסים בשמי העולם - קוראים להם מזלט&quot;ים.
 יש אנשים שלומדים רובוטיקה בתיכון ובונים רובוטים למבחן הבגרות.
 גם את כל מוצרי המזון שאתה אוכל, ש90% מתהליך היצור והאריזה שלהם נעשה באופן ממוכן - ע&quot;י רובוטים של פסי יצור.
@@ -392,7 +392,7 @@
                     
           (9 בנובמבר 2009 בשעה 19:10): 
         </p>
-                <p>כל הפרסומת הזו היא לא יותר מטיזר ל־about:robots (נסה לכתוב את הכתובת הזו בפיירפוקס הקרוב אליך!).</p>
+                <p class="comment-message no-reply">כל הפרסומת הזו היא לא יותר מטיזר ל־about:robots (נסה לכתוב את הכתובת הזו בפיירפוקס הקרוב אליך!).</p>
                 
                 
                     
@@ -405,7 +405,7 @@
                     
           (11 בנובמבר 2009 בשעה 19:11): 
         </p>
-                <p>:-) מכיר
+                <p class="comment-message no-reply">:-) מכיר
 אבל about:config הרבה יותר שימושי</p>
                 
                 
@@ -419,7 +419,7 @@
                     
           (11 בנובמבר 2009 בשעה 19:12): 
         </p>
-                <p>לא יותר מ־about:support.</p>
+                <p class="comment-message no-reply">לא יותר מ־about:support.</p>
                 
                 
                     
@@ -432,7 +432,7 @@
                     
           (12 בנובמבר 2009 בשעה 18:12): 
         </p>
-                <p>&quot;ה-URL אינו חוקי ולא ניתן לטעון אותו&quot;.
+                <p class="comment-message no-reply">&quot;ה-URL אינו חוקי ולא ניתן לטעון אותו&quot;.
 אגב, מה ההבדל בין הבינאריים שמוזילה מקמפלת בשבילך לבין מה שאתה יכול לבנות לבד, ולמה הם לא מרשים לדקמפל?</p>
                 
                 
@@ -483,7 +483,7 @@
     </div>
 
     </main>
-    <footer class="bg-gray-900 pb-10">
+    <footer class="bg-ink pb-10">
   <p class="block text-center text-sm mb-6">
     CC-BY-SA
     <a href="/">

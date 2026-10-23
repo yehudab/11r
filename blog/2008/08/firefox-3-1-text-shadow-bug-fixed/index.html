@@ -50,14 +50,14 @@
   <nav class="container mx-auto max-w-3xl px-8 pt-2 flex flex-wrap justify-between items-center">
     <!-- Branding -->
     <div>
-      <h1>
+      <p class="site-title">
         <a href="/">בלוג פשוט</a>
-      </h1>
-      <p>צר עולמי כ  U+200A</p>
+      </p>
+      <p class="site-description">צר עולמי כ  U+200A</p>
     </div>
 
     <!-- Hamburger Button -->
-    <button id="menu-toggle" class="block md:hidden text-gray-700 focus:outline-hidden">
+    <button id="menu-toggle" class="block md:hidden text-heading focus:outline-hidden">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
       </svg>
@@ -82,28 +82,29 @@
       
     <p></p>
     <div>
-        <h2 class="mb-2">הבאג תוקן: text-shadow בפרייפוקס 3.1</h2>
+        <h1 class="mb-3">הבאג תוקן: text-shadow בפרייפוקס 3.1</h1>
 
         
-            <div class="mb-2">
-                <a class="tag דפדפנים" href="/tag/דפדפנים/">דפדפנים</a><a class="tag CSS" href="/tag/CSS/">CSS</a><a class="tag פיירפוקס" href="/tag/פיירפוקס/">פיירפוקס</a>
-            </div>
-        
+<div class="post-meta">
+    <span>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        נכתב ב<time datetime="2008-08-28T06:15:04.000+03:00">28 באוגוסט 2008</time>
+    </span>
+    <span>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        דקת קריאה אחת
+    </span>
+    <a class="comments-count" href="#comments">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9 9 0 0 1-4-.9L3 21l1.9-5A8.4 8.4 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z"/></svg>
+        6 תגובות
+    </a>
+    <span class="tags">
+            <a class="tag" href="/tag/דפדפנים/">דפדפנים</a>
+            <a class="tag" href="/tag/CSS/">CSS</a>
+            <a class="tag" href="/tag/פיירפוקס/">פיירפוקס</a>
+    </span>
+</div>
 
-        
-            <p class="text-sm italic mb-2">נכתב ב<span datetime="2008-08-28T06:15:04.000+03:00">28 באוגוסט 2008</span>.
-            </p>
-        
-
-        
-        
-            <p class="text-sm italic">
-                <a class="comments-count" 
-                    href="#comments">
-                    6 תגובות
-                </a>
-            </p>
-        
 
         <div class="content post" data-pagefind-body>
             <p>לפני פחות מחודש <a href="/blog/2008/08/%D7%AA%D7%9B%D7%95%D7%A0%D7%AA-text-shadow-%D7%91%D7%A4%D7%A8%D7%99%D7%99%D7%A4%D7%95%D7%A7%D7%A1-31/">דיווחתי כאן</a> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=449519">ובבאגזילה</a> על באג בתכונת text-shadow. תודות לעבודה מהירה של אנשי מוזילה <a href="http://weblogs.mozillazine.org/roc/">רוברט או'קלהן</a> ו<a href="http://www.smontagu.org/blog/">סיימון מונטגו</a> הבאג תוקן, וכעת ניתן לראות התנהגות תקינה של הצל גם מתחת לטקסט עברי וערבי. גרסת אלפא2 (או בטא) ל3.1 עדיין לא יצאה, אבל ניתן <a href="http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-trunk/">להוריד גרסת פרה-אלפא2</a> ששם כבר מוצג הצל נכון.<br>
@@ -126,7 +127,7 @@
                     
           (29 באוגוסט 2008 בשעה 12:57): 
         </p>
-                <p>כמו שאני תמיד אומר, FF מתפתח הרבה יותר מIE.
+                <p class="comment-message no-reply">כמו שאני תמיד אומר, FF מתפתח הרבה יותר מIE.
  יש מצב שתכתוב ביקורת על בטא 2 של IE8? יש הרבה כאלו ברשת, אבל לא מזווית של מישהו שיודע לבנות אתרים.</p>
                 
                 
@@ -139,7 +140,7 @@
                     
           (29 באוגוסט 2008 בשעה 13:00): 
         </p>
-                <p>זה בהחלט בתוכנית שלי.</p>
+                <p class="comment-message no-reply">זה בהחלט בתוכנית שלי.</p>
                 
                 
             </li>
@@ -151,7 +152,7 @@
                     
           (29 באוגוסט 2008 בשעה 15:33): 
         </p>
-                <p>נהדר!
+                <p class="comment-message no-reply">נהדר!
 אל תשכח לבדוק אותו באסיד 3. אני גם הייתי מכין דף בדיקה של CSS 3 ועוד כמה דברים שIE7 לא תמך בהם כדי לראות אם זה השתפר ב8. פשוט אין לי מחשב שלא צריך (או XP במכונה וירטואלית) לבדוק את זה עליו.</p>
                 
                 
@@ -164,7 +165,7 @@
                     
           (30 באוגוסט 2008 בשעה 0:21): 
         </p>
-                <p>מה לגבי סקיפטים ל- ubiquity?
+                <p class="comment-message no-reply">מה לגבי סקיפטים ל- ubiquity?
 
 אני כבר עשיתי אחד!:
 &lt;a href=&quot;http://yardensachs.com/ubiquity/&quot; rel=&quot;nofollow&quot;&gt;yardensachs.com/ubiquity&lt;/a&gt;</p>
@@ -179,7 +180,7 @@
                     
           (30 באוגוסט 2008 בשעה 22:51): 
         </p>
-                <p>ירדן,
+                <p class="comment-message no-reply">ירדן,
 האמת שעדיין לא ניסיתי את ubiquity. ראיתי את &lt;a href=&quot;http://vimeo.com/1561578?pg=embed&amp;sec=1561578&quot; rel=&quot;nofollow&quot;&gt;הסרט&lt;/a&gt;, אבל זה קצת הזכיר לי את &lt;a href=&quot;http://en.wikipedia.org/wiki/Quicksilver_(software)&quot; rel=&quot;nofollow&quot;&gt;quicksilver&lt;/a&gt; למק, שלא ממש תפס אצלי.</p>
                 
                 
@@ -192,7 +193,7 @@
                     
           (31 באוגוסט 2008 בשעה 1:23): 
         </p>
-                <p>נסה בכל זאת, אולי כן תאהב את הרעיון של חיבור בין אתרים...</p>
+                <p class="comment-message no-reply">נסה בכל זאת, אולי כן תאהב את הרעיון של חיבור בין אתרים...</p>
                 
                 
             </li>
@@ -217,7 +218,7 @@
     </div>
 
     </main>
-    <footer class="bg-gray-900 pb-10">
+    <footer class="bg-ink pb-10">
   <p class="block text-center text-sm mb-6">
     CC-BY-SA
     <a href="/">

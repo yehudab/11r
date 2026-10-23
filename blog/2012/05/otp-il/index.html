@@ -50,14 +50,14 @@
   <nav class="container mx-auto max-w-3xl px-8 pt-2 flex flex-wrap justify-between items-center">
     <!-- Branding -->
     <div>
-      <h1>
+      <p class="site-title">
         <a href="/">בלוג פשוט</a>
-      </h1>
-      <p>צר עולמי כ  U+200A</p>
+      </p>
+      <p class="site-description">צר עולמי כ  U+200A</p>
     </div>
 
     <!-- Hamburger Button -->
-    <button id="menu-toggle" class="block md:hidden text-gray-700 focus:outline-hidden">
+    <button id="menu-toggle" class="block md:hidden text-heading focus:outline-hidden">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
       </svg>
@@ -82,28 +82,27 @@
       
     <p></p>
     <div>
-        <h2 class="mb-2">חישוב מסלול נסיעה בתחבורה ציבורית</h2>
+        <h1 class="mb-3">חישוב מסלול נסיעה בתחבורה ציבורית</h1>
 
         
-            <div class="mb-2">
-                <a class="tag קוד פתוח ותוכנה חופשית" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a>
-            </div>
-        
+<div class="post-meta">
+    <span>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        נכתב ב<time datetime="2012-05-18T11:21:13.000+03:00">18 במאי 2012</time>
+    </span>
+    <span>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        3 דקות קריאה
+    </span>
+    <a class="comments-count" href="#comments">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9 9 0 0 1-4-.9L3 21l1.9-5A8.4 8.4 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z"/></svg>
+        8 תגובות
+    </a>
+    <span class="tags">
+            <a class="tag" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a>
+    </span>
+</div>
 
-        
-            <p class="text-sm italic mb-2">נכתב ב<span datetime="2012-05-18T11:21:13.000+03:00">18 במאי 2012</span>.
-            </p>
-        
-
-        
-        
-            <p class="text-sm italic">
-                <a class="comments-count" 
-                    href="#comments">
-                    8 תגובות
-                </a>
-            </p>
-        
 
         <div class="content post" data-pagefind-body>
             <p>משרד התחבורה החל לפרסם לפני כשבוע מאגר מידע חדש הכולל לוחות זמנים ונתיבים של התחבורה הציבורית בארץ. <a href="http://data.gov.il/dataset/383">המאגר</a> מפורסם לפי תקן פתוח של גוגל שנקרא GTFS. במסגרת שיתוף פעולה של מספר חברים ברשימת התפוצה של <a href="http://www.hamakor.org.il/">המקור</a>, הקמנו פיילוט שמדגים את יכולות המאגר. הקוד בפיילוט מבוסס על פרויקט OpenTripPlanner. תודה לירון על עבודת התרגום, ולשאר החברים על העידוד והתמיכה.</p>
@@ -188,7 +187,7 @@ $ <span class="token function">vi</span> /otp/webapps/opentripplanner-webapp/js/
                     
           (25 במאי 2012 בשעה 14:44): 
         </p>
-                <p>כמה זכרון פנימי יש לכם על המחשב שבו בניתם את הגרף של ישראל?
+                <p class="comment-message no-reply">כמה זכרון פנימי יש לכם על המחשב שבו בניתם את הגרף של ישראל?
 לי יש fedora 64 bit עם 4 ג&#39;יגה זכרון פנימי וזה אף פעם לא הצליח לסיים לבנות את הגרף ..
 על כמה מינימום זכרון הייתם ממליצים?
 תודה,יוסי</p>
@@ -204,7 +203,7 @@ $ <span class="token function">vi</span> /otp/webapps/opentripplanner-webapp/js/
                     
           (25 במאי 2012 בשעה 15:11): 
         </p>
-                <p>הי יוסי,
+                <p class="comment-message no-reply">הי יוסי,
 כרגע יש לנו 8GB זכרון פיזי, ולבניית בגרף מוקצים 6 מתוכם. זה גם מה שמוקצה אחר-כך לריצה. שים לב, שכדי שjava תדע לנצל את הזכרון הנוסף יש לשנות את פרמטר ה xmx, כפי שמוסבר בפוסט.</p>
                 
                 
@@ -222,7 +221,7 @@ $ <span class="token function">vi</span> /otp/webapps/opentripplanner-webapp/js/
                     
           (25 במאי 2012 בשעה 15:28): 
         </p>
-                <p>קודם כל תודה על התשובה המהירה !
+                <p class="comment-message no-reply">קודם כל תודה על התשובה המהירה !
 שיניתי את הפרמט xmx כפי שציינתם,אבל זה לא עזר. אני פשוט צריך לשדרג ל8 ג&#39;יגה .
 
 חשבתי שאולי כדאי שתפרסמו את הקובץ Graph.obj שנוצר כדי שאנשים יוכלו להשתמש בו בלי הצורך לקמפל אותו בעצמם על מחשב חזק ..
@@ -239,7 +238,7 @@ $ <span class="token function">vi</span> /otp/webapps/opentripplanner-webapp/js/
                     
           (25 במאי 2012 בשעה 15:42): 
         </p>
-                <p>יש עם זה שתי בעיות:
+                <p class="comment-message no-reply">יש עם זה שתי בעיות:
 הקובץ שנוצר הוא בגודל 1gb, כך שזמן ההורדה עלול להיות גדול. 
 גם השימוש בקובץ אחר-כך דורש כמות גדולה של זכרון (קצת פחות, אבל עדיין).
 לדעתי פתרון יותר טוב הוא להכין קובץ GTFS חדש שיכיל רק חלק מהמסלולים (נניח רק של דן) לטובת פיתוח ובדיקות.</p>
@@ -259,7 +258,7 @@ $ <span class="token function">vi</span> /otp/webapps/opentripplanner-webapp/js/
                     
           (25 במאי 2012 בשעה 15:44): 
         </p>
-                <p>1. ג&#39;יגה אחד היום זה בקטנה. 10 דקות הורדה ..
+                <p class="comment-message no-reply">1. ג&#39;יגה אחד היום זה בקטנה. 10 דקות הורדה ..
 2. להשתמש זה באמת דורש פחות זכרון אז זה בעצם מספיק .
 3. לחלק את הקובץ GTFS ולהשאיר בו רק חברה (או חברות) מסוימת זה מסובך ולא מומלץ ..</p>
                 
@@ -273,7 +272,7 @@ $ <span class="token function">vi</span> /otp/webapps/opentripplanner-webapp/js/
                     
           (12 ביוני 2012 בשעה 19:50): 
         </p>
-                <p>עשית לי את החודש. אני שובר את הראש כבר יומיים על זה. 
+                <p class="comment-message no-reply">עשית לי את החודש. אני שובר את הראש כבר יומיים על זה. 
 הבעיה שהייתה לי היא קובץ ה-OSM שהשתמשתי בו. הלינק שלך פתר לי את הבעיה.
 תודה, תודה, תודה !!!!!!!!!!!</p>
                 
@@ -287,7 +286,7 @@ $ <span class="token function">vi</span> /otp/webapps/opentripplanner-webapp/js/
                     
           (28 ביוני 2012 בשעה 2:41): 
         </p>
-                <p>for all developers that are interested:
+                <p class="comment-message no-reply">for all developers that are interested:
 
 •	I have split the gigantic file for all of Israel into 4 big files for 4 areas: Tel-Aviv Metro, Jerusalem, North and South. Each file includes not only the information relating to  stops in the specific area but all the information relating to any trip that includes stops within the area (e.g. the North file includes trips from Tel-Aviv to Haifa. Etc….)
 •	I have also created a small GTFS file for the area of Ramat Aviv Gimel – this file is useful for testing applications because you do not need to wait forever for the data to load…
@@ -304,7 +303,7 @@ $ <span class="token function">vi</span> /otp/webapps/opentripplanner-webapp/js/
                     
           (28 ביוני 2012 בשעה 3:09): 
         </p>
-                <p>תודה על שיתוף המידע. שים לב שתצטרך לעדכן אותם מדי פעם, כי טווח הזמנים של הקבצים הוא שבועיים קדימה. 
+                <p class="comment-message no-reply">תודה על שיתוף המידע. שים לב שתצטרך לעדכן אותם מדי פעם, כי טווח הזמנים של הקבצים הוא שבועיים קדימה. 
 יהודה</p>
                 
                 
@@ -335,7 +334,7 @@ $ <span class="token function">vi</span> /otp/webapps/opentripplanner-webapp/js/
     </div>
 
     </main>
-    <footer class="bg-gray-900 pb-10">
+    <footer class="bg-ink pb-10">
   <p class="block text-center text-sm mb-6">
     CC-BY-SA
     <a href="/">

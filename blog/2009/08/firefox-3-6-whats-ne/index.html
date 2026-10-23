@@ -50,14 +50,14 @@
   <nav class="container mx-auto max-w-3xl px-8 pt-2 flex flex-wrap justify-between items-center">
     <!-- Branding -->
     <div>
-      <h1>
+      <p class="site-title">
         <a href="/">בלוג פשוט</a>
-      </h1>
-      <p>צר עולמי כ  U+200A</p>
+      </p>
+      <p class="site-description">צר עולמי כ  U+200A</p>
     </div>
 
     <!-- Hamburger Button -->
-    <button id="menu-toggle" class="block md:hidden text-gray-700 focus:outline-hidden">
+    <button id="menu-toggle" class="block md:hidden text-heading focus:outline-hidden">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
       </svg>
@@ -82,28 +82,29 @@
       
     <p></p>
     <div>
-        <h2 class="mb-2">חידושים והמצאות בפיירפוקס 3.6</h2>
+        <h1 class="mb-3">חידושים והמצאות בפיירפוקס 3.6</h1>
 
         
-            <div class="mb-2">
-                <a class="tag דפדפנים" href="/tag/דפדפנים/">דפדפנים</a><a class="tag שמישות" href="/tag/שמישות/">שמישות</a><a class="tag פיירפוקס" href="/tag/פיירפוקס/">פיירפוקס</a>
-            </div>
-        
+<div class="post-meta">
+    <span>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        נכתב ב<time datetime="2009-08-11T22:56:27.000+03:00">11 באוגוסט 2009</time>
+    </span>
+    <span>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        דקת קריאה אחת
+    </span>
+    <a class="comments-count" href="#comments">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9 9 0 0 1-4-.9L3 21l1.9-5A8.4 8.4 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z"/></svg>
+        11 תגובות
+    </a>
+    <span class="tags">
+            <a class="tag" href="/tag/דפדפנים/">דפדפנים</a>
+            <a class="tag" href="/tag/שמישות/">שמישות</a>
+            <a class="tag" href="/tag/פיירפוקס/">פיירפוקס</a>
+    </span>
+</div>
 
-        
-            <p class="text-sm italic mb-2">נכתב ב<span datetime="2009-08-11T22:56:27.000+03:00">11 באוגוסט 2009</span>.
-            </p>
-        
-
-        
-        
-            <p class="text-sm italic">
-                <a class="comments-count" 
-                    href="#comments">
-                    11 תגובות
-                </a>
-            </p>
-        
 
         <div class="content post" data-pagefind-body>
             <p>עוד לא יבש הדיו על העיתונים המשבחים (מי <a href="http://www.ynet.co.il/articles/0,7340,L-3742285,00.html">יותר</a> מי <a href="http://www.holesinthenet.co.il/archives/3509">פחות</a>) את פיירפוקס 3.5 וכבר מתבשלת לה הגרסה הבאה (שם זמני: 3.6). בדומה לתמיכה בווידאו בהתאם לתקן html5 שנוספה בגרסה 3.5, הפעם מתכננים במוזילה לשפר בצורה משמעותית את התמיכה בהעלאת קבצים.</p>
@@ -132,7 +133,7 @@
                     
           (12 באוגוסט 2009 בשעה 13:35): 
         </p>
-                <p>למה מופיע לי יישום פלאש איפה שאמור להיות &amp;lt;video&amp;gt;?</p>
+                <p class="comment-message no-reply">למה מופיע לי יישום פלאש איפה שאמור להיות &amp;lt;video&amp;gt;?</p>
                 
                 
                     
@@ -145,7 +146,7 @@
                     
           (12 באוגוסט 2009 בשעה 17:04): 
         </p>
-                <p>צודק. הייתי צריך לאפשר צפיה ישירה בווידאו למי שיש 3.5 ולא דרך פלאש. אני אנסה להוסיף את האפשרות הזאת בהמשך.</p>
+                <p class="comment-message no-reply">צודק. הייתי צריך לאפשר צפיה ישירה בווידאו למי שיש 3.5 ולא דרך פלאש. אני אנסה להוסיף את האפשרות הזאת בהמשך.</p>
                 
                 
             </li>
@@ -157,7 +158,7 @@
                     
           (12 באוגוסט 2009 בשעה 21:57): 
         </p>
-                <p>הצפיה בפורמט ogg זמינה כעת.</p>
+                <p class="comment-message no-reply">הצפיה בפורמט ogg זמינה כעת.</p>
                 
                 
             </li>
@@ -174,7 +175,7 @@
                     
           (12 באוגוסט 2009 בשעה 16:40): 
         </p>
-                <p>נחמד. כמה זמן יקח עד שהדפדפנים האחרים והאתרים הגדולים יתמכו בפיצ&#39;ר?</p>
+                <p class="comment-message no-reply">נחמד. כמה זמן יקח עד שהדפדפנים האחרים והאתרים הגדולים יתמכו בפיצ&#39;ר?</p>
                 
                 
                     
@@ -187,7 +188,7 @@
                     
           (12 באוגוסט 2009 בשעה 17:03): 
         </p>
-                <p>אני מאמין שזה יקרה די מהר. גוגל כרום החדש (בטא) כבר הוסיף את התמיכה בווידאו של html5, כך שנראה לי שתוך שנה כל הדפדפנים שאינם IE כבר יישרו קו.</p>
+                <p class="comment-message no-reply">אני מאמין שזה יקרה די מהר. גוגל כרום החדש (בטא) כבר הוסיף את התמיכה בווידאו של html5, כך שנראה לי שתוך שנה כל הדפדפנים שאינם IE כבר יישרו קו.</p>
                 
                 
                     
@@ -200,7 +201,7 @@
                     
           (13 באוגוסט 2009 בשעה 2:01): 
         </p>
-                <p>לדעתי הוא דיבר על ה־Progress bar, ולא על הוידאו...
+                <p class="comment-message no-reply">לדעתי הוא דיבר על ה־Progress bar, ולא על הוידאו...
 
 Google Gears כולל גם הוא את התכונה הזו כיום. ראיתי שימוש בה ב־Google Wave.</p>
                 
@@ -215,7 +216,7 @@ Google Gears כולל גם הוא את התכונה הזו כיום. ראיתי 
                     
           (13 באוגוסט 2009 בשעה 2:18): 
         </p>
-                <p>הבנתי שעל זה הוא דיבר. העלתי את נושא הווידאו בתור אנלוגיה: אם בווידאו הם 5-6 חודשים אחרי פיירפוקס, אז אני מניח שגם בעניין הפרוגרס וה drag-n-drop הם ישלימו פערים בקרוב.</p>
+                <p class="comment-message no-reply">הבנתי שעל זה הוא דיבר. העלתי את נושא הווידאו בתור אנלוגיה: אם בווידאו הם 5-6 חודשים אחרי פיירפוקס, אז אני מניח שגם בעניין הפרוגרס וה drag-n-drop הם ישלימו פערים בקרוב.</p>
                 
                 
                     
@@ -228,7 +229,7 @@ Google Gears כולל גם הוא את התכונה הזו כיום. ראיתי 
                     
           (13 באוגוסט 2009 בשעה 3:27): 
         </p>
-                <p>אני לא חושב שאתה צודק. התכונות של Gears מוצאות את דרכן ל־Chrome מהר מאד.</p>
+                <p class="comment-message no-reply">אני לא חושב שאתה צודק. התכונות של Gears מוצאות את דרכן ל־Chrome מהר מאד.</p>
                 
                 
                     
@@ -241,7 +242,7 @@ Google Gears כולל גם הוא את התכונה הזו כיום. ראיתי 
                     
           (13 באוגוסט 2009 בשעה 3:47): 
         </p>
-                <p>מצידי כמה שיותר מהר. צריך לזכור רק שגוגל לא היחידים בשוק, ובתגובה הראשונה שלי הכללתי גם את השאר (פרט לכבשה השחורה כמובן).</p>
+                <p class="comment-message no-reply">מצידי כמה שיותר מהר. צריך לזכור רק שגוגל לא היחידים בשוק, ובתגובה הראשונה שלי הכללתי גם את השאר (פרט לכבשה השחורה כמובן).</p>
                 
                 
                     
@@ -254,7 +255,7 @@ Google Gears כולל גם הוא את התכונה הזו כיום. ראיתי 
                     
           (29 באוגוסט 2009 בשעה 19:35): 
         </p>
-                <p>אם כבר מדברים על כרום, מישהו מוכן להסביר לי למה הוא לא תומך בOGG?
+                <p class="comment-message no-reply">אם כבר מדברים על כרום, מישהו מוכן להסביר לי למה הוא לא תומך בOGG?
 ואם כבר מדברים על וידאו, למה הדפדפן לא יכול להשתמש גם בקודקים של המערכת בשביל אלמנט הוידאו? ככה יהיה אפשר לשים רק פורמט אחד או שניים מובנים בדפדפן וכל שאר הפורמטים יעבדו בכל זאת, כי כמעט לכולם יש את הקודקים המתאימים.</p>
                 
                 
@@ -268,7 +269,7 @@ Google Gears כולל גם הוא את התכונה הזו כיום. ראיתי 
                     
           (29 באוגוסט 2009 בשעה 20:03): 
         </p>
-                <p>מה זה &quot;קודקים של המערכת&quot;? אני לא מכיר שום מערכת הפעלה שמתקינים בה קודקים. בדרך־כלל מתקינים אותם על הנגן, בלינוקס עושים לפעמים קישור סימבולי בין תיקיות כדי שהנגן יגיע למקום משותף.</p>
+                <p class="comment-message no-reply">מה זה &quot;קודקים של המערכת&quot;? אני לא מכיר שום מערכת הפעלה שמתקינים בה קודקים. בדרך־כלל מתקינים אותם על הנגן, בלינוקס עושים לפעמים קישור סימבולי בין תיקיות כדי שהנגן יגיע למקום משותף.</p>
                 
                 
             </li>
@@ -328,7 +329,7 @@ Google Gears כולל גם הוא את התכונה הזו כיום. ראיתי 
     </div>
 
     </main>
-    <footer class="bg-gray-900 pb-10">
+    <footer class="bg-ink pb-10">
   <p class="block text-center text-sm mb-6">
     CC-BY-SA
     <a href="/">

@@ -50,14 +50,14 @@
   <nav class="container mx-auto max-w-3xl px-8 pt-2 flex flex-wrap justify-between items-center">
     <!-- Branding -->
     <div>
-      <h1>
+      <p class="site-title">
         <a href="/">בלוג פשוט</a>
-      </h1>
-      <p>צר עולמי כ  U+200A</p>
+      </p>
+      <p class="site-description">צר עולמי כ  U+200A</p>
     </div>
 
     <!-- Hamburger Button -->
-    <button id="menu-toggle" class="block md:hidden text-gray-700 focus:outline-hidden">
+    <button id="menu-toggle" class="block md:hidden text-heading focus:outline-hidden">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
       </svg>
@@ -82,28 +82,28 @@
       
     <p></p>
     <div>
-        <h2 class="mb-2">כרום ואופרה זהירות: פיירפוקס 4 מאחוריכם! (ולפעמים גם משיג)</h2>
+        <h1 class="mb-3">כרום ואופרה זהירות: פיירפוקס 4 מאחוריכם! (ולפעמים גם משיג)</h1>
 
         
-            <div class="mb-2">
-                <a class="tag דפדפנים" href="/tag/דפדפנים/">דפדפנים</a><a class="tag קוד פתוח ותוכנה חופשית" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a>
-            </div>
-        
+<div class="post-meta">
+    <span>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        נכתב ב<time datetime="2010-08-30T08:09:30.000+03:00">30 באוגוסט 2010</time>
+    </span>
+    <span>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        2 דקות קריאה
+    </span>
+    <a class="comments-count" href="#comments">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9 9 0 0 1-4-.9L3 21l1.9-5A8.4 8.4 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z"/></svg>
+        8 תגובות
+    </a>
+    <span class="tags">
+            <a class="tag" href="/tag/דפדפנים/">דפדפנים</a>
+            <a class="tag" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a>
+    </span>
+</div>
 
-        
-            <p class="text-sm italic mb-2">נכתב ב<span datetime="2010-08-30T08:09:30.000+03:00">30 באוגוסט 2010</span>.
-            </p>
-        
-
-        
-        
-            <p class="text-sm italic">
-                <a class="comments-count" 
-                    href="#comments">
-                    8 תגובות
-                </a>
-            </p>
-        
 
         <div class="content post" data-pagefind-body>
             <p><a href="http://www.holesinthenet.co.il/archives/3509">רבים</a> ו<a href="http://blog.k1789.org/?p=1272">טובים</a> <a href="http://idanm.wordpress.com/2010/08/26/%D7%9E%D7%95%D7%96%D7%99%D7%9C%D7%94-%D7%9E%D7%90%D7%91%D7%93%D7%AA-%D7%90%D7%AA-%D7%9B%D7%95%D7%97%D7%94-%D7%91%D7%A9%D7%95%D7%A7-%D7%94%D7%93%D7%A4%D7%93%D7%A4%D7%A0%D7%99%D7%9D/">נוטשים</a> לאחרונה את פיירפוקס לטובת כרום או אופרה. כמעט כולם מציגים את עניין המהירות (במיוחד על לינוקס) כסיבה הראשית לנטישה. מוזילה שמה את שיפור המהירות של פיירפוקס כאחד היעדים העיקריים של גרסה 4, <a href="http://mozilla.org.il/news/2010/08/24/firefox4b4/">והשחרור של הבטא הרביעית</a> של פיירפוקס 4 הוא סיבה טובה לבדוק האם ההבטחה מתממשת.</p>
@@ -132,7 +132,7 @@
                     
           (30 באוגוסט 2010 בשעה 12:52): 
         </p>
-                <p>בדקתי בפיירפוקס 4 בטא 4 ובכרום 7 על לינוקס, מחשב עם מעבד i3, בחרתי בגודל המבחן הכי גדול ו4 Workers. בכרום:
+                <p class="comment-message no-reply">בדקתי בפיירפוקס 4 בטא 4 ובכרום 7 על לינוקס, מחשב עם מעבד i3, בחרתי בגודל המבחן הכי גדול ו4 Workers. בכרום:
 2.691 שניות
 בפיירפוקס
 0.474 שניות
@@ -149,7 +149,7 @@
                     
           (31 באוגוסט 2010 בשעה 1:33): 
         </p>
-                <p>עדיין לפי הבדיקות שלך כרום מהיר כמעט פי 2 מפיירפוקס
+                <p class="comment-message no-reply">עדיין לפי הבדיקות שלך כרום מהיר כמעט פי 2 מפיירפוקס
 אבל זה באמת נראה כשיפור רציני...</p>
                 
                 
@@ -163,7 +163,7 @@
                     
           (31 באוגוסט 2010 בשעה 1:54): 
         </p>
-                <p>הייתי אומר פי 1.5 ולא פי 2. בהחלט מסכים עם עניין השיפור, ועוד היד נטויה (בטא 5 צפויה להראות שיפור נוסף)</p>
+                <p class="comment-message no-reply">הייתי אומר פי 1.5 ולא פי 2. בהחלט מסכים עם עניין השיפור, ועוד היד נטויה (בטא 5 צפויה להראות שיפור נוסף)</p>
                 
                 
             </li>
@@ -180,7 +180,7 @@
                     
           (31 באוגוסט 2010 בשעה 8:37): 
         </p>
-                <p>לשם השוואה הוגנת אם אתה משתמש בבטא קוד של פירפוקס, מן הראוי הייתה צריך להשתמש גם בבטא קוד של כרום/יום (או לפחות בגירסא 6).</p>
+                <p class="comment-message no-reply">לשם השוואה הוגנת אם אתה משתמש בבטא קוד של פירפוקס, מן הראוי הייתה צריך להשתמש גם בבטא קוד של כרום/יום (או לפחות בגירסא 6).</p>
                 
                 
                     
@@ -193,7 +193,7 @@
                     
           (31 באוגוסט 2010 בשעה 9:12): 
         </p>
-                <p>האמת שבבדיקה השניה השתמשתי בכרום 7 (האחרונה מערוץ dev). אולי אני אוסיף את כרום7 גם לגרף הראשון.</p>
+                <p class="comment-message no-reply">האמת שבבדיקה השניה השתמשתי בכרום 7 (האחרונה מערוץ dev). אולי אני אוסיף את כרום7 גם לגרף הראשון.</p>
                 
                 
             </li>
@@ -210,7 +210,7 @@
                     
           (10 בספטמבר 2010 בשעה 22:43): 
         </p>
-                <p>מצאתי בעיה במבחן, אולי רק אצלי, אם קובעים את זה ל16 Workers, אז התמונה מתחרבשת.</p>
+                <p class="comment-message no-reply">מצאתי בעיה במבחן, אולי רק אצלי, אם קובעים את זה ל16 Workers, אז התמונה מתחרבשת.</p>
                 
                 
                     
@@ -223,7 +223,7 @@
                     
           (11 בספטמבר 2010 בשעה 0:30): 
         </p>
-                <p>כן, יש שם באג קטן &quot;בחלוקת העבודה&quot; וככל שמגדילים את מספר העובדים זה מורגש יותר. אני אנסה לתקן בקרוב.</p>
+                <p class="comment-message no-reply">כן, יש שם באג קטן &quot;בחלוקת העבודה&quot; וככל שמגדילים את מספר העובדים זה מורגש יותר. אני אנסה לתקן בקרוב.</p>
                 
                 
                     
@@ -236,7 +236,7 @@
                     
           (29 באוקטובר 2010 בשעה 18:39): 
         </p>
-                <p>זה פשוט. מעל כמות עובדים מסויימת הם מתחילים להתאגד ולארגן שביתות.</p>
+                <p class="comment-message no-reply">זה פשוט. מעל כמות עובדים מסויימת הם מתחילים להתאגד ולארגן שביתות.</p>
                 
                 
             </li>
@@ -271,7 +271,7 @@
     </div>
 
     </main>
-    <footer class="bg-gray-900 pb-10">
+    <footer class="bg-ink pb-10">
   <p class="block text-center text-sm mb-6">
     CC-BY-SA
     <a href="/">

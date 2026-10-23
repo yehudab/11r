@@ -50,14 +50,14 @@
   <nav class="container mx-auto max-w-3xl px-8 pt-2 flex flex-wrap justify-between items-center">
     <!-- Branding -->
     <div>
-      <h1>
+      <p class="site-title">
         <a href="/">בלוג פשוט</a>
-      </h1>
-      <p>צר עולמי כ  U+200A</p>
+      </p>
+      <p class="site-description">צר עולמי כ  U+200A</p>
     </div>
 
     <!-- Hamburger Button -->
-    <button id="menu-toggle" class="block md:hidden text-gray-700 focus:outline-hidden">
+    <button id="menu-toggle" class="block md:hidden text-heading focus:outline-hidden">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
       </svg>
@@ -82,28 +82,28 @@
       
     <p></p>
     <div>
-        <h2 class="mb-2">ווידג׳ט מזג האויר בישראל</h2>
+        <h1 class="mb-3">ווידג׳ט מזג האויר בישראל</h1>
 
         
-            <div class="mb-2">
-                <a class="tag ווידג׳טים" href="/tag/ווידג׳טים/">ווידג׳טים</a><a class="tag מזג אויר" href="/tag/מזג אויר/">מזג אויר</a>
-            </div>
-        
+<div class="post-meta">
+    <span>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        נכתב ב<time datetime="2010-06-29T20:43:47.000+03:00">29 ביוני 2010</time>
+    </span>
+    <span>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        דקת קריאה אחת
+    </span>
+    <a class="comments-count" href="#comments">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9 9 0 0 1-4-.9L3 21l1.9-5A8.4 8.4 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z"/></svg>
+        9 תגובות
+    </a>
+    <span class="tags">
+            <a class="tag" href="/tag/ווידג׳טים/">ווידג׳טים</a>
+            <a class="tag" href="/tag/מזג אויר/">מזג אויר</a>
+    </span>
+</div>
 
-        
-            <p class="text-sm italic mb-2">נכתב ב<span datetime="2010-06-29T20:43:47.000+03:00">29 ביוני 2010</span>.
-            </p>
-        
-
-        
-        
-            <p class="text-sm italic">
-                <a class="comments-count" 
-                    href="#comments">
-                    9 תגובות
-                </a>
-            </p>
-        
 
         <div class="content post" data-pagefind-body>
             <p>אחד הפרויקטים הראשונים שעשיתי למק (כן, עוד לפני הסקריפטים) היה ווידג׳טים לדשבורד. אחד מהם היה ווידג׳ט מזג האויר בישראל והשני ווידג׳ט רכבת ישראל (שלא פועל כרגע, ואולי עוד אחדש אותו בהזדמנות). הווידג׳טים שכנו באתר <a href="http://dashboardwidgets.com/">dashboardwidgets</a> שלאחרונה הפסיק לפעול. לטובת מי שמחפש את ווידג׳ט מזג האויר העברתי את דף ההורדה לבלוג הזה, וניתן למצוא אותו כעת <a href="http://yehudab.com/widgets/WeatherIL-1d7.zip">כאן</a>. בהזדמנות זו בצעתי גם עדכון קל לרשימת האזורים המוצגים (תודה לרונן על דווח השגיאה).</p>
@@ -113,8 +113,7 @@
 <li>יש רשימה קבועה של אזורי מזג אויר, ואין צורך לחפש בטקסט חופשי</li>
 <li>התחזית לקוחה מאחד מאתרי מזג האוויר המובילים בישראלים: <a href="http://www.israelweather.co.il/">IsraelWeather.co.il</a> ובדרך כלל התחזית שלו מדויקת בהרבה מהתחזית בווידג׳ט הסטנדרטי</li>
 </ul>
-<p><img src="/img/2010/06/israel-weather-widget-1.png" alt="ווידג׳ט מזג האויר בישראל"></p>
-
+<figure><img src="/img/2010/06/israel-weather-widget-1.png" alt="ווידג׳ט מזג האויר בישראל"><figcaption aria-hidden="true">ווידג׳ט מזג האויר בישראל</figcaption></figure>
         </div>
 
 
@@ -132,7 +131,7 @@
                     
           (30 ביוני 2010 בשעה 1:53): 
         </p>
-                <p>מה לגבי גרסה ללינוקס?</p>
+                <p class="comment-message no-reply">מה לגבי גרסה ללינוקס?</p>
                 
                 
             </li>
@@ -144,7 +143,7 @@
                     
           (30 ביוני 2010 בשעה 3:16): 
         </p>
-                <p>מה לגבי גרסה לווינדוז?</p>
+                <p class="comment-message no-reply">מה לגבי גרסה לווינדוז?</p>
                 
                 
             </li>
@@ -156,7 +155,7 @@
                     
           (30 ביוני 2010 בשעה 8:20): 
         </p>
-                <p>לא נראה לי שיהיו גרסאות ללינוקס או חלונות בקרוב. הקושי הוא לא טכני אלא יותר מנהלתי -- בזמנו כשדיברתי מנהל האתר IsraelWeather הוא לא כ&quot;כ היה מרוצה מזה שנתוני מזג האויר ילקחו ממנו בלי שאנשים יהיו חייבים לבקר באתר ולהיות חשופים לפרסומות. כשהסברתי לו שמדובר במספר קטן מאוד של משתמשים (אז היו הרבה פחות מקים בארץ) הוא התרצה. אני יכול ליצר גרסה לחלונות או לינוקס שתיקח נתוני תחזית מ yahoo (שהם, אגב, המקור לנתוני זמן אמת)  אבל אז עניין הדיוק בתחזית יתפספס.</p>
+                <p class="comment-message no-reply">לא נראה לי שיהיו גרסאות ללינוקס או חלונות בקרוב. הקושי הוא לא טכני אלא יותר מנהלתי -- בזמנו כשדיברתי מנהל האתר IsraelWeather הוא לא כ&quot;כ היה מרוצה מזה שנתוני מזג האויר ילקחו ממנו בלי שאנשים יהיו חייבים לבקר באתר ולהיות חשופים לפרסומות. כשהסברתי לו שמדובר במספר קטן מאוד של משתמשים (אז היו הרבה פחות מקים בארץ) הוא התרצה. אני יכול ליצר גרסה לחלונות או לינוקס שתיקח נתוני תחזית מ yahoo (שהם, אגב, המקור לנתוני זמן אמת)  אבל אז עניין הדיוק בתחזית יתפספס.</p>
                 
                 
                     
@@ -169,7 +168,7 @@
                     
           (30 ביוני 2010 בשעה 11:29): 
         </p>
-                <p>סבבה. תייצר כזה בדיוק לחלונות. לא משנה לי שזה יהיה מיאהו..</p>
+                <p class="comment-message no-reply">סבבה. תייצר כזה בדיוק לחלונות. לא משנה לי שזה יהיה מיאהו..</p>
                 
                 
             </li>
@@ -181,7 +180,7 @@
                     
           (30 ביוני 2010 בשעה 12:56): 
         </p>
-                <p>למה פשוט לא לקחת את הנתונים מ&lt;a href=&quot;http://www.ims.gov.il/ims/all_tahazit/&quot; rel=&quot;nofollow&quot;&gt;השירות המטאורולוגי&lt;/a&gt;?</p>
+                <p class="comment-message no-reply">למה פשוט לא לקחת את הנתונים מ&lt;a href=&quot;http://www.ims.gov.il/ims/all_tahazit/&quot; rel=&quot;nofollow&quot;&gt;השירות המטאורולוגי&lt;/a&gt;?</p>
                 
                 
                     
@@ -194,7 +193,7 @@
                     
           (30 ביוני 2010 בשעה 13:17): 
         </p>
-                <p>כי אין להם תחזית לימים הקרובים לפי אזורים. יש שם רק תחזית טקסטואלית, וגם זה רק לשלושה ימים קדימה ולא חמישה.
+                <p class="comment-message no-reply">כי אין להם תחזית לימים הקרובים לפי אזורים. יש שם רק תחזית טקסטואלית, וגם זה רק לשלושה ימים קדימה ולא חמישה.
 
 עריכה: ראיתי שיש תחזית לפי אזורים וגם טמפ&#39; מינימום ומקסימום, אבל באמת רק 3 ימים קדימה.</p>
                 
@@ -209,7 +208,7 @@
                     
           (30 ביוני 2010 בשעה 18:34): 
         </p>
-                <p>שמעתי שמבחינה מקצועית רק תחזית שלושה ימים קדימה נחשבת למדויקת, לכן הם לא נותנים יותר.
+                <p class="comment-message no-reply">שמעתי שמבחינה מקצועית רק תחזית שלושה ימים קדימה נחשבת למדויקת, לכן הם לא נותנים יותר.
 כנראה שיש חזאים שחושבים אחרת וחוזים יותר רחוק.</p>
                 
                 
@@ -223,7 +222,7 @@
                     
           (30 ביוני 2010 בשעה 18:44): 
         </p>
-                <p>תראה, כמו שיניב כתב למעלה, לאנשים הרבה יותר חשוב ווידג׳ט יפה מתחזית מדוייקת. ווידג׳ט עם שלוש עמודות יראה עלוב מדי.</p>
+                <p class="comment-message no-reply">תראה, כמו שיניב כתב למעלה, לאנשים הרבה יותר חשוב ווידג׳ט יפה מתחזית מדוייקת. ווידג׳ט עם שלוש עמודות יראה עלוב מדי.</p>
                 
                 
             </li>
@@ -255,7 +254,7 @@
                     
           (10 בינואר 2012 בשעה 13:45): 
         </p>
-                <p>חבל שאנשים לא משתפים פעולה. לכמה אנשים יש כבר מק? אוף. בכל מקרה, עדיף שלושה ימים על כלום.</p>
+                <p class="comment-message no-reply">חבל שאנשים לא משתפים פעולה. לכמה אנשים יש כבר מק? אוף. בכל מקרה, עדיף שלושה ימים על כלום.</p>
                 
                 
             </li>
@@ -280,7 +279,7 @@
     </div>
 
     </main>
-    <footer class="bg-gray-900 pb-10">
+    <footer class="bg-ink pb-10">
   <p class="block text-center text-sm mb-6">
     CC-BY-SA
     <a href="/">

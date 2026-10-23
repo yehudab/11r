@@ -50,14 +50,14 @@
   <nav class="container mx-auto max-w-3xl px-8 pt-2 flex flex-wrap justify-between items-center">
     <!-- Branding -->
     <div>
-      <h1>
+      <p class="site-title">
         <a href="/">בלוג פשוט</a>
-      </h1>
-      <p>צר עולמי כ  U+200A</p>
+      </p>
+      <p class="site-description">צר עולמי כ  U+200A</p>
     </div>
 
     <!-- Hamburger Button -->
-    <button id="menu-toggle" class="block md:hidden text-gray-700 focus:outline-hidden">
+    <button id="menu-toggle" class="block md:hidden text-heading focus:outline-hidden">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
       </svg>
@@ -82,105 +82,105 @@
       
     <p></p>
     <div>
-        <h2 class="mb-2">מדריך למתחילים בסקראץ׳</h2>
+        <h1 class="mb-3">מדריך למתחילים בסקראץ׳</h1>
 
         
-            <div class="mb-2">
-                <a class="tag סקראץ׳" href="/tag/סקראץ׳/">סקראץ׳</a><a class="tag קוד פתוח ותוכנה חופשית" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a>
-            </div>
-        
+<div class="post-meta">
+    <span>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        נכתב ב<time datetime="2014-08-16T18:02:22.000+03:00">16 באוגוסט 2014</time>
+    </span>
+    <span>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        4 דקות קריאה
+    </span>
+    <a class="comments-count" href="#comments">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9 9 0 0 1-4-.9L3 21l1.9-5A8.4 8.4 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z"/></svg>
+        5 תגובות
+    </a>
+    <span class="tags">
+            <a class="tag" href="/tag/סקראץ׳/">סקראץ׳</a>
+            <a class="tag" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a>
+    </span>
+</div>
 
-        
-            <p class="text-sm italic mb-2">נכתב ב<span datetime="2014-08-16T18:02:22.000+03:00">16 באוגוסט 2014</span>.
-            </p>
-        
-
-        
-        
-            <p class="text-sm italic">
-                <a class="comments-count" 
-                    href="#comments">
-                    5 תגובות
-                </a>
-            </p>
-        
 
         <div class="content post" data-pagefind-body>
             <p>[פוסט זה הוא תרגום של מדריך המשתמש הרשמי של Scratch. תוכלו להוריד את המדריך באנגלית מ<a href="http://scratch.mit.edu/help/">דף העזרה באתר</a>. הזכויות למקור שמורות ל Lifelong Kindergarten Group, MIT Media Lab. מופץ ברשיון CC-BY-SA 2.0]</p>
-<p><img src="/img/2014/08/Scratch_cat_med.png" alt="Scartch Cat"></p>
+<figure><img src="/img/2014/08/Scratch_cat_med.png" alt="Scartch Cat"><figcaption aria-hidden="true">Scartch Cat</figcaption></figure>
 <p><strong>סקראץ׳</strong> (Scratch) היא שפת תיכנות שמאפשרת ליצור סיפורים אינטראקטיביים, אנימציות, משחקים, מוזיקה ואומנות.</p>
-<p><img src="/img/2014/08/getting-started-0-a.png" alt="מסך לדוגמה מסקראץ׳"></p>
+<figure><img src="/img/2014/08/getting-started-0-a.png" alt="מסך לדוגמה מסקראץ׳"><figcaption aria-hidden="true">מסך לדוגמה מסקראץ׳</figcaption></figure>
 <p>המדריך הזה יאפשר לכם ליצור פרויקט ב<strong>סקראץ׳</strong>.</p>
 <p>ליצירת פרויקט חדש, גשו לאתר: <a href="http://scratch.mit.edu">http://scratch.mit.edu</a>. אם האתר נפתח באנגלית, ניתן לשנות את שפת הממשק מהתפריט בתחתית הדף. לאחר מכן, לחצו על הכפתור צור.<br>
 <img src="/img/2014/08/getting-started-0-b.png" alt="צור"></p>
 <p>אם יש לכם כבר חשבון ב<strong>סקראץ׳</strong>, הכנסו למערכת כדי שהפריוקט שלכם ישמר.<br>
 <img src="/img/2014/08/getting-started-0-c.png" alt="כניסה"></p>
 <h2>1 – התחילו לזוז</h2>
-<p><img src="/img/2014/08/getting-started-1.png" alt="לבנת זוז"></p>
+<figure><img src="/img/2014/08/getting-started-1.png" alt="לבנת זוז"><figcaption aria-hidden="true">לבנת זוז</figcaption></figure>
 <p>גררו לבנת <strong>זוז</strong> לאזור התסריטים.</p>
-<p><img src="/img/2014/08/getting-started-2.png" alt="לחצו על הלבנה"></p>
+<figure><img src="/img/2014/08/getting-started-2.png" alt="לחצו על הלבנה"><figcaption aria-hidden="true">לחצו על הלבנה</figcaption></figure>
 <p>לחצו על הלבנה כדי לגרום לחתול לזוז.</p>
 <h2>2 – הוסיפו צלילים</h2>
-<p><img src="/img/2014/08/getting-started-3.png" alt="לבנת נגן בתוף"></p>
+<figure><img src="/img/2014/08/getting-started-3.png" alt="לבנת נגן בתוף"><figcaption aria-hidden="true">לבנת נגן בתוף</figcaption></figure>
 <p>גררו לבנת <strong>נגן בתוף</strong> וחברו אותה ללבנת ה<strong>זוז</strong>.</p>
-<p><img src="/img/2014/08/getting-started-4.png" alt="לחצו והקשיבו"></p>
+<figure><img src="/img/2014/08/getting-started-4.png" alt="לחצו והקשיבו"><figcaption aria-hidden="true">לחצו והקשיבו</figcaption></figure>
 <p>לחצו והקשיבו.<br>
 <em>אם לא הצלחתם לשמוע, בדקו שהרמקול במחשב שלכם מופעל.</em></p>
-<p><img src="/img/2014/08/getting-started-5.png" alt="החלפת צלילים"></p>
+<figure><img src="/img/2014/08/getting-started-5.png" alt="החלפת צלילים"><figcaption aria-hidden="true">החלפת צלילים</figcaption></figure>
 <p>תוכלו לבחור סוג אחר של תופים מהתפריט.</p>
 <h2>3 – התחילו ריקוד</h2>
-<p><img src="/img/2014/08/getting-started-6.png" alt="הוספת לבנת זוז חדשה"></p>
+<figure><img src="/img/2014/08/getting-started-6.png" alt="הוספת לבנת זוז חדשה"><figcaption aria-hidden="true">הוספת לבנת זוז חדשה</figcaption></figure>
 <p>הוסיפו לבנת <strong>זוז</strong> חדשה. לחצו בתוך הלבנה והוסיפו סימן מינוס.</p>
-<p><img src="/img/2014/08/getting-started-7.png" alt="לחצו להפעלה"></p>
+<figure><img src="/img/2014/08/getting-started-7.png" alt="לחצו להפעלה"><figcaption aria-hidden="true">לחצו להפעלה</figcaption></figure>
 <p>לחצו על כל אחת מהלבנים כדי להריץ את כל הערמה.</p>
-<p><img src="/img/2014/08/getting-started-8.png" alt="לבנת נגן בתוף נוספת"></p>
+<figure><img src="/img/2014/08/getting-started-8.png" alt="לבנת נגן בתוף נוספת"><figcaption aria-hidden="true">לבנת נגן בתוף נוספת</figcaption></figure>
 <p>הוסיפו לבנת <strong>נגן בתוף</strong> חדשה, והחליפו את סוג התוף מהתפריט. לחצו להרצה.</p>
 <h2>4 – שוב ושוב</h2>
-<p><img src="/img/2014/08/getting-started-9.png" alt="לבנת חזור"></p>
+<figure><img src="/img/2014/08/getting-started-9.png" alt="לבנת חזור"><figcaption aria-hidden="true">לבנת חזור</figcaption></figure>
 <p>גררו לבנת <strong>חזור</strong> והצמידו אותה לראש הערמה. הפה של לבנת ה<strong>חזור</strong> צריך לעטוף את שאר הלבנים.</p>
 <p><em>כדי לגרור את הערמה, יש לתפוס אותה מהלבנה העליונה.</em></p>
-<p><img src="/img/2014/08/getting-started-10.png" alt="שינוי מספר החזרות"></p>
+<figure><img src="/img/2014/08/getting-started-10.png" alt="שינוי מספר החזרות"><figcaption aria-hidden="true">שינוי מספר החזרות</figcaption></figure>
 <p>תוכלו לשנות את מספר החזרות שיבוצעו.</p>
 <p>לחצו כדי להריץ.<br>
 <em>אפשר ללחוץ על כל אחת מהלבנים להרצת הערמה כולה.</em></p>
 <h2>5 – אמרו משהו</h2>
-<p><img src="/img/2014/08/getting-started-11.png" alt="לבנת אמור"></p>
+<figure><img src="/img/2014/08/getting-started-11.png" alt="לבנת אמור"><figcaption aria-hidden="true">לבנת אמור</figcaption></figure>
 <p>לחצו על קטגוריית ה<strong>מראה</strong> וגגרו החוצה לבנת <strong>אמור</strong>.</p>
-<p><img src="/img/2014/08/getting-started-12.png" alt="שינוי טקסט"></p>
+<figure><img src="/img/2014/08/getting-started-12.png" alt="שינוי טקסט"><figcaption aria-hidden="true">שינוי טקסט</figcaption></figure>
 <p>לחצו בתוך לבנת ה<strong>אמור</strong> והקלידו כדי לשנות את המילים. לחצו כדי לנסות.</p>
-<p><img src="/img/2014/08/getting-started-13.png" alt="חברו לראש הערמה"></p>
+<figure><img src="/img/2014/08/getting-started-13.png" alt="חברו לראש הערמה"><figcaption aria-hidden="true">חברו לראש הערמה</figcaption></figure>
 <p>אחר-כך, חברו את לבנת ה<strong>אמור</strong> להתחלה.</p>
 <h2>6 – דגל ירוק</h2>
-<p><img src="/img/2014/08/getting-started-14.png" alt="כאשר לוחצים על הדגל הירוק"></p>
+<figure><img src="/img/2014/08/getting-started-14.png" alt="כאשר לוחצים על הדגל הירוק"><figcaption aria-hidden="true">כאשר לוחצים על הדגל הירוק</figcaption></figure>
 <p>גררו לבנת <img src="/img/2014/08/15.png" alt="כאשר לוחצים על הדגל הירוק"> וחברו אותה להתחלה.</p>
-<p><img src="/img/2014/08/16.png" alt="הפעלת הדגל הירוק"></p>
+<figure><img src="/img/2014/08/16.png" alt="הפעלת הדגל הירוק"><figcaption aria-hidden="true">הפעלת הדגל הירוק</figcaption></figure>
 <p>בכל פעם שלוחצים על הדגל הירוק, התסריט מתחיל לפעול.<br>
 להפסקה, לחצו על כפתור העצור.</p>
 <h2>7 – שנו צבע</h2>
 <p>עכשיו, נסו משהו שונה…</p>
-<p><img src="/img/2014/08/17.png" alt="לבנת שנה אפקט"></p>
+<figure><img src="/img/2014/08/17.png" alt="לבנת שנה אפקט"><figcaption aria-hidden="true">לבנת שנה אפקט</figcaption></figure>
 <p>גררו לבנת <strong>שנה אפקט</strong>.</p>
 <p><img src="/img/2014/08/18.png" alt="לחצו על לבנת שנה אפקט"><br>
 לחצו כדי לראות מה קורה.</p>
 <h2>8 – לחיצה על מקשים</h2>
-<p><img src="/img/2014/08/19.png" alt="לבנת כאשר נלחץ מקש"></p>
+<figure><img src="/img/2014/08/19.png" alt="לבנת כאשר נלחץ מקש"><figcaption aria-hidden="true">לבנת כאשר נלחץ מקש</figcaption></figure>
 <p>חברו לבנת <img src="/img/2014/08/20.png" alt="כאשר נלחץ מקש"></p>
 <p>עכשיו, לחצו על מקש הרווח במקלדת שלכם.</p>
-<p><img src="/img/2014/08/21.png" alt="בחירת מקש"></p>
+<figure><img src="/img/2014/08/21.png" alt="בחירת מקש"><figcaption aria-hidden="true">בחירת מקש</figcaption></figure>
 <p>תוכלו לבחור מקש שונה מהתפריט</p>
 <h2>9 – הוסיפו רקע</h2>
 <p>תוכלו להוסיף רקע לבמה.</p>
-<p><img src="/img/2014/08/22b.png" alt="בחירת רקע"></p>
+<figure><img src="/img/2014/08/22b.png" alt="בחירת רקע"><figcaption aria-hidden="true">בחירת רקע</figcaption></figure>
 <p>לחצו <img src="/img/2014/08/22a.png" alt="כפתור רקע"> כדי לבחור רקע חדש.</p>
 <p>בחרו רקע מהספריה (למשל &quot;spotlight-stage&quot;).</p>
-<p><img src="/img/2014/08/23.png" alt="ספרית הרקעים"></p>
+<figure><img src="/img/2014/08/23.png" alt="ספרית הרקעים"><figcaption aria-hidden="true">ספרית הרקעים</figcaption></figure>
 <p>לחצו <strong>אישור</strong>.</p>
 <p>הרקע החדש מופיע כעת על הבמה.</p>
-<p><img src="/img/2014/08/24.png" alt="הרקע החדש"></p>
+<figure><img src="/img/2014/08/24.png" alt="הרקע החדש"><figcaption aria-hidden="true">הרקע החדש</figcaption></figure>
 <h2>10 – הוסיפו דמות</h2>
 <p>כל אוביקט (משתתף) ב<strong>סקראץ׳</strong> נקרא <strong>דמות</strong>.<br>
 להוספת דמות חדשה, לחצו על אחד הכפתורים האלה:</p>
-<p><img src="/img/2014/08/25.png" alt="כפתורי הוספת דמות"></p>
+<figure><img src="/img/2014/08/25.png" alt="כפתורי הוספת דמות"><figcaption aria-hidden="true">כפתורי הוספת דמות</figcaption></figure>
 <p><strong>כפתורי הוספת דמות:</strong></p>
 <p><img src="/img/2014/08/26.png" alt="דמות מהספריה"> בחרו דמות מהספריה</p>
 <p><img src="/img/2014/08/27.png" alt="צייר דמות"> ציירו דמות משלכם</p>
@@ -213,7 +213,7 @@
 תנו שם לפרויקט שלכם.</p>
 <p>לרעיונות נוספים, לחצו על טיפים:<br>
 <img src="/img/2014/08/39.png" alt="טיפים"></p>
-<p><img src="/img/2014/08/tips.png" alt="חלון טיפים"></p>
+<figure><img src="/img/2014/08/tips.png" alt="חלון טיפים"><figcaption aria-hidden="true">חלון טיפים</figcaption></figure>
 <p>חלון הטיפים מראה דוגמאות תסריטים שבהם תוכלו להשתמש בפרויקט.</p>
 <p>הוא גם מסביר מה כל אחת מהלבנים של <strong>סקראץ׳</strong> עושה.</p>
 <h2>שמור ושתף</h2>
@@ -246,7 +246,7 @@
                     
           (20 באוגוסט 2014 בשעה 17:28): 
         </p>
-                <p>אוי, זה פלאש ולכן העברית הפוכה בלינוקס.</p>
+                <p class="comment-message no-reply">אוי, זה פלאש ולכן העברית הפוכה בלינוקס.</p>
                 
                 
                     
@@ -259,7 +259,7 @@
                     
           (20 באוגוסט 2014 בשעה 19:32): 
         </p>
-                <p>כן, זה פלאש. 
+                <p class="comment-message no-reply">כן, זה פלאש. 
 אתה יכול לנסות להתקין את הגרסה הקודמת (1.4) שאינה עובדת מהדפדפן, ולכן לא תלויה בפלאש. לא בדקתי את התמיכה שלה בעברית על לינוקס.
 ההוראות להתקנה כאן:
 http://scratch.mit.edu/scratch_1.4</p>
@@ -275,7 +275,7 @@ http://scratch.mit.edu/scratch_1.4</p>
                     
           (21 באוגוסט 2014 בשעה 14:41): 
         </p>
-                <p>אני גם יכול להשתמש בכרומיום עם הפלאש של גוגל ששם הבעיה תוקנה. סתם מעצבן שיש עוד אתרים עם פלאש.</p>
+                <p class="comment-message no-reply">אני גם יכול להשתמש בכרומיום עם הפלאש של גוגל ששם הבעיה תוקנה. סתם מעצבן שיש עוד אתרים עם פלאש.</p>
                 
                 
             </li>
@@ -297,7 +297,7 @@ http://scratch.mit.edu/scratch_1.4</p>
                     
           (22 ביוני 2015 בשעה 17:51): 
         </p>
-                <p>אני  רוצה   לשחק  בסקראץ&#39;  למתחילים</p>
+                <p class="comment-message no-reply">אני  רוצה   לשחק  בסקראץ&#39;  למתחילים</p>
                 
                 
                     
@@ -310,7 +310,7 @@ http://scratch.mit.edu/scratch_1.4</p>
                     
           (22 ביוני 2015 בשעה 23:03): 
         </p>
-                <p>הי טוהר,
+                <p class="comment-message no-reply">הי טוהר,
 אתה מוזמן לעקוב אחרי ההוראות בכתבה הזו.</p>
                 
                 
@@ -341,7 +341,7 @@ http://scratch.mit.edu/scratch_1.4</p>
     </div>
 
     </main>
-    <footer class="bg-gray-900 pb-10">
+    <footer class="bg-ink pb-10">
   <p class="block text-center text-sm mb-6">
     CC-BY-SA
     <a href="/">

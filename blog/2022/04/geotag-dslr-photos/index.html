@@ -50,14 +50,14 @@
   <nav class="container mx-auto max-w-3xl px-8 pt-2 flex flex-wrap justify-between items-center">
     <!-- Branding -->
     <div>
-      <h1>
+      <p class="site-title">
         <a href="/">בלוג פשוט</a>
-      </h1>
-      <p>צר עולמי כ  U+200A</p>
+      </p>
+      <p class="site-description">צר עולמי כ  U+200A</p>
     </div>
 
     <!-- Hamburger Button -->
-    <button id="menu-toggle" class="block md:hidden text-gray-700 focus:outline-hidden">
+    <button id="menu-toggle" class="block md:hidden text-heading focus:outline-hidden">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
       </svg>
@@ -82,28 +82,28 @@
       
     <p></p>
     <div>
-        <h2 class="mb-2">תיוג מיקום במצלמת DSLR</h2>
+        <h1 class="mb-3">תיוג מיקום במצלמת DSLR</h1>
 
         
-            <div class="mb-2">
-                <a class="tag Geotagging" href="/tag/Geotagging/">Geotagging</a><a class="tag קוד פתוח ותוכנה חופשית" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a>
-            </div>
-        
+<div class="post-meta">
+    <span>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        נכתב ב<time datetime="2022-04-23T11:37:27.000+03:00">23 באפריל 2022</time>
+    </span>
+    <span>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        2 דקות קריאה
+    </span>
+    <a class="comments-count" href="#comments">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9 9 0 0 1-4-.9L3 21l1.9-5A8.4 8.4 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z"/></svg>
+        2 תגובות
+    </a>
+    <span class="tags">
+            <a class="tag" href="/tag/Geotagging/">Geotagging</a>
+            <a class="tag" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית</a>
+    </span>
+</div>
 
-        
-            <p class="text-sm italic mb-2">נכתב ב<span datetime="2022-04-23T11:37:27.000+03:00">23 באפריל 2022</span>.
-            </p>
-        
-
-        
-        
-            <p class="text-sm italic">
-                <a class="comments-count" 
-                    href="#comments">
-                    2 תגובות
-                </a>
-            </p>
-        
 
         <div class="content post" data-pagefind-body>
             <p>אחרי שנים רבות של צילום במצלמת הטלפון בלבד, החלטתי לחזור למקורות ולקנות מצלמה דיגיטלית ״אמיתית״. בחרתי <a href="https://www.dpreview.com/products/canon/slrs/canon_eos2000d" title="Canon EOS 2000D">בדגם כניסה של Canon</a>, וצימדתי לו <a href="https://www.dpreview.com/products/canon/lenses/canon_50_1p8_stm" title="Canon EF 50mm F1.8 STM">עדשת פריים טובה</a>, ועוד כמה עדשות זום סבירות.</p>
@@ -113,12 +113,10 @@
 <ol>
 <li>
 <p>הקלטת מסלול ההליכה. את זה אני בדרך-כלל עושה ממילא כדי לדעת נתונים כמו מרחק וקצב ההליכה, כמות עליות וירידות, ולפעמים כדי למצוא את הרכב בסוף המסלול. אני משתמש באפליקציה החינמית <a href="https://www.gaiagps.com">Gaia GPS</a>, אבל כל אפליקציה שיודעת ליצא קבצי GPX של המסלול תעשה את העבודה. במקרה של האפליקציה הזאת, ההקלטה גם נשמרת בענן, ואפשר בקלות להוריד אותה למחשב דרך האתר שלהם:</p>
-<p><img src="/img/2022/04/gaia-gps-export-to-gpx.png" alt=""></p>
-</li>
+<img src="/img/2022/04/gaia-gps-export-to-gpx.png" alt=""></li>
 <li>
 <p>סינכרון הזמנים בין שעון המצלמה לשעון הטלפון. לכל צורך מעשי, מספיק לעדכן פעם בשבוע-שבועיים את שעון המצלמה. מצד שני, לכל צורך מעשי כנראה מספיק לצלם בטלפון, אז לא בשביל זה באנו לכאן... מה שאני עושה הוא לצלם במצלמת ה DSLR קוד QR שמוצג על הטלפון ומתחלף כל שניה ומכיל את התאריך והשעה המדוייקים. הצילום מכיל כמטא-דתה את השעה בשעון המצלמה, וה QR מקודד את השעה המדוייקת וכך ניתן לדעת מה ההפרש. הייתי בטוח שיש המון אפליקציות שמציגות את השעה ב-QR-ית, אבל לא מצאתי. מה שכן מצאתי הוא <a href="https://github.com/kaelhem/qr-clock" title="QR clock by kaelhem">אפליקציית ווב בקוד פתוח</a>, אבל היא הציגה את התאריך בפורמט לא נח לפרסור, אז <a href="https://github.com/yehudab/qr-clock" title="QR clock GitHub repo">מיזלגתי אותה</a> והעלתי עותק פרטי <a href="https://apps.yehudab.com/qr-clock/" title="QR Clock">לאתר שלי</a>. ככה נראה צילום כזה:</p>
-<p><img src="/img/2022/04/qr-clock.jpg" alt=""></p>
-</li>
+<img src="/img/2022/04/qr-clock.jpg" alt=""></li>
 <li>
 <p>הורדת קבצי ההליכה והתמונות (כולל תמונת ה QR) למחשב והפעלת סקריפט שמתייג את המיקום תוך כדי ההתחשבות בהפרש הזמנים. לשם כך אני משתמש בשתי תוכנות בקוד פתוח: <a href="https://github.com/mchehab/zbar" title="zbar GitHub repo">zbar</a> שיודעת לחלץ את השעה מקוד ה QR, ו-<a href="https://exiftool.org">ExifTool</a> שיודעת לחלץ את שעת הצילום מתמונת שעון ה-QR  ולתייג מיקום ע״פ קובץ GPX והפרש זמנים. את הסקריפט עצמו (גרסה למק, יתכן שלא יעבוד as-is בלינוקס) אפשר למצוא ב <a href="https://github.com/yehudab/things/blob/main/geotag.sh" title="geotag.sh in GitHub">GitHub שלי</a>.</p>
 <p>בהנחה שהקלטת המסלול נשמרה בקובץ: track.pgx, תמונת שעון ה QR נשמרה בקובץ qr.jpeg, וכל התמונות מהמסלול הזה נשמרו בתיקיה הנוכחית, הפעלת הסקירפט נעשית ע״י שורה אחת:</p>
@@ -126,8 +124,7 @@
 </ol>
 <pre class="language-bash"><code class="language-bash">geotag.sh qr.jpeg track.gpx</code></pre>
 <p>עכשיו נוכל לראות את התמונות בדיוק במקום שבו הן צולמו:</p>
-<p><img src="/img/2022/04/photo-in-gaig-gps-after-geo-tagging.png" alt=""></p>
-
+<img src="/img/2022/04/photo-in-gaig-gps-after-geo-tagging.png" alt="">
         </div>
 
 
@@ -145,7 +142,7 @@
                     
           (25 באפריל 2022 בשעה 20:11): 
         </p>
-                <p>אני לא מבין למה אצלך היה מסובך. אני משתמש ב-exiftool בשביל לתייג תמונות ממצלמה די ישנה לפי קובץ gpx בלי שום qr. השעה במצלמה מכוונת ידנית ולא צריך יותר. 
+                <p class="comment-message no-reply">אני לא מבין למה אצלך היה מסובך. אני משתמש ב-exiftool בשביל לתייג תמונות ממצלמה די ישנה לפי קובץ gpx בלי שום qr. השעה במצלמה מכוונת ידנית ולא צריך יותר. 
 הפקודה הזו מספיקה:
 &lt;code&gt;exiftool -geotag ./*.gpx -overwrite_original&lt;/code&gt; .</p>
                 
@@ -160,7 +157,7 @@
                     
           (25 באפריל 2022 בשעה 22:17): 
         </p>
-                <p>כמו שכתבתי בפוסט: ״לכל צורך מעשי, מספיק לעדכן פעם בשבוע-שבועיים את שעון המצלמה״. החלק של ה QR הוא באמת nice to have, וגם סוג של תרגיל באיסוף של כלים בקוד פתוח.</p>
+                <p class="comment-message no-reply">כמו שכתבתי בפוסט: ״לכל צורך מעשי, מספיק לעדכן פעם בשבוע-שבועיים את שעון המצלמה״. החלק של ה QR הוא באמת nice to have, וגם סוג של תרגיל באיסוף של כלים בקוד פתוח.</p>
                 
                 
             </li>
@@ -190,7 +187,7 @@
     </div>
 
     </main>
-    <footer class="bg-gray-900 pb-10">
+    <footer class="bg-ink pb-10">
   <p class="block text-center text-sm mb-6">
     CC-BY-SA
     <a href="/">

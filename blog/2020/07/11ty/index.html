@@ -50,14 +50,14 @@
   <nav class="container mx-auto max-w-3xl px-8 pt-2 flex flex-wrap justify-between items-center">
     <!-- Branding -->
     <div>
-      <h1>
+      <p class="site-title">
         <a href="/">בלוג פשוט</a>
-      </h1>
-      <p>צר עולמי כ  U+200A</p>
+      </p>
+      <p class="site-description">צר עולמי כ  U+200A</p>
     </div>
 
     <!-- Hamburger Button -->
-    <button id="menu-toggle" class="block md:hidden text-gray-700 focus:outline-hidden">
+    <button id="menu-toggle" class="block md:hidden text-heading focus:outline-hidden">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
       </svg>
@@ -82,37 +82,38 @@
       
     <p></p>
     <div>
-        <h2 class="mb-2">11ty</h2>
+        <h1 class="mb-3">11ty</h1>
 
         
-            <div class="mb-2">
-                <a class="tag SSG" href="/tag/SSG/">SSG</a><a class="tag 11ty" href="/tag/11ty/">11ty</a><a class="tag בלוג" href="/tag/בלוג/">בלוג</a>
-            </div>
-        
+<div class="post-meta">
+    <span>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        נכתב ב<time datetime="2020-07-31T21:01:27.000+03:00">31 ביולי 2020</time>
+    </span>
+    <span>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        2 דקות קריאה
+    </span>
+    <a class="comments-count" href="#comments">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9 9 0 0 1-4-.9L3 21l1.9-5A8.4 8.4 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z"/></svg>
+        2 תגובות
+    </a>
+    <span class="tags">
+            <a class="tag" href="/tag/SSG/">SSG</a>
+            <a class="tag" href="/tag/11ty/">11ty</a>
+            <a class="tag" href="/tag/בלוג/">בלוג</a>
+    </span>
+</div>
 
-        
-            <p class="text-sm italic mb-2">נכתב ב<span datetime="2020-07-31T21:01:27.000+03:00">31 ביולי 2020</span>.
-            </p>
-        
-
-        
-        
-            <p class="text-sm italic">
-                <a class="comments-count" 
-                    href="#comments">
-                    2 תגובות
-                </a>
-            </p>
-        
 
         <div class="content post" data-pagefind-body>
             <p>המעבר לשרת חדש גרם לי לחשוב שוב על WordPress והאם הוא עדיין מתאים לבלוגים ב-2020. כאשר התחלתי את האתר, PHP הייתה אחת משתי שפות התכנות המובילות לווב (יחד עם העולה החדש דאז Ruby on Rails). מאוחר יותר זו גם הייתה שפת התכנות בה עבדתי, וזה נראה לי טבעי להמשיך איתה. מאז עברתי לסביבה חדשה מבוססת NodeJS, ו-PHP נראית לי כמו עוף מוזר (שלא לאמר דינוזאור).</p>
 <p>אחרי בחינה של מספר אפשרויות, הגעתי למסקנה שהנתיב הטבעי להמשך הוא Static Site Generators (SSG). הרעיון כאן הוא ליצר את קבצי ה HTML של האתר מתוך התכנים הדינמיים, ומכאן והלאה ההגשה לדפדפן נעשית של קבצים סטטיים בלבד. מתוך <a href="https://gohugo.io/" title="HUGO">המגוון</a> <a href="https://jekyllrb.com/" title="Jekyll">הגדול</a> של <a href="https://vuepress.vuejs.org/" title="VuePress">האפשרויות</a>, בחרתי את <a href="https://www.11ty.dev/">Eleventy</a> (או בקיצור 11ty). הוא מבוסס NodeJS, ויחסית לאחיו הוותיק יותר (<a href="https://www.gatsbyjs.org/">Gatsby</a>), הוא פחות אפליקציה ויותר SSG טהור.</p>
 <p>ייצור האתר נעשה ע&quot;י הגדרת תבניות והפעלה שלהן על תוכן האתר שהוא קבצי Markdown. את קבצי התוכן שומרים ב git יחד עם הקוד של האתר, כך שנוצר סוג של בלבול בינהם. כדי לבצע את ההפרדה בצורה טובה יותר וגם בגלל <a href="https://talk.commonmark.org/t/explicit-rtl-indication-in-pure-markdown/286/4" title="דיון ארוך שבסופו הוחלט שלא עושים כלום ותסדרו לבד">התמיכה הבעייתית של Markdown בעברית</a>, בחרתי להשתמש ב Headless CMS: מערכת ניהול תוכן, שבה כתיבה התכנים מנותקת מההצגה שלהן (בניגוד ל WordPress שבה העריכה והתצוגה נעשים באותה מערכת). הרעיון כאן הוא לאפשר לכותבי תוכן שאינם מכירים קוד או אפילו Markdown לערוך את התוכן דרך עורך יעודי (סטייל WordPress), כאשר הקבצים נשלחים מהעורך אל ה git-repo. יתרון משמעותי ליושבים בציון (ובשאר המזרח התיכון) הוא האפשרות לתמיכה הרבה יותר טובה בעריכה ב-RTL.</p>
 <p>ל Headless CMS בחרתי את <a href="https://forestry.io/">Forestry</a> (ישנן אלטרנטיבות נוספות כמו: <a href="https://www.contentful.com/">Contentful</a>, <a href="https://www.netlifycms.org/">Netlify CMS</a>), שנראית לי הנקייה ביותר לשימוש. בניגוד ל Contentful, אין לה תמיכה מובנית ב-RTL, אבל באמצעות תפריט &quot;הפוך כוון כתיבה&quot; של Firefox, אפשר לערוך את התוכן בקלות. ל Forestry יש גם תמיכה נוחה בעריכת ה meta-data של הפוסטים (כותרת, קטגוריות וכד'), כך שמקבלים כמעט חוויה מלאה של עורך תוכן משולב, כמו שניתן לראות כאן:</p>
-<p><img src="/img/2020/07/forestry-edit-post.png" alt=""></p>
+<img src="/img/2020/07/forestry-edit-post.png" alt="">
 <p>לצורך השוואה, כך נראה ה Markdown של אותו הפוסט ב GitHub:</p>
-<p><img src="/img/2020/07/github-edit-post.png" alt=""></p>
+<img src="/img/2020/07/github-edit-post.png" alt="">
 <p>אז איך עושים את המעבר? על כך בפוסט הבא.</p>
 
         </div>
@@ -132,7 +133,7 @@
                     
           (5 באוקטובר 2020 בשעה 21:23): 
         </p>
-                <p>אם המטרה של קבצים סטטיים היא מהירות אז וורדפרס עם תוסף מטמון תגיש גם קבצים סטטיים ותהיה קלה יותר להקמה ותחזוקה.</p>
+                <p class="comment-message no-reply">אם המטרה של קבצים סטטיים היא מהירות אז וורדפרס עם תוסף מטמון תגיש גם קבצים סטטיים ותהיה קלה יותר להקמה ותחזוקה.</p>
                 
                 
                     
@@ -145,7 +146,7 @@
                     
           (6 באוקטובר 2020 בשעה 6:08): 
         </p>
-                <p>אתה צודק בעניין ההקמה והתחזוקה, אבל מבחינת המהירות וורדפרס אף פעם לא תגיע לזמנים של אתר סטטי. 
+                <p class="comment-message no-reply">אתה צודק בעניין ההקמה והתחזוקה, אבל מבחינת המהירות וורדפרס אף פעם לא תגיע לזמנים של אתר סטטי. 
 לא שזה כזה קריטי לבלוג כמו שלי. מטרת התרגיל שלי כאן הייתה בעיקר להראות שזה אפשר, וגם לעבור לטכנולוגיה שאני אוהב יותר.</p>
                 
                 
@@ -176,7 +177,7 @@
     </div>
 
     </main>
-    <footer class="bg-gray-900 pb-10">
+    <footer class="bg-ink pb-10">
   <p class="block text-center text-sm mb-6">
     CC-BY-SA
     <a href="/">

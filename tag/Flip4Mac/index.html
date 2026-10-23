@@ -50,14 +50,14 @@
   <nav class="container mx-auto max-w-3xl px-8 pt-2 flex flex-wrap justify-between items-center">
     <!-- Branding -->
     <div>
-      <h1>
+      <h1 class="site-title">
         <a href="/">בלוג פשוט</a>
       </h1>
-      <p>צר עולמי כ  U+200A</p>
+      <p class="site-description">צר עולמי כ  U+200A</p>
     </div>
 
     <!-- Hamburger Button -->
-    <button id="menu-toggle" class="block md:hidden text-gray-700 focus:outline-hidden">
+    <button id="menu-toggle" class="block md:hidden text-heading focus:outline-hidden">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
       </svg>
@@ -91,7 +91,7 @@
                 <img
                 class="w-full aspect-square object-cover object-center"
                 src="/img/2008/08/flip-4-mac-beta-1.png"
-                alt={props.instance.frontmatter.imgAlt}
+                alt=""
                 loading="lazy"
                 />
             </div><div class="px-3 pt-4 pb-6 ">
@@ -170,6 +170,14 @@
     
         <a class="tag mx-auto" href="/tag/Google wave/">Google wave&rlm; (2)</a>
     
+        <a class="tag mx-auto" href="/tag/ווידג׳טים/">ווידג׳טים&rlm; (10)</a>
+    
+        <a class="tag mx-auto" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית&rlm; (14)</a>
+    
+        <a class="tag mx-auto" href="/tag/חולצה/">חולצה&rlm; (1)</a>
+    
+        <a class="tag mx-auto" href="/tag/מזג אויר/">מזג אויר&rlm; (2)</a>
+    
         <a class="tag mx-auto" href="/tag/בלוגיה/">בלוגיה&rlm; (1)</a>
     
         <a class="tag mx-auto" href="/tag/תפוז/">תפוז&rlm; (1)</a>
@@ -182,21 +190,13 @@
     
         <a class="tag mx-auto" href="/tag/speedtraps/">speedtraps&rlm; (1)</a>
     
-        <a class="tag mx-auto" href="/tag/ווידג׳טים/">ווידג׳טים&rlm; (10)</a>
-    
         <a class="tag mx-auto" href="/tag/רכבת ישראל/">רכבת ישראל&rlm; (2)</a>
-    
-        <a class="tag mx-auto" href="/tag/מזג אויר/">מזג אויר&rlm; (2)</a>
-    
-        <a class="tag mx-auto" href="/tag/קוד פתוח ותוכנה חופשית/">קוד פתוח ותוכנה חופשית&rlm; (14)</a>
     
         <a class="tag mx-auto" href="/tag/חלונות/">חלונות&rlm; (1)</a>
     
         <a class="tag mx-auto" href="/tag/wordpress/">wordpress&rlm; (1)</a>
     
         <a class="tag mx-auto" href="/tag/שעון קיץ/">שעון קיץ&rlm; (1)</a>
-    
-        <a class="tag mx-auto" href="/tag/חולצה/">חולצה&rlm; (1)</a>
     
         <a class="tag mx-auto" href="/tag/סקראץ׳/">סקראץ׳&rlm; (1)</a>
     
@@ -233,7 +233,7 @@
 </div>
 
     </main>
-    <footer class="bg-gray-900 pb-10">
+    <footer class="bg-ink pb-10">
   <p class="block text-center text-sm mb-6">
     CC-BY-SA
     <a href="/">

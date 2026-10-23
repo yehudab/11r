@@ -50,14 +50,14 @@
   <nav class="container mx-auto max-w-3xl px-8 pt-2 flex flex-wrap justify-between items-center">
     <!-- Branding -->
     <div>
-      <h1>
+      <p class="site-title">
         <a href="/">בלוג פשוט</a>
-      </h1>
-      <p>צר עולמי כ  U+200A</p>
+      </p>
+      <p class="site-description">צר עולמי כ  U+200A</p>
     </div>
 
     <!-- Hamburger Button -->
-    <button id="menu-toggle" class="block md:hidden text-gray-700 focus:outline-hidden">
+    <button id="menu-toggle" class="block md:hidden text-heading focus:outline-hidden">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
       </svg>
@@ -82,32 +82,31 @@
       
     <p></p>
     <div>
-        <h2 class="mb-2">תודה לכל המצביעים בתחרות הבלוג העצמאי</h2>
+        <h1 class="mb-3">תודה לכל המצביעים בתחרות הבלוג העצמאי</h1>
 
         
-            <div class="mb-2">
-                <a class="tag כללי" href="/tag/כללי/">כללי</a>
-            </div>
-        
+<div class="post-meta">
+    <span>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        נכתב ב<time datetime="2008-11-03T07:19:02.000+02:00">3 בנובמבר 2008</time>
+    </span>
+    <span>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        דקת קריאה אחת
+    </span>
+    <a class="comments-count" href="#comments">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9 9 0 0 1-4-.9L3 21l1.9-5A8.4 8.4 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z"/></svg>
+        10 תגובות
+    </a>
+    <span class="tags">
+            <a class="tag" href="/tag/כללי/">כללי</a>
+    </span>
+</div>
 
-        
-            <p class="text-sm italic mb-2">נכתב ב<span datetime="2008-11-03T07:19:02.000+02:00">3 בנובמבר 2008</span>.
-            </p>
-        
-
-        
-        
-            <p class="text-sm italic">
-                <a class="comments-count" 
-                    href="#comments">
-                    10 תגובות
-                </a>
-            </p>
-        
 
         <div class="content post" data-pagefind-body>
             <p>לא יאומן, אבל 53 מקוראי הבלוג (טוב, 52 כי פעם אחת גם אני הצבעתי לעצמי – כמו מלצרים ששמים קצת כסף קטן בכוס הטיפים) ממש טרחו להצביע עבורי <a href="http://www.blogerim.net/node/39803">בתחרות הבלוגרים העצמאיים</a>.</p>
-<p><img src="/img/2008/11/blogerim-voter-thank-you-1.png" alt="53 הצבעות"></p>
+<figure><img src="/img/2008/11/blogerim-voter-thank-you-1.png" alt="53 הצבעות"><figcaption aria-hidden="true">53 הצבעות</figcaption></figure>
 <p>כשפתחתי את הבלוג לפני 4 חודשים, לא האמנתי שאגיע ל 52 קוראים, אז זה בהחלט הישג נחמד. לא שהגעתי למקמות הראשונים או משהו, אבל בהחלט כיף להיות בדף הפותח (מבין 3) <a href="http://www.blogerim.net/blog-votes?page=2&amp;op0=AND&amp;filter0%5B0%5D=2504">ברשימה הממויינת בקטגוריה &quot;טכנולוגיה ואינטרנט&quot;</a>. אני מבין גם שלא רמת הכתיבה המשובחת שלי כאן זכתה לקרדיט, אלא יותר רמת הכתיבה בסקריפטים, אבל לזה עדיין אין תחרות.</p>
 <p>לשנה הבאה בעשירייה הראשונה.</p>
 
@@ -128,7 +127,7 @@
                     
           (4 בנובמבר 2008 בשעה 1:04): 
         </p>
-                <p>חבל שלא ידעתי על התחרות, הייתי גם אני מצביע לך.
+                <p class="comment-message no-reply">חבל שלא ידעתי על התחרות, הייתי גם אני מצביע לך.
 
 לשנה הבאה במקום הראשון (אם לברך למה להתקמצן?)!</p>
                 
@@ -142,7 +141,7 @@
                     
           (4 בנובמבר 2008 בשעה 1:53): 
         </p>
-                <p>האמת שהתחרות נראתה לי בעייתית קצת.
+                <p class="comment-message no-reply">האמת שהתחרות נראתה לי בעייתית קצת.
 לא היה צורך להרשם כדי להצביע ומה שמנע הצבעה כפולה זה כנראה עוגיה, כך שמחיקה של העוגיה או נטרול עוגיות בדפדפן יכלו לאפשר הצבעות כפולות ומשולשות.</p>
                 
                 
@@ -155,7 +154,7 @@
                     
           (4 בנובמבר 2008 בשעה 8:24): 
         </p>
-                <p>אליהו,
+                <p class="comment-message no-reply">אליהו,
 תודה. לא ממש פירסמתי את העניין, רק שמתי קישור מהדף הראשי של הבלוג. בשנה הבאה, אני אודיע על זה בפוסט.
 
 חתול,
@@ -171,7 +170,7 @@
                     
           (4 בנובמבר 2008 בשעה 14:56): 
         </p>
-                <p>יהודה, אז הצבעת לעצמך 53 פעמים? (:</p>
+                <p class="comment-message no-reply">יהודה, אז הצבעת לעצמך 53 פעמים? (:</p>
                 
                 
             </li>
@@ -183,7 +182,7 @@
                     
           (4 בנובמבר 2008 בשעה 22:35): 
         </p>
-                <p>לא, רק פעם אחת.</p>
+                <p class="comment-message no-reply">לא, רק פעם אחת.</p>
                 
                 
             </li>
@@ -195,7 +194,7 @@
                     
           (6 בנובמבר 2008 בשעה 0:19): 
         </p>
-                <p>נורא קיוויתי שתגיע גבוה יותר, אבל לא יכולתי להביא את עצמי להצביע יותר מפעם אחת. בשנה הבאה וגו&#39;. 
+                <p class="comment-message no-reply">נורא קיוויתי שתגיע גבוה יותר, אבל לא יכולתי להביא את עצמי להצביע יותר מפעם אחת. בשנה הבאה וגו&#39;. 
 אגב, אני מניח (משום שהופתעת ממספר ההצבעות) שאין לך תוסף סטטיסטיקה. אל תתחיל עם זה, זה ממכר. 
 ואם הייתה תחרות כתיבת סקריפטים, אני חושב שהיו צריכים לארגן לך ליגה נפרדת. 
 ואם אני כבר מגיב, מה עם הבארי? הצלחת לסקרן אותי.</p>
@@ -210,7 +209,7 @@
                     
           (6 בנובמבר 2008 בשעה 4:41): 
         </p>
-                <p>נמרוד,
+                <p class="comment-message no-reply">נמרוד,
 תודה. דווקא יש לי תוסף סטיסטיקה (awstats) - וזה בהחלט ממכר, כך שאני יודע שיש לי יותר מ52 קוראים - מה שאמרתי הוא שלא חשבתי שאגיע למספר הזה תוך 4 חודשים, וגם שהופתעתי מכך שכל-כך הרבה מבין הקוראים טרחו להצביע.
 
 את הבארי שמתי בצד בנתיים. מסתבר שהוא דורש תמיכה ב mod_rewrite, שלא הצלחתי להפעיל מקומית על המק. wordpress יודע לעבוד גם ללא התמיכה הזאת. בהחלט אפשר לפתח ולבדוק תבניות גם על השרת שמאכסן את הבלוג, אבל זה הרבה פחות נוח.</p>
@@ -225,7 +224,7 @@
                     
           (12 בנובמבר 2008 בשעה 18:56): 
         </p>
-                <p>יהודה
+                <p class="comment-message no-reply">יהודה
 ראשית איחולים לבביים ...
 ובהזדמנות זו אומר תודה על הבלוג שלך , די הרבה למדתי כאן (חלק הצלחתי ליישם וחלק פחות ...)
 בכל מקרה אני כנראה מאלה שלא יודעים על קיומם כי הם שקטים שקטים .... :)
@@ -241,7 +240,7 @@
                     
           (12 בנובמבר 2008 בשעה 20:18): 
         </p>
-                <p>סמדי,
+                <p class="comment-message no-reply">סמדי,
 (...אחרי המחמאה, אני חייב לענות לך מהר...)
 תודה, וברוכה הבאה.</p>
                 
@@ -255,7 +254,7 @@
                     
           (29 בנובמבר 2008 בשעה 17:35): 
         </p>
-                <p>:)
+                <p class="comment-message no-reply">:)
 (אני לא כ&#39;כ מהירה....)</p>
                 
                 
@@ -281,7 +280,7 @@
     </div>
 
     </main>
-    <footer class="bg-gray-900 pb-10">
+    <footer class="bg-ink pb-10">
   <p class="block text-center text-sm mb-6">
     CC-BY-SA
     <a href="/">

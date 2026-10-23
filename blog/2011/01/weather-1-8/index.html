@@ -50,14 +50,14 @@
   <nav class="container mx-auto max-w-3xl px-8 pt-2 flex flex-wrap justify-between items-center">
     <!-- Branding -->
     <div>
-      <h1>
+      <p class="site-title">
         <a href="/">בלוג פשוט</a>
-      </h1>
-      <p>צר עולמי כ  U+200A</p>
+      </p>
+      <p class="site-description">צר עולמי כ  U+200A</p>
     </div>
 
     <!-- Hamburger Button -->
-    <button id="menu-toggle" class="block md:hidden text-gray-700 focus:outline-hidden">
+    <button id="menu-toggle" class="block md:hidden text-heading focus:outline-hidden">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
       </svg>
@@ -82,28 +82,29 @@
       
     <p></p>
     <div>
-        <h2 class="mb-2">עדכון לווידג׳ט מזג האויר</h2>
+        <h1 class="mb-3">עדכון לווידג׳ט מזג האויר</h1>
 
         
-            <div class="mb-2">
-                <a class="tag ווידג׳טים" href="/tag/ווידג׳טים/">ווידג׳טים</a><a class="tag מזג אויר" href="/tag/מזג אויר/">מזג אויר</a><a class="tag מק" href="/tag/מק/">מק</a>
-            </div>
-        
+<div class="post-meta">
+    <span>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        נכתב ב<time datetime="2011-01-07T19:04:19.000+02:00">7 בינואר 2011</time>
+    </span>
+    <span>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        דקת קריאה אחת
+    </span>
+    <a class="comments-count" href="#comments">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9 9 0 0 1-4-.9L3 21l1.9-5A8.4 8.4 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z"/></svg>
+        2 תגובות
+    </a>
+    <span class="tags">
+            <a class="tag" href="/tag/ווידג׳טים/">ווידג׳טים</a>
+            <a class="tag" href="/tag/מזג אויר/">מזג אויר</a>
+            <a class="tag" href="/tag/מק/">מק</a>
+    </span>
+</div>
 
-        
-            <p class="text-sm italic mb-2">נכתב ב<span datetime="2011-01-07T19:04:19.000+02:00">7 בינואר 2011</span>.
-            </p>
-        
-
-        
-        
-            <p class="text-sm italic">
-                <a class="comments-count" 
-                    href="#comments">
-                    2 תגובות
-                </a>
-            </p>
-        
 
         <div class="content post" data-pagefind-body>
             <p>בעקבות הוספת נתוני הלחות היחסית באתר <a href="http://www.israelweather.co.il/">IsraelWeather</a> נשבר ווידג׳ט מזג האויר. משתמשי מק מוזמנים לשדרג לגרסה 1.8 שמתקנת את התקלה, וכן מציגה את הלחות היחסית באמצעות tooltip. <a href="http://yehudab.com/widgets/WeatherIL-1d8.zip">שדרגו מכאן</a>.<br>
@@ -126,7 +127,7 @@
                     
           (23 בינואר 2011 בשעה 0:16): 
         </p>
-                <p>(מצטער שאין אימייל)
+                <p class="comment-message no-reply">(מצטער שאין אימייל)
 
 יש מצב לסקריפט או משהו שיאפשר חיפוש פסקי-דין/גזרי-דין/כתבי אישום באתר בתי המשפט. אני לא יודע אם זה אפשרי טכנית. אפשר כמובן לחפש דרך גוגל, אבל לא כל הדפים שם נסקרים על ידו והוא פחות מעודכן.
 
@@ -144,7 +145,7 @@ http://mozilla.org.il/evangel.shtml</p>
                     
           (23 בינואר 2011 בשעה 22:55): 
         </p>
-                <p>מר X היקר,
+                <p class="comment-message no-reply">מר X היקר,
 לא כ״כ הבנתי מה הבעיה באתר בתי המשפט (אגב, מה כתובת האתר?) . האם החיפוש לא עובד בכלל, או שרק בפיירפוקס?
 בכל מקרה, אם אתה מצפה להתייחסות רצינית, אני מצפה שתספק לפחות כינוי ואימייל.</p>
                 
@@ -176,7 +177,7 @@ http://mozilla.org.il/evangel.shtml</p>
     </div>
 
     </main>
-    <footer class="bg-gray-900 pb-10">
+    <footer class="bg-ink pb-10">
   <p class="block text-center text-sm mb-6">
     CC-BY-SA
     <a href="/">
