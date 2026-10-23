@@ -116,7 +116,9 @@
         <tr>
             <td>מפת הקטע:</td>
             {% for serial in (data.trailMaps or data.trailSerial) %}
-                <td><a href="/maps/trail-{{ serial }}/#map">🗺️</a></td>
+                {#- Map files are zero-padded (trail-04), map IDs like "29a" are used as-is #}
+                {%- set mapId = ("0" + serial) if serial < 10 else serial %}
+                <td><a href="/maps/trail-{{ mapId }}/#map">🗺️</a></td>
             {% endfor %}
         </tr>
         <tr>

@@ -1,4 +1,4 @@
-{% macro commentsList(comments) %}
+{% macro commentsList(comments, canReply) %}
     <ul>
         {% for comment in comments %}
             <li data-comment-id="{{ comment._id }}">
@@ -11,24 +11,28 @@
           ({{ comment.date | dateAndTime }}): 
         </p>
                 <p>{{ comment.message }}</p>
+                {% if canReply %}
                 <button class="comment-reply">
           להגיב
         </button>
+                {% endif %}
                 {% if comment.replies %}
-                    {{ commentsList(comment.replies) }}
+                    {{ commentsList(comment.replies, canReply) }}
                 {% endif %}
             </li>
         {% endfor %}
     </ul>
 {% endmacro %}
 
+{% set canComment = allowNewComments and not disableNewComments %}
+
 <div class="comments" id="comments">
     {%if (postComments.length) %}
-        <h3>תגובות:</h5>
-        {{ commentsList(postComments) }}
+        <h3>תגובות:</h3>
+        {{ commentsList(postComments, canComment) }}
     {% endif %}
 
-    {% if (allowNewComments and not disableNewComments) %}
+    {% if canComment %}
         <div id="respond" class="comment-new">
             {% include 'comment-form.njk' %}
         </div>
