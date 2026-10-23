@@ -10,7 +10,7 @@
                     {% endif %}
           ({{ comment.date | dateAndTime }}): 
         </p>
-                <p>{{ comment.message }}</p>
+                <p class="comment-message{% if not canReply %} no-reply{% endif %}">{{ comment.message }}</p>
                 {% if canReply %}
                 <button class="comment-reply">
           להגיב
