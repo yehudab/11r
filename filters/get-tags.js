@@ -2,6 +2,7 @@ export default function (collections) {
     const allTags = Object.keys(collections);
     return allTags.filter((tag) =>
         tag !== "postsWithoutDrafts" &&
+        tag !== "postsAndPagesWithoutDrafts" &&
         tag !== "post" &&
         tag !== "all"
     ).map((tag) => {
