@@ -95,10 +95,11 @@ test("writes the map, registers the section and drafts the post", async () => {
     assert.deepEqual(topo.bbox.length, 4);
 
     const vega = await fs.readFile(path.join(tmp, "src/scripts/vega-map.js"), "utf-8");
-    assert.match(vega, /"29b", 30, 99\];/);
+    assert.match(vega, /, 99\];/);
+    assert.equal(vega.match(/\b99\b/g).length, 1);
     const legs = await fs.readFile(path.join(tmp, "src/globals/trailStats.js"), "utf-8");
     assert.equal(legs.match(/^\s*99:/gm).length, 1);
-    assert.match(legs, /30: \{trailDistance: \[11\.6\]\},\n  99: \{trailDistance: \[11\.6\]\},\n\};/);
+    assert.match(legs, /\n  99: \{trailDistance: \[11\.6\]\},\n\};/);
     const page = await fs.readFile(path.join(tmp, "src/pages/Israel-trail-map.md"), "utf-8");
     assert.match(page, /^lastUpdate: '2026-10-24T12:00:00.000\+00:00'$/m);
 

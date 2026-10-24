@@ -108,7 +108,7 @@ function showAdvanceTrailMap() {
             },
             "mark": {
               "type": "geoshape",
-              "href": `/maps/trail-${i}/#map`
+              "href": `/maps/trail-${padded}/#map`
             }
         };
       

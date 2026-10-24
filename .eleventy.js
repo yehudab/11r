@@ -70,6 +70,13 @@ export default function (config) {
 
   config.setDataDeepMerge(true);
 
+  // Draft posts are previewable with `npm run dev` but never published
+  config.addPreprocessor('drafts', 'md', (data) => {
+    if (data.status === 'draft' && process.env.NODE_ENV === 'production') {
+      return false;
+    }
+  });
+
   config.addCollection('postsWithoutDrafts', (collection) =>
     [...collection.getFilteredByGlob('src/posts/**/*.md')].filter(
       (post) => !post.data.draft && post.data.status === 'publish'
