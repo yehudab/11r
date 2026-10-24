@@ -1,4 +1,4 @@
-const trailNumbers = [1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, "29a", "29b", 30];
+const trailNumbers = [1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, "29a", "29b", 30, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 43];
 
 function loadJS(url, completion) {
     let scriptEle = document.createElement("script");
@@ -106,9 +106,15 @@ function showAdvanceTrailMap() {
                 "feature": `trail-${padded}`
               }
             },
+            "transform": [
+              {"calculate": `'מקטע ${i} - ' + datum.properties.name`, "as": "title"}
+            ],
             "mark": {
               "type": "geoshape",
-              "href": `/maps/trail-${i}/#map`
+              "href": `/maps/trail-${padded}/#map`
+            },
+            "encoding": {
+              "tooltip": {"field": "title", "type": "nominal"}
             }
         };
       
@@ -118,7 +124,7 @@ function showAdvanceTrailMap() {
 
     // Embed the visualization in the container with id `vis`
     loadScripts(() => {
-        vegaEmbed('#vega-map', vlSpec, {renderer: "svg", actions: false});
+        vegaEmbed('#vega-map', vlSpec, {renderer: "svg", actions: false, tooltip: {theme: "dark"}});
     });
 }
 

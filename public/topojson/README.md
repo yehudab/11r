@@ -1,18 +1,23 @@
-### Gaia GPS to topo-json
+### Adding a trail section
 
-1. Download GPX from Gaia
-2. Start `simple-gpx` node server
-2. Upload to: [simple-gpx](http://localhost:5000)
-3. Should immediately download the siplified GPX file. If not, reload the page
-4. Upload the simplified GPX file to [opengeo](https://opengeo.tech/maps/gpx-simplify-optimizer/)
-5. Adjust number of points until no jugged edges exist (first suggestion: 4 nodes per KM)
-6. Download in GeoJSON
-7. Rename downloaded file to `trail-xx.geojson`
-8. Add the new trail number to the `trailNumbers` var in `vega-map.js`
-9. Add the new trail number and distanve `legs` var in `trailStats.js`
-10. Update the `lastUpdate` front matter field in `Israel-trail-map.md`
-11. Run in command line:
+1. Export the hike's GPX (Health app → profile → Export All Health Data; the routes are in `workout-routes/`)
+2. Run:
 
-```bash 
-geo2topo ~/Downloads/trail-xx.geojson | jq > ~/Dev/11r/public/topojson/trail-xx.topojson
+```bash
+npm run trail -- ~/Downloads/route_2026-10-23_1.59pm.gpx 41 --start "צור הדסה" --end "נתיב הל״ה" --post
 ```
+
+This writes `trail-41.topojson` (about 4 points per km), adds the section to the progress map
+(`vega-map.js`) and the total distance (`trailStats.js`), updates `lastUpdate` on the trail map page,
+and prints the trail front matter. With `--post` it also creates a draft post with that front matter.
+
+Options:
+- `--name "<map name>"`: map title, when it isn't "<start> ל<end>"
+- `--dry-run`: only print the stats
+- `--points-per-km <n>`: more or less map detail
+- `--ascent <m>` / `--descent <m>`: use the Fitness app's (barometric) elevation gain instead of the GPS-based one
+
+Stats are computed the way the older posts were: distance ignores GPS jitter under 10 m (about 8% below the Watch's
+own distance), moving time counts 2-minute windows faster than 0.15 m/s, and elevation is smoothed over 4 minutes.
+
+Tests (section 30's original recording against its published map and post): `npm test`

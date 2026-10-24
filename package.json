@@ -13,7 +13,9 @@
     "clean": "rimraf dist",
     "dev": "npm-run-all clean build:* -p dev:*",
     "dev:11ty": "eleventy --serve --quiet",
-    "dev:rollup": "rollup -c -w"
+    "dev:rollup": "rollup -c -w",
+    "trail": "node tools/trail.mjs",
+    "test": "node --test tools/"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.7",
@@ -38,6 +40,7 @@
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-svg": "^2.0.0",
     "tailwindcss": "^4.3.3",
-    "topojson-client": "^3.1.0"
+    "topojson-client": "^3.1.0",
+    "topojson-server": "^3.0.1"
   }
 }
