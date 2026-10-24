@@ -106,9 +106,15 @@ function showAdvanceTrailMap() {
                 "feature": `trail-${padded}`
               }
             },
+            "transform": [
+              {"calculate": `'מקטע ${i} - ' + datum.properties.name`, "as": "title"}
+            ],
             "mark": {
               "type": "geoshape",
               "href": `/maps/trail-${padded}/#map`
+            },
+            "encoding": {
+              "tooltip": {"field": "title", "type": "nominal"}
             }
         };
       
@@ -118,7 +124,7 @@ function showAdvanceTrailMap() {
 
     // Embed the visualization in the container with id `vis`
     loadScripts(() => {
-        vegaEmbed('#vega-map', vlSpec, {renderer: "svg", actions: false});
+        vegaEmbed('#vega-map', vlSpec, {renderer: "svg", actions: false, tooltip: {theme: "dark"}});
     });
 }
 
