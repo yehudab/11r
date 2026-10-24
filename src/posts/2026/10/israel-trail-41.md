@@ -12,7 +12,7 @@ tags:
 
 trailSerial: [41]
 trailStart: ["צור הדסה"]
-trailEnd: ["נתיב הל״ה"]
+trailEnd: ["חניון בית הבד"]
 trailDirection: ["southbound"]
 trailDistance: [10.3]
 trailAscend: [106]
