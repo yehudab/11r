@@ -25,7 +25,7 @@ includeTrailStats: true
 2. [אין דבר](/blog/2022/10/Israel-trail-2)
 3. [בקעה, לא עמק](/blog/2022/11/Israel-trail-3)
 4. [שלום רב שובך](/blog/2022/12/Israel-trail-4)
-5. קטע חסר
+5. קטע שדילגתי עליו
 6. [יב״א בה בה בה בה בה בה בם](/blog/2023/02/Israel-trail-6)
 7. [ארבעים נכנסו לפרד״ס](/blog/2023/03/Israel-trail-7)
 8. [Stairway to Heaven](/blog/2023/04/Israel-trail-8)
