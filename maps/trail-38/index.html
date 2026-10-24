@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="canonical" href="https://yehudab.com/maps/trail-38/" />
+
+    
+    <meta itemprop="name" content="מפת מקטע מס׳ 38 | בלוג פשוט">
+    <meta itemprop="description" content="צר עולמי כ  U+200A">
+
+    
+    <meta name="twitter:title" content="מפת מקטע מס׳ 38 | בלוג פשוט">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="צר עולמי כ  U+200A">
+    <meta name="twitter:site" content="@yehudab">
+    <meta name="twitter:creator" content="@yehudab">
+    <meta name="twitter:image:src" content="">
+
+    
+    <meta property="og:title" content="מפת מקטע מס׳ 38 | בלוג פשוט">
+    <meta property="og:description" content="צר עולמי כ  U+200A">
+    <meta property="og:image" content="https://yehudab.com/img/2022/12/blog-image.webp">
+    <meta property="og:url" content="https://yehudab.com/maps/trail-38/">
+    <meta property="og:site_name" content="בלוג פשוט">
+    <meta property="og:locale" content="he_il">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <title data-pagefind-meta="title">
+      מפת מקטע מס׳ 38
+      
+       | בלוג פשוט</title>
+
+    <link rel="stylesheet" href="/assets/main.bundle.css">
+
+    <meta name="generator" content="Eleventy v3.1.7">
+
+    
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <header>
+  <nav class="container mx-auto max-w-3xl px-8 pt-2 flex flex-wrap justify-between items-center">
+    <!-- Branding -->
+    <div>
+      <p class="site-title">
+        <a href="/">בלוג פשוט</a>
+      </p>
+      <p class="site-description">צר עולמי כ  U+200A</p>
+    </div>
+
+    <!-- Hamburger Button -->
+    <button id="menu-toggle" class="block md:hidden text-heading focus:outline-hidden">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+
+    <!-- Navigation Links -->
+    <ul id="menu" class="hidden flex-col md:flex md:flex-row sm:w-1/4 w-full mt-6 md:mt-0 md:justify-between justify-evenly">
+      <li>
+        <a href="/blog/about" class="block md:inline-block">אודות</a>
+      </li>
+      <li>
+        <a href="/archive" class="block md:inline-block">ארכיון</a>
+      </li>
+      <li>
+        <a href="/blog/search" class="block md:inline-block">חיפוש</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+<div id="bthn" lang="he"></div>
+    <main class="container mx-auto max-w-3xl p-8 grow">
+      
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+  <h1 class="text-center">מפת קטע מס׳ 38 - תל קשת לשמורת פורה</h1>
+  <p class="text-center text-sm italic mb-6">לא מתאימה לצרכי לניווט</p>
+  <div id="map"></div>
+  <style>
+    html,body { height: 100%; }
+    main { min-height: 100%; }
+    #map { height: calc(100% - 7rem); }
+  </style>
+  
+  <script>
+    let taril = {"type":"Feature","properties":{"name":"תל קשת לשמורת פורה"},"geometry":{"type":"LineString","coordinates":[[34.76597,31.53803],[34.76354,31.53934],[34.76277,31.5407],[34.7611,31.54079],[34.75992,31.53953],[34.75986,31.53784],[34.75187,31.53226],[34.75056,31.53173],[34.74919,31.53203],[34.74665,31.53142],[34.74213,31.53208],[34.74076,31.5305],[34.74157,31.53046],[34.74094,31.53033],[34.74075,31.52961],[34.74013,31.53083],[34.73959,31.53077],[34.73892,31.52702],[34.74,31.52461],[34.73917,31.5215],[34.74185,31.51969],[34.74227,31.51788],[34.74451,31.51545],[34.74242,31.51303],[34.74296,31.51094],[34.74079,31.50761],[34.74319,31.50789],[34.74392,31.50942],[34.7455,31.50943],[34.74533,31.50462],[34.7462,31.50265],[34.74598,31.50043],[34.74893,31.50026],[34.75321,31.50114],[34.75527,31.50065],[34.75687,31.50305],[34.75672,31.50269],[34.75748,31.50229],[34.75862,31.50322],[34.75923,31.50284],[34.76086,31.50446],[34.76236,31.50445],[34.76275,31.50263],[34.76498,31.50114],[34.76648,31.49867],[34.76763,31.49817],[34.76988,31.4982],[34.77192,31.49586],[34.77471,31.49608],[34.77907,31.49472],[34.77937,31.49411]]}};
+    let baseStyle = {
+        "color": "#ff7800",
+        "weight": 5,
+        "opacity": 0.65
+    };
+    let secondStyle = {
+        "color": "#000000",
+        "weight": 1,
+        "opacity": 0.65
+    };
+    let map = L.map('map').setView([33.22966,35.61782], 13);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+    let feature = L.geoJSON(taril, { style: baseStyle}).addTo(map);
+    L.geoJSON(taril, { style: secondStyle}).addTo(map);
+    map.fitBounds(feature.getBounds());
+  </script>
+
+    </main>
+    <footer class="bg-ink pb-10">
+  <p class="block text-center text-sm mb-6">
+    CC-BY-SA
+    <a href="/">
+      Yehuda Bar Nir
+    </a>
+    &bull; Built with <a href="https://www.11ty.dev/">11ty</a> 
+    &bull; Based on <a target="_blank" href="https://github.com/reeseschultz/11r">11r</a> by
+    <a target="_blank" href="https://reeseschultz.com">
+      Reese Schultz
+    </a>
+    &bull; אתר נגיש <a href="/blog/accessibility-statement/">הצהרת נגישות</a>
+    
+  </p>
+
+</footer>
+    
+    <script src="/assets/lib/cash.js"></script>
+    <script src="/assets/main.bundle.js"></script>
+    <script async src="https://ackee.yehudab.com/blog-utils.js" 
+      data-ackee-server="https://ackee.yehudab.com"
+      data-ackee-domain-id="9c5f49e5-e4a2-44dd-99bf-9f38e447246c"
+      data-ackee-opts='{ "ignoreLocalhost": true, "detailed": true, "ignoreOwnVisits": true }'></script>
+  </body>
+</html>

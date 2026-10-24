@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="canonical" href="https://yehudab.com/maps/trail-39/" />
+
+    
+    <meta itemprop="name" content="מפת מקטע מס׳ 39 | בלוג פשוט">
+    <meta itemprop="description" content="צר עולמי כ  U+200A">
+
+    
+    <meta name="twitter:title" content="מפת מקטע מס׳ 39 | בלוג פשוט">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="צר עולמי כ  U+200A">
+    <meta name="twitter:site" content="@yehudab">
+    <meta name="twitter:creator" content="@yehudab">
+    <meta name="twitter:image:src" content="">
+
+    
+    <meta property="og:title" content="מפת מקטע מס׳ 39 | בלוג פשוט">
+    <meta property="og:description" content="צר עולמי כ  U+200A">
+    <meta property="og:image" content="https://yehudab.com/img/2022/12/blog-image.webp">
+    <meta property="og:url" content="https://yehudab.com/maps/trail-39/">
+    <meta property="og:site_name" content="בלוג פשוט">
+    <meta property="og:locale" content="he_il">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <title data-pagefind-meta="title">
+      מפת מקטע מס׳ 39
+      
+       | בלוג פשוט</title>
+
+    <link rel="stylesheet" href="/assets/main.bundle.css">
+
+    <meta name="generator" content="Eleventy v3.1.7">
+
+    
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <header>
+  <nav class="container mx-auto max-w-3xl px-8 pt-2 flex flex-wrap justify-between items-center">
+    <!-- Branding -->
+    <div>
+      <p class="site-title">
+        <a href="/">בלוג פשוט</a>
+      </p>
+      <p class="site-description">צר עולמי כ  U+200A</p>
+    </div>
+
+    <!-- Hamburger Button -->
+    <button id="menu-toggle" class="block md:hidden text-heading focus:outline-hidden">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+
+    <!-- Navigation Links -->
+    <ul id="menu" class="hidden flex-col md:flex md:flex-row sm:w-1/4 w-full mt-6 md:mt-0 md:justify-between justify-evenly">
+      <li>
+        <a href="/blog/about" class="block md:inline-block">אודות</a>
+      </li>
+      <li>
+        <a href="/archive" class="block md:inline-block">ארכיון</a>
+      </li>
+      <li>
+        <a href="/blog/search" class="block md:inline-block">חיפוש</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+<div id="bthn" lang="he"></div>
+    <main class="container mx-auto max-w-3xl p-8 grow">
+      
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+  <h1 class="text-center">מפת קטע מס׳ 39 - דבירה לסנסנה</h1>
+  <p class="text-center text-sm italic mb-6">לא מתאימה לצרכי לניווט</p>
+  <div id="map"></div>
+  <style>
+    html,body { height: 100%; }
+    main { min-height: 100%; }
+    #map { height: calc(100% - 7rem); }
+  </style>
+  
+  <script>
+    let taril = {"type":"Feature","properties":{"name":"דבירה לסנסנה"},"geometry":{"type":"LineString","coordinates":[[34.89781,31.36138],[34.89767,31.36301],[34.89526,31.3644],[34.89433,31.36577],[34.89314,31.36501],[34.89236,31.36555],[34.89353,31.36731],[34.89226,31.36704],[34.89143,31.36753],[34.88845,31.36789],[34.88832,31.36835],[34.88742,31.36814],[34.88676,31.3691],[34.8841,31.37019],[34.88058,31.37319],[34.87314,31.37612],[34.87269,31.37698],[34.87468,31.38003],[34.87585,31.38315],[34.8727,31.38442],[34.87243,31.38512],[34.87311,31.38809],[34.87096,31.38778],[34.86831,31.38902],[34.86678,31.39088],[34.86654,31.3924],[34.86324,31.39388],[34.86282,31.39496],[34.85942,31.39489],[34.85733,31.39375],[34.85639,31.39525],[34.85559,31.39458],[34.8537,31.39421],[34.85133,31.39534],[34.85044,31.39694],[34.85037,31.39945],[34.84955,31.40176],[34.84796,31.40284],[34.84739,31.40498],[34.84492,31.40606],[34.84461,31.40753],[34.84302,31.40918],[34.84287,31.41091],[34.83841,31.41113],[34.83715,31.41198],[34.83403,31.41211],[34.83175,31.41112],[34.83021,31.41308],[34.82984,31.41445],[34.82597,31.41806],[34.82314,31.41852],[34.82212,31.4202],[34.82043,31.42097],[34.8168,31.42124],[34.81435,31.42239],[34.81051,31.42242],[34.80876,31.42415],[34.80708,31.423],[34.80356,31.42276],[34.80303,31.42183],[34.8023,31.42211],[34.80149,31.42169],[34.80068,31.42228],[34.79792,31.42189],[34.79768,31.42053],[34.79698,31.42034],[34.78725,31.42254],[34.78645,31.42236]]}};
+    let baseStyle = {
+        "color": "#ff7800",
+        "weight": 5,
+        "opacity": 0.65
+    };
+    let secondStyle = {
+        "color": "#000000",
+        "weight": 1,
+        "opacity": 0.65
+    };
+    let map = L.map('map').setView([33.22966,35.61782], 13);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+    let feature = L.geoJSON(taril, { style: baseStyle}).addTo(map);
+    L.geoJSON(taril, { style: secondStyle}).addTo(map);
+    map.fitBounds(feature.getBounds());
+  </script>
+
+    </main>
+    <footer class="bg-ink pb-10">
+  <p class="block text-center text-sm mb-6">
+    CC-BY-SA
+    <a href="/">
+      Yehuda Bar Nir
+    </a>
+    &bull; Built with <a href="https://www.11ty.dev/">11ty</a> 
+    &bull; Based on <a target="_blank" href="https://github.com/reeseschultz/11r">11r</a> by
+    <a target="_blank" href="https://reeseschultz.com">
+      Reese Schultz
+    </a>
+    &bull; אתר נגיש <a href="/blog/accessibility-statement/">הצהרת נגישות</a>
+    
+  </p>
+
+</footer>
+    
+    <script src="/assets/lib/cash.js"></script>
+    <script src="/assets/main.bundle.js"></script>
+    <script async src="https://ackee.yehudab.com/blog-utils.js" 
+      data-ackee-server="https://ackee.yehudab.com"
+      data-ackee-domain-id="9c5f49e5-e4a2-44dd-99bf-9f38e447246c"
+      data-ackee-opts='{ "ignoreLocalhost": true, "detailed": true, "ignoreOwnVisits": true }'></script>
+  </body>
+</html>
