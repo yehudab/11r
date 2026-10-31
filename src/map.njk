@@ -54,6 +54,15 @@ eleventyComputed:
     .photo-popup { direction: rtl; }
     .photo-popup img { width: 100%; margin: 0 0 0.5rem; }
     .photo-popup p { margin: 0 0 0.25rem; font-weight: bold; }
+{% if map.editor %}
+    .leaflet-container .leaflet-marker-pane .photo-keep img { border-color: #22c55e; }
+    .leaflet-container .leaflet-marker-pane .photo-trash img { border-color: #ef4444; opacity: 0.4; filter: grayscale(1); }
+    .leaflet-container .leaflet-marker-pane .photo-candidate img { border: 2px dashed #f59e0b; }
+    .photo-editor { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem; }
+    .photo-editor button { padding: 0.1rem 0.6rem; font-size: 1.25rem; border: 2px solid #d1d5db; border-radius: 6px; background: #fff; cursor: pointer; }
+    .photo-editor button.active { border-color: #2563eb; background: #dbeafe; }
+    .photo-editor small { color: #dc2626; }
+{% endif %}
   </style>
   
   <script>
@@ -78,10 +87,10 @@ eleventyComputed:
     let bounds = feature.getBounds();
 
     let photos = {{ map.photos | safe }};
-    function thumbIcon(src, count) {
+    function thumbIcon(photo, count) {
         let html = document.createElement('div');
         let img = document.createElement('img');
-        img.src = src;
+        img.src = photo.thumb;
         img.alt = '';
         html.append(img);
         if (count) {
@@ -89,7 +98,7 @@ eleventyComputed:
             badge.textContent = count;
             html.append(badge);
         }
-        return L.divIcon({ className: 'photo-thumb', html, iconSize: [56, 56] });
+        return L.divIcon({ className: 'photo-thumb' + thumbClass(photo), html, iconSize: [56, 56] });
     }
     function photoPopup(photo, marker) {
         let popup = document.createElement('div');
@@ -100,23 +109,97 @@ eleventyComputed:
         img.addEventListener('load', () => marker.getPopup().update());
         let caption = document.createElement('p');
         caption.textContent = photo.caption;
-        let link = document.createElement('a');
-        link.href = photo.postUrl;
-        link.textContent = photo.postTitle;
-        popup.append(img, caption, link);
+        caption.dir = 'auto';
+        popup.append(img, caption);
+        addEditorButtons(popup, photo, marker);
+        if (photo.postUrl) {
+            let link = document.createElement('a');
+            link.href = photo.postUrl;
+            link.textContent = photo.postTitle;
+            popup.append(link);
+        }
         return popup;
     }
-    if (photos.length) {
-        let cluster = L.markerClusterGroup({
+{% if map.editor %}
+    // Dev server only: decide which photos stay on the blog
+    let decisions = {};
+    let cluster;
+    function thumbClass(photo) {
+        let status = decisions[photo.id];
+        return (status ? ' photo-' + status : '') + (photo.candidate && !status ? ' photo-candidate' : '');
+    }
+    async function decide(photo, marker, status, message) {
+        let next = decisions[photo.id] === status ? null : status;
+        let response = await fetch('/api/photo-decisions', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id: photo.id, status: next })
+        }).catch(() => null);
+        if (!response?.ok) {
+            message.textContent = 'השמירה נכשלה';
+            return;
+        }
+        message.textContent = '';
+        if (next) decisions[photo.id] = next;
+        else delete decisions[photo.id];
+        refreshMarker(photo, marker);
+    }
+    // A group shows the photo closest to staying on the blog. Published with no decision counts as kept.
+    function groupRank(photo) {
+        let status = decisions[photo.id];
+        if (status === 'trash') return 2;
+        return status === 'keep' || !photo.candidate ? 0 : 1;
+    }
+    function groupPhoto(markers) {
+        let [first, ...rest] = markers.map(marker => marker.options.photo);
+        return rest.reduce((best, photo) => groupRank(photo) < groupRank(best) ? photo : best, first);
+    }
+    function refreshMarker(photo, marker) {
+        marker.setIcon(thumbIcon(photo));
+        cluster.refreshClusters(marker);
+        let buttons = marker.getPopup()?.getContent().querySelector('.photo-editor');
+        buttons?.querySelectorAll('button').forEach(button => {
+            button.classList.toggle('active', decisions[photo.id] === button.dataset.status);
+        });
+    }
+    function addEditorButtons(popup, photo, marker) {
+        let buttons = document.createElement('div');
+        buttons.className = 'photo-editor';
+        let message = document.createElement('small');
+        [['keep', '✅', 'להשאיר'], ['trash', '🗑️', 'למחוק']].forEach(([status, icon, label]) => {
+            let button = document.createElement('button');
+            button.type = 'button';
+            button.dataset.status = status;
+            button.textContent = icon;
+            button.title = label;
+            button.setAttribute('aria-label', label);
+            button.classList.toggle('active', decisions[photo.id] === status);
+            button.addEventListener('click', () => decide(photo, marker, status, message));
+            buttons.append(button);
+        });
+        buttons.append(message);
+        popup.append(buttons);
+    }
+    async function loadDecisions() {
+        let response = await fetch('/api/photo-decisions');
+        decisions = await response.json();
+    }
+{% else %}
+    function thumbClass() { return ''; }
+    function groupPhoto(markers) { return markers[0].options.photo; }
+    function addEditorButtons() {}
+{% endif %}
+    function showPhotos() {
+        {% if not map.editor %}let {% endif %}cluster = L.markerClusterGroup({
             maxClusterRadius: 50,
             spiderfyDistanceMultiplier: 2.5,
             showCoverageOnHover: false,
-            iconCreateFunction: (group) => thumbIcon(group.getAllChildMarkers()[0].options.photoSrc, group.getChildCount())
+            iconCreateFunction: (group) => thumbIcon(groupPhoto(group.getAllChildMarkers()), group.getChildCount())
         });
         photos.forEach(photo => {
             let marker = L.marker([photo.lat, photo.lon], {
-                icon: thumbIcon(photo.src),
-                photoSrc: photo.src,
+                icon: thumbIcon(photo),
+                photo,
                 title: photo.caption,
                 alt: photo.caption
             });
@@ -125,6 +208,14 @@ eleventyComputed:
             bounds.extend(marker.getLatLng());
         });
         map.addLayer(cluster);
+        map.fitBounds(bounds, { padding: [30, 30] });
+    }
+    if (photos.length) {
+{% if map.editor %}
+        loadDecisions().then(showPhotos);
+{% else %}
+        showPhotos();
+{% endif %}
     }
     map.fitBounds(bounds, { padding: [30, 30] });
   </script>

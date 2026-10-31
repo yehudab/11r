@@ -17,6 +17,10 @@ import postYear from "./filters/post-year.js";
 import parseSongs from "./filters/parse-songs.js";
 import readingTime from "./filters/reading-time.js";
 import imageFigures from "./markdown/image-figures.js";
+import { photoEditorMiddleware } from "./tools/trail/photo-editor.js";
+import { THUMBS_DIR } from "./tools/trail/photos.js";
+import { promises as fs } from "node:fs";
+import path from "node:path";
 import { execSync } from 'node:child_process';
 
 export default function (config) {
@@ -68,6 +72,8 @@ export default function (config) {
     open: false,
   });
 
+  config.setServerOptions({ middleware: [photoEditorMiddleware()] });
+
   config.setDataDeepMerge(true);
 
   // Draft posts are previewable with `npm run dev` but never published
@@ -89,7 +95,10 @@ export default function (config) {
     )
   );
 
-  config.on('eleventy.after', () => {
+  // Not a passthrough copy: those can run before the maps' data has made the thumbnails
+  config.on('eleventy.after', async ({ directories }) => {
+    await fs.cp(THUMBS_DIR, path.join(directories.output, 'img/thumbs'), { recursive: true });
+    await fs.rm(path.join(directories.output, 'img/README.md'), { force: true }); // Not for the site
     execSync('npx pagefind --site dist --glob \"**/*.html\"', { encoding: 'utf-8' })
   })
 
