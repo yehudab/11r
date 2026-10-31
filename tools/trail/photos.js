@@ -70,7 +70,8 @@ export function mapOf(photo, tracks, src = "") {
 }
 
 async function readLocation(file) {
-    const gps = await exifr.gps(file).catch(() => null);
+    // exifr doesn't close the files it opens itself, which fails the build on Node 26
+    const gps = await fs.readFile(file).then((photo) => exifr.gps(photo)).catch(() => null);
     return gps ? { lat: gps.latitude, lon: gps.longitude } : null;
 }
 
