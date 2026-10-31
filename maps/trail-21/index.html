@@ -86,6 +86,12 @@
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
      crossorigin=""></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css"
+     integrity="sha256-YU3qCpj/P06tdPBJGPax0bm6Q1wltfwjsho5TR4+TYc="
+     crossorigin=""/>
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"
+     integrity="sha256-Hk4dIpcqOSb0hZjgyvFOP+cEmDXUKKNE/tT542ZbNQg="
+     crossorigin=""></script>
   <h1 class="text-center">מפת קטע מס׳ 21 - הרצליה לאצטדיון רמת גן</h1>
   <p class="text-center text-sm italic mb-6">לא מתאימה לצרכי לניווט</p>
   <div id="map"></div>
@@ -93,6 +99,32 @@
     html,body { height: 100%; }
     main { min-height: 100%; }
     #map { height: calc(100% - 7rem); }
+    /* Leaflet sets width: auto on marker images, with this specificity */
+    .leaflet-container .leaflet-marker-pane .photo-thumb img {
+      width: 56px;
+      height: 56px;
+      margin: 0;
+      object-fit: cover;
+      border: 2px solid #fff;
+      border-radius: 6px;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+    }
+    .photo-thumb span {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      min-width: 22px;
+      line-height: 22px;
+      text-align: center;
+      font-size: 12px;
+      color: #fff;
+      background: #ff7800;
+      border-radius: 11px;
+    }
+    .photo-popup { direction: rtl; }
+    .photo-popup img { width: 100%; margin: 0 0 0.5rem; }
+    .photo-popup p { margin: 0 0 0.25rem; font-weight: bold; }
+
   </style>
   
   <script>
@@ -114,7 +146,74 @@
         }).addTo(map);
     let feature = L.geoJSON(taril, { style: baseStyle}).addTo(map);
     L.geoJSON(taril, { style: secondStyle}).addTo(map);
-    map.fitBounds(feature.getBounds());
+    let bounds = feature.getBounds();
+
+    let photos = [{"id":"img/2024/10/shvil-21-1.jpg","src":"/img/2024/10/shvil-21-1.jpg","thumb":"/img/thumbs/2024/10/shvil-21-1.webp","caption":"מפרשית באופק","lat":32.155903,"lon":34.794486,"postTitle":"שביל ישראל 21 - עוד יש מפרש לבן באופק","postUrl":"/blog/2024/10/israel-trail-21/"},{"id":"img/2024/10/shvil-21-2.jpg","src":"/img/2024/10/shvil-21-2.jpg","thumb":"/img/thumbs/2024/10/shvil-21-2.webp","caption":"תל-אביב מתל רקית","lat":32.130253,"lon":34.786872,"postTitle":"שביל ישראל 21 - עוד יש מפרש לבן באופק","postUrl":"/blog/2024/10/israel-trail-21/"},{"id":"img/2024/10/shvil-21-3.jpg","src":"/img/2024/10/shvil-21-3.jpg","thumb":"/img/thumbs/2024/10/shvil-21-3.webp","caption":"שפך הירקון","lat":32.103339,"lon":34.776939,"postTitle":"שביל ישראל 21 - עוד יש מפרש לבן באופק","postUrl":"/blog/2024/10/israel-trail-21/"},{"id":"img/2024/10/shvil-21-4.jpg","src":"/img/2024/10/shvil-21-4.jpg","thumb":"/img/thumbs/2024/10/shvil-21-4.webp","caption":"תל כודאדי ועמוד ההנצחה","lat":32.103367,"lon":34.776917,"postTitle":"שביל ישראל 21 - עוד יש מפרש לבן באופק","postUrl":"/blog/2024/10/israel-trail-21/"},{"id":"img/2024/10/shvil-21-5.jpg","src":"/img/2024/10/shvil-21-5.jpg","thumb":"/img/thumbs/2024/10/shvil-21-5.webp","caption":"שבע טחנות","lat":32.097125,"lon":34.807606,"postTitle":"שביל ישראל 21 - עוד יש מפרש לבן באופק","postUrl":"/blog/2024/10/israel-trail-21/"}];
+    function thumbIcon(photo, count) {
+        let html = document.createElement('div');
+        let img = document.createElement('img');
+        img.src = photo.thumb;
+        img.alt = '';
+        html.append(img);
+        if (count) {
+            let badge = document.createElement('span');
+            badge.textContent = count;
+            html.append(badge);
+        }
+        return L.divIcon({ className: 'photo-thumb' + thumbClass(photo), html, iconSize: [56, 56] });
+    }
+    function photoPopup(photo, marker) {
+        let popup = document.createElement('div');
+        popup.className = 'photo-popup';
+        let img = document.createElement('img');
+        img.src = photo.src;
+        img.alt = photo.caption;
+        img.addEventListener('load', () => marker.getPopup().update());
+        let caption = document.createElement('p');
+        caption.textContent = photo.caption;
+        caption.dir = 'auto';
+        popup.append(img, caption);
+        addEditorButtons(popup, photo, marker);
+        if (photo.postUrl) {
+            let link = document.createElement('a');
+            link.href = photo.postUrl;
+            link.textContent = photo.postTitle;
+            popup.append(link);
+        }
+        return popup;
+    }
+
+    function thumbClass() { return ''; }
+    function groupPhoto(markers) { return markers[0].options.photo; }
+    function addEditorButtons() {}
+
+    function showPhotos() {
+        let cluster = L.markerClusterGroup({
+            maxClusterRadius: 50,
+            spiderfyDistanceMultiplier: 2.5,
+            showCoverageOnHover: false,
+            iconCreateFunction: (group) => thumbIcon(groupPhoto(group.getAllChildMarkers()), group.getChildCount())
+        });
+        photos.forEach(photo => {
+            let marker = L.marker([photo.lat, photo.lon], {
+                icon: thumbIcon(photo),
+                photo,
+                title: photo.caption,
+                alt: photo.caption
+            });
+            marker.bindPopup(photoPopup(photo, marker), { minWidth: 280, maxWidth: 280 });
+            cluster.addLayer(marker);
+            bounds.extend(marker.getLatLng());
+        });
+        map.addLayer(cluster);
+        map.fitBounds(bounds, { padding: [30, 30] });
+    }
+    if (photos.length) {
+
+        showPhotos();
+
+    }
+    map.fitBounds(bounds, { padding: [30, 30] });
   </script>
 
     </main>

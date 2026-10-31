@@ -86,6 +86,12 @@
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
      crossorigin=""></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css"
+     integrity="sha256-YU3qCpj/P06tdPBJGPax0bm6Q1wltfwjsho5TR4+TYc="
+     crossorigin=""/>
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"
+     integrity="sha256-Hk4dIpcqOSb0hZjgyvFOP+cEmDXUKKNE/tT542ZbNQg="
+     crossorigin=""></script>
   <h1 class="text-center">מפת קטע מס׳ 30 - נחל פולג לאפולוניה</h1>
   <p class="text-center text-sm italic mb-6">לא מתאימה לצרכי לניווט</p>
   <div id="map"></div>
@@ -93,6 +99,32 @@
     html,body { height: 100%; }
     main { min-height: 100%; }
     #map { height: calc(100% - 7rem); }
+    /* Leaflet sets width: auto on marker images, with this specificity */
+    .leaflet-container .leaflet-marker-pane .photo-thumb img {
+      width: 56px;
+      height: 56px;
+      margin: 0;
+      object-fit: cover;
+      border: 2px solid #fff;
+      border-radius: 6px;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+    }
+    .photo-thumb span {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      min-width: 22px;
+      line-height: 22px;
+      text-align: center;
+      font-size: 12px;
+      color: #fff;
+      background: #ff7800;
+      border-radius: 11px;
+    }
+    .photo-popup { direction: rtl; }
+    .photo-popup img { width: 100%; margin: 0 0 0.5rem; }
+    .photo-popup p { margin: 0 0 0.25rem; font-weight: bold; }
+
   </style>
   
   <script>
@@ -114,7 +146,74 @@
         }).addTo(map);
     let feature = L.geoJSON(taril, { style: baseStyle}).addTo(map);
     L.geoJSON(taril, { style: secondStyle}).addTo(map);
-    map.fitBounds(feature.getBounds());
+    let bounds = feature.getBounds();
+
+    let photos = [{"id":"img/2025/06/shvil-30-5.jpg","src":"/img/2025/06/shvil-30-5.jpg","thumb":"/img/thumbs/2025/06/shvil-30-5.webp","caption":"אבזם חגורה של חייל טורקי","lat":32.231808,"lon":34.820197,"postTitle":"שביל ישראל 30 - פרש טורקי","postUrl":"/blog/2025/06/israel-trail-30/"},{"id":"img/2025/06/shvil-30-1.jpg","src":"/img/2025/06/shvil-30-1.jpg","thumb":"/img/thumbs/2025/06/shvil-30-1.webp","caption":"חוף פולג","lat":32.260811,"lon":34.829228,"postTitle":"שביל ישראל 30 - פרש טורקי","postUrl":"/blog/2025/06/israel-trail-30/"},{"id":"img/2025/06/shvil-30-2.jpg","src":"/img/2025/06/shvil-30-2.jpg","thumb":"/img/thumbs/2025/06/shvil-30-2.webp","caption":"נר הלילה","lat":32.259514,"lon":34.828922,"postTitle":"שביל ישראל 30 - פרש טורקי","postUrl":"/blog/2025/06/israel-trail-30/"},{"id":"img/2025/06/shvil-30-3.jpg","src":"/img/2025/06/shvil-30-3.jpg","thumb":"/img/thumbs/2025/06/shvil-30-3.webp","caption":"מפה בחול","lat":32.256836,"lon":34.827989,"postTitle":"שביל ישראל 30 - פרש טורקי","postUrl":"/blog/2025/06/israel-trail-30/"},{"id":"img/2025/06/shvil-30-6.jpg","src":"/img/2025/06/shvil-30-6.jpg","thumb":"/img/thumbs/2025/06/shvil-30-6.webp","caption":"מתחת לעצי האקלפיטוס","lat":32.217675,"lon":34.818497,"postTitle":"שביל ישראל 30 - פרש טורקי","postUrl":"/blog/2025/06/israel-trail-30/"},{"id":"img/2025/06/shvil-30-7.jpg","src":"/img/2025/06/shvil-30-7.jpg","thumb":"/img/thumbs/2025/06/shvil-30-7.webp","caption":"מבצר אפולוניה","lat":32.194483,"lon":34.806594,"postTitle":"שביל ישראל 30 - פרש טורקי","postUrl":"/blog/2025/06/israel-trail-30/"},{"id":"img/2025/06/shvil-30-8.jpg","src":"/img/2025/06/shvil-30-8.jpg","thumb":"/img/thumbs/2025/06/shvil-30-8.webp","caption":"נוף לים","lat":32.195222,"lon":34.806553,"postTitle":"שביל ישראל 30 - פרש טורקי","postUrl":"/blog/2025/06/israel-trail-30/"}];
+    function thumbIcon(photo, count) {
+        let html = document.createElement('div');
+        let img = document.createElement('img');
+        img.src = photo.thumb;
+        img.alt = '';
+        html.append(img);
+        if (count) {
+            let badge = document.createElement('span');
+            badge.textContent = count;
+            html.append(badge);
+        }
+        return L.divIcon({ className: 'photo-thumb' + thumbClass(photo), html, iconSize: [56, 56] });
+    }
+    function photoPopup(photo, marker) {
+        let popup = document.createElement('div');
+        popup.className = 'photo-popup';
+        let img = document.createElement('img');
+        img.src = photo.src;
+        img.alt = photo.caption;
+        img.addEventListener('load', () => marker.getPopup().update());
+        let caption = document.createElement('p');
+        caption.textContent = photo.caption;
+        caption.dir = 'auto';
+        popup.append(img, caption);
+        addEditorButtons(popup, photo, marker);
+        if (photo.postUrl) {
+            let link = document.createElement('a');
+            link.href = photo.postUrl;
+            link.textContent = photo.postTitle;
+            popup.append(link);
+        }
+        return popup;
+    }
+
+    function thumbClass() { return ''; }
+    function groupPhoto(markers) { return markers[0].options.photo; }
+    function addEditorButtons() {}
+
+    function showPhotos() {
+        let cluster = L.markerClusterGroup({
+            maxClusterRadius: 50,
+            spiderfyDistanceMultiplier: 2.5,
+            showCoverageOnHover: false,
+            iconCreateFunction: (group) => thumbIcon(groupPhoto(group.getAllChildMarkers()), group.getChildCount())
+        });
+        photos.forEach(photo => {
+            let marker = L.marker([photo.lat, photo.lon], {
+                icon: thumbIcon(photo),
+                photo,
+                title: photo.caption,
+                alt: photo.caption
+            });
+            marker.bindPopup(photoPopup(photo, marker), { minWidth: 280, maxWidth: 280 });
+            cluster.addLayer(marker);
+            bounds.extend(marker.getLatLng());
+        });
+        map.addLayer(cluster);
+        map.fitBounds(bounds, { padding: [30, 30] });
+    }
+    if (photos.length) {
+
+        showPhotos();
+
+    }
+    map.fitBounds(bounds, { padding: [30, 30] });
   </script>
 
     </main>
