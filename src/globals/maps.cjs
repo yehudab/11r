@@ -8,11 +8,19 @@ module.exports = async function() {
         allTrails.map(parseMapFile)
     );
     const { collectPhotos } = await import("../../tools/trail/photos.js");
-    const photos = await collectPhotos(".", Object.fromEntries(maps.map((map) => [map.number, map.geometry])));
+    const { readDecisions, CANDIDATES_DIR } = await import("../../tools/trail/photo-editor.js");
+    // The editor is only for the dev server: never in a build, of any kind
+    const editor = process.env.ELEVENTY_RUN_MODE === "serve" && process.env.NODE_ENV !== "production";
+    const photos = await collectPhotos(".", Object.fromEntries(maps.map((map) => [map.number, map.geometry])), {
+        decisions: await readDecisions(),
+        editor,
+        candidatesDir: CANDIDATES_DIR,
+    });
     return maps.map(({ number, name, geojsonFeature }) => ({
         number,
         name,
         geojsonFeature,
+        editor,
         // Escaped since it's embedded in a script tag
         photos: JSON.stringify(photos[number]).replace(/</g, "\\u003c"),
     }));

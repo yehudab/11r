@@ -14,7 +14,8 @@ sections with no post yet. A day that has a published photo of the section's pos
 by capture time, is confirmed. Photos with no GPS (or a spoofed one) are added from the
 hike's time window, and every photo gets its position on the route at the time it was taken.
 
-Writes hikes.csv, manifest.csv and, with --export, copies the originals to <out>/section-NN/.
+Writes hikes.csv, manifest.csv and, with --export, web size JPEGs of the unpublished photos to
+<out>/section-NN/, tagged with their best location, for the editor on the dev server's maps.
 Originals that iCloud keeps only in the cloud are listed but can't be copied.
 """
 import argparse
@@ -47,6 +48,8 @@ ROUTE_CELL = 0.002  # degrees, about 200 m
 ROUTE_POINT_STEP = 5  # routes have a point per second
 ROUTE_MARGIN = 0.1  # degrees around the track; route points beyond it are GPS spoofing
 MAX_ROUTE_GAP = 120  # seconds between a photo and the route point it's placed at
+ROUTE_DISAGREEMENT = 100  # meters between a photo's GPS and the route, for the route to win
+EXPORT_LONG_SIDE = 1280  # the size of most of the blog's trail photos
 CAMP_DISTANCE = 500  # meters between one day's end and the next day's start of an overnight hike
 TRKPT = re.compile(rb'<trkpt lon="([-\d.]+)" lat="([-\d.]+)">.*?<time>([^<]+)</time>')
 
@@ -399,6 +402,27 @@ def day_photos(day, date, assets, published):
         yield asset, location
 
 
+def best_location(asset, route_lat, route_lon):
+    """The photo's own GPS, unless the route disagrees: spoofed tags are the reason the route is there"""
+    if asset["lat"] is None:
+        return route_lat, route_lon
+    if route_lat is None:
+        return asset["lat"], asset["lon"]
+    points = [(asset["lon"], asset["lat"]), (route_lon, route_lat)]
+    return (route_lat, route_lon) if diagonal_meters(points) > ROUTE_DISAGREEMENT else (asset["lat"], asset["lon"])
+
+
+def export_photo(asset, target, lat, lon):
+    """Write a web size JPEG with the location in it. Photos can't be read as HEIC by every browser."""
+    target.parent.mkdir(exist_ok=True)
+    args = ["sips", "-s", "format", "jpeg", "-s", "formatOptions", "85", "-Z", str(EXPORT_LONG_SIDE),
+            str(asset["path"]), "--out", str(target)]
+    subprocess.run(args, check=True, capture_output=True)
+    if lat is not None:
+        subprocess.run(["exiftool", "-q", "-m", "-overwrite_original", f"-GPSLatitude={lat}", "-GPSLatitudeRef=N",
+                        f"-GPSLongitude={lon}", "-GPSLongitudeRef=E", str(target)], check=True, capture_output=True)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--section", action="append", help="only this section, e.g. 41 or 29a (repeatable)")
@@ -408,10 +432,10 @@ def main():
     parser.add_argument("--min-photos", type=int, default=3, help="photos needed to detect a hike day (default: 3)")
     parser.add_argument("--reference", action="append", default=[],
                         help="folder of copies with metadata, matched to published images by file name (repeatable)")
-    parser.add_argument("--routes", type=Path, default=Path.home() / "Downloads/export.zip",
-                        help="Apple Health export, zip or folder (default: ~/Downloads/export.zip)")
+    parser.add_argument("--routes", type=Path, default=Path.home() / "Downloads/health-export.zip",
+                        help="Apple Health export, zip or folder (default: ~/Downloads/health-export.zip)")
     parser.add_argument("--routes-only", action="store_true", help="only report the recorded hikes, without the library")
-    parser.add_argument("--export", action="store_true", help="copy the originals of the hike days")
+    parser.add_argument("--export", action="store_true", help="export the hike days' unpublished photos for the editor")
     args = parser.parse_args()
 
     sections = {map_id(section) for section in args.section} if args.section else None
@@ -440,7 +464,7 @@ def main():
 
     columns = ["section", "date", "status", "location", "taken", "lat", "lon", "route_lat", "route_lon",
                "name", "published", "local", "uuid", "path"]
-    copied = 0
+    copied = failed = 0
     with open(args.out / "manifest.csv", "w", newline="", encoding="utf-8-sig") as manifest:
         writer = csv.DictWriter(manifest, columns)
         writer.writeheader()
@@ -465,11 +489,17 @@ def main():
                         "name": asset["name"], "published": image, "local": asset["local"],
                         "uuid": asset["uuid"], "path": asset["path"],
                     })
-                    if args.export and asset["local"]:
-                        target = args.out / f"section-{section}" / f"{asset['taken']:%Y%m%d-%H%M%S}-{asset['name']}"
-                        target.parent.mkdir(exist_ok=True)
-                        shutil.copy2(asset["path"], target)
-                        copied += 1
+                    if args.export and asset["local"] and not image:
+                        name = Path(asset["name"]).stem
+                        target = args.out / f"section-{section}" / f"{asset['taken']:%Y%m%d-%H%M%S}-{name}.jpg"
+                        if target.exists():
+                            continue
+                        try:
+                            export_photo(asset, target, *best_location(asset, route_lat, route_lon))
+                            copied += 1
+                        except subprocess.CalledProcessError:
+                            target.unlink(missing_ok=True)
+                            failed += 1
                 print(f"{section:<8} {date}  {day['status']:<9}  {len(rows):>6}  {counts['on-track']:>8}  "
                       f"{counts['no-gps']:>6}  {counts['off-track']:>9}  {counts['published']:>9}  "
                       f"{counts['cloud']:>10}  {day['coverage']:>7.0%}")
@@ -479,7 +509,7 @@ def main():
         for image, reason in unmatched:
             print(f"  {image}: {reason}")
     if args.export:
-        print(f"\nCopied {copied} originals to {args.out}")
+        print(f"\nExported {copied} photos to {args.out}, {failed} failed")
     print(f"\nManifest: {args.out / 'manifest.csv'}")
 
 

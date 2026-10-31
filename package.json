@@ -15,6 +15,7 @@
     "dev:11ty": "eleventy --serve --quiet",
     "dev:rollup": "rollup -c -w",
     "trail": "node tools/trail.mjs",
+    "trail:keepers": "node tools/publish-keepers.mjs",
     "test": "node --test tools/"
   },
   "devDependencies": {
@@ -40,6 +41,7 @@
     "rollup": "^4.65.0",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-svg": "^2.0.0",
+    "sharp": "^0.35.5",
     "tailwindcss": "^4.3.3",
     "topojson-client": "^3.1.0",
     "topojson-server": "^3.0.1"

@@ -6,6 +6,8 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { feature } from "topojson-client";
 import { parsePost, mapOf, collectPhotos } from "./photos.js";
+import os from "node:os";
+import sharp from "sharp";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 
@@ -79,4 +81,41 @@ test("collectPhotos places published photos on the right maps", async () => {
     const [photo] = photos["17"];
     assert.equal(photo.postUrl, "/blog/2024/04/israel-trail-17/");
     assert.match(photo.src, /^\/img\/2024\/04\//);
+});
+
+test("thumbnails are small squares, and the site leaves out trashed photos", async () => {
+    const maps = { 17: await geometryOf("17") };
+    const photos = await collectPhotos(root, maps);
+    const [photo] = photos["17"];
+    assert.match(photo.thumb, /^\/img\/thumbs\/2024\/04\/.+\.webp$/);
+    const thumb = path.join(root, ".cache/map-thumbs", photo.thumb.replace("/img/thumbs/", ""));
+    const { width, height, format } = await sharp(thumb).metadata();
+    assert.deepEqual([width, height, format], [112, 112, "webp"]);
+    assert.ok((await fs.stat(thumb)).size < 10000);
+
+    const decisions = { [photo.id]: "trash" };
+    const site = await collectPhotos(root, maps, { decisions });
+    assert.ok(!site["17"].some((p) => p.id === photo.id));
+    const editor = await collectPhotos(root, maps, { decisions, editor: true });
+    assert.ok(editor["17"].some((p) => p.id === photo.id));
+});
+
+test("candidates are only for the editor, on the map of their folder", async () => {
+    const dir = await fs.mkdtemp(path.join(os.tmpdir(), "candidates-"));
+    await fs.mkdir(path.join(dir, "section-17"));
+    await fs.mkdir(path.join(dir, "section-99"));
+    const tagged = path.join(root, "img/2024/04/shvil-17-2.jpg");
+    await fs.copyFile(tagged, path.join(dir, "section-17/tagged.jpg"));
+    await fs.copyFile(tagged, path.join(dir, "section-99/no-such-map.jpg"));
+    await fs.copyFile(path.join(root, "img/2025/04/shvil-28-2.jpg"), path.join(dir, "section-17/no-location.jpg"));
+
+    const options = { candidatesDir: dir, candidateThumbsDir: path.join(dir, "thumbs") };
+    const maps = { 17: await geometryOf("17") };
+    const site = await collectPhotos(root, maps, options);
+    assert.ok(!site["17"].some((photo) => photo.candidate));
+
+    const editor = await collectPhotos(root, maps, { ...options, editor: true });
+    const candidates = editor["17"].filter((photo) => photo.candidate);
+    assert.deepEqual(candidates.map((photo) => photo.id), ["backfill/section-17/tagged.jpg"]);
+    assert.equal(candidates[0].thumb, "/backfill/thumbs/section-17/tagged.webp");
 });
