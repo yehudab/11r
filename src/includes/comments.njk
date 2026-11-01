@@ -10,11 +10,26 @@
                     {% endif %}
           ({{ comment.date | dateAndTime }}): 
         </p>
-                <p class="comment-message{% if not canReply %} no-reply{% endif %}">{{ comment.message }}</p>
-                {% if canReply %}
-                <button class="comment-reply">
+                <p class="comment-message{% if not canReply and not comment.reactions %} no-reply{% endif %}">{{ comment.message }}</p>
+                {% if canReply or comment.reactions %}
+                <div class="comment-actions">
+                    {% if canReply %}
+                    <button class="comment-reply">
           להגיב
         </button>
+                    {% endif %}
+                    {% if comment.reactions %}
+                    <div class="comment-reactions">
+                        {% for reaction in comment.reactions %}
+                        {% set authors = reaction.names | join(", ") %}
+                        <button type="button" class="comment-reaction" aria-expanded="false" aria-label="{{ reaction.emoji }} {{ authors }}">
+                            {{ reaction.emoji }}{% if reaction.names.length > 1 %}<span class="comment-reaction-count">{{ reaction.names.length }}</span>{% endif %}
+                            <span class="comment-reaction-authors">{{ authors }}</span>
+                        </button>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
                 {% endif %}
                 {% if comment.replies %}
                     {{ commentsList(comment.replies, canReply) }}
