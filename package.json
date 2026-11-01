@@ -16,7 +16,7 @@
     "dev:rollup": "rollup -c -w",
     "trail": "node tools/trail.mjs",
     "trail:keepers": "node tools/publish-keepers.mjs",
-    "test": "node --test tools/"
+    "test": "node --test tools/ filters/"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.7",

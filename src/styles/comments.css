@@ -31,6 +31,15 @@
   @apply block tracking-wide font-bold mb-2 text-lg;
 }
   
+.comments-form .comment-form-hint {
+  @apply hidden mb-0 font-normal text-sm text-muted;
+}
+
+/* A lone emoji is a reaction only on a reply, where the form moves into the comment */
+li .comments-form .comment-form-hint {
+  @apply inline;
+}
+
 .comments-form input {
   @apply appearance-none block w-full bg-ink text-heading border border-line rounded-sm py-3 px-4 mb-3 leading-tight;
 }
@@ -59,7 +68,7 @@
 }
 
 .comments button.comment-reply {
-  @apply text-sm mt-3 mb-6 px-3 py-1;
+  @apply text-sm m-0 px-3 py-1;
 }
 
 .comments-form h2 {
@@ -87,4 +96,36 @@
 /* Same space the reply button leaves below a comment */
 .comment-message.no-reply {
   @apply mb-6;
+}
+
+.comment-actions {
+  @apply flex items-center gap-2 mt-3 mb-6;
+}
+
+.comment-reactions {
+  @apply flex flex-wrap justify-end gap-2 ms-auto;
+}
+
+.comments button.comment-reaction {
+  @apply relative m-0 px-2 py-1 text-lg font-normal leading-normal bg-surface text-heading border border-line rounded-full shadow-none;
+}
+
+.comment-reaction-count {
+  @apply text-sm ms-1;
+}
+
+.comment-reaction-authors {
+  @apply absolute bottom-full end-0 mb-1 z-10 invisible w-max px-2 py-1 text-sm text-start bg-heading text-ink rounded-sm;
+  max-width: min(16rem, 70vw);
+}
+
+/* Touch screens get the tooltip from a tap only: their hover state sticks */
+@media (hover: hover) {
+  .comment-reaction:hover .comment-reaction-authors {
+    @apply visible;
+  }
+}
+
+.comment-reaction.is-open .comment-reaction-authors {
+  @apply visible;
 }

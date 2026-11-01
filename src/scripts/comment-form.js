@@ -70,7 +70,7 @@ function attachFormEvents() {
 
 function attachReplyToEvents() {
     $('button.comment-reply').on('click', function () {
-        const parent = $(this).parent();
+        const parent = $(this).closest('li');
         const form = $('.comments-form');
         const cancel = form.find('.cancel-comment');
         const parentId = parent.data('comment-id');
@@ -89,6 +89,26 @@ function attachReplyToEvents() {
     });
 }
 
+function attachReactionEvents() {
+    const close = (except) => $('.comment-reaction.is-open').not(except)
+        .removeClass('is-open')
+        .attr('aria-expanded', 'false');
+
+    $(document)
+        .on('click', '.comment-reaction', function () {
+            close(this);
+            const isOpen = $(this).toggleClass('is-open').hasClass('is-open');
+            $(this).attr('aria-expanded', String(isOpen));
+        })
+        // Not click: iOS doesn't send it to the document for taps on plain text
+        .on('pointerdown', (e) => {
+            if (!$(e.target).closest('.comment-reaction').length) close();
+        })
+        .on('keydown', (e) => {
+            if (e.key === 'Escape') close();
+        });
+}
+
 function showError(error) {
     $("#error-reason").text(error);
     $("#alert-error").show();
@@ -98,4 +118,4 @@ function showSuccess() {
     $("#alert-ok").show();
 }
 
-export { attachFormEvents, attachReplyToEvents };
+export { attachFormEvents, attachReactionEvents, attachReplyToEvents };
