@@ -29,8 +29,10 @@ Run everything from the repo root. Leave out `--section` to export all the secti
 
    Check that the table shows `cloud-only` 0 and that the last lines show 0 failed. Photos go to
    `~/Downloads/trail-originals/section-32/` as JPEGs with a long side of 1280 px, tagged with
-   their best location. Photos already in a post are skipped, and so are files already exported,
-   so it's safe to run again.
+   their best location. Files already exported are skipped, so it's safe to run again.
+
+   Only sections with no post are exported: a post is the source of all its section's photos,
+   and its map shows them.
 
 2. **Start, or restart, the dev server**
 
@@ -88,9 +90,9 @@ Run everything from the repo root. Leave out `--section` to export all the secti
   Publishing a photo you first trashed works normally.
 - **A photo with no location is left out of the map,** with a warning in the dev server's output.
   This happens when it has no GPS and no recorded route covers the time it was taken.
-- **A hike's published photo can reappear as a candidate** if the script couldn't match it to its
-  original. The script lists those at the end of its output. Just trash the duplicate, or give the
-  script a folder of copies that still have their metadata with `--reference DIR`.
+- **When a section gets a post,** the script stops exporting it, but its published keepers stay on
+  the map next to the post's photos. A keeper the post uses appears once. Remove the others from
+  `map-photos.json` if the post should replace them.
 - **`~/Downloads/trail-originals` can be deleted** once a section is published and committed.
   Exporting again recreates it. To keep it elsewhere, pass `--out DIR` to the script and set
   `TRAIL_BACKFILL_DIR` for the dev server.

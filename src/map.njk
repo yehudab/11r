@@ -53,12 +53,17 @@ eleventyComputed:
     }
     .photo-popup { direction: rtl; }
     .photo-popup img { width: 100%; margin: 0 0 0.5rem; }
-    .photo-popup p { margin: 0 0 0.25rem; font-weight: bold; }
+    .photo-popup p { margin: 0 0 0.25rem; font-weight: bold; text-align: right; }
+    .photo-popup a { display: block; text-align: right; }
+    /* Leaflet puts the close button on the right, which is where a Hebrew page starts */
+    .leaflet-container a.leaflet-popup-close-button { right: auto; left: 0; }
+    .leaflet-container .leaflet-popup-content { margin: 13px 20px 13px 24px; }
 {% if map.editor %}
     .leaflet-container .leaflet-marker-pane .photo-keep img { border-color: #22c55e; }
     .leaflet-container .leaflet-marker-pane .photo-trash img { border-color: #ef4444; opacity: 0.4; filter: grayscale(1); }
     .leaflet-container .leaflet-marker-pane .photo-candidate img { border: 2px dashed #f59e0b; }
-    .photo-editor { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem; }
+    /* The popup is right to left, so the end of the row is on the left */
+    .photo-editor { display: flex; justify-content: flex-end; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem; }
     .photo-editor button { padding: 0.1rem 0.6rem; font-size: 1.25rem; border: 2px solid #d1d5db; border-radius: 6px; background: #fff; cursor: pointer; }
     .photo-editor button.active { border-color: #2563eb; background: #dbeafe; }
     .photo-editor small { color: #dc2626; }
