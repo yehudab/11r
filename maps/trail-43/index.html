@@ -123,7 +123,11 @@
     }
     .photo-popup { direction: rtl; }
     .photo-popup img { width: 100%; margin: 0 0 0.5rem; }
-    .photo-popup p { margin: 0 0 0.25rem; font-weight: bold; }
+    .photo-popup p { margin: 0 0 0.25rem; font-weight: bold; text-align: right; }
+    .photo-popup a { display: block; text-align: right; }
+    /* Leaflet puts the close button on the right, which is where a Hebrew page starts */
+    .leaflet-container a.leaflet-popup-close-button { right: auto; left: 0; }
+    .leaflet-container .leaflet-popup-content { margin: 13px 20px 13px 24px; }
 
   </style>
   
@@ -148,7 +152,7 @@
     L.geoJSON(taril, { style: secondStyle}).addTo(map);
     let bounds = feature.getBounds();
 
-    let photos = [];
+    let photos = [{"id":"img/2026/05/shvil-43-1.jpg","src":"/img/2026/05/shvil-43-1.jpg","thumb":"/img/thumbs/2026/05/shvil-43-1.webp","caption":"","lat":31.66726166666667,"lon":34.92272166666667},{"id":"img/2026/05/shvil-43-2.jpg","src":"/img/2026/05/shvil-43-2.jpg","thumb":"/img/thumbs/2026/05/shvil-43-2.webp","caption":"","lat":31.65417833333333,"lon":34.921005},{"id":"img/2026/05/shvil-43-3.jpg","src":"/img/2026/05/shvil-43-3.jpg","thumb":"/img/thumbs/2026/05/shvil-43-3.webp","caption":"","lat":31.646871666666666,"lon":34.916595},{"id":"img/2026/05/shvil-43-4.jpg","src":"/img/2026/05/shvil-43-4.jpg","thumb":"/img/thumbs/2026/05/shvil-43-4.webp","caption":"","lat":31.628578333333333,"lon":34.91323333333333}];
     function thumbIcon(photo, count) {
         let html = document.createElement('div');
         let img = document.createElement('img');

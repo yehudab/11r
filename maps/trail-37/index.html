@@ -123,7 +123,11 @@
     }
     .photo-popup { direction: rtl; }
     .photo-popup img { width: 100%; margin: 0 0 0.5rem; }
-    .photo-popup p { margin: 0 0 0.25rem; font-weight: bold; }
+    .photo-popup p { margin: 0 0 0.25rem; font-weight: bold; text-align: right; }
+    .photo-popup a { display: block; text-align: right; }
+    /* Leaflet puts the close button on the right, which is where a Hebrew page starts */
+    .leaflet-container a.leaflet-popup-close-button { right: auto; left: 0; }
+    .leaflet-container .leaflet-popup-content { margin: 13px 20px 13px 24px; }
 
   </style>
   
@@ -148,7 +152,7 @@
     L.geoJSON(taril, { style: secondStyle}).addTo(map);
     let bounds = feature.getBounds();
 
-    let photos = [];
+    let photos = [{"id":"img/2026/01/shvil-37-1.jpg","src":"/img/2026/01/shvil-37-1.jpg","thumb":"/img/thumbs/2026/01/shvil-37-1.webp","caption":"","lat":30.91733,"lon":35.003058333333335},{"id":"img/2026/01/shvil-37-2.jpg","src":"/img/2026/01/shvil-37-2.jpg","thumb":"/img/thumbs/2026/01/shvil-37-2.webp","caption":"","lat":30.916728333333335,"lon":34.995758333333335},{"id":"img/2026/01/shvil-37-3.jpg","src":"/img/2026/01/shvil-37-3.jpg","thumb":"/img/thumbs/2026/01/shvil-37-3.webp","caption":"","lat":30.909824999999998,"lon":34.98208833333334},{"id":"img/2026/01/shvil-37-4.jpg","src":"/img/2026/01/shvil-37-4.jpg","thumb":"/img/thumbs/2026/01/shvil-37-4.webp","caption":"","lat":30.908928,"lon":34.981224000000005},{"id":"img/2026/01/shvil-37-5.jpg","src":"/img/2026/01/shvil-37-5.jpg","thumb":"/img/thumbs/2026/01/shvil-37-5.webp","caption":"","lat":30.899695,"lon":34.96312},{"id":"img/2026/01/shvil-37-6.jpg","src":"/img/2026/01/shvil-37-6.jpg","thumb":"/img/thumbs/2026/01/shvil-37-6.webp","caption":"","lat":30.88193,"lon":34.97244166666667}];
     function thumbIcon(photo, count) {
         let html = document.createElement('div');
         let img = document.createElement('img');

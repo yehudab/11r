@@ -123,7 +123,11 @@
     }
     .photo-popup { direction: rtl; }
     .photo-popup img { width: 100%; margin: 0 0 0.5rem; }
-    .photo-popup p { margin: 0 0 0.25rem; font-weight: bold; }
+    .photo-popup p { margin: 0 0 0.25rem; font-weight: bold; text-align: right; }
+    .photo-popup a { display: block; text-align: right; }
+    /* Leaflet puts the close button on the right, which is where a Hebrew page starts */
+    .leaflet-container a.leaflet-popup-close-button { right: auto; left: 0; }
+    .leaflet-container .leaflet-popup-content { margin: 13px 20px 13px 24px; }
 
   </style>
   
@@ -148,7 +152,7 @@
     L.geoJSON(taril, { style: secondStyle}).addTo(map);
     let bounds = feature.getBounds();
 
-    let photos = [];
+    let photos = [{"id":"img/2024/03/shvil-16-1.jpg","src":"/img/2024/03/shvil-16-1.jpg","thumb":"/img/thumbs/2024/03/shvil-16-1.webp","caption":"","lat":32.73936166666667,"lon":35.32307},{"id":"img/2024/03/shvil-16-2.jpg","src":"/img/2024/03/shvil-16-2.jpg","thumb":"/img/thumbs/2024/03/shvil-16-2.webp","caption":"","lat":32.74575,"lon":35.30815833333333},{"id":"img/2024/03/shvil-16-3.jpg","src":"/img/2024/03/shvil-16-3.jpg","thumb":"/img/thumbs/2024/03/shvil-16-3.webp","caption":"","lat":32.749161666666666,"lon":35.305416666666666},{"id":"img/2024/03/shvil-16-4.jpg","src":"/img/2024/03/shvil-16-4.jpg","thumb":"/img/thumbs/2024/03/shvil-16-4.webp","caption":"","lat":32.749716666666664,"lon":35.29656166666666},{"id":"img/2024/03/shvil-16-5.jpg","src":"/img/2024/03/shvil-16-5.jpg","thumb":"/img/thumbs/2024/03/shvil-16-5.webp","caption":"","lat":32.75913833333333,"lon":35.268454999999996},{"id":"img/2024/03/shvil-16-6.jpg","src":"/img/2024/03/shvil-16-6.jpg","thumb":"/img/thumbs/2024/03/shvil-16-6.webp","caption":"","lat":32.75913333333333,"lon":35.260405},{"id":"img/2024/03/shvil-16-7.jpg","src":"/img/2024/03/shvil-16-7.jpg","thumb":"/img/thumbs/2024/03/shvil-16-7.webp","caption":"","lat":32.760563,"lon":35.257843},{"id":"img/2024/03/shvil-16-8.jpg","src":"/img/2024/03/shvil-16-8.jpg","thumb":"/img/thumbs/2024/03/shvil-16-8.webp","caption":"","lat":32.76118,"lon":35.23038666666667}];
     function thumbIcon(photo, count) {
         let html = document.createElement('div');
         let img = document.createElement('img');

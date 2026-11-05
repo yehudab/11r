@@ -123,7 +123,11 @@
     }
     .photo-popup { direction: rtl; }
     .photo-popup img { width: 100%; margin: 0 0 0.5rem; }
-    .photo-popup p { margin: 0 0 0.25rem; font-weight: bold; }
+    .photo-popup p { margin: 0 0 0.25rem; font-weight: bold; text-align: right; }
+    .photo-popup a { display: block; text-align: right; }
+    /* Leaflet puts the close button on the right, which is where a Hebrew page starts */
+    .leaflet-container a.leaflet-popup-close-button { right: auto; left: 0; }
+    .leaflet-container .leaflet-popup-content { margin: 13px 20px 13px 24px; }
 
   </style>
   
@@ -148,7 +152,7 @@
     L.geoJSON(taril, { style: secondStyle}).addTo(map);
     let bounds = feature.getBounds();
 
-    let photos = [];
+    let photos = [{"id":"img/2026/04/shvil-39-1.jpg","src":"/img/2026/04/shvil-39-1.jpg","thumb":"/img/thumbs/2026/04/shvil-39-1.webp","caption":"","lat":31.361291666666666,"lon":34.89807833333333},{"id":"img/2026/04/shvil-39-2.jpg","src":"/img/2026/04/shvil-39-2.jpg","thumb":"/img/thumbs/2026/04/shvil-39-2.webp","caption":"","lat":31.363258333333334,"lon":34.89741166666666},{"id":"img/2026/04/shvil-39-3.jpg","src":"/img/2026/04/shvil-39-3.jpg","thumb":"/img/thumbs/2026/04/shvil-39-3.webp","caption":"","lat":31.36516166666667,"lon":34.89451666666667},{"id":"img/2026/04/shvil-39-4.jpg","src":"/img/2026/04/shvil-39-4.jpg","thumb":"/img/thumbs/2026/04/shvil-39-4.webp","caption":"","lat":31.36837,"lon":34.88838833333333},{"id":"img/2026/04/shvil-39-5.jpg","src":"/img/2026/04/shvil-39-5.jpg","thumb":"/img/thumbs/2026/04/shvil-39-5.webp","caption":"","lat":31.39378333333333,"lon":34.857308333333336},{"id":"img/2026/04/shvil-39-6.jpg","src":"/img/2026/04/shvil-39-6.jpg","thumb":"/img/thumbs/2026/04/shvil-39-6.webp","caption":"","lat":31.411936666666666,"lon":34.83711666666667},{"id":"img/2026/04/shvil-39-7.jpg","src":"/img/2026/04/shvil-39-7.jpg","thumb":"/img/thumbs/2026/04/shvil-39-7.webp","caption":"","lat":31.416246666666666,"lon":34.82776333333334}];
     function thumbIcon(photo, count) {
         let html = document.createElement('div');
         let img = document.createElement('img');

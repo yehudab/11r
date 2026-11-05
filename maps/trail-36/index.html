@@ -123,7 +123,11 @@
     }
     .photo-popup { direction: rtl; }
     .photo-popup img { width: 100%; margin: 0 0 0.5rem; }
-    .photo-popup p { margin: 0 0 0.25rem; font-weight: bold; }
+    .photo-popup p { margin: 0 0 0.25rem; font-weight: bold; text-align: right; }
+    .photo-popup a { display: block; text-align: right; }
+    /* Leaflet puts the close button on the right, which is where a Hebrew page starts */
+    .leaflet-container a.leaflet-popup-close-button { right: auto; left: 0; }
+    .leaflet-container .leaflet-popup-content { margin: 13px 20px 13px 24px; }
 
   </style>
   
@@ -148,7 +152,7 @@
     L.geoJSON(taril, { style: secondStyle}).addTo(map);
     let bounds = feature.getBounds();
 
-    let photos = [];
+    let photos = [{"id":"img/2026/01/shvil-36-1.jpg","src":"/img/2026/01/shvil-36-1.jpg","thumb":"/img/thumbs/2026/01/shvil-36-1.webp","caption":"","lat":30.9446,"lon":35.03913883333333},{"id":"img/2026/01/shvil-36-2.jpg","src":"/img/2026/01/shvil-36-2.jpg","thumb":"/img/thumbs/2026/01/shvil-36-2.webp","caption":"","lat":30.942846666666668,"lon":35.02978049996166},{"id":"img/2026/01/shvil-36-3.jpg","src":"/img/2026/01/shvil-36-3.jpg","thumb":"/img/thumbs/2026/01/shvil-36-3.webp","caption":"","lat":30.943103333333333,"lon":35.0292555000347},{"id":"img/2026/01/shvil-36-4.jpg","src":"/img/2026/01/shvil-36-4.jpg","thumb":"/img/thumbs/2026/01/shvil-36-4.webp","caption":"","lat":30.943341666666665,"lon":35.029052833457065},{"id":"img/2026/01/shvil-36-5.jpg","src":"/img/2026/01/shvil-36-5.jpg","thumb":"/img/thumbs/2026/01/shvil-36-5.webp","caption":"","lat":30.943511666666666,"lon":35.0290305},{"id":"img/2026/01/shvil-36-6.jpg","src":"/img/2026/01/shvil-36-6.jpg","thumb":"/img/thumbs/2026/01/shvil-36-6.webp","caption":"","lat":30.944258333333334,"lon":35.02899166666666},{"id":"img/2026/01/shvil-36-7.jpg","src":"/img/2026/01/shvil-36-7.jpg","thumb":"/img/thumbs/2026/01/shvil-36-7.webp","caption":"","lat":30.945538333333335,"lon":35.02879449996734},{"id":"img/2026/01/shvil-36-8.jpg","src":"/img/2026/01/shvil-36-8.jpg","thumb":"/img/thumbs/2026/01/shvil-36-8.webp","caption":"","lat":30.94553,"lon":35.02873883335748},{"id":"img/2026/01/shvil-36-9.jpg","src":"/img/2026/01/shvil-36-9.jpg","thumb":"/img/thumbs/2026/01/shvil-36-9.webp","caption":"","lat":30.94553,"lon":35.02873883335748},{"id":"img/2026/01/shvil-36-10.jpg","src":"/img/2026/01/shvil-36-10.jpg","thumb":"/img/thumbs/2026/01/shvil-36-10.webp","caption":"","lat":30.945558333333334,"lon":35.02873616666667},{"id":"img/2026/01/shvil-36-11.jpg","src":"/img/2026/01/shvil-36-11.jpg","thumb":"/img/thumbs/2026/01/shvil-36-11.webp","caption":"","lat":30.946467000000002,"lon":35.027305},{"id":"img/2026/01/shvil-36-12.jpg","src":"/img/2026/01/shvil-36-12.jpg","thumb":"/img/thumbs/2026/01/shvil-36-12.webp","caption":"","lat":30.938670000000002,"lon":35.022094500020586},{"id":"img/2026/01/shvil-36-13.jpg","src":"/img/2026/01/shvil-36-13.jpg","thumb":"/img/thumbs/2026/01/shvil-36-13.webp","caption":"","lat":30.928620000000002,"lon":35.01496945010183},{"id":"img/2026/01/shvil-36-14.jpg","src":"/img/2026/01/shvil-36-14.jpg","thumb":"/img/thumbs/2026/01/shvil-36-14.webp","caption":"","lat":30.92018666666667,"lon":35.01053611674555}];
     function thumbIcon(photo, count) {
         let html = document.createElement('div');
         let img = document.createElement('img');
