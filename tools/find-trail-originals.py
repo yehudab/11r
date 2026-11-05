@@ -14,8 +14,8 @@ sections with no post yet. A day that has a published photo of the section's pos
 by capture time, is confirmed. Photos with no GPS (or a spoofed one) are added from the
 hike's time window, and every photo gets its position on the route at the time it was taken.
 
-Writes hikes.csv, manifest.csv and, with --export, web size JPEGs of the unpublished photos to
-<out>/section-NN/, tagged with their best location, for the editor on the dev server's maps.
+Writes hikes.csv, manifest.csv and, with --export, web size JPEGs of the photos of the sections
+with no post yet to <out>/section-NN/, tagged with their best location, for the editor on the dev server's maps.
 Originals that iCloud keeps only in the cloud are listed but can't be copied.
 """
 import argparse
@@ -435,7 +435,7 @@ def main():
     parser.add_argument("--routes", type=Path, default=Path.home() / "Downloads/health-export.zip",
                         help="Apple Health export, zip or folder (default: ~/Downloads/health-export.zip)")
     parser.add_argument("--routes-only", action="store_true", help="only report the recorded hikes, without the library")
-    parser.add_argument("--export", action="store_true", help="export the hike days' unpublished photos for the editor")
+    parser.add_argument("--export", action="store_true", help="export the photos of sections with no post, for the editor")
     args = parser.parse_args()
 
     sections = {map_id(section) for section in args.section} if args.section else None
@@ -461,6 +461,25 @@ def main():
 
     published, unmatched, confirmed = match_published(posts, assets, args.reference)
     days = find_hike_days(tracks, assets, args.radius, args.min_photos, confirmed, hikes)
+
+    # A section's post is the source of all its photos: only sections with no post are exported
+    posted = {section for post in posts for section in post["sections"]}
+
+    # A photo of a day with two sections, like 29a and 29b, is exported for the closest one only:
+    # a photo is on one map
+    closest = {}
+    for section, section_days in days.items():
+        for date, day in section_days.items():
+            if day["status"] == "passing" or section in posted:
+                continue
+            for asset, _ in day_photos(day, date, assets, published):
+                route_lat, route_lon = route_position(day["hike"], asset["taken"]) if day["hike"] else (None, None)
+                lat, lon = best_location(asset, route_lat, route_lon)
+                if lat is None:
+                    continue
+                meters = distance_from_track(lon, lat, tracks[section])
+                if asset["uuid"] not in closest or meters < closest[asset["uuid"]][1]:
+                    closest[asset["uuid"]] = (section, meters)
 
     columns = ["section", "date", "status", "location", "taken", "lat", "lon", "route_lat", "route_lon",
                "name", "published", "local", "uuid", "path"]
@@ -489,7 +508,8 @@ def main():
                         "name": asset["name"], "published": image, "local": asset["local"],
                         "uuid": asset["uuid"], "path": asset["path"],
                     })
-                    if args.export and asset["local"] and not image:
+                    if (args.export and asset["local"] and not image and section not in posted
+                            and closest.get(asset["uuid"], (section,))[0] == section):
                         name = Path(asset["name"]).stem
                         target = args.out / f"section-{section}" / f"{asset['taken']:%Y%m%d-%H%M%S}-{name}.jpg"
                         if target.exists():
